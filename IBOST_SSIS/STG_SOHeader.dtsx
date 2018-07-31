@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="STG_SOHeader"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{8872B7E0-7C02-4BED-9655-E1EF72CD07C3}">
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{D8917A62-A962-4E0A-95D1-2190EC91A1BD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,195 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACi9ObUIs3jMZIqpho8gHBFzF3eXuThB7//IE9YnVLEqgAAAAAOgAAAAAIAACAAAADPa+6cV+9qIEi34cdBdz33ziTKpW8ipU0bfU6J+cXTcyAAAAAzwGUXkAk3GSA0nexHrASgFVJqMj9/qBOxeOXq89cSkUAAAADMm+BRzQ+8bl4OVr/pqAYwVPiGR1wuKBe305ee0jYq5ncGf+F/ioCNqCkQrsRWMDmdqYo1G8Yxa8Yw+h6ixiZR</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD3zWJpSXG5aLZoVWoFAbqO+BALB+NGsZ2EcWoCjFIgUwAAAAAOgAAAAAIAACAAAADsNqpKTtOE1qN6VocRa44LOS2zn1L9Q7/QlWxxL6TymyAAAACoWmkwWt0QO6JkRU+jyMCR/GfYv+qS7dCrUROkg4SVXkAAAAAT10VYNs7NYzPBN3JOAV//7FJAL4QO2YQ0S7x41ID2Zc2oOKwuKs7toMaCB1PEi+7okcnPsolDrKzrQczve/Z6</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{981A2A31-F811-4DBE-A419-8521B28DF489}"
+      DTS:ObjectName="10.0.0.77.IBOrderTracking.IBOT1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=10.0.0.77;User ID=IBOT;Initial Catalog=IBOrderTracking;Persist Security Info=True;Application Name=SSIS-STG_SOHeader-{981A2A31-F811-4DBE-A419-8521B28DF489}10.0.0.77.IBOrderTracking.IBOT1;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA5s0HLQmeCozzVKMb0F1rA2/mjnwiBI6hQZIstDj2HFAAAAAAOgAAAAAIAACAAAABOF94joavEyMTM+L7Ss9DwaPPJXtCCC4hFnhpkuX21YSAAAABWHDiQlx/4KJZ03CWbQ9bUZdk/iPTEMdYK0OLIqb50RkAAAAA/4RlHxmsEYarZeJf96eJMMkVOqIF6jSXRhT9YGJwzgX24OLKcs8gJ72LeHPdto6cWVfJsXACsKKxdZYIfj6Yx</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{DB49108E-DB6B-4577-8524-35AC3C8657FF}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Trainee\Desktop\Sample Data\stg_soheader.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Loading date"
+              DTS:DTSID="{4A648D43-9754-4FC4-A073-145D3CFADA1B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ORDER TYPE"
+              DTS:DTSID="{580A3ADF-CF9B-4866-A979-4828A1F92D08}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ORDER DATE"
+              DTS:DTSID="{C8163BB4-285E-4471-B735-EE80593F236E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PO no "
+              DTS:DTSID="{AE340BFE-30F4-496B-A85E-F31DD5A0F967}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="INV no "
+              DTS:DTSID="{53E54152-0866-497B-A5EF-1557288AB74C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SO no "
+              DTS:DTSID="{4C5CF21D-8431-4F3E-9E95-7948DEB06976}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TOTAL FCLS (SO)"
+              DTS:DTSID="{8F349AD2-0472-42CD-8688-7AE28A969FAE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SOLD-TO PARTY"
+              DTS:DTSID="{29DD1131-50DE-4523-A30F-4F2F503A0000}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SOLD-TO PARTY NAME"
+              DTS:DTSID="{ED743DD3-B639-440C-81BD-F39AE866EC03}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SHIP-TO PARTY"
+              DTS:DTSID="{B8C71164-8E9B-4938-A3B6-55089653F805}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SHIP-TO PARTY NAME"
+              DTS:DTSID="{B28F0175-6983-47A4-800A-49FD498BFC3A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Destination Port"
+              DTS:DTSID="{29967263-B3F0-4347-9487-B65AB5CF6EBF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TOTAL CARTONS (SO)"
+              DTS:DTSID="{26703E4F-BBB1-4D96-A261-F3C93A631B43}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Payment Term"
+              DTS:DTSID="{695A2FCD-7551-47D5-852B-67A15E98C6F7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="INCOTERM"
+              DTS:DTSID="{D4027CAB-6363-4343-92EA-31990B098EAC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CURRE"
+              DTS:DTSID="{48FA93BA-962D-4325-B6BC-C51F09E69A16}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total FOB (SO)"
+              DTS:DTSID="{B75F14AD-97A3-45EC-A3A5-157E351D92D9}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -231,6 +419,162 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\Data Flow Task\DataReaderDest"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Exposes data in a data flow to other applications by using the ADO.NET DataReader interface. For example, send data to a custom application, written in C#, that requires a DataReader interface.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Exposes data in a data flow to other applications by using the ADO.NET DataReader interface. For example, send data to a custom application, written in C#, that requires a DataReader interface."
+              name="DataReaderDest">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of milliseconds before the component times out."
+                  name="ReadTimeout">30000</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies an object that implements the IDataReader interface."
+                  name="DataReader" />
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the component fails when a read time-out occurs."
+                  name="FailOnTimeout">false</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderDestinationAdapter</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\DataReaderDest.Inputs[DataReader Destination Input]"
+                  hasSideEffects="true"
+                  name="DataReader Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\DataReaderDest.Inputs[DataReader Destination Input].Columns[Loading date]"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Loading date"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Loading date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DataReaderDest.Inputs[DataReader Destination Input].Columns[ORDER TYPE]"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ORDER TYPE"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ORDER TYPE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DataReaderDest.Inputs[DataReader Destination Input].Columns[ORDER DATE]"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ORDER DATE"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ORDER DATE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DataReaderDest.Inputs[DataReader Destination Input].Columns[PO no]"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PO no "
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[PO no ]"
+                      name="PO no" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DataReaderDest.Inputs[DataReader Destination Input].Columns[INV no]"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="INV no "
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[INV no ]"
+                      name="INV no" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DataReaderDest.Inputs[DataReader Destination Input].Columns[SO no]"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SO no "
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[SO no ]"
+                      name="SO no" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DataReaderDest.Inputs[DataReader Destination Input].Columns[TOTAL FCLS (SO)]"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TOTAL FCLS (SO)"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[TOTAL FCLS (SO)]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DataReaderDest.Inputs[DataReader Destination Input].Columns[SOLD-TO PARTY]"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SOLD-TO PARTY"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[SOLD-TO PARTY]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DataReaderDest.Inputs[DataReader Destination Input].Columns[SOLD-TO PARTY NAME]"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SOLD-TO PARTY NAME"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[SOLD-TO PARTY NAME]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DataReaderDest.Inputs[DataReader Destination Input].Columns[SHIP-TO PARTY]"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SHIP-TO PARTY"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[SHIP-TO PARTY]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DataReaderDest.Inputs[DataReader Destination Input].Columns[SHIP-TO PARTY NAME]"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SHIP-TO PARTY NAME"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[SHIP-TO PARTY NAME]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DataReaderDest.Inputs[DataReader Destination Input].Columns[Destination Port]"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Destination Port"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Destination Port]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DataReaderDest.Inputs[DataReader Destination Input].Columns[TOTAL CARTONS (SO)]"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TOTAL CARTONS (SO)"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[TOTAL CARTONS (SO)]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DataReaderDest.Inputs[DataReader Destination Input].Columns[Payment Term]"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Payment Term"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Payment Term]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DataReaderDest.Inputs[DataReader Destination Input].Columns[INCOTERM]"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="INCOTERM"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[INCOTERM]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DataReaderDest.Inputs[DataReader Destination Input].Columns[CURRE]"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CURRE"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[CURRE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DataReaderDest.Inputs[DataReader Destination Input].Columns[Total FOB (SO)]"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Total FOB (SO)"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Total FOB (SO)]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+            </component>
             <component
               refId="Package\Data Flow Task\Flat File Source"
               componentClassID="Microsoft.FlatFileSource"
@@ -772,339 +1116,11 @@
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\Data Flow Task\OLE DB Destination"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="OLE DB Destination"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[STG_SOHeader]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">874</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT]"
-                  connectionManagerRefId="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[INCOTERM]"
-                      cachedCodepage="874"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="INCOTERM"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Incoterm]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[INCOTERM]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Loading date]"
-                      cachedCodepage="874"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Loading date"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LoadingDate]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Loading date]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ORDER TYPE]"
-                      cachedCodepage="874"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="ORDER TYPE"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderType]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ORDER TYPE]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ORDER DATE]"
-                      cachedCodepage="874"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="ORDER DATE"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderDate]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ORDER DATE]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PO no ]"
-                      cachedCodepage="874"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="PO no "
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PO]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[PO no ]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[INV no ]"
-                      cachedCodepage="874"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="INV no "
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INV]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[INV no ]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SO no ]"
-                      cachedCodepage="874"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="SO no "
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SO]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[SO no ]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TOTAL FCLS (SO)]"
-                      cachedCodepage="874"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="TOTAL FCLS (SO)"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TotalFCLS]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[TOTAL FCLS (SO)]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SOLD-TO PARTY]"
-                      cachedCodepage="874"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="SOLD-TO PARTY"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SoldTo]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[SOLD-TO PARTY]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SOLD-TO PARTY NAME]"
-                      cachedCodepage="874"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="SOLD-TO PARTY NAME"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SoldToName]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[SOLD-TO PARTY NAME]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SHIP-TO PARTY]"
-                      cachedCodepage="874"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="SHIP-TO PARTY"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShipTo]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[SHIP-TO PARTY]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SHIP-TO PARTY NAME]"
-                      cachedCodepage="874"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="SHIP-TO PARTY NAME"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShipToName]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[SHIP-TO PARTY NAME]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Destination Port]"
-                      cachedCodepage="874"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Destination Port"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DestinationPort]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Destination Port]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TOTAL CARTONS (SO)]"
-                      cachedCodepage="874"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="TOTAL CARTONS (SO)"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TotalCartons]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[TOTAL CARTONS (SO)]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Payment Term]"
-                      cachedCodepage="874"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Payment Term"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PaymentTerm]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Payment Term]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CURRE]"
-                      cachedCodepage="874"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="CURRE"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Currency]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[CURRE]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Total FOB (SO)]"
-                      cachedCodepage="874"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Total FOB (SO)"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TotalFOB]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Total FOB (SO)]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LoadingDate]"
-                      dataType="dbTimeStamp"
-                      name="LoadingDate" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderType]"
-                      dataType="dbTimeStamp"
-                      name="OrderType" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderDate]"
-                      dataType="dbTimeStamp"
-                      name="OrderDate" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PO]"
-                      codePage="874"
-                      dataType="str"
-                      length="50"
-                      name="PO" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[INV]"
-                      dataType="i4"
-                      name="INV" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SO]"
-                      dataType="wstr"
-                      length="12"
-                      name="SO" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TotalFCLS]"
-                      dataType="r8"
-                      name="TotalFCLS" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SoldTo]"
-                      dataType="wstr"
-                      length="10"
-                      name="SoldTo" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SoldToName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="SoldToName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShipTo]"
-                      dataType="wstr"
-                      length="10"
-                      name="ShipTo" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShipToName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="ShipToName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DestinationPort]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="DestinationPort" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TotalCartons]"
-                      dataType="i4"
-                      name="TotalCartons" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PaymentTerm]"
-                      codePage="1252"
-                      dataType="str"
-                      length="100"
-                      name="PaymentTerm" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Incoterm]"
-                      codePage="1252"
-                      dataType="str"
-                      length="3"
-                      name="Incoterm" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Currency]"
-                      codePage="1252"
-                      dataType="str"
-                      length="3"
-                      name="Currency" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TotalFOB]"
-                      dataType="i4"
-                      name="TotalFOB" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SyncDate]"
-                      dataType="dbTimeStamp"
-                      name="SyncDate" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
             <path
               refId="Package\Data Flow Task.Paths[Flat File Source Output]"
-              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\DataReaderDest.Inputs[DataReader Destination Input]"
               name="Flat File Source Output"
               startId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
           </paths>
@@ -1139,25 +1155,37 @@
         <NodeLayout
           Size="153,42"
           Id="Package\Data Flow Task\Flat File Source"
-          TopLeft="384,116" />
+          TopLeft="313,31" />
         <NodeLayout
-          Size="173,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="380,252" />
+          Size="157,42"
+          Id="Package\Data Flow Task\DataReaderDest"
+          TopLeft="563,302" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="463.5,158">
+          TopLeft="389.5,73">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,94"
+              EndConnector="252,229"
               Start="0,0"
-              End="0,86.5">
+              End="252,221.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,86.5" />
+                    End="0,110.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,110.5"
+                    Point2="0,114.5"
+                    Point3="4,114.5" />
+                  <mssgle:LineSegment
+                    End="248,114.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="248,114.5"
+                    Point2="252,114.5"
+                    Point3="252,118.5" />
+                  <mssgle:LineSegment
+                    End="252,221.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1169,18 +1197,5 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
