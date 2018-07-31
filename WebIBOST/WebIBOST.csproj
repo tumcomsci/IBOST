@@ -66,7 +66,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\modern-business.css" />
     <Content Include="CustomerSaleMaster.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="IMG\ASEAN-Briefing-Import-and-Export-Procedures-in-Indonesia-Best-Practices-002.jpg" />
+    <Content Include="IMG\Export1.jpg" />
+    <Content Include="IMG\Export2.jpg" />
+    <Content Include="IMG\Export3.jpg" />
     <Content Include="WorkTable.aspx" />
     <Content Include="IMG\photo.jpg" />
     <Content Include="less\mixins.less" />
@@ -243,6 +249,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="WorkTable.aspx.cs">
       <DependentUpon>WorkTable.aspx</DependentUpon>

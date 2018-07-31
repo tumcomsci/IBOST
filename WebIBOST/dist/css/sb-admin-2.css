@@ -28,6 +28,10 @@ body {
 }
 .navbar-top-links li {
   display: inline-block;
+    top: 18px;
+    left: 0px;
+    height: 49px;
+    width: 51px;
 }
 .navbar-top-links li:last-child {
   margin-right: 15px;
@@ -35,10 +39,10 @@ body {
 .navbar-top-links li a {
   padding: 15px;
   min-height: 50px;
-    top: -16px;
-    left: -153px;
-    height: 30px;
-    width: 32px;
+    top: 0px;
+    left: 1px;
+    height: 17px;
+    width: 19px;
 }
 .navbar-top-links .dropdown-menu li {
   display: block;
