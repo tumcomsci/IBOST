@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Test.master.cs" Inherits="WebIBOST.Test" %>
+﻿x<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Test.master.cs" Inherits="WebIBOST.Test" %>
 
 <!DOCTYPE html>
 
@@ -56,7 +56,7 @@
     <div id="wrapper">
 
         <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0;height: 85px;background: black">
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0;height: 85px;background: #6cfb2f">
             <div class="navbar-header">
                 <%--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -65,7 +65,7 @@
                     <span class="icon-bar"></span>
                 </button>--%>
                
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand navbar-static-top" href="#">
                     <img src="IMG/photo.jpg" width="75" height="75" />
                 </a>
 
