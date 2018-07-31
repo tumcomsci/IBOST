@@ -11,10 +11,22 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="STG_SOHeader"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{C39CB7FA-7BC1-4E93-B2B2-91D10C891745}">
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{D099CD3D-AC32-42F8-B0E9-8289F8A64302}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[stg_soheader.csv]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{C22035F2-D18B-4407-A9F4-DA5BF5363DD1}"
+      DTS:ObjectName="stg_soheader.csv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\Trainee\Desktop\Sample Data\stg_soheader.csv" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables />
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
