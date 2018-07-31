@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">MALEE-TRAINING0</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAACAAAAAAAQZgAAAAEAACAAAAAr8BiMjBWPH7C8H4DAs1kiAKWyCiQZwuZQAoPfnAmQ2wAAAAAOgAAAAAIAACAAAACiCPQqcWi6tlAov4/zKM6OcPfaCl/QnzfqZLpke3080JAAAACQ4vymqjgi6Jvvf2n2xZwfSn/nR76wbCr3uz8E84d3lNACNZJzI9+/8qMx3lveh0UeFv8fDb9bx7dEiMIUCS0Kw/FnILbWFdTkoRtzv5u5v8zO67warNadoOF2KSy989iq89a+Riyr4FS3iGHu1q0RAcQsmProC1cmPJv3Aij3xpi1nPK95GEP87LPSQgBonJAAAAAJY9jvSCuQKAwyRGpiqRNE2Rf4fMSdVaBitLeJ+oVDcyKzLBosEm8eIIX7R52ClBwRcXfAJNMCLnWKA5kuuFzEw==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAACAAAAAAAQZgAAAAEAACAAAABVOPKBP3BBt3UUa7EemErkU42UADM4FyJr/SKs6BUtmgAAAAAOgAAAAAIAACAAAAA1fZndMaHS3FNZxQ+Ui3q9Mo/TLte0HHX8eB09LC5855AAAAB8xAHR+ZS3ITZ1SdHVZKjQ//6dIb8tIcLu/3RNCHQVpDAy2a/8q2TagQSpPnXm4tEinJdq2jiZWgq48Sz9Fb1HOCVYlzsqHiRPbr5hgiBcrsxWzhuV8havlaPbxyH6Kt4NXwGjXbh250LUwUJVbqSdpS0fCZAD38isGMXojfB3jMkk/Re9q3KUe40yFM8HA6NAAAAA6l7ISoM0JePBLcfskKiOyWjtX2ruGuZIsD+UiO6FtctDuJICfYVppXdq/jCaFaPV4riq6qLbWE+AuogUqqlJRQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -131,7 +131,28 @@
     </Manifest>
   </DeploymentModelSpecificContent>
   <ControlFlowParts />
-  <Miscellaneous />
+  <Miscellaneous>
+    <ProjectItem>
+      <Name>stg_customer.csv</Name>
+      <FullPath>stg_customer.csv</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>stg_do.csv</Name>
+      <FullPath>stg_do.csv</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>stg_sodetail.csv</Name>
+      <FullPath>stg_sodetail.csv</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>stg_soheader.csv</Name>
+      <FullPath>stg_soheader.csv</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>stg_stock.csv</Name>
+      <FullPath>stg_stock.csv</FullPath>
+    </ProjectItem>
+  </Miscellaneous>
   <Configurations>
     <Configuration>
       <Name>Development</Name>

@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">MALEE-TRAINING0</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA20RwXDjnnEqnJhk8HMAS2wAAAAACAAAAAAAQZgAAAAEAACAAAAA+ej4NoiTo1YCwp+wtuTJegc8h3eaBFM+f1uH2Aq3O2wAAAAAOgAAAAAIAACAAAADVUWLVLFiwktgaZOmbKN+Bf/a36QmAfADpeOYI1EQkDZAAAADYtXFe3rbhspB/05Rl475z5o63LN14JACxoolUo9iE1cjp7l4ZK7/1LjIY1Rb+C2uLyi49l1xXiGna9xJsJE8ugJ4HvXh3hdT1wMzcPV4QIQvJHReVv/YZ2RRpi8cOkvYSmHja7fz5/HXSpazASKYPTNlCFE0+AdE5DUgzJNv44ILLqCmcezU6yfEHgHFnT1BAAAAAxKeTkY168b1aXE0NcLkxMZu9+x0K86e1vragNq3eP39fLuGAVVgswpzPSTGeIXnUTKsG6iDWcTpqR42cEw8BrQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAACAAAAAAAQZgAAAAEAACAAAAB76GwyAfHf17BDTIr+PFscXm7QZXEqzhdC5qKqFFwuyAAAAAAOgAAAAAIAACAAAAD2OatGZDjaMJPidfmQ+tkBd0eNRgyDV2oA+aRf8GlMs5AAAABGH5OMWxfJSIsTbHX88boFVr96g1F+t88XGQqTr4C0Djwj9qCCBbEwJUsQ2C9Dv42qxv4YFbtynftZgjluQTTXmxfAsOY/FqDExIEEq7afkYjDNJ8Rr4exah4lCrWRmhUNWYkBJ07RQoTMp1SqzOIKPUgU9r+RiEKP+jrw1fbPb7yGG947/p7z08H2D70vG2ZAAAAAOC4TmNnyxMygRCj/eQ+0msOdDFRUOOwCfi0MBffKfmHG+qUtAMKQnrTjlvqNxYWBOe9P0fs9CqPp3+43kxrSLg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -34,6 +34,7 @@
           <SSIS:Package SSIS:Name="STG_SOHeader.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="STG_SODetail.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="STG_Stock.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="STG_DO.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
@@ -107,13 +108,51 @@
               </SSIS:Properties>
               <SSIS:Parameters />
             </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="STG_DO.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{99AD24A8-4ED8-41D0-8A6A-11E80C19F4D0}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">STG_DO</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{6976292C-0AF5-4DAD-A2A3-599B12A11CA4}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>
       </SSIS:Project>
     </Manifest>
   </DeploymentModelSpecificContent>
   <ControlFlowParts />
-  <Miscellaneous />
+  <Miscellaneous>
+    <ProjectItem>
+      <Name>stg_customer.csv</Name>
+      <FullPath>stg_customer.csv</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>stg_do.csv</Name>
+      <FullPath>stg_do.csv</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>stg_sodetail.csv</Name>
+      <FullPath>stg_sodetail.csv</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>stg_soheader.csv</Name>
+      <FullPath>stg_soheader.csv</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>stg_stock.csv</Name>
+      <FullPath>stg_stock.csv</FullPath>
+    </ProjectItem>
+  </Miscellaneous>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
