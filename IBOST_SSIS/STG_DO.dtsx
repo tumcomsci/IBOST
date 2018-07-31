@@ -11,12 +11,453 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="STG_DO"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{6976292C-0AF5-4DAD-A2A3-599B12A11CA4}">
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{FCF8AD91-CB0A-44B6-946F-120255E07134}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{41A7961D-7EDD-4C72-B756-CAC05D3AE76B}"
+      DTS:ObjectName="10.0.0.77.IBOrderTracking.IBOT1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=10.0.0.77;User ID=IBOT;Initial Catalog=IBOrderTracking;Persist Security Info=True;Application Name=SSIS-STG_DO-{41A7961D-7EDD-4C72-B756-CAC05D3AE76B}10.0.0.77.IBOrderTracking.IBOT1;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABDjFJlUwD180HtiK/CKH9fhUEwuihSh1RUgmpY6vEHygAAAAAOgAAAAAIAACAAAAAs8r2baoNwbpULFOBUbLW+oepUJY+SPnWTpb6MUHaZSyAAAADgQcW0U/kn7z6toYQN8LQUNGKfuQvDUFq/0hcUHWIxNkAAAAAoNnA+2lDlPHqwEP82PXS5RHaZRzE38hQ3aFxmZ4ZsVABd9lOLxPUE/ENAwmQZUZAmHx+9XuudHZeo4tdgtquL</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[STG_DO]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{4C7B59D3-A632-4670-AFB1-782C3E312E24}"
+      DTS:ObjectName="STG_DO">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1054"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="874"
+          DTS:ConnectionString="C:\Users\Trainee\Desktop\Sample Data\stg_do.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SO no "
+              DTS:DTSID="{3541FF05-30F3-40EA-B9DF-0516E1E5137B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DO no "
+              DTS:DTSID="{875BD726-E403-4296-8DB8-C77F0248480E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MATERIAL"
+              DTS:DTSID="{0E34C42B-C181-4DFB-9890-BA9E8C802CE2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Lot"
+              DTS:DTSID="{0D6AEAF2-BAC0-47F2-BD15-677D9BF8C004}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="QTY"
+              DTS:DTSID="{64AA388E-DA87-4DA0-AB19-9E13157FB8A1}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
   <DTS:Variables />
-  <DTS:Executables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\STG DO"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{2C6F5577-488D-42FF-8D88-20FDB6EB51A7}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="STG DO"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\STG DO\CSV DO"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1054"
+              name="CSV DO"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\STG DO\CSV DO.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[STG_DO]"
+                  connectionManagerRefId="Package.ConnectionManagers[STG_DO]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\STG DO\CSV DO.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].Columns[SO no ]"
+                      codePage="874"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].ExternalColumns[SO no ]"
+                      length="50"
+                      lineageId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].Columns[SO no ]"
+                      name="SO no "
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].Columns[DO no ]"
+                      codePage="874"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].ExternalColumns[DO no ]"
+                      length="50"
+                      lineageId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].Columns[DO no ]"
+                      name="DO no "
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].Columns[MATERIAL]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].ExternalColumns[MATERIAL]"
+                      lineageId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].Columns[MATERIAL]"
+                      name="MATERIAL"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].Columns[Lot]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].ExternalColumns[Lot]"
+                      lineageId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].Columns[Lot]"
+                      name="Lot"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].Columns[QTY]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].ExternalColumns[QTY]"
+                      lineageId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].Columns[QTY]"
+                      name="QTY"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].ExternalColumns[SO no ]"
+                      codePage="874"
+                      dataType="str"
+                      length="50"
+                      name="SO no " />
+                    <externalMetadataColumn
+                      refId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].ExternalColumns[DO no ]"
+                      codePage="874"
+                      dataType="str"
+                      length="50"
+                      name="DO no " />
+                    <externalMetadataColumn
+                      refId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].ExternalColumns[MATERIAL]"
+                      dataType="i4"
+                      name="MATERIAL" />
+                    <externalMetadataColumn
+                      refId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].ExternalColumns[Lot]"
+                      dataType="dbTimeStamp"
+                      name="Lot" />
+                    <externalMetadataColumn
+                      refId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].ExternalColumns[QTY]"
+                      dataType="i4"
+                      name="QTY" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\STG DO\CSV DO.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG DO\CSV DO.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="874"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\STG DO\CSV DO.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\STG DO\CSV DO.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STG DO\CSV DO.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STG DO\CSV DO.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STG DO\CSV DO.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STG DO\STG_DO"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="STG_DO"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."STG_DO"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\STG DO\STG_DO.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].Columns[MATERIAL]"
+                      cachedDataType="i4"
+                      cachedName="MATERIAL"
+                      externalMetadataColumnId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].ExternalColumns[Material]"
+                      lineageId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].Columns[MATERIAL]" />
+                    <inputColumn
+                      refId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].Columns[Lot]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Lot"
+                      externalMetadataColumnId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].ExternalColumns[Lot]"
+                      lineageId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].Columns[Lot]" />
+                    <inputColumn
+                      refId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].Columns[QTY]"
+                      cachedDataType="i4"
+                      cachedName="QTY"
+                      externalMetadataColumnId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].ExternalColumns[QTY]"
+                      lineageId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].Columns[QTY]" />
+                    <inputColumn
+                      refId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].Columns[SO no ]"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SO no "
+                      externalMetadataColumnId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].ExternalColumns[SO]"
+                      lineageId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].Columns[SO no ]" />
+                    <inputColumn
+                      refId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].Columns[DO no ]"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DO no "
+                      externalMetadataColumnId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].ExternalColumns[DO]"
+                      lineageId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].Columns[DO no ]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].ExternalColumns[SO]"
+                      dataType="wstr"
+                      length="50"
+                      name="SO" />
+                    <externalMetadataColumn
+                      refId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].ExternalColumns[DO]"
+                      dataType="wstr"
+                      length="50"
+                      name="DO" />
+                    <externalMetadataColumn
+                      refId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].ExternalColumns[Material]"
+                      dataType="i4"
+                      name="Material" />
+                    <externalMetadataColumn
+                      refId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].ExternalColumns[Lot]"
+                      dataType="dbTimeStamp"
+                      name="Lot" />
+                    <externalMetadataColumn
+                      refId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].ExternalColumns[QTY]"
+                      dataType="i4"
+                      name="QTY" />
+                    <externalMetadataColumn
+                      refId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].ExternalColumns[SyncDate]"
+                      dataType="dbTimeStamp"
+                      name="SyncDate" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STG DO\STG_DO.Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG DO\STG_DO.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STG DO\STG_DO.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STG DO\STG_DO.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STG DO\STG_DO.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\STG DO.Paths[Flat File Source Output]"
+              endId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\STG DO\CSV DO.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -24,5 +465,75 @@
 <Objects
   Version="8">
   <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="118,42"
+          Id="Package\STG DO"
+          TopLeft="419,162" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\STG DO">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="118,42"
+          Id="Package\STG DO\CSV DO"
+          TopLeft="236,72" />
+        <NodeLayout
+          Size="121,42"
+          Id="Package\STG DO\STG_DO"
+          TopLeft="593,282" />
+        <EdgeLayout
+          Id="Package\STG DO.Paths[Flat File Source Output]"
+          TopLeft="295,114">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="358.5,168"
+              Start="0,0"
+              End="358.5,160.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,80" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,80"
+                    Point2="0,84"
+                    Point3="4,84" />
+                  <mssgle:LineSegment
+                    End="354.5,84" />
+                  <mssgle:CubicBezierSegment
+                    Point1="354.5,84"
+                    Point2="358.5,84"
+                    Point3="358.5,88" />
+                  <mssgle:LineSegment
+                    End="358.5,160.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\STG DO\STG_DO">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>

@@ -11,12 +11,875 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="STG_Stock"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{E8B07D37-7012-45DF-9D5B-430ABE115E31}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{ED073DC8-9AC8-4BCD-BBDA-92130B15C21F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{A8361AA4-163C-4A80-905E-3EB3A16060A0}"
+      DTS:ObjectName="10.0.0.77.IBOrderTracking.IBOT1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=10.0.0.77;User ID=IBOT;Initial Catalog=IBOrderTracking;Persist Security Info=True;Application Name=SSIS-STG_Stock-{A8361AA4-163C-4A80-905E-3EB3A16060A0}10.0.0.77.IBOrderTracking.IBOT1;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACFN8LBWZmPnlDzPb7kZ8FisEGjAF/8E4vK7rl9x0HR0gAAAAAOgAAAAAIAACAAAADJQ49TjpaKqFBGI9dNk02mmrXRRF4Evz0CJH6RztQEDCAAAACDmHUBmNswbCnG+MNczOE3dC2Jln7x8liFYg91jNts60AAAABBPQCONTRaQHkMVcrffyoGPy92Q6WrBM3aZRPN6C7etfweSeURl/GtYAclvksU8DuYGQgnNnoZQwFN7Z0hpCEl</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[STG_Stock]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{1CA8E6A0-05C5-46BC-8C8F-746193E877C6}"
+      DTS:ObjectName="STG_Stock">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1054"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="874"
+          DTS:ConnectionString="C:\Users\Trainee\Desktop\Sample Data\stg_stock.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PLANT"
+              DTS:DTSID="{8B3CEABB-B3B3-4AFF-92A5-1F369C59E795}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="STORE LOCATION"
+              DTS:DTSID="{5A11FB48-3D59-4BD7-A580-5DA08F396903}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="STORE LOCATION DESCRIPTION"
+              DTS:DTSID="{CC225DCB-4F30-4543-A33F-2ED25B024037}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MATERIAL"
+              DTS:DTSID="{42FD7A2E-A08F-46F1-94FA-B2367A0FBB42}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UNIT"
+              DTS:DTSID="{2B083224-5B16-4935-9D3B-D9E23131B0C4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LOT"
+              DTS:DTSID="{2377FF33-9106-4106-9265-EE3C944724E1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EXPIRE DATE"
+              DTS:DTSID="{9AFBFBCD-2A41-474C-BF51-188A939E3C61}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PLAN DATE"
+              DTS:DTSID="{46BB1F43-F34D-417D-ABD0-CC093B8B4B18}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UNRES"
+              DTS:DTSID="{95EAA51D-FC6F-45C6-BBD5-3B3626A14D19}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="QI"
+              DTS:DTSID="{23E469A0-6CE3-4844-9708-9A179CB998B2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="REMAIN"
+              DTS:DTSID="{5632F852-3E84-4932-AEA5-18B8F8B89F6F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SO"
+              DTS:DTSID="{AFABA977-B120-4A12-A7BA-D5BA10DECE7D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DO"
+              DTS:DTSID="{FECA7822-4F57-488C-8ACA-A285F200F391}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TRANSACTION TYPE"
+              DTS:DTSID="{D40F0B39-62C0-4F7B-9B1B-5DC5A65FACDC}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
   <DTS:Variables />
-  <DTS:Executables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\STG Stock"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{B68D2C37-84D6-4B83-9B5C-22EB3D544893}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="STG Stock"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\STG Stock\ADO NET Destination"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="ADO NET Destination"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."STG_Stock"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\STG Stock\ADO NET Destination.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[PLANT]"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PLANT"
+                      externalMetadataColumnId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Plant]"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[PLANT]" />
+                    <inputColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[MATERIAL]"
+                      cachedDataType="i4"
+                      cachedName="MATERIAL"
+                      externalMetadataColumnId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Material]"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[MATERIAL]" />
+                    <inputColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[UNIT]"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="UNIT"
+                      externalMetadataColumnId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Unit]"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[UNIT]" />
+                    <inputColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[LOT]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="LOT"
+                      externalMetadataColumnId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Lot]"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[LOT]" />
+                    <inputColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[UNRES]"
+                      cachedDataType="i4"
+                      cachedName="UNRES"
+                      externalMetadataColumnId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Unres]"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[UNRES]" />
+                    <inputColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[QI]"
+                      cachedDataType="i4"
+                      cachedName="QI"
+                      externalMetadataColumnId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Qi]"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[QI]" />
+                    <inputColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[REMAIN]"
+                      cachedDataType="i4"
+                      cachedName="REMAIN"
+                      externalMetadataColumnId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Remain]"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[REMAIN]" />
+                    <inputColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[SO]"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SO"
+                      externalMetadataColumnId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[SO]"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[SO]" />
+                    <inputColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[DO]"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DO"
+                      externalMetadataColumnId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[DO]"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[DO]" />
+                    <inputColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[STORE LOCATION]"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="STORE LOCATION"
+                      externalMetadataColumnId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[StoreLocation]"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[STORE LOCATION]" />
+                    <inputColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[STORE LOCATION DESCRIPTION]"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="STORE LOCATION DESCRIPTION"
+                      externalMetadataColumnId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[StoreLocationDescription]"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[STORE LOCATION DESCRIPTION]" />
+                    <inputColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[EXPIRE DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="EXPIRE DATE"
+                      externalMetadataColumnId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[ExpireDate]"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[EXPIRE DATE]" />
+                    <inputColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[PLAN DATE]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="PLAN DATE"
+                      externalMetadataColumnId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[PlanDate]"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[PLAN DATE]" />
+                    <inputColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[TRANSACTION TYPE]"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TRANSACTION TYPE"
+                      externalMetadataColumnId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[TransactionType]"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[TRANSACTION TYPE]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Plant]"
+                      dataType="wstr"
+                      length="50"
+                      name="Plant" />
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[StoreLocation]"
+                      dataType="wstr"
+                      length="50"
+                      name="StoreLocation" />
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[StoreLocationDescription]"
+                      dataType="wstr"
+                      length="50"
+                      name="StoreLocationDescription" />
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Material]"
+                      dataType="i4"
+                      name="Material" />
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Unit]"
+                      dataType="wstr"
+                      length="50"
+                      name="Unit" />
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Lot]"
+                      dataType="dbTimeStamp"
+                      name="Lot" />
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[ExpireDate]"
+                      dataType="dbTimeStamp"
+                      name="ExpireDate" />
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[PlanDate]"
+                      dataType="dbTimeStamp"
+                      name="PlanDate" />
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Unres]"
+                      dataType="i4"
+                      name="Unres" />
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Qi]"
+                      dataType="i4"
+                      name="Qi" />
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Remain]"
+                      dataType="i4"
+                      name="Remain" />
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[SO]"
+                      dataType="wstr"
+                      length="50"
+                      name="SO" />
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[DO]"
+                      dataType="wstr"
+                      length="50"
+                      name="DO" />
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[TransactionType]"
+                      dataType="wstr"
+                      length="50"
+                      name="TransactionType" />
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[SyncDate]"
+                      dataType="dbTimeStamp"
+                      name="SyncDate" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\STG Stock\ADO NET Destination.Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG Stock\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STG Stock\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STG Stock\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STG Stock\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\STG Stock\CSV Stock"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1054"
+              name="CSV Stock"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\STG Stock\CSV Stock.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[STG_Stock]"
+                  connectionManagerRefId="Package.ConnectionManagers[STG_Stock]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[PLANT]"
+                      codePage="874"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[PLANT]"
+                      length="50"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[PLANT]"
+                      name="PLANT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[STORE LOCATION]"
+                      codePage="874"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[STORE LOCATION]"
+                      length="50"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[STORE LOCATION]"
+                      name="STORE LOCATION"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[STORE LOCATION DESCRIPTION]"
+                      codePage="874"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[STORE LOCATION DESCRIPTION]"
+                      length="50"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[STORE LOCATION DESCRIPTION]"
+                      name="STORE LOCATION DESCRIPTION"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[MATERIAL]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[MATERIAL]"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[MATERIAL]"
+                      name="MATERIAL"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[UNIT]"
+                      codePage="874"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[UNIT]"
+                      length="50"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[UNIT]"
+                      name="UNIT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[LOT]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[LOT]"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[LOT]"
+                      name="LOT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[EXPIRE DATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[EXPIRE DATE]"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[EXPIRE DATE]"
+                      name="EXPIRE DATE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[PLAN DATE]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[PLAN DATE]"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[PLAN DATE]"
+                      name="PLAN DATE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[UNRES]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[UNRES]"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[UNRES]"
+                      name="UNRES"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[QI]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[QI]"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[QI]"
+                      name="QI"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[REMAIN]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[REMAIN]"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[REMAIN]"
+                      name="REMAIN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[SO]"
+                      codePage="874"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[SO]"
+                      length="50"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[SO]"
+                      name="SO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[DO]"
+                      codePage="874"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[DO]"
+                      length="50"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[DO]"
+                      name="DO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[TRANSACTION TYPE]"
+                      codePage="874"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[TRANSACTION TYPE]"
+                      length="50"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[TRANSACTION TYPE]"
+                      name="TRANSACTION TYPE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[PLANT]"
+                      codePage="874"
+                      dataType="str"
+                      length="50"
+                      name="PLANT" />
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[STORE LOCATION]"
+                      codePage="874"
+                      dataType="str"
+                      length="50"
+                      name="STORE LOCATION" />
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[STORE LOCATION DESCRIPTION]"
+                      codePage="874"
+                      dataType="str"
+                      length="50"
+                      name="STORE LOCATION DESCRIPTION" />
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[MATERIAL]"
+                      dataType="i4"
+                      name="MATERIAL" />
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[UNIT]"
+                      codePage="874"
+                      dataType="str"
+                      length="50"
+                      name="UNIT" />
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[LOT]"
+                      dataType="dbTimeStamp"
+                      name="LOT" />
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[EXPIRE DATE]"
+                      dataType="dbTimeStamp"
+                      name="EXPIRE DATE" />
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[PLAN DATE]"
+                      dataType="dbTimeStamp"
+                      name="PLAN DATE" />
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[UNRES]"
+                      dataType="i4"
+                      name="UNRES" />
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[QI]"
+                      dataType="i4"
+                      name="QI" />
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[REMAIN]"
+                      dataType="i4"
+                      name="REMAIN" />
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[SO]"
+                      codePage="874"
+                      dataType="str"
+                      length="50"
+                      name="SO" />
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[DO]"
+                      codePage="874"
+                      dataType="str"
+                      length="50"
+                      name="DO" />
+                    <externalMetadataColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[TRANSACTION TYPE]"
+                      codePage="874"
+                      dataType="str"
+                      length="50"
+                      name="TRANSACTION TYPE" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="874"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\STG Stock.Paths[Flat File Source Output]"
+              endId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -24,5 +887,75 @@
 <Objects
   Version="8">
   <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="129,42"
+          Id="Package\STG Stock"
+          TopLeft="416,176" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\STG Stock">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="129,42"
+          Id="Package\STG Stock\CSV Stock"
+          TopLeft="228,56" />
+        <NodeLayout
+          Size="181,42"
+          Id="Package\STG Stock\ADO NET Destination"
+          TopLeft="610,289" />
+        <EdgeLayout
+          Id="Package\STG Stock.Paths[Flat File Source Output]"
+          TopLeft="292.5,98">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="408,191"
+              Start="0,0"
+              End="408,183.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,91.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,91.5"
+                    Point2="0,95.5"
+                    Point3="4,95.5" />
+                  <mssgle:LineSegment
+                    End="404,95.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="404,95.5"
+                    Point2="408,95.5"
+                    Point3="408,99.5" />
+                  <mssgle:LineSegment
+                    End="408,183.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\STG Stock\ADO NET Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
