@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CustomerSaleMaster.aspx" />
+    <Content Include="WorkTable.aspx" />
     <Content Include="IMG\photo.jpg" />
     <Content Include="less\mixins.less" />
     <Content Include="less\sb-admin-2.less" />
@@ -242,6 +243,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="WorkTable.aspx.cs">
+      <DependentUpon>WorkTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkTable.aspx.designer.cs">
+      <DependentUpon>WorkTable.aspx</DependentUpon>
     </Compile>
     <Compile Include="ManageMasterData.aspx.cs">
       <DependentUpon>ManageMasterData.aspx</DependentUpon>

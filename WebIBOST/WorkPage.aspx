@@ -5,10 +5,10 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-     <div id="page-wrapper">
+     
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Forms</h1>
+                    <h1 class="page-header">Input Forms</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -17,7 +17,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Basic Form Elements
+                            IB ORDER TRACKING
                         </div>
                         <div class="panel-body">
                             <div class="row">
@@ -26,8 +26,9 @@
                                         <div class="form-group">
                                             <label>Sticker</label>
                                             <input class="form-control">
-                                            <p class="help-block">Example English only.</p>
+                                            <p class="help-block">Example Date only.</p>
                                         </div>
+
                                         <div class="form-group">
                                             <label>God input</label>
                                             <input class="form-control" placeholder="Enter text">
@@ -217,6 +218,5 @@
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
-        </div>
-        <!-- /#page-wrapper -->
+      
 </asp:Content>

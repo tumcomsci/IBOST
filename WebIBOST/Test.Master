@@ -1,4 +1,4 @@
-﻿x<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Test.master.cs" Inherits="WebIBOST.Test" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Test.master.cs" Inherits="WebIBOST.Test" %>
 
 <!DOCTYPE html>
 
@@ -64,9 +64,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>--%>
-               
-                <a class="navbar-brand navbar-static-top" href="#">
+                    
+                <a class="navbar-brand navbar-top" href="home.aspx">
                     <img src="IMG/photo.jpg" width="75" height="75" />
+                    
                 </a>
 
             </div>

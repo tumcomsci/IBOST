@@ -24,6 +24,7 @@ body {
 }
 .navbar-top-links {
   margin-right: 0;
+    height: 46px;
 }
 .navbar-top-links li {
   display: inline-block;
@@ -34,6 +35,10 @@ body {
 .navbar-top-links li a {
   padding: 15px;
   min-height: 50px;
+    top: -16px;
+    left: -153px;
+    height: 30px;
+    width: 32px;
 }
 .navbar-top-links .dropdown-menu li {
   display: block;
