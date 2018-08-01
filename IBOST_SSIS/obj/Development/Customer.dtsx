@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="Customer"
   DTS:PackageType="5"
-  DTS:VersionBuild="20"
-  DTS:VersionGUID="{32356DFD-9637-4B23-B9AB-A5E30AC74A31}">
+  DTS:VersionBuild="23"
+  DTS:VersionGUID="{3637DE18-7E9F-4FF1-879C-51FD21C9134A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACuSOa7exUiodlLavqZgM82dEBw+GWtmtamWE1ubRni/wAAAAAOgAAAAAIAACAAAAAK5kQlZJj1ci8D1/SK+lCEXyH7FvjevvkOErU4m9gqXiAAAABPuof6Zoqe98oCPPTSpFzBel3GyVnWw5Cw/ezyjHtBZ0AAAACE76ZS/u2lq3/aKmj/FYWlE/yTUaygmGD43XhRrg7uYtXvau0tix+uGiptU2gjgT/5sI53XyuLG+CA0tK+HX0O</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA9EbdvB5T7gOEcxZyHVP1Zm6LcS7Nnl6fQeFnn5Xr/FQAAAAAOgAAAAAIAACAAAADSQAgXHlkPOWL4OS/666vR/TH8IMo5XQopr+zxlFwvLyAAAACyo5Nv+9jYKZ3LhFpux7wVicX329GUvku1zui37hOKYUAAAADuhf5Ugn4foDJKxozBAkS6SFCBPD1Er8p/XXmeTal56F4PgSCiOV/hepYd8qicsn0CdGEi/jGdKutb6Oayy2+L</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAetWoGU22d3kg0hmpLrVfNjAO3HPo2tuIowKKfzaXnewAAAAAOgAAAAAIAACAAAACZ2qB1VsjMplomEmO4Qo5bAVKP3v1HGjH08e+MXMH4vyAAAADY/rdi8UQHUWsMYZNlvuKBS1vbfDJ2ZNCvfx2IGdmk0kAAAADBQkm49SkJYdpmaj3k7IHXicngoyLZzeSXZxJp+Xa80bEc61gIEKdFEBRUSA/URaneu9DsanRbEDMgL4ZnlOfw</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABz/chPuBwsrnggUyFYlPz6mo6nUBNpyjjdZwGo8O3YCQAAAAAOgAAAAAIAACAAAAAttCOnvofwWEVXz/Z2OmwnFFgyggedZTLdT0x3hnnXYSAAAADacQ9g8Lo0ZR4WGEVnwP22gg3bDn13p1RNDXplXUoQF0AAAADqDyh+iFGCLj3qccW87WW2AhcyN5rsYttHEet+wijdjHJIm+6ZoCyjLr6HHWuXWGi8vcTgaIq6UjVJlXpeI16x</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -205,6 +205,395 @@
               </outputs>
             </component>
             <component
+              refId="Package\Prepare STG\ADO NET Source 1"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+              name="ADO NET Source 1"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement used by the component to extract data."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT *
+  FROM STG_Customer
+WHERE SyncDate = ( 
+    SELECT MAX(SyncDate) 
+    FROM STG_Customer
+);</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="The Source database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the mode to retrieve external column information"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Prepare STG\ADO NET Source 1.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Output]"
+                  name="ADO NET Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Output].Columns[CustomerCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Output].ExternalColumns[CustomerCode]"
+                      length="50"
+                      lineageId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Output].Columns[CustomerCode]"
+                      name="CustomerCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Output].Columns[Customer]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Output].ExternalColumns[Customer]"
+                      length="50"
+                      lineageId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Output].Columns[Customer]"
+                      name="Customer"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Output].Columns[SaleEmployeeID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Output].ExternalColumns[SaleEmployeeID]"
+                      length="50"
+                      lineageId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Output].Columns[SaleEmployeeID]"
+                      name="SaleEmployeeID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Output].Columns[SyncDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Output].ExternalColumns[SyncDate]"
+                      lineageId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Output].Columns[SyncDate]"
+                      name="SyncDate"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Output].ExternalColumns[CustomerCode]"
+                      dataType="wstr"
+                      length="50"
+                      name="CustomerCode" />
+                    <externalMetadataColumn
+                      refId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Output].ExternalColumns[Customer]"
+                      dataType="wstr"
+                      length="50"
+                      name="Customer" />
+                    <externalMetadataColumn
+                      refId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Output].ExternalColumns[SaleEmployeeID]"
+                      dataType="wstr"
+                      length="50"
+                      name="SaleEmployeeID" />
+                    <externalMetadataColumn
+                      refId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Output].ExternalColumns[SyncDate]"
+                      dataType="dbTimeStamp"
+                      name="SyncDate" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Error Output]"
+                  isErrorOut="true"
+                  name="ADO NET Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Error Output].Columns[CustomerCode]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Error Output].Columns[CustomerCode]"
+                      name="CustomerCode" />
+                    <outputColumn
+                      refId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Error Output].Columns[Customer]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Error Output].Columns[Customer]"
+                      name="Customer" />
+                    <outputColumn
+                      refId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Error Output].Columns[SaleEmployeeID]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Error Output].Columns[SaleEmployeeID]"
+                      name="SaleEmployeeID" />
+                    <outputColumn
+                      refId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Error Output].Columns[SyncDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Error Output].Columns[SyncDate]"
+                      name="SyncDate" />
+                    <outputColumn
+                      refId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Prepare STG\Find Update Records"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Find Update Records"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Prepare STG\Find Update Records.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Prepare STG\Find Update Records.Inputs[Conditional Split Input].Columns[Customer]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Customer"
+                      lineageId="Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[Customer]" />
+                    <inputColumn
+                      refId="Package\Prepare STG\Find Update Records.Inputs[Conditional Split Input].Columns[SaleEmployeeID]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SaleEmployeeID"
+                      lineageId="Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeID]" />
+                    <inputColumn
+                      refId="Package\Prepare STG\Find Update Records.Inputs[Conditional Split Input].Columns[Customer (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Customer (1)"
+                      lineageId="Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[Customer (1)]" />
+                    <inputColumn
+                      refId="Package\Prepare STG\Find Update Records.Inputs[Conditional Split Input].Columns[SaleEmployeeID (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SaleEmployeeID (1)"
+                      lineageId="Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeID (1)]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Prepare STG\Find Update Records.Outputs[Update Records]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Update Records"
+                  synchronousInputId="Package\Prepare STG\Find Update Records.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">(#{Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[Customer]} != #{Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[Customer (1)]}) || (#{Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeID]} != #{Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeID (1)]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">(Customer != [Customer (1)]) || (SaleEmployeeID != [SaleEmployeeID (1)])</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Prepare STG\Find Update Records.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Prepare STG\Find Update Records.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Prepare STG\Find Update Records.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Prepare STG\Find Update Records.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Prepare STG\Find Update Records.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Prepare STG\Find Update Records.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Prepare STG\Find Update Records.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Prepare STG\Find Update Records.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Prepare STG\Insert Records (Customer Table)"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="Insert Records (Customer Table)"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Customer"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Prepare STG\Insert Records (Customer Table).Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Prepare STG\Insert Records (Customer Table).Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Prepare STG\Insert Records (Customer Table).Inputs[ADO NET Destination Input].Columns[CustomerCode]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CustomerCode"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Prepare STG\Insert Records (Customer Table).Inputs[ADO NET Destination Input].ExternalColumns[CustomerCode]"
+                      lineageId="Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[CustomerCode]" />
+                    <inputColumn
+                      refId="Package\Prepare STG\Insert Records (Customer Table).Inputs[ADO NET Destination Input].Columns[Customer]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Customer"
+                      externalMetadataColumnId="Package\Prepare STG\Insert Records (Customer Table).Inputs[ADO NET Destination Input].ExternalColumns[Customer]"
+                      lineageId="Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[Customer]" />
+                    <inputColumn
+                      refId="Package\Prepare STG\Insert Records (Customer Table).Inputs[ADO NET Destination Input].Columns[SaleEmployeeID]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SaleEmployeeID"
+                      externalMetadataColumnId="Package\Prepare STG\Insert Records (Customer Table).Inputs[ADO NET Destination Input].ExternalColumns[SaleEmployeeID]"
+                      lineageId="Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Prepare STG\Insert Records (Customer Table).Inputs[ADO NET Destination Input].ExternalColumns[CustomerCode]"
+                      dataType="wstr"
+                      length="50"
+                      name="CustomerCode" />
+                    <externalMetadataColumn
+                      refId="Package\Prepare STG\Insert Records (Customer Table).Inputs[ADO NET Destination Input].ExternalColumns[Customer]"
+                      dataType="wstr"
+                      length="50"
+                      name="Customer" />
+                    <externalMetadataColumn
+                      refId="Package\Prepare STG\Insert Records (Customer Table).Inputs[ADO NET Destination Input].ExternalColumns[SaleEmployeeID]"
+                      dataType="wstr"
+                      length="50"
+                      name="SaleEmployeeID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Prepare STG\Insert Records (Customer Table).Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\Prepare STG\Insert Records (Customer Table).Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Prepare STG\Insert Records (Customer Table).Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Prepare STG\Insert Records (Customer Table).Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Prepare STG\Insert Records (Customer Table).Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Prepare STG\Insert Records (Customer Table).Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Prepare STG\Merge Join"
               componentClassID="Microsoft.MergeJoin"
               contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -220,7 +609,7 @@
                 <property
                   dataType="System.Int32"
                   description="Specifies the number of columns in the ordering key."
-                  name="NumKeyColumns">0</property>
+                  name="NumKeyColumns">1</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the null values are treated as equal values."
@@ -242,21 +631,21 @@
                       cachedLength="50"
                       cachedName="CustomerCode"
                       cachedSortKeyPosition="1"
-                      lineageId="Package\Prepare STG\Sort.Outputs[Sort Output].Columns[CustomerCode]" />
+                      lineageId="Package\Prepare STG\Sort STG.Outputs[Sort Output].Columns[CustomerCode]" />
                     <inputColumn
                       refId="Package\Prepare STG\Merge Join.Inputs[Merge Join Left Input].Columns[Customer]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Customer"
                       cachedSortKeyPosition="2"
-                      lineageId="Package\Prepare STG\Sort.Outputs[Sort Output].Columns[Customer]" />
+                      lineageId="Package\Prepare STG\Sort STG.Outputs[Sort Output].Columns[Customer]" />
                     <inputColumn
                       refId="Package\Prepare STG\Merge Join.Inputs[Merge Join Left Input].Columns[SaleEmployeeID]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="SaleEmployeeID"
                       cachedSortKeyPosition="3"
-                      lineageId="Package\Prepare STG\Sort.Outputs[Sort Output].Columns[SaleEmployeeID]" />
+                      lineageId="Package\Prepare STG\Sort STG.Outputs[Sort Output].Columns[SaleEmployeeID]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -264,23 +653,134 @@
                   refId="Package\Prepare STG\Merge Join.Inputs[Merge Join Right Input]"
                   hasSideEffects="true"
                   name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Prepare STG\Merge Join.Inputs[Merge Join Right Input].Columns[CustomerCode]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CustomerCode"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Prepare STG\Sort Table.Outputs[Sort Output].Columns[CustomerCode]" />
+                    <inputColumn
+                      refId="Package\Prepare STG\Merge Join.Inputs[Merge Join Right Input].Columns[Customer]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Customer"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\Prepare STG\Sort Table.Outputs[Sort Output].Columns[Customer]" />
+                    <inputColumn
+                      refId="Package\Prepare STG\Merge Join.Inputs[Merge Join Right Input].Columns[SaleEmployeeID]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SaleEmployeeID"
+                      cachedSortKeyPosition="3"
+                      lineageId="Package\Prepare STG\Sort Table.Outputs[Sort Output].Columns[SaleEmployeeID]" />
+                  </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
                   refId="Package\Prepare STG\Merge Join.Outputs[Merge Join Output]"
+                  isSorted="true"
                   name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[CustomerCode]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[CustomerCode]"
+                      name="CustomerCode"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Prepare STG\Merge Join.Inputs[Merge Join Left Input].Columns[CustomerCode]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[Customer]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[Customer]"
+                      name="Customer">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Prepare STG\Merge Join.Inputs[Merge Join Left Input].Columns[Customer]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeID]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeID]"
+                      name="SaleEmployeeID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Prepare STG\Merge Join.Inputs[Merge Join Left Input].Columns[SaleEmployeeID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[CustomerCode (1)]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[CustomerCode (1)]"
+                      name="CustomerCode (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Prepare STG\Merge Join.Inputs[Merge Join Right Input].Columns[CustomerCode]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[Customer (1)]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[Customer (1)]"
+                      name="Customer (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Prepare STG\Merge Join.Inputs[Merge Join Right Input].Columns[Customer]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeID (1)]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeID (1)]"
+                      name="SaleEmployeeID (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Prepare STG\Merge Join.Inputs[Merge Join Right Input].Columns[SaleEmployeeID]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
                   <externalMetadataColumns />
                 </output>
               </outputs>
             </component>
             <component
-              refId="Package\Prepare STG\Sort"
+              refId="Package\Prepare STG\Sort STG"
               componentClassID="Microsoft.Sort"
               contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-              name="Sort"
+              name="Sort STG"
               version="1">
               <properties>
                 <property
@@ -295,15 +795,15 @@
               </properties>
               <inputs>
                 <input
-                  refId="Package\Prepare STG\Sort.Inputs[Sort Input]"
+                  refId="Package\Prepare STG\Sort STG.Inputs[Sort Input]"
                   name="Sort Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Prepare STG\Sort.Inputs[Sort Input].Columns[CustomerCode]"
+                      refId="Package\Prepare STG\Sort STG.Inputs[Sort Input].Columns[CustomerCode]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="CustomerCode"
-                      lineageId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Output].Columns[CustomerCode]">
+                      lineageId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Output].Columns[CustomerCode]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -316,11 +816,11 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Prepare STG\Sort.Inputs[Sort Input].Columns[Customer]"
+                      refId="Package\Prepare STG\Sort STG.Inputs[Sort Input].Columns[Customer]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Customer"
-                      lineageId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Output].Columns[Customer]">
+                      lineageId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Output].Columns[Customer]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -333,11 +833,11 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Prepare STG\Sort.Inputs[Sort Input].Columns[SaleEmployeeID]"
+                      refId="Package\Prepare STG\Sort STG.Inputs[Sort Input].Columns[SaleEmployeeID]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="SaleEmployeeID"
-                      lineageId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Output].Columns[SaleEmployeeID]">
+                      lineageId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Output].Columns[SaleEmployeeID]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -350,10 +850,10 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Prepare STG\Sort.Inputs[Sort Input].Columns[SyncDate]"
+                      refId="Package\Prepare STG\Sort STG.Inputs[Sort Input].Columns[SyncDate]"
                       cachedDataType="dbTimeStamp"
                       cachedName="SyncDate"
-                      lineageId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Output].Columns[SyncDate]">
+                      lineageId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Output].Columns[SyncDate]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -371,15 +871,15 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Prepare STG\Sort.Outputs[Sort Output]"
+                  refId="Package\Prepare STG\Sort STG.Outputs[Sort Output]"
                   isSorted="true"
                   name="Sort Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Prepare STG\Sort.Outputs[Sort Output].Columns[CustomerCode]"
+                      refId="Package\Prepare STG\Sort STG.Outputs[Sort Output].Columns[CustomerCode]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Prepare STG\Sort.Outputs[Sort Output].Columns[CustomerCode]"
+                      lineageId="Package\Prepare STG\Sort STG.Outputs[Sort Output].Columns[CustomerCode]"
                       name="CustomerCode"
                       sortKeyPosition="1">
                       <properties>
@@ -387,14 +887,14 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Output].Columns[CustomerCode]}</property>
+                          name="SortColumnId">#{Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Output].Columns[CustomerCode]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Prepare STG\Sort.Outputs[Sort Output].Columns[Customer]"
+                      refId="Package\Prepare STG\Sort STG.Outputs[Sort Output].Columns[Customer]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Prepare STG\Sort.Outputs[Sort Output].Columns[Customer]"
+                      lineageId="Package\Prepare STG\Sort STG.Outputs[Sort Output].Columns[Customer]"
                       name="Customer"
                       sortKeyPosition="2">
                       <properties>
@@ -402,14 +902,14 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Output].Columns[Customer]}</property>
+                          name="SortColumnId">#{Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Output].Columns[Customer]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Prepare STG\Sort.Outputs[Sort Output].Columns[SaleEmployeeID]"
+                      refId="Package\Prepare STG\Sort STG.Outputs[Sort Output].Columns[SaleEmployeeID]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Prepare STG\Sort.Outputs[Sort Output].Columns[SaleEmployeeID]"
+                      lineageId="Package\Prepare STG\Sort STG.Outputs[Sort Output].Columns[SaleEmployeeID]"
                       name="SaleEmployeeID"
                       sortKeyPosition="3">
                       <properties>
@@ -417,20 +917,20 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Output].Columns[SaleEmployeeID]}</property>
+                          name="SortColumnId">#{Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Output].Columns[SaleEmployeeID]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Prepare STG\Sort.Outputs[Sort Output].Columns[SyncDate]"
+                      refId="Package\Prepare STG\Sort STG.Outputs[Sort Output].Columns[SyncDate]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\Prepare STG\Sort.Outputs[Sort Output].Columns[SyncDate]"
+                      lineageId="Package\Prepare STG\Sort STG.Outputs[Sort Output].Columns[SyncDate]"
                       name="SyncDate">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Output].Columns[SyncDate]}</property>
+                          name="SortColumnId">#{Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Output].Columns[SyncDate]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -439,172 +939,374 @@
               </outputs>
             </component>
             <component
-              refId="Package\Prepare STG\STG_Customer"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
-              name="STG_Customer"
-              usesDispositions="true"
-              version="7">
+              refId="Package\Prepare STG\Sort Table"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort Table"
+              version="1">
               <properties>
                 <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset"></property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT *
-  FROM STG_Customer
-WHERE SyncDate = ( 
-    SELECT MAX(SyncDate) 
-    FROM STG_Customer
-);</property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">874</property>
-                <property
                   dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
                 <property
                   dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">2</property>
-                <property
-                  dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
               </properties>
-              <connections>
-                <connection
-                  refId="Package\Prepare STG\STG_Customer.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT]"
-                  connectionManagerRefId="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
+              <inputs>
+                <input
+                  refId="Package\Prepare STG\Sort Table.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Prepare STG\Sort Table.Inputs[Sort Input].Columns[CustomerCode]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CustomerCode"
+                      lineageId="Package\Prepare STG\ADO NET Source.Outputs[ADO NET Source Output].Columns[CustomerCode]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Prepare STG\Sort Table.Inputs[Sort Input].Columns[Customer]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Customer"
+                      lineageId="Package\Prepare STG\ADO NET Source.Outputs[ADO NET Source Output].Columns[Customer]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Prepare STG\Sort Table.Inputs[Sort Input].Columns[SaleEmployeeID]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SaleEmployeeID"
+                      lineageId="Package\Prepare STG\ADO NET Source.Outputs[ADO NET Source Output].Columns[SaleEmployeeID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">3</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
               <outputs>
                 <output
-                  refId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
+                  refId="Package\Prepare STG\Sort Table.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Output].Columns[CustomerCode]"
+                      refId="Package\Prepare STG\Sort Table.Outputs[Sort Output].Columns[CustomerCode]"
                       dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Output].ExternalColumns[CustomerCode]"
                       length="50"
-                      lineageId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Output].Columns[CustomerCode]"
+                      lineageId="Package\Prepare STG\Sort Table.Outputs[Sort Output].Columns[CustomerCode]"
                       name="CustomerCode"
-                      truncationRowDisposition="FailComponent" />
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Prepare STG\ADO NET Source.Outputs[ADO NET Source Output].Columns[CustomerCode]}</property>
+                      </properties>
+                    </outputColumn>
                     <outputColumn
-                      refId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Output].Columns[Customer]"
+                      refId="Package\Prepare STG\Sort Table.Outputs[Sort Output].Columns[Customer]"
                       dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Output].ExternalColumns[Customer]"
                       length="50"
-                      lineageId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Output].Columns[Customer]"
+                      lineageId="Package\Prepare STG\Sort Table.Outputs[Sort Output].Columns[Customer]"
                       name="Customer"
-                      truncationRowDisposition="FailComponent" />
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Prepare STG\ADO NET Source.Outputs[ADO NET Source Output].Columns[Customer]}</property>
+                      </properties>
+                    </outputColumn>
                     <outputColumn
-                      refId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Output].Columns[SaleEmployeeID]"
+                      refId="Package\Prepare STG\Sort Table.Outputs[Sort Output].Columns[SaleEmployeeID]"
                       dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Output].ExternalColumns[SaleEmployeeID]"
                       length="50"
-                      lineageId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Output].Columns[SaleEmployeeID]"
+                      lineageId="Package\Prepare STG\Sort Table.Outputs[Sort Output].Columns[SaleEmployeeID]"
                       name="SaleEmployeeID"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Output].Columns[SyncDate]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Output].ExternalColumns[SyncDate]"
-                      lineageId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Output].Columns[SyncDate]"
-                      name="SyncDate"
-                      truncationRowDisposition="FailComponent" />
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Prepare STG\ADO NET Source.Outputs[ADO NET Source Output].Columns[SaleEmployeeID]}</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Output].ExternalColumns[CustomerCode]"
-                      dataType="wstr"
-                      length="50"
-                      name="CustomerCode" />
-                    <externalMetadataColumn
-                      refId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Output].ExternalColumns[Customer]"
-                      dataType="wstr"
-                      length="50"
-                      name="Customer" />
-                    <externalMetadataColumn
-                      refId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Output].ExternalColumns[SaleEmployeeID]"
-                      dataType="wstr"
-                      length="50"
-                      name="SaleEmployeeID" />
-                    <externalMetadataColumn
-                      refId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Output].ExternalColumns[SyncDate]"
-                      dataType="dbTimeStamp"
-                      name="SyncDate" />
-                  </externalMetadataColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Prepare STG\Split Records"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Split Records"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Prepare STG\Split Records.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Prepare STG\Split Records.Inputs[Conditional Split Input].Columns[CustomerCode]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CustomerCode"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[CustomerCode]" />
+                    <inputColumn
+                      refId="Package\Prepare STG\Split Records.Inputs[Conditional Split Input].Columns[CustomerCode (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CustomerCode (1)"
+                      lineageId="Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[CustomerCode (1)]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Prepare STG\Split Records.Outputs[Insert(CustomerCode not Match)]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Insert(CustomerCode not Match)"
+                  synchronousInputId="Package\Prepare STG\Split Records.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[CustomerCode (1)]}) &amp;&amp; ![ISNULL](#{Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[CustomerCode]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL([CustomerCode (1)]) &amp;&amp; !ISNULL(CustomerCode)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Prepare STG\Split Records.Outputs[Update(CustomerCode Match)]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Update(CustomerCode Match)"
+                  synchronousInputId="Package\Prepare STG\Split Records.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">![ISNULL](#{Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[CustomerCode (1)]}) &amp;&amp; ![ISNULL](#{Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[CustomerCode]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">!ISNULL([CustomerCode (1)]) &amp;&amp; !ISNULL(CustomerCode)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Prepare STG\Split Records.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Prepare STG\Split Records.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Prepare STG\Split Records.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
                   isErrorOut="true"
-                  name="OLE DB Source Error Output">
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Prepare STG\Split Records.Inputs[Conditional Split Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Error Output].Columns[CustomerCode]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Error Output].Columns[CustomerCode]"
-                      name="CustomerCode" />
-                    <outputColumn
-                      refId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Error Output].Columns[Customer]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Error Output].Columns[Customer]"
-                      name="Customer" />
-                    <outputColumn
-                      refId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Error Output].Columns[SaleEmployeeID]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Error Output].Columns[SaleEmployeeID]"
-                      name="SaleEmployeeID" />
-                    <outputColumn
-                      refId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Error Output].Columns[SyncDate]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Error Output].Columns[SyncDate]"
-                      name="SyncDate" />
-                    <outputColumn
-                      refId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Prepare STG\Split Records.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Prepare STG\Split Records.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Prepare STG\Split Records.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Prepare STG\Split Records.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Prepare STG\test update"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="test update"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Customer"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Prepare STG\test update.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Prepare STG\test update.Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Prepare STG\test update.Inputs[ADO NET Destination Input].Columns[CustomerCode]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CustomerCode"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Prepare STG\test update.Inputs[ADO NET Destination Input].ExternalColumns[CustomerCode]"
+                      lineageId="Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[CustomerCode]" />
+                    <inputColumn
+                      refId="Package\Prepare STG\test update.Inputs[ADO NET Destination Input].Columns[Customer]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Customer"
+                      externalMetadataColumnId="Package\Prepare STG\test update.Inputs[ADO NET Destination Input].ExternalColumns[Customer]"
+                      lineageId="Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[Customer]" />
+                    <inputColumn
+                      refId="Package\Prepare STG\test update.Inputs[ADO NET Destination Input].Columns[SaleEmployeeID]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SaleEmployeeID"
+                      externalMetadataColumnId="Package\Prepare STG\test update.Inputs[ADO NET Destination Input].ExternalColumns[SaleEmployeeID]"
+                      lineageId="Package\Prepare STG\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Prepare STG\test update.Inputs[ADO NET Destination Input].ExternalColumns[CustomerCode]"
+                      dataType="wstr"
+                      length="50"
+                      name="CustomerCode" />
+                    <externalMetadataColumn
+                      refId="Package\Prepare STG\test update.Inputs[ADO NET Destination Input].ExternalColumns[Customer]"
+                      dataType="wstr"
+                      length="50"
+                      name="Customer" />
+                    <externalMetadataColumn
+                      refId="Package\Prepare STG\test update.Inputs[ADO NET Destination Input].ExternalColumns[SaleEmployeeID]"
+                      dataType="wstr"
+                      length="50"
+                      name="SaleEmployeeID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Prepare STG\test update.Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\Prepare STG\test update.Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Prepare STG\test update.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Prepare STG\test update.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Prepare STG\test update.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Prepare STG\test update.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -616,19 +1318,44 @@ WHERE SyncDate = (
           <paths>
             <path
               refId="Package\Prepare STG.Paths[ADO NET Source Output]"
-              endId="Package\Prepare STG\Merge Join.Inputs[Merge Join Right Input]"
+              endId="Package\Prepare STG\Sort Table.Inputs[Sort Input]"
               name="ADO NET Source Output"
               startId="Package\Prepare STG\ADO NET Source.Outputs[ADO NET Source Output]" />
             <path
-              refId="Package\Prepare STG.Paths[OLE DB Source Output]"
-              endId="Package\Prepare STG\Sort.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Prepare STG\STG_Customer.Outputs[OLE DB Source Output]" />
+              refId="Package\Prepare STG.Paths[ADO NET Source Output1]"
+              endId="Package\Prepare STG\Sort STG.Inputs[Sort Input]"
+              name="ADO NET Source Output"
+              startId="Package\Prepare STG\ADO NET Source 1.Outputs[ADO NET Source Output]" />
+            <path
+              refId="Package\Prepare STG.Paths[Insert(CustomerCode not Match)]"
+              endId="Package\Prepare STG\Insert Records (Customer Table).Inputs[ADO NET Destination Input]"
+              name="Insert(CustomerCode not Match)"
+              startId="Package\Prepare STG\Split Records.Outputs[Insert(CustomerCode not Match)]" />
+            <path
+              refId="Package\Prepare STG.Paths[Merge Join Output]"
+              endId="Package\Prepare STG\Split Records.Inputs[Conditional Split Input]"
+              name="Merge Join Output"
+              startId="Package\Prepare STG\Merge Join.Outputs[Merge Join Output]" />
             <path
               refId="Package\Prepare STG.Paths[Sort Output]"
               endId="Package\Prepare STG\Merge Join.Inputs[Merge Join Left Input]"
               name="Sort Output"
-              startId="Package\Prepare STG\Sort.Outputs[Sort Output]" />
+              startId="Package\Prepare STG\Sort STG.Outputs[Sort Output]" />
+            <path
+              refId="Package\Prepare STG.Paths[Sort Output1]"
+              endId="Package\Prepare STG\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Prepare STG\Sort Table.Outputs[Sort Output]" />
+            <path
+              refId="Package\Prepare STG.Paths[Update Records]"
+              endId="Package\Prepare STG\test update.Inputs[ADO NET Destination Input]"
+              name="Update Records"
+              startId="Package\Prepare STG\Find Update Records.Outputs[Update Records]" />
+            <path
+              refId="Package\Prepare STG.Paths[Update(CustomerCode Match)]"
+              endId="Package\Prepare STG\Find Update Records.Inputs[Conditional Split Input]"
+              name="Update(CustomerCode Match)"
+              startId="Package\Prepare STG\Split Records.Outputs[Update(CustomerCode Match)]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -657,41 +1384,97 @@ WHERE SyncDate = (
     design-time-name="Package\Prepare STG">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="151,42"
-          Id="Package\Prepare STG\STG_Customer"
-          TopLeft="105,37" />
+          Size="142,42"
+          Id="Package\Prepare STG\Split Records"
+          TopLeft="468,283" />
         <NodeLayout
-          Size="100,42"
-          Id="Package\Prepare STG\Sort"
+          Size="123,42"
+          Id="Package\Prepare STG\Sort STG"
           TopLeft="228,121" />
+        <NodeLayout
+          Size="132,42"
+          Id="Package\Prepare STG\Merge Join"
+          TopLeft="324,206" />
+        <NodeLayout
+          Size="129,42"
+          Id="Package\Prepare STG\Sort Table"
+          TopLeft="516,115" />
+        <NodeLayout
+          Size="179,42"
+          Id="Package\Prepare STG\Find Update Records"
+          TopLeft="669,371" />
+        <NodeLayout
+          Size="235,42"
+          Id="Package\Prepare STG\Insert Records (Customer Table)"
+          TopLeft="108,477" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Prepare STG\ADO NET Source"
+          TopLeft="600,30" />
         <EdgeLayout
-          Id="Package\Prepare STG.Paths[OLE DB Source Output]"
-          TopLeft="180.5,79">
+          Id="Package\Prepare STG.Paths[Update(CustomerCode Match)]"
+          TopLeft="539,325">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="97.5,42"
+              EndConnector="219.5,46"
               Start="0,0"
-              End="97.5,34.5">
+              End="219.5,38.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17" />
+                    End="0,19" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17"
-                    Point2="0,21"
-                    Point3="4,21" />
+                    Point1="0,19"
+                    Point2="0,23"
+                    Point3="4,23" />
                   <mssgle:LineSegment
-                    End="93.5,21" />
+                    End="215.5,23" />
                   <mssgle:CubicBezierSegment
-                    Point1="93.5,21"
-                    Point2="97.5,21"
-                    Point3="97.5,25" />
+                    Point1="215.5,23"
+                    Point2="219.5,23"
+                    Point3="219.5,27" />
                   <mssgle:LineSegment
-                    End="97.5,34.5" />
+                    End="219.5,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="42.80931640625,28,133.8813671875,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Prepare STG.Paths[Sort Output1]"
+          TopLeft="580.5,157">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-169.833333333333,49"
+              Start="0,0"
+              End="-169.833333333333,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.0479041916168" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.0479041916168"
+                    Point2="0,29.0479041916168"
+                    Point3="-4,29.0479041916168" />
+                  <mssgle:LineSegment
+                    End="-165.833333333333,29.0479041916168" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-165.833333333333,29.0479041916168"
+                    Point2="-169.833333333333,29.0479041916168"
+                    Point3="-169.833333333333,33.0479041916168" />
+                  <mssgle:LineSegment
+                    End="-169.833333333333,41.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -700,87 +1483,227 @@ WHERE SyncDate = (
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="160,42"
-          Id="Package\Prepare STG\ADO NET Source"
-          TopLeft="599,31" />
-        <NodeLayout
-          Size="132,42"
-          Id="Package\Prepare STG\Merge Join"
-          TopLeft="400,218" />
         <EdgeLayout
           Id="Package\Prepare STG.Paths[Sort Output]"
-          TopLeft="278,163">
+          TopLeft="289.5,163">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="167.333333333333,55"
+              EndConnector="79.8333333333333,43"
               Start="0,0"
-              End="167.333333333333,47.5">
+              End="79.8333333333333,35.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.6047904191617" />
+                    End="0,21.4910179640719" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,28.6047904191617"
-                    Point2="0,32.6047904191617"
-                    Point3="4,32.6047904191617" />
+                    Point1="0,21.4910179640719"
+                    Point2="0,25.4910179640719"
+                    Point3="4,25.4910179640719" />
                   <mssgle:LineSegment
-                    End="163.333333333333,32.6047904191617" />
+                    End="75.8333333333333,25.4910179640719" />
                   <mssgle:CubicBezierSegment
-                    Point1="163.333333333333,32.6047904191617"
-                    Point2="167.333333333333,32.6047904191617"
-                    Point3="167.333333333333,36.6047904191617" />
+                    Point1="75.8333333333333,25.4910179640719"
+                    Point2="79.8333333333333,25.4910179640719"
+                    Point3="79.8333333333333,29.4910179640719" />
                   <mssgle:LineSegment
-                    End="167.333333333333,47.5" />
+                    End="79.8333333333333,35.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Prepare STG.Paths[Merge Join Output]"
+          TopLeft="390,248">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="149,35"
+              Start="0,0"
+              End="149,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.5"
+                    Point2="0,17.5"
+                    Point3="4,17.5" />
+                  <mssgle:LineSegment
+                    End="145,17.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="145,17.5"
+                    Point2="149,17.5"
+                    Point3="149,21.5" />
+                  <mssgle:LineSegment
+                    End="149,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Prepare STG.Paths[Insert(CustomerCode not Match)]"
+          TopLeft="516.666666666667,325">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-291.166666666667,152"
+              Start="0,0"
+              End="-291.166666666667,144.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57.8161559888579" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,57.8161559888579"
+                    Point2="0,61.8161559888579"
+                    Point3="-4,61.8161559888579" />
+                  <mssgle:LineSegment
+                    End="-287.166666666667,61.8161559888579" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-287.166666666667,61.8161559888579"
+                    Point2="-291.166666666667,61.8161559888579"
+                    Point3="-291.166666666667,65.8161559888579" />
+                  <mssgle:LineSegment
+                    End="-291.166666666667,144.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-218.611673177083,66.8161559888579,146.0566796875,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Prepare STG.Paths[ADO NET Source Output]"
-          TopLeft="679,73">
+          TopLeft="680,72">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-192.333333333333,145"
+              EndConnector="-99.5,43"
               Start="0,0"
-              End="-192.333333333333,137.5">
+              End="-99.5,35.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,81.9580838323353" />
+                    End="0,17.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,81.9580838323353"
-                    Point2="0,85.9580838323353"
-                    Point3="-4,85.9580838323353" />
+                    Point1="0,17.5"
+                    Point2="0,21.5"
+                    Point3="-4,21.5" />
                   <mssgle:LineSegment
-                    End="-188.333333333333,85.9580838323353" />
+                    End="-95.5,21.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-188.333333333333,85.9580838323353"
-                    Point2="-192.333333333333,85.9580838323353"
-                    Point3="-192.333333333333,89.9580838323353" />
+                    Point1="-95.5,21.5"
+                    Point2="-99.5,21.5"
+                    Point3="-99.5,25.5" />
                   <mssgle:LineSegment
-                    End="-192.333333333333,137.5" />
+                    End="-99.5,35.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="169,42"
+          Id="Package\Prepare STG\ADO NET Source 1"
+          TopLeft="80,40" />
+        <EdgeLayout
+          Id="Package\Prepare STG.Paths[ADO NET Source Output1]"
+          TopLeft="164.5,82">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="125,39"
+              Start="0,0"
+              End="125,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.5"
+                    Point2="0,19.5"
+                    Point3="4,19.5" />
+                  <mssgle:LineSegment
+                    End="121,19.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="121,19.5"
+                    Point2="125,19.5"
+                    Point3="125,23.5" />
+                  <mssgle:LineSegment
+                    End="125,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="134,42"
+          Id="Package\Prepare STG\test update"
+          TopLeft="511,475" />
+        <EdgeLayout
+          Id="Package\Prepare STG.Paths[Update Records]"
+          TopLeft="758.5,413">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-180.5,62"
+              Start="0,0"
+              End="-180.5,54.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27"
+                    Point2="0,31"
+                    Point3="-4,31" />
+                  <mssgle:LineSegment
+                    End="-176.5,31" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-176.5,31"
+                    Point2="-180.5,31"
+                    Point3="-180.5,35" />
+                  <mssgle:LineSegment
+                    End="-180.5,54.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-125.6815234375,36,70.863046875,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Prepare STG\STG_Customer">
+    design-time-name="Package\Prepare STG\Insert Records (Customer Table)">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -789,6 +1712,22 @@ WHERE SyncDate = (
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Prepare STG\ADO NET Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Prepare STG\ADO NET Source 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Prepare STG\test update">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
