@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="ADO"
+  DTS:DTSID="{A13F6629-58C6-48F2-A1CB-B0D1296A27DE}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=10.0.0.77;User ID=IBOT;Initial Catalog=IBOrderTracking;Persist Security Info=True;Application Name=SSIS-IBOST_SSIS-{A13F6629-58C6-48F2-A1CB-B0D1296A27DE}10.0.0.77.IBOrderTracking.IBOT1;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAACAAAAAAAQZgAAAAEAACAAAABgG1OtbI3HaWCoaLY7OTS97GGxEi2VRiOtL9D8SOGY3QAAAAAOgAAAAAIAACAAAABl9BxY6o8JSXRRhpHsZ3ivIcZK8N3LtKzYSqtKGWct6IAAAAD2jfSvpgjXC6Bis3BYtWa2Oqc73FiA0dg+H1TcLx+YHATyOpiBBo3o4CLZ3OKMiSWLauY2BTKNlMqQdMZfl5Wtkmwvo2K79zrNSZtYDNexilQpqwyr+iVPU4ELppRQKiNIiIBmK9eqBgiTsbf++kg88h2XiuvilWwKfT1Dh03mxEAAAACz9od2MB0yAlWQVN5uUYMQORtB1bZDOEpXhq/gKXJa2YOqQ9I516A1+/zj+lYsw9m3vK/n6NmxKd5Gr38J+Ddu</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
