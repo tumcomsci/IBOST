@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="Customer"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{227BFD4C-4515-468A-BB4A-121E9944D4C0}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{F199E53B-5A2D-4899-BF66-697D2CD71895}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAADX8NeMOmYMfyWgDNFtbFl1p6KMF84m+jZWWv4++epKgAAAAAOgAAAAAIAACAAAACI/OuT5RAlvIzne8c5bt1YiddtPWHzC8Y4yXwuH0WkvCAAAABFFP4DGzOciYxI6bX3u3XKbzXCCFs+MkvW8NBK4uIq2UAAAACBMwd+lyfz3DpKQdIHVBKYV60SCj1+VyhgP6D4zeM6Jvrslub44452W69ZnoTh8Rx7mCXvzKbLYIbVNOFaxT8F</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB3txlURr7rAydaAT3RSV7xqF9X7teKOWIbzJM53SNtsAAAAAAOgAAAAAIAACAAAACY9ykRSCU6tsEaD+E0QsEKVGjCPuOnO04YNlOiqv+vRCAAAAA5RS+Tw4i1orl6ZYiX+DSiR6WRra0K3FeaYFfJ+wVW8kAAAABC580xXOApIgKuhIHUEBlcGhHZGShPdIhhe1ndmwirj4W6msN/UFFMLy7ZIKDfCPv3Ee40r8v3iXkVAD0oUaZD</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -205,58 +205,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <pipeline
-          version="1">
-          <components>
-            <component
-              refId="Package\Merge\Merge Join"
-              componentClassID="Microsoft.MergeJoin"
-              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
-              name="Merge Join"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the type of join to perform."
-                  name="JoinType"
-                  typeConverter="JoinType">2</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the number of columns in the ordering key."
-                  name="NumKeyColumns">0</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the null values are treated as equal values."
-                  name="TreatNullsAsEqual">true</property>
-                <property
-                  dataType="System.Int32"
-                  description="Indicates the requested maximum buffers per input before blocking."
-                  name="MaxBuffersPerInput">5</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Merge\Merge Join.Inputs[Merge Join Left Input]"
-                  hasSideEffects="true"
-                  name="Merge Join Left Input">
-                  <externalMetadataColumns />
-                </input>
-                <input
-                  refId="Package\Merge\Merge Join.Inputs[Merge Join Right Input]"
-                  hasSideEffects="true"
-                  name="Merge Join Right Input">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Merge\Merge Join.Outputs[Merge Join Output]"
-                  name="Merge Join Output">
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-          </components>
-        </pipeline>
+          version="1" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -836,7 +785,7 @@
         <NodeLayout
           Size="126,42"
           Id="Package\Customer"
-          TopLeft="778,12" />
+          TopLeft="680,24" />
         <NodeLayout
           Size="110,42"
           Id="Package\Merge"
@@ -844,33 +793,33 @@
         <NodeLayout
           Size="151,42"
           Id="Package\STG_Customer"
-          TopLeft="19,10" />
+          TopLeft="135,23" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="94.5,52">
+          TopLeft="210.5,65">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="354.5,105"
+              EndConnector="238.5,92"
               Start="0,0"
-              End="354.5,97.5">
+              End="238.5,84.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,58.0967741935484" />
+                    End="0,50.4086021505376" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,58.0967741935484"
-                    Point2="0,62.0967741935484"
-                    Point3="4,62.0967741935484" />
+                    Point1="0,50.4086021505376"
+                    Point2="0,54.4086021505376"
+                    Point3="4,54.4086021505376" />
                   <mssgle:LineSegment
-                    End="350.5,62.0967741935484" />
+                    End="234.5,54.4086021505376" />
                   <mssgle:CubicBezierSegment
-                    Point1="350.5,62.0967741935484"
-                    Point2="354.5,62.0967741935484"
-                    Point3="354.5,66.0967741935484" />
+                    Point1="234.5,54.4086021505376"
+                    Point2="238.5,54.4086021505376"
+                    Point3="238.5,58.4086021505376" />
                   <mssgle:LineSegment
-                    End="354.5,97.5" />
+                    End="238.5,84.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -881,30 +830,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="841,54">
+          TopLeft="743,66">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-358,103"
+              EndConnector="-260,91"
               Start="0,0"
-              End="-358,95.5">
+              End="-260,83.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,56.9139784946237" />
+                    End="0,49.8172043010753" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,56.9139784946237"
-                    Point2="0,60.9139784946237"
-                    Point3="-4,60.9139784946237" />
+                    Point1="0,49.8172043010753"
+                    Point2="0,53.8172043010753"
+                    Point3="-4,53.8172043010753" />
                   <mssgle:LineSegment
-                    End="-354,60.9139784946237" />
+                    End="-256,53.8172043010753" />
                   <mssgle:CubicBezierSegment
-                    Point1="-354,60.9139784946237"
-                    Point2="-358,60.9139784946237"
-                    Point3="-358,64.9139784946236" />
+                    Point1="-256,53.8172043010753"
+                    Point2="-260,53.8172043010753"
+                    Point3="-260,57.8172043010753" />
                   <mssgle:LineSegment
-                    End="-358,95.5" />
+                    End="-260,83.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -943,7 +892,7 @@
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
           Size="132,42"
-          Id="Package\Merge\Merge Join"
+          Id="2"
           TopLeft="421,135" />
       </GraphLayout>
     </LayoutInfo>
