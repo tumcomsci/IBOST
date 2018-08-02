@@ -8,7 +8,7 @@
       DTS:ConnectionString="Data Source=10.0.0.77;User ID=IBOT;Initial Catalog=IBOrderTracking;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
       <DTS:Password
         DTS:Name="Password"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAACAAAAAAAQZgAAAAEAACAAAACYP+tJZzvrgMYjZ3iLpfJGkjF79YW36ILjPMzR4xHW6QAAAAAOgAAAAAIAACAAAAANGft411pRliNIoB/4jSqjj/dl0a/VA9iDfGN6c8RttYAAAACsZZTDtSyKPppILvsho1gBNJjoskelMshhkdWx8SnOg8XMsUZCp+i/dGe3A2eVLY699STXd02gmDzjnLe7GJwqq79vC7D3g9+gasv+87PG7c68XuBkOIxKw2EbJkgjetNyxALIwoL/o3zG4u/2Mi2Qy42fPXFiZ19WuCO8r4vJtUAAAADgegHulJeOwbPZgg/Qd8tsRMd+k9MYSo8uOfzQe2gQc5YzczgqtNVnqQBugRPiNkavcGk8bYONlobZF0pi6E+V</DTS:Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAACAAAAAAAQZgAAAAEAACAAAAB6oOcslHly3vcWBXzcmtY4aaoENdto83CKDMis22vW5QAAAAAOgAAAAAIAACAAAABg7+3Qxab7bjED+udApZycZdX9xrAGtSEOadK29100noAAAADddOtkXwuCDAbgnORlaEoAT1/EHcjRCvDWEu+lloninmdi1aAbp6Bk46hkd7ce8Og1kQr+NPZD74dQ9lTaxb0GTnyyugBqEPec3AC2Ix9gQJBNDbsb3EY7p06HpNIFghTlqy8e7tlKw+R5F5T7gpss0UKfDhYx+UJqHcAcZI5D5kAAAABLK5F0iNLPTD/jDO37k/43qWc/Tt40ZepdOkLyN5A1uZjzXI3RoCFi3dxhzabw1N28U7FMeT7y8n4LsAkVlVhY</DTS:Password>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>
