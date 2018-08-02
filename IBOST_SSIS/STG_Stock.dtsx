@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="STG_Stock"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{1AA1954E-916C-4B5E-8050-6F6356C28073}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{6628E8BB-EDA1-4674-8604-3679965B935C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADIHc/8f8yJ8c7/GG90fSLmsrkKJJDukhlrdB6pt+T9AgAAAAAOgAAAAAIAACAAAAAjAYaxwpyCkjgi9BEPXajKfEynREMkHOpq+bAoN0lkuSAAAADlcty7ZRpLiL8tnF+M52wRY0eCTfXJI24eePHuCKRfYUAAAABCBK5M+1YUKz01FdRDDFYLQzTe8gx/6L8qaUTsyuh69QAhH3ZNYtxDGpU0oHATWyTHvLY0b07jTITkrJWnpC0p</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAYXZ4cZx6cPUvAzmxNv9Rxw3D98hBLqvcsohuN0nUxKQAAAAAOgAAAAAIAACAAAAAe7I0/wSyTWypjyyJ0ceTgTLkfKx8t1+7/OCeYkDLjeyAAAAAI+faRMz4pk23CU7oV0524Byo/W+K7r0VlNakRH2vZfUAAAABOOt6B7YnQ2iajpLv14tHpcvfcV73Vp2CnDJAbmVnte1BenS6KCsTAJPAv/g3e36TpMl4LZCzOB0EMhYFQvEbw</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -267,7 +267,9 @@
                       lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[UNIT]" />
                     <inputColumn
                       refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[LOT]"
-                      cachedDataType="dbTimeStamp"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="LOT"
                       externalMetadataColumnId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Lot]"
                       lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[LOT]" />
@@ -306,6 +308,12 @@
                       externalMetadataColumnId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[DO]"
                       lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[DO]" />
                     <inputColumn
+                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[SyncDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="SyncDate"
+                      externalMetadataColumnId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[SyncDate]"
+                      lineageId="Package\STG Stock\Derived Column.Outputs[Derived Column Output].Columns[SyncDate]" />
+                    <inputColumn
                       refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[STORE LOCATION]"
                       cachedCodepage="874"
                       cachedDataType="str"
@@ -341,12 +349,6 @@
                       cachedName="TRANSACTION TYPE"
                       externalMetadataColumnId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[TransactionType]"
                       lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[TRANSACTION TYPE]" />
-                    <inputColumn
-                      refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[SyncDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="SyncDate"
-                      externalMetadataColumnId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[SyncDate]"
-                      lineageId="Package\STG Stock\Derived Column.Outputs[Derived Column Output].Columns[SyncDate]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -376,7 +378,8 @@
                       name="Unit" />
                     <externalMetadataColumn
                       refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Lot]"
-                      dataType="dbTimeStamp"
+                      dataType="wstr"
+                      length="50"
                       name="Lot" />
                     <externalMetadataColumn
                       refId="Package\STG Stock\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[ExpireDate]"
@@ -586,10 +589,12 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[LOT]"
-                      dataType="dbTimeStamp"
+                      codePage="874"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[LOT]"
+                      length="50"
                       lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[LOT]"
                       name="LOT"
                       truncationRowDisposition="FailComponent">
@@ -803,7 +808,9 @@
                       name="UNIT" />
                     <externalMetadataColumn
                       refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[LOT]"
-                      dataType="dbTimeStamp"
+                      codePage="874"
+                      dataType="str"
+                      length="50"
                       name="LOT" />
                     <externalMetadataColumn
                       refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[EXPIRE DATE]"
@@ -989,6 +996,10 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="156,42"
+          Id="Package\STG Stock\Derived Column"
+          TopLeft="413,174" />
+        <NodeLayout
           Size="181,42"
           Id="Package\STG Stock\ADO NET Destination"
           TopLeft="610,289" />
@@ -996,10 +1007,6 @@
           Size="129,42"
           Id="Package\STG Stock\CSV Stock"
           TopLeft="228,56" />
-        <NodeLayout
-          Size="156,42"
-          Id="Package\STG Stock\Derived Column"
-          TopLeft="413,174" />
         <EdgeLayout
           Id="Package\STG Stock.Paths[Flat File Source Output]"
           TopLeft="292.5,98">

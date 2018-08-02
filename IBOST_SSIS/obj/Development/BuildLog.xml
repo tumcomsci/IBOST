@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>IBOST_SSIS</Name>
-    <LastWriteTime>2018-08-02T04:40:38.9308392Z</LastWriteTime>
+    <LastWriteTime>2018-08-02T08:32:11.958869Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -23,12 +23,12 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>STG_Stock.dtsx</Name>
-      <LastWriteTime>2018-08-01T04:42:53.6588081Z</LastWriteTime>
+      <LastWriteTime>2018-08-02T07:50:56.3752381Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>STG_DO.dtsx</Name>
-      <LastWriteTime>2018-08-01T04:34:11.8172035Z</LastWriteTime>
+      <LastWriteTime>2018-08-02T08:06:14.1699471Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -38,7 +38,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Do.dtsx</Name>
-      <LastWriteTime>2018-08-02T04:40:38.7714335Z</LastWriteTime>
+      <LastWriteTime>2018-08-02T08:09:01.6776465Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -52,8 +52,13 @@
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>Stock.dtsx</Name>
-      <LastWriteTime>2018-08-01T01:07:25.4306677Z</LastWriteTime>
+      <Name>StockTable.dtsx</Name>
+      <LastWriteTime>2018-08-02T08:58:20.9093329Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>PlanTable.dtsx</Name>
+      <LastWriteTime>2018-08-02T07:47:02.4250016Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

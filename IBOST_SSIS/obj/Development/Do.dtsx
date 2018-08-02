@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="Do"
   DTS:PackageType="5"
-  DTS:VersionBuild="20"
-  DTS:VersionGUID="{22D5D521-1CBB-4CE6-BB1D-82D81D4F6722}">
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{E7749A35-9E5A-453D-91DC-E4CCD2EC7B4B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD4BxNKtqPCw8+kIf2lnr0rfqyNZ2cWoc09qQDKcXw6zwAAAAAOgAAAAAIAACAAAAA6+KqtQ9ki146wa5y+frxALdwfdQdupBROSjzCQF9DWCAAAAAXvp0Wa5eCM2zDgru79gkVj2QrM+zDsFWCpvZfHouco0AAAADxT8DAGtg+ZKh17rsfPfLnF/4Zj5jEr8tPPf6IowZGElc70XXAOfXtWNR0bvqgw5/KLGcNWsken4jAm27+IJ+W</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADGa2Qu/MTEEBOyzj5m2e1N2bt7RcHyt4DuuG1jzUWTpgAAAAAOgAAAAAIAACAAAABfjOwWPS7MnLOwIKejV+NiX5FPMoDqr5EnpgNfCjwrxSAAAABF6QXRq/aPm7ma/rxK74gV7bcPVIVh45eQzQ4wwRID9kAAAACZWsX/niG/N2RwjJWZ6tfKAVHZLzYT5nxex6mTwnX+wAsMPB7NF+iTg/Rh7qcNYDov6zWuAL9Qo1WbrsiZSYnQ</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -130,10 +130,11 @@
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\DO Table\DO Table.Outputs[ADO NET Source Output].Columns[Lot]"
-                      dataType="dbTimeStamp"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\DO Table\DO Table.Outputs[ADO NET Source Output].ExternalColumns[Lot]"
+                      length="50"
                       lineageId="Package\DO Table\DO Table.Outputs[ADO NET Source Output].Columns[Lot]"
                       name="Lot"
                       truncationRowDisposition="FailComponent" />
@@ -165,7 +166,8 @@
                       name="Material" />
                     <externalMetadataColumn
                       refId="Package\DO Table\DO Table.Outputs[ADO NET Source Output].ExternalColumns[Lot]"
-                      dataType="dbTimeStamp"
+                      dataType="wstr"
+                      length="50"
                       name="Lot" />
                     <externalMetadataColumn
                       refId="Package\DO Table\DO Table.Outputs[ADO NET Source Output].ExternalColumns[QTY]"
@@ -197,7 +199,8 @@
                       name="Material" />
                     <outputColumn
                       refId="Package\DO Table\DO Table.Outputs[ADO NET Source Error Output].Columns[Lot]"
-                      dataType="dbTimeStamp"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\DO Table\DO Table.Outputs[ADO NET Source Error Output].Columns[Lot]"
                       name="Lot" />
                     <outputColumn
@@ -295,7 +298,8 @@
                       lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[Material]" />
                     <inputColumn
                       refId="Package\DO Table\Insert Records (DO Table).Inputs[ADO NET Destination Input].Columns[Lot]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Lot"
                       externalMetadataColumnId="Package\DO Table\Insert Records (DO Table).Inputs[ADO NET Destination Input].ExternalColumns[Lot]"
                       lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[Lot]" />
@@ -324,7 +328,8 @@
                       name="Material" />
                     <externalMetadataColumn
                       refId="Package\DO Table\Insert Records (DO Table).Inputs[ADO NET Destination Input].ExternalColumns[Lot]"
-                      dataType="dbTimeStamp"
+                      dataType="wstr"
+                      length="50"
                       name="Lot" />
                     <externalMetadataColumn
                       refId="Package\DO Table\Insert Records (DO Table).Inputs[ADO NET Destination Input].ExternalColumns[QTY]"
@@ -412,7 +417,8 @@
                       lineageId="Package\DO Table\Sort STG.Outputs[Sort Output].Columns[Material]" />
                     <inputColumn
                       refId="Package\DO Table\Merge Join.Inputs[Merge Join Left Input].Columns[Lot]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Lot"
                       cachedSortKeyPosition="4"
                       lineageId="Package\DO Table\Sort STG.Outputs[Sort Output].Columns[Lot]" />
@@ -452,7 +458,8 @@
                       lineageId="Package\DO Table\Sort Table.Outputs[Sort Output].Columns[Material]" />
                     <inputColumn
                       refId="Package\DO Table\Merge Join.Inputs[Merge Join Right Input].Columns[Lot]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Lot"
                       cachedSortKeyPosition="4"
                       lineageId="Package\DO Table\Sort Table.Outputs[Sort Output].Columns[Lot]" />
@@ -517,7 +524,8 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[Lot]"
-                      dataType="dbTimeStamp"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[Lot]"
                       name="Lot">
                       <properties>
@@ -584,7 +592,8 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[Lot (1)]"
-                      dataType="dbTimeStamp"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[Lot (1)]"
                       name="Lot (1)">
                       <properties>
@@ -688,7 +697,8 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\DO Table\Sort STG.Inputs[Sort Input].Columns[Lot]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Lot"
                       lineageId="Package\DO Table\STG_DO.Outputs[ADO NET Source Output].Columns[Lot]">
                       <properties>
@@ -790,7 +800,8 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\DO Table\Sort STG.Outputs[Sort Output].Columns[Lot]"
-                      dataType="dbTimeStamp"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\DO Table\Sort STG.Outputs[Sort Output].Columns[Lot]"
                       name="Lot"
                       sortKeyPosition="4">
@@ -909,7 +920,8 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\DO Table\Sort Table.Inputs[Sort Input].Columns[Lot]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Lot"
                       lineageId="Package\DO Table\DO Table.Outputs[ADO NET Source Output].Columns[Lot]">
                       <properties>
@@ -995,7 +1007,8 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\DO Table\Sort Table.Outputs[Sort Output].Columns[Lot]"
-                      dataType="dbTimeStamp"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\DO Table\Sort Table.Outputs[Sort Output].Columns[Lot]"
                       name="Lot"
                       sortKeyPosition="4">
@@ -1060,7 +1073,8 @@
                       lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[Material]" />
                     <inputColumn
                       refId="Package\DO Table\Split Records.Inputs[Conditional Split Input].Columns[Lot]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Lot"
                       lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[Lot]" />
                     <inputColumn
@@ -1087,7 +1101,8 @@
                       lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[Material (1)]" />
                     <inputColumn
                       refId="Package\DO Table\Split Records.Inputs[Conditional Split Input].Columns[Lot (1)]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Lot (1)"
                       lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[Lot (1)]" />
                     <inputColumn
@@ -1281,10 +1296,11 @@ WHERE SyncDate = (
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\DO Table\STG_DO.Outputs[ADO NET Source Output].Columns[Lot]"
-                      dataType="dbTimeStamp"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\DO Table\STG_DO.Outputs[ADO NET Source Output].ExternalColumns[Lot]"
+                      length="50"
                       lineageId="Package\DO Table\STG_DO.Outputs[ADO NET Source Output].Columns[Lot]"
                       name="Lot"
                       truncationRowDisposition="FailComponent" />
@@ -1325,7 +1341,8 @@ WHERE SyncDate = (
                       name="Material" />
                     <externalMetadataColumn
                       refId="Package\DO Table\STG_DO.Outputs[ADO NET Source Output].ExternalColumns[Lot]"
-                      dataType="dbTimeStamp"
+                      dataType="wstr"
+                      length="50"
                       name="Lot" />
                     <externalMetadataColumn
                       refId="Package\DO Table\STG_DO.Outputs[ADO NET Source Output].ExternalColumns[QTY]"
@@ -1361,7 +1378,8 @@ WHERE SyncDate = (
                       name="Material" />
                     <outputColumn
                       refId="Package\DO Table\STG_DO.Outputs[ADO NET Source Error Output].Columns[Lot]"
-                      dataType="dbTimeStamp"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\DO Table\STG_DO.Outputs[ADO NET Source Error Output].Columns[Lot]"
                       name="Lot" />
                     <outputColumn
@@ -1459,7 +1477,8 @@ WHERE SyncDate = (
                       lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[Material]" />
                     <inputColumn
                       refId="Package\DO Table\Update Records (DO Table).Inputs[OLE DB Command Input].Columns[Lot]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Lot"
                       externalMetadataColumnId="Package\DO Table\Update Records (DO Table).Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
                       lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[Lot]" />
@@ -1485,7 +1504,8 @@ WHERE SyncDate = (
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\DO Table\Update Records (DO Table).Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      dataType="dbTimeStamp"
+                      dataType="wstr"
+                      length="50"
                       name="Param_1">
                       <properties>
                         <property

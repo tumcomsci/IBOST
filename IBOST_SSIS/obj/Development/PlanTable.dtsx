@@ -1,18 +1,18 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="8/1/2018 8:04:17 AM"
+  DTS:CreationDate="8/2/2018 2:13:58 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="MALEE-TRAINING0"
   DTS:CreatorName="MALEE-TRAINING0\Trainee"
-  DTS:DTSID="{6E8213AD-2C38-44BC-9007-44508B753DC3}"
+  DTS:DTSID="{DA852AE8-F475-4726-B401-4C4254AED833}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="14.0.3002.107"
   DTS:LocaleID="1054"
-  DTS:ObjectName="Stock"
+  DTS:ObjectName="PlanTable"
   DTS:PackageType="5"
   DTS:VersionBuild="1"
-  DTS:VersionGUID="{051EB902-4708-4F8F-96A7-784014B93008}">
+  DTS:VersionGUID="{5F3B2B5F-73C4-4D66-AC01-AB5172B49023}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
