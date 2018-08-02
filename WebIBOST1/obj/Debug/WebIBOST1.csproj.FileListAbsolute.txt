@@ -56,3 +56,7 @@ C:\Users\Trainee\Desktop\GitHub\IBOST\WebIBOST1\obj\Debug\WebIBOST1.csproj.CoreC
 C:\Users\Trainee\Desktop\GitHub\IBOST\WebIBOST1\obj\Debug\WebIBOST1.csproj.CopyComplete
 C:\Users\Trainee\Desktop\GitHub\IBOST\WebIBOST1\obj\Debug\WebIBOST1.dll
 C:\Users\Trainee\Desktop\GitHub\IBOST\WebIBOST1\obj\Debug\WebIBOST1.pdb
+C:\Users\Trainee\Desktop\GitHub\IBOST\WebIBOST1\bin\EntityFramework.dll
+C:\Users\Trainee\Desktop\GitHub\IBOST\WebIBOST1\bin\EntityFramework.SqlServer.dll
+C:\Users\Trainee\Desktop\GitHub\IBOST\WebIBOST1\bin\EntityFramework.xml
+C:\Users\Trainee\Desktop\GitHub\IBOST\WebIBOST1\bin\EntityFramework.SqlServer.xml

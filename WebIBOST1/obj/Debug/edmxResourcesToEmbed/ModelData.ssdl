@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IBOrderTrackingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="SOHeader">
+    <Key>
+      <PropertyRef Name="SO" />
+    </Key>
+    <Property Name="LoadingDate" Type="datetime" />
+    <Property Name="OrderType" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderDate" Type="datetime" />
+    <Property Name="PO" Type="nvarchar" MaxLength="50" />
+    <Property Name="INV" Type="nvarchar" MaxLength="50" />
+    <Property Name="SO" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TotalFCLS" Type="float" />
+    <Property Name="SoldTo" Type="nvarchar" MaxLength="50" />
+    <Property Name="SoldToName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShipTo" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShipToName" Type="nvarchar" MaxLength="50" />
+    <Property Name="DestinationPort" Type="nvarchar" MaxLength="50" />
+    <Property Name="TotalCartons" Type="int" />
+    <Property Name="PaymentTerm" Type="nvarchar" MaxLength="50" />
+    <Property Name="Incoterm" Type="nvarchar" MaxLength="50" />
+    <Property Name="Currency" Type="nvarchar" MaxLength="50" />
+    <Property Name="TotalFOB" Type="float" />
+    <Property Name="TTSlip" Type="datetime" />
+    <Property Name="LCSlip" Type="datetime" />
+    <Property Name="SpecialApprove" Type="datetime" />
+    <Property Name="LC" Type="datetime" />
+    <Property Name="TT" Type="datetime" />
+    <Property Name="ETD" Type="datetime" />
+    <Property Name="ETA" Type="datetime" />
+    <Property Name="CfmUncfm" Type="nvarchar" MaxLength="50" />
+    <Property Name="DocDate" Type="datetime" />
+    <Property Name="DocAWB" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="IBOrderTrackingModelStoreContainer">
+    <EntitySet Name="SOHeader" EntityType="Self.SOHeader" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

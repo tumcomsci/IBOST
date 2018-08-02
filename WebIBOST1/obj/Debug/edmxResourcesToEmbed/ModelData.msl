@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IBOrderTrackingModelStoreContainer" CdmEntityContainer="IBOrderTrackingEntities">
+    <EntitySetMapping Name="SOHeaders">
+      <EntityTypeMapping TypeName="IBOrderTrackingModel.SOHeader">
+        <MappingFragment StoreEntitySet="SOHeader">
+          <ScalarProperty Name="DocAWB" ColumnName="DocAWB" />
+          <ScalarProperty Name="DocDate" ColumnName="DocDate" />
+          <ScalarProperty Name="CfmUncfm" ColumnName="CfmUncfm" />
+          <ScalarProperty Name="ETA" ColumnName="ETA" />
+          <ScalarProperty Name="ETD" ColumnName="ETD" />
+          <ScalarProperty Name="TT" ColumnName="TT" />
+          <ScalarProperty Name="LC" ColumnName="LC" />
+          <ScalarProperty Name="SpecialApprove" ColumnName="SpecialApprove" />
+          <ScalarProperty Name="LCSlip" ColumnName="LCSlip" />
+          <ScalarProperty Name="TTSlip" ColumnName="TTSlip" />
+          <ScalarProperty Name="TotalFOB" ColumnName="TotalFOB" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Incoterm" ColumnName="Incoterm" />
+          <ScalarProperty Name="PaymentTerm" ColumnName="PaymentTerm" />
+          <ScalarProperty Name="TotalCartons" ColumnName="TotalCartons" />
+          <ScalarProperty Name="DestinationPort" ColumnName="DestinationPort" />
+          <ScalarProperty Name="ShipToName" ColumnName="ShipToName" />
+          <ScalarProperty Name="ShipTo" ColumnName="ShipTo" />
+          <ScalarProperty Name="SoldToName" ColumnName="SoldToName" />
+          <ScalarProperty Name="SoldTo" ColumnName="SoldTo" />
+          <ScalarProperty Name="TotalFCLS" ColumnName="TotalFCLS" />
+          <ScalarProperty Name="SO" ColumnName="SO" />
+          <ScalarProperty Name="INV" ColumnName="INV" />
+          <ScalarProperty Name="PO" ColumnName="PO" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+          <ScalarProperty Name="LoadingDate" ColumnName="LoadingDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

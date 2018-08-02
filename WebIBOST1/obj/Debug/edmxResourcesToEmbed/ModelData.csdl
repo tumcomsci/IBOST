@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IBOrderTrackingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="IBOrderTrackingEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SOHeaders" EntityType="IBOrderTrackingModel.SOHeader" />
+  </EntityContainer>
+  <EntityType Name="SOHeader">
+    <Key>
+      <PropertyRef Name="SO" />
+    </Key>
+    <Property Name="LoadingDate" Type="DateTime" Precision="3" />
+    <Property Name="OrderType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OrderDate" Type="DateTime" Precision="3" />
+    <Property Name="PO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="INV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TotalFCLS" Type="Double" />
+    <Property Name="SoldTo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SoldToName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ShipTo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ShipToName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DestinationPort" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TotalCartons" Type="Int32" />
+    <Property Name="PaymentTerm" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Incoterm" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Currency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TotalFOB" Type="Double" />
+    <Property Name="TTSlip" Type="DateTime" Precision="3" />
+    <Property Name="LCSlip" Type="DateTime" Precision="3" />
+    <Property Name="SpecialApprove" Type="DateTime" Precision="3" />
+    <Property Name="LC" Type="DateTime" Precision="3" />
+    <Property Name="TT" Type="DateTime" Precision="3" />
+    <Property Name="ETD" Type="DateTime" Precision="3" />
+    <Property Name="ETA" Type="DateTime" Precision="3" />
+    <Property Name="CfmUncfm" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DocDate" Type="DateTime" Precision="3" />
+    <Property Name="DocAWB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>
