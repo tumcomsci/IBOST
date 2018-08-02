@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="SOHeader"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{DF153AAA-7DF9-4033-B214-C225C6FF3F60}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{9BF05DFA-E6BD-4C41-9FA5-70F75847C82B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACCAhFOua/n/6iBejwZ0nJTqh3h35Ycf1erkyOQlOF4sAAAAAAOgAAAAAIAACAAAADFT4LxC17RF8LcmVX0Bk1ctwtVPDdzINdyD8nRI9uCwiAAAAAThpZ3HmIlKm0R8TTTPMsmSzoazV7i9EsN59qXt6DaFUAAAAAYoa7Y0Wrtxk11QG3gUC3IrZj6URhWZHMxt9xKlm/kMOZlqVobzP+OBglYole5ftw44OxQcuDBcVhQVD5xXkN0</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADt8VPogd+m/p1RPxtu3CtgVmhbrm3zBt2pgWDkBHxBwwAAAAAOgAAAAAIAACAAAABf1VOccUrz6aIROiBloyFEkJPuBwikZBoXWvzvUpNy9CAAAACj81AuKvHnk9wu4WCLvQDvZSamBXuyxqXMr9yq9puF9UAAAADt8wV50EzSTq6i1k1NCK0/ZEOhWfcyKcpvsl6c/zXTz43H2VbEWSuBy3jBW+M/a7ZKT/n+WIG86jhjbE3f+7nV</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -4648,42 +4648,42 @@ WHERE SyncDate = (
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="168,42"
+          Size="243,42"
           Id="Package\SO Header  Table\Update Records (SOHeader Table)"
-          TopLeft="657,503" />
+          TopLeft="579,502" />
         <EdgeLayout
           Id="Package\SO Header  Table.Paths[Update (SO Match)]"
           TopLeft="596,354">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="145,149"
+              EndConnector="104.5,148"
               Start="0,0"
-              End="145,141.5">
+              End="104.5,140.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,56.6320346320346" />
+                    End="0,56.2251082251082" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,56.6320346320346"
-                    Point2="0,60.6320346320346"
-                    Point3="4,60.6320346320346" />
+                    Point1="0,56.2251082251082"
+                    Point2="0,60.2251082251082"
+                    Point3="4,60.2251082251082" />
                   <mssgle:LineSegment
-                    End="141,60.6320346320346" />
+                    End="100.5,60.2251082251082" />
                   <mssgle:CubicBezierSegment
-                    Point1="141,60.6320346320346"
-                    Point2="145,60.6320346320346"
-                    Point3="145,64.6320346320346" />
+                    Point1="100.5,60.2251082251082"
+                    Point2="104.5,60.2251082251082"
+                    Point3="104.5,64.2251082251082" />
                   <mssgle:LineSegment
-                    End="145,141.5" />
+                    End="104.5,140.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="29.82431640625,65.6320346320346,85.3513671875,11.609375"
+              BoundingBox="9.57431640625,65.2251082251082,85.3513671875,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
