@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="SOHeader"
   DTS:PackageType="5"
-  DTS:VersionBuild="18"
-  DTS:VersionGUID="{9BF05DFA-E6BD-4C41-9FA5-70F75847C82B}">
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{855A9DF9-F9D1-4132-9A44-E4F53A1B1991}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADt8VPogd+m/p1RPxtu3CtgVmhbrm3zBt2pgWDkBHxBwwAAAAAOgAAAAAIAACAAAABf1VOccUrz6aIROiBloyFEkJPuBwikZBoXWvzvUpNy9CAAAACj81AuKvHnk9wu4WCLvQDvZSamBXuyxqXMr9yq9puF9UAAAADt8wV50EzSTq6i1k1NCK0/ZEOhWfcyKcpvsl6c/zXTz43H2VbEWSuBy3jBW+M/a7ZKT/n+WIG86jhjbE3f+7nV</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAjciihG7Q2kHj4+EeVBWOOt3yB2lcSTTe9A3Z9q8+pPwAAAAAOgAAAAAIAACAAAADA+oL9Bmaw9sdunGoCEhnkaWoSovC546plLg1AugH+4iAAAAD8ihLQNYVgusMSkYwpQTTGz1QdLEZI4leCjSdAsSTQVkAAAABSjjrOMAIZ7SPwSgraWp8cbZilN1Cr4o0OVuM+ifw7/xbrnHdIQYhCpBjfZFf/iVkeLOvX9Wq0ivgTyCoDeURy</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1110,313 +1110,6 @@
                           name="InputColumnID">#{Package\SO Header  Table\Merge Join.Inputs[Merge Join Right Input].Columns[TotalFOB]}</property>
                       </properties>
                     </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\SO Header  Table\Record Split"
-              componentClassID="Microsoft.ConditionalSplit"
-              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
-              name="Record Split"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input]"
-                  description="Input to the Conditional Split Transformation"
-                  name="Conditional Split Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[SO]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="SO"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SO]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[SO (1)]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="SO (1)"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SO (1)]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[LoadingDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="LoadingDate"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[LoadingDate]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[OrderType]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="OrderType"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[OrderType]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[OrderDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="OrderDate"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[OrderDate]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[PO]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="PO"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[PO]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[INV]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="INV"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[INV]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[TotalFCLS]"
-                      cachedDataType="r8"
-                      cachedName="TotalFCLS"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFCLS]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[SoldTo]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="SoldTo"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SoldTo]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[SoldToName]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="SoldToName"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SoldToName]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[ShipTo]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="ShipTo"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[ShipTo]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[ShipToName]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="ShipToName"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[ShipToName]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[DestinationPort]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="DestinationPort"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[DestinationPort]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[TotalCartons]"
-                      cachedDataType="i4"
-                      cachedName="TotalCartons"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalCartons]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[PaymentTerm]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="PaymentTerm"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[PaymentTerm]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[Incoterm]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Incoterm"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Incoterm]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[Currency]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Currency"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Currency]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[TotalFOB]"
-                      cachedDataType="r8"
-                      cachedName="TotalFOB"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFOB]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[LoadingDate (1)]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="LoadingDate (1)"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[LoadingDate (1)]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[OrderType (1)]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="OrderType (1)"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[OrderType (1)]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[OrderDate (1)]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="OrderDate (1)"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[OrderDate (1)]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[PO (1)]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="PO (1)"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[PO (1)]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[INV (1)]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="INV (1)"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[INV (1)]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[TotalFCLS (1)]"
-                      cachedDataType="r8"
-                      cachedName="TotalFCLS (1)"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFCLS (1)]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[SoldTo (1)]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="SoldTo (1)"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SoldTo (1)]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[SoldToName (1)]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="SoldToName (1)"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SoldToName (1)]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[ShipTo (1)]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="ShipTo (1)"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[ShipTo (1)]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[ShipToName (1)]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="ShipToName (1)"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[ShipToName (1)]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[DestinationPort (1)]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="DestinationPort (1)"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[DestinationPort (1)]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[TotalCartons (1)]"
-                      cachedDataType="i4"
-                      cachedName="TotalCartons (1)"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalCartons (1)]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[PaymentTerm (1)]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="PaymentTerm (1)"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[PaymentTerm (1)]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[Incoterm (1)]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Incoterm (1)"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Incoterm (1)]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[Currency (1)]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Currency (1)"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Currency (1)]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input].Columns[TotalFOB (1)]"
-                      cachedDataType="r8"
-                      cachedName="TotalFOB (1)"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFOB (1)]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\SO Header  Table\Record Split.Outputs[Insert (SO not Match)]"
-                  description="Output 1 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="Insert (SO not Match)"
-                  synchronousInputId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[ISNULL](#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SO (1)]}) &amp;&amp; ![ISNULL](#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SO]})</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression">ISNULL([SO (1)]) &amp;&amp; !ISNULL(SO)</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">0</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\SO Header  Table\Record Split.Outputs[Update (SO Match)]"
-                  description="Output 2 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="Update (SO Match)"
-                  synchronousInputId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">(#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[LoadingDate]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[LoadingDate (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[OrderType]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[OrderType (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[OrderDate]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[OrderDate (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[PO]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[PO (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[INV]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[INV (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFCLS]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFCLS (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SoldTo]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SoldTo (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SoldToName]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SoldToName (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[ShipTo]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[ShipTo (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[ShipToName]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[ShipToName (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[DestinationPort]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[DestinationPort (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalCartons]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalCartons (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[PaymentTerm]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[PaymentTerm (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Incoterm]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Incoterm (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Currency]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Currency (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFOB]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFOB (1)]})</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression">(LoadingDate != [LoadingDate (1)]) || (OrderType != [OrderType (1)]) || (OrderDate != [OrderDate (1)]) || (PO != [PO (1)]) || (INV != [INV (1)]) || (TotalFCLS != [TotalFCLS (1)]) || (SoldTo != [SoldTo (1)]) || (SoldToName != [SoldToName (1)]) || (ShipTo != [ShipTo (1)]) || (ShipToName != [ShipToName (1)]) || (DestinationPort != [DestinationPort (1)]) || (TotalCartons != [TotalCartons (1)]) || (PaymentTerm != [PaymentTerm (1)]) || (Incoterm != [Incoterm (1)]) || (Currency != [Currency (1)]) || (TotalFOB != [TotalFOB (1)])</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">1</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\SO Header  Table\Record Split.Outputs[Conditional Split Default Output]"
-                  description="Default Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  name="Conditional Split Default Output"
-                  synchronousInputId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input]">
-                  <properties>
-                    <property
-                      dataType="System.Boolean"
-                      name="IsDefaultOut">true</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\SO Header  Table\Record Split.Outputs[Conditional Split Error Output]"
-                  description="Error Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Conditional Split Error Output"
-                  synchronousInputId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\SO Header  Table\Record Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\SO Header  Table\Record Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\SO Header  Table\Record Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\SO Header  Table\Record Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -3496,6 +3189,313 @@
               </outputs>
             </component>
             <component
+              refId="Package\SO Header  Table\Split Records"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Split Records"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[SO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SO"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SO]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[SO (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SO (1)"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SO (1)]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[LoadingDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="LoadingDate"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[LoadingDate]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[OrderType]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="OrderType"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[OrderType]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[OrderDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="OrderDate"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[OrderDate]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[PO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="PO"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[PO]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[INV]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="INV"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[INV]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[TotalFCLS]"
+                      cachedDataType="r8"
+                      cachedName="TotalFCLS"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFCLS]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[SoldTo]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SoldTo"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SoldTo]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[SoldToName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SoldToName"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SoldToName]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[ShipTo]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ShipTo"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[ShipTo]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[ShipToName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ShipToName"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[ShipToName]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[DestinationPort]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DestinationPort"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[DestinationPort]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[TotalCartons]"
+                      cachedDataType="i4"
+                      cachedName="TotalCartons"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalCartons]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[PaymentTerm]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="PaymentTerm"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[PaymentTerm]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[Incoterm]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Incoterm"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Incoterm]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[Currency]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Currency"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Currency]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[TotalFOB]"
+                      cachedDataType="r8"
+                      cachedName="TotalFOB"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFOB]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[LoadingDate (1)]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="LoadingDate (1)"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[LoadingDate (1)]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[OrderType (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="OrderType (1)"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[OrderType (1)]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[OrderDate (1)]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="OrderDate (1)"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[OrderDate (1)]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[PO (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="PO (1)"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[PO (1)]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[INV (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="INV (1)"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[INV (1)]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[TotalFCLS (1)]"
+                      cachedDataType="r8"
+                      cachedName="TotalFCLS (1)"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFCLS (1)]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[SoldTo (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SoldTo (1)"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SoldTo (1)]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[SoldToName (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SoldToName (1)"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SoldToName (1)]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[ShipTo (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ShipTo (1)"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[ShipTo (1)]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[ShipToName (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ShipToName (1)"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[ShipToName (1)]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[DestinationPort (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DestinationPort (1)"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[DestinationPort (1)]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[TotalCartons (1)]"
+                      cachedDataType="i4"
+                      cachedName="TotalCartons (1)"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalCartons (1)]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[PaymentTerm (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="PaymentTerm (1)"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[PaymentTerm (1)]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[Incoterm (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Incoterm (1)"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Incoterm (1)]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[Currency (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Currency (1)"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Currency (1)]" />
+                    <inputColumn
+                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[TotalFOB (1)]"
+                      cachedDataType="r8"
+                      cachedName="TotalFOB (1)"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFOB (1)]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SO Header  Table\Split Records.Outputs[Insert (SO not Match)]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Insert (SO not Match)"
+                  synchronousInputId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SO (1)]}) &amp;&amp; ![ISNULL](#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SO]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL([SO (1)]) &amp;&amp; !ISNULL(SO)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SO Header  Table\Split Records.Outputs[Update (SO Match)]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Update (SO Match)"
+                  synchronousInputId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">(#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[LoadingDate]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[LoadingDate (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[OrderType]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[OrderType (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[OrderDate]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[OrderDate (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[PO]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[PO (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[INV]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[INV (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFCLS]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFCLS (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SoldTo]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SoldTo (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SoldToName]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SoldToName (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[ShipTo]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[ShipTo (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[ShipToName]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[ShipToName (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[DestinationPort]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[DestinationPort (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalCartons]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalCartons (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[PaymentTerm]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[PaymentTerm (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Incoterm]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Incoterm (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Currency]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Currency (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFOB]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFOB (1)]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">(LoadingDate != [LoadingDate (1)]) || (OrderType != [OrderType (1)]) || (OrderDate != [OrderDate (1)]) || (PO != [PO (1)]) || (INV != [INV (1)]) || (TotalFCLS != [TotalFCLS (1)]) || (SoldTo != [SoldTo (1)]) || (SoldToName != [SoldToName (1)]) || (ShipTo != [ShipTo (1)]) || (ShipToName != [ShipToName (1)]) || (DestinationPort != [DestinationPort (1)]) || (TotalCartons != [TotalCartons (1)]) || (PaymentTerm != [PaymentTerm (1)]) || (Incoterm != [Incoterm (1)]) || (Currency != [Currency (1)]) || (TotalFOB != [TotalFOB (1)])</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SO Header  Table\Split Records.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SO Header  Table\Split Records.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SO Header  Table\Split Records.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SO Header  Table\Split Records.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SO Header  Table\Split Records.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SO Header  Table\Split Records.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\SO Header  Table\STG_SOHeader"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -4363,10 +4363,10 @@ WHERE SyncDate = (
               refId="Package\SO Header  Table.Paths[Insert (SO not Match)]"
               endId="Package\SO Header  Table\Insert Records (SOHeader Table).Inputs[ADO NET Destination Input]"
               name="Insert (SO not Match)"
-              startId="Package\SO Header  Table\Record Split.Outputs[Insert (SO not Match)]" />
+              startId="Package\SO Header  Table\Split Records.Outputs[Insert (SO not Match)]" />
             <path
               refId="Package\SO Header  Table.Paths[Merge Join Output]"
-              endId="Package\SO Header  Table\Record Split.Inputs[Conditional Split Input]"
+              endId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input]"
               name="Merge Join Output"
               startId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output]" />
             <path
@@ -4383,7 +4383,7 @@ WHERE SyncDate = (
               refId="Package\SO Header  Table.Paths[Update (SO Match)]"
               endId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input]"
               name="Update (SO Match)"
-              startId="Package\SO Header  Table\Record Split.Outputs[Update (SO Match)]" />
+              startId="Package\SO Header  Table\Split Records.Outputs[Update (SO Match)]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -4414,9 +4414,9 @@ WHERE SyncDate = (
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="137,42"
-          Id="Package\SO Header  Table\Record Split"
-          TopLeft="506,312" />
+          Size="142,42"
+          Id="Package\SO Header  Table\Split Records"
+          TopLeft="516,288.666666666667" />
         <NodeLayout
           Size="129,42"
           Id="Package\SO Header  Table\Sort Table"
@@ -4436,7 +4436,7 @@ WHERE SyncDate = (
         <NodeLayout
           Size="237,42"
           Id="Package\SO Header  Table\Insert Records (SOHeader Table)"
-          TopLeft="159,505" />
+          TopLeft="85.6666666666666,395" />
         <NodeLayout
           Size="153,42"
           Id="Package\SO Header  Table\STG_SOHeader"
@@ -4583,26 +4583,26 @@ WHERE SyncDate = (
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="129.5,58"
+              EndConnector="142,34.6666666666666"
               Start="0,0"
-              End="129.5,50.5">
+              End="142,27.1666666666666">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25" />
+                    End="0,13.3333333333333" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,25"
-                    Point2="0,29"
-                    Point3="4,29" />
+                    Point1="0,13.3333333333333"
+                    Point2="0,17.3333333333333"
+                    Point3="4,17.3333333333333" />
                   <mssgle:LineSegment
-                    End="125.5,29" />
+                    End="138,17.3333333333333" />
                   <mssgle:CubicBezierSegment
-                    Point1="125.5,29"
-                    Point2="129.5,29"
-                    Point3="129.5,33" />
+                    Point1="138,17.3333333333333"
+                    Point2="142,17.3333333333333"
+                    Point3="142,21.3333333333333" />
                   <mssgle:LineSegment
-                    End="129.5,50.5" />
+                    End="142,27.1666666666666" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4613,77 +4613,77 @@ WHERE SyncDate = (
         </EdgeLayout>
         <EdgeLayout
           Id="Package\SO Header  Table.Paths[Insert (SO not Match)]"
-          TopLeft="574.5,354">
+          TopLeft="564.666666666667,330.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-297,151"
+              EndConnector="-360.5,64.3333333333334"
               Start="0,0"
-              End="-297,143.5">
+              End="-360.5,56.8333333333334">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,71.5" />
+                    End="0,22.1634168987929" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,71.5"
-                    Point2="0,75.5"
-                    Point3="-4,75.5" />
+                    Point1="0,22.1634168987929"
+                    Point2="0,26.1634168987929"
+                    Point3="-4,26.1634168987929" />
                   <mssgle:LineSegment
-                    End="-293,75.5" />
+                    End="-356.5,26.1634168987929" />
                   <mssgle:CubicBezierSegment
-                    Point1="-293,75.5"
-                    Point2="-297,75.5"
-                    Point3="-297,79.5" />
+                    Point1="-356.5,26.1634168987929"
+                    Point2="-360.5,26.1634168987929"
+                    Point3="-360.5,30.1634168987929" />
                   <mssgle:LineSegment
-                    End="-297,143.5" />
+                    End="-360.5,56.8333333333334" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-197.26333984375,80.5,97.5266796875,11.609375"
+              BoundingBox="-229.01333984375,31.1634168987929,97.5266796875,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
           Size="243,42"
           Id="Package\SO Header  Table\Update Records (SOHeader Table)"
-          TopLeft="579,502" />
+          TopLeft="624,392" />
         <EdgeLayout
           Id="Package\SO Header  Table.Paths[Update (SO Match)]"
-          TopLeft="596,354">
+          TopLeft="609.333333333333,330.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="104.5,148"
+              EndConnector="136.166666666667,61.3333333333334"
               Start="0,0"
-              End="104.5,140.5">
+              End="136.166666666667,53.8333333333334">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,56.2251082251082" />
+                    End="0,20.9433611884865" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,56.2251082251082"
-                    Point2="0,60.2251082251082"
-                    Point3="4,60.2251082251082" />
+                    Point1="0,20.9433611884865"
+                    Point2="0,24.9433611884865"
+                    Point3="4,24.9433611884865" />
                   <mssgle:LineSegment
-                    End="100.5,60.2251082251082" />
+                    End="132.166666666667,24.9433611884865" />
                   <mssgle:CubicBezierSegment
-                    Point1="100.5,60.2251082251082"
-                    Point2="104.5,60.2251082251082"
-                    Point3="104.5,64.2251082251082" />
+                    Point1="132.166666666667,24.9433611884865"
+                    Point2="136.166666666667,24.9433611884865"
+                    Point3="136.166666666667,28.9433611884865" />
                   <mssgle:LineSegment
-                    End="104.5,140.5" />
+                    End="136.166666666667,53.8333333333334" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="9.57431640625,65.2251082251082,85.3513671875,11.609375"
+              BoundingBox="25.4076497395834,29.9433611884865,85.3513671875,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>

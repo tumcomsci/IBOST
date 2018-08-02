@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="Do"
   DTS:PackageType="5"
-  DTS:VersionBuild="18"
-  DTS:VersionGUID="{89375346-0672-40C3-B27C-5AD4CD6E3677}">
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{22D5D521-1CBB-4CE6-BB1D-82D81D4F6722}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAQRNGfyXv8lQBydUCvnLM+lCCnUJyQExgJuFmcRKcH0wAAAAAOgAAAAAIAACAAAAC6BkCiv/u+ZXAIcHzvQijktmBtZV/XXXQymdwdO0dmvSAAAACMAL42e9FE1o4iPjxIWZNmmQfRJkerKRoo+cUaWGWWyEAAAABdilOCRoeBkgAtGTSPO2MMEVN1v9IuqgAQ732RlX+FUIDG4I36RfWaCb/eUvPK6+oq6QuAKYKnJRhHac1nVzNx</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD4BxNKtqPCw8+kIf2lnr0rfqyNZ2cWoc09qQDKcXw6zwAAAAAOgAAAAAIAACAAAAA6+KqtQ9ki146wa5y+frxALdwfdQdupBROSjzCQF9DWCAAAAAXvp0Wa5eCM2zDgru79gkVj2QrM+zDsFWCpvZfHouco0AAAADxT8DAGtg+ZKh17rsfPfLnF/4Zj5jEr8tPPf6IowZGElc70XXAOfXtWNR0bvqgw5/KLGcNWsken4jAm27+IJ+W</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -48,174 +48,6 @@
         <pipeline
           version="1">
           <components>
-            <component
-              refId="Package\DO Table\Conditional Split"
-              componentClassID="Microsoft.ConditionalSplit"
-              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
-              name="Conditional Split"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\DO Table\Conditional Split.Inputs[Conditional Split Input]"
-                  description="Input to the Conditional Split Transformation"
-                  name="Conditional Split Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\DO Table\Conditional Split.Inputs[Conditional Split Input].Columns[SO]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="SO"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[SO]" />
-                    <inputColumn
-                      refId="Package\DO Table\Conditional Split.Inputs[Conditional Split Input].Columns[DO]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="DO"
-                      cachedSortKeyPosition="2"
-                      lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[DO]" />
-                    <inputColumn
-                      refId="Package\DO Table\Conditional Split.Inputs[Conditional Split Input].Columns[Material]"
-                      cachedDataType="i4"
-                      cachedName="Material"
-                      lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[Material]" />
-                    <inputColumn
-                      refId="Package\DO Table\Conditional Split.Inputs[Conditional Split Input].Columns[Lot]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Lot"
-                      lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[Lot]" />
-                    <inputColumn
-                      refId="Package\DO Table\Conditional Split.Inputs[Conditional Split Input].Columns[QTY]"
-                      cachedDataType="i4"
-                      cachedName="QTY"
-                      lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[QTY]" />
-                    <inputColumn
-                      refId="Package\DO Table\Conditional Split.Inputs[Conditional Split Input].Columns[SO (1)]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="SO (1)"
-                      lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[SO (1)]" />
-                    <inputColumn
-                      refId="Package\DO Table\Conditional Split.Inputs[Conditional Split Input].Columns[DO (1)]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="DO (1)"
-                      lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[DO (1)]" />
-                    <inputColumn
-                      refId="Package\DO Table\Conditional Split.Inputs[Conditional Split Input].Columns[Material (1)]"
-                      cachedDataType="i4"
-                      cachedName="Material (1)"
-                      lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[Material (1)]" />
-                    <inputColumn
-                      refId="Package\DO Table\Conditional Split.Inputs[Conditional Split Input].Columns[Lot (1)]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Lot (1)"
-                      lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[Lot (1)]" />
-                    <inputColumn
-                      refId="Package\DO Table\Conditional Split.Inputs[Conditional Split Input].Columns[QTY (1)]"
-                      cachedDataType="i4"
-                      cachedName="QTY (1)"
-                      lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[QTY (1)]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\DO Table\Conditional Split.Outputs[Insert(SO DO not Match)]"
-                  description="Output 1 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="Insert(SO DO not Match)"
-                  synchronousInputId="Package\DO Table\Conditional Split.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[ISNULL](#{Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[SO (1)]}) &amp;&amp; ![ISNULL](#{Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[SO]}) &amp;&amp; [ISNULL](#{Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[DO (1)]}) &amp;&amp; ![ISNULL](#{Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[DO]})</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression">ISNULL([SO (1)]) &amp;&amp; !ISNULL(SO) &amp;&amp; ISNULL([DO (1)]) &amp;&amp; !ISNULL(DO)</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">0</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\DO Table\Conditional Split.Outputs[Update(SO DO Match)]"
-                  description="Output 2 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="Update(SO DO Match)"
-                  synchronousInputId="Package\DO Table\Conditional Split.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">(#{Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[Material]} != #{Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[Material (1)]}) || (#{Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[Lot]} != #{Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[Lot (1)]}) || (#{Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[QTY]} != #{Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[QTY (1)]})</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression">(Material != [Material (1)]) || (Lot != [Lot (1)]) || (QTY != [QTY (1)])</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">1</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\DO Table\Conditional Split.Outputs[Conditional Split Default Output]"
-                  description="Default Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  name="Conditional Split Default Output"
-                  synchronousInputId="Package\DO Table\Conditional Split.Inputs[Conditional Split Input]">
-                  <properties>
-                    <property
-                      dataType="System.Boolean"
-                      name="IsDefaultOut">true</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\DO Table\Conditional Split.Outputs[Conditional Split Error Output]"
-                  description="Error Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Conditional Split Error Output"
-                  synchronousInputId="Package\DO Table\Conditional Split.Inputs[Conditional Split Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\DO Table\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\DO Table\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\DO Table\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\DO Table\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
             <component
               refId="Package\DO Table\DO Table"
               componentClassID="Microsoft.ManagedComponentHost"
@@ -1195,6 +1027,174 @@
               </outputs>
             </component>
             <component
+              refId="Package\DO Table\Split Records"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Split Records"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DO Table\Split Records.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DO Table\Split Records.Inputs[Conditional Split Input].Columns[SO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SO"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[SO]" />
+                    <inputColumn
+                      refId="Package\DO Table\Split Records.Inputs[Conditional Split Input].Columns[DO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DO"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[DO]" />
+                    <inputColumn
+                      refId="Package\DO Table\Split Records.Inputs[Conditional Split Input].Columns[Material]"
+                      cachedDataType="i4"
+                      cachedName="Material"
+                      lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[Material]" />
+                    <inputColumn
+                      refId="Package\DO Table\Split Records.Inputs[Conditional Split Input].Columns[Lot]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Lot"
+                      lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[Lot]" />
+                    <inputColumn
+                      refId="Package\DO Table\Split Records.Inputs[Conditional Split Input].Columns[QTY]"
+                      cachedDataType="i4"
+                      cachedName="QTY"
+                      lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[QTY]" />
+                    <inputColumn
+                      refId="Package\DO Table\Split Records.Inputs[Conditional Split Input].Columns[SO (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SO (1)"
+                      lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[SO (1)]" />
+                    <inputColumn
+                      refId="Package\DO Table\Split Records.Inputs[Conditional Split Input].Columns[DO (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DO (1)"
+                      lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[DO (1)]" />
+                    <inputColumn
+                      refId="Package\DO Table\Split Records.Inputs[Conditional Split Input].Columns[Material (1)]"
+                      cachedDataType="i4"
+                      cachedName="Material (1)"
+                      lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[Material (1)]" />
+                    <inputColumn
+                      refId="Package\DO Table\Split Records.Inputs[Conditional Split Input].Columns[Lot (1)]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Lot (1)"
+                      lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[Lot (1)]" />
+                    <inputColumn
+                      refId="Package\DO Table\Split Records.Inputs[Conditional Split Input].Columns[QTY (1)]"
+                      cachedDataType="i4"
+                      cachedName="QTY (1)"
+                      lineageId="Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[QTY (1)]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DO Table\Split Records.Outputs[Insert(SO DO not Match)]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Insert(SO DO not Match)"
+                  synchronousInputId="Package\DO Table\Split Records.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[SO (1)]}) &amp;&amp; ![ISNULL](#{Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[SO]}) &amp;&amp; [ISNULL](#{Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[DO (1)]}) &amp;&amp; ![ISNULL](#{Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[DO]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL([SO (1)]) &amp;&amp; !ISNULL(SO) &amp;&amp; ISNULL([DO (1)]) &amp;&amp; !ISNULL(DO)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DO Table\Split Records.Outputs[Update(SO DO Match)]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Update(SO DO Match)"
+                  synchronousInputId="Package\DO Table\Split Records.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">(#{Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[Material]} != #{Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[Material (1)]}) || (#{Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[Lot]} != #{Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[Lot (1)]}) || (#{Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[QTY]} != #{Package\DO Table\Merge Join.Outputs[Merge Join Output].Columns[QTY (1)]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">(Material != [Material (1)]) || (Lot != [Lot (1)]) || (QTY != [QTY (1)])</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DO Table\Split Records.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\DO Table\Split Records.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DO Table\Split Records.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\DO Table\Split Records.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DO Table\Split Records.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DO Table\Split Records.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DO Table\Split Records.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DO Table\Split Records.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\DO Table\STG_DO"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -1580,10 +1580,10 @@ WHERE SyncDate = (
               refId="Package\DO Table.Paths[Insert(SO DO not Match)]"
               endId="Package\DO Table\Insert Records (DO Table).Inputs[ADO NET Destination Input]"
               name="Insert(SO DO not Match)"
-              startId="Package\DO Table\Conditional Split.Outputs[Insert(SO DO not Match)]" />
+              startId="Package\DO Table\Split Records.Outputs[Insert(SO DO not Match)]" />
             <path
               refId="Package\DO Table.Paths[Merge Join Output]"
-              endId="Package\DO Table\Conditional Split.Inputs[Conditional Split Input]"
+              endId="Package\DO Table\Split Records.Inputs[Conditional Split Input]"
               name="Merge Join Output"
               startId="Package\DO Table\Merge Join.Outputs[Merge Join Output]" />
             <path
@@ -1600,7 +1600,7 @@ WHERE SyncDate = (
               refId="Package\DO Table.Paths[Update(SO DO Match)]"
               endId="Package\DO Table\Update Records (DO Table).Inputs[OLE DB Command Input]"
               name="Update(SO DO Match)"
-              startId="Package\DO Table\Conditional Split.Outputs[Update(SO DO Match)]" />
+              startId="Package\DO Table\Split Records.Outputs[Update(SO DO Match)]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1787,8 +1787,8 @@ WHERE SyncDate = (
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="157,42"
-          Id="Package\DO Table\Conditional Split"
+          Size="142,42"
+          Id="Package\DO Table\Split Records"
           TopLeft="501,283" />
         <EdgeLayout
           Id="Package\DO Table.Paths[Merge Join Output]"
@@ -1796,9 +1796,9 @@ WHERE SyncDate = (
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="130.5,35"
+              EndConnector="123,35"
               Start="0,0"
-              End="130.5,27.5">
+              End="123,27.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -1809,13 +1809,13 @@ WHERE SyncDate = (
                     Point2="0,17.5"
                     Point3="4,17.5" />
                   <mssgle:LineSegment
-                    End="126.5,17.5" />
+                    End="119,17.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="126.5,17.5"
-                    Point2="130.5,17.5"
-                    Point3="130.5,21.5" />
+                    Point1="119,17.5"
+                    Point2="123,17.5"
+                    Point3="123,21.5" />
                   <mssgle:LineSegment
-                    End="130.5,27.5" />
+                    End="123,27.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1830,37 +1830,37 @@ WHERE SyncDate = (
           TopLeft="160,383" />
         <EdgeLayout
           Id="Package\DO Table.Paths[Insert(SO DO not Match)]"
-          TopLeft="554.666666666667,325">
+          TopLeft="549.666666666667,325">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-292.166666666667,58"
+              EndConnector="-287.166666666667,58"
               Start="0,0"
-              End="-292.166666666667,50.5">
+              End="-287.166666666667,50.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.5510718789407" />
+                    End="0,19.5877437325905" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19.5510718789407"
-                    Point2="0,23.5510718789407"
-                    Point3="-4,23.5510718789407" />
+                    Point1="0,19.5877437325905"
+                    Point2="0,23.5877437325905"
+                    Point3="-4,23.5877437325905" />
                   <mssgle:LineSegment
-                    End="-288.166666666667,23.5510718789407" />
+                    End="-283.166666666667,23.5877437325905" />
                   <mssgle:CubicBezierSegment
-                    Point1="-288.166666666667,23.5510718789407"
-                    Point2="-292.166666666667,23.5510718789407"
-                    Point3="-292.166666666667,27.5510718789407" />
+                    Point1="-283.166666666667,23.5877437325905"
+                    Point2="-287.166666666667,23.5877437325905"
+                    Point3="-287.166666666667,27.5877437325905" />
                   <mssgle:LineSegment
-                    End="-292.166666666667,50.5" />
+                    End="-287.166666666667,50.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-201.776673177083,28.5510718789407,111.3866796875,11.609375"
+              BoundingBox="-199.276673177083,28.5877437325905,111.3866796875,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -1870,37 +1870,37 @@ WHERE SyncDate = (
           TopLeft="646,379" />
         <EdgeLayout
           Id="Package\DO Table.Paths[Update(SO DO Match)]"
-          TopLeft="604.333333333333,325">
+          TopLeft="594.333333333333,325">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="147.166666666667,54"
+              EndConnector="157.166666666667,54"
               Start="0,0"
-              End="147.166666666667,46.5">
+              End="157.166666666667,46.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.9268600252207" />
+                    End="0,17.9610027855153" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17.9268600252207"
-                    Point2="0,21.9268600252207"
-                    Point3="4,21.9268600252207" />
+                    Point1="0,17.9610027855153"
+                    Point2="0,21.9610027855153"
+                    Point3="4,21.9610027855153" />
                   <mssgle:LineSegment
-                    End="143.166666666667,21.9268600252207" />
+                    End="153.166666666667,21.9610027855153" />
                   <mssgle:CubicBezierSegment
-                    Point1="143.166666666667,21.9268600252207"
-                    Point2="147.166666666667,21.9268600252207"
-                    Point3="147.166666666667,25.9268600252207" />
+                    Point1="153.166666666667,21.9610027855153"
+                    Point2="157.166666666667,21.9610027855153"
+                    Point3="157.166666666667,25.9610027855153" />
                   <mssgle:LineSegment
-                    End="147.166666666667,46.5" />
+                    End="157.166666666667,46.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="23.9776497395833,26.9268600252207,99.2113671875,11.609375"
+              BoundingBox="28.9776497395833,26.9610027855153,99.2113671875,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
