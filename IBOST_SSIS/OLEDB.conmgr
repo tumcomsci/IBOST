@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="OLEDB"
+  DTS:DTSID="{C30C18BD-A555-4DAE-8894-93BE324590CF}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=10.0.0.77;User ID=IBOT;Initial Catalog=IBOrderTracking;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAACAAAAAAAQZgAAAAEAACAAAACNp4vjcX/5GMjm8C3mOlkA6pvSc/aascHXwqsryuEawAAAAAAOgAAAAAIAACAAAADv+GLB/bPr5E7Za8Dk3IDu5/LAbGs6J42SjobOuQXxEoAAAAA9OS6lA+4AVS0PAxzrmmSPDXguqW19KxIgVYiSneOUMh4f5DfcZiC3DcxDQpOm8Emuj/V1Lh9Yir9IGZxFbNSLUYaR0zfRg2TKOf0hDPQcXahPEMSM8qtlFOMfwi8eBzhs8fpK+0SiglP+fd/p2OHeEQIDCJZBqZHH8qVjpzbOMEAAAABr2zK+R/YS2hLMz9DGIoTJTsrfOavXEAWzEPV52+HONvK2pBaZVkTjN/PJ/nqcrd8dIMvK3N3vE9D+pnZjKhen</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

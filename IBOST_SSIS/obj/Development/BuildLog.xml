@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>IBOST_SSIS</Name>
-    <LastWriteTime>2018-08-01T04:10:34.4449753Z</LastWriteTime>
+    <LastWriteTime>2018-08-02T04:40:38.9308392Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>STG_Customer.dtsx</Name>
-      <LastWriteTime>2018-08-01T04:34:11.8484036Z</LastWriteTime>
+      <LastWriteTime>2018-08-01T09:54:59.524914Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -33,22 +33,22 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Customer.dtsx</Name>
-      <LastWriteTime>2018-08-01T04:52:25.4270434Z</LastWriteTime>
+      <LastWriteTime>2018-08-02T04:17:51.5545274Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Do.dtsx</Name>
-      <LastWriteTime>2018-08-01T01:07:25.4930678Z</LastWriteTime>
+      <LastWriteTime>2018-08-02T04:40:38.7714335Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>SODetail.dtsx</Name>
-      <LastWriteTime>2018-08-01T01:07:25.4774678Z</LastWriteTime>
+      <LastWriteTime>2018-08-02T04:52:46.5472541Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>SOHeader.dtsx</Name>
-      <LastWriteTime>2018-08-01T01:07:25.4774678Z</LastWriteTime>
+      <LastWriteTime>2018-08-02T04:40:38.8026336Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>

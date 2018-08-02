@@ -11,11 +11,41 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="STG_Customer"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{C655F46F-A444-49AA-865C-AC9BFC44DCDE}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{69929F14-AAED-47B0-95EF-DC3895F4A1EA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT]"
+      DTS:CreationName="ADO"
+      DTS:DTSID="{322F39A1-A0CE-499E-881B-8AA34547571E}"
+      DTS:ObjectName="10.0.0.77.IBOrderTracking.IBOT">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=10.0.0.77;User ID=IBOT;Initial Catalog=IBOrderTracking;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAASD5bw/yClkpHtvqKjfavsRHs8zqTzYy44R8b2d81saAAAAAAOgAAAAAIAACAAAAAlrxpfxrdNXvv/HiqPZAPn+78Q5D+nYCtf6d+nVobxOyAAAADSF0Eb7QaUaC+gOmRJUrvf8WjePu1VUZX2AjKgxBmnwUAAAABC5eEf9mjVfS1IaLSmDhzZizCeFgpGKrmZMtHN5ApJFNbCzG5P/UmW3C3MVz1ugf9qAqKIgjk64jmlmOYlbmd/</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{0AF9DD2D-6351-417F-9313-7A9B752C96A8}"
+      DTS:ObjectName="10.0.0.77.IBOrderTracking.IBOT 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=10.0.0.77;User ID=IBOT;Initial Catalog=IBOrderTracking;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACry3wvNbs+7Ym9mgi7MG1FS/tcwaQ/plEdanpxHRlgIAAAAAAOgAAAAAIAACAAAAA5QWTxuxY6G6mhPs1A443pcRg3gk+gD5ur5s2HOoZ9XiAAAACLRg1pmvYT+PzZHNolfkm4PYsJIemEgSNbtFVAOuDJ7kAAAAALmrO3Bu3nyOR9ZY7zv7NWfxAL9Lwd4CGRDLTFB3LZxAOCyHg6qFAhTsySvjxiG4Co8E8IYz97n97VzLSvubnj</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
       DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
@@ -27,7 +57,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAJq/GuSnOcVqlQ6prhK5RvT0NNoZFZTDDg2Y+C7NTMWAAAAAAOgAAAAAIAACAAAAAXdG98HT2m7VpUefD6pdF2Y5SQJjXR6As0I9hNhBp3FSAAAABbhmulADhN8/3GshdlBLdPQKnXazBFHz8/n7+8prdOkUAAAAAimEcSzAfJgdUB/U40Dnr8ZOY3mm0h139BYlq4yWLqzJvfGSN4W/oAIUrsrn/gzSBbeVSLZTHC+rOZpCIA6EhQ</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABT98jaPtQt7OympSOkqllnMJWTrL61w9NLmDy/4Mn9VQAAAAAOgAAAAAIAACAAAACVxZNObkRXzEC1Zq7qp7BC6STUWWrZkUe0w+TxU6aIoiAAAAAf8lKmBUw6bza3wnmu6sRNqlH2OYnQE1XDbEkSd92wbEAAAACIehk1u6rYp3fIx/TDNIp+Po0gLJ9yZJ22F1smz2GTStRKACXno7bUQq1FuFPWGwGhu5MRrAplZH9uiXMGmzW4</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -478,7 +508,7 @@
         <NodeLayout
           Size="149,42"
           Id="Package\STG Customer"
-          TopLeft="415,152" />
+          TopLeft="427,115" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -492,13 +522,13 @@
           Id="Package\STG Customer\STG_Customer"
           TopLeft="426,242" />
         <NodeLayout
-          Size="148,42"
-          Id="Package\STG Customer\CSV Customer"
-          TopLeft="218,39" />
-        <NodeLayout
           Size="156,42"
           Id="Package\STG Customer\Derived Column"
           TopLeft="316,142" />
+        <NodeLayout
+          Size="148,42"
+          Id="Package\STG Customer\CSV Customer"
+          TopLeft="218,39" />
         <EdgeLayout
           Id="Package\STG Customer.Paths[Flat File Source Output]"
           TopLeft="292,81">
