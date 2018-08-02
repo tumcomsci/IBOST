@@ -11,10 +11,27 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="Do"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{98D224E1-9DF8-4A59-ADA0-C63E9E96375F}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{B606E1A2-04C3-4C58-AA57-F14B08142498}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{60139317-EEC3-45C5-9871-AE49682CA8CB}"
+      DTS:ObjectName="10.0.0.77.IBOrderTracking.IBOT1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=10.0.0.77;User ID=IBOT;Initial Catalog=IBOrderTracking;Persist Security Info=True;Application Name=SSIS-Do-{60139317-EEC3-45C5-9871-AE49682CA8CB}10.0.0.77.IBOrderTracking.IBOT1;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB32q+xJUoeAxHT/8hKtcUvMHzSHK0QblEo7/bUm/SncQAAAAAOgAAAAAIAACAAAACMewVVw9/VCtu8SbRoTjQ8YTHFEuzvXbbVwa+dcadXNSAAAABC5LSp5NfjSgBwPBXRb7guy630xHBPjprOqn/vIOKSAEAAAACygTkp7/tfGgJ8tJ1bB4P33PdyXxB6f192wSoWVFIIGYh6Nr779Bmc2SInzpOXS8mOACm6faOwxnjzGG5KYW1q</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables />
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
