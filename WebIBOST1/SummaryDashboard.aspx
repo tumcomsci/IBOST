@@ -137,6 +137,7 @@
                         <SortedDescendingCellStyle BackColor="#E1DB9C" />
                         <SortedDescendingHeaderStyle BackColor="#C2A47B" />
                     </asp:GridView>
+                    <asp:Table ID="tblData" runat="server"></asp:Table>
                 </div>
             </div>
 
