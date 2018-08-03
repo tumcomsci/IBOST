@@ -103,6 +103,11 @@
     <Content Include="IMG\Export7.jpg" />
     <Content Include="IMG\Export8.jpg" />
     <Content Include="IMG\Export9.jpg" />
+    <Content Include="IMG\home01.jpg" />
+    <Content Include="IMG\home02.jpg" />
+    <Content Include="IMG\home03.jpg" />
+    <Content Include="IMG\home04.jpg" />
+    <Content Include="IMG\home05.jpg" />
     <Content Include="IMG\images.jpg" />
     <Content Include="IMG\photo.jpg" />
     <Content Include="IMG\sort_asc.png" />
