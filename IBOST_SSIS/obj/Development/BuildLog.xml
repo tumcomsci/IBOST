@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>IBOST_SSIS</Name>
-    <LastWriteTime>2018-08-03T06:41:53.7790327Z</LastWriteTime>
+    <LastWriteTime>2018-08-03T09:25:14.8949751Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -23,7 +23,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>STG_Stock.dtsx</Name>
-      <LastWriteTime>2018-08-02T07:50:56.3752381Z</LastWriteTime>
+      <LastWriteTime>2018-08-03T09:25:14.8349717Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -53,7 +53,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>StockTable.dtsx</Name>
-      <LastWriteTime>2018-08-02T09:11:53.6734592Z</LastWriteTime>
+      <LastWriteTime>2018-08-03T09:42:38.2435393Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
