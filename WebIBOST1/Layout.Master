@@ -30,6 +30,11 @@
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .text-md-left {
+            height: 54px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -37,19 +42,19 @@
             <nav class="navbar navbar-light" style="background-color: #ffffff;">
                 <a class="navbar-brand" href="#">
                     <img src="IMG/photo.jpg" width="50" height="50" /></a>
+ 
+                <ul>
+                <div class="second-Menu text-md-left " style="float:left">
 
-                <div class="second-Menu text-md-left ">
-                    <ul>
-                        <li>
                         <a class="nav-link" href="home.aspx">Home</a>
-                        </li>    
-                        <li>
-                             <a class="nav-link" href="Table.aspx">Table</a>
-                        </li>
-                       
-                    </ul>
+ 
                 </div>
+                 <span class="second-Menu text-md-left " style="float:left">
+                    
+                        <a class="nav-link" href="Table.aspx">Table</a>
 
+                </span>
+                 </ul>
 
 
             </nav>
