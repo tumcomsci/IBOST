@@ -6,7 +6,12 @@
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+    
+               <br />
+                <br />
+                <br />
+                <br />
+                
     <div>
         <%--  <script>
             window.onload = function () {
@@ -59,7 +64,7 @@
             <div class="panel-group">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h2>IB ORDER & SHIPMENT TRACKING</h2>
+                        <h3>SummaryDashboard</h3>
                     </div>
                     <div class="panel-body">
                         <div id="chartContainer" style="height: 300px; width: 100%;">
@@ -112,27 +117,25 @@
 
 
 
-            <div class="panel panel-default">
+            <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h1>SO Header Data</h1>
+                    <h2>SO Header Data</h2>
                 </div>
                 <div class="panel-body">
 
-                    <asp:GridView ID="grdworking" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
-                        <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                    <asp:GridView ID="grdworking" runat="server" CellPadding="2" ForeColor="Black" GridLines="None" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px">
+                        <AlternatingRowStyle BackColor="PaleGoldenrod" />
                         <Columns>
                             <asp:TemplateField></asp:TemplateField>
                         </Columns>
-                        <EditRowStyle BackColor="#999999" />
-                        <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                        <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                        <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-                        <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-                        <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-                        <SortedAscendingCellStyle BackColor="#E9E7E2" />
-                        <SortedAscendingHeaderStyle BackColor="#506C8C" />
-                        <SortedDescendingCellStyle BackColor="#FFFDF8" />
-                        <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+                        <FooterStyle BackColor="Tan" />
+                        <HeaderStyle BackColor="Tan" Font-Bold="True" />
+                        <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" HorizontalAlign="Center" />
+                        <SelectedRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
+                        <SortedAscendingCellStyle BackColor="#FAFAE7" />
+                        <SortedAscendingHeaderStyle BackColor="#DAC09E" />
+                        <SortedDescendingCellStyle BackColor="#E1DB9C" />
+                        <SortedDescendingHeaderStyle BackColor="#C2A47B" />
                     </asp:GridView>
                 </div>
             </div>
@@ -169,4 +172,5 @@
         </div>
     </div>
 
+    </div>
 </asp:Content>

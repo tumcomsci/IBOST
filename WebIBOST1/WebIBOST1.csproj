@@ -93,11 +93,16 @@
     <Content Include="Home.aspx" />
     <Content Include="IMG\ASEAN-Briefing-Import-and-Export-Procedures-in-Indonesia-Best-Practices-002.jpg" />
     <Content Include="IMG\Export1.jpg" />
+    <Content Include="IMG\Export10.jpg" />
+    <Content Include="IMG\Export11.jpg" />
     <Content Include="IMG\Export2.jpg" />
     <Content Include="IMG\Export3.jpg" />
     <Content Include="IMG\Export4.jpg" />
     <Content Include="IMG\Export5.jpg" />
     <Content Include="IMG\Export6.jpg" />
+    <Content Include="IMG\Export7.jpg" />
+    <Content Include="IMG\Export8.jpg" />
+    <Content Include="IMG\Export9.jpg" />
     <Content Include="IMG\images.jpg" />
     <Content Include="IMG\photo.jpg" />
     <Content Include="IMG\sort_asc.png" />

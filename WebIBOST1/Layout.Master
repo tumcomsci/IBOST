@@ -11,10 +11,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
- 
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-     
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- DataTables CSS -->
     <link href="vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
@@ -25,37 +22,61 @@
 
     <title></title>
 
-
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <style type="text/css">
-        .text-md-left {
-            height: 54px;
-        }
-    </style>
+
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <nav class="navbar navbar-light" style="background-color: #ffffff;">
-                <a class="navbar-brand" href="#">
-                    <img src="IMG/photo.jpg" width="50" height="50" /></a>
- 
-                <ul>
-                <div class="second-Menu text-md-left " style="float:left">
 
-                        <a class="nav-link" href="home.aspx">Home</a>
- 
-                </div>
-                 <span class="second-Menu text-md-left " style="float:left">
+
+        <div class="navbar-wrapper">
+            <div class="container-fluid">
+                <nav class="navbar navbar-default navbar-fixed-top">
+                    <%--<nav class="navbar navbar-inverse navbar-static-top">--%>
                     
-                        <a class="nav-link" href="Table.aspx">TableTest</a>
+                    <div class="container-fluid">
+                        <div class="navbar-header ">
+                              
 
-                </span>
-                 </ul>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                          <%--<a class="navbar-brand" href="home.aspx" >
+                                <img src="IMG/photo.jpg" width="50" height="50" /></a>--%>
 
+                            <a class="navbar-brand" rel="home" href="#">
+                                <img style="max-width: 100px; margin-top: -7px;"
+                                    src="IMG/photo.jpg">
+                            </a>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="SummaryDashboard.aspx">Dashboard</a></li>
+                                <li><a href="home.aspx">Home</a></li>
+                                <li><a href="table.aspx">Table</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li class="dropdown-header">Nav header</li>
+                                        <li><a href="#">Separated link</a></li>
+                                        <li><a href="#">One more separated link</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Mark Ottoooooooooooo</a></p>
+                        </div>
+                    </div>
+                </nav>
 
-            </nav>
+            </div>
         </div>
 
 
@@ -75,16 +96,18 @@
         <!-- Footer -->
 
     </form>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <%--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>--%>
+
     <script type="text/javascript">
         $('.carousel').carousel({
             interval: 2000
         })</script>
 
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="vendor/metisMenu/metisMenu.min.js"></script>
 
     <!-- DataTables JavaScript -->
     <script src="vendor/datatables/js/jquery.dataTables.min.js"></script>
@@ -101,7 +124,7 @@
     </script>
 
     <script>
-        
+
         $('exampleModal').modal('show')
     </script>
 
