@@ -123,7 +123,7 @@
                 </div>
                 <div class="panel-body">
 
-                    <asp:GridView ID="grdworking" runat="server" CellPadding="2" ForeColor="Black" GridLines="None" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px">
+                  <%--  <asp:GridView ID="grdworking" runat="server" CellPadding="2" ForeColor="Black" GridLines="None" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px">
                         <AlternatingRowStyle BackColor="PaleGoldenrod" />
                         <Columns>
                             <asp:TemplateField></asp:TemplateField>
@@ -136,7 +136,7 @@
                         <SortedAscendingHeaderStyle BackColor="#DAC09E" />
                         <SortedDescendingCellStyle BackColor="#E1DB9C" />
                         <SortedDescendingHeaderStyle BackColor="#C2A47B" />
-                    </asp:GridView>
+                    </asp:GridView>--%>
                     <asp:Table ID="tblData" runat="server"></asp:Table>
                 </div>
             </div>
