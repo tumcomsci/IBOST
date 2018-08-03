@@ -121,8 +121,13 @@
                 responsive: true
             });
         });
+         $(document).ready(function () {
+            $('#ContentPlaceHolder1_tblData').DataTable({
+                responsive: true
+            });
+        });
     </script>
-
+   
     <script>
 
         $('exampleModal').modal('show')

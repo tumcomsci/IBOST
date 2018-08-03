@@ -10,16 +10,20 @@
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1" class=""></li>
             <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+            <li data-target="#myCarousel" data-slide-to="3" class=""></li>
         </ol>
-        <div class="carousel-inner" role="listbox" style="height:800px" >
+        <div class="carousel-inner" role="listbox" <%--style="height:800px"--%> >
             <div class="item active">
-                <img  src="IMG/Export9.jpg" alt="First slide" width="100%">
+                <img  src="IMG/home01.jpg" alt="First slide" width="100%">
             </div>
             <div class="item">
-                <img  src="IMG/Export10.jpg" alt="Second slide" width="100%">
+                <img  src="IMG/home02.jpg" alt="Second slide" width="100%">
             </div>
             <div class="item">
-                <img  src="IMG/Export11.jpg" alt="Third slide" width="100%">
+                <img  src="IMG/home03.jpg" alt="Third slide" width="100%">
+            </div>
+             <div class="item">
+                <img  src="IMG/home04.jpg" alt="Third slide" width="100%">
             </div>
         </div>
         <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">

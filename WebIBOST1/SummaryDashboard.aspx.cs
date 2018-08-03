@@ -27,15 +27,18 @@ namespace WebIBOST1
             oRow.Cells.Add(oCell);
 
             TableCell oCell1 = new TableCell();
-            oCell1.Text = "SO";
+            oCell1.Text = "DO";
             oRow.Cells.Add(oCell1);
 
             TableCell oCell2 = new TableCell();
-            oCell2.Text = "SO";
+            oCell2.Text = "loading";
             oRow.Cells.Add(oCell2);
 
             //finish 
             tblData.Rows.Add(oRow);
+
+            //add
+            tblData.Attributes.Add("class","table table - striped table - bordered table - hover");
         }
     }
 }
