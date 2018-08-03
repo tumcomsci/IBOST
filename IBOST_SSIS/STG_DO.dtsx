@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="STG_DO"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{76772211-0081-4294-8BD7-43C0317271B9}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{484AD3DA-B184-4E5D-92B7-A0F443E06185}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAbPZ4Q9ma6sVu/vR/wk4MJ/sm1mougSJu0Pswj4dapSQAAAAAOgAAAAAIAACAAAACUpFM/dljgtYABtHaXbtfwUO/U+HbYmpQIOwB1zwlrGSAAAACRIOpA58SIRNo27F0ovanmc3c+n6GYZ3g6nkTvu22PzUAAAAADdCUFPpkPgwK9NtNczBCl1Ssfmti3IZrYK8l8auSKSJrvTRCaJEIcRVxYtyP8EoXOr1uE0bc2HviQwA61C4i8</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACLdvid8AEa14+NvsCKBkvgg81AAS2icOyDL8BWi0uyOwAAAAAOgAAAAAIAACAAAADvVFuyoVUglHp82MB2wb+qaskRIKkaiGuI9vAi2A+7WCAAAADEPbs15px8BbEM+F3IXnbfgkrI/wyksF1ltrRVUb3qvUAAAAATpSMlgHO0TXoG2zgyf6Mv4mzuwlqG+BRkUVNvlnEL+jgnFDINleUktQIrCSJUPltHhssitz2a7sz5Htk2AB0z</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -190,10 +190,12 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].Columns[MATERIAL]"
-                      dataType="i4"
+                      codePage="874"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].ExternalColumns[MATERIAL]"
+                      length="50"
                       lineageId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].Columns[MATERIAL]"
                       name="MATERIAL"
                       truncationRowDisposition="FailComponent">
@@ -210,10 +212,12 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].Columns[Lot]"
-                      dataType="dbTimeStamp"
+                      codePage="874"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].ExternalColumns[Lot]"
+                      length="50"
                       lineageId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].Columns[Lot]"
                       name="Lot"
                       truncationRowDisposition="FailComponent">
@@ -230,10 +234,12 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].Columns[QTY]"
-                      dataType="i4"
+                      codePage="874"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].ExternalColumns[QTY]"
+                      length="50"
                       lineageId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].Columns[QTY]"
                       name="QTY"
                       truncationRowDisposition="FailComponent">
@@ -265,15 +271,21 @@
                       name="DO no " />
                     <externalMetadataColumn
                       refId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].ExternalColumns[MATERIAL]"
-                      dataType="i4"
+                      codePage="874"
+                      dataType="str"
+                      length="50"
                       name="MATERIAL" />
                     <externalMetadataColumn
                       refId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].ExternalColumns[Lot]"
-                      dataType="dbTimeStamp"
+                      codePage="874"
+                      dataType="str"
+                      length="50"
                       name="Lot" />
                     <externalMetadataColumn
                       refId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].ExternalColumns[QTY]"
-                      dataType="i4"
+                      codePage="874"
+                      dataType="str"
+                      length="50"
                       name="QTY" />
                   </externalMetadataColumns>
                 </output>
@@ -430,22 +442,34 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].Columns[MATERIAL]"
-                      cachedDataType="i4"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="MATERIAL"
                       externalMetadataColumnId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].ExternalColumns[Material]"
                       lineageId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].Columns[MATERIAL]" />
                     <inputColumn
                       refId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].Columns[Lot]"
-                      cachedDataType="dbTimeStamp"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="Lot"
                       externalMetadataColumnId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].ExternalColumns[Lot]"
                       lineageId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].Columns[Lot]" />
                     <inputColumn
                       refId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].Columns[QTY]"
-                      cachedDataType="i4"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="QTY"
                       externalMetadataColumnId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].ExternalColumns[QTY]"
                       lineageId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].Columns[QTY]" />
+                    <inputColumn
+                      refId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].Columns[SyncDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="SyncDate"
+                      externalMetadataColumnId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].ExternalColumns[SyncDate]"
+                      lineageId="Package\STG DO\Derived Column.Outputs[Derived Column Output].Columns[SyncDate]" />
                     <inputColumn
                       refId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].Columns[SO no ]"
                       cachedCodepage="874"
@@ -462,12 +486,6 @@
                       cachedName="DO no "
                       externalMetadataColumnId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].ExternalColumns[DO]"
                       lineageId="Package\STG DO\CSV DO.Outputs[Flat File Source Output].Columns[DO no ]" />
-                    <inputColumn
-                      refId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].Columns[SyncDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="SyncDate"
-                      externalMetadataColumnId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].ExternalColumns[SyncDate]"
-                      lineageId="Package\STG DO\Derived Column.Outputs[Derived Column Output].Columns[SyncDate]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -487,7 +505,8 @@
                       name="Material" />
                     <externalMetadataColumn
                       refId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].ExternalColumns[Lot]"
-                      dataType="dbTimeStamp"
+                      dataType="wstr"
+                      length="50"
                       name="Lot" />
                     <externalMetadataColumn
                       refId="Package\STG DO\STG_DO.Inputs[ADO NET Destination Input].ExternalColumns[QTY]"
@@ -571,13 +590,13 @@
           Id="Package\STG DO\STG_DO"
           TopLeft="451,269" />
         <NodeLayout
-          Size="118,42"
-          Id="Package\STG DO\CSV DO"
-          TopLeft="236,72" />
-        <NodeLayout
           Size="156,42"
           Id="Package\STG DO\Derived Column"
           TopLeft="317,173" />
+        <NodeLayout
+          Size="118,42"
+          Id="Package\STG DO\CSV DO"
+          TopLeft="236,72" />
         <EdgeLayout
           Id="Package\STG DO.Paths[Flat File Source Output]"
           TopLeft="295,114">

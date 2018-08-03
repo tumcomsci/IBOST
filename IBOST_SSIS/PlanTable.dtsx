@@ -1,0 +1,3256 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/2/2018 2:13:58 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MALEE-TRAINING0"
+  DTS:CreatorName="MALEE-TRAINING0\Trainee"
+  DTS:DTSID="{DA852AE8-F475-4726-B401-4C4254AED833}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3002.107"
+  DTS:LocaleID="1054"
+  DTS:ObjectName="PlanTable"
+  DTS:PackageType="5"
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{7C4F4588-F588-41AA-867C-BB0E27A5533A}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{B38C81CE-D5D1-4691-86DA-17312ABA602B}"
+      DTS:ObjectName="10.0.0.77.IBOrderTracking.IBOT1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=10.0.0.77;User ID=IBOT;Initial Catalog=IBOrderTracking;Persist Security Info=True;Application Name=SSIS-PlanTable-{B38C81CE-D5D1-4691-86DA-17312ABA602B}10.0.0.77.IBOrderTracking.IBOT1;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACkLqPSj8ENJFGqvPL/8OUQPv9viGpaTjYOnuzXdhY2WQAAAAAOgAAAAAIAACAAAABdkDZ8vDUxk+ZMrBfj6wO6XElDzwlvTbmvqNrxrZWv6SAAAADFlw2UiQKCcTew4NSrtstBxUPMX9ImDuNvPqxiKitHakAAAAAV4NBi6eFQlvnadAiTXxIOU6ZwVTw72PVenZ3XIDXUtNUs8EkE7GTR38z4SjlYnCf5l2GVd8woOjKec8wGC6RH</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Plan Table"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{90BD9018-71AE-44F2-A41F-CE1C806632E5}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Plan Table"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Plan Table\Insert Records (Plan Table)"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="Insert Records (Plan Table)"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."PlanTable"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Plan Table\Insert Records (Plan Table).Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].Columns[Plant]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Plant"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[Plant]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Plant]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].Columns[Material]"
+                      cachedDataType="i4"
+                      cachedName="Material"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[Material]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Material]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].Columns[StoreLocation]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="StoreLocation"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[StoreLocation]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocation]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].Columns[PlanDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="PlanDate"
+                      cachedSortKeyPosition="4"
+                      externalMetadataColumnId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[PlanDate]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[PlanDate]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].Columns[Unit]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Unit"
+                      externalMetadataColumnId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[Unit]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unit]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].Columns[StoreLocationDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="StoreLocationDescription"
+                      externalMetadataColumnId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[StoreLocationDescription]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].Columns[ExpireDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ExpireDate"
+                      externalMetadataColumnId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[ExpireDate]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[ExpireDate]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].Columns[Unres]"
+                      cachedDataType="i4"
+                      cachedName="Unres"
+                      externalMetadataColumnId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[Unres]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unres]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].Columns[SO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SO"
+                      externalMetadataColumnId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[SO]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[SO]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].Columns[DO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DO"
+                      externalMetadataColumnId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[DO]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[DO]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].Columns[Remain]"
+                      cachedDataType="i4"
+                      cachedName="Remain"
+                      externalMetadataColumnId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[Remain]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Remain]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[Plant]"
+                      dataType="wstr"
+                      length="50"
+                      name="Plant" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[Material]"
+                      dataType="i4"
+                      name="Material" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[Unit]"
+                      dataType="wstr"
+                      length="50"
+                      name="Unit" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[StoreLocation]"
+                      dataType="wstr"
+                      length="50"
+                      name="StoreLocation" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[StoreLocationDescription]"
+                      dataType="wstr"
+                      length="50"
+                      name="StoreLocationDescription" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[PlanDate]"
+                      dataType="dbTimeStamp"
+                      name="PlanDate" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[ExpireDate]"
+                      dataType="dbTimeStamp"
+                      name="ExpireDate" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[Unres]"
+                      dataType="i4"
+                      name="Unres" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[Book]"
+                      dataType="i4"
+                      name="Book" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[SO]"
+                      dataType="wstr"
+                      length="50"
+                      name="SO" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[DO]"
+                      dataType="wstr"
+                      length="50"
+                      name="DO" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[Remain]"
+                      dataType="i4"
+                      name="Remain" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Plan Table\Insert Records (Plan Table).Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Plan Table\Insert Records (Plan Table).Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\Insert Records (Plan Table).Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Plan Table\Insert Records (Plan Table).Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\Insert Records (Plan Table).Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Plan Table\Merge Join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">4</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Plan Table\Merge Join.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[Plant]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Plant"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[Plant]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[StoreLocation]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="StoreLocation"
+                      cachedSortKeyPosition="3"
+                      lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[StoreLocation]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[StoreLocationDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="StoreLocationDescription"
+                      cachedSortKeyPosition="6"
+                      lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[StoreLocationDescription]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[Material]"
+                      cachedDataType="i4"
+                      cachedName="Material"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[Material]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[Unit]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Unit"
+                      cachedSortKeyPosition="5"
+                      lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[Unit]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[ExpireDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ExpireDate"
+                      cachedSortKeyPosition="7"
+                      lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[ExpireDate]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[PlanDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="PlanDate"
+                      cachedSortKeyPosition="4"
+                      lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[PlanDate]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[Unres]"
+                      cachedDataType="i4"
+                      cachedName="Unres"
+                      cachedSortKeyPosition="8"
+                      lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[Unres]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[Remain]"
+                      cachedDataType="i4"
+                      cachedName="Remain"
+                      cachedSortKeyPosition="11"
+                      lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[Remain]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[SO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SO"
+                      cachedSortKeyPosition="9"
+                      lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[SO]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[DO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DO"
+                      cachedSortKeyPosition="10"
+                      lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[DO]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Plan Table\Merge Join.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[Plant]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Plant"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Plant]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[Material]"
+                      cachedDataType="i4"
+                      cachedName="Material"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Material]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[Unit]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Unit"
+                      cachedSortKeyPosition="5"
+                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Unit]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[StoreLocation]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="StoreLocation"
+                      cachedSortKeyPosition="3"
+                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[StoreLocation]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[StoreLocationDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="StoreLocationDescription"
+                      cachedSortKeyPosition="6"
+                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[StoreLocationDescription]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[PlanDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="PlanDate"
+                      cachedSortKeyPosition="4"
+                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[PlanDate]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[ExpireDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ExpireDate"
+                      cachedSortKeyPosition="7"
+                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[ExpireDate]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[Unres]"
+                      cachedDataType="i4"
+                      cachedName="Unres"
+                      cachedSortKeyPosition="8"
+                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Unres]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[SO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SO"
+                      cachedSortKeyPosition="9"
+                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[SO]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[DO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DO"
+                      cachedSortKeyPosition="10"
+                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[DO]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[Remain]"
+                      cachedDataType="i4"
+                      cachedName="Remain"
+                      cachedSortKeyPosition="11"
+                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Remain]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output]"
+                  isSorted="true"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Plant]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Plant]"
+                      name="Plant"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[Plant]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Material]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Material]"
+                      name="Material"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[Material]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocation]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocation]"
+                      name="StoreLocation"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[StoreLocation]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[PlanDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[PlanDate]"
+                      name="PlanDate"
+                      sortKeyPosition="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[PlanDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unit]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unit]"
+                      name="Unit">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[Unit]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription]"
+                      name="StoreLocationDescription">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[StoreLocationDescription]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[ExpireDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[ExpireDate]"
+                      name="ExpireDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[ExpireDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unres]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unres]"
+                      name="Unres">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[Unres]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[SO]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[SO]"
+                      name="SO">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[SO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[DO]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[DO]"
+                      name="DO">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[DO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Remain]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Remain]"
+                      name="Remain">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[Remain]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Plant (1)]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Plant (1)]"
+                      name="Plant (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[Plant]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Material (1)]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Material (1)]"
+                      name="Material (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[Material]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocation (1)]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocation (1)]"
+                      name="StoreLocation (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[StoreLocation]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[PlanDate (1)]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[PlanDate (1)]"
+                      name="PlanDate (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[PlanDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unit (1)]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unit (1)]"
+                      name="Unit (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[Unit]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription (1)]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription (1)]"
+                      name="StoreLocationDescription (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[StoreLocationDescription]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[ExpireDate (1)]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[ExpireDate (1)]"
+                      name="ExpireDate (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[ExpireDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unres (1)]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unres (1)]"
+                      name="Unres (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[Unres]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[SO (1)]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[SO (1)]"
+                      name="SO (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[SO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[DO (1)]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[DO (1)]"
+                      name="DO (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[DO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Remain (1)]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Remain (1)]"
+                      name="Remain (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[Remain]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Plan Table\PlanTable"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+              name="PlanTable"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement used by the component to extract data."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="The Source database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."PlanTable"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the mode to retrieve external column information"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">0</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Plan Table\PlanTable.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output]"
+                  name="ADO NET Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[Plant]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].ExternalColumns[Plant]"
+                      length="50"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[Plant]"
+                      name="Plant"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[Material]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].ExternalColumns[Material]"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[Material]"
+                      name="Material"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[Unit]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].ExternalColumns[Unit]"
+                      length="50"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[Unit]"
+                      name="Unit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[StoreLocation]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].ExternalColumns[StoreLocation]"
+                      length="50"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[StoreLocation]"
+                      name="StoreLocation"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[StoreLocationDescription]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].ExternalColumns[StoreLocationDescription]"
+                      length="50"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[StoreLocationDescription]"
+                      name="StoreLocationDescription"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[PlanDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].ExternalColumns[PlanDate]"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[PlanDate]"
+                      name="PlanDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[ExpireDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].ExternalColumns[ExpireDate]"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[ExpireDate]"
+                      name="ExpireDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[Unres]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].ExternalColumns[Unres]"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[Unres]"
+                      name="Unres"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[Book]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].ExternalColumns[Book]"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[Book]"
+                      name="Book"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[SO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].ExternalColumns[SO]"
+                      length="50"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[SO]"
+                      name="SO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[DO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].ExternalColumns[DO]"
+                      length="50"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[DO]"
+                      name="DO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[Remain]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].ExternalColumns[Remain]"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[Remain]"
+                      name="Remain"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].ExternalColumns[Plant]"
+                      dataType="wstr"
+                      length="50"
+                      name="Plant" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].ExternalColumns[Material]"
+                      dataType="i4"
+                      name="Material" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].ExternalColumns[Unit]"
+                      dataType="wstr"
+                      length="50"
+                      name="Unit" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].ExternalColumns[StoreLocation]"
+                      dataType="wstr"
+                      length="50"
+                      name="StoreLocation" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].ExternalColumns[StoreLocationDescription]"
+                      dataType="wstr"
+                      length="50"
+                      name="StoreLocationDescription" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].ExternalColumns[PlanDate]"
+                      dataType="dbTimeStamp"
+                      name="PlanDate" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].ExternalColumns[ExpireDate]"
+                      dataType="dbTimeStamp"
+                      name="ExpireDate" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].ExternalColumns[Unres]"
+                      dataType="i4"
+                      name="Unres" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].ExternalColumns[Book]"
+                      dataType="i4"
+                      name="Book" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].ExternalColumns[SO]"
+                      dataType="wstr"
+                      length="50"
+                      name="SO" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].ExternalColumns[DO]"
+                      dataType="wstr"
+                      length="50"
+                      name="DO" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].ExternalColumns[Remain]"
+                      dataType="i4"
+                      name="Remain" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output]"
+                  isErrorOut="true"
+                  name="ADO NET Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output].Columns[Plant]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output].Columns[Plant]"
+                      name="Plant" />
+                    <outputColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output].Columns[Material]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output].Columns[Material]"
+                      name="Material" />
+                    <outputColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output].Columns[Unit]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output].Columns[Unit]"
+                      name="Unit" />
+                    <outputColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output].Columns[StoreLocation]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output].Columns[StoreLocation]"
+                      name="StoreLocation" />
+                    <outputColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output].Columns[StoreLocationDescription]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output].Columns[StoreLocationDescription]"
+                      name="StoreLocationDescription" />
+                    <outputColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output].Columns[PlanDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output].Columns[PlanDate]"
+                      name="PlanDate" />
+                    <outputColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output].Columns[ExpireDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output].Columns[ExpireDate]"
+                      name="ExpireDate" />
+                    <outputColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output].Columns[Unres]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output].Columns[Unres]"
+                      name="Unres" />
+                    <outputColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output].Columns[Book]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output].Columns[Book]"
+                      name="Book" />
+                    <outputColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output].Columns[SO]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output].Columns[SO]"
+                      name="SO" />
+                    <outputColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output].Columns[DO]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output].Columns[DO]"
+                      name="DO" />
+                    <outputColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output].Columns[Remain]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output].Columns[Remain]"
+                      name="Remain" />
+                    <outputColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Plan Table\Sort STG"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort STG"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Plan Table\Sort STG.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Plan Table\Sort STG.Inputs[Sort Input].Columns[Plant]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Plant"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Plant]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Plan Table\Sort STG.Inputs[Sort Input].Columns[StoreLocation]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="StoreLocation"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[StoreLocation]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">3</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Plan Table\Sort STG.Inputs[Sort Input].Columns[StoreLocationDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="StoreLocationDescription"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[StoreLocationDescription]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">6</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Plan Table\Sort STG.Inputs[Sort Input].Columns[Material]"
+                      cachedDataType="i4"
+                      cachedName="Material"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Material]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Plan Table\Sort STG.Inputs[Sort Input].Columns[Unit]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Unit"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Unit]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">5</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Plan Table\Sort STG.Inputs[Sort Input].Columns[Lot]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Lot"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Lot]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Plan Table\Sort STG.Inputs[Sort Input].Columns[ExpireDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ExpireDate"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[ExpireDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">7</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Plan Table\Sort STG.Inputs[Sort Input].Columns[PlanDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="PlanDate"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[PlanDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">4</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Plan Table\Sort STG.Inputs[Sort Input].Columns[Unres]"
+                      cachedDataType="i4"
+                      cachedName="Unres"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Unres]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">8</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Plan Table\Sort STG.Inputs[Sort Input].Columns[Qi]"
+                      cachedDataType="i4"
+                      cachedName="Qi"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Qi]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Plan Table\Sort STG.Inputs[Sort Input].Columns[Remain]"
+                      cachedDataType="i4"
+                      cachedName="Remain"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Remain]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">11</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Plan Table\Sort STG.Inputs[Sort Input].Columns[SO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SO"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[SO]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">9</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Plan Table\Sort STG.Inputs[Sort Input].Columns[DO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DO"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[DO]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">10</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Plan Table\Sort STG.Inputs[Sort Input].Columns[TransactionType]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="TransactionType"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[TransactionType]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Plan Table\Sort STG.Inputs[Sort Input].Columns[SyncDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="SyncDate"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[SyncDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Plan Table\Sort STG.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[Plant]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[Plant]"
+                      name="Plant"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Plant]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[StoreLocation]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[StoreLocation]"
+                      name="StoreLocation"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[StoreLocation]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[StoreLocationDescription]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[StoreLocationDescription]"
+                      name="StoreLocationDescription"
+                      sortKeyPosition="6">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[StoreLocationDescription]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[Material]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[Material]"
+                      name="Material"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Material]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[Unit]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[Unit]"
+                      name="Unit"
+                      sortKeyPosition="5">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Unit]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[Lot]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[Lot]"
+                      name="Lot">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Lot]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[ExpireDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[ExpireDate]"
+                      name="ExpireDate"
+                      sortKeyPosition="7">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[ExpireDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[PlanDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[PlanDate]"
+                      name="PlanDate"
+                      sortKeyPosition="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[PlanDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[Unres]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[Unres]"
+                      name="Unres"
+                      sortKeyPosition="8">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Unres]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[Qi]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[Qi]"
+                      name="Qi">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Qi]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[Remain]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[Remain]"
+                      name="Remain"
+                      sortKeyPosition="11">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Remain]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[SO]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[SO]"
+                      name="SO"
+                      sortKeyPosition="9">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[SO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[DO]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[DO]"
+                      name="DO"
+                      sortKeyPosition="10">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[DO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[TransactionType]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[TransactionType]"
+                      name="TransactionType">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[TransactionType]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[SyncDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[SyncDate]"
+                      name="SyncDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[SyncDate]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Plan Table\Sort Table"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort Table"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Plan Table\Sort Table.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Plan Table\Sort Table.Inputs[Sort Input].Columns[Plant]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Plant"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[Plant]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Plan Table\Sort Table.Inputs[Sort Input].Columns[Material]"
+                      cachedDataType="i4"
+                      cachedName="Material"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[Material]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Plan Table\Sort Table.Inputs[Sort Input].Columns[Unit]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Unit"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[Unit]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">5</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Plan Table\Sort Table.Inputs[Sort Input].Columns[StoreLocation]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="StoreLocation"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[StoreLocation]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">3</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Plan Table\Sort Table.Inputs[Sort Input].Columns[StoreLocationDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="StoreLocationDescription"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[StoreLocationDescription]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">6</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Plan Table\Sort Table.Inputs[Sort Input].Columns[PlanDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="PlanDate"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[PlanDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">4</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Plan Table\Sort Table.Inputs[Sort Input].Columns[ExpireDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ExpireDate"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[ExpireDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">7</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Plan Table\Sort Table.Inputs[Sort Input].Columns[Unres]"
+                      cachedDataType="i4"
+                      cachedName="Unres"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[Unres]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">8</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Plan Table\Sort Table.Inputs[Sort Input].Columns[Book]"
+                      cachedDataType="i4"
+                      cachedName="Book"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[Book]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Plan Table\Sort Table.Inputs[Sort Input].Columns[SO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SO"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[SO]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">9</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Plan Table\Sort Table.Inputs[Sort Input].Columns[DO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DO"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[DO]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">10</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Plan Table\Sort Table.Inputs[Sort Input].Columns[Remain]"
+                      cachedDataType="i4"
+                      cachedName="Remain"
+                      lineageId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[Remain]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">11</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Plan Table\Sort Table.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Plant]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Plant]"
+                      name="Plant"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[Plant]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Material]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Material]"
+                      name="Material"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[Material]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Unit]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Unit]"
+                      name="Unit"
+                      sortKeyPosition="5">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[Unit]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[StoreLocation]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[StoreLocation]"
+                      name="StoreLocation"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[StoreLocation]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[StoreLocationDescription]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[StoreLocationDescription]"
+                      name="StoreLocationDescription"
+                      sortKeyPosition="6">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[StoreLocationDescription]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[PlanDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[PlanDate]"
+                      name="PlanDate"
+                      sortKeyPosition="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[PlanDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[ExpireDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[ExpireDate]"
+                      name="ExpireDate"
+                      sortKeyPosition="7">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[ExpireDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Unres]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Unres]"
+                      name="Unres"
+                      sortKeyPosition="8">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[Unres]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Book]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Book]"
+                      name="Book">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[Book]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[SO]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[SO]"
+                      name="SO"
+                      sortKeyPosition="9">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[SO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[DO]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[DO]"
+                      name="DO"
+                      sortKeyPosition="10">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[DO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Remain]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Remain]"
+                      name="Remain"
+                      sortKeyPosition="11">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\PlanTable.Outputs[ADO NET Source Output].Columns[Remain]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Plan Table\Split Records"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Split Records"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[Plant]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Plant"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Plant]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[Material]"
+                      cachedDataType="i4"
+                      cachedName="Material"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Material]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[StoreLocation]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="StoreLocation"
+                      cachedSortKeyPosition="3"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocation]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[PlanDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="PlanDate"
+                      cachedSortKeyPosition="4"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[PlanDate]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[Plant (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Plant (1)"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Plant (1)]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[Material (1)]"
+                      cachedDataType="i4"
+                      cachedName="Material (1)"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Material (1)]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[StoreLocation (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="StoreLocation (1)"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocation (1)]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[PlanDate (1)]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="PlanDate (1)"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[PlanDate (1)]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[Unit]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Unit"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unit]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[StoreLocationDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="StoreLocationDescription"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[ExpireDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ExpireDate"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[ExpireDate]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[Unres]"
+                      cachedDataType="i4"
+                      cachedName="Unres"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unres]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[SO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SO"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[SO]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[DO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DO"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[DO]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[Remain]"
+                      cachedDataType="i4"
+                      cachedName="Remain"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Remain]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[Unit (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Unit (1)"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unit (1)]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[StoreLocationDescription (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="StoreLocationDescription (1)"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription (1)]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[ExpireDate (1)]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ExpireDate (1)"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[ExpireDate (1)]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[Unres (1)]"
+                      cachedDataType="i4"
+                      cachedName="Unres (1)"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unres (1)]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[SO (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SO (1)"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[SO (1)]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[DO (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DO (1)"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[DO (1)]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[Remain (1)]"
+                      cachedDataType="i4"
+                      cachedName="Remain (1)"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Remain (1)]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Plan Table\Split Records.Outputs[Insert(Plant-Material-StoreLocation-PlanDate not Match)]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Insert(Plant-Material-StoreLocation-PlanDate not Match)"
+                  synchronousInputId="Package\Plan Table\Split Records.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Plant (1)]}) &amp;&amp; ![ISNULL](#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Plant]}) &amp;&amp; [ISNULL](#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Material (1)]}) &amp;&amp; ![ISNULL](#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Material]}) &amp;&amp; [ISNULL](#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocation (1)]}) &amp;&amp; ![ISNULL](#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocation]}) &amp;&amp; [ISNULL](#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[PlanDate (1)]}) &amp;&amp; ![ISNULL](#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[PlanDate]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL([Plant (1)]) &amp;&amp; !ISNULL(Plant) &amp;&amp; ISNULL([Material (1)]) &amp;&amp; !ISNULL(Material) &amp;&amp; ISNULL([StoreLocation (1)]) &amp;&amp; !ISNULL(StoreLocation) &amp;&amp; ISNULL([PlanDate (1)]) &amp;&amp; !ISNULL(PlanDate)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Plan Table\Split Records.Outputs[Update(Plant-Material-StoreLocation-PlanDate Match)]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Update(Plant-Material-StoreLocation-PlanDate Match)"
+                  synchronousInputId="Package\Plan Table\Split Records.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">(#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unit]} != #{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unit (1)]}) || (#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription]} != #{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription (1)]}) || (#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[ExpireDate]} != #{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[ExpireDate (1)]}) || (#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unres]} != #{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unres (1)]}) || (#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[SO]} != #{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[SO (1)]}) || (#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[DO]} != #{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[DO (1)]}) || (#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Remain]} != #{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Remain (1)]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">(Unit != [Unit (1)]) || (StoreLocationDescription != [StoreLocationDescription (1)]) || (ExpireDate != [ExpireDate (1)]) || (Unres != [Unres (1)]) || (SO != [SO (1)]) || (DO != [DO (1)]) || (Remain != [Remain (1)])</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Plan Table\Split Records.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Plan Table\Split Records.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Plan Table\Split Records.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Plan Table\Split Records.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Plan Table\Split Records.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\Split Records.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Plan Table\Split Records.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\Split Records.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Plan Table\STG_Stock"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+              name="STG_Stock"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement used by the component to extract data."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT *
+  FROM STG_Stock
+WHERE SyncDate = ( 
+    SELECT MAX(SyncDate) 
+    FROM STG_Stock
+) AND TransactionType = 'PLAN DATE';</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="The Source database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the mode to retrieve external column information"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Plan Table\STG_Stock.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output]"
+                  name="ADO NET Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Plant]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[Plant]"
+                      length="50"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Plant]"
+                      name="Plant"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[StoreLocation]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[StoreLocation]"
+                      length="50"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[StoreLocation]"
+                      name="StoreLocation"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[StoreLocationDescription]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[StoreLocationDescription]"
+                      length="50"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[StoreLocationDescription]"
+                      name="StoreLocationDescription"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Material]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[Material]"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Material]"
+                      name="Material"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Unit]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[Unit]"
+                      length="50"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Unit]"
+                      name="Unit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Lot]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[Lot]"
+                      length="50"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Lot]"
+                      name="Lot"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[ExpireDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[ExpireDate]"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[ExpireDate]"
+                      name="ExpireDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[PlanDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[PlanDate]"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[PlanDate]"
+                      name="PlanDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Unres]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[Unres]"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Unres]"
+                      name="Unres"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Qi]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[Qi]"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Qi]"
+                      name="Qi"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Remain]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[Remain]"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Remain]"
+                      name="Remain"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[SO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[SO]"
+                      length="50"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[SO]"
+                      name="SO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[DO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[DO]"
+                      length="50"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[DO]"
+                      name="DO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[TransactionType]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[TransactionType]"
+                      length="50"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[TransactionType]"
+                      name="TransactionType"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[SyncDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[SyncDate]"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[SyncDate]"
+                      name="SyncDate"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[Plant]"
+                      dataType="wstr"
+                      length="50"
+                      name="Plant" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[StoreLocation]"
+                      dataType="wstr"
+                      length="50"
+                      name="StoreLocation" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[StoreLocationDescription]"
+                      dataType="wstr"
+                      length="50"
+                      name="StoreLocationDescription" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[Material]"
+                      dataType="i4"
+                      name="Material" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[Unit]"
+                      dataType="wstr"
+                      length="50"
+                      name="Unit" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[Lot]"
+                      dataType="wstr"
+                      length="50"
+                      name="Lot" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[ExpireDate]"
+                      dataType="dbTimeStamp"
+                      name="ExpireDate" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[PlanDate]"
+                      dataType="dbTimeStamp"
+                      name="PlanDate" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[Unres]"
+                      dataType="i4"
+                      name="Unres" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[Qi]"
+                      dataType="i4"
+                      name="Qi" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[Remain]"
+                      dataType="i4"
+                      name="Remain" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[SO]"
+                      dataType="wstr"
+                      length="50"
+                      name="SO" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[DO]"
+                      dataType="wstr"
+                      length="50"
+                      name="DO" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[TransactionType]"
+                      dataType="wstr"
+                      length="50"
+                      name="TransactionType" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[SyncDate]"
+                      dataType="dbTimeStamp"
+                      name="SyncDate" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output]"
+                  isErrorOut="true"
+                  name="ADO NET Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[Plant]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[Plant]"
+                      name="Plant" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[StoreLocation]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[StoreLocation]"
+                      name="StoreLocation" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[StoreLocationDescription]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[StoreLocationDescription]"
+                      name="StoreLocationDescription" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[Material]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[Material]"
+                      name="Material" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[Unit]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[Unit]"
+                      name="Unit" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[Lot]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[Lot]"
+                      name="Lot" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[ExpireDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[ExpireDate]"
+                      name="ExpireDate" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[PlanDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[PlanDate]"
+                      name="PlanDate" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[Unres]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[Unres]"
+                      name="Unres" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[Qi]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[Qi]"
+                      name="Qi" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[Remain]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[Remain]"
+                      name="Remain" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[SO]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[SO]"
+                      name="SO" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[DO]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[DO]"
+                      name="DO" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[TransactionType]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[TransactionType]"
+                      name="TransactionType" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[SyncDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[SyncDate]"
+                      name="SyncDate" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Plan Table\Update Records (Plan Table)"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="Update Records (Plan Table)"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [IBOrderTracking].[dbo].[PlanTable]
+ SET [Unit] = ?
+ ,[StoreLocationDescription] = ?
+ ,[ExpireDate] = ?
+ ,[Unres] = ?
+ ,[SO] = ?
+ ,[DO] = ?
+ ,[Remain] = ?
+ WHERE [Plant]=? AND [Material]=?
+ AND [StoreLocation]=? AND [PlanDate]=?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">874</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Plan Table\Update Records (Plan Table).Connections[OleDbConnection]"
+                  connectionManagerID="{C30C18BD-A555-4DAE-8894-93BE324590CF}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].Columns[PlanDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="PlanDate"
+                      cachedSortKeyPosition="4"
+                      externalMetadataColumnId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[PlanDate]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].Columns[StoreLocation]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="StoreLocation"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocation]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].Columns[Material]"
+                      cachedDataType="i4"
+                      cachedName="Material"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Material]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].Columns[Plant]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Plant"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Plant]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].Columns[Unit]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Unit"
+                      externalMetadataColumnId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unit]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].Columns[StoreLocationDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="StoreLocationDescription"
+                      externalMetadataColumnId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].Columns[ExpireDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ExpireDate"
+                      externalMetadataColumnId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[ExpireDate]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].Columns[Unres]"
+                      cachedDataType="i4"
+                      cachedName="Unres"
+                      externalMetadataColumnId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unres]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].Columns[SO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SO"
+                      externalMetadataColumnId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[SO]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].Columns[DO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DO"
+                      externalMetadataColumnId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[DO]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].Columns[Remain]"
+                      cachedDataType="i4"
+                      cachedName="Remain"
+                      externalMetadataColumnId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Remain]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="dbTimeStamp"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      dataType="i4"
+                      name="Param_3">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_5">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      dataType="i4"
+                      name="Param_6">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_7">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      dataType="i4"
+                      name="Param_8">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_9">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
+                      dataType="dbTimeStamp"
+                      name="Param_10">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Plan Table\Update Records (Plan Table).Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Plan Table\Update Records (Plan Table).Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\Update Records (Plan Table).Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\Update Records (Plan Table).Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Plan Table.Paths[ADO NET Source Output]"
+              endId="Package\Plan Table\Sort Table.Inputs[Sort Input]"
+              name="ADO NET Source Output"
+              startId="Package\Plan Table\PlanTable.Outputs[ADO NET Source Output]" />
+            <path
+              refId="Package\Plan Table.Paths[ADO NET Source Output1]"
+              endId="Package\Plan Table\Sort STG.Inputs[Sort Input]"
+              name="ADO NET Source Output"
+              startId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output]" />
+            <path
+              refId="Package\Plan Table.Paths[Insert(Plant-Material-StoreLocation-PlanDate not Match)]"
+              endId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input]"
+              name="Insert(Plant-Material-StoreLocation-PlanDate not Match)"
+              startId="Package\Plan Table\Split Records.Outputs[Insert(Plant-Material-StoreLocation-PlanDate not Match)]" />
+            <path
+              refId="Package\Plan Table.Paths[Merge Join Output]"
+              endId="Package\Plan Table\Split Records.Inputs[Conditional Split Input]"
+              name="Merge Join Output"
+              startId="Package\Plan Table\Merge Join.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Plan Table.Paths[Sort Output]"
+              endId="Package\Plan Table\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Plan Table\Sort STG.Outputs[Sort Output]" />
+            <path
+              refId="Package\Plan Table.Paths[Sort Output1]"
+              endId="Package\Plan Table\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Plan Table\Sort Table.Outputs[Sort Output]" />
+            <path
+              refId="Package\Plan Table.Paths[Update(Plant-Material-StoreLocation-PlanDate Match)]"
+              endId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input]"
+              name="Update(Plant-Material-StoreLocation-PlanDate Match)"
+              startId="Package\Plan Table\Split Records.Outputs[Update(Plant-Material-StoreLocation-PlanDate Match)]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Plan Table"
+          TopLeft="369,104" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Plan Table">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="132,42"
+          Id="Package\Plan Table\STG_Stock"
+          TopLeft="97,16" />
+        <NodeLayout
+          Size="127,42"
+          Id="Package\Plan Table\PlanTable"
+          TopLeft="679,21" />
+        <NodeLayout
+          Size="132,42"
+          Id="Package\Plan Table\Merge Join"
+          TopLeft="374,167" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\Plan Table\Sort STG"
+          TopLeft="218,94" />
+        <NodeLayout
+          Size="129,42"
+          Id="Package\Plan Table\Sort Table"
+          TopLeft="548,96" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Plan Table\Split Records"
+          TopLeft="496,253" />
+        <NodeLayout
+          Size="210,42"
+          Id="Package\Plan Table\Insert Records (Plan Table)"
+          TopLeft="66,360" />
+        <NodeLayout
+          Size="216,42"
+          Id="Package\Plan Table\Update Records (Plan Table)"
+          TopLeft="729.333333333333,355.777777777778" />
+        <EdgeLayout
+          Id="Package\Plan Table.Paths[ADO NET Source Output]"
+          TopLeft="742.5,63">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-130,33"
+              Start="0,0"
+              End="-130,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.5"
+                    Point2="0,16.5"
+                    Point3="-4,16.5" />
+                  <mssgle:LineSegment
+                    End="-126,16.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-126,16.5"
+                    Point2="-130,16.5"
+                    Point3="-130,20.5" />
+                  <mssgle:LineSegment
+                    End="-130,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Plan Table.Paths[ADO NET Source Output1]"
+          TopLeft="163,58">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="116.5,36"
+              Start="0,0"
+              End="116.5,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14"
+                    Point2="0,18"
+                    Point3="4,18" />
+                  <mssgle:LineSegment
+                    End="112.5,18" />
+                  <mssgle:CubicBezierSegment
+                    Point1="112.5,18"
+                    Point2="116.5,18"
+                    Point3="116.5,22" />
+                  <mssgle:LineSegment
+                    End="116.5,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Plan Table.Paths[Sort Output]"
+          TopLeft="279.5,136">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="139.833333333333,31"
+              Start="0,0"
+              End="139.833333333333,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.377245508982" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.377245508982"
+                    Point2="0,18.377245508982"
+                    Point3="4,18.377245508982" />
+                  <mssgle:LineSegment
+                    End="135.833333333333,18.377245508982" />
+                  <mssgle:CubicBezierSegment
+                    Point1="135.833333333333,18.377245508982"
+                    Point2="139.833333333333,18.377245508982"
+                    Point3="139.833333333333,22.377245508982" />
+                  <mssgle:LineSegment
+                    End="139.833333333333,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Plan Table.Paths[Sort Output1]"
+          TopLeft="612.5,138">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-151.833333333333,29"
+              Start="0,0"
+              End="-151.833333333333,21.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.1916167664671" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.1916167664671"
+                    Point2="0,17.1916167664671"
+                    Point3="-4,17.1916167664671" />
+                  <mssgle:LineSegment
+                    End="-147.833333333333,17.1916167664671" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-147.833333333333,17.1916167664671"
+                    Point2="-151.833333333333,17.1916167664671"
+                    Point3="-151.833333333333,21.1916167664671" />
+                  <mssgle:LineSegment
+                    End="-151.833333333333,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Plan Table.Paths[Merge Join Output]"
+          TopLeft="440,209">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="127,44"
+              Start="0,0"
+              End="127,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18"
+                    Point2="0,22"
+                    Point3="4,22" />
+                  <mssgle:LineSegment
+                    End="123,22" />
+                  <mssgle:CubicBezierSegment
+                    Point1="123,22"
+                    Point2="127,22"
+                    Point3="127,26" />
+                  <mssgle:LineSegment
+                    End="127,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Plan Table.Paths[Insert(Plant-Material-StoreLocation-PlanDate not Match)]"
+          TopLeft="567,295">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-396,65"
+              Start="0,0"
+              End="-396,57.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.5"
+                    Point2="0,32.5"
+                    Point3="-4,32.5" />
+                  <mssgle:LineSegment
+                    End="-392,32.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-392,32.5"
+                    Point2="-396,32.5"
+                    Point3="-396,36.5" />
+                  <mssgle:LineSegment
+                    End="-396,57.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-322.495006510417,37.5,248.990013020833,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Plan Table.Paths[Update(Plant-Material-StoreLocation-PlanDate Match)]"
+          TopLeft="589.333333333333,295">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="248,60.7777777777778"
+              Start="0,0"
+              End="248,53.2777777777778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.7174249458372" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.7174249458372"
+                    Point2="0,24.7174249458372"
+                    Point3="4,24.7174249458372" />
+                  <mssgle:LineSegment
+                    End="244,24.7174249458372" />
+                  <mssgle:CubicBezierSegment
+                    Point1="244,24.7174249458372"
+                    Point2="248,24.7174249458372"
+                    Point3="248,28.7174249458372" />
+                  <mssgle:LineSegment
+                    End="248,53.2777777777778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="5.59931640624987,29.7174249458372,236.8013671875,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Plan Table\STG_Stock">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Plan Table\PlanTable">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Plan Table\Insert Records (Plan Table)">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
