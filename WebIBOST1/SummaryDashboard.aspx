@@ -3,8 +3,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
     <div>
-        <%--<script>
+        <%--  <script>
             window.onload = function () {
 
                 var chart = new CanvasJS.Chart("chartContainer", {
@@ -51,95 +55,117 @@
 
         </div>--%>
 
+        <div class="container">
+            <div class="panel-group">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h2>IB ORDER & SHIPMENT TRACKING</h2>
+                    </div>
+                    <div class="panel-body">
+                        <div id="chartContainer" style="height: 300px; width: 100%;">
+                        </div>
 
-        <script type="text/javascript">
-            window.onload = function () {
-                var chart = new CanvasJS.Chart("chartContainer",
-                    {
-                        title: {
-                            text: "IB ORDER & SHIPMENT TRACKING",
-                            fontFamily: "Impact",
-                            fontWeight: "normal"
-                        },
+                    </div>
+                </div>
 
-                        legend: {
-                            verticalAlign: "bottom",
-                            horizontalAlign: "center"
-                        },
-                        data: [
+                <script type="text/javascript">
+                    window.onload = function () {
+                        var chart = new CanvasJS.Chart("chartContainer",
                             {
-                                //startAngle: 45,
-                                indexLabelFontSize: 20,
-                                indexLabelFontFamily: "Garamond",
-                                indexLabelFontColor: "darkgrey",
-                                indexLabelLineColor: "darkgrey",
-                                indexLabelPlacement: "outside",
-                                type: "doughnut",
-                                showInLegend: true,
-                                dataPoints: [
-                                    { y: 25, legendText: "SALES", indexLabel: "SALES100%", color: "red" },
-                                    { y: 25, legendText: "SALES CO ", indexLabel: "SALES CO 100%", color: "red" },
-                                    { y: 25, legendText: "PC", indexLabel: "PC 100%", color: "yellow" },
-                                    { y: 25, legendText: "STICKER", indexLabel: "STICKER 100%", color: "yellow" },
-                                    { y: 25, legendText: "DOCMENT", indexLabel: "DOCMENT 100%", color: "#66FF33" }
+                                title: {
+                                    text: "Doughnut chart working",
+                                    fontFamily: "Impact",
+                                    fontWeight: "normal"
+                                },
+
+                                legend: {
+                                    verticalAlign: "bottom",
+                                    horizontalAlign: "center"
+                                },
+                                data: [
+                                    {
+                                        //startAngle: 45,
+                                        indexLabelFontSize: 20,
+                                        indexLabelFontFamily: "Garamond",
+                                        indexLabelFontColor: "darkgrey",
+                                        indexLabelLineColor: "darkgrey",
+                                        indexLabelPlacement: "outside",
+                                        type: "doughnut",
+                                        showInLegend: true,
+                                        dataPoints: [
+                                            { y: 25, legendText: "SALES", indexLabel: "SALES100%", color: "red" },
+                                            { y: 25, legendText: "SALES CO ", indexLabel: "SALES CO 100%", color: "red" },
+                                            { y: 25, legendText: "PC", indexLabel: "PC 100%", color: "yellow" },
+                                            { y: 25, legendText: "STICKER", indexLabel: "STICKER 100%", color: "yellow" },
+                                            { y: 25, legendText: "DOCMENT", indexLabel: "DOCMENT 100%", color: "#66FF33" }
+                                        ]
+                                    }
                                 ]
-                            }
-                        ]
-                    });
+                            });
 
-                chart.render();
-            }
-        </script>
-        <script src="source/canvasjs.js"></script>       
-        <div id="chartContainer" style="height: 300px; width: 100%;">
-        </div>
-
-    </div>
-   
-
-
-    <div>
-        <h1>SO Header Data</h1>
-        <asp:GridView ID="grdworking" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
-            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-            <EditRowStyle BackColor="#999999" />
-            <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-            <SortedAscendingCellStyle BackColor="#E9E7E2" />
-            <SortedAscendingHeaderStyle BackColor="#506C8C" />
-            <SortedDescendingCellStyle BackColor="#FFFDF8" />
-            <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
-        </asp:GridView>
-    </div>
+                        chart.render();
+                    }
+                </script>
+                <script src="source/canvasjs.js"></script>
+            </div>
 
 
 
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        OPEN CHANGE
-    </button>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h1>SO Header Data</h1>
                 </div>
-                <div class="modal-body">
-                        ...                  
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                <div class="panel-body">
+
+                    <asp:GridView ID="grdworking" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+                        <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                        <Columns>
+                            <asp:TemplateField></asp:TemplateField>
+                        </Columns>
+                        <EditRowStyle BackColor="#999999" />
+                        <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                        <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                        <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                        <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                        <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                        <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                        <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                        <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+                    </asp:GridView>
                 </div>
             </div>
+
+
+
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                OPEN CHANGE
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            ...                  
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 

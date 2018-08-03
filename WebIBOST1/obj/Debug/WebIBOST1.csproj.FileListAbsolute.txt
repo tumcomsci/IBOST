@@ -60,3 +60,11 @@ C:\Users\Trainee\Desktop\GitHub\IBOST\WebIBOST1\bin\EntityFramework.dll
 C:\Users\Trainee\Desktop\GitHub\IBOST\WebIBOST1\bin\EntityFramework.SqlServer.dll
 C:\Users\Trainee\Desktop\GitHub\IBOST\WebIBOST1\bin\EntityFramework.xml
 C:\Users\Trainee\Desktop\GitHub\IBOST\WebIBOST1\bin\EntityFramework.SqlServer.xml
+C:\Users\Trainee\Desktop\GitHub\IBOST\WebIBOST1\bin\Newtonsoft.Json.dll
+C:\Users\Trainee\Desktop\GitHub\IBOST\WebIBOST1\bin\System.Net.Http.Formatting.dll
+C:\Users\Trainee\Desktop\GitHub\IBOST\WebIBOST1\bin\System.Web.Http.dll
+C:\Users\Trainee\Desktop\GitHub\IBOST\WebIBOST1\bin\System.Web.Http.WebHost.dll
+C:\Users\Trainee\Desktop\GitHub\IBOST\WebIBOST1\bin\Newtonsoft.Json.xml
+C:\Users\Trainee\Desktop\GitHub\IBOST\WebIBOST1\bin\System.Net.Http.Formatting.xml
+C:\Users\Trainee\Desktop\GitHub\IBOST\WebIBOST1\bin\System.Web.Http.xml
+C:\Users\Trainee\Desktop\GitHub\IBOST\WebIBOST1\bin\System.Web.Http.WebHost.xml
