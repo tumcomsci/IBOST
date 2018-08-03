@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="Customer"
   DTS:PackageType="5"
-  DTS:VersionBuild="80"
-  DTS:VersionGUID="{85F6AEC8-50CF-4098-94E9-9098E2B98A5F}">
+  DTS:VersionBuild="83"
+  DTS:VersionGUID="{021BA652-0984-43B3-8428-CE284BEE564D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAGidV9Cg4mJLw9gObWVuzyZEJSbVWJw8fMK5WXyfy39QAAAAAOgAAAAAIAACAAAAD3MeqyovbUt8L4+scxVbLKMmS9WjAAowxY+zsLKh7JRyAAAABGiOhGEeANiaSY7rJQPzz6D1TySQXf054MqnTdH6gRcEAAAACDY5xKHl0/9zi8tZnu51Fqf6DpDliu5cFItUnDIp0WMgVSbovejPioc4RBxO9fqUbP7tNiLx73jM4v6IchIE5e</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAASZYm0bGWH/+cvUH7+ZuBvNKHnarBHTX3TLwpryBOrPgAAAAAOgAAAAAIAACAAAACmUeV+JkpiM5vzy7OvgqbiUJoVQzmiZLj+TdBYtd0diiAAAABYhPh/kYe9M8SlAsiShWU82wpjPW/xb5ctSRW/8dSEBUAAAADlGAJvZ8au/fHBeZ+iG4JSMv/gYXOoKWNWNnlkFI4sJJR8tcNhyW4wjx7+F4M/y7oahXV1fo6NdHRYUylKu1KZ</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACAnYK9QWffP4T2WGm/OU+VHO+z1mSV66O3URqcBJgvXQAAAAAOgAAAAAIAACAAAAAvewfbCm8MZvkIL3yQOy7UTWQKo0mJiLpM01jXixrzxCAAAAB4BfJdHldjLxztb6hSUx1exPiZ1qwn1ockP3jYClxnwUAAAACbLBjGqXRhTBGXY33iYO8e/sa3N1pY+gi9Exo/TNKvX5Y9HEhg470JX/R1qswygWvPeGGLWS5iCftvhvFWUlt0</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACkRIfGFVX+ZXFRqOiw9o/EKRQe0PK2V71pblD0UTawTQAAAAAOgAAAAAIAACAAAAB5eI4sRwC9466vrab3KUYKK8a/ztkRH01uNzWjsK9A9yAAAAApbT2GV7EaPkF0kP43KFImF83WzsbOW/GbKPUKcyR3BEAAAACLDLHZvb1wFPSpMGH+CNm2/eRx6dwHK/ZHOycrRxV+Fe9W56gChAaUFr4bZ/szrUe8FQoNQiyriblerEhghYQX</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -57,7 +57,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACvtWtpNA9E8T+zY+MxL9Rv7JbTPEfuwpZ91uIdnhioygAAAAAOgAAAAAIAACAAAADV/IaO3k6Y47fbmGnZi4v+U+jCJsXIPz1r+ziOfZJbkCAAAACOAxutmNzQEoYgEXykbDnD2u+LV3vScUsRQyRALpTl30AAAADODxYfiVm0RhMl6/KepbLcTuX6pbSP6LVi5V7eBAldr0gtHHEGpXc/IeHY9XBOHBJvBiV3IklYmv5m+PQJ2Fr/</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADTXKiPSG4Bkk+w3ruKnrgY7xFmpJAjVyAm96iUzrGTTQAAAAAOgAAAAAIAACAAAACgMtA4f+NSwWkTl/YI2i8i9WFRcon02ZvTfXrgUyIosiAAAABoDovIbZTSXUSsYWiH45N1eHaqYWNTG4KbGbNP2yfL40AAAAARSU7jdfDvjuhddlhoYDySXXJl+MYfJE8xmq4o+QgljNOIpF0VpVpDOaKuGnYuZbiFz0jpre6Z6d4t8d5qOC4S</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -72,7 +72,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADMorBN8fG6F6v75ZDaUFCtqmlUXnTvw9s4x/gOj3X4HgAAAAAOgAAAAAIAACAAAAC80GPX3XE/z/18lqkFC4cyY35KMSjwvuM4/91nI5lvCyAAAADzgz4S6P8q7cnu88TOJ6XOjDjNU6yxVPDg3oQX/9b7AUAAAADxR64PI6hxdP/zvjPuwSeK1HRGOd9MxwSfI7WHt4Yxj0PqSWz4pyJX/EL/YAIJ6qiJB3PyXnbjkBMB9k1DXkRm</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABE8ZgDI3u7+HBPINf4aAgYFAXDNyRcQkoANI8Uj6NX6AAAAAAOgAAAAAIAACAAAAC29h65OAWmBokDuz02cbbpkVfRsUai8TdphHhCZioNBCAAAAADc0rFDJYHNyEfSl7NcuOXTNMnGKMHRMhDexwLwucGnUAAAADrGTOP6/7OxLrWNpcCnw3/hvs/S+3IGa0CuuL7gmZCrr79z3Et+DZmuqLMfcDDJYGbTziq50mGw8s8QOM8YEI8</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -87,7 +87,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACHDEIpNuatYE5rKvnTM8/EkOL7+FKRW+DOkKUkz0aD0gAAAAAOgAAAAAIAACAAAADGKByiUz5UIsL1KNWfB8mdxyA4URv4H2qQ15NNJBw2UiAAAAAsb4vKXBXUs6T9jabI0mUoYVspGUg+3qRFSXCfEdPmekAAAACXSoZv7V08FjZ8Ve344Twk1WJhsBnpSKfVs6f3tiD2S+XKxCt2OXDARYQWfH6othNANGHmbLHw4giIdgFu/XCB</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAgPBkYCpOZd9yCF1qMHzJDm8fzc7Mo9N+18aCU83mbkAAAAAAOgAAAAAIAACAAAAAI9SM5JbejDhLHP3AhHyilc0X3DuY3QY9N9h4hoqb0hyAAAAD980fZ/+wh805ko87djrkhKVyVExwtPLb1FMrjHKhMBEAAAAAo115e5WX1MYOX44U2Dqly+chAX1/eEJEHKL8z17oDdINnoWy9SErzaarGofHIwi4rDVqdldgeLHNCKJNcID47</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -175,7 +175,7 @@
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Customer Table\Customer Table.Outputs[ADO NET Source Output].ExternalColumns[Customer]"
-                      length="50"
+                      length="100"
                       lineageId="Package\Customer Table\Customer Table.Outputs[ADO NET Source Output].Columns[Customer]"
                       name="Customer"
                       truncationRowDisposition="FailComponent" />
@@ -189,6 +189,16 @@
                       lineageId="Package\Customer Table\Customer Table.Outputs[ADO NET Source Output].Columns[SaleEmployeeID]"
                       name="SaleEmployeeID"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Customer Table\Customer Table.Outputs[ADO NET Source Output].Columns[SaleEmployeeName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Customer Table\Customer Table.Outputs[ADO NET Source Output].ExternalColumns[SaleEmployeeName]"
+                      length="50"
+                      lineageId="Package\Customer Table\Customer Table.Outputs[ADO NET Source Output].Columns[SaleEmployeeName]"
+                      name="SaleEmployeeName"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -200,13 +210,18 @@
                     <externalMetadataColumn
                       refId="Package\Customer Table\Customer Table.Outputs[ADO NET Source Output].ExternalColumns[Customer]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       name="Customer" />
                     <externalMetadataColumn
                       refId="Package\Customer Table\Customer Table.Outputs[ADO NET Source Output].ExternalColumns[SaleEmployeeID]"
                       dataType="wstr"
                       length="50"
                       name="SaleEmployeeID" />
+                    <externalMetadataColumn
+                      refId="Package\Customer Table\Customer Table.Outputs[ADO NET Source Output].ExternalColumns[SaleEmployeeName]"
+                      dataType="wstr"
+                      length="50"
+                      name="SaleEmployeeName" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -223,7 +238,7 @@
                     <outputColumn
                       refId="Package\Customer Table\Customer Table.Outputs[ADO NET Source Error Output].Columns[Customer]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       lineageId="Package\Customer Table\Customer Table.Outputs[ADO NET Source Error Output].Columns[Customer]"
                       name="Customer" />
                     <outputColumn
@@ -232,6 +247,12 @@
                       length="50"
                       lineageId="Package\Customer Table\Customer Table.Outputs[ADO NET Source Error Output].Columns[SaleEmployeeID]"
                       name="SaleEmployeeID" />
+                    <outputColumn
+                      refId="Package\Customer Table\Customer Table.Outputs[ADO NET Source Error Output].Columns[SaleEmployeeName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Customer Table\Customer Table.Outputs[ADO NET Source Error Output].Columns[SaleEmployeeName]"
+                      name="SaleEmployeeName" />
                     <outputColumn
                       refId="Package\Customer Table\Customer Table.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -250,11 +271,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Customer Table\Insert Records (Customer Table)"
+              refId="Package\Customer Table\Insert Rescords (Customer Table)"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
               description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
-              name="Insert Records (Customer Table)"
+              name="Insert Rescords (Customer Table)"
               usesDispositions="true"
               version="2">
               <properties>
@@ -285,7 +306,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Customer Table\Insert Records (Customer Table).Connections[IDbConnection]"
+                  refId="Package\Customer Table\Insert Rescords (Customer Table).Connections[IDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
                   connectionManagerRefId="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
                   description="Managed connection manager"
@@ -293,72 +314,84 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Customer Table\Insert Records (Customer Table).Inputs[ADO NET Destination Input]"
+                  refId="Package\Customer Table\Insert Rescords (Customer Table).Inputs[ADO NET Destination Input]"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="ADO NET Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Customer Table\Insert Records (Customer Table).Inputs[ADO NET Destination Input].Columns[CustomerCode]"
+                      refId="Package\Customer Table\Insert Rescords (Customer Table).Inputs[ADO NET Destination Input].Columns[CustomerCode]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="CustomerCode"
                       cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Customer Table\Insert Records (Customer Table).Inputs[ADO NET Destination Input].ExternalColumns[CustomerCode]"
+                      externalMetadataColumnId="Package\Customer Table\Insert Rescords (Customer Table).Inputs[ADO NET Destination Input].ExternalColumns[CustomerCode]"
                       lineageId="Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[CustomerCode]" />
                     <inputColumn
-                      refId="Package\Customer Table\Insert Records (Customer Table).Inputs[ADO NET Destination Input].Columns[Customer]"
+                      refId="Package\Customer Table\Insert Rescords (Customer Table).Inputs[ADO NET Destination Input].Columns[Customer]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="100"
                       cachedName="Customer"
-                      externalMetadataColumnId="Package\Customer Table\Insert Records (Customer Table).Inputs[ADO NET Destination Input].ExternalColumns[Customer]"
+                      externalMetadataColumnId="Package\Customer Table\Insert Rescords (Customer Table).Inputs[ADO NET Destination Input].ExternalColumns[Customer]"
                       lineageId="Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[Customer]" />
                     <inputColumn
-                      refId="Package\Customer Table\Insert Records (Customer Table).Inputs[ADO NET Destination Input].Columns[SaleEmployeeID]"
+                      refId="Package\Customer Table\Insert Rescords (Customer Table).Inputs[ADO NET Destination Input].Columns[SaleEmployeeID]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="SaleEmployeeID"
-                      externalMetadataColumnId="Package\Customer Table\Insert Records (Customer Table).Inputs[ADO NET Destination Input].ExternalColumns[SaleEmployeeID]"
+                      externalMetadataColumnId="Package\Customer Table\Insert Rescords (Customer Table).Inputs[ADO NET Destination Input].ExternalColumns[SaleEmployeeID]"
                       lineageId="Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeID]" />
+                    <inputColumn
+                      refId="Package\Customer Table\Insert Rescords (Customer Table).Inputs[ADO NET Destination Input].Columns[SaleEmployeeName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SaleEmployeeName"
+                      externalMetadataColumnId="Package\Customer Table\Insert Rescords (Customer Table).Inputs[ADO NET Destination Input].ExternalColumns[SaleEmployeeName]"
+                      lineageId="Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeName]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Customer Table\Insert Records (Customer Table).Inputs[ADO NET Destination Input].ExternalColumns[CustomerCode]"
+                      refId="Package\Customer Table\Insert Rescords (Customer Table).Inputs[ADO NET Destination Input].ExternalColumns[CustomerCode]"
                       dataType="wstr"
                       length="50"
                       name="CustomerCode" />
                     <externalMetadataColumn
-                      refId="Package\Customer Table\Insert Records (Customer Table).Inputs[ADO NET Destination Input].ExternalColumns[Customer]"
+                      refId="Package\Customer Table\Insert Rescords (Customer Table).Inputs[ADO NET Destination Input].ExternalColumns[Customer]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       name="Customer" />
                     <externalMetadataColumn
-                      refId="Package\Customer Table\Insert Records (Customer Table).Inputs[ADO NET Destination Input].ExternalColumns[SaleEmployeeID]"
+                      refId="Package\Customer Table\Insert Rescords (Customer Table).Inputs[ADO NET Destination Input].ExternalColumns[SaleEmployeeID]"
                       dataType="wstr"
                       length="50"
                       name="SaleEmployeeID" />
+                    <externalMetadataColumn
+                      refId="Package\Customer Table\Insert Rescords (Customer Table).Inputs[ADO NET Destination Input].ExternalColumns[SaleEmployeeName]"
+                      dataType="wstr"
+                      length="50"
+                      name="SaleEmployeeName" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Customer Table\Insert Records (Customer Table).Outputs[ADO NET Destination Error Output]"
+                  refId="Package\Customer Table\Insert Rescords (Customer Table).Outputs[ADO NET Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="ADO NET Destination Error Output"
-                  synchronousInputId="Package\Customer Table\Insert Records (Customer Table).Inputs[ADO NET Destination Input]">
+                  synchronousInputId="Package\Customer Table\Insert Rescords (Customer Table).Inputs[ADO NET Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Customer Table\Insert Records (Customer Table).Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Customer Table\Insert Rescords (Customer Table).Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Customer Table\Insert Records (Customer Table).Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Customer Table\Insert Rescords (Customer Table).Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Customer Table\Insert Records (Customer Table).Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Customer Table\Insert Rescords (Customer Table).Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Customer Table\Insert Records (Customer Table).Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Customer Table\Insert Rescords (Customer Table).Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -408,7 +441,7 @@
                     <inputColumn
                       refId="Package\Customer Table\Merge Join.Inputs[Merge Join Left Input].Columns[Customer]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="100"
                       cachedName="Customer"
                       cachedSortKeyPosition="2"
                       lineageId="Package\Customer Table\Sort STG.Outputs[Sort Output].Columns[Customer]" />
@@ -419,6 +452,13 @@
                       cachedName="SaleEmployeeID"
                       cachedSortKeyPosition="3"
                       lineageId="Package\Customer Table\Sort STG.Outputs[Sort Output].Columns[SaleEmployeeID]" />
+                    <inputColumn
+                      refId="Package\Customer Table\Merge Join.Inputs[Merge Join Left Input].Columns[SaleEmployeeName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SaleEmployeeName"
+                      cachedSortKeyPosition="4"
+                      lineageId="Package\Customer Table\Sort STG.Outputs[Sort Output].Columns[SaleEmployeeName]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -437,7 +477,7 @@
                     <inputColumn
                       refId="Package\Customer Table\Merge Join.Inputs[Merge Join Right Input].Columns[Customer]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="100"
                       cachedName="Customer"
                       cachedSortKeyPosition="2"
                       lineageId="Package\Customer Table\Sort Table.Outputs[Sort Output].Columns[Customer]" />
@@ -448,6 +488,13 @@
                       cachedName="SaleEmployeeID"
                       cachedSortKeyPosition="3"
                       lineageId="Package\Customer Table\Sort Table.Outputs[Sort Output].Columns[SaleEmployeeID]" />
+                    <inputColumn
+                      refId="Package\Customer Table\Merge Join.Inputs[Merge Join Right Input].Columns[SaleEmployeeName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SaleEmployeeName"
+                      cachedSortKeyPosition="4"
+                      lineageId="Package\Customer Table\Sort Table.Outputs[Sort Output].Columns[SaleEmployeeName]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -476,7 +523,7 @@
                     <outputColumn
                       refId="Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[Customer]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       lineageId="Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[Customer]"
                       name="Customer">
                       <properties>
@@ -502,6 +549,20 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
+                      refId="Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeName]"
+                      name="SaleEmployeeName">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Customer Table\Merge Join.Inputs[Merge Join Left Input].Columns[SaleEmployeeName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
                       refId="Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[CustomerCode (1)]"
                       dataType="wstr"
                       length="50"
@@ -518,7 +579,7 @@
                     <outputColumn
                       refId="Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[Customer (1)]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       lineageId="Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[Customer (1)]"
                       name="Customer (1)">
                       <properties>
@@ -543,6 +604,179 @@
                           name="InputColumnID">#{Package\Customer Table\Merge Join.Inputs[Merge Join Right Input].Columns[SaleEmployeeID]}</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeName (1)]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeName (1)]"
+                      name="SaleEmployeeName (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Customer Table\Merge Join.Inputs[Merge Join Right Input].Columns[SaleEmployeeName]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Customer Table\OLE DB Command"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="OLE DB Command"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [IBOrderTracking].[dbo].[Customer]
+ SET [Customer] = ?
+ ,[SaleEmployeeID] = ?
+ ,[SaleEmployeeName] = ?
+ WHERE [CustomerCode]=?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">874</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Customer Table\OLE DB Command.Connections[OleDbConnection]"
+                  connectionManagerID="{C30C18BD-A555-4DAE-8894-93BE324590CF}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Customer Table\OLE DB Command.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Customer Table\OLE DB Command.Inputs[OLE DB Command Input].Columns[CustomerCode]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CustomerCode"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Customer Table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[CustomerCode]" />
+                    <inputColumn
+                      refId="Package\Customer Table\OLE DB Command.Inputs[OLE DB Command Input].Columns[Customer]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Customer"
+                      externalMetadataColumnId="Package\Customer Table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[Customer]" />
+                    <inputColumn
+                      refId="Package\Customer Table\OLE DB Command.Inputs[OLE DB Command Input].Columns[SaleEmployeeID]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SaleEmployeeID"
+                      externalMetadataColumnId="Package\Customer Table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeID]" />
+                    <inputColumn
+                      refId="Package\Customer Table\OLE DB Command.Inputs[OLE DB Command Input].Columns[SaleEmployeeName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SaleEmployeeName"
+                      externalMetadataColumnId="Package\Customer Table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeName]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Customer Table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="wstr"
+                      length="100"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Customer Table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Customer Table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Customer Table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_3">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Customer Table\OLE DB Command.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Customer Table\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Customer Table\OLE DB Command.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Customer Table\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Customer Table\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Customer Table\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Customer Table\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Customer Table\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -576,7 +810,7 @@
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="CustomerCode"
-                      lineageId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Output].Columns[CustomerCode]">
+                      lineageId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].Columns[CustomerCode]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -591,9 +825,9 @@
                     <inputColumn
                       refId="Package\Customer Table\Sort STG.Inputs[Sort Input].Columns[Customer]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="100"
                       cachedName="Customer"
-                      lineageId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Output].Columns[Customer]">
+                      lineageId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].Columns[Customer]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -610,7 +844,7 @@
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="SaleEmployeeID"
-                      lineageId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Output].Columns[SaleEmployeeID]">
+                      lineageId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].Columns[SaleEmployeeID]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -623,10 +857,27 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
+                      refId="Package\Customer Table\Sort STG.Inputs[Sort Input].Columns[SaleEmployeeName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SaleEmployeeName"
+                      lineageId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].Columns[SaleEmployeeName]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">4</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
                       refId="Package\Customer Table\Sort STG.Inputs[Sort Input].Columns[SyncDate]"
                       cachedDataType="dbTimeStamp"
                       cachedName="SyncDate"
-                      lineageId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Output].Columns[SyncDate]">
+                      lineageId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].Columns[SyncDate]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -660,13 +911,13 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Customer Table\STG_Customer.Outputs[ADO NET Source Output].Columns[CustomerCode]}</property>
+                          name="SortColumnId">#{Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].Columns[CustomerCode]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Customer Table\Sort STG.Outputs[Sort Output].Columns[Customer]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       lineageId="Package\Customer Table\Sort STG.Outputs[Sort Output].Columns[Customer]"
                       name="Customer"
                       sortKeyPosition="2">
@@ -675,7 +926,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Customer Table\STG_Customer.Outputs[ADO NET Source Output].Columns[Customer]}</property>
+                          name="SortColumnId">#{Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].Columns[Customer]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -690,7 +941,22 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Customer Table\STG_Customer.Outputs[ADO NET Source Output].Columns[SaleEmployeeID]}</property>
+                          name="SortColumnId">#{Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].Columns[SaleEmployeeID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Customer Table\Sort STG.Outputs[Sort Output].Columns[SaleEmployeeName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Customer Table\Sort STG.Outputs[Sort Output].Columns[SaleEmployeeName]"
+                      name="SaleEmployeeName"
+                      sortKeyPosition="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].Columns[SaleEmployeeName]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -703,7 +969,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Customer Table\STG_Customer.Outputs[ADO NET Source Output].Columns[SyncDate]}</property>
+                          name="SortColumnId">#{Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].Columns[SyncDate]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -754,7 +1020,7 @@
                     <inputColumn
                       refId="Package\Customer Table\Sort Table.Inputs[Sort Input].Columns[Customer]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="100"
                       cachedName="Customer"
                       lineageId="Package\Customer Table\Customer Table.Outputs[ADO NET Source Output].Columns[Customer]">
                       <properties>
@@ -785,6 +1051,23 @@
                           name="NewSortKeyPosition">3</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\Customer Table\Sort Table.Inputs[Sort Input].Columns[SaleEmployeeName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SaleEmployeeName"
+                      lineageId="Package\Customer Table\Customer Table.Outputs[ADO NET Source Output].Columns[SaleEmployeeName]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">4</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -813,7 +1096,7 @@
                     <outputColumn
                       refId="Package\Customer Table\Sort Table.Outputs[Sort Output].Columns[Customer]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       lineageId="Package\Customer Table\Sort Table.Outputs[Sort Output].Columns[Customer]"
                       name="Customer"
                       sortKeyPosition="2">
@@ -838,6 +1121,21 @@
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\Customer Table\Customer Table.Outputs[ADO NET Source Output].Columns[SaleEmployeeID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Customer Table\Sort Table.Outputs[Sort Output].Columns[SaleEmployeeName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Customer Table\Sort Table.Outputs[Sort Output].Columns[SaleEmployeeName]"
+                      name="SaleEmployeeName"
+                      sortKeyPosition="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Customer Table\Customer Table.Outputs[ADO NET Source Output].Columns[SaleEmployeeName]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -874,7 +1172,7 @@
                     <inputColumn
                       refId="Package\Customer Table\Split Records.Inputs[Conditional Split Input].Columns[Customer]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="100"
                       cachedName="Customer"
                       lineageId="Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[Customer]" />
                     <inputColumn
@@ -884,9 +1182,15 @@
                       cachedName="SaleEmployeeID"
                       lineageId="Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeID]" />
                     <inputColumn
-                      refId="Package\Customer Table\Split Records.Inputs[Conditional Split Input].Columns[Customer (1)]"
+                      refId="Package\Customer Table\Split Records.Inputs[Conditional Split Input].Columns[SaleEmployeeName]"
                       cachedDataType="wstr"
                       cachedLength="50"
+                      cachedName="SaleEmployeeName"
+                      lineageId="Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeName]" />
+                    <inputColumn
+                      refId="Package\Customer Table\Split Records.Inputs[Conditional Split Input].Columns[Customer (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
                       cachedName="Customer (1)"
                       lineageId="Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[Customer (1)]" />
                     <inputColumn
@@ -895,18 +1199,24 @@
                       cachedLength="50"
                       cachedName="SaleEmployeeID (1)"
                       lineageId="Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeID (1)]" />
+                    <inputColumn
+                      refId="Package\Customer Table\Split Records.Inputs[Conditional Split Input].Columns[SaleEmployeeName (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SaleEmployeeName (1)"
+                      lineageId="Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeName (1)]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Customer Table\Split Records.Outputs[Insert(CustomerCode not Match)]"
+                  refId="Package\Customer Table\Split Records.Outputs[Insert(CostumerCode not Match)]"
                   description="Output 1 of the Conditional Split Transformation"
                   errorOrTruncationOperation="Computation"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
-                  name="Insert(CustomerCode not Match)"
+                  name="Insert(CostumerCode not Match)"
                   synchronousInputId="Package\Customer Table\Split Records.Inputs[Conditional Split Input]"
                   truncationRowDisposition="FailComponent">
                   <properties>
@@ -929,12 +1239,12 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Customer Table\Split Records.Outputs[Update(CustomerCode Match)]"
+                  refId="Package\Customer Table\Split Records.Outputs[Update(Customer Match)]"
                   description="Output 2 of the Conditional Split Transformation"
                   errorOrTruncationOperation="Computation"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
-                  name="Update(CustomerCode Match)"
+                  name="Update(Customer Match)"
                   synchronousInputId="Package\Customer Table\Split Records.Inputs[Conditional Split Input]"
                   truncationRowDisposition="FailComponent">
                   <properties>
@@ -942,13 +1252,13 @@
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">(#{Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[Customer]} != #{Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[Customer (1)]}) || (#{Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeID]} != #{Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeID (1)]})</property>
+                      name="Expression">(#{Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[Customer]} != #{Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[Customer (1)]}) || (#{Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeID]} != #{Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeID (1)]}) || (#{Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeName]} != #{Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeName (1)]})</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">(Customer != [Customer (1)]) || (SaleEmployeeID != [SaleEmployeeID (1)])</property>
+                      name="FriendlyExpression">(Customer != [Customer (1)]) || (SaleEmployeeID != [SaleEmployeeID (1)]) || (SaleEmployeeName != [SaleEmployeeName (1)])</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -995,11 +1305,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Customer Table\STG_Customer"
+              refId="Package\Customer Table\STG Customer"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
-              name="STG_Customer"
+              name="STG Customer"
               usesDispositions="true"
               version="4">
               <properties>
@@ -1039,7 +1349,7 @@ WHERE SyncDate = (
               </properties>
               <connections>
                 <connection
-                  refId="Package\Customer Table\STG_Customer.Connections[IDbConnection]"
+                  refId="Package\Customer Table\STG Customer.Connections[IDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
                   connectionManagerRefId="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
                   description="Managed connection manager"
@@ -1047,249 +1357,131 @@ WHERE SyncDate = (
               </connections>
               <outputs>
                 <output
-                  refId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Output]"
+                  refId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Output]"
                   name="ADO NET Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Output].Columns[CustomerCode]"
+                      refId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].Columns[CustomerCode]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Output].ExternalColumns[CustomerCode]"
+                      externalMetadataColumnId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].ExternalColumns[CustomerCode]"
                       length="50"
-                      lineageId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Output].Columns[CustomerCode]"
+                      lineageId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].Columns[CustomerCode]"
                       name="CustomerCode"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Output].Columns[Customer]"
+                      refId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].Columns[Customer]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Output].ExternalColumns[Customer]"
-                      length="50"
-                      lineageId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Output].Columns[Customer]"
+                      externalMetadataColumnId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].ExternalColumns[Customer]"
+                      length="100"
+                      lineageId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].Columns[Customer]"
                       name="Customer"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Output].Columns[SaleEmployeeID]"
+                      refId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].Columns[SaleEmployeeID]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Output].ExternalColumns[SaleEmployeeID]"
+                      externalMetadataColumnId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].ExternalColumns[SaleEmployeeID]"
                       length="50"
-                      lineageId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Output].Columns[SaleEmployeeID]"
+                      lineageId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].Columns[SaleEmployeeID]"
                       name="SaleEmployeeID"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Output].Columns[SyncDate]"
+                      refId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].Columns[SaleEmployeeName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].ExternalColumns[SaleEmployeeName]"
+                      length="50"
+                      lineageId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].Columns[SaleEmployeeName]"
+                      name="SaleEmployeeName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].Columns[SyncDate]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Output].ExternalColumns[SyncDate]"
-                      lineageId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Output].Columns[SyncDate]"
+                      externalMetadataColumnId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].ExternalColumns[SyncDate]"
+                      lineageId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].Columns[SyncDate]"
                       name="SyncDate"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Output].ExternalColumns[CustomerCode]"
+                      refId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].ExternalColumns[CustomerCode]"
                       dataType="wstr"
                       length="50"
                       name="CustomerCode" />
                     <externalMetadataColumn
-                      refId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Output].ExternalColumns[Customer]"
+                      refId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].ExternalColumns[Customer]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       name="Customer" />
                     <externalMetadataColumn
-                      refId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Output].ExternalColumns[SaleEmployeeID]"
+                      refId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].ExternalColumns[SaleEmployeeID]"
                       dataType="wstr"
                       length="50"
                       name="SaleEmployeeID" />
                     <externalMetadataColumn
-                      refId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Output].ExternalColumns[SyncDate]"
+                      refId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].ExternalColumns[SaleEmployeeName]"
+                      dataType="wstr"
+                      length="50"
+                      name="SaleEmployeeName" />
+                    <externalMetadataColumn
+                      refId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Output].ExternalColumns[SyncDate]"
                       dataType="dbTimeStamp"
                       name="SyncDate" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Error Output]"
+                  refId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Error Output]"
                   isErrorOut="true"
                   name="ADO NET Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Error Output].Columns[CustomerCode]"
+                      refId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Error Output].Columns[CustomerCode]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Error Output].Columns[CustomerCode]"
+                      lineageId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Error Output].Columns[CustomerCode]"
                       name="CustomerCode" />
                     <outputColumn
-                      refId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Error Output].Columns[Customer]"
+                      refId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Error Output].Columns[Customer]"
                       dataType="wstr"
-                      length="50"
-                      lineageId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Error Output].Columns[Customer]"
+                      length="100"
+                      lineageId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Error Output].Columns[Customer]"
                       name="Customer" />
                     <outputColumn
-                      refId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Error Output].Columns[SaleEmployeeID]"
+                      refId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Error Output].Columns[SaleEmployeeID]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Error Output].Columns[SaleEmployeeID]"
+                      lineageId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Error Output].Columns[SaleEmployeeID]"
                       name="SaleEmployeeID" />
                     <outputColumn
-                      refId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Error Output].Columns[SyncDate]"
+                      refId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Error Output].Columns[SaleEmployeeName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Error Output].Columns[SaleEmployeeName]"
+                      name="SaleEmployeeName" />
+                    <outputColumn
+                      refId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Error Output].Columns[SyncDate]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Error Output].Columns[SyncDate]"
+                      lineageId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Error Output].Columns[SyncDate]"
                       name="SyncDate" />
                     <outputColumn
-                      refId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Customer Table\Update Records (Customer Table)"
-              componentClassID="Microsoft.OLEDBCommand"
-              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
-              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
-              name="Update Records (Customer Table)"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [IBOrderTracking].[dbo].[Customer]
- SET [Customer] = ?
- ,[SaleEmployeeID] = ?
- WHERE [CustomerCode]=?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">874</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Customer Table\Update Records (Customer Table).Connections[OleDbConnection]"
-                  connectionManagerID="{C30C18BD-A555-4DAE-8894-93BE324590CF}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[OLEDB]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Customer Table\Update Records (Customer Table).Inputs[OLE DB Command Input]"
-                  errorOrTruncationOperation="Command Execution"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Command Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Customer Table\Update Records (Customer Table).Inputs[OLE DB Command Input].Columns[CustomerCode]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="CustomerCode"
-                      cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Customer Table\Update Records (Customer Table).Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      lineageId="Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[CustomerCode]" />
-                    <inputColumn
-                      refId="Package\Customer Table\Update Records (Customer Table).Inputs[OLE DB Command Input].Columns[Customer]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Customer"
-                      externalMetadataColumnId="Package\Customer Table\Update Records (Customer Table).Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[Customer]" />
-                    <inputColumn
-                      refId="Package\Customer Table\Update Records (Customer Table).Inputs[OLE DB Command Input].Columns[SaleEmployeeID]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="SaleEmployeeID"
-                      externalMetadataColumnId="Package\Customer Table\Update Records (Customer Table).Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\Customer Table\Merge Join.Outputs[Merge Join Output].Columns[SaleEmployeeID]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Customer Table\Update Records (Customer Table).Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      dataType="wstr"
-                      length="50"
-                      name="Param_0">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Customer Table\Update Records (Customer Table).Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      dataType="wstr"
-                      length="50"
-                      name="Param_1">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Customer Table\Update Records (Customer Table).Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      dataType="wstr"
-                      length="50"
-                      name="Param_2">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Customer Table\Update Records (Customer Table).Outputs[OLE DB Command Output]"
-                  exclusionGroup="1"
-                  name="OLE DB Command Output"
-                  synchronousInputId="Package\Customer Table\Update Records (Customer Table).Inputs[OLE DB Command Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Customer Table\Update Records (Customer Table).Outputs[OLE DB Command Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Command Error Output"
-                  synchronousInputId="Package\Customer Table\Update Records (Customer Table).Inputs[OLE DB Command Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Customer Table\Update Records (Customer Table).Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Customer Table\Update Records (Customer Table).Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Customer Table\Update Records (Customer Table).Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Customer Table\Update Records (Customer Table).Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1308,12 +1500,12 @@ WHERE SyncDate = (
               refId="Package\Customer Table.Paths[ADO NET Source Output1]"
               endId="Package\Customer Table\Sort STG.Inputs[Sort Input]"
               name="ADO NET Source Output"
-              startId="Package\Customer Table\STG_Customer.Outputs[ADO NET Source Output]" />
+              startId="Package\Customer Table\STG Customer.Outputs[ADO NET Source Output]" />
             <path
-              refId="Package\Customer Table.Paths[Insert(CustomerCode not Match)]"
-              endId="Package\Customer Table\Insert Records (Customer Table).Inputs[ADO NET Destination Input]"
-              name="Insert(CustomerCode not Match)"
-              startId="Package\Customer Table\Split Records.Outputs[Insert(CustomerCode not Match)]" />
+              refId="Package\Customer Table.Paths[Insert(CostumerCode not Match)]"
+              endId="Package\Customer Table\Insert Rescords (Customer Table).Inputs[ADO NET Destination Input]"
+              name="Insert(CostumerCode not Match)"
+              startId="Package\Customer Table\Split Records.Outputs[Insert(CostumerCode not Match)]" />
             <path
               refId="Package\Customer Table.Paths[Merge Join Output]"
               endId="Package\Customer Table\Split Records.Inputs[Conditional Split Input]"
@@ -1330,10 +1522,10 @@ WHERE SyncDate = (
               name="Sort Output"
               startId="Package\Customer Table\Sort Table.Outputs[Sort Output]" />
             <path
-              refId="Package\Customer Table.Paths[Update(CustomerCode Match)]"
-              endId="Package\Customer Table\Update Records (Customer Table).Inputs[OLE DB Command Input]"
-              name="Update(CustomerCode Match)"
-              startId="Package\Customer Table\Split Records.Outputs[Update(CustomerCode Match)]" />
+              refId="Package\Customer Table.Paths[Update(Customer Match)]"
+              endId="Package\Customer Table\OLE DB Command.Inputs[OLE DB Command Input]"
+              name="Update(Customer Match)"
+              startId="Package\Customer Table\Split Records.Outputs[Update(Customer Match)]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1364,237 +1556,119 @@ WHERE SyncDate = (
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="123,42"
-          Id="Package\Customer Table\Sort STG"
-          TopLeft="228,121" />
+          Size="155,42"
+          Id="Package\Customer Table\Customer Table"
+          TopLeft="512.5,52.5" />
+        <NodeLayout
+          Size="149,42"
+          Id="Package\Customer Table\STG Customer"
+          TopLeft="35,52.5" />
         <NodeLayout
           Size="129,42"
           Id="Package\Customer Table\Sort Table"
-          TopLeft="516,115" />
+          TopLeft="413.75,126.25" />
         <NodeLayout
-          Size="151,42"
-          Id="Package\Customer Table\STG_Customer"
-          TopLeft="80,40" />
-        <NodeLayout
-          Size="142,42"
-          Id="Package\Customer Table\Split Records"
-          TopLeft="468,283" />
-        <NodeLayout
-          Size="132,42"
-          Id="Package\Customer Table\Merge Join"
-          TopLeft="324,206" />
-        <NodeLayout
-          Size="235,42"
-          Id="Package\Customer Table\Insert Records (Customer Table)"
-          TopLeft="46,400" />
-        <NodeLayout
-          Size="241,42"
-          Id="Package\Customer Table\Update Records (Customer Table)"
-          TopLeft="594,403" />
-        <NodeLayout
-          Size="155,42"
-          Id="Package\Customer Table\Customer Table"
-          TopLeft="600,30" />
+          Size="123,42"
+          Id="Package\Customer Table\Sort STG"
+          TopLeft="141.25,126.25" />
         <EdgeLayout
-          Id="Package\Customer Table.Paths[Update(CustomerCode Match)]"
-          TopLeft="561.333333333333,325">
+          Id="Package\Customer Table.Paths[ADO NET Source Output]"
+          TopLeft="590,94.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="153.166666666667,78"
+              EndConnector="-111.75,31.75"
               Start="0,0"
-              End="153.166666666667,70.5">
+              End="-111.75,24.25">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.7214484679666" />
+                    End="0,11.875" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,27.7214484679666"
-                    Point2="0,31.7214484679666"
-                    Point3="4,31.7214484679666" />
+                    Point1="0,11.875"
+                    Point2="0,15.875"
+                    Point3="-4,15.875" />
                   <mssgle:LineSegment
-                    End="149.166666666667,31.7214484679666" />
+                    End="-107.75,15.875" />
                   <mssgle:CubicBezierSegment
-                    Point1="149.166666666667,31.7214484679666"
-                    Point2="153.166666666667,31.7214484679666"
-                    Point3="153.166666666667,35.7214484679666" />
+                    Point1="-107.75,15.875"
+                    Point2="-111.75,15.875"
+                    Point3="-111.75,19.875" />
                   <mssgle:LineSegment
-                    End="153.166666666667,70.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="9.64264973958331,36.7214484679666,133.8813671875,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Customer Table.Paths[Sort Output1]"
-          TopLeft="580.5,157">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-169.833333333333,49"
-              Start="0,0"
-              End="-169.833333333333,41.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.0479041916168" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.0479041916168"
-                    Point2="0,29.0479041916168"
-                    Point3="-4,29.0479041916168" />
-                  <mssgle:LineSegment
-                    End="-165.833333333333,29.0479041916168" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-165.833333333333,29.0479041916168"
-                    Point2="-169.833333333333,29.0479041916168"
-                    Point3="-169.833333333333,33.0479041916168" />
-                  <mssgle:LineSegment
-                    End="-169.833333333333,41.5" />
+                    End="-111.75,24.25" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Customer Table.Paths[Sort Output]"
-          TopLeft="289.5,163">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="79.8333333333333,43"
-              Start="0,0"
-              End="79.8333333333333,35.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.4910179640719" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.4910179640719"
-                    Point2="0,25.4910179640719"
-                    Point3="4,25.4910179640719" />
-                  <mssgle:LineSegment
-                    End="75.8333333333333,25.4910179640719" />
-                  <mssgle:CubicBezierSegment
-                    Point1="75.8333333333333,25.4910179640719"
-                    Point2="79.8333333333333,25.4910179640719"
-                    Point3="79.8333333333333,29.4910179640719" />
-                  <mssgle:LineSegment
-                    End="79.8333333333333,35.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Customer Table.Paths[Merge Join Output]"
-          TopLeft="390,248">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="149,35"
-              Start="0,0"
-              End="149,27.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.5"
-                    Point2="0,17.5"
-                    Point3="4,17.5" />
-                  <mssgle:LineSegment
-                    End="145,17.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="145,17.5"
-                    Point2="149,17.5"
-                    Point3="149,21.5" />
-                  <mssgle:LineSegment
-                    End="149,27.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Customer Table.Paths[Insert(CustomerCode not Match)]"
-          TopLeft="516.666666666667,325">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-353.166666666667,75"
-              Start="0,0"
-              End="-353.166666666667,67.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.5013927576602" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26.5013927576602"
-                    Point2="0,30.5013927576602"
-                    Point3="-4,30.5013927576602" />
-                  <mssgle:LineSegment
-                    End="-349.166666666667,30.5013927576602" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-349.166666666667,30.5013927576602"
-                    Point2="-353.166666666667,30.5013927576602"
-                    Point3="-353.166666666667,34.5013927576602" />
-                  <mssgle:LineSegment
-                    End="-353.166666666667,67.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-249.611673177083,35.5013927576602,146.0566796875,11.609375"
-              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Customer Table.Paths[ADO NET Source Output1]"
-          TopLeft="155.5,82">
+          TopLeft="109.5,94.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="134,39"
+              EndConnector="93.25,31.75"
               Start="0,0"
-              End="134,31.5">
+              End="93.25,24.25">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15.5" />
+                    End="0,11.875" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,15.5"
-                    Point2="0,19.5"
-                    Point3="4,19.5" />
+                    Point1="0,11.875"
+                    Point2="0,15.875"
+                    Point3="4,15.875" />
                   <mssgle:LineSegment
-                    End="130,19.5" />
+                    End="89.25,15.875" />
                   <mssgle:CubicBezierSegment
-                    Point1="130,19.5"
-                    Point2="134,19.5"
-                    Point3="134,23.5" />
+                    Point1="89.25,15.875"
+                    Point2="93.25,15.875"
+                    Point3="93.25,19.875" />
                   <mssgle:LineSegment
-                    End="134,31.5" />
+                    End="93.25,24.25" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="132,42"
+          Id="Package\Customer Table\Merge Join"
+          TopLeft="266.5,206.25" />
+        <EdgeLayout
+          Id="Package\Customer Table.Paths[Sort Output]"
+          TopLeft="202.75,168.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="109.083333333333,38"
+              Start="0,0"
+              End="109.083333333333,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5269461077844" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.5269461077844"
+                    Point2="0,22.5269461077844"
+                    Point3="4,22.5269461077844" />
+                  <mssgle:LineSegment
+                    End="105.083333333333,22.5269461077844" />
+                  <mssgle:CubicBezierSegment
+                    Point1="105.083333333333,22.5269461077844"
+                    Point2="109.083333333333,22.5269461077844"
+                    Point3="109.083333333333,26.5269461077844" />
+                  <mssgle:LineSegment
+                    End="109.083333333333,30.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1604,44 +1678,162 @@ WHERE SyncDate = (
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Customer Table.Paths[ADO NET Source Output]"
-          TopLeft="677.5,72">
+          Id="Package\Customer Table.Paths[Sort Output1]"
+          TopLeft="478.25,168.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-97,43"
+              EndConnector="-125.083333333333,38"
               Start="0,0"
-              End="-97,35.5">
+              End="-125.083333333333,30.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.5" />
+                    End="0,18.5269461077844" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17.5"
-                    Point2="0,21.5"
-                    Point3="-4,21.5" />
+                    Point1="0,18.5269461077844"
+                    Point2="0,22.5269461077844"
+                    Point3="-4,22.5269461077844" />
                   <mssgle:LineSegment
-                    End="-93,21.5" />
+                    End="-121.083333333333,22.5269461077844" />
                   <mssgle:CubicBezierSegment
-                    Point1="-93,21.5"
-                    Point2="-97,21.5"
-                    Point3="-97,25.5" />
+                    Point1="-121.083333333333,22.5269461077844"
+                    Point2="-125.083333333333,22.5269461077844"
+                    Point3="-125.083333333333,26.5269461077844" />
                   <mssgle:LineSegment
-                    End="-97,35.5" />
+                    End="-125.083333333333,30.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Customer Table\Split Records"
+          TopLeft="364.444444444444,277.777777777778" />
+        <EdgeLayout
+          Id="Package\Customer Table.Paths[Merge Join Output]"
+          TopLeft="332.5,248.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="102.944444444444,29.5277777777778"
+              Start="0,0"
+              End="102.944444444444,22.0277777777778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.7638888888889" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.7638888888889"
+                    Point2="0,14.7638888888889"
+                    Point3="4,14.7638888888889" />
+                  <mssgle:LineSegment
+                    End="98.9444444444445,14.7638888888889" />
+                  <mssgle:CubicBezierSegment
+                    Point1="98.9444444444445,14.7638888888889"
+                    Point2="102.944444444444,14.7638888888889"
+                    Point3="102.944444444444,18.7638888888889" />
+                  <mssgle:LineSegment
+                    End="102.944444444444,22.0277777777778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="240,42"
+          Id="Package\Customer Table\Insert Rescords (Customer Table)"
+          TopLeft="23.3333333333334,376.666666666667" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Customer Table\OLE DB Command"
+          TopLeft="580,371.111111111111" />
+        <EdgeLayout
+          Id="Package\Customer Table.Paths[Insert(CostumerCode not Match)]"
+          TopLeft="413.111111111111,319.777777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-269.777777777778,56.8888888888889"
+              Start="0,0"
+              End="-269.777777777778,49.3888888888889">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.1358712472919" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.1358712472919"
+                    Point2="0,23.1358712472919"
+                    Point3="-4,23.1358712472919" />
+                  <mssgle:LineSegment
+                    End="-265.777777777778,23.1358712472919" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-265.777777777778,23.1358712472919"
+                    Point2="-269.777777777778,23.1358712472919"
+                    Point3="-269.777777777778,27.1358712472919" />
+                  <mssgle:LineSegment
+                    End="-269.777777777778,49.3888888888889" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-207.917228732639,28.1358712472919,146.0566796875,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Customer Table.Paths[Update(Customer Match)]"
+          TopLeft="457.777777777778,319.777777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="206.222222222222,51.3333333333334"
+              Start="0,0"
+              End="206.222222222222,43.8333333333334">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.8765088207985" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.8765088207985"
+                    Point2="0,20.8765088207985"
+                    Point3="4,20.8765088207985" />
+                  <mssgle:LineSegment
+                    End="202.222222222222,20.8765088207985" />
+                  <mssgle:CubicBezierSegment
+                    Point1="202.222222222222,20.8765088207985"
+                    Point2="206.222222222222,20.8765088207985"
+                    Point3="206.222222222222,24.8765088207985" />
+                  <mssgle:LineSegment
+                    End="206.222222222222,43.8333333333334" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="47.2854275173611,25.8765088207985,111.6513671875,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Customer Table\STG_Customer">
+    design-time-name="Package\Customer Table\Customer Table">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1649,7 +1841,15 @@ WHERE SyncDate = (
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Customer Table\Insert Records (Customer Table)">
+    design-time-name="Package\Customer Table\STG Customer">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Customer Table\Insert Rescords (Customer Table)">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

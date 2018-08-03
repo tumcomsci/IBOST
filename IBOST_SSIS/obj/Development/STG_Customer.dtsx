@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="STG_Customer"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{69929F14-AAED-47B0-95EF-DC3895F4A1EA}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{5F9ED1D4-9685-4E60-AEBE-D7AA08093E0E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABL76n4cvf8Z0v8js8z61l97kfqlBYQEqOGOSfaq/eZrAAAAAAOgAAAAAIAACAAAAAOdEhcoCFPI861frVkhUfs9fibRmREQbZI8UQ5zodMbyAAAAAtaWSLXlv4uKIP5G7C66DQjvHw99/e8fEuspWlOrY6YEAAAACO6xEKptninOty+crquVw+U8jrx9cRFuf1SvnpX6WnEP2YRGCc9E82Q99fOX9+eOG1iNPpRZG315T9Tx2CGXkP</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADuThIiEYW78WCj6JHbFctTnEtxYLh2Izr7XTKMDZe5ZgAAAAAOgAAAAAIAACAAAABbSUA+QDucRYMYtVz/OSl0fblYa4rKnuzBwiwURK55niAAAABNgGdu0zFrZ3b49BU11lZhbBj1zcv5+aEBZnPrPMhV30AAAAAYER5Vqv6G6lRORPTl0RtVk0oF7xGTRRG1t4DK9WvkfHkMgiHIv6JjQHuI/oTIFPmqD01oQ68+77s5dLwVUtUx</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACbxuDPsVffpDX5fOX8drnnU7D9mF51NMuVpyUucaFozwAAAAAOgAAAAAIAACAAAABiOIInAzFUdW+chtuAYiPeG0txtqv1Kmt6bHAK/S05QiAAAABfe+xLl4mY2LAfnTHE0p0n4/dTwhyfg1uMUQ1IKm6wtEAAAACEOt7kc2w7OEjbY0rTrKR2+ZZnqLUfXbcKIaAj0YRpjSY+mko4+H9Qi1sfTaWJbo6+spQE07ZQmts1qmAfQcxv</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACzVxAL/JZ9JM4pUd7E12ri0idDxfh0G3jy0XjqLEhM4gAAAAAOgAAAAAIAACAAAAC2BZtfsnN/ANwUEE3qB6dxNqD5MxMi+/POLh+VMbHw3yAAAADajnW8uEkLwgfl1HPCS3n5gDrryI9U2RKZQpn4l1PBX0AAAAAkMXFSiaBtOZi13uxcSQYuve9xj/nppQOjib8qAkG+u/6trI+Y4q4sCg53ma/8PxvwLOH1A+DOJmWSYgrOkhTa</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -57,7 +57,119 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABvwltaNJU7eOCaOXJIQIYCaKMkOhqVUzPzavjbhXrqugAAAAAOgAAAAAIAACAAAAASQsX8VZxpPw9Lkwt0+7mL09hoOxDmxhbPN0vC+7/zfCAAAAArQ2Sy/S7/GKrwtaz2eQUIYN+iDCv0MK6uMh9ouOAuy0AAAAAQdMPcTJwT+zraDYgKvdoBNOhTMUYWrXWmj1kh3iFB/ZAZCP7L610zWI6ScQ56XmAnCLVkCq5y7Esh63e21ak2</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAwPRIoCqSLmkZKECTliNxgZUhofZD4ejAXjSEGUbSsJQAAAAAOgAAAAAIAACAAAACD3N84Ew+MbknfID77WAFELSnXVCflb/M5TtQo3kFDJyAAAAB4M8f2+nk5sIQZws695gJy0mKu21drCpWtBKDbRGeMEEAAAADkzfFNjOuK4HDEHN5ltwWCS42buFXWf0G+LX2p3yc+0xrEFmvZS4TE3z8naPfBseHGisxg2TfKXcEutMBKFoX5</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Customer Master]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{B0BBE9F8-7162-4106-83E5-D8F298978EFF}"
+      DTS:ObjectName="Customer Master">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1054"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\Trainee\Desktop\Sample Data\CUSTOMER_MASTER.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CUSTOMER CODE"
+              DTS:DTSID="{AC7B49A4-E253-4BA8-B6BE-98798D4CD722}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CUSTOMER"
+              DTS:DTSID="{E26118FE-7098-49AE-A373-16C2858881C8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SALE EMPLOYEE ID"
+              DTS:DTSID="{C2BFA8CA-89C8-4895-B3BA-387DAA3C8F76}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SALE EMPLOYEE NAME"
+              DTS:DTSID="{97F65470-CBF3-4CEE-B769-F81E326BBE17}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{D9484D9E-0B16-406B-BA1F-637AC742694F}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1054"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\Trainee\Desktop\Sample Data\CUSTOMER_MASTER.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CUSTOMER CODE"
+              DTS:DTSID="{A4EDEA37-54E2-425D-80B1-6C261A77EBD0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CUSTOMER"
+              DTS:DTSID="{93BE18DE-CB98-4443-86D2-BD011AE0AA84}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SALE EMPLOYEE ID"
+              DTS:DTSID="{7DC587B2-9F28-46FB-823E-90C24EA1C904}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SALE EMPLOYEE NAME"
+              DTS:DTSID="{0932C301-A63E-465C-B1AD-AA54F264AB6D}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -147,8 +259,8 @@
               <connections>
                 <connection
                   refId="Package\STG Customer\CSV Customer.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[STG_Customer]"
-                  connectionManagerRefId="Package.ConnectionManagers[STG_Customer]"
+                  connectionManagerID="Package.ConnectionManagers[Customer Master]"
+                  connectionManagerRefId="Package.ConnectionManagers[Customer Master]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -158,7 +270,7 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\STG Customer\CSV Customer.Outputs[Flat File Source Output].Columns[CUSTOMER CODE]"
-                      codePage="874"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -180,8 +292,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\STG Customer\CSV Customer.Outputs[Flat File Source Output].Columns[CUSTOMER]"
-                      codePage="874"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\STG Customer\CSV Customer.Outputs[Flat File Source Output].ExternalColumns[CUSTOMER]"
@@ -202,7 +313,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\STG Customer\CSV Customer.Outputs[Flat File Source Output].Columns[SALE EMPLOYEE ID]"
-                      codePage="874"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -222,27 +333,54 @@
                           name="UseBinaryFormat">false</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\STG Customer\CSV Customer.Outputs[Flat File Source Output].Columns[SALE EMPLOYEE NAME]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG Customer\CSV Customer.Outputs[Flat File Source Output].ExternalColumns[SALE EMPLOYEE NAME]"
+                      length="50"
+                      lineageId="Package\STG Customer\CSV Customer.Outputs[Flat File Source Output].Columns[SALE EMPLOYEE NAME]"
+                      name="SALE EMPLOYEE NAME"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\STG Customer\CSV Customer.Outputs[Flat File Source Output].ExternalColumns[CUSTOMER CODE]"
-                      codePage="874"
+                      codePage="65001"
                       dataType="str"
                       length="50"
                       name="CUSTOMER CODE" />
                     <externalMetadataColumn
                       refId="Package\STG Customer\CSV Customer.Outputs[Flat File Source Output].ExternalColumns[CUSTOMER]"
-                      codePage="874"
-                      dataType="str"
+                      dataType="wstr"
                       length="50"
                       name="CUSTOMER" />
                     <externalMetadataColumn
                       refId="Package\STG Customer\CSV Customer.Outputs[Flat File Source Output].ExternalColumns[SALE EMPLOYEE ID]"
-                      codePage="874"
+                      codePage="65001"
                       dataType="str"
                       length="50"
                       name="SALE EMPLOYEE ID" />
+                    <externalMetadataColumn
+                      refId="Package\STG Customer\CSV Customer.Outputs[Flat File Source Output].ExternalColumns[SALE EMPLOYEE NAME]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="SALE EMPLOYEE NAME" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -252,7 +390,7 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\STG Customer\CSV Customer.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      codePage="874"
+                      codePage="65001"
                       dataType="text"
                       description="Flat File Source Error Output Column"
                       lineageId="Package\STG Customer\CSV Customer.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
@@ -398,15 +536,20 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\STG Customer\STG_Customer.Inputs[ADO NET Destination Input].Columns[CUSTOMER]"
-                      cachedCodepage="874"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="CUSTOMER"
                       externalMetadataColumnId="Package\STG Customer\STG_Customer.Inputs[ADO NET Destination Input].ExternalColumns[Customer]"
                       lineageId="Package\STG Customer\CSV Customer.Outputs[Flat File Source Output].Columns[CUSTOMER]" />
                     <inputColumn
+                      refId="Package\STG Customer\STG_Customer.Inputs[ADO NET Destination Input].Columns[SyncDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="SyncDate"
+                      externalMetadataColumnId="Package\STG Customer\STG_Customer.Inputs[ADO NET Destination Input].ExternalColumns[SyncDate]"
+                      lineageId="Package\STG Customer\Derived Column.Outputs[Derived Column Output].Columns[SyncDate]" />
+                    <inputColumn
                       refId="Package\STG Customer\STG_Customer.Inputs[ADO NET Destination Input].Columns[CUSTOMER CODE]"
-                      cachedCodepage="874"
+                      cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="CUSTOMER CODE"
@@ -414,18 +557,20 @@
                       lineageId="Package\STG Customer\CSV Customer.Outputs[Flat File Source Output].Columns[CUSTOMER CODE]" />
                     <inputColumn
                       refId="Package\STG Customer\STG_Customer.Inputs[ADO NET Destination Input].Columns[SALE EMPLOYEE ID]"
-                      cachedCodepage="874"
+                      cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="SALE EMPLOYEE ID"
                       externalMetadataColumnId="Package\STG Customer\STG_Customer.Inputs[ADO NET Destination Input].ExternalColumns[SaleEmployeeID]"
                       lineageId="Package\STG Customer\CSV Customer.Outputs[Flat File Source Output].Columns[SALE EMPLOYEE ID]" />
                     <inputColumn
-                      refId="Package\STG Customer\STG_Customer.Inputs[ADO NET Destination Input].Columns[SyncDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="SyncDate"
-                      externalMetadataColumnId="Package\STG Customer\STG_Customer.Inputs[ADO NET Destination Input].ExternalColumns[SyncDate]"
-                      lineageId="Package\STG Customer\Derived Column.Outputs[Derived Column Output].Columns[SyncDate]" />
+                      refId="Package\STG Customer\STG_Customer.Inputs[ADO NET Destination Input].Columns[SALE EMPLOYEE NAME]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SALE EMPLOYEE NAME"
+                      externalMetadataColumnId="Package\STG Customer\STG_Customer.Inputs[ADO NET Destination Input].ExternalColumns[SaleEmployeeName]"
+                      lineageId="Package\STG Customer\CSV Customer.Outputs[Flat File Source Output].Columns[SALE EMPLOYEE NAME]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -437,13 +582,18 @@
                     <externalMetadataColumn
                       refId="Package\STG Customer\STG_Customer.Inputs[ADO NET Destination Input].ExternalColumns[Customer]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       name="Customer" />
                     <externalMetadataColumn
                       refId="Package\STG Customer\STG_Customer.Inputs[ADO NET Destination Input].ExternalColumns[SaleEmployeeID]"
                       dataType="wstr"
                       length="50"
                       name="SaleEmployeeID" />
+                    <externalMetadataColumn
+                      refId="Package\STG Customer\STG_Customer.Inputs[ADO NET Destination Input].ExternalColumns[SaleEmployeeName]"
+                      dataType="wstr"
+                      length="50"
+                      name="SaleEmployeeName" />
                     <externalMetadataColumn
                       refId="Package\STG Customer\STG_Customer.Inputs[ADO NET Destination Input].ExternalColumns[SyncDate]"
                       dataType="dbTimeStamp"
@@ -518,43 +668,39 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="151,42"
-          Id="Package\STG Customer\STG_Customer"
-          TopLeft="426,242" />
-        <NodeLayout
           Size="156,42"
           Id="Package\STG Customer\Derived Column"
           TopLeft="316,142" />
         <NodeLayout
-          Size="148,42"
-          Id="Package\STG Customer\CSV Customer"
-          TopLeft="218,39" />
+          Size="151,42"
+          Id="Package\STG Customer\STG_Customer"
+          TopLeft="449,251" />
         <EdgeLayout
-          Id="Package\STG Customer.Paths[Flat File Source Output]"
-          TopLeft="292,81">
+          Id="Package\STG Customer.Paths[Derived Column Output]"
+          TopLeft="394,184">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="102,61"
+              EndConnector="130.5,67"
               Start="0,0"
-              End="102,53.5">
+              End="130.5,59.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.5" />
+                    End="0,29.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,26.5"
-                    Point2="0,30.5"
-                    Point3="4,30.5" />
+                    Point1="0,29.5"
+                    Point2="0,33.5"
+                    Point3="4,33.5" />
                   <mssgle:LineSegment
-                    End="98,30.5" />
+                    End="126.5,33.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="98,30.5"
-                    Point2="102,30.5"
-                    Point3="102,34.5" />
+                    Point1="126.5,33.5"
+                    Point2="130.5,33.5"
+                    Point3="130.5,37.5" />
                   <mssgle:LineSegment
-                    End="102,53.5" />
+                    End="130.5,59.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -563,32 +709,36 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="148,42"
+          Id="Package\STG Customer\CSV Customer"
+          TopLeft="194,29" />
         <EdgeLayout
-          Id="Package\STG Customer.Paths[Derived Column Output]"
-          TopLeft="394,184">
+          Id="Package\STG Customer.Paths[Flat File Source Output]"
+          TopLeft="268,71">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="107.5,58"
+              EndConnector="126,71"
               Start="0,0"
-              End="107.5,50.5">
+              End="126,63.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25" />
+                    End="0,31.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,25"
-                    Point2="0,29"
-                    Point3="4,29" />
+                    Point1="0,31.5"
+                    Point2="0,35.5"
+                    Point3="4,35.5" />
                   <mssgle:LineSegment
-                    End="103.5,29" />
+                    End="122,35.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="103.5,29"
-                    Point2="107.5,29"
-                    Point3="107.5,33" />
+                    Point1="122,35.5"
+                    Point2="126,35.5"
+                    Point3="126,39.5" />
                   <mssgle:LineSegment
-                    End="107.5,50.5" />
+                    End="126,63.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
