@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="SOHeader"
   DTS:PackageType="5"
-  DTS:VersionBuild="21"
-  DTS:VersionGUID="{855A9DF9-F9D1-4132-9A44-E4F53A1B1991}">
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{89B9A28A-7C8B-43E8-82A5-DBCEF46A6C79}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAjciihG7Q2kHj4+EeVBWOOt3yB2lcSTTe9A3Z9q8+pPwAAAAAOgAAAAAIAACAAAADA+oL9Bmaw9sdunGoCEhnkaWoSovC546plLg1AugH+4iAAAAD8ihLQNYVgusMSkYwpQTTGz1QdLEZI4leCjSdAsSTQVkAAAABSjjrOMAIZ7SPwSgraWp8cbZilN1Cr4o0OVuM+ifw7/xbrnHdIQYhCpBjfZFf/iVkeLOvX9Wq0ivgTyCoDeURy</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA/yUDytvEgofOFxDC+TiLK1InY/Fa8X2qeGk7DWaJjdQAAAAAOgAAAAAIAACAAAABCKS7c5T6CGx2ZlOQQpDxZVrLzByEp5m38NxMNn/00FSAAAADnWL7XzMF4ORyvKTQ/wDPodJNuN6+tquzggn2xXmdkjkAAAAAtp5u8+fmIu6gcPHUfsgD7tSC9mQShj9IGulmBKuaB7w7DDy2zEGD/hZljD0rv4go+ux25XzZtRI1hAoUIpmTf</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -139,12 +139,6 @@
                       externalMetadataColumnId="Package\SO Header  Table\Insert Records (SOHeader Table).Inputs[ADO NET Destination Input].ExternalColumns[INV]"
                       lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[INV]" />
                     <inputColumn
-                      refId="Package\SO Header  Table\Insert Records (SOHeader Table).Inputs[ADO NET Destination Input].Columns[TotalFCLS]"
-                      cachedDataType="r8"
-                      cachedName="TotalFCLS"
-                      externalMetadataColumnId="Package\SO Header  Table\Insert Records (SOHeader Table).Inputs[ADO NET Destination Input].ExternalColumns[TotalFCLS]"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFCLS]" />
-                    <inputColumn
                       refId="Package\SO Header  Table\Insert Records (SOHeader Table).Inputs[ADO NET Destination Input].Columns[SoldTo]"
                       cachedDataType="wstr"
                       cachedLength="50"
@@ -180,12 +174,6 @@
                       externalMetadataColumnId="Package\SO Header  Table\Insert Records (SOHeader Table).Inputs[ADO NET Destination Input].ExternalColumns[DestinationPort]"
                       lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[DestinationPort]" />
                     <inputColumn
-                      refId="Package\SO Header  Table\Insert Records (SOHeader Table).Inputs[ADO NET Destination Input].Columns[TotalCartons]"
-                      cachedDataType="i4"
-                      cachedName="TotalCartons"
-                      externalMetadataColumnId="Package\SO Header  Table\Insert Records (SOHeader Table).Inputs[ADO NET Destination Input].ExternalColumns[TotalCartons]"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalCartons]" />
-                    <inputColumn
                       refId="Package\SO Header  Table\Insert Records (SOHeader Table).Inputs[ADO NET Destination Input].Columns[PaymentTerm]"
                       cachedDataType="wstr"
                       cachedLength="50"
@@ -206,12 +194,6 @@
                       cachedName="Currency"
                       externalMetadataColumnId="Package\SO Header  Table\Insert Records (SOHeader Table).Inputs[ADO NET Destination Input].ExternalColumns[Currency]"
                       lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Currency]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Insert Records (SOHeader Table).Inputs[ADO NET Destination Input].Columns[TotalFOB]"
-                      cachedDataType="r8"
-                      cachedName="TotalFOB"
-                      externalMetadataColumnId="Package\SO Header  Table\Insert Records (SOHeader Table).Inputs[ADO NET Destination Input].ExternalColumns[TotalFOB]"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFOB]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -292,9 +274,9 @@
                       length="50"
                       name="Currency" />
                     <externalMetadataColumn
-                      refId="Package\SO Header  Table\Insert Records (SOHeader Table).Inputs[ADO NET Destination Input].ExternalColumns[TotalFOB]"
+                      refId="Package\SO Header  Table\Insert Records (SOHeader Table).Inputs[ADO NET Destination Input].ExternalColumns[TotalFOBSO]"
                       dataType="r8"
-                      name="TotalFOB" />
+                      name="TotalFOBSO" />
                     <externalMetadataColumn
                       refId="Package\SO Header  Table\Insert Records (SOHeader Table).Inputs[ADO NET Destination Input].ExternalColumns[TTSlip]"
                       dataType="dbTimeStamp"
@@ -438,79 +420,61 @@
                       cachedSortKeyPosition="1"
                       lineageId="Package\SO Header  Table\Sort STG.Outputs[Sort Output].Columns[SO]" />
                     <inputColumn
-                      refId="Package\SO Header  Table\Merge Join.Inputs[Merge Join Left Input].Columns[TotalFCLS]"
-                      cachedDataType="r8"
-                      cachedName="TotalFCLS"
-                      cachedSortKeyPosition="7"
-                      lineageId="Package\SO Header  Table\Sort STG.Outputs[Sort Output].Columns[TotalFCLS]" />
-                    <inputColumn
                       refId="Package\SO Header  Table\Merge Join.Inputs[Merge Join Left Input].Columns[SoldTo]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="SoldTo"
-                      cachedSortKeyPosition="8"
+                      cachedSortKeyPosition="7"
                       lineageId="Package\SO Header  Table\Sort STG.Outputs[Sort Output].Columns[SoldTo]" />
                     <inputColumn
                       refId="Package\SO Header  Table\Merge Join.Inputs[Merge Join Left Input].Columns[SoldToName]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="SoldToName"
-                      cachedSortKeyPosition="9"
+                      cachedSortKeyPosition="8"
                       lineageId="Package\SO Header  Table\Sort STG.Outputs[Sort Output].Columns[SoldToName]" />
                     <inputColumn
                       refId="Package\SO Header  Table\Merge Join.Inputs[Merge Join Left Input].Columns[ShipTo]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="ShipTo"
-                      cachedSortKeyPosition="10"
+                      cachedSortKeyPosition="9"
                       lineageId="Package\SO Header  Table\Sort STG.Outputs[Sort Output].Columns[ShipTo]" />
                     <inputColumn
                       refId="Package\SO Header  Table\Merge Join.Inputs[Merge Join Left Input].Columns[ShipToName]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="ShipToName"
-                      cachedSortKeyPosition="11"
+                      cachedSortKeyPosition="10"
                       lineageId="Package\SO Header  Table\Sort STG.Outputs[Sort Output].Columns[ShipToName]" />
                     <inputColumn
                       refId="Package\SO Header  Table\Merge Join.Inputs[Merge Join Left Input].Columns[DestinationPort]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="DestinationPort"
-                      cachedSortKeyPosition="12"
+                      cachedSortKeyPosition="11"
                       lineageId="Package\SO Header  Table\Sort STG.Outputs[Sort Output].Columns[DestinationPort]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Merge Join.Inputs[Merge Join Left Input].Columns[TotalCartons]"
-                      cachedDataType="i4"
-                      cachedName="TotalCartons"
-                      cachedSortKeyPosition="13"
-                      lineageId="Package\SO Header  Table\Sort STG.Outputs[Sort Output].Columns[TotalCartons]" />
                     <inputColumn
                       refId="Package\SO Header  Table\Merge Join.Inputs[Merge Join Left Input].Columns[PaymentTerm]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="PaymentTerm"
-                      cachedSortKeyPosition="14"
+                      cachedSortKeyPosition="12"
                       lineageId="Package\SO Header  Table\Sort STG.Outputs[Sort Output].Columns[PaymentTerm]" />
                     <inputColumn
                       refId="Package\SO Header  Table\Merge Join.Inputs[Merge Join Left Input].Columns[Incoterm]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Incoterm"
-                      cachedSortKeyPosition="15"
+                      cachedSortKeyPosition="13"
                       lineageId="Package\SO Header  Table\Sort STG.Outputs[Sort Output].Columns[Incoterm]" />
                     <inputColumn
                       refId="Package\SO Header  Table\Merge Join.Inputs[Merge Join Left Input].Columns[Currency]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Currency"
-                      cachedSortKeyPosition="16"
+                      cachedSortKeyPosition="14"
                       lineageId="Package\SO Header  Table\Sort STG.Outputs[Sort Output].Columns[Currency]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Merge Join.Inputs[Merge Join Left Input].Columns[TotalFOB]"
-                      cachedDataType="r8"
-                      cachedName="TotalFOB"
-                      cachedSortKeyPosition="17"
-                      lineageId="Package\SO Header  Table\Sort STG.Outputs[Sort Output].Columns[TotalFOB]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -560,79 +524,61 @@
                       cachedSortKeyPosition="1"
                       lineageId="Package\SO Header  Table\Sort Table.Outputs[Sort Output].Columns[SO]" />
                     <inputColumn
-                      refId="Package\SO Header  Table\Merge Join.Inputs[Merge Join Right Input].Columns[TotalFCLS]"
-                      cachedDataType="r8"
-                      cachedName="TotalFCLS"
-                      cachedSortKeyPosition="7"
-                      lineageId="Package\SO Header  Table\Sort Table.Outputs[Sort Output].Columns[TotalFCLS]" />
-                    <inputColumn
                       refId="Package\SO Header  Table\Merge Join.Inputs[Merge Join Right Input].Columns[SoldTo]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="SoldTo"
-                      cachedSortKeyPosition="8"
+                      cachedSortKeyPosition="7"
                       lineageId="Package\SO Header  Table\Sort Table.Outputs[Sort Output].Columns[SoldTo]" />
                     <inputColumn
                       refId="Package\SO Header  Table\Merge Join.Inputs[Merge Join Right Input].Columns[SoldToName]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="SoldToName"
-                      cachedSortKeyPosition="9"
+                      cachedSortKeyPosition="8"
                       lineageId="Package\SO Header  Table\Sort Table.Outputs[Sort Output].Columns[SoldToName]" />
                     <inputColumn
                       refId="Package\SO Header  Table\Merge Join.Inputs[Merge Join Right Input].Columns[ShipTo]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="ShipTo"
-                      cachedSortKeyPosition="10"
+                      cachedSortKeyPosition="9"
                       lineageId="Package\SO Header  Table\Sort Table.Outputs[Sort Output].Columns[ShipTo]" />
                     <inputColumn
                       refId="Package\SO Header  Table\Merge Join.Inputs[Merge Join Right Input].Columns[ShipToName]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="ShipToName"
-                      cachedSortKeyPosition="11"
+                      cachedSortKeyPosition="10"
                       lineageId="Package\SO Header  Table\Sort Table.Outputs[Sort Output].Columns[ShipToName]" />
                     <inputColumn
                       refId="Package\SO Header  Table\Merge Join.Inputs[Merge Join Right Input].Columns[DestinationPort]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="DestinationPort"
-                      cachedSortKeyPosition="12"
+                      cachedSortKeyPosition="11"
                       lineageId="Package\SO Header  Table\Sort Table.Outputs[Sort Output].Columns[DestinationPort]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Merge Join.Inputs[Merge Join Right Input].Columns[TotalCartons]"
-                      cachedDataType="i4"
-                      cachedName="TotalCartons"
-                      cachedSortKeyPosition="13"
-                      lineageId="Package\SO Header  Table\Sort Table.Outputs[Sort Output].Columns[TotalCartons]" />
                     <inputColumn
                       refId="Package\SO Header  Table\Merge Join.Inputs[Merge Join Right Input].Columns[PaymentTerm]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="PaymentTerm"
-                      cachedSortKeyPosition="14"
+                      cachedSortKeyPosition="12"
                       lineageId="Package\SO Header  Table\Sort Table.Outputs[Sort Output].Columns[PaymentTerm]" />
                     <inputColumn
                       refId="Package\SO Header  Table\Merge Join.Inputs[Merge Join Right Input].Columns[Incoterm]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Incoterm"
-                      cachedSortKeyPosition="15"
+                      cachedSortKeyPosition="13"
                       lineageId="Package\SO Header  Table\Sort Table.Outputs[Sort Output].Columns[Incoterm]" />
                     <inputColumn
                       refId="Package\SO Header  Table\Merge Join.Inputs[Merge Join Right Input].Columns[Currency]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Currency"
-                      cachedSortKeyPosition="16"
+                      cachedSortKeyPosition="14"
                       lineageId="Package\SO Header  Table\Sort Table.Outputs[Sort Output].Columns[Currency]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Merge Join.Inputs[Merge Join Right Input].Columns[TotalFOB]"
-                      cachedDataType="r8"
-                      cachedName="TotalFOB"
-                      cachedSortKeyPosition="17"
-                      lineageId="Package\SO Header  Table\Sort Table.Outputs[Sort Output].Columns[TotalFOB]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -727,19 +673,6 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFCLS]"
-                      dataType="r8"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFCLS]"
-                      name="TotalFCLS">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\SO Header  Table\Merge Join.Inputs[Merge Join Left Input].Columns[TotalFCLS]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SoldTo]"
                       dataType="wstr"
                       length="50"
@@ -810,19 +743,6 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalCartons]"
-                      dataType="i4"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalCartons]"
-                      name="TotalCartons">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\SO Header  Table\Merge Join.Inputs[Merge Join Left Input].Columns[TotalCartons]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[PaymentTerm]"
                       dataType="wstr"
                       length="50"
@@ -865,16 +785,17 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFOB]"
-                      dataType="r8"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFOB]"
-                      name="TotalFOB">
+                      refId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SO (1)]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SO (1)]"
+                      name="SO (1)">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\SO Header  Table\Merge Join.Inputs[Merge Join Left Input].Columns[TotalFOB]}</property>
+                          name="InputColumnID">#{Package\SO Header  Table\Merge Join.Inputs[Merge Join Right Input].Columns[SO]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -943,33 +864,6 @@
                           dataType="System.Int32"
                           description="The input column associated with this output column"
                           name="InputColumnID">#{Package\SO Header  Table\Merge Join.Inputs[Merge Join Right Input].Columns[INV]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SO (1)]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SO (1)]"
-                      name="SO (1)">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\SO Header  Table\Merge Join.Inputs[Merge Join Right Input].Columns[SO]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFCLS (1)]"
-                      dataType="r8"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFCLS (1)]"
-                      name="TotalFCLS (1)">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\SO Header  Table\Merge Join.Inputs[Merge Join Right Input].Columns[TotalFCLS]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1043,19 +937,6 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalCartons (1)]"
-                      dataType="i4"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalCartons (1)]"
-                      name="TotalCartons (1)">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\SO Header  Table\Merge Join.Inputs[Merge Join Right Input].Columns[TotalCartons]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[PaymentTerm (1)]"
                       dataType="wstr"
                       length="50"
@@ -1095,19 +976,6 @@
                           dataType="System.Int32"
                           description="The input column associated with this output column"
                           name="InputColumnID">#{Package\SO Header  Table\Merge Join.Inputs[Merge Join Right Input].Columns[Currency]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFOB (1)]"
-                      dataType="r8"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFOB (1)]"
-                      name="TotalFOB (1)">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\SO Header  Table\Merge Join.Inputs[Merge Join Right Input].Columns[TotalFOB]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1323,13 +1191,13 @@
                       name="Currency"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\SO Header  Table\SOHeader Table.Outputs[ADO NET Source Output].Columns[TotalFOB]"
+                      refId="Package\SO Header  Table\SOHeader Table.Outputs[ADO NET Source Output].Columns[TotalFOBSO]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\SO Header  Table\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[TotalFOB]"
-                      lineageId="Package\SO Header  Table\SOHeader Table.Outputs[ADO NET Source Output].Columns[TotalFOB]"
-                      name="TotalFOB"
+                      externalMetadataColumnId="Package\SO Header  Table\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[TotalFOBSO]"
+                      lineageId="Package\SO Header  Table\SOHeader Table.Outputs[ADO NET Source Output].Columns[TotalFOBSO]"
+                      name="TotalFOBSO"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\SO Header  Table\SOHeader Table.Outputs[ADO NET Source Output].Columns[TTSlip]"
@@ -1503,9 +1371,9 @@
                       length="50"
                       name="Currency" />
                     <externalMetadataColumn
-                      refId="Package\SO Header  Table\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[TotalFOB]"
+                      refId="Package\SO Header  Table\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[TotalFOBSO]"
                       dataType="r8"
-                      name="TotalFOB" />
+                      name="TotalFOBSO" />
                     <externalMetadataColumn
                       refId="Package\SO Header  Table\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[TTSlip]"
                       dataType="dbTimeStamp"
@@ -1648,10 +1516,10 @@
                       lineageId="Package\SO Header  Table\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[Currency]"
                       name="Currency" />
                     <outputColumn
-                      refId="Package\SO Header  Table\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[TotalFOB]"
+                      refId="Package\SO Header  Table\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[TotalFOBSO]"
                       dataType="r8"
-                      lineageId="Package\SO Header  Table\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[TotalFOB]"
-                      name="TotalFOB" />
+                      lineageId="Package\SO Header  Table\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[TotalFOBSO]"
+                      name="TotalFOBSO" />
                     <outputColumn
                       refId="Package\SO Header  Table\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[TTSlip]"
                       dataType="dbTimeStamp"
@@ -1845,22 +1713,6 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\SO Header  Table\Sort STG.Inputs[Sort Input].Columns[TotalFCLS]"
-                      cachedDataType="r8"
-                      cachedName="TotalFCLS"
-                      lineageId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Output].Columns[TotalFCLS]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">7</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\SO Header  Table\Sort STG.Inputs[Sort Input].Columns[SoldTo]"
                       cachedDataType="wstr"
                       cachedLength="50"
@@ -1874,7 +1726,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">8</property>
+                          name="NewSortKeyPosition">7</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -1891,7 +1743,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">9</property>
+                          name="NewSortKeyPosition">8</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -1908,7 +1760,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">10</property>
+                          name="NewSortKeyPosition">9</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -1925,7 +1777,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">11</property>
+                          name="NewSortKeyPosition">10</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -1942,23 +1794,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">12</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\SO Header  Table\Sort STG.Inputs[Sort Input].Columns[TotalCartons]"
-                      cachedDataType="i4"
-                      cachedName="TotalCartons"
-                      lineageId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Output].Columns[TotalCartons]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">13</property>
+                          name="NewSortKeyPosition">11</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -1975,7 +1811,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">14</property>
+                          name="NewSortKeyPosition">12</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -1992,7 +1828,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">15</property>
+                          name="NewSortKeyPosition">13</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2009,23 +1845,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">16</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\SO Header  Table\Sort STG.Inputs[Sort Input].Columns[TotalFOB]"
-                      cachedDataType="r8"
-                      cachedName="TotalFOB"
-                      lineageId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Output].Columns[TotalFOB]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">17</property>
+                          name="NewSortKeyPosition">14</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2143,26 +1963,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\SO Header  Table\Sort STG.Outputs[Sort Output].Columns[TotalFCLS]"
-                      dataType="r8"
-                      lineageId="Package\SO Header  Table\Sort STG.Outputs[Sort Output].Columns[TotalFCLS]"
-                      name="TotalFCLS"
-                      sortKeyPosition="7">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Output].Columns[TotalFCLS]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\SO Header  Table\Sort STG.Outputs[Sort Output].Columns[SoldTo]"
                       dataType="wstr"
                       length="50"
                       lineageId="Package\SO Header  Table\Sort STG.Outputs[Sort Output].Columns[SoldTo]"
                       name="SoldTo"
-                      sortKeyPosition="8">
+                      sortKeyPosition="7">
                       <properties>
                         <property
                           containsID="true"
@@ -2177,7 +1983,7 @@
                       length="50"
                       lineageId="Package\SO Header  Table\Sort STG.Outputs[Sort Output].Columns[SoldToName]"
                       name="SoldToName"
-                      sortKeyPosition="9">
+                      sortKeyPosition="8">
                       <properties>
                         <property
                           containsID="true"
@@ -2192,7 +1998,7 @@
                       length="50"
                       lineageId="Package\SO Header  Table\Sort STG.Outputs[Sort Output].Columns[ShipTo]"
                       name="ShipTo"
-                      sortKeyPosition="10">
+                      sortKeyPosition="9">
                       <properties>
                         <property
                           containsID="true"
@@ -2207,7 +2013,7 @@
                       length="50"
                       lineageId="Package\SO Header  Table\Sort STG.Outputs[Sort Output].Columns[ShipToName]"
                       name="ShipToName"
-                      sortKeyPosition="11">
+                      sortKeyPosition="10">
                       <properties>
                         <property
                           containsID="true"
@@ -2222,7 +2028,7 @@
                       length="50"
                       lineageId="Package\SO Header  Table\Sort STG.Outputs[Sort Output].Columns[DestinationPort]"
                       name="DestinationPort"
-                      sortKeyPosition="12">
+                      sortKeyPosition="11">
                       <properties>
                         <property
                           containsID="true"
@@ -2232,26 +2038,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\SO Header  Table\Sort STG.Outputs[Sort Output].Columns[TotalCartons]"
-                      dataType="i4"
-                      lineageId="Package\SO Header  Table\Sort STG.Outputs[Sort Output].Columns[TotalCartons]"
-                      name="TotalCartons"
-                      sortKeyPosition="13">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Output].Columns[TotalCartons]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\SO Header  Table\Sort STG.Outputs[Sort Output].Columns[PaymentTerm]"
                       dataType="wstr"
                       length="50"
                       lineageId="Package\SO Header  Table\Sort STG.Outputs[Sort Output].Columns[PaymentTerm]"
                       name="PaymentTerm"
-                      sortKeyPosition="14">
+                      sortKeyPosition="12">
                       <properties>
                         <property
                           containsID="true"
@@ -2266,7 +2058,7 @@
                       length="50"
                       lineageId="Package\SO Header  Table\Sort STG.Outputs[Sort Output].Columns[Incoterm]"
                       name="Incoterm"
-                      sortKeyPosition="15">
+                      sortKeyPosition="13">
                       <properties>
                         <property
                           containsID="true"
@@ -2281,27 +2073,13 @@
                       length="50"
                       lineageId="Package\SO Header  Table\Sort STG.Outputs[Sort Output].Columns[Currency]"
                       name="Currency"
-                      sortKeyPosition="16">
+                      sortKeyPosition="14">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Output].Columns[Currency]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\SO Header  Table\Sort STG.Outputs[Sort Output].Columns[TotalFOB]"
-                      dataType="r8"
-                      lineageId="Package\SO Header  Table\Sort STG.Outputs[Sort Output].Columns[TotalFOB]"
-                      name="TotalFOB"
-                      sortKeyPosition="17">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Output].Columns[TotalFOB]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -2458,7 +2236,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">7</property>
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2475,7 +2253,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">8</property>
+                          name="NewSortKeyPosition">7</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2492,7 +2270,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">9</property>
+                          name="NewSortKeyPosition">8</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2509,7 +2287,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">10</property>
+                          name="NewSortKeyPosition">9</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2526,7 +2304,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">11</property>
+                          name="NewSortKeyPosition">10</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2543,7 +2321,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">12</property>
+                          name="NewSortKeyPosition">11</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2559,7 +2337,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">13</property>
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2576,7 +2354,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">14</property>
+                          name="NewSortKeyPosition">12</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2593,7 +2371,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">15</property>
+                          name="NewSortKeyPosition">13</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2610,14 +2388,14 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">16</property>
+                          name="NewSortKeyPosition">14</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\SO Header  Table\Sort Table.Inputs[Sort Input].Columns[TotalFOB]"
+                      refId="Package\SO Header  Table\Sort Table.Inputs[Sort Input].Columns[TotalFOBSO]"
                       cachedDataType="r8"
-                      cachedName="TotalFOB"
-                      lineageId="Package\SO Header  Table\SOHeader Table.Outputs[ADO NET Source Output].Columns[TotalFOB]">
+                      cachedName="TotalFOBSO"
+                      lineageId="Package\SO Header  Table\SOHeader Table.Outputs[ADO NET Source Output].Columns[TotalFOBSO]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -2626,7 +2404,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">17</property>
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2893,8 +2671,7 @@
                       refId="Package\SO Header  Table\Sort Table.Outputs[Sort Output].Columns[TotalFCLS]"
                       dataType="r8"
                       lineageId="Package\SO Header  Table\Sort Table.Outputs[Sort Output].Columns[TotalFCLS]"
-                      name="TotalFCLS"
-                      sortKeyPosition="7">
+                      name="TotalFCLS">
                       <properties>
                         <property
                           containsID="true"
@@ -2909,7 +2686,7 @@
                       length="50"
                       lineageId="Package\SO Header  Table\Sort Table.Outputs[Sort Output].Columns[SoldTo]"
                       name="SoldTo"
-                      sortKeyPosition="8">
+                      sortKeyPosition="7">
                       <properties>
                         <property
                           containsID="true"
@@ -2924,7 +2701,7 @@
                       length="50"
                       lineageId="Package\SO Header  Table\Sort Table.Outputs[Sort Output].Columns[SoldToName]"
                       name="SoldToName"
-                      sortKeyPosition="9">
+                      sortKeyPosition="8">
                       <properties>
                         <property
                           containsID="true"
@@ -2939,7 +2716,7 @@
                       length="50"
                       lineageId="Package\SO Header  Table\Sort Table.Outputs[Sort Output].Columns[ShipTo]"
                       name="ShipTo"
-                      sortKeyPosition="10">
+                      sortKeyPosition="9">
                       <properties>
                         <property
                           containsID="true"
@@ -2954,7 +2731,7 @@
                       length="50"
                       lineageId="Package\SO Header  Table\Sort Table.Outputs[Sort Output].Columns[ShipToName]"
                       name="ShipToName"
-                      sortKeyPosition="11">
+                      sortKeyPosition="10">
                       <properties>
                         <property
                           containsID="true"
@@ -2969,7 +2746,7 @@
                       length="50"
                       lineageId="Package\SO Header  Table\Sort Table.Outputs[Sort Output].Columns[DestinationPort]"
                       name="DestinationPort"
-                      sortKeyPosition="12">
+                      sortKeyPosition="11">
                       <properties>
                         <property
                           containsID="true"
@@ -2982,8 +2759,7 @@
                       refId="Package\SO Header  Table\Sort Table.Outputs[Sort Output].Columns[TotalCartons]"
                       dataType="i4"
                       lineageId="Package\SO Header  Table\Sort Table.Outputs[Sort Output].Columns[TotalCartons]"
-                      name="TotalCartons"
-                      sortKeyPosition="13">
+                      name="TotalCartons">
                       <properties>
                         <property
                           containsID="true"
@@ -2998,7 +2774,7 @@
                       length="50"
                       lineageId="Package\SO Header  Table\Sort Table.Outputs[Sort Output].Columns[PaymentTerm]"
                       name="PaymentTerm"
-                      sortKeyPosition="14">
+                      sortKeyPosition="12">
                       <properties>
                         <property
                           containsID="true"
@@ -3013,7 +2789,7 @@
                       length="50"
                       lineageId="Package\SO Header  Table\Sort Table.Outputs[Sort Output].Columns[Incoterm]"
                       name="Incoterm"
-                      sortKeyPosition="15">
+                      sortKeyPosition="13">
                       <properties>
                         <property
                           containsID="true"
@@ -3028,7 +2804,7 @@
                       length="50"
                       lineageId="Package\SO Header  Table\Sort Table.Outputs[Sort Output].Columns[Currency]"
                       name="Currency"
-                      sortKeyPosition="16">
+                      sortKeyPosition="14">
                       <properties>
                         <property
                           containsID="true"
@@ -3038,17 +2814,16 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\SO Header  Table\Sort Table.Outputs[Sort Output].Columns[TotalFOB]"
+                      refId="Package\SO Header  Table\Sort Table.Outputs[Sort Output].Columns[TotalFOBSO]"
                       dataType="r8"
-                      lineageId="Package\SO Header  Table\Sort Table.Outputs[Sort Output].Columns[TotalFOB]"
-                      name="TotalFOB"
-                      sortKeyPosition="17">
+                      lineageId="Package\SO Header  Table\Sort Table.Outputs[Sort Output].Columns[TotalFOBSO]"
+                      name="TotalFOBSO">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\SO Header  Table\SOHeader Table.Outputs[ADO NET Source Output].Columns[TotalFOB]}</property>
+                          name="SortColumnId">#{Package\SO Header  Table\SOHeader Table.Outputs[ADO NET Source Output].Columns[TotalFOBSO]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -3243,11 +3018,6 @@
                       cachedName="INV"
                       lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[INV]" />
                     <inputColumn
-                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[TotalFCLS]"
-                      cachedDataType="r8"
-                      cachedName="TotalFCLS"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFCLS]" />
-                    <inputColumn
                       refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[SoldTo]"
                       cachedDataType="wstr"
                       cachedLength="50"
@@ -3278,11 +3048,6 @@
                       cachedName="DestinationPort"
                       lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[DestinationPort]" />
                     <inputColumn
-                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[TotalCartons]"
-                      cachedDataType="i4"
-                      cachedName="TotalCartons"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalCartons]" />
-                    <inputColumn
                       refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[PaymentTerm]"
                       cachedDataType="wstr"
                       cachedLength="50"
@@ -3300,11 +3065,6 @@
                       cachedLength="50"
                       cachedName="Currency"
                       lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Currency]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[TotalFOB]"
-                      cachedDataType="r8"
-                      cachedName="TotalFOB"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFOB]" />
                     <inputColumn
                       refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[LoadingDate (1)]"
                       cachedDataType="dbTimeStamp"
@@ -3333,11 +3093,6 @@
                       cachedLength="50"
                       cachedName="INV (1)"
                       lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[INV (1)]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[TotalFCLS (1)]"
-                      cachedDataType="r8"
-                      cachedName="TotalFCLS (1)"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFCLS (1)]" />
                     <inputColumn
                       refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[SoldTo (1)]"
                       cachedDataType="wstr"
@@ -3369,11 +3124,6 @@
                       cachedName="DestinationPort (1)"
                       lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[DestinationPort (1)]" />
                     <inputColumn
-                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[TotalCartons (1)]"
-                      cachedDataType="i4"
-                      cachedName="TotalCartons (1)"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalCartons (1)]" />
-                    <inputColumn
                       refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[PaymentTerm (1)]"
                       cachedDataType="wstr"
                       cachedLength="50"
@@ -3391,11 +3141,6 @@
                       cachedLength="50"
                       cachedName="Currency (1)"
                       lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Currency (1)]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Split Records.Inputs[Conditional Split Input].Columns[TotalFOB (1)]"
-                      cachedDataType="r8"
-                      cachedName="TotalFOB (1)"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFOB (1)]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -3443,13 +3188,13 @@
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">(#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[LoadingDate]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[LoadingDate (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[OrderType]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[OrderType (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[OrderDate]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[OrderDate (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[PO]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[PO (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[INV]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[INV (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFCLS]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFCLS (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SoldTo]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SoldTo (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SoldToName]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SoldToName (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[ShipTo]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[ShipTo (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[ShipToName]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[ShipToName (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[DestinationPort]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[DestinationPort (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalCartons]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalCartons (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[PaymentTerm]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[PaymentTerm (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Incoterm]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Incoterm (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Currency]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Currency (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFOB]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFOB (1)]})</property>
+                      name="Expression">(#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[LoadingDate]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[LoadingDate (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[OrderType]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[OrderType (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[OrderDate]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[OrderDate (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[PO]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[PO (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[INV]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[INV (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SoldTo]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SoldTo (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SoldToName]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SoldToName (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[ShipTo]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[ShipTo (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[ShipToName]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[ShipToName (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[DestinationPort]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[DestinationPort (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[PaymentTerm]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[PaymentTerm (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Incoterm]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Incoterm (1)]}) || (#{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Currency]} != #{Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Currency (1)]})</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">(LoadingDate != [LoadingDate (1)]) || (OrderType != [OrderType (1)]) || (OrderDate != [OrderDate (1)]) || (PO != [PO (1)]) || (INV != [INV (1)]) || (TotalFCLS != [TotalFCLS (1)]) || (SoldTo != [SoldTo (1)]) || (SoldToName != [SoldToName (1)]) || (ShipTo != [ShipTo (1)]) || (ShipToName != [ShipToName (1)]) || (DestinationPort != [DestinationPort (1)]) || (TotalCartons != [TotalCartons (1)]) || (PaymentTerm != [PaymentTerm (1)]) || (Incoterm != [Incoterm (1)]) || (Currency != [Currency (1)]) || (TotalFOB != [TotalFOB (1)])</property>
+                      name="FriendlyExpression">(LoadingDate != [LoadingDate (1)]) || (OrderType != [OrderType (1)]) || (OrderDate != [OrderDate (1)]) || (PO != [PO (1)]) || (INV != [INV (1)]) || (SoldTo != [SoldTo (1)]) || (SoldToName != [SoldToName (1)]) || (ShipTo != [ShipTo (1)]) || (ShipToName != [ShipToName (1)]) || (DestinationPort != [DestinationPort (1)]) || (PaymentTerm != [PaymentTerm (1)]) || (Incoterm != [Incoterm (1)]) || (Currency != [Currency (1)])</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -3610,15 +3355,6 @@ WHERE SyncDate = (
                       name="SO"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Output].Columns[TotalFCLS]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[TotalFCLS]"
-                      lineageId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Output].Columns[TotalFCLS]"
-                      name="TotalFCLS"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Output].Columns[SoldTo]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
@@ -3669,15 +3405,6 @@ WHERE SyncDate = (
                       name="DestinationPort"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Output].Columns[TotalCartons]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[TotalCartons]"
-                      lineageId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Output].Columns[TotalCartons]"
-                      name="TotalCartons"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Output].Columns[PaymentTerm]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
@@ -3706,15 +3433,6 @@ WHERE SyncDate = (
                       length="50"
                       lineageId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Output].Columns[Currency]"
                       name="Currency"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Output].Columns[TotalFOB]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[TotalFOB]"
-                      lineageId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Output].Columns[TotalFOB]"
-                      name="TotalFOB"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Output].Columns[SyncDate]"
@@ -3757,10 +3475,6 @@ WHERE SyncDate = (
                       length="50"
                       name="SO" />
                     <externalMetadataColumn
-                      refId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[TotalFCLS]"
-                      dataType="r8"
-                      name="TotalFCLS" />
-                    <externalMetadataColumn
                       refId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[SoldTo]"
                       dataType="wstr"
                       length="50"
@@ -3786,10 +3500,6 @@ WHERE SyncDate = (
                       length="50"
                       name="DestinationPort" />
                     <externalMetadataColumn
-                      refId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[TotalCartons]"
-                      dataType="i4"
-                      name="TotalCartons" />
-                    <externalMetadataColumn
                       refId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[PaymentTerm]"
                       dataType="wstr"
                       length="50"
@@ -3804,10 +3514,6 @@ WHERE SyncDate = (
                       dataType="wstr"
                       length="50"
                       name="Currency" />
-                    <externalMetadataColumn
-                      refId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[TotalFOB]"
-                      dataType="r8"
-                      name="TotalFOB" />
                     <externalMetadataColumn
                       refId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[SyncDate]"
                       dataType="dbTimeStamp"
@@ -3854,11 +3560,6 @@ WHERE SyncDate = (
                       lineageId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[SO]"
                       name="SO" />
                     <outputColumn
-                      refId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[TotalFCLS]"
-                      dataType="r8"
-                      lineageId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[TotalFCLS]"
-                      name="TotalFCLS" />
-                    <outputColumn
                       refId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[SoldTo]"
                       dataType="wstr"
                       length="50"
@@ -3889,11 +3590,6 @@ WHERE SyncDate = (
                       lineageId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[DestinationPort]"
                       name="DestinationPort" />
                     <outputColumn
-                      refId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[TotalCartons]"
-                      dataType="i4"
-                      lineageId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[TotalCartons]"
-                      name="TotalCartons" />
-                    <outputColumn
                       refId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[PaymentTerm]"
                       dataType="wstr"
                       length="50"
@@ -3911,11 +3607,6 @@ WHERE SyncDate = (
                       length="50"
                       lineageId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[Currency]"
                       name="Currency" />
-                    <outputColumn
-                      refId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[TotalFOB]"
-                      dataType="r8"
-                      lineageId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[TotalFOB]"
-                      name="TotalFOB" />
                     <outputColumn
                       refId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[SyncDate]"
                       dataType="dbTimeStamp"
@@ -3962,17 +3653,14 @@ WHERE SyncDate = (
  ,[OrderDate] = ?
  ,[PO] = ?
  ,[INV] = ?
- ,[TotalFCLS] = ?
  ,[SoldTo] = ?
  ,[SoldToName] = ?
  ,[ShipTo] = ?
  ,[ShipToName] = ?
  ,[DestinationPort] = ?
- ,[TotalCartons] = ?
  ,[PaymentTerm] = ?
  ,[Incoterm] = ?
  ,[Currency] = ?
- ,[TotalFOB] = ?
  WHERE [SO]=?</property>
                 <property
                   dataType="System.Int32"
@@ -4001,7 +3689,7 @@ WHERE SyncDate = (
                       cachedLength="50"
                       cachedName="SO"
                       cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].ExternalColumns[Param_16]"
+                      externalMetadataColumnId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].ExternalColumns[Param_13]"
                       lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SO]" />
                     <inputColumn
                       refId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].Columns[LoadingDate]"
@@ -4037,79 +3725,61 @@ WHERE SyncDate = (
                       externalMetadataColumnId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
                       lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[INV]" />
                     <inputColumn
-                      refId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].Columns[TotalFCLS]"
-                      cachedDataType="r8"
-                      cachedName="TotalFCLS"
-                      externalMetadataColumnId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFCLS]" />
-                    <inputColumn
                       refId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].Columns[SoldTo]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="SoldTo"
-                      externalMetadataColumnId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      externalMetadataColumnId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
                       lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SoldTo]" />
                     <inputColumn
                       refId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].Columns[SoldToName]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="SoldToName"
-                      externalMetadataColumnId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      externalMetadataColumnId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
                       lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[SoldToName]" />
                     <inputColumn
                       refId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].Columns[ShipTo]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="ShipTo"
-                      externalMetadataColumnId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      externalMetadataColumnId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
                       lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[ShipTo]" />
                     <inputColumn
                       refId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].Columns[ShipToName]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="ShipToName"
-                      externalMetadataColumnId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
+                      externalMetadataColumnId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
                       lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[ShipToName]" />
                     <inputColumn
                       refId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].Columns[DestinationPort]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="DestinationPort"
-                      externalMetadataColumnId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
+                      externalMetadataColumnId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
                       lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[DestinationPort]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].Columns[TotalCartons]"
-                      cachedDataType="i4"
-                      cachedName="TotalCartons"
-                      externalMetadataColumnId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalCartons]" />
                     <inputColumn
                       refId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].Columns[PaymentTerm]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="PaymentTerm"
-                      externalMetadataColumnId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].ExternalColumns[Param_12]"
+                      externalMetadataColumnId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
                       lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[PaymentTerm]" />
                     <inputColumn
                       refId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].Columns[Incoterm]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Incoterm"
-                      externalMetadataColumnId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].ExternalColumns[Param_13]"
+                      externalMetadataColumnId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
                       lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Incoterm]" />
                     <inputColumn
                       refId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].Columns[Currency]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Currency"
-                      externalMetadataColumnId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].ExternalColumns[Param_14]"
+                      externalMetadataColumnId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].ExternalColumns[Param_12]"
                       lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[Currency]" />
-                    <inputColumn
-                      refId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].Columns[TotalFOB]"
-                      cachedDataType="r8"
-                      cachedName="TotalFOB"
-                      externalMetadataColumnId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].ExternalColumns[Param_15]"
-                      lineageId="Package\SO Header  Table\Merge Join.Outputs[Merge Join Output].Columns[TotalFOB]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -4173,7 +3843,8 @@ WHERE SyncDate = (
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="50"
                       name="Param_5">
                       <properties>
                         <property
@@ -4191,7 +3862,7 @@ WHERE SyncDate = (
                         <property
                           dataType="System.Int32"
                           description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
+                          name="DBParamInfoFlags">65</property>
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
@@ -4244,7 +3915,8 @@ WHERE SyncDate = (
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="50"
                       name="Param_11">
                       <properties>
                         <property
@@ -4262,7 +3934,7 @@ WHERE SyncDate = (
                         <property
                           dataType="System.Int32"
                           description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
+                          name="DBParamInfoFlags">65</property>
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
@@ -4275,41 +3947,6 @@ WHERE SyncDate = (
                           dataType="System.Int32"
                           description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
                           name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].ExternalColumns[Param_14]"
-                      dataType="wstr"
-                      length="50"
-                      name="Param_14">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].ExternalColumns[Param_15]"
-                      dataType="r8"
-                      name="Param_15">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\SO Header  Table\Update Records (SOHeader Table).Inputs[OLE DB Command Input].ExternalColumns[Param_16]"
-                      dataType="wstr"
-                      length="50"
-                      name="Param_16">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
                       </properties>
                     </externalMetadataColumn>
                   </externalMetadataColumns>
@@ -4351,14 +3988,14 @@ WHERE SyncDate = (
           <paths>
             <path
               refId="Package\SO Header  Table.Paths[ADO NET Source Output]"
-              endId="Package\SO Header  Table\Sort STG.Inputs[Sort Input]"
-              name="ADO NET Source Output"
-              startId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Output]" />
-            <path
-              refId="Package\SO Header  Table.Paths[ADO NET Source Output1]"
               endId="Package\SO Header  Table\Sort Table.Inputs[Sort Input]"
               name="ADO NET Source Output"
               startId="Package\SO Header  Table\SOHeader Table.Outputs[ADO NET Source Output]" />
+            <path
+              refId="Package\SO Header  Table.Paths[ADO NET Source Output1]"
+              endId="Package\SO Header  Table\Sort STG.Inputs[Sort Input]"
+              name="ADO NET Source Output"
+              startId="Package\SO Header  Table\STG_SOHeader.Outputs[ADO NET Source Output]" />
             <path
               refId="Package\SO Header  Table.Paths[Insert (SO not Match)]"
               endId="Package\SO Header  Table\Insert Records (SOHeader Table).Inputs[ADO NET Destination Input]"
@@ -4414,59 +4051,47 @@ WHERE SyncDate = (
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="142,42"
-          Id="Package\SO Header  Table\Split Records"
-          TopLeft="516,288.666666666667" />
-        <NodeLayout
-          Size="129,42"
-          Id="Package\SO Header  Table\Sort Table"
-          TopLeft="533,102" />
-        <NodeLayout
-          Size="157,42"
-          Id="Package\SO Header  Table\SOHeader Table"
-          TopLeft="617,15" />
-        <NodeLayout
-          Size="132,42"
-          Id="Package\SO Header  Table\Merge Join"
-          TopLeft="379,212" />
+          Size="153,42"
+          Id="Package\SO Header  Table\STG_SOHeader"
+          TopLeft="30,55" />
         <NodeLayout
           Size="123,42"
           Id="Package\SO Header  Table\Sort STG"
-          TopLeft="247,102" />
+          TopLeft="133.75,141.25" />
         <NodeLayout
-          Size="237,42"
-          Id="Package\SO Header  Table\Insert Records (SOHeader Table)"
-          TopLeft="85.6666666666666,395" />
+          Size="129,42"
+          Id="Package\SO Header  Table\Sort Table"
+          TopLeft="548.75,143.75" />
         <NodeLayout
-          Size="153,42"
-          Id="Package\SO Header  Table\STG_SOHeader"
-          TopLeft="97,25" />
+          Size="157,42"
+          Id="Package\SO Header  Table\SOHeader Table"
+          TopLeft="626.25,50" />
         <EdgeLayout
-          Id="Package\SO Header  Table.Paths[ADO NET Source Output1]"
-          TopLeft="695.5,57">
+          Id="Package\SO Header  Table.Paths[ADO NET Source Output]"
+          TopLeft="704.75,92">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-98,45"
+              EndConnector="-91.5,51.75"
               Start="0,0"
-              End="-98,37.5">
+              End="-91.5,44.25">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.5" />
+                    End="0,21.875" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,18.5"
-                    Point2="0,22.5"
-                    Point3="-4,22.5" />
+                    Point1="0,21.875"
+                    Point2="0,25.875"
+                    Point3="-4,25.875" />
                   <mssgle:LineSegment
-                    End="-94,22.5" />
+                    End="-87.5,25.875" />
                   <mssgle:CubicBezierSegment
-                    Point1="-94,22.5"
-                    Point2="-98,22.5"
-                    Point3="-98,26.5" />
+                    Point1="-87.5,25.875"
+                    Point2="-91.5,25.875"
+                    Point3="-91.5,29.875" />
                   <mssgle:LineSegment
-                    End="-98,37.5" />
+                    End="-91.5,44.25" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4476,31 +4101,69 @@ WHERE SyncDate = (
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\SO Header  Table.Paths[ADO NET Source Output]"
-          TopLeft="173.5,67">
+          Id="Package\SO Header  Table.Paths[ADO NET Source Output1]"
+          TopLeft="106.5,97">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="135,35"
+              EndConnector="88.75,44.25"
               Start="0,0"
-              End="135,27.5">
+              End="88.75,36.75">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,13.5" />
+                    End="0,18.125" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,13.5"
-                    Point2="0,17.5"
-                    Point3="4,17.5" />
+                    Point1="0,18.125"
+                    Point2="0,22.125"
+                    Point3="4,22.125" />
                   <mssgle:LineSegment
-                    End="131,17.5" />
+                    End="84.75,22.125" />
                   <mssgle:CubicBezierSegment
-                    Point1="131,17.5"
-                    Point2="135,17.5"
-                    Point3="135,21.5" />
+                    Point1="84.75,22.125"
+                    Point2="88.75,22.125"
+                    Point3="88.75,26.125" />
                   <mssgle:LineSegment
-                    End="135,27.5" />
+                    End="88.75,36.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="132,42"
+          Id="Package\SO Header  Table\Merge Join"
+          TopLeft="303.75,231.25" />
+        <EdgeLayout
+          Id="Package\SO Header  Table.Paths[Sort Output]"
+          TopLeft="195.25,183.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="153.833333333333,48"
+              Start="0,0"
+              End="153.833333333333,40.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.4550898203593" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.4550898203593"
+                    Point2="0,28.4550898203593"
+                    Point3="4,28.4550898203593" />
+                  <mssgle:LineSegment
+                    End="149.833333333333,28.4550898203593" />
+                  <mssgle:CubicBezierSegment
+                    Point1="149.833333333333,28.4550898203593"
+                    Point2="153.833333333333,28.4550898203593"
+                    Point3="153.833333333333,32.4550898203593" />
+                  <mssgle:LineSegment
+                    End="153.833333333333,40.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4511,185 +4174,167 @@ WHERE SyncDate = (
         </EdgeLayout>
         <EdgeLayout
           Id="Package\SO Header  Table.Paths[Sort Output1]"
-          TopLeft="597.5,144">
+          TopLeft="613.25,185.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-131.833333333333,68"
+              EndConnector="-222.833333333333,45.5"
               Start="0,0"
-              End="-131.833333333333,60.5">
+              End="-222.833333333333,38">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.311377245509" />
+                    End="0,22.9730538922156" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,36.311377245509"
-                    Point2="0,40.311377245509"
-                    Point3="-4,40.311377245509" />
+                    Point1="0,22.9730538922156"
+                    Point2="0,26.9730538922156"
+                    Point3="-4,26.9730538922156" />
                   <mssgle:LineSegment
-                    End="-127.833333333333,40.311377245509" />
+                    End="-218.833333333333,26.9730538922156" />
                   <mssgle:CubicBezierSegment
-                    Point1="-127.833333333333,40.311377245509"
-                    Point2="-131.833333333333,40.311377245509"
-                    Point3="-131.833333333333,44.311377245509" />
+                    Point1="-218.833333333333,26.9730538922156"
+                    Point2="-222.833333333333,26.9730538922156"
+                    Point3="-222.833333333333,30.9730538922156" />
                   <mssgle:LineSegment
-                    End="-131.833333333333,60.5" />
+                    End="-222.833333333333,38" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SO Header  Table.Paths[Sort Output]"
-          TopLeft="308.5,144">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="115.833333333333,68"
-              Start="0,0"
-              End="115.833333333333,60.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.311377245509" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,36.311377245509"
-                    Point2="0,40.311377245509"
-                    Point3="4,40.311377245509" />
-                  <mssgle:LineSegment
-                    End="111.833333333333,40.311377245509" />
-                  <mssgle:CubicBezierSegment
-                    Point1="111.833333333333,40.311377245509"
-                    Point2="115.833333333333,40.311377245509"
-                    Point3="115.833333333333,44.311377245509" />
-                  <mssgle:LineSegment
-                    End="115.833333333333,60.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SO Header  Table.Paths[Merge Join Output]"
-          TopLeft="445,254">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="142,34.6666666666666"
-              Start="0,0"
-              End="142,27.1666666666666">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.3333333333333" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.3333333333333"
-                    Point2="0,17.3333333333333"
-                    Point3="4,17.3333333333333" />
-                  <mssgle:LineSegment
-                    End="138,17.3333333333333" />
-                  <mssgle:CubicBezierSegment
-                    Point1="138,17.3333333333333"
-                    Point2="142,17.3333333333333"
-                    Point3="142,21.3333333333333" />
-                  <mssgle:LineSegment
-                    End="142,27.1666666666666" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SO Header  Table.Paths[Insert (SO not Match)]"
-          TopLeft="564.666666666667,330.666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-360.5,64.3333333333334"
-              Start="0,0"
-              End="-360.5,56.8333333333334">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22.1634168987929" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.1634168987929"
-                    Point2="0,26.1634168987929"
-                    Point3="-4,26.1634168987929" />
-                  <mssgle:LineSegment
-                    End="-356.5,26.1634168987929" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-356.5,26.1634168987929"
-                    Point2="-360.5,26.1634168987929"
-                    Point3="-360.5,30.1634168987929" />
-                  <mssgle:LineSegment
-                    End="-360.5,56.8333333333334" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-229.01333984375,31.1634168987929,97.5266796875,11.609375"
-              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="243,42"
-          Id="Package\SO Header  Table\Update Records (SOHeader Table)"
-          TopLeft="624,392" />
+          Size="142,42"
+          Id="Package\SO Header  Table\Split Records"
+          TopLeft="452.5,311.25" />
         <EdgeLayout
-          Id="Package\SO Header  Table.Paths[Update (SO Match)]"
-          TopLeft="609.333333333333,330.666666666667">
+          Id="Package\SO Header  Table.Paths[Merge Join Output]"
+          TopLeft="369.75,273.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="136.166666666667,61.3333333333334"
+              EndConnector="153.75,38.0000000000001"
               Start="0,0"
-              End="136.166666666667,53.8333333333334">
+              End="153.75,30.5000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.9433611884865" />
+                    End="0,15" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20.9433611884865"
-                    Point2="0,24.9433611884865"
-                    Point3="4,24.9433611884865" />
+                    Point1="0,15"
+                    Point2="0,19"
+                    Point3="4,19" />
                   <mssgle:LineSegment
-                    End="132.166666666667,24.9433611884865" />
+                    End="149.75,19" />
                   <mssgle:CubicBezierSegment
-                    Point1="132.166666666667,24.9433611884865"
-                    Point2="136.166666666667,24.9433611884865"
-                    Point3="136.166666666667,28.9433611884865" />
+                    Point1="149.75,19"
+                    Point2="153.75,19"
+                    Point3="153.75,23" />
                   <mssgle:LineSegment
-                    End="136.166666666667,53.8333333333334" />
+                    End="153.75,30.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="237,42"
+          Id="Package\SO Header  Table\Insert Records (SOHeader Table)"
+          TopLeft="53.75,400" />
+        <NodeLayout
+          Size="243,42"
+          Id="Package\SO Header  Table\Update Records (SOHeader Table)"
+          TopLeft="563.75,400" />
+        <EdgeLayout
+          Id="Package\SO Header  Table.Paths[Insert (SO not Match)]"
+          TopLeft="501.166666666667,353.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-328.916666666667,46.7499999999999"
+              Start="0,0"
+              End="-328.916666666667,39.2499999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.0125348189415" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.0125348189415"
+                    Point2="0,19.0125348189415"
+                    Point3="-4,19.0125348189415" />
+                  <mssgle:LineSegment
+                    End="-324.916666666667,19.0125348189415" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-324.916666666667,19.0125348189415"
+                    Point2="-328.916666666667,19.0125348189415"
+                    Point3="-328.916666666667,23.0125348189415" />
+                  <mssgle:LineSegment
+                    End="-328.916666666667,39.2499999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="25.4076497395834,29.9433611884865,85.3513671875,11.609375"
+              BoundingBox="-213.221673177083,24.0125348189415,97.5266796875,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SO Header  Table.Paths[Update (SO Match)]"
+          TopLeft="545.833333333333,353.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="139.416666666667,46.7499999999999"
+              Start="0,0"
+              End="139.416666666667,39.2499999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.0125348189415" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.0125348189415"
+                    Point2="0,19.0125348189415"
+                    Point3="4,19.0125348189415" />
+                  <mssgle:LineSegment
+                    End="135.416666666667,19.0125348189415" />
+                  <mssgle:CubicBezierSegment
+                    Point1="135.416666666667,19.0125348189415"
+                    Point2="139.416666666667,19.0125348189415"
+                    Point3="139.416666666667,23.0125348189415" />
+                  <mssgle:LineSegment
+                    End="139.416666666667,39.2499999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="27.0326497395833,24.0125348189415,85.3513671875,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\SO Header  Table\STG_SOHeader">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\SO Header  Table\SOHeader Table">
     <Properties>
@@ -4700,14 +4345,6 @@ WHERE SyncDate = (
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\SO Header  Table\Insert Records (SOHeader Table)">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\SO Header  Table\STG_SOHeader">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
