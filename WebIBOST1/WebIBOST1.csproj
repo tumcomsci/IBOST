@@ -120,6 +120,7 @@
       <DependentUpon>ModelData.edmx</DependentUpon>
       <LastGenOutput>ModelData.cs</LastGenOutput>
     </Content>
+    <Content Include="SoForm.aspx" />
     <Content Include="source\canvasjs.js" />
     <Content Include="source\excanvas.js" />
     <Content Include="source\JavaScript.js" />
@@ -225,6 +226,13 @@
       <DependentUpon>ModelData.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SoForm.aspx.cs">
+      <DependentUpon>SoForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SoForm.aspx.designer.cs">
+      <DependentUpon>SoForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SOHeader.cs">
       <DependentUpon>ModelData.tt</DependentUpon>
     </Compile>

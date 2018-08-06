@@ -40,35 +40,39 @@ namespace WebIBOST1
 
             //Rows
             WebIBOST1.IBOrderTrackingEntities oConnect = new IBOrderTrackingEntities();
-            var soItem = oConnect.SOHeaders.ToList();
-
-            foreach (var row in soItem)
+            if(oConnect.SOHeaders.Count() > 0)
             {
-                noCol = 0;
-                //Add Detail to table
-                TableRow oDetail = new TableRow();
-                oDetail.TableSection = TableRowSection.TableBody;
+                var soItem = oConnect.SOHeaders.ToList();
 
-                Type oType = row.GetType();
-                PropertyInfo[] props = oType.GetProperties();
-                foreach (var prop in props)
+                foreach (var row in soItem)
                 {
-                    //Row 1 Col 1
-                    if (noCol < 9)
+                    noCol = 0;
+                    //Add Detail to table
+                    TableRow oDetail = new TableRow();
+                    oDetail.TableSection = TableRowSection.TableBody;
+
+                    Type oType = row.GetType();
+                    PropertyInfo[] props = oType.GetProperties();
+                    foreach (var prop in props)
                     {
-                        TableCell oR1 = new TableCell();
-                        oR1.Text = prop.GetValue(row) != null ? prop.GetValue(row).ToString() : "";
-                        oDetail.Cells.Add(oR1);
+                        //Row 1 Col 1
+                        if (noCol < 9)
+                        {
+                            TableCell oR1 = new TableCell();
+                            oR1.Text = prop.GetValue(row) != null ? prop.GetValue(row).ToString() : "";
+                            oDetail.Cells.Add(oR1);
+                        }
+                        noCol++;
                     }
-                    noCol++;
+                    // Finish 1 Row
+                    tblData.Rows.Add(oDetail);
                 }
-                // Finish 1 Row
-                tblData.Rows.Add(oDetail);
+
+
+                // Add class
+                tblData.Attributes.Add("class", "table table-striped table-bordered table-hover");
+
             }
-
-
-            // Add class
-            tblData.Attributes.Add("class", "table table-striped table-bordered table-hover");
 
         }
 
