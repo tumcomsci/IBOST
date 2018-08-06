@@ -30,7 +30,7 @@ namespace WebIBOST1.DataModel
             oItem.indexLabelFontSize = 20;
             oItem.startAngle = 60;
             oItem.indexLabel = "{label} - {y}%";
-            oItem.toolTipContent = "<b>{label}:</b>";
+            oItem.toolTipContent = "<b>{label}:{y}%</b>";
             oItem.dataPoints = new List<ObjectData.OdataPoints>();
 
             ObjectData.OdataPoints oOne = new ObjectData.OdataPoints();

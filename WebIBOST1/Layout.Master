@@ -71,7 +71,12 @@
                                     </ul>
                                 </li>
                             </ul>
-                            <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Mark Ottoooooooooooo</a></p>
+                            <p class="navbar-text navbar-right">Signed in as 
+                                <a href="#" class="navbar-link">
+                                 <asp:Label runat="server" ID="lblLogin"></asp:Label>
+                                   
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </nav>

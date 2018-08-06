@@ -11,7 +11,12 @@ namespace WebIBOST1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            InitUser();
+        }
 
+        private void InitUser()
+        {
+            lblLogin.Text = Environment.UserDomainName+ Environment.UserName  ;
         }
     }
 }
