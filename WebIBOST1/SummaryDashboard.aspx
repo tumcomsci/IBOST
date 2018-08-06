@@ -6,12 +6,12 @@
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    
-               <br />
-                <br />
-                <br />
-                <br />
-                
+
+    <br />
+    <br />
+    <br />
+    <br />
+
     <div>
         <%--  <script>
             window.onload = function () {
@@ -41,6 +41,20 @@
 
                         ]
                     }]
+
+                [{
+            "type":"doughnut",
+            "indexLabelFontSize":20,
+            "indexLabelFontFamily":"Garamond",
+            "indexLabelFontColor":"darkgrey",
+            "indexLabelLineColor":"darkgrey",
+            "indexLabelPlacement":"outside",
+            "showInLegend":true,
+            "dataPoints":[
+            {"y":25,"legendText":"SALE","indexLabel":"SALE 25 %","color":"Red"}
+            ]
+            }]
+
                 });
                 chart.render();
 
@@ -60,6 +74,44 @@
 
         </div>--%>
 
+        <script lang="text/javascript">
+            window.onload = function () {
+
+                var oResult;
+                var oData = getSummary('http://localhost:62239').then(function (res) {
+                    oResult = res;
+                    console.log($.parseJSON(res));
+                    var chart = new CanvasJS.Chart("chartContainer",
+                        {
+                            title: {
+                                text: "IB ORDER & SHIPMENT TRACKING",
+                                fontFamily: "Impact",
+                                fontWeight: "normal"
+                            },
+
+                            legend: {
+                                verticalAlign: "bottom",
+                                horizontalAlign: "center"
+                            },
+                            data: $.parseJSON(res)
+                        });
+                    chart.render();
+                });
+               
+
+            }
+
+            let getSummary = function (strUrl) {
+                strUrl = strUrl + '/api/SO';
+
+                return new Promise(function (resolve, reject) {
+                    resolve($.getJSON(strUrl));
+                })
+            }
+
+        </script>
+
+
         <div class="container">
             <div class="panel-group">
                 <div class="panel panel-primary">
@@ -73,44 +125,6 @@
                     </div>
                 </div>
 
-                <script type="text/javascript">
-                    window.onload = function () {
-                        var chart = new CanvasJS.Chart("chartContainer",
-                            {
-                                title: {
-                                    text: "Doughnut chart working",
-                                    fontFamily: "Impact",
-                                    fontWeight: "normal"
-                                },
-
-                                legend: {
-                                    verticalAlign: "bottom",
-                                    horizontalAlign: "center"
-                                },
-                                data: [
-                                    {
-                                        //startAngle: 45,
-                                        indexLabelFontSize: 20,
-                                        indexLabelFontFamily: "Garamond",
-                                        indexLabelFontColor: "darkgrey",
-                                        indexLabelLineColor: "darkgrey",
-                                        indexLabelPlacement: "outside",
-                                        type: "doughnut",
-                                        showInLegend: true,
-                                        dataPoints: [
-                                            { y: 25, legendText: "SALES", indexLabel: "SALES100%", color: "red" },
-                                            { y: 25, legendText: "SALES CO ", indexLabel: "SALES CO 100%", color: "red" },
-                                            { y: 25, legendText: "PC", indexLabel: "PC 100%", color: "yellow" },
-                                            { y: 25, legendText: "STICKER", indexLabel: "STICKER 100%", color: "yellow" },
-                                            { y: 25, legendText: "DOCMENT", indexLabel: "DOCMENT 100%", color: "#66FF33" }
-                                        ]
-                                    }
-                                ]
-                            });
-
-                        chart.render();
-                    }
-                </script>
                 <script src="source/canvasjs.js"></script>
             </div>
 
@@ -122,21 +136,6 @@
                     <h2>SO Header Data</h2>
                 </div>
                 <div class="panel-body">
-
-                  <%--  <asp:GridView ID="grdworking" runat="server" CellPadding="2" ForeColor="Black" GridLines="None" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px">
-                        <AlternatingRowStyle BackColor="PaleGoldenrod" />
-                        <Columns>
-                            <asp:TemplateField></asp:TemplateField>
-                        </Columns>
-                        <FooterStyle BackColor="Tan" />
-                        <HeaderStyle BackColor="Tan" Font-Bold="True" />
-                        <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" HorizontalAlign="Center" />
-                        <SelectedRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
-                        <SortedAscendingCellStyle BackColor="#FAFAE7" />
-                        <SortedAscendingHeaderStyle BackColor="#DAC09E" />
-                        <SortedDescendingCellStyle BackColor="#E1DB9C" />
-                        <SortedDescendingHeaderStyle BackColor="#C2A47B" />
-                    </asp:GridView>--%>
                     <asp:Table ID="tblData" runat="server"></asp:Table>
                 </div>
             </div>
