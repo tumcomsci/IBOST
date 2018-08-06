@@ -25,7 +25,7 @@
           <Property Name="PaymentTerm" Type="nvarchar" MaxLength="50" />
           <Property Name="Incoterm" Type="nvarchar" MaxLength="50" />
           <Property Name="Currency" Type="nvarchar" MaxLength="50" />
-          <Property Name="TotalFOB" Type="float" />
+          <Property Name="TotalFOBSO" Type="float" />
           <Property Name="TTSlip" Type="datetime" />
           <Property Name="LCSlip" Type="datetime" />
           <Property Name="SpecialApprove" Type="datetime" />
@@ -67,7 +67,7 @@
           <Property Name="PaymentTerm" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Incoterm" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Currency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="TotalFOB" Type="Double" />
+          <Property Name="TotalFOBSO" Type="Double" />
           <Property Name="TTSlip" Type="DateTime" Precision="3" />
           <Property Name="LCSlip" Type="DateTime" Precision="3" />
           <Property Name="SpecialApprove" Type="DateTime" Precision="3" />
@@ -98,7 +98,7 @@
                 <ScalarProperty Name="SpecialApprove" ColumnName="SpecialApprove" />
                 <ScalarProperty Name="LCSlip" ColumnName="LCSlip" />
                 <ScalarProperty Name="TTSlip" ColumnName="TTSlip" />
-                <ScalarProperty Name="TotalFOB" ColumnName="TotalFOB" />
+                <ScalarProperty Name="TotalFOBSO" ColumnName="TotalFOBSO" />
                 <ScalarProperty Name="Currency" ColumnName="Currency" />
                 <ScalarProperty Name="Incoterm" ColumnName="Incoterm" />
                 <ScalarProperty Name="PaymentTerm" ColumnName="PaymentTerm" />

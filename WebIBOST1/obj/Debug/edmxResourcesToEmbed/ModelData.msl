@@ -14,7 +14,7 @@
           <ScalarProperty Name="SpecialApprove" ColumnName="SpecialApprove" />
           <ScalarProperty Name="LCSlip" ColumnName="LCSlip" />
           <ScalarProperty Name="TTSlip" ColumnName="TTSlip" />
-          <ScalarProperty Name="TotalFOB" ColumnName="TotalFOB" />
+          <ScalarProperty Name="TotalFOBSO" ColumnName="TotalFOBSO" />
           <ScalarProperty Name="Currency" ColumnName="Currency" />
           <ScalarProperty Name="Incoterm" ColumnName="Incoterm" />
           <ScalarProperty Name="PaymentTerm" ColumnName="PaymentTerm" />

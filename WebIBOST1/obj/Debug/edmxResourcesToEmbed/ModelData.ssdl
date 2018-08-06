@@ -20,7 +20,7 @@
     <Property Name="PaymentTerm" Type="nvarchar" MaxLength="50" />
     <Property Name="Incoterm" Type="nvarchar" MaxLength="50" />
     <Property Name="Currency" Type="nvarchar" MaxLength="50" />
-    <Property Name="TotalFOB" Type="float" />
+    <Property Name="TotalFOBSO" Type="float" />
     <Property Name="TTSlip" Type="datetime" />
     <Property Name="LCSlip" Type="datetime" />
     <Property Name="SpecialApprove" Type="datetime" />

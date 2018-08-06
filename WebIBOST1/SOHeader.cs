@@ -30,7 +30,7 @@ namespace WebIBOST1
         public string PaymentTerm { get; set; }
         public string Incoterm { get; set; }
         public string Currency { get; set; }
-        public Nullable<double> TotalFOB { get; set; }
+        public Nullable<double> TotalFOBSO { get; set; }
         public Nullable<System.DateTime> TTSlip { get; set; }
         public Nullable<System.DateTime> LCSlip { get; set; }
         public Nullable<System.DateTime> SpecialApprove { get; set; }

@@ -23,7 +23,7 @@
     <Property Name="PaymentTerm" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Incoterm" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Currency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="TotalFOB" Type="Double" />
+    <Property Name="TotalFOBSO" Type="Double" />
     <Property Name="TTSlip" Type="DateTime" Precision="3" />
     <Property Name="LCSlip" Type="DateTime" Precision="3" />
     <Property Name="SpecialApprove" Type="DateTime" Precision="3" />
