@@ -13,67 +13,7 @@
     <br />
 
     <div>
-        <%--  <script>
-            window.onload = function () {
-
-                var chart = new CanvasJS.Chart("chartContainer", {
-                    theme: "light2",
-                    animationEnabled: true,
-                    title: {
-                        text: "IB ORDER & SHIPMENT TRACKING "
-                    },
-                    subtitles: [{
-                        text: "Working ",
-                        fontSize: 16
-                    }],
-                    data: [{
-                        type: "pie",
-                        
-                        indexLabelFontSize: 18,
-                        radius: 80,
-                        indexLabel: "{label} - {y}",
-                        yValueFormatString: "###0.0\"%\"",
-                        click: explodePie,
-                        dataPoints: [
-                            { y: 42, label: "IB" ,color: "red"},
-                            { y: 21, label: "Pc" ,color: "yellow"},
-                            { y: 24.5, label: "shipment" ,color: "green"},
-
-                        ]
-                    }]
-
-                [{
-            "type":"doughnut",
-            "indexLabelFontSize":20,
-            "indexLabelFontFamily":"Garamond",
-            "indexLabelFontColor":"darkgrey",
-            "indexLabelLineColor":"darkgrey",
-            "indexLabelPlacement":"outside",
-            "showInLegend":true,
-            "dataPoints":[
-            {"y":25,"legendText":"SALE","indexLabel":"SALE 25 %","color":"Red"}
-            ]
-            }]
-
-                });
-                chart.render();
-
-                function explodePie(e) {
-                    for (var i = 0; i < e.dataSeries.dataPoints.length; i++) {
-                        if (i !== e.dataPointIndex)
-                            e.dataSeries.dataPoints[i].exploded = false;
-                    }
-                }
-
-            }
-        </script>        
-        <div id="chartContainer" style="height: 370px; width: 100%;">
-            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-
-            \\donut chart \\\<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-
-        </div>--%>
-
+     
         <script lang="text/javascript">
             window.onload = function () {
 
@@ -126,11 +66,8 @@
                 </div>
 
                 <script src="source/canvasjs.js"></script>
-            </div>
-
-
-
-
+            </div>      
+         
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h2>SO Header Data</h2>
@@ -139,9 +76,6 @@
                     <asp:Table ID="tblData" runat="server"></asp:Table>
                 </div>
             </div>
-
-
-
 
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">

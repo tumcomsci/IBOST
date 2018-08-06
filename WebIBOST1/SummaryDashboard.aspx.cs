@@ -59,7 +59,19 @@ namespace WebIBOST1
                         if (noCol < 9)
                         {
                             TableCell oR1 = new TableCell();
-                            oR1.Text = prop.GetValue(row) != null ? prop.GetValue(row).ToString() : "";
+                            if (prop.Name == "SO")
+                            {
+                                oR1.Text =  prop.GetValue(row) != null ? SetLinkSOUrl( prop.GetValue(row).ToString()) : "'/>";
+                            }
+                            else if(prop.Name =="PO")
+                            {
+                                oR1.Text =  prop.GetValue(row) != null ? SetLinkPOUrl( prop.GetValue(row).ToString() ): "'/>";
+                            }
+                            else
+                            {
+                                oR1.Text = prop.GetValue(row) != null ? prop.GetValue(row).ToString() : "";
+                            }
+
                             oDetail.Cells.Add(oR1);
                         }
                         noCol++;
@@ -76,6 +88,15 @@ namespace WebIBOST1
 
         }
 
+        private string SetLinkPOUrl(string value)
+        {
+            return "<a href='" + this.Request.Url.AbsoluteUri.Replace(this.Request.Url.AbsolutePath.ToString(), "") + "/SOForm.aspx?PO=" + value + "'>" + value;
+        }
+        private string SetLinkSOUrl(string value)
+        {
+            return "<a href='" + this.Request.Url.AbsoluteUri.Replace(this.Request.Url.AbsolutePath.ToString(), "") + "/SOForm.aspx?SO=" + value + "'>" + value;
+        }
+
         private List<String> getSOHeader()
         {
             List<String> oResult = new List<string>();
@@ -87,6 +108,9 @@ namespace WebIBOST1
                 oResult.Add(item.Name);
             }
             return oResult;
+
+           
+
         }
     }
 }
