@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="STG_SOHeader"
   DTS:PackageType="5"
-  DTS:VersionBuild="39"
-  DTS:VersionGUID="{FEB1F7EA-898A-4545-B188-923BE58E8D8C}">
+  DTS:VersionBuild="40"
+  DTS:VersionGUID="{C0AB7EE7-4266-4F4A-9BE8-0C8B0E0C63BD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADLCT6wm83XPITcrsCh74Vzg4bii4rGjX0vTDoXHcsWlAAAAAAOgAAAAAIAACAAAACKKe4/GRtqSOpZImgxOoqSdjIoOFKKQk4BK8o/P5oGYCAAAADS/LuYyooFSmH+AaJbzUJteS60SOvkrblu/S7134r5bEAAAACwS6kYMCpxZBj37r9/DmKDlpkAAD0UIbXdTtCEFwLFgnYE6SY+nkEeYiGqlBI2/xzlQk1Bcu1Zf5HP54YfkPfd</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABDN+xOR3l+bS3JOyj1d/G7jBRHHUv89arAqPnqT38M+QAAAAAOgAAAAAIAACAAAAAsWXIKVtNq/pYWPb/zUrtSFUsW9K54sWXk0P+BNDeYtSAAAABaIfV30O2izDBnXGny2yq1pKSdTUSH/TQEPAX/uySci0AAAADDLXpg93CXmcvEVN+wKgh4Vizsm1DNK0uJeotDYpfuLzysXZOvxiyLSfUsKyW9GUiZ7uIEns1x9dpL03Hgzgr7</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABcu1OyNVM9dTuaUDlD0Tj5/XJSpfvBYcxnQ3LvMVO58QAAAAAOgAAAAAIAACAAAACN9y/SyWQxFfpCskDJlb+l9SuRvKQVhPdSGX7MepAjLCAAAAA6u2LtJdzEaTHTlQOLyChxylQP2i7aElcqzVvXZ/kiZkAAAAC2TrxW3UICle0vnqQlslQiAZqiKWDTuj9J4gxFpP4zp+85tz04JoDLhwNQfiBgDYgP7PZ+i6Z3/NVYMSOj0aME</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC8Kk27AZyvs6bNR3rw9ua3W2ymCNXQFBupMsM6vZQKAwAAAAAOgAAAAAIAACAAAAAWDddj9UmkyPbmQhEnsRggnwwWEaW/d7dsV12mTKT0zCAAAABxKm8I+rdQcvv/Ls2OgsJ9dj6W8kLmArl3hc78LL55aUAAAACX8UbchOg0EHOHdsn5P5fgbZ98eYJKdva6bQk4Iq79k/b1JFXRu4HFqK+w/UOCqaSfrzZH9MDrl5R/T2SdTWUr</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1395,10 +1395,6 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="154,42"
-          Id="Package\STG SO Header\CSV SO Header"
-          TopLeft="154,48" />
-        <NodeLayout
           Size="153,42"
           Id="Package\STG SO Header\STG_SOHeader"
           TopLeft="542,246" />
@@ -1406,6 +1402,10 @@
           Size="156,42"
           Id="Package\STG SO Header\Derived Column"
           TopLeft="319,135" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\STG SO Header\CSV SO Header"
+          TopLeft="154,48" />
         <EdgeLayout
           Id="Package\STG SO Header.Paths[Flat File Source Output]"
           TopLeft="231,90">

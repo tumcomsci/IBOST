@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="PlanTable"
   DTS:PackageType="5"
-  DTS:VersionBuild="18"
-  DTS:VersionGUID="{ED5BB4A6-0671-4244-8087-28D838BD90B4}">
+  DTS:VersionBuild="27"
+  DTS:VersionGUID="{7D01AE43-BB6F-4C3C-9A29-DBC64D54CFD8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC2mVWooIUCGh27CcP5yJdxR/OBQBIDEXBnpy3LnqgOjAAAAAAOgAAAAAIAACAAAADwcy9SZ1tXTY1zveBhPDBMJmdN4XSSRrmRCoLOYKpCzSAAAAB4waGqyq2YeVNENTvSfoK2N5kXEf+vXJ5cE7Le2WMUzUAAAABx6dEeLd2ZeGs4wSv9E2LT8Tez4zmH46197a2vKp8jVpjuOi0BLXgYpEr09+kfQyBxYHf7iccd7Ijl8xAKTkJF</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABLArBuGJ6eJRufeUinVHL3CizefijLr5CQj5kcZh6bywAAAAAOgAAAAAIAACAAAACOXpXavdTvh/DA/VGQG/oHUS77ByIYSaU2Q1/LYNUQkiAAAABGk+70+8ehSAJpYQGLXHSjl7PhyZWL6wtMXAB1ah4yI0AAAAC9pzoKs9cQo+ZE+Knm9y0GwF2HEHKZfkoRQdQVBm5zb7cDKMPotN1aGd9e+LjgpqheHHKQVl6jFc0yFaBdXCOh</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -208,6 +208,10 @@
                       dataType="wstr"
                       length="50"
                       name="DO" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[Item]"
+                      dataType="i4"
+                      name="Item" />
                     <externalMetadataColumn
                       refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[Remain]"
                       dataType="i4"
@@ -620,236 +624,6 @@
               </outputs>
             </component>
             <component
-              refId="Package\Plan Table\OLE DB Command"
-              componentClassID="Microsoft.OLEDBCommand"
-              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
-              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
-              name="OLE DB Command"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [IBOrderTracking].[dbo].[PlanTable]
- SET [UM] = ?
- ,[StoreLocationDescription] = ?
- ,[Unres] = ?
- ,[UnresCTN] = ?
- WHERE [Plant]=? AND [Material]=?
- AND [StoreLocation]=? AND [PlanDate]=?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">874</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Plan Table\OLE DB Command.Connections[OleDbConnection]"
-                  connectionManagerID="{C30C18BD-A555-4DAE-8894-93BE324590CF}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[OLEDB]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Plan Table\OLE DB Command.Inputs[OLE DB Command Input]"
-                  errorOrTruncationOperation="Command Execution"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Command Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Plan Table\OLE DB Command.Inputs[OLE DB Command Input].Columns[PlanDate]"
-                      cachedDataType="dbDate"
-                      cachedName="PlanDate"
-                      cachedSortKeyPosition="4"
-                      externalMetadataColumnId="Package\Plan Table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[PlanDate]" />
-                    <inputColumn
-                      refId="Package\Plan Table\OLE DB Command.Inputs[OLE DB Command Input].Columns[StoreLocation]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="StoreLocation"
-                      cachedSortKeyPosition="3"
-                      externalMetadataColumnId="Package\Plan Table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocation]" />
-                    <inputColumn
-                      refId="Package\Plan Table\OLE DB Command.Inputs[OLE DB Command Input].Columns[Material]"
-                      cachedDataType="i4"
-                      cachedName="Material"
-                      cachedSortKeyPosition="2"
-                      externalMetadataColumnId="Package\Plan Table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Material]" />
-                    <inputColumn
-                      refId="Package\Plan Table\OLE DB Command.Inputs[OLE DB Command Input].Columns[Plant]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Plant"
-                      cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Plan Table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Plant]" />
-                    <inputColumn
-                      refId="Package\Plan Table\OLE DB Command.Inputs[OLE DB Command Input].Columns[UM]"
-                      cachedDataType="i4"
-                      cachedName="UM"
-                      externalMetadataColumnId="Package\Plan Table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[UM]" />
-                    <inputColumn
-                      refId="Package\Plan Table\OLE DB Command.Inputs[OLE DB Command Input].Columns[StoreLocationDescription]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="StoreLocationDescription"
-                      externalMetadataColumnId="Package\Plan Table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription]" />
-                    <inputColumn
-                      refId="Package\Plan Table\OLE DB Command.Inputs[OLE DB Command Input].Columns[Unres]"
-                      cachedDataType="i4"
-                      cachedName="Unres"
-                      externalMetadataColumnId="Package\Plan Table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unres]" />
-                    <inputColumn
-                      refId="Package\Plan Table\OLE DB Command.Inputs[OLE DB Command Input].Columns[UnresCTN]"
-                      cachedDataType="i4"
-                      cachedName="UnresCTN"
-                      externalMetadataColumnId="Package\Plan Table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[UnresCTN]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Plan Table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      dataType="i4"
-                      name="Param_0">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Plan Table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      dataType="wstr"
-                      length="50"
-                      name="Param_1">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Plan Table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      dataType="i4"
-                      name="Param_2">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Plan Table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
-                      dataType="i4"
-                      name="Param_3">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Plan Table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
-                      dataType="wstr"
-                      length="50"
-                      name="Param_4">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Plan Table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
-                      dataType="i4"
-                      name="Param_5">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Plan Table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
-                      dataType="wstr"
-                      length="50"
-                      name="Param_6">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Plan Table\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
-                      dataType="dbDate"
-                      name="Param_7">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Plan Table\OLE DB Command.Outputs[OLE DB Command Output]"
-                  exclusionGroup="1"
-                  name="OLE DB Command Output"
-                  synchronousInputId="Package\Plan Table\OLE DB Command.Inputs[OLE DB Command Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Plan Table\OLE DB Command.Outputs[OLE DB Command Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Command Error Output"
-                  synchronousInputId="Package\Plan Table\OLE DB Command.Inputs[OLE DB Command Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Plan Table\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Plan Table\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Plan Table\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Plan Table\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Plan Table\Plan Table"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -1014,6 +788,15 @@
                       name="DO"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
+                      refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[Item]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].ExternalColumns[Item]"
+                      lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[Item]"
+                      name="Item"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
                       refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[Remain]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
@@ -1087,6 +870,10 @@
                       dataType="wstr"
                       length="50"
                       name="DO" />
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].ExternalColumns[Item]"
+                      dataType="i4"
+                      name="Item" />
                     <externalMetadataColumn
                       refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].ExternalColumns[Remain]"
                       dataType="i4"
@@ -1167,6 +954,11 @@
                       length="50"
                       lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Error Output].Columns[DO]"
                       name="DO" />
+                    <outputColumn
+                      refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Error Output].Columns[Item]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Error Output].Columns[Item]"
+                      name="Item" />
                     <outputColumn
                       refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Error Output].Columns[Remain]"
                       dataType="i4"
@@ -1303,7 +1095,7 @@
                     <inputColumn
                       refId="Package\Plan Table\Sort STG.Inputs[Sort Input].Columns[Lot]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="100"
                       cachedName="Lot"
                       lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Lot]">
                       <properties>
@@ -1516,7 +1308,7 @@
                     <outputColumn
                       refId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[Lot]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[Lot]"
                       name="Lot">
                       <properties>
@@ -1848,6 +1640,22 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
+                      refId="Package\Plan Table\Sort Table.Inputs[Sort Input].Columns[Item]"
+                      cachedDataType="i4"
+                      cachedName="Item"
+                      lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[Item]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
                       refId="Package\Plan Table\Sort Table.Inputs[Sort Input].Columns[Remain]"
                       cachedDataType="i4"
                       cachedName="Remain"
@@ -2059,6 +1867,19 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
+                      refId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Item]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Item]"
+                      name="Item">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[Item]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
                       refId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Remain]"
                       dataType="i4"
                       lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Remain]"
@@ -2198,12 +2019,12 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Plan Table\Split Records.Outputs[Insert(not Match)]"
+                  refId="Package\Plan Table\Split Records.Outputs[Insert (Not Match)]"
                   description="Output 1 of the Conditional Split Transformation"
                   errorOrTruncationOperation="Computation"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
-                  name="Insert(not Match)"
+                  name="Insert (Not Match)"
                   synchronousInputId="Package\Plan Table\Split Records.Inputs[Conditional Split Input]"
                   truncationRowDisposition="FailComponent">
                   <properties>
@@ -2226,12 +2047,12 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Plan Table\Split Records.Outputs[Update(Match)]"
+                  refId="Package\Plan Table\Split Records.Outputs[Update (Match)]"
                   description="Output 2 of the Conditional Split Transformation"
                   errorOrTruncationOperation="Computation"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
-                  name="Update(Match)"
+                  name="Update (Match)"
                   synchronousInputId="Package\Plan Table\Split Records.Inputs[Conditional Split Input]"
                   truncationRowDisposition="FailComponent">
                   <properties>
@@ -2401,7 +2222,7 @@ WHERE SyncDate = (
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[Lot]"
-                      length="50"
+                      length="100"
                       lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Lot]"
                       name="Lot"
                       truncationRowDisposition="FailComponent" />
@@ -2498,7 +2319,7 @@ WHERE SyncDate = (
                     <externalMetadataColumn
                       refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[Lot]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       name="Lot" />
                     <externalMetadataColumn
                       refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[PlanDate]"
@@ -2567,7 +2388,7 @@ WHERE SyncDate = (
                     <outputColumn
                       refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[Lot]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[Lot]"
                       name="Lot" />
                     <outputColumn
@@ -2623,6 +2444,236 @@ WHERE SyncDate = (
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\Plan Table\Update Records (Plan Table)"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="Update Records (Plan Table)"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [IBOrderTracking].[dbo].[PlanTable]
+ SET [UM] = ?
+ ,[StoreLocationDescription] = ?
+ ,[Unres] = ?
+ ,[UnresCTN] = ?
+ WHERE [Plant]=? AND [Material]=?
+ AND [StoreLocation]=? AND [PlanDate]=?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">874</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Plan Table\Update Records (Plan Table).Connections[OleDbConnection]"
+                  connectionManagerID="{C30C18BD-A555-4DAE-8894-93BE324590CF}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].Columns[Plant]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Plant"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Plant]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].Columns[Material]"
+                      cachedDataType="i4"
+                      cachedName="Material"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Material]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].Columns[StoreLocation]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="StoreLocation"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocation]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].Columns[PlanDate]"
+                      cachedDataType="dbDate"
+                      cachedName="PlanDate"
+                      cachedSortKeyPosition="4"
+                      externalMetadataColumnId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[PlanDate]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].Columns[UM]"
+                      cachedDataType="i4"
+                      cachedName="UM"
+                      externalMetadataColumnId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[UM]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].Columns[StoreLocationDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="StoreLocationDescription"
+                      externalMetadataColumnId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].Columns[Unres]"
+                      cachedDataType="i4"
+                      cachedName="Unres"
+                      externalMetadataColumnId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unres]" />
+                    <inputColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].Columns[UnresCTN]"
+                      cachedDataType="i4"
+                      cachedName="UnresCTN"
+                      externalMetadataColumnId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[UnresCTN]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      dataType="i4"
+                      name="Param_3">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      dataType="i4"
+                      name="Param_5">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_6">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      dataType="dbDate"
+                      name="Param_7">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Plan Table\Update Records (Plan Table).Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Plan Table\Update Records (Plan Table).Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\Update Records (Plan Table).Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Plan Table\Update Records (Plan Table).Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Plan Table\Update Records (Plan Table).Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
@@ -2636,10 +2687,10 @@ WHERE SyncDate = (
               name="ADO NET Source Output"
               startId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output]" />
             <path
-              refId="Package\Plan Table.Paths[Insert(not Match)]"
+              refId="Package\Plan Table.Paths[Insert (Not Match)]"
               endId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input]"
-              name="Insert(not Match)"
-              startId="Package\Plan Table\Split Records.Outputs[Insert(not Match)]" />
+              name="Insert (Not Match)"
+              startId="Package\Plan Table\Split Records.Outputs[Insert (Not Match)]" />
             <path
               refId="Package\Plan Table.Paths[Merge Join Output]"
               endId="Package\Plan Table\Split Records.Inputs[Conditional Split Input]"
@@ -2656,10 +2707,10 @@ WHERE SyncDate = (
               name="Sort Output"
               startId="Package\Plan Table\Sort Table.Outputs[Sort Output]" />
             <path
-              refId="Package\Plan Table.Paths[Update(Match)]"
-              endId="Package\Plan Table\OLE DB Command.Inputs[OLE DB Command Input]"
-              name="Update(Match)"
-              startId="Package\Plan Table\Split Records.Outputs[Update(Match)]" />
+              refId="Package\Plan Table.Paths[Update (Match)]"
+              endId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input]"
+              name="Update (Match)"
+              startId="Package\Plan Table\Split Records.Outputs[Update (Match)]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -2690,47 +2741,47 @@ WHERE SyncDate = (
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="132,42"
-          Id="Package\Plan Table\STG_Stock"
-          TopLeft="38.3333333333333,46.6666666666667" />
-        <NodeLayout
           Size="130,42"
           Id="Package\Plan Table\Plan Table"
-          TopLeft="625,50" />
+          TopLeft="595.714285714286,18.5714285714286" />
         <NodeLayout
-          Size="129,42"
-          Id="Package\Plan Table\Sort Table"
-          TopLeft="493.333333333333,131.666666666667" />
+          Size="132,42"
+          Id="Package\Plan Table\STG_Stock"
+          TopLeft="22.8571428571428,20" />
         <NodeLayout
           Size="123,42"
           Id="Package\Plan Table\Sort STG"
-          TopLeft="141.666666666667,137" />
+          TopLeft="140,92.8571428571429" />
+        <NodeLayout
+          Size="129,42"
+          Id="Package\Plan Table\Sort Table"
+          TopLeft="482.857142857143,92.8571428571429" />
         <EdgeLayout
           Id="Package\Plan Table.Paths[ADO NET Source Output]"
-          TopLeft="104.333333333333,88.6666666666667">
+          TopLeft="88.8571428571428,62">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="98.8333333333333,48.3333333333333"
+              EndConnector="112.642857142857,30.8571428571429"
               Start="0,0"
-              End="98.8333333333333,40.8333333333333">
+              End="112.642857142857,23.3571428571429">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.1666666666667" />
+                    End="0,11.4285714285714" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20.1666666666667"
-                    Point2="0,24.1666666666667"
-                    Point3="4,24.1666666666667" />
+                    Point1="0,11.4285714285714"
+                    Point2="0,15.4285714285714"
+                    Point3="4,15.4285714285714" />
                   <mssgle:LineSegment
-                    End="94.8333333333333,24.1666666666667" />
+                    End="108.642857142857,15.4285714285714" />
                   <mssgle:CubicBezierSegment
-                    Point1="94.8333333333333,24.1666666666667"
-                    Point2="98.8333333333333,24.1666666666667"
-                    Point3="98.8333333333333,28.1666666666667" />
+                    Point1="108.642857142857,15.4285714285714"
+                    Point2="112.642857142857,15.4285714285714"
+                    Point3="112.642857142857,19.4285714285714" />
                   <mssgle:LineSegment
-                    End="98.8333333333333,40.8333333333333" />
+                    End="112.642857142857,23.3571428571429" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2741,30 +2792,30 @@ WHERE SyncDate = (
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Plan Table.Paths[ADO NET Source Output1]"
-          TopLeft="690,92">
+          TopLeft="660.714285714286,60.5714285714286">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-132.166666666667,39.6666666666666"
+              EndConnector="-113.357142857143,32.2857142857143"
               Start="0,0"
-              End="-132.166666666667,32.1666666666666">
+              End="-113.357142857143,24.7857142857143">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15.8333333333333" />
+                    End="0,12.1428571428571" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,15.8333333333333"
-                    Point2="0,19.8333333333333"
-                    Point3="-4,19.8333333333333" />
+                    Point1="0,12.1428571428571"
+                    Point2="0,16.1428571428571"
+                    Point3="-4,16.1428571428571" />
                   <mssgle:LineSegment
-                    End="-128.166666666667,19.8333333333333" />
+                    End="-109.357142857143,16.1428571428571" />
                   <mssgle:CubicBezierSegment
-                    Point1="-128.166666666667,19.8333333333333"
-                    Point2="-132.166666666667,19.8333333333333"
-                    Point3="-132.166666666667,23.8333333333333" />
+                    Point1="-109.357142857143,16.1428571428571"
+                    Point2="-113.357142857143,16.1428571428571"
+                    Point3="-113.357142857143,20.1428571428571" />
                   <mssgle:LineSegment
-                    End="-132.166666666667,32.1666666666666" />
+                    End="-113.357142857143,24.7857142857143" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2776,33 +2827,33 @@ WHERE SyncDate = (
         <NodeLayout
           Size="132,42"
           Id="Package\Plan Table\Merge Join"
-          TopLeft="299.242424242424,227.272727272727" />
+          TopLeft="300,170" />
         <EdgeLayout
           Id="Package\Plan Table.Paths[Sort Output]"
-          TopLeft="203.166666666667,179">
+          TopLeft="201.5,134.857142857143">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="141.409090909091,48.2727272727273"
+              EndConnector="143.833333333333,35.1428571428572"
               Start="0,0"
-              End="141.409090909091,40.7727272727273">
+              End="143.833333333333,27.6428571428572">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.6167664670659" />
+                    End="0,16.8331907613345" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,24.6167664670659"
-                    Point2="0,28.6167664670659"
-                    Point3="4,28.6167664670659" />
+                    Point1="0,16.8331907613345"
+                    Point2="0,20.8331907613345"
+                    Point3="4,20.8331907613345" />
                   <mssgle:LineSegment
-                    End="137.409090909091,28.6167664670659" />
+                    End="139.833333333333,20.8331907613345" />
                   <mssgle:CubicBezierSegment
-                    Point1="137.409090909091,28.6167664670659"
-                    Point2="141.409090909091,28.6167664670659"
-                    Point3="141.409090909091,32.6167664670659" />
+                    Point1="139.833333333333,20.8331907613345"
+                    Point2="143.833333333333,20.8331907613345"
+                    Point3="143.833333333333,24.8331907613345" />
                   <mssgle:LineSegment
-                    End="141.409090909091,40.7727272727273" />
+                    End="143.833333333333,27.6428571428572" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2813,30 +2864,30 @@ WHERE SyncDate = (
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Plan Table.Paths[Sort Output1]"
-          TopLeft="557.833333333333,173.666666666667">
+          TopLeft="547.357142857143,134.857142857143">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-171.924242424242,53.6060606060606"
+              EndConnector="-160.690476190476,35.1428571428572"
               Start="0,0"
-              End="-171.924242424242,46.1060606060606">
+              End="-160.690476190476,27.6428571428572">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.7784431137725" />
+                    End="0,16.8331907613345" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,27.7784431137725"
-                    Point2="0,31.7784431137725"
-                    Point3="-4,31.7784431137725" />
+                    Point1="0,16.8331907613345"
+                    Point2="0,20.8331907613345"
+                    Point3="-4,20.8331907613345" />
                   <mssgle:LineSegment
-                    End="-167.924242424242,31.7784431137725" />
+                    End="-156.690476190476,20.8331907613345" />
                   <mssgle:CubicBezierSegment
-                    Point1="-167.924242424242,31.7784431137725"
-                    Point2="-171.924242424242,31.7784431137725"
-                    Point3="-171.924242424242,35.7784431137725" />
+                    Point1="-156.690476190476,20.8331907613345"
+                    Point2="-160.690476190476,20.8331907613345"
+                    Point3="-160.690476190476,24.8331907613345" />
                   <mssgle:LineSegment
-                    End="-171.924242424242,46.1060606060606" />
+                    End="-160.690476190476,27.6428571428572" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2848,33 +2899,33 @@ WHERE SyncDate = (
         <NodeLayout
           Size="142,42"
           Id="Package\Plan Table\Split Records"
-          TopLeft="458.75,303.75" />
+          TopLeft="424.285714285714,241.428571428571" />
         <EdgeLayout
           Id="Package\Plan Table.Paths[Merge Join Output]"
-          TopLeft="365.242424242424,269.272727272727">
+          TopLeft="366,212">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="164.507575757576,34.4772727272727"
+              EndConnector="129.285714285714,29.4285714285714"
               Start="0,0"
-              End="164.507575757576,26.9772727272727">
+              End="129.285714285714,21.9285714285714">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,13.2386363636364" />
+                    End="0,10.7142857142857" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,13.2386363636364"
-                    Point2="0,17.2386363636364"
-                    Point3="4,17.2386363636364" />
+                    Point1="0,10.7142857142857"
+                    Point2="0,14.7142857142857"
+                    Point3="4,14.7142857142857" />
                   <mssgle:LineSegment
-                    End="160.507575757576,17.2386363636364" />
+                    End="125.285714285714,14.7142857142857" />
                   <mssgle:CubicBezierSegment
-                    Point1="160.507575757576,17.2386363636364"
-                    Point2="164.507575757576,17.2386363636364"
-                    Point3="164.507575757576,21.2386363636364" />
+                    Point1="125.285714285714,14.7142857142857"
+                    Point2="129.285714285714,14.7142857142857"
+                    Point3="129.285714285714,18.7142857142857" />
                   <mssgle:LineSegment
-                    End="164.507575757576,26.9772727272727" />
+                    End="129.285714285714,21.9285714285714" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2886,80 +2937,80 @@ WHERE SyncDate = (
         <NodeLayout
           Size="210,42"
           Id="Package\Plan Table\Insert Records (Plan Table)"
-          TopLeft="36.25,401.25" />
+          TopLeft="54.2857142857143,335.714285714286" />
         <NodeLayout
-          Size="168,42"
-          Id="Package\Plan Table\OLE DB Command"
-          TopLeft="586.25,415" />
+          Size="216,42"
+          Id="Package\Plan Table\Update Records (Plan Table)"
+          TopLeft="588.571428571429,337.142857142857" />
         <EdgeLayout
-          Id="Package\Plan Table.Paths[Insert(not Match)]"
-          TopLeft="529.75,345.75">
+          Id="Package\Plan Table.Paths[Insert (Not Match)]"
+          TopLeft="495.285714285714,283.428571428571">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-388.5,55.5"
+              EndConnector="-336,52.2857142857143"
               Start="0,0"
-              End="-388.5,48">
+              End="-336,44.7857142857143">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.75" />
+                    End="0,22.1428571428572" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,23.75"
-                    Point2="0,27.75"
-                    Point3="-4,27.75" />
+                    Point1="0,22.1428571428572"
+                    Point2="0,26.1428571428572"
+                    Point3="-4,26.1428571428572" />
                   <mssgle:LineSegment
-                    End="-384.5,27.75" />
+                    End="-332,26.1428571428572" />
                   <mssgle:CubicBezierSegment
-                    Point1="-384.5,27.75"
-                    Point2="-388.5,27.75"
-                    Point3="-388.5,31.75" />
+                    Point1="-332,26.1428571428572"
+                    Point2="-336,26.1428571428572"
+                    Point3="-336,30.1428571428572" />
                   <mssgle:LineSegment
-                    End="-388.5,48" />
+                    End="-336,44.7857142857143" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-233.55833984375,32.75,78.6166796875,11.609375"
+              BoundingBox="-209.41833984375,31.1428571428572,82.8366796875,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Plan Table.Paths[Update(Match)]"
-          TopLeft="552.083333333333,345.75">
+          Id="Package\Plan Table.Paths[Update (Match)]"
+          TopLeft="517.619047619048,283.428571428571">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="118.166666666667,69.25"
+              EndConnector="178.952380952381,53.7142857142858"
               Start="0,0"
-              End="118.166666666667,61.75">
+              End="178.952380952381,46.2142857142858">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.1629526462395" />
+                    End="0,17.8448070035814" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,24.1629526462395"
-                    Point2="0,28.1629526462395"
-                    Point3="4,28.1629526462395" />
+                    Point1="0,17.8448070035814"
+                    Point2="0,21.8448070035814"
+                    Point3="4,21.8448070035814" />
                   <mssgle:LineSegment
-                    End="114.166666666667,28.1629526462395" />
+                    End="174.952380952381,21.8448070035814" />
                   <mssgle:CubicBezierSegment
-                    Point1="114.166666666667,28.1629526462395"
-                    Point2="118.166666666667,28.1629526462395"
-                    Point3="118.166666666667,32.1629526462395" />
+                    Point1="174.952380952381,21.8448070035814"
+                    Point2="178.952380952381,21.8448070035814"
+                    Point3="178.952380952381,25.8448070035814" />
                   <mssgle:LineSegment
-                    End="118.166666666667,61.75" />
+                    End="178.952380952381,46.2142857142858" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="25.8626497395833,33.1629526462395,66.4413671875,11.609375"
+              BoundingBox="54.6905068824405,26.8448070035814,69.5713671875,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2967,7 +3018,7 @@ WHERE SyncDate = (
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Plan Table\STG_Stock">
+    design-time-name="Package\Plan Table\Plan Table">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2975,7 +3026,7 @@ WHERE SyncDate = (
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Plan Table\Plan Table">
+    design-time-name="Package\Plan Table\STG_Stock">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

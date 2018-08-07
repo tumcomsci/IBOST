@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="StockTable"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{8F561CAF-1B11-472F-B5F6-82756AB39440}">
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{30DBC301-384A-4274-BC84-9662DDD7D02D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACRBN5cW3u9JII8ZGLpb065sQtY6sqDdAw2PRX+RYAHLQAAAAAOgAAAAAIAACAAAABEFehUyxO9cCDFJMXAdjCKvx2nxGwDQNHHYtCUR74uyiAAAADELKJYIJDDisGQ2eprnorG+r1ZpmUJsSB97tcv7jmUTUAAAADjBd4Gzp+8th5oi9WN0oPFaS3EI08xmGXFSJICsbmgfcu0+reAfFmilMCsdyGqRDeovd6uUNSjOXWKPGwTgXxt</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD+8lgcwhyPkHQY0dtZQSZMFapgnd/bp1BIGBfqyLcbVgAAAAAOgAAAAAIAACAAAABxoWVAjvmv9tVS434cNy4/06SwbPY2XPIHKXacOM0bqCAAAADxIdXtyVph/wORDiLwJ+U7oJIiAk68ztPd4tRZ9U0u30AAAAD/c0a2JxvYXXq2xCpJDUGik4HkzFAASz+If6wHpAy++BMaHrd4K/Q6B/jKl50JGZ0T5iwD8rZjijI5cSDsZoN5</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -123,7 +123,7 @@
                     <inputColumn
                       refId="Package\Stock Table\Insert Records (Stock Table).Inputs[ADO NET Destination Input].Columns[Lot]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="100"
                       cachedName="Lot"
                       cachedSortKeyPosition="4"
                       externalMetadataColumnId="Package\Stock Table\Insert Records (Stock Table).Inputs[ADO NET Destination Input].ExternalColumns[Lot]"
@@ -194,7 +194,7 @@
                     <externalMetadataColumn
                       refId="Package\Stock Table\Insert Records (Stock Table).Inputs[ADO NET Destination Input].ExternalColumns[Lot]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       name="Lot" />
                     <externalMetadataColumn
                       refId="Package\Stock Table\Insert Records (Stock Table).Inputs[ADO NET Destination Input].ExternalColumns[Unres]"
@@ -230,6 +230,10 @@
                       dataType="wstr"
                       length="50"
                       name="DO" />
+                    <externalMetadataColumn
+                      refId="Package\Stock Table\Insert Records (Stock Table).Inputs[ADO NET Destination Input].ExternalColumns[Item]"
+                      dataType="i4"
+                      name="Item" />
                     <externalMetadataColumn
                       refId="Package\Stock Table\Insert Records (Stock Table).Inputs[ADO NET Destination Input].ExternalColumns[Remain]"
                       dataType="i4"
@@ -334,7 +338,7 @@
                     <inputColumn
                       refId="Package\Stock Table\Merge Join.Inputs[Merge Join Left Input].Columns[Lot]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="100"
                       cachedName="Lot"
                       cachedSortKeyPosition="4"
                       lineageId="Package\Stock Table\Sort STG.Outputs[Sort Output].Columns[Lot]" />
@@ -406,7 +410,7 @@
                     <inputColumn
                       refId="Package\Stock Table\Merge Join.Inputs[Merge Join Right Input].Columns[Lot]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="100"
                       cachedName="Lot"
                       cachedSortKeyPosition="4"
                       lineageId="Package\Stock Table\Sort Table.Outputs[Sort Output].Columns[Lot]" />
@@ -491,7 +495,7 @@
                     <outputColumn
                       refId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Lot]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Lot]"
                       name="Lot"
                       sortKeyPosition="4">
@@ -626,7 +630,7 @@
                     <outputColumn
                       refId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Lot (1)]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Lot (1)]"
                       name="Lot (1)">
                       <properties>
@@ -830,7 +834,7 @@
                     <inputColumn
                       refId="Package\Stock Table\Sort STG.Inputs[Sort Input].Columns[Lot]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="100"
                       cachedName="Lot"
                       lineageId="Package\Stock Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Lot]">
                       <properties>
@@ -1043,7 +1047,7 @@
                     <outputColumn
                       refId="Package\Stock Table\Sort STG.Outputs[Sort Output].Columns[Lot]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       lineageId="Package\Stock Table\Sort STG.Outputs[Sort Output].Columns[Lot]"
                       name="Lot"
                       sortKeyPosition="4">
@@ -1265,7 +1269,7 @@
                     <inputColumn
                       refId="Package\Stock Table\Sort Table.Inputs[Sort Input].Columns[Lot]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="100"
                       cachedName="Lot"
                       lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[Lot]">
                       <properties>
@@ -1410,6 +1414,22 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
+                      refId="Package\Stock Table\Sort Table.Inputs[Sort Input].Columns[Item]"
+                      cachedDataType="i4"
+                      cachedName="Item"
+                      lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[Item]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
                       refId="Package\Stock Table\Sort Table.Inputs[Sort Input].Columns[Remain]"
                       cachedDataType="i4"
                       cachedName="Remain"
@@ -1527,7 +1547,7 @@
                     <outputColumn
                       refId="Package\Stock Table\Sort Table.Outputs[Sort Output].Columns[Lot]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       lineageId="Package\Stock Table\Sort Table.Outputs[Sort Output].Columns[Lot]"
                       name="Lot"
                       sortKeyPosition="4">
@@ -1650,6 +1670,19 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
+                      refId="Package\Stock Table\Sort Table.Outputs[Sort Output].Columns[Item]"
+                      dataType="i4"
+                      lineageId="Package\Stock Table\Sort Table.Outputs[Sort Output].Columns[Item]"
+                      name="Item">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[Item]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
                       refId="Package\Stock Table\Sort Table.Outputs[Sort Output].Columns[Remain]"
                       dataType="i4"
                       lineageId="Package\Stock Table\Sort Table.Outputs[Sort Output].Columns[Remain]"
@@ -1716,7 +1749,7 @@
                     <inputColumn
                       refId="Package\Stock Table\Split Records.Inputs[Conditional Split Input].Columns[Lot]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="100"
                       cachedName="Lot"
                       cachedSortKeyPosition="4"
                       lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Lot]" />
@@ -1740,7 +1773,7 @@
                     <inputColumn
                       refId="Package\Stock Table\Split Records.Inputs[Conditional Split Input].Columns[Lot (1)]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="100"
                       cachedName="Lot (1)"
                       lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Lot (1)]" />
                     <inputColumn
@@ -1811,12 +1844,12 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Stock Table\Split Records.Outputs[Insert(not Match)]"
+                  refId="Package\Stock Table\Split Records.Outputs[Insert (Not Match)]"
                   description="Output 1 of the Conditional Split Transformation"
                   errorOrTruncationOperation="Computation"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
-                  name="Insert(not Match)"
+                  name="Insert (Not Match)"
                   synchronousInputId="Package\Stock Table\Split Records.Inputs[Conditional Split Input]"
                   truncationRowDisposition="FailComponent">
                   <properties>
@@ -1839,12 +1872,12 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Stock Table\Split Records.Outputs[Update(Match)]"
+                  refId="Package\Stock Table\Split Records.Outputs[Update (Match)]"
                   description="Output 2 of the Conditional Split Transformation"
                   errorOrTruncationOperation="Computation"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
-                  name="Update(Match)"
+                  name="Update (Match)"
                   synchronousInputId="Package\Stock Table\Split Records.Inputs[Conditional Split Input]"
                   truncationRowDisposition="FailComponent">
                   <properties>
@@ -2014,7 +2047,7 @@ WHERE SyncDate = (
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Stock Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[Lot]"
-                      length="50"
+                      length="100"
                       lineageId="Package\Stock Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Lot]"
                       name="Lot"
                       truncationRowDisposition="FailComponent" />
@@ -2111,7 +2144,7 @@ WHERE SyncDate = (
                     <externalMetadataColumn
                       refId="Package\Stock Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[Lot]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       name="Lot" />
                     <externalMetadataColumn
                       refId="Package\Stock Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[PlanDate]"
@@ -2180,7 +2213,7 @@ WHERE SyncDate = (
                     <outputColumn
                       refId="Package\Stock Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[Lot]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       lineageId="Package\Stock Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[Lot]"
                       name="Lot" />
                     <outputColumn
@@ -2341,7 +2374,7 @@ WHERE SyncDate = (
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].ExternalColumns[Lot]"
-                      length="50"
+                      length="100"
                       lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[Lot]"
                       name="Lot"
                       truncationRowDisposition="FailComponent" />
@@ -2420,6 +2453,15 @@ WHERE SyncDate = (
                       name="DO"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
+                      refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[Item]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].ExternalColumns[Item]"
+                      lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[Item]"
+                      name="Item"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
                       refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[Remain]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
@@ -2466,7 +2508,7 @@ WHERE SyncDate = (
                     <externalMetadataColumn
                       refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].ExternalColumns[Lot]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       name="Lot" />
                     <externalMetadataColumn
                       refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].ExternalColumns[Unres]"
@@ -2502,6 +2544,10 @@ WHERE SyncDate = (
                       dataType="wstr"
                       length="50"
                       name="DO" />
+                    <externalMetadataColumn
+                      refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].ExternalColumns[Item]"
+                      dataType="i4"
+                      name="Item" />
                     <externalMetadataColumn
                       refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].ExternalColumns[Remain]"
                       dataType="i4"
@@ -2548,7 +2594,7 @@ WHERE SyncDate = (
                     <outputColumn
                       refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Error Output].Columns[Lot]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Error Output].Columns[Lot]"
                       name="Lot" />
                     <outputColumn
@@ -2593,6 +2639,11 @@ WHERE SyncDate = (
                       length="50"
                       lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Error Output].Columns[DO]"
                       name="DO" />
+                    <outputColumn
+                      refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Error Output].Columns[Item]"
+                      dataType="i4"
+                      lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Error Output].Columns[Item]"
+                      name="Item" />
                     <outputColumn
                       refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Error Output].Columns[Remain]"
                       dataType="i4"
@@ -2669,13 +2720,20 @@ WHERE SyncDate = (
                   name="OLE DB Command Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Stock Table\Update Records (Stock Table).Inputs[OLE DB Command Input].Columns[Lot]"
+                      refId="Package\Stock Table\Update Records (Stock Table).Inputs[OLE DB Command Input].Columns[Plant]"
                       cachedDataType="wstr"
                       cachedLength="50"
-                      cachedName="Lot"
-                      cachedSortKeyPosition="4"
-                      externalMetadataColumnId="Package\Stock Table\Update Records (Stock Table).Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
-                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Lot]" />
+                      cachedName="Plant"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Stock Table\Update Records (Stock Table).Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Plant]" />
+                    <inputColumn
+                      refId="Package\Stock Table\Update Records (Stock Table).Inputs[OLE DB Command Input].Columns[Material]"
+                      cachedDataType="i4"
+                      cachedName="Material"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\Stock Table\Update Records (Stock Table).Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Material]" />
                     <inputColumn
                       refId="Package\Stock Table\Update Records (Stock Table).Inputs[OLE DB Command Input].Columns[StoreLocation]"
                       cachedDataType="wstr"
@@ -2685,20 +2743,13 @@ WHERE SyncDate = (
                       externalMetadataColumnId="Package\Stock Table\Update Records (Stock Table).Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
                       lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocation]" />
                     <inputColumn
-                      refId="Package\Stock Table\Update Records (Stock Table).Inputs[OLE DB Command Input].Columns[Material]"
-                      cachedDataType="i4"
-                      cachedName="Material"
-                      cachedSortKeyPosition="2"
-                      externalMetadataColumnId="Package\Stock Table\Update Records (Stock Table).Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
-                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Material]" />
-                    <inputColumn
-                      refId="Package\Stock Table\Update Records (Stock Table).Inputs[OLE DB Command Input].Columns[Plant]"
+                      refId="Package\Stock Table\Update Records (Stock Table).Inputs[OLE DB Command Input].Columns[Lot]"
                       cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Plant"
-                      cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Stock Table\Update Records (Stock Table).Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
-                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Plant]" />
+                      cachedLength="100"
+                      cachedName="Lot"
+                      cachedSortKeyPosition="4"
+                      externalMetadataColumnId="Package\Stock Table\Update Records (Stock Table).Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
+                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Lot]" />
                     <inputColumn
                       refId="Package\Stock Table\Update Records (Stock Table).Inputs[OLE DB Command Input].Columns[UM]"
                       cachedDataType="i4"
@@ -2844,7 +2895,7 @@ WHERE SyncDate = (
                     <externalMetadataColumn
                       refId="Package\Stock Table\Update Records (Stock Table).Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
                       dataType="wstr"
-                      length="50"
+                      length="100"
                       name="Param_9">
                       <properties>
                         <property
@@ -2901,10 +2952,10 @@ WHERE SyncDate = (
               name="ADO NET Source Output"
               startId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output]" />
             <path
-              refId="Package\Stock Table.Paths[Insert(not Match)]"
+              refId="Package\Stock Table.Paths[Insert (Not Match)]"
               endId="Package\Stock Table\Insert Records (Stock Table).Inputs[ADO NET Destination Input]"
-              name="Insert(not Match)"
-              startId="Package\Stock Table\Split Records.Outputs[Insert(not Match)]" />
+              name="Insert (Not Match)"
+              startId="Package\Stock Table\Split Records.Outputs[Insert (Not Match)]" />
             <path
               refId="Package\Stock Table.Paths[Merge Join Output]"
               endId="Package\Stock Table\Split Records.Inputs[Conditional Split Input]"
@@ -2921,10 +2972,10 @@ WHERE SyncDate = (
               name="Sort Output"
               startId="Package\Stock Table\Sort Table.Outputs[Sort Output]" />
             <path
-              refId="Package\Stock Table.Paths[Update(Match)]"
+              refId="Package\Stock Table.Paths[Update (Match)]"
               endId="Package\Stock Table\Update Records (Stock Table).Inputs[OLE DB Command Input]"
-              name="Update(Match)"
-              startId="Package\Stock Table\Split Records.Outputs[Update(Match)]" />
+              name="Update (Match)"
+              startId="Package\Stock Table\Split Records.Outputs[Update (Match)]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -2957,117 +3008,45 @@ WHERE SyncDate = (
         <NodeLayout
           Size="132,42"
           Id="Package\Stock Table\STG_Stock"
-          TopLeft="34.2857142857143,28.5714285714286" />
+          TopLeft="51,32" />
         <NodeLayout
           Size="136,42"
           Id="Package\Stock Table\Stock Table"
-          TopLeft="655.714285714286,24.2857142857143" />
-        <NodeLayout
-          Size="132,42"
-          Id="Package\Stock Table\Merge Join"
-          TopLeft="314.285714285714,195.714285714286" />
+          TopLeft="526,27" />
         <NodeLayout
           Size="129,42"
           Id="Package\Stock Table\Sort Table"
-          TopLeft="525.714285714286,114.285714285714" />
+          TopLeft="394,110" />
         <NodeLayout
           Size="123,42"
           Id="Package\Stock Table\Sort STG"
-          TopLeft="138.571428571429,110" />
+          TopLeft="144,112" />
         <EdgeLayout
           Id="Package\Stock Table.Paths[ADO NET Source Output]"
-          TopLeft="100.285714285714,70.5714285714286">
+          TopLeft="117,74">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="99.7857142857143,39.4285714285715"
+              EndConnector="88.5,38"
               Start="0,0"
-              End="99.7857142857143,31.9285714285715">
+              End="88.5,30.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15.7142857142857" />
+                    End="0,15" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,15.7142857142857"
-                    Point2="0,19.7142857142857"
-                    Point3="4,19.7142857142857" />
+                    Point1="0,15"
+                    Point2="0,19"
+                    Point3="4,19" />
                   <mssgle:LineSegment
-                    End="95.7857142857143,19.7142857142857" />
+                    End="84.5,19" />
                   <mssgle:CubicBezierSegment
-                    Point1="95.7857142857143,19.7142857142857"
-                    Point2="99.7857142857143,19.7142857142857"
-                    Point3="99.7857142857143,23.7142857142857" />
+                    Point1="84.5,19"
+                    Point2="88.5,19"
+                    Point3="88.5,23" />
                   <mssgle:LineSegment
-                    End="99.7857142857143,31.9285714285715" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Stock Table.Paths[Sort Output]"
-          TopLeft="200.071428571429,152">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="159.547619047619,43.7142857142856"
-              Start="0,0"
-              End="159.547619047619,36.2142857142856">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.9144568006843" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.9144568006843"
-                    Point2="0,25.9144568006843"
-                    Point3="4,25.9144568006843" />
-                  <mssgle:LineSegment
-                    End="155.547619047619,25.9144568006843" />
-                  <mssgle:CubicBezierSegment
-                    Point1="155.547619047619,25.9144568006843"
-                    Point2="159.547619047619,25.9144568006843"
-                    Point3="159.547619047619,29.9144568006843" />
-                  <mssgle:LineSegment
-                    End="159.547619047619,36.2142857142856" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Stock Table.Paths[Sort Output1]"
-          TopLeft="590.214285714286,156.285714285714">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-189.261904761905,39.4285714285714"
-              Start="0,0"
-              End="-189.261904761905,31.9285714285714">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.3738237810094" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.3738237810094"
-                    Point2="0,23.3738237810094"
-                    Point3="-4,23.3738237810094" />
-                  <mssgle:LineSegment
-                    End="-185.261904761905,23.3738237810094" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-185.261904761905,23.3738237810094"
-                    Point2="-189.261904761905,23.3738237810094"
-                    Point3="-189.261904761905,27.3738237810094" />
-                  <mssgle:LineSegment
-                    End="-189.261904761905,31.9285714285714" />
+                    End="88.5,30.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3078,30 +3057,102 @@ WHERE SyncDate = (
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Stock Table.Paths[ADO NET Source Output1]"
-          TopLeft="723.714285714286,66.2857142857143">
+          TopLeft="594,69">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-133.5,48"
+              EndConnector="-135.5,41"
               Start="0,0"
-              End="-133.5,40.5">
+              End="-135.5,33.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20" />
+                    End="0,16.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20"
-                    Point2="0,24"
-                    Point3="-4,24" />
+                    Point1="0,16.5"
+                    Point2="0,20.5"
+                    Point3="-4,20.5" />
                   <mssgle:LineSegment
-                    End="-129.5,24" />
+                    End="-131.5,20.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-129.5,24"
-                    Point2="-133.5,24"
-                    Point3="-133.5,28" />
+                    Point1="-131.5,20.5"
+                    Point2="-135.5,20.5"
+                    Point3="-135.5,24.5" />
                   <mssgle:LineSegment
-                    End="-133.5,40.5" />
+                    End="-135.5,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="132,42"
+          Id="Package\Stock Table\Merge Join"
+          TopLeft="254,187" />
+        <EdgeLayout
+          Id="Package\Stock Table.Paths[Sort Output]"
+          TopLeft="205.5,154">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="93.8333333333333,33"
+              Start="0,0"
+              End="93.8333333333333,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.562874251497" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.562874251497"
+                    Point2="0,19.562874251497"
+                    Point3="4,19.562874251497" />
+                  <mssgle:LineSegment
+                    End="89.8333333333333,19.562874251497" />
+                  <mssgle:CubicBezierSegment
+                    Point1="89.8333333333333,19.562874251497"
+                    Point2="93.8333333333333,19.562874251497"
+                    Point3="93.8333333333333,23.562874251497" />
+                  <mssgle:LineSegment
+                    End="93.8333333333333,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Stock Table.Paths[Sort Output1]"
+          TopLeft="458.5,152">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-117.833333333333,35"
+              Start="0,0"
+              End="-117.833333333333,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.748502994012" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.748502994012"
+                    Point2="0,20.748502994012"
+                    Point3="-4,20.748502994012" />
+                  <mssgle:LineSegment
+                    End="-113.833333333333,20.748502994012" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-113.833333333333,20.748502994012"
+                    Point2="-117.833333333333,20.748502994012"
+                    Point3="-117.833333333333,24.748502994012" />
+                  <mssgle:LineSegment
+                    End="-117.833333333333,27.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3113,33 +3164,33 @@ WHERE SyncDate = (
         <NodeLayout
           Size="142,42"
           Id="Package\Stock Table\Split Records"
-          TopLeft="437.142857142857,277.142857142857" />
+          TopLeft="373,255" />
         <EdgeLayout
           Id="Package\Stock Table.Paths[Merge Join Output]"
-          TopLeft="380.285714285714,237.714285714286">
+          TopLeft="320,229">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="127.857142857143,39.4285714285714"
+              EndConnector="124,26"
               Start="0,0"
-              End="127.857142857143,31.9285714285714">
+              End="124,18.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15.7142857142857" />
+                    End="0,9" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,15.7142857142857"
-                    Point2="0,19.7142857142857"
-                    Point3="4,19.7142857142857" />
+                    Point1="0,9"
+                    Point2="0,13"
+                    Point3="4,13" />
                   <mssgle:LineSegment
-                    End="123.857142857143,19.7142857142857" />
+                    End="120,13" />
                   <mssgle:CubicBezierSegment
-                    Point1="123.857142857143,19.7142857142857"
-                    Point2="127.857142857143,19.7142857142857"
-                    Point3="127.857142857143,23.7142857142857" />
+                    Point1="120,13"
+                    Point2="124,13"
+                    Point3="124,17" />
                   <mssgle:LineSegment
-                    End="127.857142857143,31.9285714285714" />
+                    End="124,18.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3151,80 +3202,80 @@ WHERE SyncDate = (
         <NodeLayout
           Size="216,42"
           Id="Package\Stock Table\Insert Records (Stock Table)"
-          TopLeft="52.8571428571428,365.714285714286" />
+          TopLeft="41,365" />
         <EdgeLayout
-          Id="Package\Stock Table.Paths[Insert(not Match)]"
-          TopLeft="508.142857142857,319.142857142857">
+          Id="Package\Stock Table.Paths[Insert (Not Match)]"
+          TopLeft="444,297">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-347.285714285714,46.5714285714286"
+              EndConnector="-295,68"
               Start="0,0"
-              End="-347.285714285714,39.0714285714286">
+              End="-295,60.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.2857142857143" />
+                    End="0,30" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19.2857142857143"
-                    Point2="0,23.2857142857143"
-                    Point3="-4,23.2857142857143" />
+                    Point1="0,30"
+                    Point2="0,34"
+                    Point3="-4,34" />
                   <mssgle:LineSegment
-                    End="-343.285714285714,23.2857142857143" />
+                    End="-291,34" />
                   <mssgle:CubicBezierSegment
-                    Point1="-343.285714285714,23.2857142857143"
-                    Point2="-347.285714285714,23.2857142857143"
-                    Point3="-347.285714285714,27.2857142857143" />
+                    Point1="-291,34"
+                    Point2="-295,34"
+                    Point3="-295,38" />
                   <mssgle:LineSegment
-                    End="-347.285714285714,39.0714285714286" />
+                    End="-295,60.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-212.951196986607,28.2857142857143,78.6166796875,11.609375"
+              BoundingBox="-188.91833984375,39,82.8366796875,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
           Size="221,42"
           Id="Package\Stock Table\Update Records (Stock Table)"
-          TopLeft="600,364.285714285714" />
+          TopLeft="488,357" />
         <EdgeLayout
-          Id="Package\Stock Table.Paths[Update(Match)]"
-          TopLeft="530.47619047619,319.142857142857">
+          Id="Package\Stock Table.Paths[Update (Match)]"
+          TopLeft="466.333333333333,297">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="180.023809523809,45.1428571428571"
+              EndConnector="132.166666666667,60"
               Start="0,0"
-              End="180.023809523809,37.6428571428571">
+              End="132.166666666667,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,14.3589335455631" />
+                    End="0,20.4011142061281" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,14.3589335455631"
-                    Point2="0,18.3589335455631"
-                    Point3="4,18.3589335455631" />
+                    Point1="0,20.4011142061281"
+                    Point2="0,24.4011142061281"
+                    Point3="4,24.4011142061281" />
                   <mssgle:LineSegment
-                    End="176.023809523809,18.3589335455631" />
+                    End="128.166666666667,24.4011142061281" />
                   <mssgle:CubicBezierSegment
-                    Point1="176.023809523809,18.3589335455631"
-                    Point2="180.023809523809,18.3589335455631"
-                    Point3="180.023809523809,22.3589335455631" />
+                    Point1="128.166666666667,24.4011142061281"
+                    Point2="132.166666666667,24.4011142061281"
+                    Point3="132.166666666667,28.4011142061281" />
                   <mssgle:LineSegment
-                    End="180.023809523809,37.6428571428571" />
+                    End="132.166666666667,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="56.7912211681547,23.3589335455631,66.4413671875,11.609375"
+              BoundingBox="31.2976497395833,29.4011142061281,69.5713671875,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
