@@ -1,8 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="IBOrderTrackingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityContainer Name="IBOrderTrackingEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="User_UserGroup" EntityType="IBOrderTrackingModel.User_UserGroup" />
     <EntitySet Name="SOHeaders" EntityType="IBOrderTrackingModel.SOHeader" />
+    <EntitySet Name="UserGroups" EntityType="IBOrderTrackingModel.UserGroup" />
+    <AssociationSet Name="FK_User_UserGroup_UserGroup" Association="IBOrderTrackingModel.FK_User_UserGroup_UserGroup">
+      <End Role="UserGroup" EntitySet="UserGroups" />
+      <End Role="User_UserGroup" EntitySet="User_UserGroup" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="User_UserGroup">
+    <Key>
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="UserGroupID" />
+    </Key>
+    <Property Name="UserID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserGroupID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="UserGroup" Relationship="IBOrderTrackingModel.FK_User_UserGroup_UserGroup" FromRole="User_UserGroup" ToRole="UserGroup" />
+  </EntityType>
   <EntityType Name="SOHeader">
     <Key>
       <PropertyRef Name="SO" />
@@ -35,4 +50,24 @@
     <Property Name="DocDate" Type="DateTime" Precision="3" />
     <Property Name="DocAWB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
+  <EntityType Name="UserGroup">
+    <Key>
+      <PropertyRef Name="UserGroupID" />
+    </Key>
+    <Property Name="UserGroupID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserGroupName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="User_UserGroup" Relationship="IBOrderTrackingModel.FK_User_UserGroup_UserGroup" FromRole="UserGroup" ToRole="User_UserGroup" />
+  </EntityType>
+  <Association Name="FK_User_UserGroup_UserGroup">
+    <End Type="IBOrderTrackingModel.UserGroup" Role="UserGroup" Multiplicity="1" />
+    <End Type="IBOrderTrackingModel.User_UserGroup" Role="User_UserGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserGroup">
+        <PropertyRef Name="UserGroupID" />
+      </Principal>
+      <Dependent Role="User_UserGroup">
+        <PropertyRef Name="UserGroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>
