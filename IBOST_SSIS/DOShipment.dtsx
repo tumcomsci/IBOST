@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="DOShipment"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{EE5CE7AC-510A-488A-821C-A2AA3803B329}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{2F6A9E36-78A4-41CB-B79B-9D82B911D175}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAABerZYsukOF+PlIlDi0YFO4EgE4DdAdAni3rnDrDN6TQAAAAAOgAAAAAIAACAAAABps2Me5jGmk+gXG4HRa2rq4F+/M23IpK43KmkJ+pAeEyAAAAAkdyh2VRfyR0ApZFw4NQ+bY84ittWCSPkcfAd3BBtDxUAAAAAhkf5jgXRhIruh3kE6SlWGdSkpS8B7OPWkWy2vWMCj4uy0InT3sbpod0zPvAEWK+/v6+LwW0a5ojAonD3hlMj5</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACDJRbCpDqoqy14bISwy9Zz15LoYo4LtQRIq+rCY0TYyQAAAAAOgAAAAAIAACAAAAASVh9Xcz3dNHbr4wt3kWbM9wTokw9Bl4EAMv7NZY8qGiAAAAAejwr1B0a1967VvqEarHFTarELsEC0mk+pBqZ+lK+P+EAAAAACam385nJS1dF3yC6LO1VHzbW6WZSj8E5rLV1LuhffYfLE3vAjerFFkz3RJlGlFy+p/xvj+d3YItWwxg1ykuKc</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1064,6 +1064,18 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="227,42"
+          Id="Package\DOShipment Table\Delete Records (By Cancel DO)"
+          TopLeft="651.111111111111,263.111111111111" />
+        <NodeLayout
+          Size="129,42"
+          Id="Package\DOShipment Table\Sort Table"
+          TopLeft="616.666666666667,35.5555555555556" />
+        <NodeLayout
+          Size="142,44"
+          Id="Package\DOShipment Table\Split Records"
+          TopLeft="419.333333333333,181" />
+        <NodeLayout
           Size="146,42"
           Id="Package\DOShipment Table\Sort SO &amp; DO"
           TopLeft="251,37.2179487179487" />
@@ -1083,18 +1095,96 @@
           Size="132,42"
           Id="Package\DOShipment Table\Merge Join"
           TopLeft="424.444444444444,104.444444444444" />
-        <NodeLayout
-          Size="129,42"
-          Id="Package\DOShipment Table\Sort Table"
-          TopLeft="616.666666666667,35.5555555555556" />
-        <NodeLayout
-          Size="227,42"
-          Id="Package\DOShipment Table\Delete Records (By Cancel DO)"
-          TopLeft="651.111111111111,263.111111111111" />
-        <NodeLayout
-          Size="142,44"
-          Id="Package\DOShipment Table\Split Records"
-          TopLeft="419.333333333333,181" />
+        <EdgeLayout
+          Id="Package\DOShipment Table.Paths[Sort Output1]"
+          TopLeft="681.166666666667,77.5555555555556">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-170.055555555556,26.8888888888889"
+              Start="0,0"
+              End="-170.055555555556,19.3888888888889">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.940119760479" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.940119760479"
+                    Point2="0,15.940119760479"
+                    Point3="-4,15.940119760479" />
+                  <mssgle:LineSegment
+                    End="-166.055555555556,15.940119760479" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-166.055555555556,15.940119760479"
+                    Point2="-170.055555555556,15.940119760479"
+                    Point3="-170.055555555556,19.940119760479" />
+                  <mssgle:LineSegment
+                    End="-170.055555555556,19.3888888888889" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DOShipment Table.Paths[Sort Output]"
+          TopLeft="324,79.2179487179487">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="145.777777777778,25.2264957264957"
+              Start="0,0"
+              End="145.777777777778,17.7264957264957">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.9546292031322" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.9546292031322"
+                    Point2="0,14.9546292031322"
+                    Point3="4,14.9546292031322" />
+                  <mssgle:LineSegment
+                    End="141.777777777778,14.9546292031322" />
+                  <mssgle:CubicBezierSegment
+                    Point1="141.777777777778,14.9546292031322"
+                    Point2="145.777777777778,14.9546292031322"
+                    Point3="145.777777777778,18.9546292031322" />
+                  <mssgle:LineSegment
+                    End="145.777777777778,17.7264957264957" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DOShipment Table.Paths[Merge Join Output]"
+          TopLeft="490.388888888889,146.444444444444">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.5555555555555"
+              Start="0,0"
+              End="0,27.0555555555555">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.0555555555555" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\DOShipment Table.Paths[Insert (SO&amp;DO Not Match | So Match and DO Not Match)]"
           TopLeft="468,225">
@@ -1203,96 +1293,6 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="37.6025641025641,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DOShipment Table.Paths[Sort Output1]"
-          TopLeft="681.166666666667,77.5555555555556">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-170.055555555556,26.8888888888889"
-              Start="0,0"
-              End="-170.055555555556,19.3888888888889">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,11.940119760479" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11.940119760479"
-                    Point2="0,15.940119760479"
-                    Point3="-4,15.940119760479" />
-                  <mssgle:LineSegment
-                    End="-166.055555555556,15.940119760479" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-166.055555555556,15.940119760479"
-                    Point2="-170.055555555556,15.940119760479"
-                    Point3="-170.055555555556,19.940119760479" />
-                  <mssgle:LineSegment
-                    End="-170.055555555556,19.3888888888889" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DOShipment Table.Paths[Sort Output]"
-          TopLeft="324,79.2179487179487">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="145.777777777778,25.2264957264957"
-              Start="0,0"
-              End="145.777777777778,17.7264957264957">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,10.9546292031322" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,10.9546292031322"
-                    Point2="0,14.9546292031322"
-                    Point3="4,14.9546292031322" />
-                  <mssgle:LineSegment
-                    End="141.777777777778,14.9546292031322" />
-                  <mssgle:CubicBezierSegment
-                    Point1="141.777777777778,14.9546292031322"
-                    Point2="145.777777777778,14.9546292031322"
-                    Point3="145.777777777778,18.9546292031322" />
-                  <mssgle:LineSegment
-                    End="145.777777777778,17.7264957264957" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DOShipment Table.Paths[Merge Join Output]"
-          TopLeft="490.388888888889,146.444444444444">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34.5555555555555"
-              Start="0,0"
-              End="0,27.0555555555555">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.0555555555555" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
