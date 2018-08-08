@@ -52,6 +52,36 @@
           <Property Name="UserID" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="UserGroupID" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'IBOrderTracking.dbo.vContactUser' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vContactUser">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="UserAccountControl" />
+          </Key>
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar(max)" />
+          <Property Name="LastName" Type="nvarchar(max)" />
+          <Property Name="DisplayName" Type="nvarchar(max)" />
+          <Property Name="Title" Type="nvarchar(max)" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Company" Type="nvarchar(max)" />
+          <Property Name="Department" Type="nvarchar(max)" />
+          <Property Name="Manager" Type="nvarchar(max)" />
+          <Property Name="DirectReports" Type="nvarchar(max)" />
+          <Property Name="Extension" Type="nvarchar(max)" />
+          <Property Name="EmailAddress" Type="nvarchar(max)" />
+          <Property Name="Mobile" Type="nvarchar(max)" />
+          <Property Name="EmployeeID" Type="nvarchar(max)" />
+          <Property Name="Office" Type="nvarchar(max)" />
+          <Property Name="ThumbnailPhoto" Type="nvarchar(max)" />
+          <Property Name="Photo" Type="nvarchar(max)" />
+          <Property Name="TelephoneNumber" Type="nvarchar(max)" />
+          <Property Name="Fax" Type="nvarchar(max)" />
+          <Property Name="NickName" Type="nvarchar(max)" />
+          <Property Name="UserAccountControl" Type="int" Nullable="false" />
+          <Property Name="UserAccountControlBinary" Type="nvarchar(max)" />
+        </EntityType>
         <Association Name="FK_User-UserGroup_UserGroup">
           <End Role="UserGroup" Type="Self.UserGroup" Multiplicity="1" />
           <End Role="User-UserGroup" Type="Self.User-UserGroup" Multiplicity="*" />
@@ -68,6 +98,32 @@
           <EntitySet Name="SOHeader" EntityType="Self.SOHeader" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserGroup" EntityType="Self.UserGroup" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User-UserGroup" EntityType="Self.User-UserGroup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vContactUser" EntityType="Self.vContactUser" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vContactUser].[UserId] AS [UserId], 
+    [vContactUser].[FirstName] AS [FirstName], 
+    [vContactUser].[LastName] AS [LastName], 
+    [vContactUser].[DisplayName] AS [DisplayName], 
+    [vContactUser].[Title] AS [Title], 
+    [vContactUser].[Name] AS [Name], 
+    [vContactUser].[Company] AS [Company], 
+    [vContactUser].[Department] AS [Department], 
+    [vContactUser].[Manager] AS [Manager], 
+    [vContactUser].[DirectReports] AS [DirectReports], 
+    [vContactUser].[Extension] AS [Extension], 
+    [vContactUser].[EmailAddress] AS [EmailAddress], 
+    [vContactUser].[Mobile] AS [Mobile], 
+    [vContactUser].[EmployeeID] AS [EmployeeID], 
+    [vContactUser].[Office] AS [Office], 
+    [vContactUser].[ThumbnailPhoto] AS [ThumbnailPhoto], 
+    [vContactUser].[Photo] AS [Photo], 
+    [vContactUser].[TelephoneNumber] AS [TelephoneNumber], 
+    [vContactUser].[Fax] AS [Fax], 
+    [vContactUser].[NickName] AS [NickName], 
+    [vContactUser].[UserAccountControl] AS [UserAccountControl], 
+    [vContactUser].[UserAccountControlBinary] AS [UserAccountControlBinary]
+    FROM [dbo].[vContactUser] AS [vContactUser]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK_User-UserGroup_UserGroup" Association="Self.FK_User-UserGroup_UserGroup">
             <End Role="UserGroup" EntitySet="UserGroup" />
             <End Role="User-UserGroup" EntitySet="User-UserGroup" />
@@ -85,6 +141,7 @@
             <End Role="UserGroup" EntitySet="UserGroups" />
             <End Role="User_UserGroup" EntitySet="User_UserGroup" />
           </AssociationSet>
+          <EntitySet Name="vContactUsers" EntityType="IBOrderTrackingModel.vContactUser" />
         </EntityContainer>
         <EntityType Name="User_UserGroup">
           <Key>
@@ -147,6 +204,34 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="vContactUser">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="UserAccountControl" />
+          </Key>
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DisplayName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Company" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Department" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Manager" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DirectReports" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Extension" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EmailAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EmployeeID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Office" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ThumbnailPhoto" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TelephoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Fax" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NickName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserAccountControl" Type="Int32" Nullable="false" />
+          <Property Name="UserAccountControlBinary" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -199,6 +284,34 @@
               <MappingFragment StoreEntitySet="UserGroup">
                 <ScalarProperty Name="UserGroupName" ColumnName="UserGroupName" />
                 <ScalarProperty Name="UserGroupID" ColumnName="UserGroupID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vContactUsers">
+            <EntityTypeMapping TypeName="IBOrderTrackingModel.vContactUser">
+              <MappingFragment StoreEntitySet="vContactUser">
+                <ScalarProperty Name="UserAccountControlBinary" ColumnName="UserAccountControlBinary" />
+                <ScalarProperty Name="UserAccountControl" ColumnName="UserAccountControl" />
+                <ScalarProperty Name="NickName" ColumnName="NickName" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="TelephoneNumber" ColumnName="TelephoneNumber" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="ThumbnailPhoto" ColumnName="ThumbnailPhoto" />
+                <ScalarProperty Name="Office" ColumnName="Office" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="Extension" ColumnName="Extension" />
+                <ScalarProperty Name="DirectReports" ColumnName="DirectReports" />
+                <ScalarProperty Name="Manager" ColumnName="Manager" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

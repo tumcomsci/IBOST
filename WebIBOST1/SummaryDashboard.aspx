@@ -13,7 +13,7 @@
     <br />
 
     <div>
-     
+
         <script lang="text/javascript">
             window.onload = function () {
 
@@ -37,7 +37,7 @@
                         });
                     chart.render();
                 });
-               
+
 
             }
 
@@ -59,13 +59,16 @@
                         <h3>SummaryDashboard</h3>
                     </div>
                     <div class="panel-body">
-                        <div id="chartContainer" style="height: 300px; width: 100%;">
+                        <div class="col-md-6">
+                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
                         </div>
+                        <div class="col-md-6">
 
+                        </div>
                     </div>
-                </div>
+            </div>
 
-                <script src="source/canvasjs.js"></script>
+            <script src="source/canvasjs.js"></script>
             </div>      
          
             <div class="panel panel-primary">
@@ -106,5 +109,4 @@
         </div>
     </div>
 
-    </div>
 </asp:Content>

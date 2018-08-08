@@ -9,7 +9,7 @@ namespace WebIBOST1
 {
     public partial class ManageUserAuthorize : System.Web.UI.Page
     {
-        CentralContactEntities oContactConnect = new CentralContactEntities();
+
         IBOrderTrackingEntities oIBConnect = new IBOrderTrackingEntities();
 
         protected void Page_Load(object sender, EventArgs e)
@@ -48,7 +48,7 @@ namespace WebIBOST1
 
             //Get User Records
         
-            var oUsers = oContactConnect.Users.OrderBy(x=>x.Department).ToList();
+            var oUsers = oIBConnect.vContactUsers.OrderBy(x=>x.Department).ToList();
 
             foreach(var uitem in oUsers)
             {
