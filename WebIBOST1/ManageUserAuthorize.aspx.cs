@@ -15,7 +15,7 @@ namespace WebIBOST1
         protected void Page_Load(object sender, EventArgs e)
         {
             GenerateUserTable();
-            //GenerateUserGroupTable();
+            GenerateUserGroupTable();
         }
 
         private void GenerateUserTable()
