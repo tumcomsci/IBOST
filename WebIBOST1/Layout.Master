@@ -132,6 +132,12 @@
                 responsive: true
             });
         });
+
+        $(document).ready(function () {
+            $('#ContentPlaceHolder1_tblData_User').DataTable({
+                responsive: true
+            });
+        });
     </script>
    
     <script>

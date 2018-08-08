@@ -37,8 +37,17 @@
           <Property Name="DocDate" Type="datetime" />
           <Property Name="DocAWB" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="User-UserGroup">
+          <Key>
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="UserGroupID" />
+          </Key>
+          <Property Name="UserID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UserGroupID" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <EntityContainer Name="IBOrderTrackingModelStoreContainer">
           <EntitySet Name="SOHeader" EntityType="Self.SOHeader" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User-UserGroup" EntityType="Self.User-UserGroup" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -46,6 +55,7 @@
       <Schema Namespace="IBOrderTrackingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="IBOrderTrackingEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="SOHeaders" EntityType="IBOrderTrackingModel.SOHeader" />
+          <EntitySet Name="User_UserGroup" EntityType="IBOrderTrackingModel.User_UserGroup" />
         </EntityContainer>
         <EntityType Name="SOHeader">
           <Key>
@@ -78,6 +88,14 @@
           <Property Name="CfmUncfm" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="DocDate" Type="DateTime" Precision="3" />
           <Property Name="DocAWB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="User_UserGroup">
+          <Key>
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="UserGroupID" />
+          </Key>
+          <Property Name="UserID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserGroupID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -115,6 +133,14 @@
                 <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
                 <ScalarProperty Name="OrderType" ColumnName="OrderType" />
                 <ScalarProperty Name="LoadingDate" ColumnName="LoadingDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User_UserGroup">
+            <EntityTypeMapping TypeName="IBOrderTrackingModel.User_UserGroup">
+              <MappingFragment StoreEntitySet="User-UserGroup">
+                <ScalarProperty Name="UserGroupID" ColumnName="UserGroupID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
