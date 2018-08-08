@@ -89,16 +89,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ContactModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ContactModel.edmx</DependentUpon>
-      <LastGenOutput>ContactModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="ContactModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ContactModel.edmx</DependentUpon>
-      <LastGenOutput>ContactModel.cs</LastGenOutput>
-    </Content>
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="IMG\ASEAN-Briefing-Import-and-Export-Procedures-in-Indonesia-Best-Practices-002.jpg" />
@@ -200,21 +190,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="ContactModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ContactModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ContactModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ContactModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ContactModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ContactModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\SOController.cs" />
     <Compile Include="DataModel\SOModel.cs" />
     <Compile Include="Global.asax.cs">
@@ -281,13 +256,13 @@
     <Compile Include="Table.aspx.designer.cs">
       <DependentUpon>Table.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User.cs">
-      <DependentUpon>ContactModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="UserGroup.cs">
       <DependentUpon>ModelData.tt</DependentUpon>
     </Compile>
     <Compile Include="User_UserGroup.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vContactUser.cs">
       <DependentUpon>ModelData.tt</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
@@ -306,13 +281,6 @@
     </EntityDeploy>
     <Content Include="ModelData.edmx.diagram">
       <DependentUpon>ModelData.edmx</DependentUpon>
-    </Content>
-    <EntityDeploy Include="ContactModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ContactModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="ContactModel.edmx.diagram">
-      <DependentUpon>ContactModel.edmx</DependentUpon>
     </Content>
     <None Include="packages.config" />
     <Content Include="vendor\datatables-responsive\dataTables.responsive.scss" />
