@@ -13,10 +13,10 @@ namespace WebIBOST1
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class IBOrderTrackingEntities : DbContext
+    public partial class CentralContactEntities : DbContext
     {
-        public IBOrderTrackingEntities()
-            : base("name=IBOrderTrackingEntities")
+        public CentralContactEntities()
+            : base("name=CentralContactEntities")
         {
         }
     
@@ -25,8 +25,6 @@ namespace WebIBOST1
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<User_UserGroup> User_UserGroup { get; set; }
-        public virtual DbSet<SOHeader> SOHeaders { get; set; }
-        public virtual DbSet<UserGroup> UserGroups { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }

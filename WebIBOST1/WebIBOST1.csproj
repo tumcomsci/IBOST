@@ -89,6 +89,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ContactModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ContactModel.edmx</DependentUpon>
+      <LastGenOutput>ContactModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ContactModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ContactModel.edmx</DependentUpon>
+      <LastGenOutput>ContactModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="IMG\ASEAN-Briefing-Import-and-Export-Procedures-in-Indonesia-Best-Practices-002.jpg" />
@@ -108,8 +118,7 @@
     <Content Include="IMG\home13.jpg" />
     <Content Include="IMG\images.jpg" />
     <Content Include="IMG\photo.jpg" />
-    <Content Include="IMG\sort_asc.png" />
-    <Content Include="IMG\sort_desc.png" />
+    <Content Include="ManageUserAuthorize.aspx" />
     <Content Include="ModelData.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ModelData.Context.cs</LastGenOutput>
@@ -148,12 +157,12 @@
     <Content Include="vendor\datatables\css\jquery.dataTables.css" />
     <Content Include="vendor\datatables\css\jquery.dataTables.min.css" />
     <Content Include="vendor\datatables\css\jquery.dataTables_themeroller.css" />
-    <Content Include="vendor\datatables\images\favicon.ico" />
-    <Content Include="vendor\datatables\images\sort_asc.png" />
-    <Content Include="vendor\datatables\images\sort_asc_disabled.png" />
-    <Content Include="vendor\datatables\images\sort_both.png" />
-    <Content Include="vendor\datatables\images\sort_desc.png" />
-    <Content Include="vendor\datatables\images\sort_desc_disabled.png" />
+    <Content Include="vendor\images\favicon.ico" />
+    <Content Include="vendor\images\sort_asc.png" />
+    <Content Include="vendor\images\sort_asc_disabled.png" />
+    <Content Include="vendor\images\sort_both.png" />
+    <Content Include="vendor\images\sort_desc.png" />
+    <Content Include="vendor\images\sort_desc_disabled.png" />
     <Content Include="vendor\datatables\js\dataTables.bootstrap.js" />
     <Content Include="vendor\datatables\js\dataTables.bootstrap.min.js" />
     <Content Include="vendor\datatables\js\dataTables.bootstrap4.js" />
@@ -191,6 +200,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="ContactModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContactModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContactModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContactModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContactModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContactModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\SOController.cs" />
     <Compile Include="DataModel\SOModel.cs" />
     <Compile Include="Global.asax.cs">
@@ -209,6 +233,13 @@
     </Compile>
     <Compile Include="Layout.Master.designer.cs">
       <DependentUpon>Layout.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ManageUserAuthorize.aspx.cs">
+      <DependentUpon>ManageUserAuthorize.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageUserAuthorize.aspx.designer.cs">
+      <DependentUpon>ManageUserAuthorize.aspx</DependentUpon>
     </Compile>
     <Compile Include="ModelData.Context.cs">
       <AutoGen>True</AutoGen>
@@ -250,6 +281,15 @@
     <Compile Include="Table.aspx.designer.cs">
       <DependentUpon>Table.aspx</DependentUpon>
     </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>ContactModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserGroup.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User_UserGroup.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -267,9 +307,16 @@
     <Content Include="ModelData.edmx.diagram">
       <DependentUpon>ModelData.edmx</DependentUpon>
     </Content>
+    <EntityDeploy Include="ContactModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ContactModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="ContactModel.edmx.diagram">
+      <DependentUpon>ContactModel.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <Content Include="vendor\datatables-responsive\dataTables.responsive.scss" />
-    <Content Include="vendor\datatables\images\Sorting icons.psd" />
+    <Content Include="vendor\images\Sorting icons.psd" />
     <Content Include="vendor\font-awesome\css\font-awesome.css.map" />
     <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.eot" />
     <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
@@ -320,6 +367,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="vendor\datatables\images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,6 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="IBOrderTrackingModelStoreContainer" CdmEntityContainer="IBOrderTrackingEntities">
+    <EntitySetMapping Name="User_UserGroup">
+      <EntityTypeMapping TypeName="IBOrderTrackingModel.User_UserGroup">
+        <MappingFragment StoreEntitySet="User-UserGroup">
+          <ScalarProperty Name="UserGroupID" ColumnName="UserGroupID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="SOHeaders">
       <EntityTypeMapping TypeName="IBOrderTrackingModel.SOHeader">
         <MappingFragment StoreEntitySet="SOHeader">
@@ -31,6 +39,14 @@
           <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
           <ScalarProperty Name="OrderType" ColumnName="OrderType" />
           <ScalarProperty Name="LoadingDate" ColumnName="LoadingDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserGroups">
+      <EntityTypeMapping TypeName="IBOrderTrackingModel.UserGroup">
+        <MappingFragment StoreEntitySet="UserGroup">
+          <ScalarProperty Name="UserGroupName" ColumnName="UserGroupName" />
+          <ScalarProperty Name="UserGroupID" ColumnName="UserGroupID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

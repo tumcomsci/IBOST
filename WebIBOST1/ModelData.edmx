@@ -37,16 +37,64 @@
           <Property Name="DocDate" Type="datetime" />
           <Property Name="DocAWB" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="UserGroup">
+          <Key>
+            <PropertyRef Name="UserGroupID" />
+          </Key>
+          <Property Name="UserGroupID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UserGroupName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="User-UserGroup">
+          <Key>
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="UserGroupID" />
+          </Key>
+          <Property Name="UserID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UserGroupID" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_User-UserGroup_UserGroup">
+          <End Role="UserGroup" Type="Self.UserGroup" Multiplicity="1" />
+          <End Role="User-UserGroup" Type="Self.User-UserGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserGroup">
+              <PropertyRef Name="UserGroupID" />
+            </Principal>
+            <Dependent Role="User-UserGroup">
+              <PropertyRef Name="UserGroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="IBOrderTrackingModelStoreContainer">
           <EntitySet Name="SOHeader" EntityType="Self.SOHeader" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserGroup" EntityType="Self.UserGroup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User-UserGroup" EntityType="Self.User-UserGroup" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_User-UserGroup_UserGroup" Association="Self.FK_User-UserGroup_UserGroup">
+            <End Role="UserGroup" EntitySet="UserGroup" />
+            <End Role="User-UserGroup" EntitySet="User-UserGroup" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="IBOrderTrackingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="IBOrderTrackingEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="User_UserGroup" EntityType="IBOrderTrackingModel.User_UserGroup" />
           <EntitySet Name="SOHeaders" EntityType="IBOrderTrackingModel.SOHeader" />
+          <EntitySet Name="UserGroups" EntityType="IBOrderTrackingModel.UserGroup" />
+          <AssociationSet Name="FK_User_UserGroup_UserGroup" Association="IBOrderTrackingModel.FK_User_UserGroup_UserGroup">
+            <End Role="UserGroup" EntitySet="UserGroups" />
+            <End Role="User_UserGroup" EntitySet="User_UserGroup" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="User_UserGroup">
+          <Key>
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="UserGroupID" />
+          </Key>
+          <Property Name="UserID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserGroupID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="UserGroup" Relationship="IBOrderTrackingModel.FK_User_UserGroup_UserGroup" FromRole="User_UserGroup" ToRole="UserGroup" />
+        </EntityType>
         <EntityType Name="SOHeader">
           <Key>
             <PropertyRef Name="SO" />
@@ -79,12 +127,40 @@
           <Property Name="DocDate" Type="DateTime" Precision="3" />
           <Property Name="DocAWB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="UserGroup">
+          <Key>
+            <PropertyRef Name="UserGroupID" />
+          </Key>
+          <Property Name="UserGroupID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserGroupName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="User_UserGroup" Relationship="IBOrderTrackingModel.FK_User_UserGroup_UserGroup" FromRole="UserGroup" ToRole="User_UserGroup" />
+        </EntityType>
+        <Association Name="FK_User_UserGroup_UserGroup">
+          <End Type="IBOrderTrackingModel.UserGroup" Role="UserGroup" Multiplicity="1" />
+          <End Type="IBOrderTrackingModel.User_UserGroup" Role="User_UserGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserGroup">
+              <PropertyRef Name="UserGroupID" />
+            </Principal>
+            <Dependent Role="User_UserGroup">
+              <PropertyRef Name="UserGroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="IBOrderTrackingModelStoreContainer" CdmEntityContainer="IBOrderTrackingEntities">
+          <EntitySetMapping Name="User_UserGroup">
+            <EntityTypeMapping TypeName="IBOrderTrackingModel.User_UserGroup">
+              <MappingFragment StoreEntitySet="User-UserGroup">
+                <ScalarProperty Name="UserGroupID" ColumnName="UserGroupID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="SOHeaders">
             <EntityTypeMapping TypeName="IBOrderTrackingModel.SOHeader">
               <MappingFragment StoreEntitySet="SOHeader">
@@ -115,6 +191,14 @@
                 <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
                 <ScalarProperty Name="OrderType" ColumnName="OrderType" />
                 <ScalarProperty Name="LoadingDate" ColumnName="LoadingDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserGroups">
+            <EntityTypeMapping TypeName="IBOrderTrackingModel.UserGroup">
+              <MappingFragment StoreEntitySet="UserGroup">
+                <ScalarProperty Name="UserGroupName" ColumnName="UserGroupName" />
+                <ScalarProperty Name="UserGroupID" ColumnName="UserGroupID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -32,7 +32,40 @@
     <Property Name="DocDate" Type="datetime" />
     <Property Name="DocAWB" Type="nvarchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="UserGroup">
+    <Key>
+      <PropertyRef Name="UserGroupID" />
+    </Key>
+    <Property Name="UserGroupID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserGroupName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="User-UserGroup">
+    <Key>
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="UserGroupID" />
+    </Key>
+    <Property Name="UserID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserGroupID" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_User-UserGroup_UserGroup">
+    <End Role="UserGroup" Type="Self.UserGroup" Multiplicity="1" />
+    <End Role="User-UserGroup" Type="Self.User-UserGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserGroup">
+        <PropertyRef Name="UserGroupID" />
+      </Principal>
+      <Dependent Role="User-UserGroup">
+        <PropertyRef Name="UserGroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="IBOrderTrackingModelStoreContainer">
     <EntitySet Name="SOHeader" EntityType="Self.SOHeader" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserGroup" EntityType="Self.UserGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User-UserGroup" EntityType="Self.User-UserGroup" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_User-UserGroup_UserGroup" Association="Self.FK_User-UserGroup_UserGroup">
+      <End Role="UserGroup" EntitySet="UserGroup" />
+      <End Role="User-UserGroup" EntitySet="User-UserGroup" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

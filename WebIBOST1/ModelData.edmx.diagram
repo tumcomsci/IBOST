@@ -5,7 +5,10 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="28e6b30258614f98b812aaa23aaaa2c8" Name="Diagram1" ZoomLevel="71">
+        <EntityTypeShape EntityType="IBOrderTrackingModel.User_UserGroup" Width="1.5" PointX="3.375" PointY="0.75" />
         <EntityTypeShape EntityType="IBOrderTrackingModel.SOHeader" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="IBOrderTrackingModel.UserGroup" Width="1.5" PointX="6.5" PointY="1" />
+        <AssociationConnector Association="IBOrderTrackingModel.FK_User_UserGroup_UserGroup" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
