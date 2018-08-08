@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="STG_SODetail"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{49E91D7B-9231-450C-B18E-F7A79B59CE0D}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{6F4E3C4D-FA3B-427F-9DDF-9564A03D81BC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADM+LtwJg8agdvpTmf9izpgQqN4HgpDvixkqeo8X13LngAAAAAOgAAAAAIAACAAAABmo9LeGVjDvxEVtsEThtKYsCK+foVor13r2AiCSjmj+SAAAAB+fSYGMGVB2AA88sn1Y16FL9paCOnIx+E0QFxLsLZn2kAAAABqui0gflt/KQ9c1uaZCrWEH2wxAbM2r2UJRtV67HKtXniMu8q9PIZ+E/f676pM9Dk2NRhbSiP1AfmSgS+iy9SY</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABXjffFbCK33qD37a54YR4S8N1ozAZXpwcCXTnVPrN9jAAAAAAOgAAAAAIAACAAAAAY3HjTXOt7fetwvdin5cQBbev+rc2iFRo9rgDhb4a30CAAAABCF/Z7IKxcn78V7y80OyWalPViO4meVCQG+MbNmHrzDUAAAACauIBAKEUZhOy5qUqM8v9M6FP6qhK7TpkuuZtgG2WvZP8ff1eb6nnRkWlx04hu+UjbES9Egrxace/GwDjMgePr</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -641,11 +641,15 @@
                       name="BRAND" />
                     <externalMetadataColumn
                       refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[  ITEM]"
-                      dataType="i4"
+                      codePage="874"
+                      dataType="str"
+                      length="50"
                       name="  ITEM" />
                     <externalMetadataColumn
                       refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[MATERIAL]"
-                      dataType="i4"
+                      codePage="874"
+                      dataType="str"
+                      length="50"
                       name="MATERIAL" />
                     <externalMetadataColumn
                       refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[DESCRIPTION]"
@@ -655,7 +659,9 @@
                       name="DESCRIPTION" />
                     <externalMetadataColumn
                       refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[ Cartons ]"
-                      dataType="i4"
+                      codePage="874"
+                      dataType="str"
+                      length="50"
                       name=" Cartons " />
                     <externalMetadataColumn
                       refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[Unit]"
@@ -877,6 +883,12 @@
                       externalMetadataColumnId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[Status]"
                       lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[Status]" />
                     <inputColumn
+                      refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].Columns[SyncDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="SyncDate"
+                      externalMetadataColumnId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[SyncDate]"
+                      lineageId="Package\STG SO Detail\Derived Column.Outputs[Derived Column Output].Columns[SyncDate]" />
+                    <inputColumn
                       refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].Columns[SO no ]"
                       cachedCodepage="874"
                       cachedDataType="str"
@@ -928,12 +940,6 @@
                       cachedName="Net Sales"
                       externalMetadataColumnId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[NetSales]"
                       lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[Net Sales]" />
-                    <inputColumn
-                      refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].Columns[SyncDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="SyncDate"
-                      externalMetadataColumnId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[SyncDate]"
-                      lineageId="Package\STG SO Detail\Derived Column.Outputs[Derived Column Output].Columns[SyncDate]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1073,22 +1079,56 @@
           Id="Package\STG SO Detail\CSV SO Detail"
           TopLeft="261,69" />
         <NodeLayout
-          Size="146,42"
-          Id="Package\STG SO Detail\STG_SODetail"
-          TopLeft="492,250" />
-        <NodeLayout
           Size="156,42"
           Id="Package\STG SO Detail\Derived Column"
-          TopLeft="359,161" />
+          TopLeft="375,152" />
         <EdgeLayout
           Id="Package\STG SO Detail.Paths[Flat File Source Output]"
           TopLeft="334.5,111">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="102.5,50"
+              EndConnector="118.5,41"
               Start="0,0"
-              End="102.5,42.5">
+              End="118.5,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.5"
+                    Point2="0,20.5"
+                    Point3="4,20.5" />
+                  <mssgle:LineSegment
+                    End="114.5,20.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="114.5,20.5"
+                    Point2="118.5,20.5"
+                    Point3="118.5,24.5" />
+                  <mssgle:LineSegment
+                    End="118.5,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="146,42"
+          Id="Package\STG SO Detail\STG_SODetail"
+          TopLeft="546,244" />
+        <EdgeLayout
+          Id="Package\STG SO Detail.Paths[Derived Column Output]"
+          TopLeft="453,194">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="166,50"
+              Start="0,0"
+              End="166,42.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -1099,47 +1139,13 @@
                     Point2="0,25"
                     Point3="4,25" />
                   <mssgle:LineSegment
-                    End="98.5,25" />
+                    End="162,25" />
                   <mssgle:CubicBezierSegment
-                    Point1="98.5,25"
-                    Point2="102.5,25"
-                    Point3="102.5,29" />
+                    Point1="162,25"
+                    Point2="166,25"
+                    Point3="166,29" />
                   <mssgle:LineSegment
-                    End="102.5,42.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\STG SO Detail.Paths[Derived Column Output]"
-          TopLeft="437,203">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="128,47"
-              Start="0,0"
-              End="128,39.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.5"
-                    Point2="0,23.5"
-                    Point3="4,23.5" />
-                  <mssgle:LineSegment
-                    End="124,23.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="124,23.5"
-                    Point2="128,23.5"
-                    Point3="128,27.5" />
-                  <mssgle:LineSegment
-                    End="128,39.5" />
+                    End="166,42.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
