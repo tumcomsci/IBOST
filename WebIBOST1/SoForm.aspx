@@ -9,9 +9,6 @@
             <br />
             <br />
             <br />
-
-
-
             <div class="container-fluid">
                 <div class="panel-group">
                     <div class="panel panel-primary">

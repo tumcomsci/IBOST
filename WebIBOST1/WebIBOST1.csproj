@@ -286,6 +286,9 @@
     <Compile Include="User.cs">
       <DependentUpon>ContactModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="UserGroup.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
     <Compile Include="User_UserGroup.cs">
       <DependentUpon>ModelData.tt</DependentUpon>
     </Compile>
