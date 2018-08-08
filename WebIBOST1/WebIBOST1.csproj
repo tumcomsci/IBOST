@@ -118,8 +118,6 @@
     <Content Include="IMG\home13.jpg" />
     <Content Include="IMG\images.jpg" />
     <Content Include="IMG\photo.jpg" />
-    <Content Include="IMG\sort_asc.png" />
-    <Content Include="IMG\sort_desc.png" />
     <Content Include="ManageUserAuthorize.aspx" />
     <Content Include="ModelData.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
