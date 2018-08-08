@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="SODetail"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{4E25F646-6E68-483B-95F9-2F38E028B765}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{2AA832B3-C48B-422B-BB51-0FA6C1479770}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAByYABctU+yCi3j8jQgYFgdge5VNdKyHXvUHQsHvq4wiAAAAAAOgAAAAAIAACAAAADLYu8LqszzUaac816LZvj0XUtBkjhD4jmGlxH89yOsVSAAAAASspywBB61fRrh5WLOihlYvY+N0CbYMfqPueOZiE56eUAAAACLjSCtnuLhUsfPwElhqMGgd4/Ga9Ty7Y1uCr+0Pj6a9eWyfcss63d2QcS+/x195vfsc4N6QLBI5PCdNt2z7INV</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAZuDaG844vaQnLEmUb/TxRA+0QXJKz03fEiXrmFlAVFQAAAAAOgAAAAAIAACAAAAAOKMsXPnPIvLJdD1mmaMEU4rdogwhjhGTGHKrEVSeNnSAAAACuNhPjJpb7JpYqKmllFVUfa9YkhnKsdwBttORi58xeM0AAAABU7c34MQhId/unSQFjcwYbW+QJGpR4Vjhvd4U8+ZxOc/+WGQK+k45qJTtcpnfX8kBX6Xci0C53Da1aXVL3pmsp</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -960,6 +960,129 @@
                       </properties>
                     </outputColumn>
                   </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SODetail Table\Insert Records (SODetail Table)"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="Insert Records (SODetail Table)"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SODetail Table\Insert Records (SODetail Table).Connections[IDbConnection]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\SODetail Table\Insert Records (SODetail Table).Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SODetail Table\Insert Records (SODetail Table).Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\SODetail Table\Insert Records (SODetail Table).Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SODetail Table\Insert Records (SODetail Table).Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SODetail Table\Insert Records (SODetail Table).Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SODetail Table\Insert Records (SODetail Table).Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SODetail Table\Insert Records (SODetail Table).Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SODetail Table\Merge Join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\SODetail Table\Merge Join.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\SODetail Table\Merge Join.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SODetail Table\Merge Join.Outputs[Merge Join Output]"
+                  name="Merge Join Output">
                   <externalMetadataColumns />
                 </output>
               </outputs>
@@ -2485,6 +2608,627 @@
               </outputs>
             </component>
             <component
+              refId="Package\SODetail Table\SODetail Table"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+              name="SODetail Table"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement used by the component to extract data."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="The Source database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the mode to retrieve external column information"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SODetail Table\SODetail Table.Connections[IDbConnection]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\SODetail Table\SODetail Table.Outputs[ADO NET Source Output]"
+                  name="ADO NET Source Output">
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </output>
+                <output
+                  refId="Package\SODetail Table\SODetail Table.Outputs[ADO NET Source Error Output]"
+                  isErrorOut="true"
+                  name="ADO NET Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SODetail Table\SODetail Table.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SODetail Table\SODetail Table.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SODetail Table\SODetail Table.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SODetail Table\SODetail Table.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SODetail Table\Sort STG"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort STG"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\SODetail Table\Sort STG.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SODetail Table\Sort STG.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SODetail Table\Sort Table"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort Table"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\SODetail Table\Sort Table.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SODetail Table\Sort Table.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SODetail Table\Split Records"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Split Records"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\SODetail Table\Split Records.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SODetail Table\Split Records.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\SODetail Table\Split Records.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SODetail Table\Split Records.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\SODetail Table\Split Records.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SODetail Table\Split Records.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SODetail Table\Split Records.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SODetail Table\Split Records.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SODetail Table\Split Records.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SODetail Table\STG_SODetail"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+              name="STG_SODetail"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement used by the component to extract data."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT *
+  FROM STG_SODetail
+WHERE SyncDate = ( 
+    SELECT MAX(SyncDate) 
+    FROM STG_SODetail
+);</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="The Source database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the mode to retrieve external column information"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SODetail Table\STG_SODetail.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output]"
+                  name="ADO NET Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].Columns[SO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[SO]"
+                      length="50"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].Columns[SO]"
+                      name="SO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].Columns[DO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[DO]"
+                      length="50"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].Columns[DO]"
+                      name="DO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].Columns[Brand]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[Brand]"
+                      length="50"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].Columns[Brand]"
+                      name="Brand"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].Columns[Item]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[Item]"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].Columns[Item]"
+                      name="Item"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].Columns[Material]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[Material]"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].Columns[Material]"
+                      name="Material"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].Columns[Description]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[Description]"
+                      length="50"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].Columns[Description]"
+                      name="Description"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].Columns[Cartons]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[Cartons]"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].Columns[Cartons]"
+                      name="Cartons"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].Columns[Unit]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[Unit]"
+                      length="50"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].Columns[Unit]"
+                      name="Unit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].Columns[FOBPriceUnit]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[FOBPriceUnit]"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].Columns[FOBPriceUnit]"
+                      name="FOBPriceUnit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].Columns[TotalFOB]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[TotalFOB]"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].Columns[TotalFOB]"
+                      name="TotalFOB"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].Columns[NetInvoice]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[NetInvoice]"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].Columns[NetInvoice]"
+                      name="NetInvoice"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].Columns[NetSales]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[NetSales]"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].Columns[NetSales]"
+                      name="NetSales"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].Columns[Status]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[Status]"
+                      length="50"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].Columns[Status]"
+                      name="Status"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].Columns[SyncDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[SyncDate]"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].Columns[SyncDate]"
+                      name="SyncDate"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[SO]"
+                      dataType="wstr"
+                      length="50"
+                      name="SO" />
+                    <externalMetadataColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[DO]"
+                      dataType="wstr"
+                      length="50"
+                      name="DO" />
+                    <externalMetadataColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[Brand]"
+                      dataType="wstr"
+                      length="50"
+                      name="Brand" />
+                    <externalMetadataColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[Item]"
+                      dataType="i4"
+                      name="Item" />
+                    <externalMetadataColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[Material]"
+                      dataType="i4"
+                      name="Material" />
+                    <externalMetadataColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[Description]"
+                      dataType="wstr"
+                      length="50"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[Cartons]"
+                      dataType="i4"
+                      name="Cartons" />
+                    <externalMetadataColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[Unit]"
+                      dataType="wstr"
+                      length="50"
+                      name="Unit" />
+                    <externalMetadataColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[FOBPriceUnit]"
+                      dataType="r8"
+                      name="FOBPriceUnit" />
+                    <externalMetadataColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[TotalFOB]"
+                      dataType="r8"
+                      name="TotalFOB" />
+                    <externalMetadataColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[NetInvoice]"
+                      dataType="r8"
+                      name="NetInvoice" />
+                    <externalMetadataColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[NetSales]"
+                      dataType="r8"
+                      name="NetSales" />
+                    <externalMetadataColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[Status]"
+                      dataType="wstr"
+                      length="50"
+                      name="Status" />
+                    <externalMetadataColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[SyncDate]"
+                      dataType="dbTimeStamp"
+                      name="SyncDate" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output]"
+                  isErrorOut="true"
+                  name="ADO NET Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[SO]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[SO]"
+                      name="SO" />
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[DO]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[DO]"
+                      name="DO" />
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[Brand]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[Brand]"
+                      name="Brand" />
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[Item]"
+                      dataType="i4"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[Item]"
+                      name="Item" />
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[Material]"
+                      dataType="i4"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[Material]"
+                      name="Material" />
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[Description]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[Description]"
+                      name="Description" />
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[Cartons]"
+                      dataType="i4"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[Cartons]"
+                      name="Cartons" />
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[Unit]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[Unit]"
+                      name="Unit" />
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[FOBPriceUnit]"
+                      dataType="r8"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[FOBPriceUnit]"
+                      name="FOBPriceUnit" />
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[TotalFOB]"
+                      dataType="r8"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[TotalFOB]"
+                      name="TotalFOB" />
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[NetInvoice]"
+                      dataType="r8"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[NetInvoice]"
+                      name="NetInvoice" />
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[NetSales]"
+                      dataType="r8"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[NetSales]"
+                      name="NetSales" />
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[Status]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[Status]"
+                      name="Status" />
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[SyncDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[SyncDate]"
+                      name="SyncDate" />
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SODetail Table\Update Records (SODetail Table)"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="Update Records (SODetail Table)"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">874</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SODetail Table\Update Records (SODetail Table).Connections[OleDbConnection]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\SODetail Table\Update Records (SODetail Table).Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SODetail Table\Update Records (SODetail Table).Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\SODetail Table\Update Records (SODetail Table).Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SODetail Table\Update Records (SODetail Table).Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\SODetail Table\Update Records (SODetail Table).Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SODetail Table\Update Records (SODetail Table).Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SODetail Table\Update Records (SODetail Table).Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SODetail Table\Update Records (SODetail Table).Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SODetail Table\Update Records (SODetail Table).Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\SODetail Table\xxxxx"
               componentClassID="Microsoft.ConditionalSplit"
               contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -3357,6 +4101,11 @@ WHERE SyncDate = (
               name="ADO NET Source Output"
               startId="Package\SODetail Table\asdas.Outputs[ADO NET Source Output]" />
             <path
+              refId="Package\SODetail Table.Paths[ADO NET Source Output2]"
+              endId="Package\SODetail Table\Sort STG.Inputs[Sort Input]"
+              name="ADO NET Source Output"
+              startId="Package\SODetail Table\STG_SODetail.Outputs[ADO NET Source Output]" />
+            <path
               refId="Package\SODetail Table.Paths[Insert(SO DO not Match)]"
               endId="Package\SODetail Table\zxzxzx.Inputs[ADO NET Destination Input]"
               name="Insert(SO DO not Match)"
@@ -3409,7 +4158,7 @@ WHERE SyncDate = (
     design-time-name="Package\SODetail Table">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="106,42"
           Id="Package\SODetail Table\ccccc"
@@ -3652,6 +4401,72 @@ WHERE SyncDate = (
                     Point3="71,43.5" />
                   <mssgle:LineSegment
                     End="71,71.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="146,42"
+          Id="Package\SODetail Table\STG_SODetail"
+          TopLeft="26.75,35.75" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\SODetail Table\SODetail Table"
+          TopLeft="618,33.25" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\SODetail Table\Sort STG"
+          TopLeft="148,109.5" />
+        <NodeLayout
+          Size="129,42"
+          Id="Package\SODetail Table\Sort Table"
+          TopLeft="539.25,113.25" />
+        <NodeLayout
+          Size="132,42"
+          Id="Package\SODetail Table\Merge Join"
+          TopLeft="330.5,202" />
+        <NodeLayout
+          Size="236,42"
+          Id="Package\SODetail Table\Update Records (SODetail Table)"
+          TopLeft="601.75,379.5" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\SODetail Table\Split Records"
+          TopLeft="433,284.5" />
+        <NodeLayout
+          Size="230,42"
+          Id="Package\SODetail Table\Insert Records (SODetail Table)"
+          TopLeft="44.25,388.25" />
+        <EdgeLayout
+          Id="Package\SODetail Table.Paths[ADO NET Source Output2]"
+          TopLeft="99.75,77.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="109.75,31.75"
+              Start="0,0"
+              End="109.75,24.25">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.875" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.875"
+                    Point2="0,15.875"
+                    Point3="4,15.875" />
+                  <mssgle:LineSegment
+                    End="105.75,15.875" />
+                  <mssgle:CubicBezierSegment
+                    Point1="105.75,15.875"
+                    Point2="109.75,15.875"
+                    Point3="109.75,19.875" />
+                  <mssgle:LineSegment
+                    End="109.75,24.25" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
