@@ -206,15 +206,7 @@ namespace WebIBOST1
             {
                 txtTotalFOBSO.Attributes.Remove("readonly");
             }
-            //cfmUncfm
-            if (txtCfmUncfm.Value != String.Empty)
-            {
-                txtCfmUncfm.Attributes.Add("readonly", "readonly");
-            }
-            else
-            {
-                txtCfmUncfm.Attributes.Remove("readonly");
-            }
+           
 
 
         }
@@ -240,12 +232,12 @@ namespace WebIBOST1
             txtTotalFOBSO.Value = !oHeader.TotalFOBSO.HasValue ? "" : oHeader.TotalFOBSO.Value.ToString("#,##0.00");
             txtTTSlip.Value = !oHeader.TTSlip.HasValue ? "" : oHeader.TTSlip.Value.ToString("dd MMM yyyy");
             txtLCSlip.Value = !oHeader.LCSlip.HasValue ? "" : oHeader.LCSlip.Value.ToString("dd MMM yyyy");
-            txtSpecialApporove.Value = !oHeader.SpecialApprove.HasValue ? string.Empty : oHeader.SpecialApprove.Value.ToString("dd MMM yyyy");
+           
             txtLC.Value = !oHeader.LC.HasValue ? "" : oHeader.LC.Value.ToString("dd MMM yyyy");
             txtTT.Value = !oHeader.TT.HasValue ? "" : oHeader.TT.Value.ToString("dd MMM yyyy");
             txtETD.Value = !oHeader.ETD.HasValue ? "" : oHeader.ETD.Value.ToString("dd MMM yyyy");
             txtETA.Value = !oHeader.ETA.HasValue ? "" : oHeader.ETA.Value.ToString("dd MMM yyyy");
-            txtCfmUncfm.Value = oHeader.CfmUncfm;
+            
             txtDocDate.Value = !oHeader.DocDate.HasValue ? "" : oHeader.DocDate.Value.ToString("dd MMM yyyy");
             txtDocAWB.Value = oHeader.DocAWB;
 
