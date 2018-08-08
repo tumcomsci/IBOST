@@ -54,9 +54,17 @@
     <edmx:ConceptualModels>
       <Schema Namespace="IBOrderTrackingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="IBOrderTrackingEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="SOHeaders" EntityType="IBOrderTrackingModel.SOHeader" />
           <EntitySet Name="User_UserGroup" EntityType="IBOrderTrackingModel.User_UserGroup" />
+          <EntitySet Name="SOHeaders" EntityType="IBOrderTrackingModel.SOHeader" />
         </EntityContainer>
+        <EntityType Name="User_UserGroup">
+          <Key>
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="UserGroupID" />
+          </Key>
+          <Property Name="UserID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserGroupID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
         <EntityType Name="SOHeader">
           <Key>
             <PropertyRef Name="SO" />
@@ -89,20 +97,20 @@
           <Property Name="DocDate" Type="DateTime" Precision="3" />
           <Property Name="DocAWB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="User_UserGroup">
-          <Key>
-            <PropertyRef Name="UserID" />
-            <PropertyRef Name="UserGroupID" />
-          </Key>
-          <Property Name="UserID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="UserGroupID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="IBOrderTrackingModelStoreContainer" CdmEntityContainer="IBOrderTrackingEntities">
+          <EntitySetMapping Name="User_UserGroup">
+            <EntityTypeMapping TypeName="IBOrderTrackingModel.User_UserGroup">
+              <MappingFragment StoreEntitySet="User-UserGroup">
+                <ScalarProperty Name="UserGroupID" ColumnName="UserGroupID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="SOHeaders">
             <EntityTypeMapping TypeName="IBOrderTrackingModel.SOHeader">
               <MappingFragment StoreEntitySet="SOHeader">
@@ -133,14 +141,6 @@
                 <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
                 <ScalarProperty Name="OrderType" ColumnName="OrderType" />
                 <ScalarProperty Name="LoadingDate" ColumnName="LoadingDate" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="User_UserGroup">
-            <EntityTypeMapping TypeName="IBOrderTrackingModel.User_UserGroup">
-              <MappingFragment StoreEntitySet="User-UserGroup">
-                <ScalarProperty Name="UserGroupID" ColumnName="UserGroupID" />
-                <ScalarProperty Name="UserID" ColumnName="UserID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

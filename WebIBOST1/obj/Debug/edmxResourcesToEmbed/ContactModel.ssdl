@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CentralContactModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar(max)" />
+    <Property Name="LastName" Type="nvarchar(max)" />
+    <Property Name="DisplayName" Type="nvarchar(max)" />
+    <Property Name="Title" Type="nvarchar(max)" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Company" Type="nvarchar(max)" />
+    <Property Name="Department" Type="nvarchar(max)" />
+    <Property Name="Manager" Type="nvarchar(max)" />
+    <Property Name="DirectReports" Type="nvarchar(max)" />
+    <Property Name="Extension" Type="nvarchar(max)" />
+    <Property Name="EmailAddress" Type="nvarchar(max)" />
+    <Property Name="Mobile" Type="nvarchar(max)" />
+    <Property Name="EmployeeID" Type="nvarchar(max)" />
+    <Property Name="Office" Type="nvarchar(max)" />
+    <Property Name="ThumbnailPhoto" Type="nvarchar(max)" />
+    <Property Name="Photo" Type="nvarchar(max)" />
+    <Property Name="TelephoneNumber" Type="nvarchar(max)" />
+    <Property Name="Fax" Type="nvarchar(max)" />
+    <Property Name="NickName" Type="nvarchar(max)" />
+    <Property Name="UserAccountControl" Type="int" Nullable="false" />
+    <Property Name="UserAccountControlBinary" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="CentralContactModelStoreContainer">
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
