@@ -28,5 +28,6 @@ namespace WebIBOST1
         public virtual DbSet<User_UserGroup> User_UserGroup { get; set; }
         public virtual DbSet<SOHeader> SOHeaders { get; set; }
         public virtual DbSet<UserGroup> UserGroups { get; set; }
+        public virtual DbSet<vContactUser> vContactUsers { get; set; }
     }
 }

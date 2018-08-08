@@ -12,7 +12,7 @@ namespace WebIBOST1
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class vContactUser
     {
         public string UserId { get; set; }
         public string FirstName { get; set; }
