@@ -98,6 +98,7 @@ namespace WebIBOST1
             tblData_UserGroup.Rows.Add(tbRow);
 
             //Get Data
+
             var oUserGroup = oIBConnect.UserGroups.ToList();
             foreach (var item in oUserGroup)
             {
@@ -109,7 +110,7 @@ namespace WebIBOST1
                 tbRow.Cells.Add(tbRId);
 
                 TableCell tbRName = new TableCell();
-                tbRName.Text = item.UserGroupName;
+                tbRName.Text = item.UserGroupID;
                 tbRow.Cells.Add(tbRName);
                 //Add Header
                 tblData_UserGroup.Rows.Add(tbRow);

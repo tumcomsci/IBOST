@@ -12,11 +12,18 @@ namespace WebIBOST1
     using System;
     using System.Collections.Generic;
     
-    public partial class User_UserGroup
+    public partial class UserGroup
     {
-        public string UserID { get; set; }
-        public string UserGroupID { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public UserGroup()
+        {
+            this.User_UserGroup = new HashSet<User_UserGroup>();
+        }
     
-        public virtual UserGroup UserGroup { get; set; }
+        public string UserGroupID { get; set; }
+        public string UserGroupName { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<User_UserGroup> User_UserGroup { get; set; }
     }
 }
