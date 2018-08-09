@@ -44,22 +44,29 @@
                                         <%--<div class="panel-body">--%>
                                         <div class="row justify-content-md-center">
 
+                                              <div class="col-md-1 col-sm-6">
+                                                <div class="form-group">
+                                                    <label>SalesORG</label>
+                                                    <input id="txtSalesORG" runat="server" class="form-control" />
+                                                </div>
+                                            </div>
 
-                                            <div class="col col-lg-2 col-sm-6">
+
+                                            <div class="col-md-2 col-sm-6">
                                                 <div class="form-group">
                                                     <label>LoadingDate</label>
                                                     <input id="txtLoadingDate" runat="server" class="form-control" />
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-2 col-sm-6">
+                                            <div class="col-md-1 col-sm-6">
                                                 <div class="form-group">
                                                     <label>OrderType</label>
                                                     <input id="txtOrderType" runat="server" class="form-control" />
                                                 </div>
                                             </div>
 
-                                            <div class="col col-lg-2 col-sm-6">
+                                            <div class="col-md-2 col-sm-6">
                                                 <div class="form-group">
                                                     <label>OrderDate</label>
                                                     <input id="txtOrderDate" runat="server" class="form-control" />
@@ -72,6 +79,13 @@
                                                     <input id="txtPO" runat="server" class="form-control" />
                                                 </div>
                                             </div>
+
+                                            <div class="col-md-2 col-sm-6">
+                                                <div class="form-group">
+                                                    <label>PODate</label>
+                                                    <input id="txtPODate" runat="server" class="form-control" />
+                                                </div>
+                                            </div> 
 
                                             <div class="col-md-2 col-sm-6">
                                                 <div class="form-group">
@@ -107,7 +121,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-5 col-sm-6">
+                                            <div class="col-md-2 col-sm-6">
                                                 <div class="form-group">
                                                     <label>SoldToName</label>
                                                     <input id="txtSoldToName" runat="server" class="form-control" />
@@ -121,31 +135,17 @@
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-5 col-sm-6">
+                                            <div class="col-md-2 col-sm-6">
                                                 <div class="form-group">
                                                     <label>ShipToName</label>
                                                     <input id="txtShipToName" runat="server" class="form-control" />
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-6 col-sm-6">
+                                            <div class="col-md-2 col-sm-6">
                                                 <div class="form-group">
                                                     <label>DestinationPort</label>
                                                     <input id="txtDestinationPort" runat="server" class="form-control" />
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-2 col-sm-6">
-                                                <div class="form-group">
-                                                    <label>TotalFCLS</label>
-                                                    <input id="txtTotalFCLS" runat="server" class="form-control" />
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-2 col-sm-6">
-                                                <div class="form-group">
-                                                    <label>TotalCartons</label>
-                                                    <input id="txtTotalCartons" runat="server" class="form-control" />
                                                 </div>
                                             </div>
 
@@ -156,6 +156,21 @@
                                                 </div>
                                             </div>
 
+                                            <div class="col-md-1 col-sm-6">
+                                                <div class="form-group">
+                                                    <label>TotalFCLS</label>
+                                                    <input id="txtTotalFCLS" runat="server" class="form-control" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-1 col-sm-6">
+                                                <div class="form-group">
+                                                    <label>TotalCartons</label>
+                                                    <input id="txtTotalCartons" runat="server" class="form-control" />
+                                                </div>
+                                            </div>
+
+                                            
 
                                         </div>
                                     </div>
@@ -171,7 +186,7 @@
                                             <%--<div class="panel-body">--%>
 
 
-                                            <div class="col-md-2 col-sm-6">
+                                            <div class="col-md-1 col-sm-6">
                                                 <div class="form-group">
                                                     <label>PaymentTerm</label>
                                                     <input id="txtPaymentTerm" runat="server" class="form-control" />
@@ -192,19 +207,28 @@
                                                 </div>
                                             </div>
 
+                                            <div class="col-md-1 col-sm-6">
+                                                <div class="form-group">
+                                                    <label>EXRate</label>
+                                                    <input id="txtEXRate" runat="server" class="form-control" />
+                                                </div>
+                                            </div>
+
                                             <div class="col-md-2 col-sm-6">
                                                 <div class="form-group">
                                                     <label>TTSlip</label>
-                                                    <div id="datepicker" >
-                                                    <input id="txtTTSlip" runat="server" class="form-control" />
-                                                    </div>
+                                                    <input id ="datepicker" width="140px"/>
+                                                    <input id="txtTTSlip" runat="server" class="form-control" name=""/>
+                                      
                                                 </div>
                                             </div>
 
                                             <div class="col-md-2 col-sm-6">
                                                 <div class="form-group">
                                                     <label>LCSlip</label>
+                                                    <div class="datepicker" aria-labelledby="txtLCSlip">
                                                     <input id="txtLCSlip" runat="server" class="form-control" />
+                                                        </div>
                                                 </div>
                                             </div>
 

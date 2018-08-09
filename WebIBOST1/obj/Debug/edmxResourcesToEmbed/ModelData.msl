@@ -9,6 +9,42 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="UserGroups">
+      <EntityTypeMapping TypeName="IBOrderTrackingModel.UserGroup">
+        <MappingFragment StoreEntitySet="UserGroup">
+          <ScalarProperty Name="UserGroupName" ColumnName="UserGroupName" />
+          <ScalarProperty Name="UserGroupID" ColumnName="UserGroupID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vContactUsers">
+      <EntityTypeMapping TypeName="IBOrderTrackingModel.vContactUser">
+        <MappingFragment StoreEntitySet="vContactUser">
+          <ScalarProperty Name="UserAccountControlBinary" ColumnName="UserAccountControlBinary" />
+          <ScalarProperty Name="UserAccountControl" ColumnName="UserAccountControl" />
+          <ScalarProperty Name="NickName" ColumnName="NickName" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="TelephoneNumber" ColumnName="TelephoneNumber" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="ThumbnailPhoto" ColumnName="ThumbnailPhoto" />
+          <ScalarProperty Name="Office" ColumnName="Office" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="DirectReports" ColumnName="DirectReports" />
+          <ScalarProperty Name="Manager" ColumnName="Manager" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="SOHeaders">
       <EntityTypeMapping TypeName="IBOrderTrackingModel.SOHeader">
         <MappingFragment StoreEntitySet="SOHeader">
@@ -23,6 +59,7 @@
           <ScalarProperty Name="LCSlip" ColumnName="LCSlip" />
           <ScalarProperty Name="TTSlip" ColumnName="TTSlip" />
           <ScalarProperty Name="TotalFOBSO" ColumnName="TotalFOBSO" />
+          <ScalarProperty Name="EXRate" ColumnName="EXRate" />
           <ScalarProperty Name="Currency" ColumnName="Currency" />
           <ScalarProperty Name="Incoterm" ColumnName="Incoterm" />
           <ScalarProperty Name="PaymentTerm" ColumnName="PaymentTerm" />
@@ -35,18 +72,12 @@
           <ScalarProperty Name="TotalFCLS" ColumnName="TotalFCLS" />
           <ScalarProperty Name="SO" ColumnName="SO" />
           <ScalarProperty Name="INV" ColumnName="INV" />
+          <ScalarProperty Name="PODate" ColumnName="PODate" />
           <ScalarProperty Name="PO" ColumnName="PO" />
           <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
           <ScalarProperty Name="OrderType" ColumnName="OrderType" />
           <ScalarProperty Name="LoadingDate" ColumnName="LoadingDate" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="UserGroups">
-      <EntityTypeMapping TypeName="IBOrderTrackingModel.UserGroup">
-        <MappingFragment StoreEntitySet="UserGroup">
-          <ScalarProperty Name="UserGroupName" ColumnName="UserGroupName" />
-          <ScalarProperty Name="UserGroupID" ColumnName="UserGroupID" />
+          <ScalarProperty Name="SalesORG" ColumnName="SalesORG" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

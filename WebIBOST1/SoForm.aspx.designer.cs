@@ -40,6 +40,15 @@ namespace WebIBOST1 {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divSave;
         
         /// <summary>
+        /// txtSalesORG control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtSalesORG;
+        
+        /// <summary>
         /// txtLoadingDate control.
         /// </summary>
         /// <remarks>
@@ -74,6 +83,15 @@ namespace WebIBOST1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtPO;
+        
+        /// <summary>
+        /// txtPODate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtPODate;
         
         /// <summary>
         /// txtINV control.
@@ -139,6 +157,15 @@ namespace WebIBOST1 {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtDestinationPort;
         
         /// <summary>
+        /// txtTotalFOBSO control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtTotalFOBSO;
+        
+        /// <summary>
         /// txtTotalFCLS control.
         /// </summary>
         /// <remarks>
@@ -155,15 +182,6 @@ namespace WebIBOST1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtTotalCartons;
-        
-        /// <summary>
-        /// txtTotalFOBSO control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtTotalFOBSO;
         
         /// <summary>
         /// txtPaymentTerm control.
@@ -191,6 +209,15 @@ namespace WebIBOST1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtCurrency;
+        
+        /// <summary>
+        /// txtEXRate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtEXRate;
         
         /// <summary>
         /// txtTTSlip control.

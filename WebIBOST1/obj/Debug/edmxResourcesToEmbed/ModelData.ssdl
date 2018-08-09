@@ -4,10 +4,12 @@
     <Key>
       <PropertyRef Name="SO" />
     </Key>
-    <Property Name="LoadingDate" Type="datetime" />
+    <Property Name="SalesORG" Type="nvarchar" MaxLength="8" />
+    <Property Name="LoadingDate" Type="date" />
     <Property Name="OrderType" Type="nvarchar" MaxLength="50" />
-    <Property Name="OrderDate" Type="datetime" />
+    <Property Name="OrderDate" Type="date" />
     <Property Name="PO" Type="nvarchar" MaxLength="50" />
+    <Property Name="PODate" Type="nvarchar" MaxLength="50" />
     <Property Name="INV" Type="nvarchar" MaxLength="50" />
     <Property Name="SO" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="TotalFCLS" Type="float" />
@@ -20,16 +22,17 @@
     <Property Name="PaymentTerm" Type="nvarchar" MaxLength="50" />
     <Property Name="Incoterm" Type="nvarchar" MaxLength="50" />
     <Property Name="Currency" Type="nvarchar" MaxLength="50" />
+    <Property Name="EXRate" Type="float" />
     <Property Name="TotalFOBSO" Type="float" />
-    <Property Name="TTSlip" Type="datetime" />
-    <Property Name="LCSlip" Type="datetime" />
-    <Property Name="SpecialApprove" Type="datetime" />
-    <Property Name="LC" Type="datetime" />
-    <Property Name="TT" Type="datetime" />
-    <Property Name="ETD" Type="datetime" />
-    <Property Name="ETA" Type="datetime" />
+    <Property Name="TTSlip" Type="date" />
+    <Property Name="LCSlip" Type="date" />
+    <Property Name="SpecialApprove" Type="date" />
+    <Property Name="LC" Type="date" />
+    <Property Name="TT" Type="date" />
+    <Property Name="ETD" Type="date" />
+    <Property Name="ETA" Type="date" />
     <Property Name="CfmUncfm" Type="nvarchar" MaxLength="50" />
-    <Property Name="DocDate" Type="datetime" />
+    <Property Name="DocDate" Type="date" />
     <Property Name="DocAWB" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="UserGroup">
@@ -47,6 +50,36 @@
     <Property Name="UserID" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="UserGroupID" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IBOrderTracking.dbo.vContactUser' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vContactUser">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="UserAccountControl" />
+    </Key>
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar(max)" />
+    <Property Name="LastName" Type="nvarchar(max)" />
+    <Property Name="DisplayName" Type="nvarchar(max)" />
+    <Property Name="Title" Type="nvarchar(max)" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Company" Type="nvarchar(max)" />
+    <Property Name="Department" Type="nvarchar(max)" />
+    <Property Name="Manager" Type="nvarchar(max)" />
+    <Property Name="DirectReports" Type="nvarchar(max)" />
+    <Property Name="Extension" Type="nvarchar(max)" />
+    <Property Name="EmailAddress" Type="nvarchar(max)" />
+    <Property Name="Mobile" Type="nvarchar(max)" />
+    <Property Name="EmployeeID" Type="nvarchar(max)" />
+    <Property Name="Office" Type="nvarchar(max)" />
+    <Property Name="ThumbnailPhoto" Type="nvarchar(max)" />
+    <Property Name="Photo" Type="nvarchar(max)" />
+    <Property Name="TelephoneNumber" Type="nvarchar(max)" />
+    <Property Name="Fax" Type="nvarchar(max)" />
+    <Property Name="NickName" Type="nvarchar(max)" />
+    <Property Name="UserAccountControl" Type="int" Nullable="false" />
+    <Property Name="UserAccountControlBinary" Type="nvarchar(max)" />
+  </EntityType>
   <Association Name="FK_User-UserGroup_UserGroup">
     <End Role="UserGroup" Type="Self.UserGroup" Multiplicity="1" />
     <End Role="User-UserGroup" Type="Self.User-UserGroup" Multiplicity="*" />
@@ -63,6 +96,32 @@
     <EntitySet Name="SOHeader" EntityType="Self.SOHeader" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserGroup" EntityType="Self.UserGroup" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="User-UserGroup" EntityType="Self.User-UserGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="vContactUser" EntityType="Self.vContactUser" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vContactUser].[UserId] AS [UserId], 
+    [vContactUser].[FirstName] AS [FirstName], 
+    [vContactUser].[LastName] AS [LastName], 
+    [vContactUser].[DisplayName] AS [DisplayName], 
+    [vContactUser].[Title] AS [Title], 
+    [vContactUser].[Name] AS [Name], 
+    [vContactUser].[Company] AS [Company], 
+    [vContactUser].[Department] AS [Department], 
+    [vContactUser].[Manager] AS [Manager], 
+    [vContactUser].[DirectReports] AS [DirectReports], 
+    [vContactUser].[Extension] AS [Extension], 
+    [vContactUser].[EmailAddress] AS [EmailAddress], 
+    [vContactUser].[Mobile] AS [Mobile], 
+    [vContactUser].[EmployeeID] AS [EmployeeID], 
+    [vContactUser].[Office] AS [Office], 
+    [vContactUser].[ThumbnailPhoto] AS [ThumbnailPhoto], 
+    [vContactUser].[Photo] AS [Photo], 
+    [vContactUser].[TelephoneNumber] AS [TelephoneNumber], 
+    [vContactUser].[Fax] AS [Fax], 
+    [vContactUser].[NickName] AS [NickName], 
+    [vContactUser].[UserAccountControl] AS [UserAccountControl], 
+    [vContactUser].[UserAccountControlBinary] AS [UserAccountControlBinary]
+    FROM [dbo].[vContactUser] AS [vContactUser]</DefiningQuery>
+    </EntitySet>
     <AssociationSet Name="FK_User-UserGroup_UserGroup" Association="Self.FK_User-UserGroup_UserGroup">
       <End Role="UserGroup" EntitySet="UserGroup" />
       <End Role="User-UserGroup" EntitySet="User-UserGroup" />

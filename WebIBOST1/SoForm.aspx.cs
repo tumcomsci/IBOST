@@ -53,6 +53,15 @@ namespace WebIBOST1
 
         protected void SetDefaultObject()
         {
+            //txtSalesORG
+            if (txtSalesORG.Value != "")
+            {
+                txtSalesORG.Attributes.Add("readonly", "readonly");
+            }
+            else
+            {
+                txtSalesORG.Attributes.Remove("readonly");
+            }
             //txtloadingDate
             if (txtLoadingDate.Value != "")
             {
@@ -88,6 +97,15 @@ namespace WebIBOST1
             else
             {
                 txtPO.Attributes.Remove("readonly");
+            }
+            //PODate
+            if (txtPODate.Value != "")
+            {
+                txtPODate.Attributes.Add("readonly", "readonly");
+            }
+            else
+            {
+                txtPODate.Attributes.Remove("readonly");
             }
             //INV
             if (txtINV.Value != String.Empty)
@@ -197,6 +215,15 @@ namespace WebIBOST1
             {
                 txtCurrency.Attributes.Remove("readonly");
             }
+            //EXRate
+            if (txtEXRate.Value != String.Empty)
+            {
+                txtEXRate.Attributes.Add("readonly", "readonly");
+            }
+            else
+            {
+                txtEXRate.Attributes.Remove("readonly");
+            }
             //TotalFOBSO
             if (txtTotalFOBSO.Value != String.Empty)
             {
@@ -213,10 +240,14 @@ namespace WebIBOST1
 
         protected void SetObjectValue(SOHeader oHeader)
         {
+            txtSalesORG.Value = oHeader.SalesORG;
             txtLoadingDate.Value = !oHeader.LoadingDate.HasValue?string.Empty: oHeader.LoadingDate.Value.ToString("dd MMM yyyy");
             txtOrderType.Value = oHeader.OrderType;
             txtOrderDate.Value = !oHeader.OrderDate.HasValue ? "" : oHeader.OrderDate.Value.ToString("dd MMM yyyy");
             txtPO.Value = oHeader.PO;
+
+            txtPODate.Value = oHeader.PODate;
+            
             txtINV.Value = oHeader.INV;
             txtSO.Value = oHeader.SO;
             txtTotalFCLS.Value = oHeader.TotalFCLS.HasValue ? oHeader.TotalFCLS.Value.ToString("#,##0.00") : "";
@@ -229,19 +260,16 @@ namespace WebIBOST1
             txtPaymentTerm.Value = oHeader.PaymentTerm;
             txtIncoterm.Value = oHeader.Incoterm;
             txtCurrency.Value = oHeader.Currency;
+            txtEXRate.Value = !oHeader.EXRate.HasValue ? "" : oHeader.EXRate.Value.ToString("#,##0.0000");
             txtTotalFOBSO.Value = !oHeader.TotalFOBSO.HasValue ? "" : oHeader.TotalFOBSO.Value.ToString("#,##0.00");
             txtTTSlip.Value = !oHeader.TTSlip.HasValue ? "" : oHeader.TTSlip.Value.ToString("dd MMM yyyy");
-            txtLCSlip.Value = !oHeader.LCSlip.HasValue ? "" : oHeader.LCSlip.Value.ToString("dd MMM yyyy");
-           
+            txtLCSlip.Value = !oHeader.LCSlip.HasValue ? "" : oHeader.LCSlip.Value.ToString("dd MMM yyyy");          
             txtLC.Value = !oHeader.LC.HasValue ? "" : oHeader.LC.Value.ToString("dd MMM yyyy");
             txtTT.Value = !oHeader.TT.HasValue ? "" : oHeader.TT.Value.ToString("dd MMM yyyy");
             txtETD.Value = !oHeader.ETD.HasValue ? "" : oHeader.ETD.Value.ToString("dd MMM yyyy");
-            txtETA.Value = !oHeader.ETA.HasValue ? "" : oHeader.ETA.Value.ToString("dd MMM yyyy");
-            
+            txtETA.Value = !oHeader.ETA.HasValue ? "" : oHeader.ETA.Value.ToString("dd MMM yyyy");            
             txtDocDate.Value = !oHeader.DocDate.HasValue ? "" : oHeader.DocDate.Value.ToString("dd MMM yyyy");
-            txtDocAWB.Value = oHeader.DocAWB;
-
-
+            txtDocAWB.Value = oHeader.DocAWB;  
         }
 
         protected void btnSave_Click(object sender,EventArgs e)
