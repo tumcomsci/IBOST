@@ -37,25 +37,7 @@
                         });
                     chart.render();
                 });
-
-
-            }
-
-            let getSummary = function (strUrl) {
-                strUrl = strUrl + '/api/SO';
-
-                return new Promise(function (resolve, reject) {
-                    resolve($.getJSON(strUrl));
-                })
-            }
-
-        </script>
-
-
-        <script lang="text/javascript">
-            window.onload = function () {
-
-                var chart = new CanvasJS.Chart("chartContainer1", {
+                 var chart = new CanvasJS.Chart("chartContainer1", {
                     animationEnabled: true,
                     title: {
                         text: "Crude Oil Reserves vs Production, 2016"
@@ -121,9 +103,18 @@
                         e.dataSeries.visible = true;
                     }
                     chart.render();
-                }
+                }        
 
             }
+
+            let getSummary = function (strUrl) {
+                strUrl = strUrl + '/api/SO';
+
+                return new Promise(function (resolve, reject) {
+                    resolve($.getJSON(strUrl));
+                })
+            }
+
         </script>
 
         <div class="container-fulid">
