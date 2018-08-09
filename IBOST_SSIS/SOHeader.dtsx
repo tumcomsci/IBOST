@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="SOHeader"
   DTS:PackageType="5"
-  DTS:VersionBuild="72"
-  DTS:VersionGUID="{EA60AB23-03F7-4EF9-A910-8ED96FA20770}">
+  DTS:VersionBuild="74"
+  DTS:VersionGUID="{9A7E8248-31F7-40D7-B767-9073D01C905F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABIeS6e1Pyr/YEnWN6piy40eDhkW9E9CXxrkk2SBjlHRAAAAAAOgAAAAAIAACAAAAC9mrP+pl5ExdjsRqQz3+s+lTPt4pEk971ezLpzYqwUGSAAAAATmNlD/n43oLYGNBClYY8IXNNBSJ8u4s3jfL542KSlpEAAAAAa93wcTkn4rgGLgjglVoxq2gSS8htG666MjzT6CHMTNbEEpg5jxbbIS3kJcRUEIarv5fLScdhsbCOfMtytk2Hm</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABgAXk6NFj/klT740+xnsPHOuYAx6QmUTOUJYV+Kp8j6AAAAAAOgAAAAAIAACAAAAAR2POICGiIbPQ13ibVEhidXqfUFjVj276RFeECx/tq1iAAAABixkMzDjFdpq/CAC7Uu29++yHr93KYmuTSY7WErUgBvkAAAAAIwft5KcYPSMCF/gWKEWtPgu7ets5qP3u1v+XyKsGtQmc9EH2H9YOQ8xAQEg8sPsRbOxFgqrV//WK0SNOgy+u4</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -38,6 +38,7 @@
       DTS:refId="Package\Update &amp; Insert New Records"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{0d69fd03-70ea-4306-88f2-36f76188d91a}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -4162,7 +4163,7 @@ WHERE SyncDate = (
                   <inputColumns>
                     <inputColumn
                       refId="Package\Update Records &amp; SO By PO\Merge Join.Inputs[Merge Join Left Input].Columns[LoadingDate]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="LoadingDate"
                       cachedSortKeyPosition="2"
                       lineageId="Package\Update Records &amp; SO By PO\Sort STG.Outputs[Sort Output].Columns[LoadingDate]" />
@@ -4175,7 +4176,7 @@ WHERE SyncDate = (
                       lineageId="Package\Update Records &amp; SO By PO\Sort STG.Outputs[Sort Output].Columns[OrderType]" />
                     <inputColumn
                       refId="Package\Update Records &amp; SO By PO\Merge Join.Inputs[Merge Join Left Input].Columns[OrderDate]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="OrderDate"
                       cachedSortKeyPosition="4"
                       lineageId="Package\Update Records &amp; SO By PO\Sort STG.Outputs[Sort Output].Columns[OrderDate]" />
@@ -4266,7 +4267,7 @@ WHERE SyncDate = (
                   <inputColumns>
                     <inputColumn
                       refId="Package\Update Records &amp; SO By PO\Merge Join.Inputs[Merge Join Right Input].Columns[LoadingDate]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="LoadingDate"
                       cachedSortKeyPosition="2"
                       lineageId="Package\Update Records &amp; SO By PO\Sort Table.Outputs[Sort Output].Columns[LoadingDate]" />
@@ -4279,7 +4280,7 @@ WHERE SyncDate = (
                       lineageId="Package\Update Records &amp; SO By PO\Sort Table.Outputs[Sort Output].Columns[OrderType]" />
                     <inputColumn
                       refId="Package\Update Records &amp; SO By PO\Merge Join.Inputs[Merge Join Right Input].Columns[OrderDate]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="OrderDate"
                       cachedSortKeyPosition="4"
                       lineageId="Package\Update Records &amp; SO By PO\Sort Table.Outputs[Sort Output].Columns[OrderDate]" />
@@ -4387,7 +4388,7 @@ WHERE SyncDate = (
                     </outputColumn>
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\Merge Join.Outputs[Merge Join Output].Columns[LoadingDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records &amp; SO By PO\Merge Join.Outputs[Merge Join Output].Columns[LoadingDate]"
                       name="LoadingDate">
                       <properties>
@@ -4414,7 +4415,7 @@ WHERE SyncDate = (
                     </outputColumn>
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\Merge Join.Outputs[Merge Join Output].Columns[OrderDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records &amp; SO By PO\Merge Join.Outputs[Merge Join Output].Columns[OrderDate]"
                       name="OrderDate">
                       <properties>
@@ -4581,7 +4582,7 @@ WHERE SyncDate = (
                     </outputColumn>
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\Merge Join.Outputs[Merge Join Output].Columns[LoadingDate (1)]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records &amp; SO By PO\Merge Join.Outputs[Merge Join Output].Columns[LoadingDate (1)]"
                       name="LoadingDate (1)">
                       <properties>
@@ -4608,7 +4609,7 @@ WHERE SyncDate = (
                     </outputColumn>
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\Merge Join.Outputs[Merge Join Output].Columns[OrderDate (1)]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records &amp; SO By PO\Merge Join.Outputs[Merge Join Output].Columns[OrderDate (1)]"
                       name="OrderDate (1)">
                       <properties>
@@ -4816,8 +4817,18 @@ WHERE SyncDate = (
                   name="ADO NET Source Output">
                   <outputColumns>
                     <outputColumn
+                      refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[SalesORG]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[SalesORG]"
+                      length="8"
+                      lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[SalesORG]"
+                      name="SalesORG"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[LoadingDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[LoadingDate]"
@@ -4836,7 +4847,7 @@ WHERE SyncDate = (
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[OrderDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[OrderDate]"
@@ -4852,6 +4863,15 @@ WHERE SyncDate = (
                       length="50"
                       lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[PO]"
                       name="PO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[PODate]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[PODate]"
+                      lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[PODate]"
+                      name="PODate"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[INV]"
@@ -4972,6 +4992,15 @@ WHERE SyncDate = (
                       name="Currency"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
+                      refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[EXRate]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[EXRate]"
+                      lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[EXRate]"
+                      name="EXRate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[TotalFOBSO]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
@@ -4982,7 +5011,7 @@ WHERE SyncDate = (
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[TTSlip]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[TTSlip]"
@@ -4991,7 +5020,7 @@ WHERE SyncDate = (
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[LCSlip]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[LCSlip]"
@@ -5000,7 +5029,7 @@ WHERE SyncDate = (
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[SpecialApprove]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[SpecialApprove]"
@@ -5009,7 +5038,7 @@ WHERE SyncDate = (
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[LC]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[LC]"
@@ -5018,7 +5047,7 @@ WHERE SyncDate = (
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[TT]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[TT]"
@@ -5027,7 +5056,7 @@ WHERE SyncDate = (
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[ETD]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[ETD]"
@@ -5036,7 +5065,7 @@ WHERE SyncDate = (
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[ETA]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[ETA]"
@@ -5055,7 +5084,7 @@ WHERE SyncDate = (
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[DocDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[DocDate]"
@@ -5076,8 +5105,13 @@ WHERE SyncDate = (
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
+                      refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[SalesORG]"
+                      dataType="wstr"
+                      length="8"
+                      name="SalesORG" />
+                    <externalMetadataColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[LoadingDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       name="LoadingDate" />
                     <externalMetadataColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[OrderType]"
@@ -5086,13 +5120,17 @@ WHERE SyncDate = (
                       name="OrderType" />
                     <externalMetadataColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[OrderDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       name="OrderDate" />
                     <externalMetadataColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[PO]"
                       dataType="wstr"
                       length="50"
                       name="PO" />
+                    <externalMetadataColumn
+                      refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[PODate]"
+                      dataType="dbDate"
+                      name="PODate" />
                     <externalMetadataColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[INV]"
                       dataType="wstr"
@@ -5152,36 +5190,40 @@ WHERE SyncDate = (
                       length="50"
                       name="Currency" />
                     <externalMetadataColumn
+                      refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[EXRate]"
+                      dataType="r8"
+                      name="EXRate" />
+                    <externalMetadataColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[TotalFOBSO]"
                       dataType="r8"
                       name="TotalFOBSO" />
                     <externalMetadataColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[TTSlip]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       name="TTSlip" />
                     <externalMetadataColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[LCSlip]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       name="LCSlip" />
                     <externalMetadataColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[SpecialApprove]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       name="SpecialApprove" />
                     <externalMetadataColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[LC]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       name="LC" />
                     <externalMetadataColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[TT]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       name="TT" />
                     <externalMetadataColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[ETD]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       name="ETD" />
                     <externalMetadataColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[ETA]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       name="ETA" />
                     <externalMetadataColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[CfmUncfm]"
@@ -5190,7 +5232,7 @@ WHERE SyncDate = (
                       name="CfmUncfm" />
                     <externalMetadataColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[DocDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       name="DocDate" />
                     <externalMetadataColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[DocAWB]"
@@ -5205,8 +5247,14 @@ WHERE SyncDate = (
                   name="ADO NET Source Error Output">
                   <outputColumns>
                     <outputColumn
+                      refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[SalesORG]"
+                      dataType="wstr"
+                      length="8"
+                      lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[SalesORG]"
+                      name="SalesORG" />
+                    <outputColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[LoadingDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[LoadingDate]"
                       name="LoadingDate" />
                     <outputColumn
@@ -5217,7 +5265,7 @@ WHERE SyncDate = (
                       name="OrderType" />
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[OrderDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[OrderDate]"
                       name="OrderDate" />
                     <outputColumn
@@ -5226,6 +5274,11 @@ WHERE SyncDate = (
                       length="50"
                       lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[PO]"
                       name="PO" />
+                    <outputColumn
+                      refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[PODate]"
+                      dataType="dbDate"
+                      lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[PODate]"
+                      name="PODate" />
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[INV]"
                       dataType="wstr"
@@ -5297,43 +5350,48 @@ WHERE SyncDate = (
                       lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[Currency]"
                       name="Currency" />
                     <outputColumn
+                      refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[EXRate]"
+                      dataType="r8"
+                      lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[EXRate]"
+                      name="EXRate" />
+                    <outputColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[TotalFOBSO]"
                       dataType="r8"
                       lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[TotalFOBSO]"
                       name="TotalFOBSO" />
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[TTSlip]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[TTSlip]"
                       name="TTSlip" />
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[LCSlip]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[LCSlip]"
                       name="LCSlip" />
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[SpecialApprove]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[SpecialApprove]"
                       name="SpecialApprove" />
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[LC]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[LC]"
                       name="LC" />
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[TT]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[TT]"
                       name="TT" />
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[ETD]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[ETD]"
                       name="ETD" />
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[ETA]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[ETA]"
                       name="ETA" />
                     <outputColumn
@@ -5344,7 +5402,7 @@ WHERE SyncDate = (
                       name="CfmUncfm" />
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[DocDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[DocDate]"
                       name="DocDate" />
                     <outputColumn
@@ -5395,7 +5453,7 @@ WHERE SyncDate = (
                   <inputColumns>
                     <inputColumn
                       refId="Package\Update Records &amp; SO By PO\Sort STG.Inputs[Sort Input].Columns[LoadingDate]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="LoadingDate"
                       lineageId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].Columns[LoadingDate]">
                       <properties>
@@ -5428,7 +5486,7 @@ WHERE SyncDate = (
                     </inputColumn>
                     <inputColumn
                       refId="Package\Update Records &amp; SO By PO\Sort STG.Inputs[Sort Input].Columns[OrderDate]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="OrderDate"
                       lineageId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].Columns[OrderDate]">
                       <properties>
@@ -5657,7 +5715,7 @@ WHERE SyncDate = (
                   <outputColumns>
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\Sort STG.Outputs[Sort Output].Columns[LoadingDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records &amp; SO By PO\Sort STG.Outputs[Sort Output].Columns[LoadingDate]"
                       name="LoadingDate"
                       sortKeyPosition="2">
@@ -5686,7 +5744,7 @@ WHERE SyncDate = (
                     </outputColumn>
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\Sort STG.Outputs[Sort Output].Columns[OrderDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records &amp; SO By PO\Sort STG.Outputs[Sort Output].Columns[OrderDate]"
                       name="OrderDate"
                       sortKeyPosition="4">
@@ -5906,7 +5964,7 @@ WHERE SyncDate = (
                   <inputColumns>
                     <inputColumn
                       refId="Package\Update Records &amp; SO By PO\Sort Table.Inputs[Sort Input].Columns[LoadingDate]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="LoadingDate"
                       lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[LoadingDate]">
                       <properties>
@@ -5939,7 +5997,7 @@ WHERE SyncDate = (
                     </inputColumn>
                     <inputColumn
                       refId="Package\Update Records &amp; SO By PO\Sort Table.Inputs[Sort Input].Columns[OrderDate]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="OrderDate"
                       lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[OrderDate]">
                       <properties>
@@ -6190,7 +6248,7 @@ WHERE SyncDate = (
                     </inputColumn>
                     <inputColumn
                       refId="Package\Update Records &amp; SO By PO\Sort Table.Inputs[Sort Input].Columns[TTSlip]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="TTSlip"
                       lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[TTSlip]">
                       <properties>
@@ -6206,7 +6264,7 @@ WHERE SyncDate = (
                     </inputColumn>
                     <inputColumn
                       refId="Package\Update Records &amp; SO By PO\Sort Table.Inputs[Sort Input].Columns[LCSlip]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="LCSlip"
                       lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[LCSlip]">
                       <properties>
@@ -6222,7 +6280,7 @@ WHERE SyncDate = (
                     </inputColumn>
                     <inputColumn
                       refId="Package\Update Records &amp; SO By PO\Sort Table.Inputs[Sort Input].Columns[SpecialApprove]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="SpecialApprove"
                       lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[SpecialApprove]">
                       <properties>
@@ -6238,7 +6296,7 @@ WHERE SyncDate = (
                     </inputColumn>
                     <inputColumn
                       refId="Package\Update Records &amp; SO By PO\Sort Table.Inputs[Sort Input].Columns[LC]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="LC"
                       lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[LC]">
                       <properties>
@@ -6254,7 +6312,7 @@ WHERE SyncDate = (
                     </inputColumn>
                     <inputColumn
                       refId="Package\Update Records &amp; SO By PO\Sort Table.Inputs[Sort Input].Columns[TT]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="TT"
                       lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[TT]">
                       <properties>
@@ -6270,7 +6328,7 @@ WHERE SyncDate = (
                     </inputColumn>
                     <inputColumn
                       refId="Package\Update Records &amp; SO By PO\Sort Table.Inputs[Sort Input].Columns[ETD]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="ETD"
                       lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[ETD]">
                       <properties>
@@ -6286,7 +6344,7 @@ WHERE SyncDate = (
                     </inputColumn>
                     <inputColumn
                       refId="Package\Update Records &amp; SO By PO\Sort Table.Inputs[Sort Input].Columns[ETA]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="ETA"
                       lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[ETA]">
                       <properties>
@@ -6319,7 +6377,7 @@ WHERE SyncDate = (
                     </inputColumn>
                     <inputColumn
                       refId="Package\Update Records &amp; SO By PO\Sort Table.Inputs[Sort Input].Columns[DocDate]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="DocDate"
                       lineageId="Package\Update Records &amp; SO By PO\SOHeader Table.Outputs[ADO NET Source Output].Columns[DocDate]">
                       <properties>
@@ -6362,7 +6420,7 @@ WHERE SyncDate = (
                   <outputColumns>
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\Sort Table.Outputs[Sort Output].Columns[LoadingDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records &amp; SO By PO\Sort Table.Outputs[Sort Output].Columns[LoadingDate]"
                       name="LoadingDate"
                       sortKeyPosition="2">
@@ -6391,7 +6449,7 @@ WHERE SyncDate = (
                     </outputColumn>
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\Sort Table.Outputs[Sort Output].Columns[OrderDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records &amp; SO By PO\Sort Table.Outputs[Sort Output].Columns[OrderDate]"
                       name="OrderDate"
                       sortKeyPosition="4">
@@ -6609,7 +6667,7 @@ WHERE SyncDate = (
                     </outputColumn>
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\Sort Table.Outputs[Sort Output].Columns[TTSlip]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records &amp; SO By PO\Sort Table.Outputs[Sort Output].Columns[TTSlip]"
                       name="TTSlip">
                       <properties>
@@ -6622,7 +6680,7 @@ WHERE SyncDate = (
                     </outputColumn>
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\Sort Table.Outputs[Sort Output].Columns[LCSlip]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records &amp; SO By PO\Sort Table.Outputs[Sort Output].Columns[LCSlip]"
                       name="LCSlip">
                       <properties>
@@ -6635,7 +6693,7 @@ WHERE SyncDate = (
                     </outputColumn>
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\Sort Table.Outputs[Sort Output].Columns[SpecialApprove]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records &amp; SO By PO\Sort Table.Outputs[Sort Output].Columns[SpecialApprove]"
                       name="SpecialApprove">
                       <properties>
@@ -6648,7 +6706,7 @@ WHERE SyncDate = (
                     </outputColumn>
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\Sort Table.Outputs[Sort Output].Columns[LC]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records &amp; SO By PO\Sort Table.Outputs[Sort Output].Columns[LC]"
                       name="LC">
                       <properties>
@@ -6661,7 +6719,7 @@ WHERE SyncDate = (
                     </outputColumn>
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\Sort Table.Outputs[Sort Output].Columns[TT]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records &amp; SO By PO\Sort Table.Outputs[Sort Output].Columns[TT]"
                       name="TT">
                       <properties>
@@ -6674,7 +6732,7 @@ WHERE SyncDate = (
                     </outputColumn>
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\Sort Table.Outputs[Sort Output].Columns[ETD]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records &amp; SO By PO\Sort Table.Outputs[Sort Output].Columns[ETD]"
                       name="ETD">
                       <properties>
@@ -6687,7 +6745,7 @@ WHERE SyncDate = (
                     </outputColumn>
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\Sort Table.Outputs[Sort Output].Columns[ETA]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records &amp; SO By PO\Sort Table.Outputs[Sort Output].Columns[ETA]"
                       name="ETA">
                       <properties>
@@ -6714,7 +6772,7 @@ WHERE SyncDate = (
                     </outputColumn>
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\Sort Table.Outputs[Sort Output].Columns[DocDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records &amp; SO By PO\Sort Table.Outputs[Sort Output].Columns[DocDate]"
                       name="DocDate">
                       <properties>
@@ -6910,8 +6968,18 @@ WHERE SyncDate = (
                   name="ADO NET Source Output">
                   <outputColumns>
                     <outputColumn
+                      refId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].Columns[SalesORG]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[SalesORG]"
+                      length="8"
+                      lineageId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].Columns[SalesORG]"
+                      name="SalesORG"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
                       refId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].Columns[LoadingDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[LoadingDate]"
@@ -6930,7 +6998,7 @@ WHERE SyncDate = (
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].Columns[OrderDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[OrderDate]"
@@ -6946,6 +7014,15 @@ WHERE SyncDate = (
                       length="50"
                       lineageId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].Columns[PO]"
                       name="PO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].Columns[PODate]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[PODate]"
+                      lineageId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].Columns[PODate]"
+                      name="PODate"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].Columns[INV]"
@@ -7048,6 +7125,24 @@ WHERE SyncDate = (
                       name="Currency"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
+                      refId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].Columns[EXRate]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[EXRate]"
+                      lineageId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].Columns[EXRate]"
+                      name="EXRate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].Columns[TotalFOBSO]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[TotalFOBSO]"
+                      lineageId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].Columns[TotalFOBSO]"
+                      name="TotalFOBSO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
                       refId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].Columns[SyncDate]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
@@ -7060,8 +7155,13 @@ WHERE SyncDate = (
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
+                      refId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[SalesORG]"
+                      dataType="wstr"
+                      length="8"
+                      name="SalesORG" />
+                    <externalMetadataColumn
                       refId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[LoadingDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       name="LoadingDate" />
                     <externalMetadataColumn
                       refId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[OrderType]"
@@ -7070,13 +7170,17 @@ WHERE SyncDate = (
                       name="OrderType" />
                     <externalMetadataColumn
                       refId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[OrderDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       name="OrderDate" />
                     <externalMetadataColumn
                       refId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[PO]"
                       dataType="wstr"
                       length="50"
                       name="PO" />
+                    <externalMetadataColumn
+                      refId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[PODate]"
+                      dataType="dbDate"
+                      name="PODate" />
                     <externalMetadataColumn
                       refId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[INV]"
                       dataType="wstr"
@@ -7128,6 +7232,14 @@ WHERE SyncDate = (
                       length="50"
                       name="Currency" />
                     <externalMetadataColumn
+                      refId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[EXRate]"
+                      dataType="r8"
+                      name="EXRate" />
+                    <externalMetadataColumn
+                      refId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[TotalFOBSO]"
+                      dataType="r8"
+                      name="TotalFOBSO" />
+                    <externalMetadataColumn
                       refId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[SyncDate]"
                       dataType="dbTimeStamp"
                       name="SyncDate" />
@@ -7139,8 +7251,14 @@ WHERE SyncDate = (
                   name="ADO NET Source Error Output">
                   <outputColumns>
                     <outputColumn
+                      refId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[SalesORG]"
+                      dataType="wstr"
+                      length="8"
+                      lineageId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[SalesORG]"
+                      name="SalesORG" />
+                    <outputColumn
                       refId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[LoadingDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[LoadingDate]"
                       name="LoadingDate" />
                     <outputColumn
@@ -7151,7 +7269,7 @@ WHERE SyncDate = (
                       name="OrderType" />
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[OrderDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[OrderDate]"
                       name="OrderDate" />
                     <outputColumn
@@ -7160,6 +7278,11 @@ WHERE SyncDate = (
                       length="50"
                       lineageId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[PO]"
                       name="PO" />
+                    <outputColumn
+                      refId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[PODate]"
+                      dataType="dbDate"
+                      lineageId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[PODate]"
+                      name="PODate" />
                     <outputColumn
                       refId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[INV]"
                       dataType="wstr"
@@ -7221,6 +7344,16 @@ WHERE SyncDate = (
                       lineageId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[Currency]"
                       name="Currency" />
                     <outputColumn
+                      refId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[EXRate]"
+                      dataType="r8"
+                      lineageId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[EXRate]"
+                      name="EXRate" />
+                    <outputColumn
+                      refId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[TotalFOBSO]"
+                      dataType="r8"
+                      lineageId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[TotalFOBSO]"
+                      name="TotalFOBSO" />
+                    <outputColumn
                       refId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[SyncDate]"
                       dataType="dbTimeStamp"
                       lineageId="Package\Update Records &amp; SO By PO\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[SyncDate]"
@@ -7257,7 +7390,7 @@ WHERE SyncDate = (
                   <inputColumns>
                     <inputColumn
                       refId="Package\Update Records &amp; SO By PO\Update By PO.Inputs[Conditional Split Input].Columns[LoadingDate]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="LoadingDate"
                       lineageId="Package\Update Records &amp; SO By PO\Merge Join.Outputs[Merge Join Output].Columns[LoadingDate]" />
                     <inputColumn
@@ -7268,7 +7401,7 @@ WHERE SyncDate = (
                       lineageId="Package\Update Records &amp; SO By PO\Merge Join.Outputs[Merge Join Output].Columns[OrderType]" />
                     <inputColumn
                       refId="Package\Update Records &amp; SO By PO\Update By PO.Inputs[Conditional Split Input].Columns[OrderDate]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="OrderDate"
                       lineageId="Package\Update Records &amp; SO By PO\Merge Join.Outputs[Merge Join Output].Columns[OrderDate]" />
                     <inputColumn
@@ -7333,7 +7466,7 @@ WHERE SyncDate = (
                       lineageId="Package\Update Records &amp; SO By PO\Merge Join.Outputs[Merge Join Output].Columns[Currency]" />
                     <inputColumn
                       refId="Package\Update Records &amp; SO By PO\Update By PO.Inputs[Conditional Split Input].Columns[LoadingDate (1)]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="LoadingDate (1)"
                       lineageId="Package\Update Records &amp; SO By PO\Merge Join.Outputs[Merge Join Output].Columns[LoadingDate (1)]" />
                     <inputColumn
@@ -7344,7 +7477,7 @@ WHERE SyncDate = (
                       lineageId="Package\Update Records &amp; SO By PO\Merge Join.Outputs[Merge Join Output].Columns[OrderType (1)]" />
                     <inputColumn
                       refId="Package\Update Records &amp; SO By PO\Update By PO.Inputs[Conditional Split Input].Columns[OrderDate (1)]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="OrderDate (1)"
                       lineageId="Package\Update Records &amp; SO By PO\Merge Join.Outputs[Merge Join Output].Columns[OrderDate (1)]" />
                     <inputColumn
@@ -7542,7 +7675,7 @@ WHERE SyncDate = (
                       lineageId="Package\Update Records &amp; SO By PO\Merge Join.Outputs[Merge Join Output].Columns[PO]" />
                     <inputColumn
                       refId="Package\Update Records &amp; SO By PO\Update Record &amp; SO By PO.Inputs[OLE DB Command Input].Columns[LoadingDate]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="LoadingDate"
                       externalMetadataColumnId="Package\Update Records &amp; SO By PO\Update Record &amp; SO By PO.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
                       lineageId="Package\Update Records &amp; SO By PO\Merge Join.Outputs[Merge Join Output].Columns[LoadingDate]" />
@@ -7555,7 +7688,7 @@ WHERE SyncDate = (
                       lineageId="Package\Update Records &amp; SO By PO\Merge Join.Outputs[Merge Join Output].Columns[OrderType]" />
                     <inputColumn
                       refId="Package\Update Records &amp; SO By PO\Update Record &amp; SO By PO.Inputs[OLE DB Command Input].Columns[OrderDate]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="OrderDate"
                       externalMetadataColumnId="Package\Update Records &amp; SO By PO\Update Record &amp; SO By PO.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       lineageId="Package\Update Records &amp; SO By PO\Merge Join.Outputs[Merge Join Output].Columns[OrderDate]" />
@@ -7898,13 +8031,13 @@ WHERE SyncDate = (
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="214,42"
-          Id="Package\Update Records &amp; SO By PO"
-          TopLeft="95.3333333333334,16.6666666666666" />
-        <NodeLayout
           Size="221,42"
           Id="Package\Update &amp; Insert New Records"
           TopLeft="99,168.666666666667" />
+        <NodeLayout
+          Size="214,42"
+          Id="Package\Update Records &amp; SO By PO"
+          TopLeft="95.3333333333334,16.6666666666666" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="205.916666666667,58.6666666666666">
@@ -7931,268 +8064,14 @@ WHERE SyncDate = (
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Update Records &amp; SO By PO">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="153,42"
-          Id="Package\Update Records &amp; SO By PO\STG_SOHeader"
-          TopLeft="26,16" />
-        <NodeLayout
-          Size="157,42"
-          Id="Package\Update Records &amp; SO By PO\SOHeader Table"
-          TopLeft="728.25,9" />
-        <NodeLayout
-          Size="129,42"
-          Id="Package\Update Records &amp; SO By PO\Sort Table"
-          TopLeft="601,87" />
-        <NodeLayout
-          Size="123,42"
-          Id="Package\Update Records &amp; SO By PO\Sort STG"
-          TopLeft="165,92" />
-        <EdgeLayout
-          Id="Package\Update Records &amp; SO By PO.Paths[ADO NET Source Output]"
-          TopLeft="102.5,58">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="124,34"
-              Start="0,0"
-              End="124,26.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13"
-                    Point2="0,17"
-                    Point3="4,17" />
-                  <mssgle:LineSegment
-                    End="120,17" />
-                  <mssgle:CubicBezierSegment
-                    Point1="120,17"
-                    Point2="124,17"
-                    Point3="124,21" />
-                  <mssgle:LineSegment
-                    End="124,26.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Update Records &amp; SO By PO.Paths[ADO NET Source Output1]"
-          TopLeft="806.75,51">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-141.25,36"
-              Start="0,0"
-              End="-141.25,28.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,14" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14"
-                    Point2="0,18"
-                    Point3="-4,18" />
-                  <mssgle:LineSegment
-                    End="-137.25,18" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-137.25,18"
-                    Point2="-141.25,18"
-                    Point3="-141.25,22" />
-                  <mssgle:LineSegment
-                    End="-141.25,28.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="132,42"
-          Id="Package\Update Records &amp; SO By PO\Merge Join"
-          TopLeft="365,160" />
-        <EdgeLayout
-          Id="Package\Update Records &amp; SO By PO.Paths[Sort Output]"
-          TopLeft="226.5,134">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="183.833333333333,26"
-              Start="0,0"
-              End="183.833333333333,18.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,11.4131736526946" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11.4131736526946"
-                    Point2="0,15.4131736526946"
-                    Point3="4,15.4131736526946" />
-                  <mssgle:LineSegment
-                    End="179.833333333333,15.4131736526946" />
-                  <mssgle:CubicBezierSegment
-                    Point1="179.833333333333,15.4131736526946"
-                    Point2="183.833333333333,15.4131736526946"
-                    Point3="183.833333333333,19.4131736526946" />
-                  <mssgle:LineSegment
-                    End="183.833333333333,18.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Update Records &amp; SO By PO.Paths[Sort Output1]"
-          TopLeft="665.5,129">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-213.833333333333,31"
-              Start="0,0"
-              End="-213.833333333333,23.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,14.377245508982" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.377245508982"
-                    Point2="0,18.377245508982"
-                    Point3="-4,18.377245508982" />
-                  <mssgle:LineSegment
-                    End="-209.833333333333,18.377245508982" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-209.833333333333,18.377245508982"
-                    Point2="-213.833333333333,18.377245508982"
-                    Point3="-213.833333333333,22.377245508982" />
-                  <mssgle:LineSegment
-                    End="-213.833333333333,23.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="142,42"
-          Id="Package\Update Records &amp; SO By PO\Split Records"
-          TopLeft="127,239" />
-        <EdgeLayout
-          Id="Package\Update Records &amp; SO By PO.Paths[Merge Join Output]"
-          TopLeft="431,202">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-233,37"
-              Start="0,0"
-              End="-233,29.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,14.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.5"
-                    Point2="0,18.5"
-                    Point3="-4,18.5" />
-                  <mssgle:LineSegment
-                    End="-229,18.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-229,18.5"
-                    Point2="-233,18.5"
-                    Point3="-233,22.5" />
-                  <mssgle:LineSegment
-                    End="-233,29.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="146,42"
-          Id="Package\Update Records &amp; SO By PO\Update By PO"
-          TopLeft="437,244" />
-        <EdgeLayout
-          Id="Package\Update Records &amp; SO By PO.Paths[PO Match &amp; SO Not Match]"
-          TopLeft="269,262.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="168,0"
-              Start="0,0"
-              End="160.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="160.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="21.90806640625,5,116.6838671875,9.7490234375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="210,42"
-          Id="Package\Update Records &amp; SO By PO\Update Record &amp; SO By PO"
-          TopLeft="694,251" />
-        <EdgeLayout
-          Id="Package\Update Records &amp; SO By PO.Paths[Update (PO Match)]"
-          TopLeft="583,268.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="111,0"
-              Start="0,0"
-              End="103.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="103.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="9.10431640625,5,85.2913671875,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
     design-time-name="Package\Update &amp; Insert New Records">
     <LayoutInfo>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="129,42"
+          Id="Package\Update &amp; Insert New Records\Sort Table"
+          TopLeft="422,89" />
         <NodeLayout
           Size="157,42"
           Id="Package\Update &amp; Insert New Records\SOHeader Table"
@@ -8202,119 +8081,29 @@ WHERE SyncDate = (
           Id="Package\Update &amp; Insert New Records\STG_SOHeader"
           TopLeft="32,13" />
         <NodeLayout
-          Size="123,42"
-          Id="Package\Update &amp; Insert New Records\Sort STG"
-          TopLeft="157,88" />
+          Size="187,42"
+          Id="Package\Update &amp; Insert New Records\Update Records By SO"
+          TopLeft="645,225" />
         <NodeLayout
-          Size="129,42"
-          Id="Package\Update &amp; Insert New Records\Sort Table"
-          TopLeft="422,89" />
-        <EdgeLayout
-          Id="Package\Update &amp; Insert New Records.Paths[ADO NET Source Output]"
-          TopLeft="108.5,55">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="110,33"
-              Start="0,0"
-              End="110,25.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,12.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.5"
-                    Point2="0,16.5"
-                    Point3="4,16.5" />
-                  <mssgle:LineSegment
-                    End="106,16.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="106,16.5"
-                    Point2="110,16.5"
-                    Point3="110,20.5" />
-                  <mssgle:LineSegment
-                    End="110,25.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Update &amp; Insert New Records.Paths[ADO NET Source Output1]"
-          TopLeft="606.5,59">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-120,30"
-              Start="0,0"
-              End="-120,22.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,11" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11"
-                    Point2="0,15"
-                    Point3="-4,15" />
-                  <mssgle:LineSegment
-                    End="-116,15" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-116,15"
-                    Point2="-120,15"
-                    Point3="-120,19" />
-                  <mssgle:LineSegment
-                    End="-120,22.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="155,42"
+          Id="Package\Update &amp; Insert New Records\Update Records"
+          TopLeft="924,290" />
         <NodeLayout
           Size="132,42"
           Id="Package\Update &amp; Insert New Records\Merge Join"
           TopLeft="277,159" />
-        <EdgeLayout
-          Id="Package\Update &amp; Insert New Records.Paths[Sort Output]"
-          TopLeft="218.5,130">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="103.833333333333,29"
-              Start="0,0"
-              End="103.833333333333,21.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.1916167664671" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.1916167664671"
-                    Point2="0,17.1916167664671"
-                    Point3="4,17.1916167664671" />
-                  <mssgle:LineSegment
-                    End="99.8333333333333,17.1916167664671" />
-                  <mssgle:CubicBezierSegment
-                    Point1="99.8333333333333,17.1916167664671"
-                    Point2="103.833333333333,17.1916167664671"
-                    Point3="103.833333333333,21.1916167664671" />
-                  <mssgle:LineSegment
-                    End="103.833333333333,21.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Update &amp; Insert New Records\Insert New Records"
+          TopLeft="27,303" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\Update &amp; Insert New Records\Sort STG"
+          TopLeft="157,88" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Update &amp; Insert New Records\Split Records"
+          TopLeft="395,228" />
         <EdgeLayout
           Id="Package\Update &amp; Insert New Records.Paths[Sort Output1]"
           TopLeft="486.5,131">
@@ -8346,21 +8135,71 @@ WHERE SyncDate = (
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="142,42"
-          Id="Package\Update &amp; Insert New Records\Split Records"
-          TopLeft="395,228" />
-        <NodeLayout
-          Size="155,42"
-          Id="Package\Update &amp; Insert New Records\Update Records"
-          TopLeft="924,290" />
-        <NodeLayout
-          Size="173,42"
-          Id="Package\Update &amp; Insert New Records\Insert New Records"
-          TopLeft="27,303" />
+        <EdgeLayout
+          Id="Package\Update &amp; Insert New Records.Paths[Sort Output]"
+          TopLeft="218.5,130">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="103.833333333333,29"
+              Start="0,0"
+              End="103.833333333333,21.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.1916167664671" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.1916167664671"
+                    Point2="0,17.1916167664671"
+                    Point3="4,17.1916167664671" />
+                  <mssgle:LineSegment
+                    End="99.8333333333333,17.1916167664671" />
+                  <mssgle:CubicBezierSegment
+                    Point1="99.8333333333333,17.1916167664671"
+                    Point2="103.833333333333,17.1916167664671"
+                    Point3="103.833333333333,21.1916167664671" />
+                  <mssgle:LineSegment
+                    End="103.833333333333,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update &amp; Insert New Records.Paths[SO Match]"
+          TopLeft="537,247.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="108,0"
+              Start="0,0"
+              End="100.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="100.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="28.61740234375,5,43.2651953125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Update &amp; Insert New Records.Paths[Merge Join Output]"
           TopLeft="343,201">
@@ -8392,7 +8231,9 @@ WHERE SyncDate = (
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8431,31 +8272,75 @@ WHERE SyncDate = (
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="187,42"
-          Id="Package\Update &amp; Insert New Records\Update Records By SO"
-          TopLeft="645,225" />
         <EdgeLayout
-          Id="Package\Update &amp; Insert New Records.Paths[SO Match]"
-          TopLeft="537,247.5">
+          Id="Package\Update &amp; Insert New Records.Paths[ADO NET Source Output1]"
+          TopLeft="606.5,59">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="108,0"
+              EndConnector="-120,30"
               Start="0,0"
-              End="100.5,0">
+              End="-120,22.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="100.5,0" />
+                    End="0,11" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11"
+                    Point2="0,15"
+                    Point3="-4,15" />
+                  <mssgle:LineSegment
+                    End="-116,15" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-116,15"
+                    Point2="-120,15"
+                    Point3="-120,19" />
+                  <mssgle:LineSegment
+                    End="-120,22.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="28.61740234375,5,43.2651953125,9.7490234375"
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update &amp; Insert New Records.Paths[ADO NET Source Output]"
+          TopLeft="108.5,55">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="110,33"
+              Start="0,0"
+              End="110,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.5"
+                    Point2="0,16.5"
+                    Point3="4,16.5" />
+                  <mssgle:LineSegment
+                    End="106,16.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="106,16.5"
+                    Point2="110,16.5"
+                    Point3="110,20.5" />
+                  <mssgle:LineSegment
+                    End="110,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -8522,5 +8407,265 @@ WHERE SyncDate = (
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Update Records &amp; SO By PO">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Update Records &amp; SO By PO\Split Records"
+          TopLeft="1285,595" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Update Records &amp; SO By PO\STG_SOHeader"
+          TopLeft="1184,372" />
+        <NodeLayout
+          Size="129,42"
+          Id="Package\Update Records &amp; SO By PO\Sort Table"
+          TopLeft="1759,443" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Update Records &amp; SO By PO\SOHeader Table"
+          TopLeft="1886.25,365" />
+        <NodeLayout
+          Size="210,42"
+          Id="Package\Update Records &amp; SO By PO\Update Record &amp; SO By PO"
+          TopLeft="1852,607" />
+        <NodeLayout
+          Size="146,42"
+          Id="Package\Update Records &amp; SO By PO\Update By PO"
+          TopLeft="1595,600" />
+        <NodeLayout
+          Size="132,42"
+          Id="Package\Update Records &amp; SO By PO\Merge Join"
+          TopLeft="1523,516" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\Update Records &amp; SO By PO\Sort STG"
+          TopLeft="1323,448" />
+        <EdgeLayout
+          Id="Package\Update Records &amp; SO By PO.Paths[Update (PO Match)]"
+          TopLeft="1741,624.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="111,0"
+              Start="0,0"
+              End="103.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="103.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="9.10431640625,5,85.2913671875,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update Records &amp; SO By PO.Paths[Sort Output1]"
+          TopLeft="1823.5,485">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-213.833333333333,31"
+              Start="0,0"
+              End="-213.833333333333,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.377245508982" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.377245508982"
+                    Point2="0,18.377245508982"
+                    Point3="-4,18.377245508982" />
+                  <mssgle:LineSegment
+                    End="-209.833333333333,18.377245508982" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-209.833333333333,18.377245508982"
+                    Point2="-213.833333333333,18.377245508982"
+                    Point3="-213.833333333333,22.377245508982" />
+                  <mssgle:LineSegment
+                    End="-213.833333333333,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update Records &amp; SO By PO.Paths[Sort Output]"
+          TopLeft="1384.5,490">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="183.833333333333,26"
+              Start="0,0"
+              End="183.833333333333,18.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.4131736526946" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.4131736526946"
+                    Point2="0,15.4131736526946"
+                    Point3="4,15.4131736526946" />
+                  <mssgle:LineSegment
+                    End="179.833333333333,15.4131736526946" />
+                  <mssgle:CubicBezierSegment
+                    Point1="179.833333333333,15.4131736526946"
+                    Point2="183.833333333333,15.4131736526946"
+                    Point3="183.833333333333,19.4131736526946" />
+                  <mssgle:LineSegment
+                    End="183.833333333333,18.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update Records &amp; SO By PO.Paths[PO Match &amp; SO Not Match]"
+          TopLeft="1427,618.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="168,0"
+              Start="0,0"
+              End="160.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="160.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="21.90806640625,5,116.6838671875,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update Records &amp; SO By PO.Paths[Merge Join Output]"
+          TopLeft="1589,558">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-233,37"
+              Start="0,0"
+              End="-233,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.5"
+                    Point2="0,18.5"
+                    Point3="-4,18.5" />
+                  <mssgle:LineSegment
+                    End="-229,18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-229,18.5"
+                    Point2="-233,18.5"
+                    Point3="-233,22.5" />
+                  <mssgle:LineSegment
+                    End="-233,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update Records &amp; SO By PO.Paths[ADO NET Source Output1]"
+          TopLeft="1964.75,407">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-141.25,36"
+              Start="0,0"
+              End="-141.25,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14"
+                    Point2="0,18"
+                    Point3="-4,18" />
+                  <mssgle:LineSegment
+                    End="-137.25,18" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-137.25,18"
+                    Point2="-141.25,18"
+                    Point3="-141.25,22" />
+                  <mssgle:LineSegment
+                    End="-141.25,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-65.125,23,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update Records &amp; SO By PO.Paths[ADO NET Source Output]"
+          TopLeft="1260.5,414">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="124,34"
+              Start="0,0"
+              End="124,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13"
+                    Point2="0,17"
+                    Point3="4,17" />
+                  <mssgle:LineSegment
+                    End="120,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="120,17"
+                    Point2="124,17"
+                    Point3="124,21" />
+                  <mssgle:LineSegment
+                    End="124,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
