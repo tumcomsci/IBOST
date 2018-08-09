@@ -89,17 +89,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="calendar.js" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="IMG\ASEAN-Briefing-Import-and-Export-Procedures-in-Indonesia-Best-Practices-002.jpg" />
-    <Content Include="IMG\Export6.jpg" />
     <Content Include="IMG\Export1.jpg" />
     <Content Include="IMG\Export2.jpg" />
-    <Content Include="IMG\Export4.jpg" />
-    <Content Include="IMG\Export5.jpg" />
-    <Content Include="IMG\Export7.jpg" />
-    <Content Include="IMG\Export8.jpg" />
     <Content Include="IMG\Export3.jpg" />
     <Content Include="IMG\home01.jpg" />
     <Content Include="IMG\home02.jpg" />
@@ -112,6 +106,7 @@
     <Content Include="IMG\home09.jpg" />
     <Content Include="IMG\home10.jpg" />
     <Content Include="IMG\images.jpg" />
+    <Content Include="IMG\logo.png" />
     <Content Include="IMG\photo.jpg" />
     <Content Include="ManageUserAuthorize.aspx" />
     <Content Include="ModelData.Context.tt">

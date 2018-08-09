@@ -13,7 +13,10 @@
     <br />
 
     <input id="datepicker" width="200px" />
-    
-    <script src="calendar.js"></script>
+    <script>
+                    $('#datepicker').datepicker({
+                        uiLibrary: 'bootstrap'
+                    });
+                </script>
   
 </asp:Content>

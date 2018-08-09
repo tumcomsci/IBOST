@@ -27,7 +27,7 @@
                 <img  src="IMG/home06.jpg" alt="Four slide" width="100%">
             </div>
              <div class="item">
-                <img  src="IMG/home08.jpg" alt="five slide" width="100%">
+                <img  src="IMG/home08.jpg" alt="Five slide" width="100%">
             </div>
         </div>
         <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
