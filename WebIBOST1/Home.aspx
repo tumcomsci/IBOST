@@ -11,19 +11,23 @@
             <li data-target="#myCarousel" data-slide-to="1" class=""></li>
             <li data-target="#myCarousel" data-slide-to="2" class=""></li>
             <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+            <li data-target="#myCarousel" data-slide-to="4" class=""></li>
         </ol>
         <div class="carousel-inner" role="listbox" <%--style="height:800px"--%> >
             <div class="item active">
-                <img  src="IMG/home09.jpg" alt="First slide" width="100%">
+                <img  src="IMG/home01.jpg" alt="First slide" width="100%">
             </div>
             <div class="item">
-                <img  src="IMG/home10.jpg" alt="Second slide" width="100%">
+                <img  src="IMG/home02.jpg" alt="Second slide" width="100%">
             </div>
             <div class="item">
-                <img  src="IMG/home11.jpg" alt="Third slide" width="100%">
+                <img  src="IMG/home03.jpg" alt="Third slide" width="100%">
             </div>
              <div class="item">
-                <img  src="IMG/home12.jpg" alt="Third slide" width="100%">
+                <img  src="IMG/home06.jpg" alt="Four slide" width="100%">
+            </div>
+             <div class="item">
+                <img  src="IMG/home08.jpg" alt="five slide" width="100%">
             </div>
         </div>
         <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">

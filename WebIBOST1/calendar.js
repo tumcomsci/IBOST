@@ -1,0 +1,4 @@
+﻿
+    $('#datepicker').datepicker({
+        uiLibrary: 'bootstrap'
+});

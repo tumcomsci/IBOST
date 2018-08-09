@@ -15,7 +15,7 @@
                         <div class="panel-heading" style="height: 30px;">
                             <p>Sale Order Information</p>
                         </div>
-                        
+
                         <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link bg-success active" id="SOHeader-tab" data-toggle="tab" href="#SOHEADER" role="tab" aria-controls="SOHEADER" aria-selected="true">HEADER INPUT</a>
@@ -25,11 +25,11 @@
                             </li>
 
                         </ul>
-                        <div class="tab-content" id="myTabContent" >
-                            
+                        <div class="tab-content" id="myTabContent">
+
                             <!--/. SOHEADER -->
                             <div class="tab-pane fade" id="SOHEADER" role="tabpanel" aria-labelledby="SOHeader-tab">
-                
+
                                 <div class="panel-body">
                                     <div id="divSave" runat="server" class="alert alert-success" role="alert"></div>
 
@@ -195,7 +195,9 @@
                                             <div class="col-md-2 col-sm-6">
                                                 <div class="form-group">
                                                     <label>TTSlip</label>
+                                                    <div id="datepicker" >
                                                     <input id="txtTTSlip" runat="server" class="form-control" />
+                                                    </div>
                                                 </div>
                                             </div>
 
@@ -729,31 +731,31 @@
                                             </div>
                                         </div>
                                         <!--/. button modal -->
-                                    
+
                                     </div>
                                 </div>
                                 <!-- /#page-wrapper -->
 
                             </div>
 
-
-
                             <br />
-
-
 
                         </div>
                     </div>
-                 </div>
-</div>
-           
-            <div class="col-md-12 text-center">
-            <div class="form-group">
-                <asp:Button ID="btnSave" runat="server" OnClick="btnSave_Click" Text="Save" CssClass="btn btn-primary" />
+                </div>
             </div>
 
+            <div class="col-md-12 text-center">
+                <div class="form-group">
+                    <asp:Button ID="btnSave" runat="server" OnClick="btnSave_Click" Text="Save" CssClass="btn btn-primary" />
+                </div>
 
 
+                <script>
+                    $('#datepicker').datepicker({
+                        uiLibrary: 'bootstrap'
+                    });
+                </script>
         </ContentTemplate>
     </asp:UpdatePanel>
 </asp:Content>
