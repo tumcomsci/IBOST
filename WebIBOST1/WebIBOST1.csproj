@@ -89,6 +89,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Datetimepicker\index.html" />
+    <Content Include="Datetimepicker\jquery.datetimepicker.css" />
+    <Content Include="Datetimepicker\jquery.datetimepicker.js" />
+    <Content Include="Datetimepicker\jquery.js" />
+    <Content Include="Datetimepicker\MIT-LICENSE.txt" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="IMG\ASEAN-Briefing-Import-and-Export-Procedures-in-Indonesia-Best-Practices-002.jpg" />
@@ -282,6 +287,11 @@
     <Content Include="ModelData.edmx.diagram">
       <DependentUpon>ModelData.edmx</DependentUpon>
     </Content>
+    <Content Include="Datetimepicker\.gitignore" />
+    <Content Include="Datetimepicker\bower.json" />
+    <Content Include="Datetimepicker\datetimepicker.jquery.json" />
+    <Content Include="Datetimepicker\package.json" />
+    <Content Include="Datetimepicker\README.md" />
     <None Include="packages.config" />
     <Content Include="vendor\datatables-responsive\dataTables.responsive.scss" />
     <Content Include="vendor\images\Sorting icons.psd" />
@@ -323,6 +333,7 @@
     <Content Include="vendor\font-awesome\scss\_spinning.scss" />
     <Content Include="vendor\font-awesome\scss\_stacked.scss" />
     <Content Include="vendor\font-awesome\scss\_variables.scss" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
