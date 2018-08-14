@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="8/14/2018 2:58:59 PM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="testsum"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{49F7A0FB-D154-4B1F-ACBA-EE34DB351DFA}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{1031176F-C38F-4816-9C7A-753197508274}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADeHMUbINSM9ZVsOim/MngACq6PHMLFm1MGrpWIiX+NYgAAAAAOgAAAAAIAACAAAADTzV0+PLFcXHdX4+ilURNqYEGaMs+xgSZmUYbBmhvj5yAAAADAX1vGtuAzcFgjnk7GZGoqCuAsiGfAUdwvnqUz+utXtkAAAABeEglUk6PEs7ei5ZiMXRp+QqezzFcaymyM9CpNoL9edbtkLU1y1zryHb6tI8UqT4HbxGWimGorT4kp6mS3t1HZ</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAESSxvRTtXz2Ov6LyFhAA2dpCiZYEDn4+21MWMWlIQEQAAAAAOgAAAAAIAACAAAAC807X/a+o8pXaZRAOaqcjoMf6W+Sc35CMB6iesTDTROCAAAAC2rNLFYEqpoz6Uk6AaF4GU8ieSpddxBEEcmH6NIj7RQEAAAADnup6Mt/VML3fcmryZ/9PGssaHZd2LFZBnPOu1XfJnrBUN3koQbKzx6chsR+I38MBhB8iUy7IZLMDge8cvWYwL</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -604,614 +604,6 @@
               </outputs>
             </component>
             <component
-              refId="Package\test table\Merge Join"
-              componentClassID="Microsoft.MergeJoin"
-              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
-              name="Merge Join"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the type of join to perform."
-                  name="JoinType"
-                  typeConverter="JoinType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the number of columns in the ordering key."
-                  name="NumKeyColumns">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the null values are treated as equal values."
-                  name="TreatNullsAsEqual">true</property>
-                <property
-                  dataType="System.Int32"
-                  description="Indicates the requested maximum buffers per input before blocking."
-                  name="MaxBuffersPerInput">5</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\test table\Merge Join.Inputs[Merge Join Left Input]"
-                  hasSideEffects="true"
-                  name="Merge Join Left Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\test table\Merge Join.Inputs[Merge Join Left Input].Columns[SO]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="SO"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\test table\Sort.Outputs[Sort Output].Columns[SO]" />
-                    <inputColumn
-                      refId="Package\test table\Merge Join.Inputs[Merge Join Left Input].Columns[Item]"
-                      cachedDataType="i4"
-                      cachedName="Item"
-                      cachedSortKeyPosition="2"
-                      lineageId="Package\test table\Sort.Outputs[Sort Output].Columns[Item]" />
-                    <inputColumn
-                      refId="Package\test table\Merge Join.Inputs[Merge Join Left Input].Columns[DO]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="DO"
-                      cachedSortKeyPosition="3"
-                      lineageId="Package\test table\Sort.Outputs[Sort Output].Columns[DO]" />
-                    <inputColumn
-                      refId="Package\test table\Merge Join.Inputs[Merge Join Left Input].Columns[Lot]"
-                      cachedDataType="wstr"
-                      cachedLength="100"
-                      cachedName="Lot"
-                      cachedSortKeyPosition="4"
-                      lineageId="Package\test table\Sort.Outputs[Sort Output].Columns[Lot]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-                <input
-                  refId="Package\test table\Merge Join.Inputs[Merge Join Right Input]"
-                  hasSideEffects="true"
-                  name="Merge Join Right Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\test table\Merge Join.Inputs[Merge Join Right Input].Columns[SO]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="SO"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\test table\Sort 1.Outputs[Sort Output].Columns[SO]" />
-                    <inputColumn
-                      refId="Package\test table\Merge Join.Inputs[Merge Join Right Input].Columns[Item]"
-                      cachedDataType="i4"
-                      cachedName="Item"
-                      cachedSortKeyPosition="2"
-                      lineageId="Package\test table\Sort 1.Outputs[Sort Output].Columns[Item]" />
-                    <inputColumn
-                      refId="Package\test table\Merge Join.Inputs[Merge Join Right Input].Columns[DO]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="DO"
-                      cachedSortKeyPosition="3"
-                      lineageId="Package\test table\Sort 1.Outputs[Sort Output].Columns[DO]" />
-                    <inputColumn
-                      refId="Package\test table\Merge Join.Inputs[Merge Join Right Input].Columns[Lot]"
-                      cachedDataType="wstr"
-                      cachedLength="100"
-                      cachedName="Lot"
-                      cachedSortKeyPosition="4"
-                      lineageId="Package\test table\Sort 1.Outputs[Sort Output].Columns[Lot]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\test table\Merge Join.Outputs[Merge Join Output]"
-                  isSorted="true"
-                  name="Merge Join Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\test table\Merge Join.Outputs[Merge Join Output].Columns[SO]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\test table\Merge Join.Outputs[Merge Join Output].Columns[SO]"
-                      name="SO"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\test table\Merge Join.Inputs[Merge Join Left Input].Columns[SO]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\test table\Merge Join.Outputs[Merge Join Output].Columns[Item]"
-                      dataType="i4"
-                      lineageId="Package\test table\Merge Join.Outputs[Merge Join Output].Columns[Item]"
-                      name="Item"
-                      sortKeyPosition="2">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\test table\Merge Join.Inputs[Merge Join Left Input].Columns[Item]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\test table\Merge Join.Outputs[Merge Join Output].Columns[DO]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\test table\Merge Join.Outputs[Merge Join Output].Columns[DO]"
-                      name="DO"
-                      sortKeyPosition="3">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\test table\Merge Join.Inputs[Merge Join Left Input].Columns[DO]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\test table\Merge Join.Outputs[Merge Join Output].Columns[Lot]"
-                      dataType="wstr"
-                      length="100"
-                      lineageId="Package\test table\Merge Join.Outputs[Merge Join Output].Columns[Lot]"
-                      name="Lot">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\test table\Merge Join.Inputs[Merge Join Left Input].Columns[Lot]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\test table\Merge Join.Outputs[Merge Join Output].Columns[SO (1)]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\test table\Merge Join.Outputs[Merge Join Output].Columns[SO (1)]"
-                      name="SO (1)">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\test table\Merge Join.Inputs[Merge Join Right Input].Columns[SO]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\test table\Merge Join.Outputs[Merge Join Output].Columns[Item (1)]"
-                      dataType="i4"
-                      lineageId="Package\test table\Merge Join.Outputs[Merge Join Output].Columns[Item (1)]"
-                      name="Item (1)">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\test table\Merge Join.Inputs[Merge Join Right Input].Columns[Item]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\test table\Merge Join.Outputs[Merge Join Output].Columns[DO (1)]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\test table\Merge Join.Outputs[Merge Join Output].Columns[DO (1)]"
-                      name="DO (1)">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\test table\Merge Join.Inputs[Merge Join Right Input].Columns[DO]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\test table\Merge Join.Outputs[Merge Join Output].Columns[Lot (1)]"
-                      dataType="wstr"
-                      length="100"
-                      lineageId="Package\test table\Merge Join.Outputs[Merge Join Output].Columns[Lot (1)]"
-                      name="Lot (1)">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\test table\Merge Join.Inputs[Merge Join Right Input].Columns[Lot]}</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\test table\Sort"
-              componentClassID="Microsoft.Sort"
-              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-              name="Sort"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                  name="EliminateDuplicates">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the maximum number of threads to use for sorting."
-                  expressionType="Notify"
-                  name="MaximumThreads">-1</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\test table\Sort.Inputs[Sort Input]"
-                  name="Sort Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\test table\Sort.Inputs[Sort Input].Columns[SO]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="SO"
-                      lineageId="Package\test table\stg test.Outputs[ADO NET Source Output].Columns[SO]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\test table\Sort.Inputs[Sort Input].Columns[Item]"
-                      cachedDataType="i4"
-                      cachedName="Item"
-                      lineageId="Package\test table\stg test.Outputs[ADO NET Source Output].Columns[Item]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">2</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\test table\Sort.Inputs[Sort Input].Columns[DO]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="DO"
-                      lineageId="Package\test table\stg test.Outputs[ADO NET Source Output].Columns[DO]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">3</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\test table\Sort.Inputs[Sort Input].Columns[Lot]"
-                      cachedDataType="wstr"
-                      cachedLength="100"
-                      cachedName="Lot"
-                      lineageId="Package\test table\stg test.Outputs[ADO NET Source Output].Columns[Lot]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">4</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\test table\Sort.Inputs[Sort Input].Columns[SyncDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="SyncDate"
-                      lineageId="Package\test table\stg test.Outputs[ADO NET Source Output].Columns[SyncDate]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\test table\Sort.Outputs[Sort Output]"
-                  isSorted="true"
-                  name="Sort Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\test table\Sort.Outputs[Sort Output].Columns[SO]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\test table\Sort.Outputs[Sort Output].Columns[SO]"
-                      name="SO"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\test table\stg test.Outputs[ADO NET Source Output].Columns[SO]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\test table\Sort.Outputs[Sort Output].Columns[Item]"
-                      dataType="i4"
-                      lineageId="Package\test table\Sort.Outputs[Sort Output].Columns[Item]"
-                      name="Item"
-                      sortKeyPosition="2">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\test table\stg test.Outputs[ADO NET Source Output].Columns[Item]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\test table\Sort.Outputs[Sort Output].Columns[DO]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\test table\Sort.Outputs[Sort Output].Columns[DO]"
-                      name="DO"
-                      sortKeyPosition="3">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\test table\stg test.Outputs[ADO NET Source Output].Columns[DO]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\test table\Sort.Outputs[Sort Output].Columns[Lot]"
-                      dataType="wstr"
-                      length="100"
-                      lineageId="Package\test table\Sort.Outputs[Sort Output].Columns[Lot]"
-                      name="Lot"
-                      sortKeyPosition="4">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\test table\stg test.Outputs[ADO NET Source Output].Columns[Lot]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\test table\Sort.Outputs[Sort Output].Columns[SyncDate]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\test table\Sort.Outputs[Sort Output].Columns[SyncDate]"
-                      name="SyncDate">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\test table\stg test.Outputs[ADO NET Source Output].Columns[SyncDate]}</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\test table\Sort 1"
-              componentClassID="Microsoft.Sort"
-              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-              name="Sort 1"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                  name="EliminateDuplicates">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the maximum number of threads to use for sorting."
-                  expressionType="Notify"
-                  name="MaximumThreads">-1</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\test table\Sort 1.Inputs[Sort Input]"
-                  name="Sort Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\test table\Sort 1.Inputs[Sort Input].Columns[SO]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="SO"
-                      lineageId="Package\test table\stg test 1.Outputs[ADO NET Source Output].Columns[SO]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\test table\Sort 1.Inputs[Sort Input].Columns[Item]"
-                      cachedDataType="i4"
-                      cachedName="Item"
-                      lineageId="Package\test table\stg test 1.Outputs[ADO NET Source Output].Columns[Item]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">2</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\test table\Sort 1.Inputs[Sort Input].Columns[DO]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="DO"
-                      lineageId="Package\test table\stg test 1.Outputs[ADO NET Source Output].Columns[DO]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">3</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\test table\Sort 1.Inputs[Sort Input].Columns[Lot]"
-                      cachedDataType="wstr"
-                      cachedLength="100"
-                      cachedName="Lot"
-                      lineageId="Package\test table\stg test 1.Outputs[ADO NET Source Output].Columns[Lot]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">4</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\test table\Sort 1.Inputs[Sort Input].Columns[SyncDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="SyncDate"
-                      lineageId="Package\test table\stg test 1.Outputs[ADO NET Source Output].Columns[SyncDate]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\test table\Sort 1.Outputs[Sort Output]"
-                  isSorted="true"
-                  name="Sort Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\test table\Sort 1.Outputs[Sort Output].Columns[SO]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\test table\Sort 1.Outputs[Sort Output].Columns[SO]"
-                      name="SO"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\test table\stg test 1.Outputs[ADO NET Source Output].Columns[SO]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\test table\Sort 1.Outputs[Sort Output].Columns[Item]"
-                      dataType="i4"
-                      lineageId="Package\test table\Sort 1.Outputs[Sort Output].Columns[Item]"
-                      name="Item"
-                      sortKeyPosition="2">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\test table\stg test 1.Outputs[ADO NET Source Output].Columns[Item]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\test table\Sort 1.Outputs[Sort Output].Columns[DO]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\test table\Sort 1.Outputs[Sort Output].Columns[DO]"
-                      name="DO"
-                      sortKeyPosition="3">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\test table\stg test 1.Outputs[ADO NET Source Output].Columns[DO]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\test table\Sort 1.Outputs[Sort Output].Columns[Lot]"
-                      dataType="wstr"
-                      length="100"
-                      lineageId="Package\test table\Sort 1.Outputs[Sort Output].Columns[Lot]"
-                      name="Lot"
-                      sortKeyPosition="4">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\test table\stg test 1.Outputs[ADO NET Source Output].Columns[Lot]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\test table\Sort 1.Outputs[Sort Output].Columns[SyncDate]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\test table\Sort 1.Outputs[Sort Output].Columns[SyncDate]"
-                      name="SyncDate">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\test table\stg test 1.Outputs[ADO NET Source Output].Columns[SyncDate]}</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\test table\Split"
               componentClassID="Microsoft.ConditionalSplit"
               contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -1223,10 +615,63 @@
                   refId="Package\test table\Split.Inputs[Conditional Split Input]"
                   description="Input to the Conditional Split Transformation"
                   name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\test table\Split.Inputs[Conditional Split Input].Columns[SO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SO"
+                      lineageId="Package\test table\stg test.Outputs[ADO NET Source Output].Columns[SO]" />
+                    <inputColumn
+                      refId="Package\test table\Split.Inputs[Conditional Split Input].Columns[Item]"
+                      cachedDataType="i4"
+                      cachedName="Item"
+                      lineageId="Package\test table\stg test.Outputs[ADO NET Source Output].Columns[Item]" />
+                    <inputColumn
+                      refId="Package\test table\Split.Inputs[Conditional Split Input].Columns[DO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DO"
+                      lineageId="Package\test table\stg test.Outputs[ADO NET Source Output].Columns[DO]" />
+                    <inputColumn
+                      refId="Package\test table\Split.Inputs[Conditional Split Input].Columns[Lot]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Lot"
+                      lineageId="Package\test table\stg test.Outputs[ADO NET Source Output].Columns[Lot]" />
+                  </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
+                <output
+                  refId="Package\test table\Split.Outputs[sum lot]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="sum lot"
+                  synchronousInputId="Package\test table\Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">(#{Package\test table\stg test.Outputs[ADO NET Source Output].Columns[SO]} == #{Package\test table\stg test.Outputs[ADO NET Source Output].Columns[SO]}) &amp;&amp; (#{Package\test table\stg test.Outputs[ADO NET Source Output].Columns[Item]} == #{Package\test table\stg test.Outputs[ADO NET Source Output].Columns[Item]}) &amp;&amp; (#{Package\test table\stg test.Outputs[ADO NET Source Output].Columns[DO]} == #{Package\test table\stg test.Outputs[ADO NET Source Output].Columns[DO]}) &amp;&amp; (#{Package\test table\stg test.Outputs[ADO NET Source Output].Columns[Lot]} != #{Package\test table\stg test.Outputs[ADO NET Source Output].Columns[Lot]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">(SO == SO) &amp;&amp; (Item == Item) &amp;&amp; (DO == DO) &amp;&amp; (Lot != Lot)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
                 <output
                   refId="Package\test table\Split.Outputs[Conditional Split Default Output]"
                   description="Default Output of the Conditional Split Transformation"
@@ -1442,210 +887,18 @@
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\test table\stg test 1"
-              componentClassID="Microsoft.ManagedComponentHost"
-              contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
-              name="stg test 1"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Specifies the SQL statement used by the component to extract data."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">30</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
-                  name="AllowImplicitStringConversion">true</property>
-                <property
-                  dataType="System.String"
-                  description="The Source database table name."
-                  expressionType="Notify"
-                  name="TableOrViewName"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."zzzSTG_TEST"</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specify the mode to retrieve external column information"
-                  name="AccessMode"
-                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">0</property>
-                <property
-                  dataType="System.String"
-                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\test table\stg test 1.Connections[IDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
-                  connectionManagerRefId="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
-                  description="Managed connection manager"
-                  name="IDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\test table\stg test 1.Outputs[ADO NET Source Output]"
-                  name="ADO NET Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\test table\stg test 1.Outputs[ADO NET Source Output].Columns[SO]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\test table\stg test 1.Outputs[ADO NET Source Output].ExternalColumns[SO]"
-                      length="50"
-                      lineageId="Package\test table\stg test 1.Outputs[ADO NET Source Output].Columns[SO]"
-                      name="SO"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\test table\stg test 1.Outputs[ADO NET Source Output].Columns[Item]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\test table\stg test 1.Outputs[ADO NET Source Output].ExternalColumns[Item]"
-                      lineageId="Package\test table\stg test 1.Outputs[ADO NET Source Output].Columns[Item]"
-                      name="Item"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\test table\stg test 1.Outputs[ADO NET Source Output].Columns[DO]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\test table\stg test 1.Outputs[ADO NET Source Output].ExternalColumns[DO]"
-                      length="50"
-                      lineageId="Package\test table\stg test 1.Outputs[ADO NET Source Output].Columns[DO]"
-                      name="DO"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\test table\stg test 1.Outputs[ADO NET Source Output].Columns[Lot]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\test table\stg test 1.Outputs[ADO NET Source Output].ExternalColumns[Lot]"
-                      length="100"
-                      lineageId="Package\test table\stg test 1.Outputs[ADO NET Source Output].Columns[Lot]"
-                      name="Lot"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\test table\stg test 1.Outputs[ADO NET Source Output].Columns[SyncDate]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\test table\stg test 1.Outputs[ADO NET Source Output].ExternalColumns[SyncDate]"
-                      lineageId="Package\test table\stg test 1.Outputs[ADO NET Source Output].Columns[SyncDate]"
-                      name="SyncDate"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\test table\stg test 1.Outputs[ADO NET Source Output].ExternalColumns[SO]"
-                      dataType="wstr"
-                      length="50"
-                      name="SO" />
-                    <externalMetadataColumn
-                      refId="Package\test table\stg test 1.Outputs[ADO NET Source Output].ExternalColumns[Item]"
-                      dataType="i4"
-                      name="Item" />
-                    <externalMetadataColumn
-                      refId="Package\test table\stg test 1.Outputs[ADO NET Source Output].ExternalColumns[DO]"
-                      dataType="wstr"
-                      length="50"
-                      name="DO" />
-                    <externalMetadataColumn
-                      refId="Package\test table\stg test 1.Outputs[ADO NET Source Output].ExternalColumns[Lot]"
-                      dataType="wstr"
-                      length="100"
-                      name="Lot" />
-                    <externalMetadataColumn
-                      refId="Package\test table\stg test 1.Outputs[ADO NET Source Output].ExternalColumns[SyncDate]"
-                      dataType="dbTimeStamp"
-                      name="SyncDate" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\test table\stg test 1.Outputs[ADO NET Source Error Output]"
-                  isErrorOut="true"
-                  name="ADO NET Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\test table\stg test 1.Outputs[ADO NET Source Error Output].Columns[SO]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\test table\stg test 1.Outputs[ADO NET Source Error Output].Columns[SO]"
-                      name="SO" />
-                    <outputColumn
-                      refId="Package\test table\stg test 1.Outputs[ADO NET Source Error Output].Columns[Item]"
-                      dataType="i4"
-                      lineageId="Package\test table\stg test 1.Outputs[ADO NET Source Error Output].Columns[Item]"
-                      name="Item" />
-                    <outputColumn
-                      refId="Package\test table\stg test 1.Outputs[ADO NET Source Error Output].Columns[DO]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\test table\stg test 1.Outputs[ADO NET Source Error Output].Columns[DO]"
-                      name="DO" />
-                    <outputColumn
-                      refId="Package\test table\stg test 1.Outputs[ADO NET Source Error Output].Columns[Lot]"
-                      dataType="wstr"
-                      length="100"
-                      lineageId="Package\test table\stg test 1.Outputs[ADO NET Source Error Output].Columns[Lot]"
-                      name="Lot" />
-                    <outputColumn
-                      refId="Package\test table\stg test 1.Outputs[ADO NET Source Error Output].Columns[SyncDate]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\test table\stg test 1.Outputs[ADO NET Source Error Output].Columns[SyncDate]"
-                      name="SyncDate" />
-                    <outputColumn
-                      refId="Package\test table\stg test 1.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\test table\stg test 1.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\test table\stg test 1.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\test table\stg test 1.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
             <path
               refId="Package\test table.Paths[ADO NET Source Output]"
-              endId="Package\test table\Sort.Inputs[Sort Input]"
+              endId="Package\test table\Split.Inputs[Conditional Split Input]"
               name="ADO NET Source Output"
               startId="Package\test table\stg test.Outputs[ADO NET Source Output]" />
             <path
-              refId="Package\test table.Paths[ADO NET Source Output1]"
-              endId="Package\test table\Sort 1.Inputs[Sort Input]"
-              name="ADO NET Source Output"
-              startId="Package\test table\stg test 1.Outputs[ADO NET Source Output]" />
-            <path
-              refId="Package\test table.Paths[Merge Join Output]"
-              endId="Package\test table\Split.Inputs[Conditional Split Input]"
-              name="Merge Join Output"
-              startId="Package\test table\Merge Join.Outputs[Merge Join Output]" />
-            <path
-              refId="Package\test table.Paths[Sort Output]"
-              endId="Package\test table\Merge Join.Inputs[Merge Join Right Input]"
-              name="Sort Output"
-              startId="Package\test table\Sort 1.Outputs[Sort Output]" />
-            <path
-              refId="Package\test table.Paths[Sort Output1]"
-              endId="Package\test table\Merge Join.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\test table\Sort.Outputs[Sort Output]" />
+              refId="Package\test table.Paths[sum lot]"
+              endId="Package\test table\Conditional Split.Inputs[Conditional Split Input]"
+              name="sum lot"
+              startId="Package\test table\Split.Outputs[sum lot]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1818,49 +1071,41 @@
     design-time-name="Package\test table">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="116,42"
           Id="Package\test table\stg test"
           TopLeft="26,13" />
         <NodeLayout
-          Size="157,42"
-          Id="Package\test table\Conditional Split"
-          TopLeft="516,229" />
-        <NodeLayout
-          Size="116,42"
-          Id="Package\test table\stg test 1"
-          TopLeft="380,21" />
-        <NodeLayout
-          Size="132,55"
-          Id="Package\test table\Merge Join"
-          TopLeft="183,137" />
-        <NodeLayout
           Size="101,42"
           Id="Package\test table\Split"
-          TopLeft="251,234" />
-        <NodeLayout
-          Size="100,42"
-          Id="Package\test table\Sort"
-          TopLeft="29,112" />
-        <NodeLayout
-          Size="109,42"
-          Id="Package\test table\Sort 1"
-          TopLeft="390,116" />
+          TopLeft="139,90" />
         <EdgeLayout
           Id="Package\test table.Paths[ADO NET Source Output]"
-          TopLeft="81.5,55">
+          TopLeft="84,55">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,57"
+              EndConnector="105.5,35"
               Start="0,0"
-              End="0,49.5">
+              End="105.5,27.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,49.5" />
+                    End="0,13.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.5"
+                    Point2="0,17.5"
+                    Point3="4,17.5" />
+                  <mssgle:LineSegment
+                    End="101.5,17.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="101.5,17.5"
+                    Point2="105.5,17.5"
+                    Point3="105.5,21.5" />
+                  <mssgle:LineSegment
+                    End="105.5,27.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1869,128 +1114,44 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="157,42"
+          Id="Package\test table\Conditional Split"
+          TopLeft="360,117" />
         <EdgeLayout
-          Id="Package\test table.Paths[ADO NET Source Output1]"
-          TopLeft="441.25,63">
+          Id="Package\test table.Paths[sum lot]"
+          TopLeft="240,111">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,53"
+              EndConnector="120,27"
               Start="0,0"
-              End="0,45.5">
+              End="112.5,27">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,45.5" />
+                    End="56,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="56,0"
+                    Point2="60,0"
+                    Point3="60,4" />
+                  <mssgle:LineSegment
+                    End="60,23" />
+                  <mssgle:CubicBezierSegment
+                    Point1="60,23"
+                    Point2="60,27"
+                    Point3="64,27" />
+                  <mssgle:LineSegment
+                    End="112.5,27" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\test table.Paths[Sort Output]"
-          TopLeft="390,137">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-75,27.5"
-              Start="0,0"
-              End="-67.5,27.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-33.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-33.5,0"
-                    Point2="-37.5,0"
-                    Point3="-37.5,4" />
-                  <mssgle:LineSegment
-                    End="-37.5,23.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-37.5,23.5"
-                    Point2="-37.5,27.5"
-                    Point3="-41.5,27.5" />
-                  <mssgle:LineSegment
-                    End="-67.5,27.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\test table.Paths[Sort Output1]"
-          TopLeft="129,133">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="54,31.5"
-              Start="0,0"
-              End="46.5,31.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="23,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="23,0"
-                    Point2="27,0"
-                    Point3="27,4" />
-                  <mssgle:LineSegment
-                    End="27,27.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="27,27.5"
-                    Point2="27,31.5"
-                    Point3="31,31.5" />
-                  <mssgle:LineSegment
-                    End="46.5,31.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\test table.Paths[Merge Join Output]"
-          TopLeft="249,192">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="52.5,42"
-              Start="0,0"
-              End="52.5,34.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17"
-                    Point2="0,21"
-                    Point3="4,21" />
-                  <mssgle:LineSegment
-                    End="48.5,21" />
-                  <mssgle:CubicBezierSegment
-                    Point1="48.5,21"
-                    Point2="52.5,21"
-                    Point3="52.5,25" />
-                  <mssgle:LineSegment
-                    End="52.5,34.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="42.85353515625,-15.7490234375,34.2929296875,9.7490234375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
