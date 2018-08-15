@@ -12,7 +12,7 @@
             <div class="container-fluid">
                 <div class="panel-group">
                     <div class="panel panel-primary">
-                        <div class="panel-heading" style="height: 30px;">
+                        <div class="panel-heading" style="height: 40px;">
                             <p>Sale Order Information</p>
                         </div>
 
@@ -33,18 +33,15 @@
                                 <div class="panel-body">
                                     <div id="divSave" runat="server" class="alert alert-success" role="alert"></div>
 
-                                    <div class="panel panel-warning ">
 
-
-                                        <div class="panel-heading" style="height: 40px;">
-                                            <p>HEADER </p>
-                                        </div>
+                                    <div class="panel panel-heading panel-warning" style="background-color: peru" data-toggle="collapse" data-target="#DropHeader">HEADER</div>
+                                    <div id="DropHeader" class="collapse">
 
 
                                         <%--<div class="panel-body">--%>
                                         <div class="row justify-content-md-center">
 
-                                              <div class="col-md-1 col-sm-6">
+                                            <div class="col-md-1 col-sm-6">
                                                 <div class="form-group">
                                                     <label>SalesORG</label>
                                                     <input id="txtSalesORG" runat="server" class="form-control" />
@@ -85,7 +82,7 @@
                                                     <label>PODate</label>
                                                     <input id="txtPODate" runat="server" class="form-control" />
                                                 </div>
-                                            </div> 
+                                            </div>
 
                                             <div class="col-md-2 col-sm-6">
                                                 <div class="form-group">
@@ -142,10 +139,10 @@
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-2 col-sm-6"  >
+                                            <div class="col-md-2 col-sm-6">
                                                 <div class="form-group">
                                                     <label>DestinationPort</label>
-                                                    <input id="txtDestinationPort" runat="server" class="form-control"/>
+                                                    <input id="txtDestinationPort" runat="server" class="form-control" />
                                                 </div>
                                             </div>
 
@@ -170,23 +167,7 @@
                                                 </div>
                                             </div>
 
-                                            
-
-                                        </div>
-                                    </div>
-
-
-                                    <div class="panel panel-warning ">
-                                        <div class="panel-heading" style="height: 40px;">
-                                            HEADER INPUT FORM
-                                        </div>
-
-
-                                        <div class="row justify-content-md-center">
-                                            <%--<div class="panel-body">--%>
-
-
-                                            <div class="col-md-1 col-sm-6">
+                                           <div class="col-md-1 col-sm-6">
                                                 <div class="form-group">
                                                     <label>PaymentTerm</label>
                                                     <input id="txtPaymentTerm" runat="server" class="form-control" />
@@ -214,49 +195,66 @@
                                                 </div>
                                             </div>
 
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="panel panel-warning ">
+                                        <div class="panel-heading" style="height: 40px;">
+                                            HEADER INPUT FORM
+                                        </div>
+
+                                        <div class="row justify-content-md-center">
+                                            <%--<div class="panel-body">--%>
+
                                             <div class="col-md-2 col-sm-6">
                                                 <div class="form-group">
                                                     <label>TTSlip</label>
-                                                    <input id ="datepicker" width="140px"/>
-                                                    <input id="txtTTSlip" runat="server" class="form-control" name="" />
-                                      
+                                                    <input id="DateTTSlip" />
+                                                    <input id="txtTTSlip" runat="server" class="form-control" name="" visible="false" />
+
                                                 </div>
                                             </div>
 
                                             <div class="col-md-2 col-sm-6">
                                                 <div class="form-group">
                                                     <label>LCSlip</label>
-                                                    <div class="datepicker" aria-labelledby="txtLCSlip">
-                                                    <input id="txtLCSlip" runat="server" class="form-control" />
-                                                        </div>
+                                                    <input id="DateLCSlip" />
+                                                    <input id="txtLCSlip" runat="server" class="form-control" visible="false" />
+
                                                 </div>
                                             </div>
 
                                             <div class="col-md-2 col-sm-6">
                                                 <div class="form-group">
                                                     <label>LC</label>
-                                                    <input id="txtLC" runat="server" class="form-control" />
+                                                    <input id="DateLC" />
+                                                    <input id="txtLC" runat="server" class="form-control" visible="false" />
                                                 </div>
                                             </div>
 
                                             <div class="col-md-2 col-sm-6">
                                                 <div class="form-group">
                                                     <label>TT</label>
-                                                    <input id="txtTT" runat="server" class="form-control" />
+                                                    <input id="DateTT" />
+                                                    <input id="txtTT" runat="server" class="form-control" visible="false" />
                                                 </div>
                                             </div>
 
                                             <div class="col-md-2 col-sm-6">
                                                 <div class="form-group">
                                                     <label>ETD</label>
-                                                    <input id="txtETD" runat="server" class="form-control" />
+                                                    <input id="DateETD" />
+                                                    <input id="txtETD" runat="server" class="form-control" visible="false" />
                                                 </div>
                                             </div>
 
                                             <div class="col-md-2 col-sm-6">
                                                 <div class="form-group">
                                                     <label>ETA</label>
-                                                    <input id="txtETA" runat="server" class="form-control" />
+                                                    <input id="DateETA" />
+                                                    <input id="txtETA" runat="server" class="form-control" visible="false" />
                                                 </div>
                                             </div>
 
@@ -265,7 +263,8 @@
                                             <div class="col-md-2 col-sm-6">
                                                 <div class="form-group">
                                                     <label>DocDate</label>
-                                                    <input id="txtDocDate" runat="server" class="form-control" />
+                                                    <input id="DateDocDate" />
+                                                    <input id="txtDocDate" runat="server" class="form-control" visible="false" />
                                                 </div>
                                             </div>
 
@@ -774,9 +773,41 @@
                     <asp:Button ID="btnSave" runat="server" OnClick="btnSave_Click" Text="Save" CssClass="btn btn-primary" />
                 </div>
 
-
+                <!--SHOW INPUTSOHeader-->
                 <script>
-                    $('#datepicker').datepicker({
+                    $(function () {
+                        $('#myTab li:first-child a').tab('show')
+                    })
+                </script>
+               
+                <!--calendar-->
+                <script>
+                    $('#DateTTSlip').datepicker({
+                        format: 'dd/mm/yyyy',
+                        uiLibrary: 'bootstrap'
+                    });
+                    $('#DateLCSlip').datepicker({
+                        format: 'dd/mm/yyyy',
+                        uiLibrary: 'bootstrap'
+                    });
+                    $('#DateTT').datepicker({
+                        format: 'dd/mm/yyyy',
+                        uiLibrary: 'bootstrap'
+                    });
+                    $('#DateLC').datepicker({
+                        format: 'dd/mm/yyyy',
+                        uiLibrary: 'bootstrap'
+                    });
+                    $('#DateETD').datepicker({
+                        format: 'dd/mm/yyyy',
+                        uiLibrary: 'bootstrap'
+                    });
+                    $('#DateETA').datepicker({
+                        format: 'dd/mm/yyyy',
+                        uiLibrary: 'bootstrap'
+                    });
+                    $('#DateDocDate').datepicker({
+                        format: 'dd/mm/yyyy',
                         uiLibrary: 'bootstrap'
                     });
                 </script>
