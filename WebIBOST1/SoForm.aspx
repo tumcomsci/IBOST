@@ -10,6 +10,21 @@
             <br />
             <br />
 
+            <style>
+                .panel-heading .accordion-toggle:after {
+                    /* symbol for "opening" panels */
+                    font-family: 'Glyphicons Halflings'; /* essential for enabling glyphicon */
+                    content: "\e113"; /* adjust as needed, taken from bootstrap.css */
+                    float: right; /* adjust as needed */
+                    color: grey; /* adjust as needed */
+                }
+
+                .panel-heading .accordion-toggle.collapsed:after {
+                    /* symbol for "collapsed" panels */
+                    content: "\e114"; /* adjust as needed, taken from bootstrap.css */
+                }
+            </style>
+
             <div class="container-fluid">
                 <div class="panel-group">
                     <div class="panel panel-primary">
@@ -27,253 +42,276 @@
 
                         </ul>
 
-                        <div class="tab-content" id="myTabContent">                            
+                        <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade" id="SOHEADER" role="tabpanel" aria-labelledby="SOHeader-tab">
 
                                 <div class="panel-body">
                                     <div id="divSave" runat="server" class="alert alert-success" role="alert"></div>
 
+                                    <div class="panel-group" id="accordion">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading " style="background-color: greenyellow">
+                                                <div class="accordion-toggle"  data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                                    HEADER
+                                                </div>
+                                            </div>
+                                            <div id="collapseOne" class="panel-collapse collapse in">
+                                                <div class="panel-body">
+                                                    <div class="row justify-content-md-center">
 
-                                    <div class="panel panel-heading panel-warning" style="background-color: gold" data-toggle="collapse" data-target="#DropHeader">HEADER</div>
+                                                        <div class="col-md-1 col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>SalesORG</label>
+                                                                <input id="txtSalesORG" runat="server" class="form-control" />
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="col-md-2 col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>LoadingDate</label>
+                                                                <input id="txtLoadingDate" runat="server" class="form-control" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-1 col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>OrderType</label>
+                                                                <input id="txtOrderType" runat="server" class="form-control" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-2 col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>OrderDate</label>
+                                                                <input id="txtOrderDate" runat="server" class="form-control" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-2 col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>PO Number</label>
+                                                                <input id="txtPO" runat="server" class="form-control" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-2 col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>PODate</label>
+                                                                <input id="txtPODate" runat="server" class="form-control" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-2 col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>INV</label>
+                                                                <input id="txtINV" runat="server" class="form-control" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-2 col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>SO Number</label>
+                                                                <input id="txtSO" runat="server" class="form-control" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-1 col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>SoldTo</label>
+                                                                <input id="txtSoldTo" runat="server" class="form-control" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-2 col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>SoldToName</label>
+                                                                <input id="txtSoldToName" runat="server" class="form-control" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-1 col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>ShipTo</label>
+                                                                <input id="txtShipTo" runat="server" class="form-control" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-2 col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>ShipToName</label>
+                                                                <input id="txtShipToName" runat="server" class="form-control" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-2 col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>DestinationPort</label>
+                                                                <input id="txtDestinationPort" runat="server" class="form-control" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-2 col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>TotalFOBSO</label>
+                                                                <input id="txtTotalFOBSO" runat="server" class="form-control" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-1 col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>TotalFCLS</label>
+                                                                <input id="txtTotalFCLS" runat="server" class="form-control" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-1 col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>TotalCartons</label>
+                                                                <input id="txtTotalCartons" runat="server" class="form-control" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-1 col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>PaymentTerm</label>
+                                                                <input id="txtPaymentTerm" runat="server" class="form-control" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-1 col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>Incoterm</label>
+                                                                <input id="txtIncoterm" runat="server" class="form-control" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-1 col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>Currency</label>
+                                                                <input id="txtCurrency" runat="server" class="form-control" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-1 col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>EXRate</label>
+                                                                <input id="txtEXRate" runat="server" class="form-control" />
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <!-- class="row justify-content-md-cente-->
+                                                </div>
+                                            
+                                            </div>
+                                            <!-- Collapse HEADER-->
+                                        </div>
+                                        <!--panel default HEADER-->
+                                       
+                                        
+                                        <%-- <div class="panel panel-heading panel-warning " style="background-color: greenyellow" data-toggle="collapse" data-target="#DropHeader">HEADER</div>
                                     <div id="DropHeader" class="collapse">
 
 
                                         <div class="panel-body">
-                                            <div class="row justify-content-md-center">
-
-                                                <div class="col-md-1 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>SalesORG</label>
-                                                        <input id="txtSalesORG" runat="server" class="form-control" />
-                                                    </div>
-                                                </div>
+                                           HHHHHHHH
 
 
-                                                <div class="col-md-2 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>LoadingDate</label>
-                                                        <input id="txtLoadingDate" runat="server" class="form-control" />
-                                                    </div>
-                                                </div>
 
-                                                <div class="col-md-1 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>OrderType</label>
-                                                        <input id="txtOrderType" runat="server" class="form-control" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-2 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>OrderDate</label>
-                                                        <input id="txtOrderDate" runat="server" class="form-control" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-2 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>PO Number</label>
-                                                        <input id="txtPO" runat="server" class="form-control" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-2 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>PODate</label>
-                                                        <input id="txtPODate" runat="server" class="form-control" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-2 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>INV</label>
-                                                        <input id="txtINV" runat="server" class="form-control" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-2 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>SO Number</label>
-                                                        <input id="txtSO" runat="server" class="form-control" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-1 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>SoldTo</label>
-                                                        <input id="txtSoldTo" runat="server" class="form-control" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-2 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>SoldToName</label>
-                                                        <input id="txtSoldToName" runat="server" class="form-control" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-1 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>ShipTo</label>
-                                                        <input id="txtShipTo" runat="server" class="form-control" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-2 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>ShipToName</label>
-                                                        <input id="txtShipToName" runat="server" class="form-control" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-2 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>DestinationPort</label>
-                                                        <input id="txtDestinationPort" runat="server" class="form-control" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-2 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>TotalFOBSO</label>
-                                                        <input id="txtTotalFOBSO" runat="server" class="form-control" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-1 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>TotalFCLS</label>
-                                                        <input id="txtTotalFCLS" runat="server" class="form-control" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-1 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>TotalCartons</label>
-                                                        <input id="txtTotalCartons" runat="server" class="form-control" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-1 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>PaymentTerm</label>
-                                                        <input id="txtPaymentTerm" runat="server" class="form-control" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-1 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>Incoterm</label>
-                                                        <input id="txtIncoterm" runat="server" class="form-control" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-1 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>Currency</label>
-                                                        <input id="txtCurrency" runat="server" class="form-control" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-1 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>EXRate</label>
-                                                        <input id="txtEXRate" runat="server" class="form-control" />
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                           <!-- class="row justify-content-md-cente-->
                                         </div>
                                          <!--Panel body HEADER-->
                                     </div>
-                                    <!--collapse HEADER-->
+                                    <!--collapse HEADER-->--%>
 
-                                    <div class="panel panel-warning ">
-                                        <div class="panel-heading" style="height: 40px; background-color: palegreen">
-                                            HEADER INPUT FORM
-                                        </div>
-
-                                        <div class="panel-body">
-                                            <div class="row justify-content-md-center">
-
-
-                                                <div class="col-md-2 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>TTSlip</label>
-                                                        <input id="DateTTSlip" readonly="readonly" />
-                                                        <input id="txtTTSlip" runat="server" class="form-control" name="" visible="false" />
-
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-2 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>LCSlip</label>
-                                                        <input id="DateLCSlip" readonly="readonly" />
-                                                        <input id="txtLCSlip" runat="server" class="form-control" visible="false" />
-
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-2 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>LC</label>
-                                                        <input id="DateLC" readonly="readonly" />
-                                                        <input id="txtLC" runat="server" class="form-control" visible="false" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-2 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>TT</label>
-                                                        <input id="DateTT" readonly="readonly" />
-                                                        <input id="txtTT" runat="server" class="form-control" visible="false" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-2 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>ETD</label>
-                                                        <input id="DateETD" readonly="readonly" />
-                                                        <input id="txtETD" runat="server" class="form-control" visible="false" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-2 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>ETA</label>
-                                                        <input id="DateETA" readonly="readonly" />
-                                                        <input id="txtETA" runat="server" class="form-control" visible="false" />
-                                                    </div>
-                                                </div>
-
-
-
-                                                <div class="col-md-2 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>DocDate</label>
-                                                        <input id="DateDocDate" readonly="readonly" />
-                                                        <input id="txtDocDate" runat="server" class="form-control" visible="false" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-2 col-sm-6">
-                                                    <div class="form-group">
-                                                        <label>DocAWB</label>
-                                                        <input id="txtDocAWB" runat="server" class="form-control" />
-                                                    </div>
-                                                </div>
-
+                                        <div class="panel panel-warning ">
+                                            <div class="panel-heading" style="height: 40px; background-color: palegreen">
+                                                HEADER INPUT FORM
                                             </div>
-                                            <!--row justify-content-md-center-->
+
+                                            <div class="panel-body">
+                                                <div class="row justify-content-md-center">
+
+
+                                                    <div class="col-md-2 col-sm-6">
+                                                        <div class="form-group">
+                                                            <label>TTSlip</label>
+                                                            <input id="DateTTSlip" readonly="readonly" />
+                                                            <input id="txtTTSlip" runat="server" class="form-control" name="" visible="false" />
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-2 col-sm-6">
+                                                        <div class="form-group">
+                                                            <label>LCSlip</label>
+                                                            <input id="DateLCSlip" readonly="readonly" />
+                                                            <input id="txtLCSlip" runat="server" class="form-control" visible="false" />
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-2 col-sm-6">
+                                                        <div class="form-group">
+                                                            <label>LC</label>
+                                                            <input id="DateLC" readonly="readonly" />
+                                                            <input id="txtLC" runat="server" class="form-control" visible="false" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-2 col-sm-6">
+                                                        <div class="form-group">
+                                                            <label>TT</label>
+                                                            <input id="DateTT" readonly="readonly" />
+                                                            <input id="txtTT" runat="server" class="form-control" visible="false" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-2 col-sm-6">
+                                                        <div class="form-group">
+                                                            <label>ETD</label>
+                                                            <input id="DateETD" readonly="readonly" />
+                                                            <input id="txtETD" runat="server" class="form-control" visible="false" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-2 col-sm-6">
+                                                        <div class="form-group">
+                                                            <label>ETA</label>
+                                                            <input id="DateETA" readonly="readonly" />
+                                                            <input id="txtETA" runat="server" class="form-control" visible="false" />
+                                                        </div>
+                                                    </div>
+
+
+
+                                                    <div class="col-md-2 col-sm-6">
+                                                        <div class="form-group">
+                                                            <label>DocDate</label>
+                                                            <input type="text" class="form-control" id="DateDocDate" pattern="" />
+                                                            <input id="txtDocDate" runat="server" class="form-control" visible="false" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-2 col-sm-6">
+                                                        <div class="form-group">
+                                                            <label>DocAWB</label>
+                                                            <input id="txtDocAWB" runat="server" class="form-control" />
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <!--row justify-content-md-center-->
+                                            </div>
+                                            <!--panel body  HEADER INPUT-->
                                         </div>
-                                        <!--panel body  HEADER INPUT-->
+                                        <!-- panel  HEADER INPUT-->
                                     </div>
-                                    <!-- panel  HEADER INPUT-->
+                                    <!--class="panel-group" id="accordion"-->
                                 
                                 </div>
                                 <!-- SAVE ALERT SO HEADER-->
+                            
                             </div>
                             <!--/. SOHEADER -->
 
@@ -785,7 +823,8 @@
                 <script>
                     $('#DateTTSlip').datepicker({
                         format: 'dd/mm/yyyy',
-                        uiLibrary: 'bootstrap'
+                        uiLibrary: 'bootstrap',
+                        
                     });
                     $('#DateLCSlip').datepicker({
                         format: 'dd/mm/yyyy',
@@ -809,7 +848,8 @@
                     });
                     $('#DateDocDate').datepicker({
                         format: 'dd/mm/yyyy',
-                        uiLibrary: 'bootstrap'
+                        uiLibrary: 'bootstrap',
+                        text: 'number'
                     });
                 </script>
                 <!--calendar-->
