@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="STG_SODetail"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{6F4E3C4D-FA3B-427F-9DDF-9564A03D81BC}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{D10588CA-2B92-497C-BF08-685AE2CD8EBF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABXjffFbCK33qD37a54YR4S8N1ozAZXpwcCXTnVPrN9jAAAAAAOgAAAAAIAACAAAAAY3HjTXOt7fetwvdin5cQBbev+rc2iFRo9rgDhb4a30CAAAABCF/Z7IKxcn78V7y80OyWalPViO4meVCQG+MbNmHrzDUAAAACauIBAKEUZhOy5qUqM8v9M6FP6qhK7TpkuuZtgG2WvZP8ff1eb6nnRkWlx04hu+UjbES9Egrxace/GwDjMgePr</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA3y+G1XXOx0ILJq4QhvHMVZ4q0gervx1Qz7KitnrVIXgAAAAAOgAAAAAIAACAAAAAtNZiWi0OM16paAYc8zG2tNiIq+ZLxndsa24SB+eQu0CAAAAC4mpmGL+CojcKzueygzKGNv8V+U+HPd6g5CrAHBEezoEAAAADMXRNLxlbAxH0KZjQe68AfEn/qFdYwIOh4/Sweeld9DVK8WYyTjoWomZR+asuKkrRb3mnt62DJ+XwyAc4lskPn</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -156,6 +156,120 @@
               DTS:TextQualified="True"
               DTS:ObjectName="Status"
               DTS:DTSID="{7E3280D3-FCCC-43C8-BFB4-6D0FB30DAE77}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SO_DETAIL]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C78E5AAA-E73D-476C-BD14-919075B7EE24}"
+      DTS:ObjectName="SO_DETAIL">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1054"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\Trainee\Desktop\Sample Data\SO_DETAIL.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SO NO "
+              DTS:DTSID="{3B4151CA-5A71-417E-92EB-09E7F2392283}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ITEM"
+              DTS:DTSID="{B2DD35F0-F336-4184-AACF-BD0FD7320EE3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DO NO "
+              DTS:DTSID="{75C73B6A-778E-4CBA-95CE-7CA9F6DB5BBA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BRAND"
+              DTS:DTSID="{B2D6BE66-6291-4EDF-9C60-847DBFF33E20}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MATERIAL"
+              DTS:DTSID="{382699D1-4B17-48FC-B63F-7402D5720F9F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DESCRIPTION"
+              DTS:DTSID="{A9A5F9E8-E05B-46AF-A0BA-7091BE261460}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="QTY"
+              DTS:DTSID="{138B2F09-390E-4060-A4F6-975772FDED59}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UNIT"
+              DTS:DTSID="{E405443B-5522-4356-AA63-F3EE9E7CE7A3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FOB PRICE UNIT"
+              DTS:DTSID="{B9843F00-C71B-446D-B468-F1D5654D1806}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TOTAL FOB"
+              DTS:DTSID="{8EC0292F-FB2F-4F46-A61C-DF297ADCF57C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LOT"
+              DTS:DTSID="{28DBD345-C761-430C-8DCF-A4D6710DCAA8}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -316,12 +430,12 @@
           version="1">
           <components>
             <component
-              refId="Package\STG SO Detail\CSV SO Detail"
+              refId="Package\STG SO Detail\CSV SODetail"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
               localeId="1054"
-              name="CSV SO Detail"
+              name="CSV SODetail"
               usesDispositions="true"
               version="1">
               <properties>
@@ -336,26 +450,26 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\STG SO Detail\CSV SO Detail.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[STG_SODetail]"
-                  connectionManagerRefId="Package.ConnectionManagers[STG_SODetail]"
+                  refId="Package\STG SO Detail\CSV SODetail.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SO_DETAIL]"
+                  connectionManagerRefId="Package.ConnectionManagers[SO_DETAIL]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output]"
+                  refId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output]"
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[SO no ]"
-                      codePage="874"
+                      refId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[SO NO ]"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[SO no ]"
+                      externalMetadataColumnId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].ExternalColumns[SO NO ]"
                       length="50"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[SO no ]"
-                      name="SO no "
+                      lineageId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[SO NO ]"
+                      name="SO NO "
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -369,15 +483,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[DO no ]"
-                      codePage="874"
-                      dataType="str"
+                      refId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[ITEM]"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[DO no ]"
-                      length="50"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[DO no ]"
-                      name="DO no "
+                      externalMetadataColumnId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].ExternalColumns[ITEM]"
+                      lineageId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[ITEM]"
+                      name="ITEM"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -391,14 +503,36 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[BRAND]"
-                      codePage="874"
+                      refId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[DO NO ]"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[BRAND]"
+                      externalMetadataColumnId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].ExternalColumns[DO NO ]"
                       length="50"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[BRAND]"
+                      lineageId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[DO NO ]"
+                      name="DO NO "
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[BRAND]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].ExternalColumns[BRAND]"
+                      length="50"
+                      lineageId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[BRAND]"
                       name="BRAND"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -413,32 +547,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[  ITEM]"
-                      dataType="i4"
+                      refId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[MATERIAL]"
+                      codePage="874"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[  ITEM]"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[  ITEM]"
-                      name="  ITEM"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[MATERIAL]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[MATERIAL]"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[MATERIAL]"
+                      externalMetadataColumnId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].ExternalColumns[MATERIAL]"
+                      length="50"
+                      lineageId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[MATERIAL]"
                       name="MATERIAL"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -453,14 +569,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[DESCRIPTION]"
-                      codePage="874"
+                      refId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[DESCRIPTION]"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[DESCRIPTION]"
-                      length="50"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[DESCRIPTION]"
+                      externalMetadataColumnId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].ExternalColumns[DESCRIPTION]"
+                      length="500"
+                      lineageId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[DESCRIPTION]"
                       name="DESCRIPTION"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -475,13 +591,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[ Cartons ]"
+                      refId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[QTY]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[ Cartons ]"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[ Cartons ]"
-                      name=" Cartons "
+                      externalMetadataColumnId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].ExternalColumns[QTY]"
+                      lineageId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[QTY]"
+                      name="QTY"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -495,15 +611,15 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[Unit]"
-                      codePage="874"
+                      refId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[UNIT]"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[Unit]"
+                      externalMetadataColumnId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].ExternalColumns[UNIT]"
                       length="50"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[Unit]"
-                      name="Unit"
+                      lineageId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[UNIT]"
+                      name="UNIT"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -517,13 +633,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[FOB PRICE unit]"
-                      dataType="r8"
+                      refId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[FOB PRICE UNIT]"
+                      dataType="r4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[FOB PRICE unit]"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[FOB PRICE unit]"
-                      name="FOB PRICE unit"
+                      externalMetadataColumnId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].ExternalColumns[FOB PRICE UNIT]"
+                      lineageId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[FOB PRICE UNIT]"
+                      name="FOB PRICE UNIT"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -537,13 +653,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[ TOTAL FOB HD]"
-                      dataType="r8"
+                      refId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[TOTAL FOB]"
+                      dataType="r4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[ TOTAL FOB HD]"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[ TOTAL FOB HD]"
-                      name=" TOTAL FOB HD"
+                      externalMetadataColumnId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].ExternalColumns[TOTAL FOB]"
+                      lineageId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[TOTAL FOB]"
+                      name="TOTAL FOB"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -557,55 +673,15 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[Net Invoice]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[Net Invoice]"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[Net Invoice]"
-                      name="Net Invoice"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[Net Sales]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[Net Sales]"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[Net Sales]"
-                      name="Net Sales"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[Status]"
-                      codePage="874"
+                      refId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[LOT]"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[Status]"
-                      length="50"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[Status]"
-                      name="Status"
+                      externalMetadataColumnId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].ExternalColumns[LOT]"
+                      length="200"
+                      lineageId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[LOT]"
+                      name="LOT"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -622,99 +698,87 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[SO no ]"
-                      codePage="874"
+                      refId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].ExternalColumns[SO NO ]"
+                      codePage="65001"
                       dataType="str"
                       length="50"
-                      name="SO no " />
+                      name="SO NO " />
                     <externalMetadataColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[DO no ]"
-                      codePage="874"
+                      refId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].ExternalColumns[ITEM]"
+                      dataType="i4"
+                      name="ITEM" />
+                    <externalMetadataColumn
+                      refId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].ExternalColumns[DO NO ]"
+                      codePage="65001"
                       dataType="str"
                       length="50"
-                      name="DO no " />
+                      name="DO NO " />
                     <externalMetadataColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[BRAND]"
-                      codePage="874"
+                      refId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].ExternalColumns[BRAND]"
+                      codePage="65001"
                       dataType="str"
                       length="50"
                       name="BRAND" />
                     <externalMetadataColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[  ITEM]"
-                      codePage="874"
-                      dataType="str"
-                      length="50"
-                      name="  ITEM" />
-                    <externalMetadataColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[MATERIAL]"
+                      refId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].ExternalColumns[MATERIAL]"
                       codePage="874"
                       dataType="str"
                       length="50"
                       name="MATERIAL" />
                     <externalMetadataColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[DESCRIPTION]"
-                      codePage="874"
+                      refId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].ExternalColumns[DESCRIPTION]"
+                      codePage="65001"
                       dataType="str"
-                      length="50"
+                      length="500"
                       name="DESCRIPTION" />
                     <externalMetadataColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[ Cartons ]"
-                      codePage="874"
+                      refId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].ExternalColumns[QTY]"
+                      dataType="i4"
+                      name="QTY" />
+                    <externalMetadataColumn
+                      refId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].ExternalColumns[UNIT]"
+                      codePage="65001"
                       dataType="str"
                       length="50"
-                      name=" Cartons " />
+                      name="UNIT" />
                     <externalMetadataColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[Unit]"
-                      codePage="874"
+                      refId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].ExternalColumns[FOB PRICE UNIT]"
+                      dataType="r4"
+                      name="FOB PRICE UNIT" />
+                    <externalMetadataColumn
+                      refId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].ExternalColumns[TOTAL FOB]"
+                      dataType="r4"
+                      name="TOTAL FOB" />
+                    <externalMetadataColumn
+                      refId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].ExternalColumns[LOT]"
+                      codePage="65001"
                       dataType="str"
-                      length="50"
-                      name="Unit" />
-                    <externalMetadataColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[FOB PRICE unit]"
-                      dataType="r8"
-                      name="FOB PRICE unit" />
-                    <externalMetadataColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[ TOTAL FOB HD]"
-                      dataType="r8"
-                      name=" TOTAL FOB HD" />
-                    <externalMetadataColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[Net Invoice]"
-                      dataType="r8"
-                      name="Net Invoice" />
-                    <externalMetadataColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[Net Sales]"
-                      dataType="r8"
-                      name="Net Sales" />
-                    <externalMetadataColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].ExternalColumns[Status]"
-                      codePage="874"
-                      dataType="str"
-                      length="50"
-                      name="Status" />
+                      length="200"
+                      name="LOT" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Error Output]"
+                  refId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Error Output]"
                   isErrorOut="true"
                   name="Flat File Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      codePage="874"
+                      refId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
                       dataType="text"
                       description="Flat File Source Error Output Column"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      lineageId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       name="Flat File Source Error Output Column" />
                     <outputColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      refId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -845,43 +909,57 @@
                   name="ADO NET Destination Input">
                   <inputColumns>
                     <inputColumn
+                      refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].Columns[ITEM]"
+                      cachedDataType="i4"
+                      cachedName="ITEM"
+                      externalMetadataColumnId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[Item]"
+                      lineageId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[ITEM]" />
+                    <inputColumn
                       refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].Columns[BRAND]"
-                      cachedCodepage="874"
+                      cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="BRAND"
                       externalMetadataColumnId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[Brand]"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[BRAND]" />
+                      lineageId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[BRAND]" />
                     <inputColumn
                       refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].Columns[MATERIAL]"
-                      cachedDataType="i4"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="MATERIAL"
                       externalMetadataColumnId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[Material]"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[MATERIAL]" />
+                      lineageId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[MATERIAL]" />
                     <inputColumn
                       refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].Columns[DESCRIPTION]"
-                      cachedCodepage="874"
+                      cachedCodepage="65001"
                       cachedDataType="str"
-                      cachedLength="50"
+                      cachedLength="500"
                       cachedName="DESCRIPTION"
                       externalMetadataColumnId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[Description]"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[DESCRIPTION]" />
+                      lineageId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[DESCRIPTION]" />
                     <inputColumn
-                      refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].Columns[Unit]"
-                      cachedCodepage="874"
+                      refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].Columns[QTY]"
+                      cachedDataType="i4"
+                      cachedName="QTY"
+                      externalMetadataColumnId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[QTY]"
+                      lineageId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[QTY]" />
+                    <inputColumn
+                      refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].Columns[UNIT]"
+                      cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Unit"
+                      cachedName="UNIT"
                       externalMetadataColumnId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[Unit]"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[Unit]" />
+                      lineageId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[UNIT]" />
                     <inputColumn
-                      refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].Columns[Status]"
-                      cachedCodepage="874"
+                      refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].Columns[LOT]"
+                      cachedCodepage="65001"
                       cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Status"
-                      externalMetadataColumnId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[Status]"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[Status]" />
+                      cachedLength="200"
+                      cachedName="LOT"
+                      externalMetadataColumnId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[Lot]"
+                      lineageId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[LOT]" />
                     <inputColumn
                       refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].Columns[SyncDate]"
                       cachedDataType="dbTimeStamp"
@@ -889,57 +967,33 @@
                       externalMetadataColumnId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[SyncDate]"
                       lineageId="Package\STG SO Detail\Derived Column.Outputs[Derived Column Output].Columns[SyncDate]" />
                     <inputColumn
-                      refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].Columns[SO no ]"
-                      cachedCodepage="874"
+                      refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].Columns[SO NO ]"
+                      cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="SO no "
+                      cachedName="SO NO "
                       externalMetadataColumnId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[SO]"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[SO no ]" />
+                      lineageId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[SO NO ]" />
                     <inputColumn
-                      refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].Columns[DO no ]"
-                      cachedCodepage="874"
+                      refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].Columns[DO NO ]"
+                      cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="DO no "
+                      cachedName="DO NO "
                       externalMetadataColumnId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[DO]"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[DO no ]" />
+                      lineageId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[DO NO ]" />
                     <inputColumn
-                      refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].Columns[  ITEM]"
-                      cachedDataType="i4"
-                      cachedName="  ITEM"
-                      externalMetadataColumnId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[Item]"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[  ITEM]" />
-                    <inputColumn
-                      refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].Columns[ Cartons ]"
-                      cachedDataType="i4"
-                      cachedName=" Cartons "
-                      externalMetadataColumnId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[Cartons]"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[ Cartons ]" />
-                    <inputColumn
-                      refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].Columns[FOB PRICE unit]"
-                      cachedDataType="r8"
-                      cachedName="FOB PRICE unit"
+                      refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].Columns[FOB PRICE UNIT]"
+                      cachedDataType="r4"
+                      cachedName="FOB PRICE UNIT"
                       externalMetadataColumnId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[FOBPriceUnit]"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[FOB PRICE unit]" />
+                      lineageId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[FOB PRICE UNIT]" />
                     <inputColumn
-                      refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].Columns[ TOTAL FOB HD]"
-                      cachedDataType="r8"
-                      cachedName=" TOTAL FOB HD"
+                      refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].Columns[TOTAL FOB]"
+                      cachedDataType="r4"
+                      cachedName="TOTAL FOB"
                       externalMetadataColumnId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[TotalFOB]"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[ TOTAL FOB HD]" />
-                    <inputColumn
-                      refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].Columns[Net Invoice]"
-                      cachedDataType="r8"
-                      cachedName="Net Invoice"
-                      externalMetadataColumnId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[NetInvoice]"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[Net Invoice]" />
-                    <inputColumn
-                      refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].Columns[Net Sales]"
-                      cachedDataType="r8"
-                      cachedName="Net Sales"
-                      externalMetadataColumnId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[NetSales]"
-                      lineageId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output].Columns[Net Sales]" />
+                      lineageId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output].Columns[TOTAL FOB]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -948,6 +1002,10 @@
                       dataType="wstr"
                       length="50"
                       name="SO" />
+                    <externalMetadataColumn
+                      refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[Item]"
+                      dataType="i4"
+                      name="Item" />
                     <externalMetadataColumn
                       refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[DO]"
                       dataType="wstr"
@@ -959,22 +1017,19 @@
                       length="50"
                       name="Brand" />
                     <externalMetadataColumn
-                      refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[Item]"
-                      dataType="i4"
-                      name="Item" />
-                    <externalMetadataColumn
                       refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[Material]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="50"
                       name="Material" />
                     <externalMetadataColumn
                       refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[Description]"
                       dataType="wstr"
-                      length="50"
+                      length="500"
                       name="Description" />
                     <externalMetadataColumn
-                      refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[Cartons]"
+                      refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[QTY]"
                       dataType="i4"
-                      name="Cartons" />
+                      name="QTY" />
                     <externalMetadataColumn
                       refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[Unit]"
                       dataType="wstr"
@@ -989,18 +1044,10 @@
                       dataType="r8"
                       name="TotalFOB" />
                     <externalMetadataColumn
-                      refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[NetInvoice]"
-                      dataType="r8"
-                      name="NetInvoice" />
-                    <externalMetadataColumn
-                      refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[NetSales]"
-                      dataType="r8"
-                      name="NetSales" />
-                    <externalMetadataColumn
-                      refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[Status]"
+                      refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[Lot]"
                       dataType="wstr"
-                      length="50"
-                      name="Status" />
+                      length="200"
+                      name="Lot" />
                     <externalMetadataColumn
                       refId="Package\STG SO Detail\STG_SODetail.Inputs[ADO NET Destination Input].ExternalColumns[SyncDate]"
                       dataType="dbTimeStamp"
@@ -1044,7 +1091,7 @@
               refId="Package\STG SO Detail.Paths[Flat File Source Output]"
               endId="Package\STG SO Detail\Derived Column.Inputs[Derived Column Input]"
               name="Flat File Source Output"
-              startId="Package\STG SO Detail\CSV SO Detail.Outputs[Flat File Source Output]" />
+              startId="Package\STG SO Detail\CSV SODetail.Outputs[Flat File Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1075,39 +1122,39 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="147,42"
-          Id="Package\STG SO Detail\CSV SO Detail"
-          TopLeft="261,69" />
+          Size="146,42"
+          Id="Package\STG SO Detail\STG_SODetail"
+          TopLeft="624,251" />
         <NodeLayout
           Size="156,42"
           Id="Package\STG SO Detail\Derived Column"
           TopLeft="375,152" />
         <EdgeLayout
-          Id="Package\STG SO Detail.Paths[Flat File Source Output]"
-          TopLeft="334.5,111">
+          Id="Package\STG SO Detail.Paths[Derived Column Output]"
+          TopLeft="453,194">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="118.5,41"
+              EndConnector="244,57"
               Start="0,0"
-              End="118.5,33.5">
+              End="244,49.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.5" />
+                    End="0,24.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,16.5"
-                    Point2="0,20.5"
-                    Point3="4,20.5" />
+                    Point1="0,24.5"
+                    Point2="0,28.5"
+                    Point3="4,28.5" />
                   <mssgle:LineSegment
-                    End="114.5,20.5" />
+                    End="240,28.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="114.5,20.5"
-                    Point2="118.5,20.5"
-                    Point3="118.5,24.5" />
+                    Point1="240,28.5"
+                    Point2="244,28.5"
+                    Point3="244,32.5" />
                   <mssgle:LineSegment
-                    End="118.5,33.5" />
+                    End="244,49.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1117,35 +1164,35 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="146,42"
-          Id="Package\STG SO Detail\STG_SODetail"
-          TopLeft="546,244" />
+          Size="143,42"
+          Id="Package\STG SO Detail\CSV SODetail"
+          TopLeft="203,33" />
         <EdgeLayout
-          Id="Package\STG SO Detail.Paths[Derived Column Output]"
-          TopLeft="453,194">
+          Id="Package\STG SO Detail.Paths[Flat File Source Output]"
+          TopLeft="274.5,75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="166,50"
+              EndConnector="178.5,77"
               Start="0,0"
-              End="166,42.5">
+              End="178.5,69.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21" />
+                    End="0,34.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,21"
-                    Point2="0,25"
-                    Point3="4,25" />
+                    Point1="0,34.5"
+                    Point2="0,38.5"
+                    Point3="4,38.5" />
                   <mssgle:LineSegment
-                    End="162,25" />
+                    End="174.5,38.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="162,25"
-                    Point2="166,25"
-                    Point3="166,29" />
+                    Point1="174.5,38.5"
+                    Point2="178.5,38.5"
+                    Point3="178.5,42.5" />
                   <mssgle:LineSegment
-                    End="166,42.5" />
+                    End="178.5,69.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
