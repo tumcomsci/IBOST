@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="StockTable"
   DTS:PackageType="5"
-  DTS:VersionBuild="19"
-  DTS:VersionGUID="{30DBC301-384A-4274-BC84-9662DDD7D02D}">
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{D88DD8E1-FAA8-476C-B7E1-F9D2C834A77A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA08gNY6wrMioco9Ym/QYZIyyf1MUEFi11reirsgCr0HAAAAAAOgAAAAAIAACAAAAArQE38rtdITCub5gIVJYGhTX6GRdn3fCxRD3DaQ4Vf4SAAAAAgMMIEBhgTPfG+V94yIEfIOw4s+4ts+/tdqL238Zt0M0AAAAA1cOEiJkJyPJvlFlFoki2AgI9VEt3zQ7DkHqdAXuvPGIFBVHytShETjoQbfYexFXq8q7cNbFG+xMk9D7kQQ1na</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABcCd3uvzTEAZo0JEuRvorDSPT+yuk2fb1TgRZ/IE5zEgAAAAAOgAAAAAIAACAAAABcpETLbRZP9bgsfTxutEQresR86xYSELaAOWLCCrVgZCAAAADnS7x0qBj5CfVF+1I1SIAo5ashaWHlnB3Yy/CMxTgySUAAAAC4ze27jugZHQ5px9Eswz/x21usAt9TvkSC7duWJHb0vasFY7R/b2rcXp+4iEj83H3szJI2dxsY+txa2Z4h8QW5</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -194,7 +194,7 @@
                     <externalMetadataColumn
                       refId="Package\Stock Table\Insert Records (Stock Table).Inputs[ADO NET Destination Input].ExternalColumns[Lot]"
                       dataType="wstr"
-                      length="100"
+                      length="200"
                       name="Lot" />
                     <externalMetadataColumn
                       refId="Package\Stock Table\Insert Records (Stock Table).Inputs[ADO NET Destination Input].ExternalColumns[Unres]"
@@ -212,36 +212,6 @@
                       refId="Package\Stock Table\Insert Records (Stock Table).Inputs[ADO NET Destination Input].ExternalColumns[QiCTN]"
                       dataType="i4"
                       name="QiCTN" />
-                    <externalMetadataColumn
-                      refId="Package\Stock Table\Insert Records (Stock Table).Inputs[ADO NET Destination Input].ExternalColumns[Book]"
-                      dataType="i4"
-                      name="Book" />
-                    <externalMetadataColumn
-                      refId="Package\Stock Table\Insert Records (Stock Table).Inputs[ADO NET Destination Input].ExternalColumns[BookCTN]"
-                      dataType="i4"
-                      name="BookCTN" />
-                    <externalMetadataColumn
-                      refId="Package\Stock Table\Insert Records (Stock Table).Inputs[ADO NET Destination Input].ExternalColumns[SO]"
-                      dataType="wstr"
-                      length="50"
-                      name="SO" />
-                    <externalMetadataColumn
-                      refId="Package\Stock Table\Insert Records (Stock Table).Inputs[ADO NET Destination Input].ExternalColumns[DO]"
-                      dataType="wstr"
-                      length="50"
-                      name="DO" />
-                    <externalMetadataColumn
-                      refId="Package\Stock Table\Insert Records (Stock Table).Inputs[ADO NET Destination Input].ExternalColumns[Item]"
-                      dataType="i4"
-                      name="Item" />
-                    <externalMetadataColumn
-                      refId="Package\Stock Table\Insert Records (Stock Table).Inputs[ADO NET Destination Input].ExternalColumns[Remain]"
-                      dataType="i4"
-                      name="Remain" />
-                    <externalMetadataColumn
-                      refId="Package\Stock Table\Insert Records (Stock Table).Inputs[ADO NET Destination Input].ExternalColumns[RemainCTN]"
-                      dataType="i4"
-                      name="RemainCTN" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -410,7 +380,7 @@
                     <inputColumn
                       refId="Package\Stock Table\Merge Join.Inputs[Merge Join Right Input].Columns[Lot]"
                       cachedDataType="wstr"
-                      cachedLength="100"
+                      cachedLength="200"
                       cachedName="Lot"
                       cachedSortKeyPosition="4"
                       lineageId="Package\Stock Table\Sort Table.Outputs[Sort Output].Columns[Lot]" />
@@ -630,7 +600,7 @@
                     <outputColumn
                       refId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Lot (1)]"
                       dataType="wstr"
-                      length="100"
+                      length="200"
                       lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Lot (1)]"
                       name="Lot (1)">
                       <properties>
@@ -1269,7 +1239,7 @@
                     <inputColumn
                       refId="Package\Stock Table\Sort Table.Inputs[Sort Input].Columns[Lot]"
                       cachedDataType="wstr"
-                      cachedLength="100"
+                      cachedLength="200"
                       cachedName="Lot"
                       lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[Lot]">
                       <properties>
@@ -1345,120 +1315,6 @@
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
                           name="NewSortKeyPosition">10</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Stock Table\Sort Table.Inputs[Sort Input].Columns[Book]"
-                      cachedDataType="i4"
-                      cachedName="Book"
-                      lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[Book]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Stock Table\Sort Table.Inputs[Sort Input].Columns[BookCTN]"
-                      cachedDataType="i4"
-                      cachedName="BookCTN"
-                      lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[BookCTN]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Stock Table\Sort Table.Inputs[Sort Input].Columns[SO]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="SO"
-                      lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[SO]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Stock Table\Sort Table.Inputs[Sort Input].Columns[DO]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="DO"
-                      lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[DO]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Stock Table\Sort Table.Inputs[Sort Input].Columns[Item]"
-                      cachedDataType="i4"
-                      cachedName="Item"
-                      lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[Item]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Stock Table\Sort Table.Inputs[Sort Input].Columns[Remain]"
-                      cachedDataType="i4"
-                      cachedName="Remain"
-                      lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[Remain]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Stock Table\Sort Table.Inputs[Sort Input].Columns[RemainCTN]"
-                      cachedDataType="i4"
-                      cachedName="RemainCTN"
-                      lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[RemainCTN]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -1547,7 +1403,7 @@
                     <outputColumn
                       refId="Package\Stock Table\Sort Table.Outputs[Sort Output].Columns[Lot]"
                       dataType="wstr"
-                      length="100"
+                      length="200"
                       lineageId="Package\Stock Table\Sort Table.Outputs[Sort Output].Columns[Lot]"
                       name="Lot"
                       sortKeyPosition="4">
@@ -1615,99 +1471,6 @@
                           name="SortColumnId">#{Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[QiCTN]}</property>
                       </properties>
                     </outputColumn>
-                    <outputColumn
-                      refId="Package\Stock Table\Sort Table.Outputs[Sort Output].Columns[Book]"
-                      dataType="i4"
-                      lineageId="Package\Stock Table\Sort Table.Outputs[Sort Output].Columns[Book]"
-                      name="Book">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[Book]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Stock Table\Sort Table.Outputs[Sort Output].Columns[BookCTN]"
-                      dataType="i4"
-                      lineageId="Package\Stock Table\Sort Table.Outputs[Sort Output].Columns[BookCTN]"
-                      name="BookCTN">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[BookCTN]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Stock Table\Sort Table.Outputs[Sort Output].Columns[SO]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Stock Table\Sort Table.Outputs[Sort Output].Columns[SO]"
-                      name="SO">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[SO]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Stock Table\Sort Table.Outputs[Sort Output].Columns[DO]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Stock Table\Sort Table.Outputs[Sort Output].Columns[DO]"
-                      name="DO">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[DO]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Stock Table\Sort Table.Outputs[Sort Output].Columns[Item]"
-                      dataType="i4"
-                      lineageId="Package\Stock Table\Sort Table.Outputs[Sort Output].Columns[Item]"
-                      name="Item">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[Item]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Stock Table\Sort Table.Outputs[Sort Output].Columns[Remain]"
-                      dataType="i4"
-                      lineageId="Package\Stock Table\Sort Table.Outputs[Sort Output].Columns[Remain]"
-                      name="Remain">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[Remain]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Stock Table\Sort Table.Outputs[Sort Output].Columns[RemainCTN]"
-                      dataType="i4"
-                      lineageId="Package\Stock Table\Sort Table.Outputs[Sort Output].Columns[RemainCTN]"
-                      name="RemainCTN">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[RemainCTN]}</property>
-                      </properties>
-                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -1773,7 +1536,7 @@
                     <inputColumn
                       refId="Package\Stock Table\Split Records.Inputs[Conditional Split Input].Columns[Lot (1)]"
                       cachedDataType="wstr"
-                      cachedLength="100"
+                      cachedLength="200"
                       cachedName="Lot (1)"
                       lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Lot (1)]" />
                     <inputColumn
@@ -2374,7 +2137,7 @@ WHERE SyncDate = (
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].ExternalColumns[Lot]"
-                      length="100"
+                      length="200"
                       lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[Lot]"
                       name="Lot"
                       truncationRowDisposition="FailComponent" />
@@ -2414,71 +2177,6 @@ WHERE SyncDate = (
                       lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[QiCTN]"
                       name="QiCTN"
                       truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[Book]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].ExternalColumns[Book]"
-                      lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[Book]"
-                      name="Book"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[BookCTN]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].ExternalColumns[BookCTN]"
-                      lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[BookCTN]"
-                      name="BookCTN"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[SO]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].ExternalColumns[SO]"
-                      length="50"
-                      lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[SO]"
-                      name="SO"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[DO]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].ExternalColumns[DO]"
-                      length="50"
-                      lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[DO]"
-                      name="DO"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[Item]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].ExternalColumns[Item]"
-                      lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[Item]"
-                      name="Item"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[Remain]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].ExternalColumns[Remain]"
-                      lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[Remain]"
-                      name="Remain"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[RemainCTN]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].ExternalColumns[RemainCTN]"
-                      lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[RemainCTN]"
-                      name="RemainCTN"
-                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2508,7 +2206,7 @@ WHERE SyncDate = (
                     <externalMetadataColumn
                       refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].ExternalColumns[Lot]"
                       dataType="wstr"
-                      length="100"
+                      length="200"
                       name="Lot" />
                     <externalMetadataColumn
                       refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].ExternalColumns[Unres]"
@@ -2526,36 +2224,6 @@ WHERE SyncDate = (
                       refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].ExternalColumns[QiCTN]"
                       dataType="i4"
                       name="QiCTN" />
-                    <externalMetadataColumn
-                      refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].ExternalColumns[Book]"
-                      dataType="i4"
-                      name="Book" />
-                    <externalMetadataColumn
-                      refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].ExternalColumns[BookCTN]"
-                      dataType="i4"
-                      name="BookCTN" />
-                    <externalMetadataColumn
-                      refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].ExternalColumns[SO]"
-                      dataType="wstr"
-                      length="50"
-                      name="SO" />
-                    <externalMetadataColumn
-                      refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].ExternalColumns[DO]"
-                      dataType="wstr"
-                      length="50"
-                      name="DO" />
-                    <externalMetadataColumn
-                      refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].ExternalColumns[Item]"
-                      dataType="i4"
-                      name="Item" />
-                    <externalMetadataColumn
-                      refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].ExternalColumns[Remain]"
-                      dataType="i4"
-                      name="Remain" />
-                    <externalMetadataColumn
-                      refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].ExternalColumns[RemainCTN]"
-                      dataType="i4"
-                      name="RemainCTN" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -2594,7 +2262,7 @@ WHERE SyncDate = (
                     <outputColumn
                       refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Error Output].Columns[Lot]"
                       dataType="wstr"
-                      length="100"
+                      length="200"
                       lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Error Output].Columns[Lot]"
                       name="Lot" />
                     <outputColumn
@@ -2617,43 +2285,6 @@ WHERE SyncDate = (
                       dataType="i4"
                       lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Error Output].Columns[QiCTN]"
                       name="QiCTN" />
-                    <outputColumn
-                      refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Error Output].Columns[Book]"
-                      dataType="i4"
-                      lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Error Output].Columns[Book]"
-                      name="Book" />
-                    <outputColumn
-                      refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Error Output].Columns[BookCTN]"
-                      dataType="i4"
-                      lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Error Output].Columns[BookCTN]"
-                      name="BookCTN" />
-                    <outputColumn
-                      refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Error Output].Columns[SO]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Error Output].Columns[SO]"
-                      name="SO" />
-                    <outputColumn
-                      refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Error Output].Columns[DO]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Error Output].Columns[DO]"
-                      name="DO" />
-                    <outputColumn
-                      refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Error Output].Columns[Item]"
-                      dataType="i4"
-                      lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Error Output].Columns[Item]"
-                      name="Item" />
-                    <outputColumn
-                      refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Error Output].Columns[Remain]"
-                      dataType="i4"
-                      lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Error Output].Columns[Remain]"
-                      name="Remain" />
-                    <outputColumn
-                      refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Error Output].Columns[RemainCTN]"
-                      dataType="i4"
-                      lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Error Output].Columns[RemainCTN]"
-                      name="RemainCTN" />
                     <outputColumn
                       refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -2895,7 +2526,7 @@ WHERE SyncDate = (
                     <externalMetadataColumn
                       refId="Package\Stock Table\Update Records (Stock Table).Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
                       dataType="wstr"
-                      length="100"
+                      length="200"
                       name="Param_9">
                       <properties>
                         <property
@@ -3010,17 +2641,25 @@ WHERE SyncDate = (
           Id="Package\Stock Table\STG_Stock"
           TopLeft="51,32" />
         <NodeLayout
+          Size="142,42"
+          Id="Package\Stock Table\Split Records"
+          TopLeft="373,255" />
+        <NodeLayout
+          Size="221,42"
+          Id="Package\Stock Table\Update Records (Stock Table)"
+          TopLeft="488,357" />
+        <NodeLayout
           Size="136,42"
           Id="Package\Stock Table\Stock Table"
           TopLeft="526,27" />
         <NodeLayout
-          Size="129,42"
-          Id="Package\Stock Table\Sort Table"
-          TopLeft="394,110" />
-        <NodeLayout
           Size="123,42"
           Id="Package\Stock Table\Sort STG"
           TopLeft="144,112" />
+        <NodeLayout
+          Size="216,42"
+          Id="Package\Stock Table\Insert Records (Stock Table)"
+          TopLeft="41,365" />
         <EdgeLayout
           Id="Package\Stock Table.Paths[ADO NET Source Output]"
           TopLeft="117,74">
@@ -3056,153 +2695,41 @@ WHERE SyncDate = (
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Stock Table.Paths[ADO NET Source Output1]"
-          TopLeft="594,69">
+          Id="Package\Stock Table.Paths[Update (Match)]"
+          TopLeft="466.333333333333,297">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-135.5,41"
+              EndConnector="132.166666666667,60"
               Start="0,0"
-              End="-135.5,33.5">
+              End="132.166666666667,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.5" />
+                    End="0,20.4011142061281" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,16.5"
-                    Point2="0,20.5"
-                    Point3="-4,20.5" />
+                    Point1="0,20.4011142061281"
+                    Point2="0,24.4011142061281"
+                    Point3="4,24.4011142061281" />
                   <mssgle:LineSegment
-                    End="-131.5,20.5" />
+                    End="128.166666666667,24.4011142061281" />
                   <mssgle:CubicBezierSegment
-                    Point1="-131.5,20.5"
-                    Point2="-135.5,20.5"
-                    Point3="-135.5,24.5" />
+                    Point1="128.166666666667,24.4011142061281"
+                    Point2="132.166666666667,24.4011142061281"
+                    Point3="132.166666666667,28.4011142061281" />
                   <mssgle:LineSegment
-                    End="-135.5,33.5" />
+                    End="132.166666666667,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="31.2976497395835,29.4011142061281,69.5713671875,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="132,42"
-          Id="Package\Stock Table\Merge Join"
-          TopLeft="254,187" />
-        <EdgeLayout
-          Id="Package\Stock Table.Paths[Sort Output]"
-          TopLeft="205.5,154">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="93.8333333333333,33"
-              Start="0,0"
-              End="93.8333333333333,25.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.562874251497" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,15.562874251497"
-                    Point2="0,19.562874251497"
-                    Point3="4,19.562874251497" />
-                  <mssgle:LineSegment
-                    End="89.8333333333333,19.562874251497" />
-                  <mssgle:CubicBezierSegment
-                    Point1="89.8333333333333,19.562874251497"
-                    Point2="93.8333333333333,19.562874251497"
-                    Point3="93.8333333333333,23.562874251497" />
-                  <mssgle:LineSegment
-                    End="93.8333333333333,25.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Stock Table.Paths[Sort Output1]"
-          TopLeft="458.5,152">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-117.833333333333,35"
-              Start="0,0"
-              End="-117.833333333333,27.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.748502994012" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.748502994012"
-                    Point2="0,20.748502994012"
-                    Point3="-4,20.748502994012" />
-                  <mssgle:LineSegment
-                    End="-113.833333333333,20.748502994012" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-113.833333333333,20.748502994012"
-                    Point2="-117.833333333333,20.748502994012"
-                    Point3="-117.833333333333,24.748502994012" />
-                  <mssgle:LineSegment
-                    End="-117.833333333333,27.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="142,42"
-          Id="Package\Stock Table\Split Records"
-          TopLeft="373,255" />
-        <EdgeLayout
-          Id="Package\Stock Table.Paths[Merge Join Output]"
-          TopLeft="320,229">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="124,26"
-              Start="0,0"
-              End="124,18.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,9" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,9"
-                    Point2="0,13"
-                    Point3="4,13" />
-                  <mssgle:LineSegment
-                    End="120,13" />
-                  <mssgle:CubicBezierSegment
-                    Point1="120,13"
-                    Point2="124,13"
-                    Point3="124,17" />
-                  <mssgle:LineSegment
-                    End="124,18.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="216,42"
-          Id="Package\Stock Table\Insert Records (Stock Table)"
-          TopLeft="41,365" />
         <EdgeLayout
           Id="Package\Stock Table.Paths[Insert (Not Match)]"
           TopLeft="444,297">
@@ -3240,43 +2767,147 @@ WHERE SyncDate = (
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="221,42"
-          Id="Package\Stock Table\Update Records (Stock Table)"
-          TopLeft="488,357" />
+          Size="129,42"
+          Id="Package\Stock Table\Sort Table"
+          TopLeft="462,103" />
         <EdgeLayout
-          Id="Package\Stock Table.Paths[Update (Match)]"
-          TopLeft="466.333333333333,297">
+          Id="Package\Stock Table.Paths[ADO NET Source Output1]"
+          TopLeft="594,69">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="132.166666666667,60"
+              EndConnector="-67.5,34"
               Start="0,0"
-              End="132.166666666667,52.5">
+              End="-67.5,26.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.4011142061281" />
+                    End="0,13" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20.4011142061281"
-                    Point2="0,24.4011142061281"
-                    Point3="4,24.4011142061281" />
+                    Point1="0,13"
+                    Point2="0,17"
+                    Point3="-4,17" />
                   <mssgle:LineSegment
-                    End="128.166666666667,24.4011142061281" />
+                    End="-63.5,17" />
                   <mssgle:CubicBezierSegment
-                    Point1="128.166666666667,24.4011142061281"
-                    Point2="132.166666666667,24.4011142061281"
-                    Point3="132.166666666667,28.4011142061281" />
+                    Point1="-63.5,17"
+                    Point2="-67.5,17"
+                    Point3="-67.5,21" />
                   <mssgle:LineSegment
-                    End="132.166666666667,52.5" />
+                    End="-67.5,26.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="31.2976497395833,29.4011142061281,69.5713671875,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="132,42"
+          Id="Package\Stock Table\Merge Join"
+          TopLeft="291,182" />
+        <EdgeLayout
+          Id="Package\Stock Table.Paths[Sort Output]"
+          TopLeft="205.5,154">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="130.833333333333,28"
+              Start="0,0"
+              End="130.833333333333,20.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.5988023952096" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.5988023952096"
+                    Point2="0,16.5988023952096"
+                    Point3="4,16.5988023952096" />
+                  <mssgle:LineSegment
+                    End="126.833333333333,16.5988023952096" />
+                  <mssgle:CubicBezierSegment
+                    Point1="126.833333333333,16.5988023952096"
+                    Point2="130.833333333333,16.5988023952096"
+                    Point3="130.833333333333,20.5988023952096" />
+                  <mssgle:LineSegment
+                    End="130.833333333333,20.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Stock Table.Paths[Sort Output1]"
+          TopLeft="526.5,145">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-148.833333333333,37"
+              Start="0,0"
+              End="-148.833333333333,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.9341317365269" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.9341317365269"
+                    Point2="0,21.9341317365269"
+                    Point3="-4,21.9341317365269" />
+                  <mssgle:LineSegment
+                    End="-144.833333333333,21.9341317365269" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-144.833333333333,21.9341317365269"
+                    Point2="-148.833333333333,21.9341317365269"
+                    Point3="-148.833333333333,25.9341317365269" />
+                  <mssgle:LineSegment
+                    End="-148.833333333333,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Stock Table.Paths[Merge Join Output]"
+          TopLeft="357,224">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="87,31"
+              Start="0,0"
+              End="87,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.5"
+                    Point2="0,15.5"
+                    Point3="4,15.5" />
+                  <mssgle:LineSegment
+                    End="83,15.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="83,15.5"
+                    Point2="87,15.5"
+                    Point3="87,19.5" />
+                  <mssgle:LineSegment
+                    End="87,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="PlanTable"
   DTS:PackageType="5"
-  DTS:VersionBuild="27"
-  DTS:VersionGUID="{7D01AE43-BB6F-4C3C-9A29-DBC64D54CFD8}">
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{14B78852-812C-472D-B28E-710F2D89E33D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABLArBuGJ6eJRufeUinVHL3CizefijLr5CQj5kcZh6bywAAAAAOgAAAAAIAACAAAACOXpXavdTvh/DA/VGQG/oHUS77ByIYSaU2Q1/LYNUQkiAAAABGk+70+8ehSAJpYQGLXHSjl7PhyZWL6wtMXAB1ah4yI0AAAAC9pzoKs9cQo+ZE+Knm9y0GwF2HEHKZfkoRQdQVBm5zb7cDKMPotN1aGd9e+LjgpqheHHKQVl6jFc0yFaBdXCOh</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC91V6p9a0zkqNENqtDuuuNO9wsd3e443rTQM/lfYaPOwAAAAAOgAAAAAIAACAAAAClfsCFCSc6jA03+7LmC5OK/qq4g8CghHgYhYSFMCOsAiAAAADNPuiWM25wPRcNirHHbn75LVecDmPJzBEhTWX0yG44VEAAAAB+1W+dA9VeyLt2etGBJ/6nFbOmvq4avO4GqOwPsq3DNr05K7I38K3HgKm6RRUWrWfDdb/+LVK2mbWpAteMikY3</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -749,71 +749,6 @@
                       lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[UnresCTN]"
                       name="UnresCTN"
                       truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[Book]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].ExternalColumns[Book]"
-                      lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[Book]"
-                      name="Book"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[BookCTN]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].ExternalColumns[BookCTN]"
-                      lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[BookCTN]"
-                      name="BookCTN"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[SO]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].ExternalColumns[SO]"
-                      length="50"
-                      lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[SO]"
-                      name="SO"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[DO]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].ExternalColumns[DO]"
-                      length="50"
-                      lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[DO]"
-                      name="DO"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[Item]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].ExternalColumns[Item]"
-                      lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[Item]"
-                      name="Item"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[Remain]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].ExternalColumns[Remain]"
-                      lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[Remain]"
-                      name="Remain"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[RemainCTN]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].ExternalColumns[RemainCTN]"
-                      lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[RemainCTN]"
-                      name="RemainCTN"
-                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -852,36 +787,6 @@
                       refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].ExternalColumns[UnresCTN]"
                       dataType="i4"
                       name="UnresCTN" />
-                    <externalMetadataColumn
-                      refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].ExternalColumns[Book]"
-                      dataType="i4"
-                      name="Book" />
-                    <externalMetadataColumn
-                      refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].ExternalColumns[BookCTN]"
-                      dataType="i4"
-                      name="BookCTN" />
-                    <externalMetadataColumn
-                      refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].ExternalColumns[SO]"
-                      dataType="wstr"
-                      length="50"
-                      name="SO" />
-                    <externalMetadataColumn
-                      refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].ExternalColumns[DO]"
-                      dataType="wstr"
-                      length="50"
-                      name="DO" />
-                    <externalMetadataColumn
-                      refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].ExternalColumns[Item]"
-                      dataType="i4"
-                      name="Item" />
-                    <externalMetadataColumn
-                      refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].ExternalColumns[Remain]"
-                      dataType="i4"
-                      name="Remain" />
-                    <externalMetadataColumn
-                      refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].ExternalColumns[RemainCTN]"
-                      dataType="i4"
-                      name="RemainCTN" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -932,43 +837,6 @@
                       dataType="i4"
                       lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Error Output].Columns[UnresCTN]"
                       name="UnresCTN" />
-                    <outputColumn
-                      refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Error Output].Columns[Book]"
-                      dataType="i4"
-                      lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Error Output].Columns[Book]"
-                      name="Book" />
-                    <outputColumn
-                      refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Error Output].Columns[BookCTN]"
-                      dataType="i4"
-                      lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Error Output].Columns[BookCTN]"
-                      name="BookCTN" />
-                    <outputColumn
-                      refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Error Output].Columns[SO]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Error Output].Columns[SO]"
-                      name="SO" />
-                    <outputColumn
-                      refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Error Output].Columns[DO]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Error Output].Columns[DO]"
-                      name="DO" />
-                    <outputColumn
-                      refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Error Output].Columns[Item]"
-                      dataType="i4"
-                      lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Error Output].Columns[Item]"
-                      name="Item" />
-                    <outputColumn
-                      refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Error Output].Columns[Remain]"
-                      dataType="i4"
-                      lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Error Output].Columns[Remain]"
-                      name="Remain" />
-                    <outputColumn
-                      refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Error Output].Columns[RemainCTN]"
-                      dataType="i4"
-                      lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Error Output].Columns[RemainCTN]"
-                      name="RemainCTN" />
                     <outputColumn
                       refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -1573,120 +1441,6 @@
                           name="NewSortKeyPosition">8</property>
                       </properties>
                     </inputColumn>
-                    <inputColumn
-                      refId="Package\Plan Table\Sort Table.Inputs[Sort Input].Columns[Book]"
-                      cachedDataType="i4"
-                      cachedName="Book"
-                      lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[Book]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Plan Table\Sort Table.Inputs[Sort Input].Columns[BookCTN]"
-                      cachedDataType="i4"
-                      cachedName="BookCTN"
-                      lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[BookCTN]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Plan Table\Sort Table.Inputs[Sort Input].Columns[SO]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="SO"
-                      lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[SO]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Plan Table\Sort Table.Inputs[Sort Input].Columns[DO]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="DO"
-                      lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[DO]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Plan Table\Sort Table.Inputs[Sort Input].Columns[Item]"
-                      cachedDataType="i4"
-                      cachedName="Item"
-                      lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[Item]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Plan Table\Sort Table.Inputs[Sort Input].Columns[Remain]"
-                      cachedDataType="i4"
-                      cachedName="Remain"
-                      lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[Remain]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Plan Table\Sort Table.Inputs[Sort Input].Columns[RemainCTN]"
-                      cachedDataType="i4"
-                      cachedName="RemainCTN"
-                      lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[RemainCTN]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1810,99 +1564,6 @@
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[UnresCTN]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Book]"
-                      dataType="i4"
-                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Book]"
-                      name="Book">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[Book]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[BookCTN]"
-                      dataType="i4"
-                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[BookCTN]"
-                      name="BookCTN">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[BookCTN]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[SO]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[SO]"
-                      name="SO">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[SO]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[DO]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[DO]"
-                      name="DO">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[DO]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Item]"
-                      dataType="i4"
-                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Item]"
-                      name="Item">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[Item]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Remain]"
-                      dataType="i4"
-                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Remain]"
-                      name="Remain">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[Remain]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[RemainCTN]"
-                      dataType="i4"
-                      lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[RemainCTN]"
-                      name="RemainCTN">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[RemainCTN]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -2741,207 +2402,65 @@ WHERE SyncDate = (
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="130,42"
-          Id="Package\Plan Table\Plan Table"
-          TopLeft="595.714285714286,18.5714285714286" />
-        <NodeLayout
           Size="132,42"
           Id="Package\Plan Table\STG_Stock"
           TopLeft="22.8571428571428,20" />
-        <NodeLayout
-          Size="123,42"
-          Id="Package\Plan Table\Sort STG"
-          TopLeft="140,92.8571428571429" />
-        <NodeLayout
-          Size="129,42"
-          Id="Package\Plan Table\Sort Table"
-          TopLeft="482.857142857143,92.8571428571429" />
-        <EdgeLayout
-          Id="Package\Plan Table.Paths[ADO NET Source Output]"
-          TopLeft="88.8571428571428,62">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="112.642857142857,30.8571428571429"
-              Start="0,0"
-              End="112.642857142857,23.3571428571429">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,11.4285714285714" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11.4285714285714"
-                    Point2="0,15.4285714285714"
-                    Point3="4,15.4285714285714" />
-                  <mssgle:LineSegment
-                    End="108.642857142857,15.4285714285714" />
-                  <mssgle:CubicBezierSegment
-                    Point1="108.642857142857,15.4285714285714"
-                    Point2="112.642857142857,15.4285714285714"
-                    Point3="112.642857142857,19.4285714285714" />
-                  <mssgle:LineSegment
-                    End="112.642857142857,23.3571428571429" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Plan Table.Paths[ADO NET Source Output1]"
-          TopLeft="660.714285714286,60.5714285714286">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-113.357142857143,32.2857142857143"
-              Start="0,0"
-              End="-113.357142857143,24.7857142857143">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,12.1428571428571" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.1428571428571"
-                    Point2="0,16.1428571428571"
-                    Point3="-4,16.1428571428571" />
-                  <mssgle:LineSegment
-                    End="-109.357142857143,16.1428571428571" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-109.357142857143,16.1428571428571"
-                    Point2="-113.357142857143,16.1428571428571"
-                    Point3="-113.357142857143,20.1428571428571" />
-                  <mssgle:LineSegment
-                    End="-113.357142857143,24.7857142857143" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="132,42"
-          Id="Package\Plan Table\Merge Join"
-          TopLeft="300,170" />
-        <EdgeLayout
-          Id="Package\Plan Table.Paths[Sort Output]"
-          TopLeft="201.5,134.857142857143">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="143.833333333333,35.1428571428572"
-              Start="0,0"
-              End="143.833333333333,27.6428571428572">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.8331907613345" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.8331907613345"
-                    Point2="0,20.8331907613345"
-                    Point3="4,20.8331907613345" />
-                  <mssgle:LineSegment
-                    End="139.833333333333,20.8331907613345" />
-                  <mssgle:CubicBezierSegment
-                    Point1="139.833333333333,20.8331907613345"
-                    Point2="143.833333333333,20.8331907613345"
-                    Point3="143.833333333333,24.8331907613345" />
-                  <mssgle:LineSegment
-                    End="143.833333333333,27.6428571428572" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Plan Table.Paths[Sort Output1]"
-          TopLeft="547.357142857143,134.857142857143">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-160.690476190476,35.1428571428572"
-              Start="0,0"
-              End="-160.690476190476,27.6428571428572">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.8331907613345" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.8331907613345"
-                    Point2="0,20.8331907613345"
-                    Point3="-4,20.8331907613345" />
-                  <mssgle:LineSegment
-                    End="-156.690476190476,20.8331907613345" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-156.690476190476,20.8331907613345"
-                    Point2="-160.690476190476,20.8331907613345"
-                    Point3="-160.690476190476,24.8331907613345" />
-                  <mssgle:LineSegment
-                    End="-160.690476190476,27.6428571428572" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="142,42"
-          Id="Package\Plan Table\Split Records"
-          TopLeft="424.285714285714,241.428571428571" />
-        <EdgeLayout
-          Id="Package\Plan Table.Paths[Merge Join Output]"
-          TopLeft="366,212">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="129.285714285714,29.4285714285714"
-              Start="0,0"
-              End="129.285714285714,21.9285714285714">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,10.7142857142857" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,10.7142857142857"
-                    Point2="0,14.7142857142857"
-                    Point3="4,14.7142857142857" />
-                  <mssgle:LineSegment
-                    End="125.285714285714,14.7142857142857" />
-                  <mssgle:CubicBezierSegment
-                    Point1="125.285714285714,14.7142857142857"
-                    Point2="129.285714285714,14.7142857142857"
-                    Point3="129.285714285714,18.7142857142857" />
-                  <mssgle:LineSegment
-                    End="129.285714285714,21.9285714285714" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
           Size="210,42"
           Id="Package\Plan Table\Insert Records (Plan Table)"
           TopLeft="54.2857142857143,335.714285714286" />
         <NodeLayout
+          Size="142,42"
+          Id="Package\Plan Table\Split Records"
+          TopLeft="424.285714285714,241.428571428571" />
+        <NodeLayout
           Size="216,42"
           Id="Package\Plan Table\Update Records (Plan Table)"
           TopLeft="588.571428571429,337.142857142857" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Plan Table\Plan Table"
+          TopLeft="595.714285714286,18.5714285714286" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\Plan Table\Sort STG"
+          TopLeft="140,92.8571428571429" />
+        <EdgeLayout
+          Id="Package\Plan Table.Paths[Update (Match)]"
+          TopLeft="517.619047619048,283.428571428571">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="178.952380952381,53.7142857142858"
+              Start="0,0"
+              End="178.952380952381,46.2142857142858">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.8448070035814" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.8448070035814"
+                    Point2="0,21.8448070035814"
+                    Point3="4,21.8448070035814" />
+                  <mssgle:LineSegment
+                    End="174.952380952381,21.8448070035814" />
+                  <mssgle:CubicBezierSegment
+                    Point1="174.952380952381,21.8448070035814"
+                    Point2="178.952380952381,21.8448070035814"
+                    Point3="178.952380952381,25.8448070035814" />
+                  <mssgle:LineSegment
+                    End="178.952380952381,46.2142857142858" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="54.6905068824405,26.8448070035814,69.5713671875,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Plan Table.Paths[Insert (Not Match)]"
           TopLeft="495.285714285714,283.428571428571">
@@ -2979,52 +2498,186 @@ WHERE SyncDate = (
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Plan Table.Paths[Update (Match)]"
-          TopLeft="517.619047619048,283.428571428571">
+          Id="Package\Plan Table.Paths[ADO NET Source Output]"
+          TopLeft="88.8571428571428,62">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="178.952380952381,53.7142857142858"
+              EndConnector="112.642857142857,30.8571428571429"
               Start="0,0"
-              End="178.952380952381,46.2142857142858">
+              End="112.642857142857,23.3571428571429">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.8448070035814" />
+                    End="0,11.4285714285714" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17.8448070035814"
-                    Point2="0,21.8448070035814"
-                    Point3="4,21.8448070035814" />
+                    Point1="0,11.4285714285714"
+                    Point2="0,15.4285714285714"
+                    Point3="4,15.4285714285714" />
                   <mssgle:LineSegment
-                    End="174.952380952381,21.8448070035814" />
+                    End="108.642857142857,15.4285714285714" />
                   <mssgle:CubicBezierSegment
-                    Point1="174.952380952381,21.8448070035814"
-                    Point2="178.952380952381,21.8448070035814"
-                    Point3="178.952380952381,25.8448070035814" />
+                    Point1="108.642857142857,15.4285714285714"
+                    Point2="112.642857142857,15.4285714285714"
+                    Point3="112.642857142857,19.4285714285714" />
                   <mssgle:LineSegment
-                    End="178.952380952381,46.2142857142858" />
+                    End="112.642857142857,23.3571428571429" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="54.6905068824405,26.8448070035814,69.5713671875,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="129,42"
+          Id="Package\Plan Table\Sort Table"
+          TopLeft="461,90" />
+        <NodeLayout
+          Size="132,42"
+          Id="Package\Plan Table\Merge Join"
+          TopLeft="295,169" />
+        <EdgeLayout
+          Id="Package\Plan Table.Paths[ADO NET Source Output1]"
+          TopLeft="660.714285714286,60.5714285714286">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-135.214285714286,29.4285714285714"
+              Start="0,0"
+              End="-135.214285714286,21.9285714285714">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.7142857142857" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.7142857142857"
+                    Point2="0,14.7142857142857"
+                    Point3="-4,14.7142857142857" />
+                  <mssgle:LineSegment
+                    End="-131.214285714286,14.7142857142857" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-131.214285714286,14.7142857142857"
+                    Point2="-135.214285714286,14.7142857142857"
+                    Point3="-135.214285714286,18.7142857142857" />
+                  <mssgle:LineSegment
+                    End="-135.214285714286,21.9285714285714" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Plan Table.Paths[Sort Output]"
+          TopLeft="201.5,134.857142857143">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="138.833333333333,34.1428571428571"
+              Start="0,0"
+              End="138.833333333333,26.6428571428571">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.240376390077" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.240376390077"
+                    Point2="0,20.240376390077"
+                    Point3="4,20.240376390077" />
+                  <mssgle:LineSegment
+                    End="134.833333333333,20.240376390077" />
+                  <mssgle:CubicBezierSegment
+                    Point1="134.833333333333,20.240376390077"
+                    Point2="138.833333333333,20.240376390077"
+                    Point3="138.833333333333,24.240376390077" />
+                  <mssgle:LineSegment
+                    End="138.833333333333,26.6428571428571" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Plan Table.Paths[Sort Output1]"
+          TopLeft="525.5,132">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-143.833333333333,37"
+              Start="0,0"
+              End="-143.833333333333,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.9341317365269" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.9341317365269"
+                    Point2="0,21.9341317365269"
+                    Point3="-4,21.9341317365269" />
+                  <mssgle:LineSegment
+                    End="-139.833333333333,21.9341317365269" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-139.833333333333,21.9341317365269"
+                    Point2="-143.833333333333,21.9341317365269"
+                    Point3="-143.833333333333,25.9341317365269" />
+                  <mssgle:LineSegment
+                    End="-143.833333333333,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Plan Table.Paths[Merge Join Output]"
+          TopLeft="361,211">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="134.285714285714,30.428571428571"
+              Start="0,0"
+              End="134.285714285714,22.928571428571">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.2142857142855" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.2142857142855"
+                    Point2="0,15.2142857142855"
+                    Point3="4,15.2142857142855" />
+                  <mssgle:LineSegment
+                    End="130.285714285714,15.2142857142855" />
+                  <mssgle:CubicBezierSegment
+                    Point1="130.285714285714,15.2142857142855"
+                    Point2="134.285714285714,15.2142857142855"
+                    Point3="134.285714285714,19.2142857142855" />
+                  <mssgle:LineSegment
+                    End="134.285714285714,22.928571428571" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Plan Table\Plan Table">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Plan Table\STG_Stock">
     <Properties>
@@ -3035,6 +2688,14 @@ WHERE SyncDate = (
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Plan Table\Insert Records (Plan Table)">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Plan Table\Plan Table">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

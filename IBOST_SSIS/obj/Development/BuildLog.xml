@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>IBOST_SSIS</Name>
-    <LastWriteTime>2018-08-14T08:36:48.3188785Z</LastWriteTime>
+    <LastWriteTime>2018-08-15T01:50:09.350447Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -23,7 +23,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>STG_Stock.dtsx</Name>
-      <LastWriteTime>2018-08-07T08:17:23.6868944Z</LastWriteTime>
+      <LastWriteTime>2018-08-15T02:11:49.5124096Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -43,22 +43,17 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>StockTable.dtsx</Name>
-      <LastWriteTime>2018-08-07T08:45:17.2339037Z</LastWriteTime>
+      <LastWriteTime>2018-08-15T02:16:52.6732886Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>PlanTable.dtsx</Name>
-      <LastWriteTime>2018-08-07T09:07:09.4106871Z</LastWriteTime>
+      <LastWriteTime>2018-08-15T02:23:08.9356078Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DOShipment.dtsx</Name>
       <LastWriteTime>2018-08-08T09:50:43.6196488Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>testsum.dtsx</Name>
-      <LastWriteTime>2018-08-14T09:59:02.759204Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

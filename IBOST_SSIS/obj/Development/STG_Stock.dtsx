@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="STG_Stock"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{7A30C05D-4D97-41BF-A91C-A154357BC110}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{E602C707-A109-4C65-B0EF-C4DC73391DCE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB+YaA15n4o/jFogmLs1kR0dQHgPzfz/J5CuSLM55s3UQAAAAAOgAAAAAIAACAAAAAewrhRWcQwTMUErUaLYut8yhWuK+GV6Bd8qh9ulfL65CAAAAAQ7tlQKHbRP9aPKD7gYpkPBGUl5lKDsKaaL0qU0HWtxUAAAADDBHV8pIAr3yzYXe1+xrlRedlg9QDCt7j8HJ3rdSGL8e+U2yLINE2tZKX51gwKFbOONYpfpPjajvtXcnd9RtRG</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD6fpPJs06raYr6jnCtZQDp0232ohKiQscYQaOS3bbkZwAAAAAOgAAAAAIAACAAAAATA4xTDaLCxZMJJ7g9HFV9v3UcQre10pp7iuyZEgHTjiAAAABm9qBUi7mArdm5ZJJF4HfVRVnmNxNoExyuyG69AiPgjkAAAADXMmaq9sHdZQivF3vlfYE9IwkdxpUut9CLZBN7aKZkM+AXDKEX2sPo1z77QpsfpCm1MJ8aBx/Ehy5DvGYcBX8R</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -459,7 +459,7 @@
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[LOT]"
-                      length="50"
+                      length="200"
                       lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[LOT]"
                       name="LOT"
                       truncationRowDisposition="FailComponent">
@@ -629,7 +629,7 @@
                       refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[LOT]"
                       codePage="65001"
                       dataType="str"
-                      length="50"
+                      length="200"
                       name="LOT" />
                     <externalMetadataColumn
                       refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[PLAN DATE]"
@@ -834,10 +834,16 @@
                       refId="Package\STG Stock\STG_Stock.Inputs[ADO NET Destination Input].Columns[LOT]"
                       cachedCodepage="65001"
                       cachedDataType="str"
-                      cachedLength="50"
+                      cachedLength="200"
                       cachedName="LOT"
                       externalMetadataColumnId="Package\STG Stock\STG_Stock.Inputs[ADO NET Destination Input].ExternalColumns[Lot]"
                       lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[LOT]" />
+                    <inputColumn
+                      refId="Package\STG Stock\STG_Stock.Inputs[ADO NET Destination Input].Columns[UNRES]"
+                      cachedDataType="i4"
+                      cachedName="UNRES"
+                      externalMetadataColumnId="Package\STG Stock\STG_Stock.Inputs[ADO NET Destination Input].ExternalColumns[Unres]"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[UNRES]" />
                     <inputColumn
                       refId="Package\STG Stock\STG_Stock.Inputs[ADO NET Destination Input].Columns[QI]"
                       cachedDataType="i4"
@@ -872,12 +878,6 @@
                       cachedName="PLAN DATE"
                       externalMetadataColumnId="Package\STG Stock\STG_Stock.Inputs[ADO NET Destination Input].ExternalColumns[PlanDate]"
                       lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[PLAN DATE]" />
-                    <inputColumn
-                      refId="Package\STG Stock\STG_Stock.Inputs[ADO NET Destination Input].Columns[UNRES]"
-                      cachedDataType="i4"
-                      cachedName="UNRES"
-                      externalMetadataColumnId="Package\STG Stock\STG_Stock.Inputs[ADO NET Destination Input].ExternalColumns[Unres]"
-                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[UNRES]" />
                     <inputColumn
                       refId="Package\STG Stock\STG_Stock.Inputs[ADO NET Destination Input].Columns[UNRES CTN]"
                       cachedDataType="i4"
@@ -927,7 +927,7 @@
                     <externalMetadataColumn
                       refId="Package\STG Stock\STG_Stock.Inputs[ADO NET Destination Input].ExternalColumns[Lot]"
                       dataType="wstr"
-                      length="100"
+                      length="200"
                       name="Lot" />
                     <externalMetadataColumn
                       refId="Package\STG Stock\STG_Stock.Inputs[ADO NET Destination Input].ExternalColumns[PlanDate]"
