@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="STG_SOHeader"
   DTS:PackageType="5"
-  DTS:VersionBuild="52"
-  DTS:VersionGUID="{9F5C9872-41D2-493A-97C1-24194C2658A3}">
+  DTS:VersionBuild="55"
+  DTS:VersionGUID="{A676DF76-5468-4A6C-A448-69CDC164D01A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAn1tZMrMbUZ0BUmehPbHJX3lcDKYT6d0oP2kSSOQRDTAAAAAAOgAAAAAIAACAAAADyLMXGTwttgl5XOMKd64dTbJy+GETz2JIUu/MZaCXm5CAAAAAKnNSv4vwZ1IXLTVUalonL/f/GPAKYXFeXPiUZBB0rw0AAAABBi5ZEA5SMsmL3oZnAAk4zTaRRxTGhJyLK5lXmi1nPYzxzQYRWw7NwWZTOI98+76q+RVhRp99yn6gvJN6dPbXd</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACkLVJYW1z0W2cxOjeywJ6uJ2TWDzNWAKM7poU9tNVA9wAAAAAOgAAAAAIAACAAAACM9RJoJlHUY6hOz/1qyUvN3cd8lsH+cl8bu65Ibp0dyCAAAADjsjyCRlAWG2PvGa7w0QUvFr4fIv0d/zdHtgOtuVldeUAAAADZ4W8UjjAGZ+Jj1CVIL6Wurjklt0OlO1q+EDLU7QAPYwpQZ1dyn/EShC+M45oVlYqBTzLTSGcKb5GCBhY2VVSM</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADsG3f4Dr4CQSsPCf7q17Is8XLG3MXwPvlJSVVC2hUmRAAAAAAOgAAAAAIAACAAAAAAzZYNDWNZyjnCNSr87yrEmRNvUFQcRBsTxE2RmKOYgSAAAAAtYzZNV5blXED4ZaVJwnrCf1CbJhM+8LOjjt9GR05o2UAAAAA3Hg9pCN7d7F+SKbFn4rgrfD7zg2kbZfeDWuv5t3qiaCcI7zurXYLw9gcpfud0zt6asPnvftt00UkSTjAxBrcZ</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACICxtQyCa/ufQNc6NMJMJo4kNMPhhXtRyFh81jvx9cUgAAAAAOgAAAAAIAACAAAACYSslpjAaKnwgCoYAOgBo1RME1pnv+BuWhzQKXs5eY3CAAAACwLBtMhZyP+gLAUkhFauu9KfR0JqD7pGoJGqzIxQixkEAAAAAX9Bo11gueCb9cpkNvulrj1rkrYlwIbTDPSwLt9o6pPRnqfywxP+0XKyvB4Ptk089lVd1srPazZ3BirGv4ORC1</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -391,6 +391,192 @@
               DTS:TextQualified="True"
               DTS:ObjectName="TOTAL FOB"
               DTS:DTSID="{F8B257DA-7ABA-4E46-91F0-1A7C59DCBEED}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SO_HEADER_01]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{5BFBD236-8300-4151-9D5D-AD64738D4B5E}"
+      DTS:ObjectName="SO_HEADER_01">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1054"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\Trainee\Desktop\Sample Data\SO_HEADER.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SALES ORG"
+              DTS:DTSID="{05D1141C-F274-4FF1-BB28-02D7182D3187}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LOAD DATE"
+              DTS:DTSID="{BC30AA38-60CD-4BEC-B6E9-939174879831}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ORDER TYPE"
+              DTS:DTSID="{E7CDFADB-85E6-4591-BA00-4A523F8E1802}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ORDER DATE"
+              DTS:DTSID="{FB4EDF96-8B94-4706-A30D-4E723458F3E8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PO NO "
+              DTS:DTSID="{B7A90CEA-79D8-4F4D-AB4E-E7D3301F3D70}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PO DATE"
+              DTS:DTSID="{C708E9C3-2D3E-42BE-9852-EE905F542B63}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="INV NO "
+              DTS:DTSID="{A28E373B-E586-4F03-A153-E086F8A74772}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SO NO "
+              DTS:DTSID="{F7ECAC55-F09C-4485-9A11-E86760D5B095}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SOLD-TO"
+              DTS:DTSID="{8B624800-787E-4BCF-B088-C0A0EAE28149}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SOLD-TO NAME"
+              DTS:DTSID="{89AE328E-B31C-4266-985B-1D286D7044A0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SHIP-TO"
+              DTS:DTSID="{BB74CE02-1C7B-4FA0-AC9E-D187B63584B3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SHIP-TO NAME"
+              DTS:DTSID="{52E82C7E-66B4-405B-98A4-7D16DE46C4E0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DESTINATION PORT"
+              DTS:DTSID="{B15DDA59-A0C4-48E4-BB8F-67FCD7C8E72B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PAYMENT TERMS"
+              DTS:DTSID="{EBC29E5C-9425-4056-9895-877DADD31B84}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="INCOTERMS"
+              DTS:DTSID="{49B27E97-BF50-40FA-8B0B-B2E062838DD7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CURR"
+              DTS:DTSID="{F18A44CA-5C91-48D7-AF29-2DC8E2CB4042}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EX RATE"
+              DTS:DTSID="{D717D8D1-7EE6-43CC-971A-33646DE78AAF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NET SALE"
+              DTS:DTSID="{CFE64270-5F0D-4C82-81E8-4B2EA64B095D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NET INVOICE"
+              DTS:DTSID="{B2B25EFB-70FD-49E1-BF25-1BAEBF292F30}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -781,8 +967,8 @@
               <connections>
                 <connection
                   refId="Package\STG_SOHeader\CSV SOHeader.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[SO_HEADER]"
-                  connectionManagerRefId="Package.ConnectionManagers[SO_HEADER]"
+                  connectionManagerID="Package.ConnectionManagers[SO_HEADER_01]"
+                  connectionManagerRefId="Package.ConnectionManagers[SO_HEADER_01]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -898,7 +1084,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\STG_SOHeader\CSV SOHeader.Outputs[Flat File Source Output].Columns[PO DATE]"
-                      codePage="874"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -1159,13 +1345,33 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\STG_SOHeader\CSV SOHeader.Outputs[Flat File Source Output].Columns[TOTAL FOB]"
+                      refId="Package\STG_SOHeader\CSV SOHeader.Outputs[Flat File Source Output].Columns[NET SALE]"
                       dataType="r4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\STG_SOHeader\CSV SOHeader.Outputs[Flat File Source Output].ExternalColumns[TOTAL FOB]"
-                      lineageId="Package\STG_SOHeader\CSV SOHeader.Outputs[Flat File Source Output].Columns[TOTAL FOB]"
-                      name="TOTAL FOB"
+                      externalMetadataColumnId="Package\STG_SOHeader\CSV SOHeader.Outputs[Flat File Source Output].ExternalColumns[NET SALE]"
+                      lineageId="Package\STG_SOHeader\CSV SOHeader.Outputs[Flat File Source Output].Columns[NET SALE]"
+                      name="NET SALE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\STG_SOHeader\CSV SOHeader.Outputs[Flat File Source Output].Columns[NET INVOICE]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG_SOHeader\CSV SOHeader.Outputs[Flat File Source Output].ExternalColumns[NET INVOICE]"
+                      lineageId="Package\STG_SOHeader\CSV SOHeader.Outputs[Flat File Source Output].Columns[NET INVOICE]"
+                      name="NET INVOICE"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1209,7 +1415,7 @@
                       name="PO NO " />
                     <externalMetadataColumn
                       refId="Package\STG_SOHeader\CSV SOHeader.Outputs[Flat File Source Output].ExternalColumns[PO DATE]"
-                      codePage="874"
+                      codePage="65001"
                       dataType="str"
                       length="50"
                       name="PO DATE" />
@@ -1278,9 +1484,13 @@
                       dataType="r4"
                       name="EX RATE" />
                     <externalMetadataColumn
-                      refId="Package\STG_SOHeader\CSV SOHeader.Outputs[Flat File Source Output].ExternalColumns[TOTAL FOB]"
+                      refId="Package\STG_SOHeader\CSV SOHeader.Outputs[Flat File Source Output].ExternalColumns[NET SALE]"
                       dataType="r4"
-                      name="TOTAL FOB" />
+                      name="NET SALE" />
+                    <externalMetadataColumn
+                      refId="Package\STG_SOHeader\CSV SOHeader.Outputs[Flat File Source Output].ExternalColumns[NET INVOICE]"
+                      dataType="r4"
+                      name="NET INVOICE" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1478,7 +1688,7 @@
                       lineageId="Package\STG_SOHeader\CSV SOHeader.Outputs[Flat File Source Output].Columns[PO NO ]" />
                     <inputColumn
                       refId="Package\STG_SOHeader\STG_SOHeader.Inputs[ADO NET Destination Input].Columns[PO DATE]"
-                      cachedCodepage="874"
+                      cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="PO DATE"
@@ -1571,11 +1781,17 @@
                       externalMetadataColumnId="Package\STG_SOHeader\STG_SOHeader.Inputs[ADO NET Destination Input].ExternalColumns[EXRate]"
                       lineageId="Package\STG_SOHeader\CSV SOHeader.Outputs[Flat File Source Output].Columns[EX RATE]" />
                     <inputColumn
-                      refId="Package\STG_SOHeader\STG_SOHeader.Inputs[ADO NET Destination Input].Columns[TOTAL FOB]"
+                      refId="Package\STG_SOHeader\STG_SOHeader.Inputs[ADO NET Destination Input].Columns[NET SALE]"
                       cachedDataType="r4"
-                      cachedName="TOTAL FOB"
-                      externalMetadataColumnId="Package\STG_SOHeader\STG_SOHeader.Inputs[ADO NET Destination Input].ExternalColumns[TotalFOBSO]"
-                      lineageId="Package\STG_SOHeader\CSV SOHeader.Outputs[Flat File Source Output].Columns[TOTAL FOB]" />
+                      cachedName="NET SALE"
+                      externalMetadataColumnId="Package\STG_SOHeader\STG_SOHeader.Inputs[ADO NET Destination Input].ExternalColumns[TotalNetSales]"
+                      lineageId="Package\STG_SOHeader\CSV SOHeader.Outputs[Flat File Source Output].Columns[NET SALE]" />
+                    <inputColumn
+                      refId="Package\STG_SOHeader\STG_SOHeader.Inputs[ADO NET Destination Input].Columns[NET INVOICE]"
+                      cachedDataType="r4"
+                      cachedName="NET INVOICE"
+                      externalMetadataColumnId="Package\STG_SOHeader\STG_SOHeader.Inputs[ADO NET Destination Input].ExternalColumns[TotalNetInvoice]"
+                      lineageId="Package\STG_SOHeader\CSV SOHeader.Outputs[Flat File Source Output].Columns[NET INVOICE]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1662,9 +1878,13 @@
                       dataType="r8"
                       name="EXRate" />
                     <externalMetadataColumn
-                      refId="Package\STG_SOHeader\STG_SOHeader.Inputs[ADO NET Destination Input].ExternalColumns[TotalFOBSO]"
+                      refId="Package\STG_SOHeader\STG_SOHeader.Inputs[ADO NET Destination Input].ExternalColumns[TotalNetSales]"
                       dataType="r8"
-                      name="TotalFOBSO" />
+                      name="TotalNetSales" />
+                    <externalMetadataColumn
+                      refId="Package\STG_SOHeader\STG_SOHeader.Inputs[ADO NET Destination Input].ExternalColumns[TotalNetInvoice]"
+                      dataType="r8"
+                      name="TotalNetInvoice" />
                     <externalMetadataColumn
                       refId="Package\STG_SOHeader\STG_SOHeader.Inputs[ADO NET Destination Input].ExternalColumns[SyncDate]"
                       dataType="dbTimeStamp"
@@ -1737,16 +1957,16 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="153,42"
-          Id="Package\STG_SOHeader"
-          TopLeft="214.5,58.6666666666666" />
-        <NodeLayout
           Size="225,42"
           Id="Package\Delete Older STG Than 7 Days"
-          TopLeft="385.166666666667,179.5" />
+          TopLeft="199.666666666667,153" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\STG_SOHeader"
+          TopLeft="29,32.1666666666666" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="291,100.666666666667">
+          TopLeft="105.5,74.166666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"

@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="STG_Customer"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{5F9ED1D4-9685-4E60-AEBE-D7AA08093E0E}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{A6E59797-DF7E-4210-BC54-9BB712FF856F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB3SCLlRnbdHyMrtUQsvS7qDTzqvxaR/vyNXqd7oTlEeQAAAAAOgAAAAAIAACAAAAABGXcqgVfVSDhw6rxNRIt1wo+5Bm4mpJ1roFPXXzwdgyAAAAAsLiVaGqrcZWV3FZFcpJbOShJ+9xk4h4H7413HssrwqkAAAACeoE0YRC1/TUfVI9TnurhTibI1Bp1+0udGvk6TeIMt1U0t9U7sqs2qNGx7TY0LslkLjKlfMk6prgFpUMW7I/Vl</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAzmCjjOqPP+MZqurkujXK/mK0ro9FTDoEKiNb89wA1nwAAAAAOgAAAAAIAACAAAABKOCZz/tQbTKr+6avC60GBk27M/1UtHhJKpVaJNgaJtSAAAAA4J9JvVelOiNH07Ksni33fWmqXUnDVHAdfbiMlLJTvNEAAAADJxqDQ2cWM13M8NHoCeo/jzQsXZ+Kw+G6NIOTg5yGEvd8qd4aOSfYZKl1JHD4XflrEDZMD9df9pF3JmMU/Dggc</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACB2gFh5L/D6eBYMwOkzN1G8hwcHWSztFXvOD9I1v2CZwAAAAAOgAAAAAIAACAAAADBpEpT1B36BIbvAHZnDad5C41ySttoSViDSCJVC0pzuCAAAAAy/mbqx0H52oAVF11ddpvlt868CI3uXukVw6zoBRZvjEAAAAALm1SsESS9QoBTXP2UOo4HEuGH7J21o8MKcJf4rb+nFqK1+Oih62UwAsfRza9/iRddHjW1X2N88H2/Fkv3UY6n</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACYmTPuR3llyY/TNisMVNOzJPFvv1T6WXMn0k/HDoG/SAAAAAAOgAAAAAIAACAAAACSnAYFcmiCom9DgWmjtOl5vdbKHs97tg4BMOz6kuuZayAAAACSPtKk+eCvRFMuqA8YBUKXKi+kh/iV3+JxDhlpoT16xUAAAACo0UFP+4WQdMJwuw6M12qqP7n1EJjixY4X0VpR6EyyYrdUKhz2mL6lfeYZXpHS6dWmq70jh7QL+wG6SCz4+UpS</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -57,7 +57,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACJhlRMuG/TRdRRkD9TCnfnlSOy1EJi3tfZ2Ka1nuCjKQAAAAAOgAAAAAIAACAAAADhRzXUtay7Y0ovp2DtuD2GM5rKoQrVrT4sLD2KGCrGuSAAAABSugh6nb9pRPgpjRfrk0yiscvKPi7aPHzERErMOVh00EAAAAC5WVq7ZACo5GAfr2320ba0u86fSp/0AzID8net1ixZ/lFASl/pn8IiTS1x6E1krrQy+WJurorYmC+YAal1uONY</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADVivoMLAtch5ZlHwWzn4xlwnHzTgdkcZFH6O6ABsphVwAAAAAOgAAAAAIAACAAAACG8MCii1+sEHrt/wr7jSpGkFEUchB1Wi9sceXrX7mGTCAAAADX3fnNbnL1IBR8lu6Qgdgyife1PfHa0+SUdx9fqoCdOEAAAABAk6q0iu89xhEPuI5YNqStePelHmqjUS+o73CRmv9U47X282Oeu0yGdVUYXxREfiP8liJSEJsnKDDD9ecV5g3a</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -223,6 +223,23 @@
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Delete Older STG Than 7 Days"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{118b4a17-0d3c-452b-bb93-b78ece72f154}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Delete Older STG Than 7 Days"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C30C18BD-A555-4DAE-8894-93BE324590CF}"
+          SQLTask:SqlStatementSource="DELETE&#xA; FROM [IBOrderTracking].[dbo].[STG_Customer]&#xA; WHERE [SyncDate] &lt; DATEADD(dd,-7,GETDATE())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\STG Customer"
       DTS:CreationName="Microsoft.Pipeline"
@@ -643,6 +660,16 @@
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{C76031B3-DAD6-432B-8D49-804731327CE4}"
+      DTS:From="Package\STG Customer"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Delete Older STG Than 7 Days" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -654,53 +681,41 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="149,42"
           Id="Package\STG Customer"
-          TopLeft="427,115" />
-      </GraphLayout>
-    </LayoutInfo>
-  </Package>
-  <TaskHost
-    design-time-name="Package\STG Customer">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+          TopLeft="45,36" />
         <NodeLayout
-          Size="156,42"
-          Id="Package\STG Customer\Derived Column"
-          TopLeft="316,142" />
-        <NodeLayout
-          Size="151,42"
-          Id="Package\STG Customer\STG_Customer"
-          TopLeft="449,251" />
+          Size="225,42"
+          Id="Package\Delete Older STG Than 7 Days"
+          TopLeft="309,154" />
         <EdgeLayout
-          Id="Package\STG Customer.Paths[Derived Column Output]"
-          TopLeft="394,184">
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="119.5,78">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="130.5,67"
+              EndConnector="302,76"
               Start="0,0"
-              End="130.5,59.5">
+              End="302,68.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.5" />
+                    End="0,34" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,29.5"
-                    Point2="0,33.5"
-                    Point3="4,33.5" />
+                    Point1="0,34"
+                    Point2="0,38"
+                    Point3="4,38" />
                   <mssgle:LineSegment
-                    End="126.5,33.5" />
+                    End="298,38" />
                   <mssgle:CubicBezierSegment
-                    Point1="126.5,33.5"
-                    Point2="130.5,33.5"
-                    Point3="130.5,37.5" />
+                    Point1="298,38"
+                    Point2="302,38"
+                    Point3="302,42" />
                   <mssgle:LineSegment
-                    End="130.5,59.5" />
+                    End="302,68.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -709,10 +724,26 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\STG Customer">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="156,42"
+          Id="Package\STG Customer\Derived Column"
+          TopLeft="316,142" />
         <NodeLayout
           Size="148,42"
           Id="Package\STG Customer\CSV Customer"
           TopLeft="194,29" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\STG Customer\STG_Customer"
+          TopLeft="449,251" />
         <EdgeLayout
           Id="Package\STG Customer.Paths[Flat File Source Output]"
           TopLeft="268,71">
@@ -744,7 +775,45 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\STG Customer.Paths[Derived Column Output]"
+          TopLeft="394,184">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="130.5,67"
+              Start="0,0"
+              End="130.5,59.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.5"
+                    Point2="0,33.5"
+                    Point3="4,33.5" />
+                  <mssgle:LineSegment
+                    End="126.5,33.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="126.5,33.5"
+                    Point2="130.5,33.5"
+                    Point3="130.5,37.5" />
+                  <mssgle:LineSegment
+                    End="130.5,59.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

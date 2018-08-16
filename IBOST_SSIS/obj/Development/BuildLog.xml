@@ -2,28 +2,28 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>IBOST_SSIS</Name>
-    <LastWriteTime>2018-08-15T09:27:07.8237258Z</LastWriteTime>
+    <LastWriteTime>2018-08-16T08:46:47.3952448Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>STG_Customer.dtsx</Name>
-      <LastWriteTime>2018-08-03T06:45:30.6981813Z</LastWriteTime>
+      <LastWriteTime>2018-08-16T09:30:25.7630069Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>STG_SOHeader.dtsx</Name>
-      <LastWriteTime>2018-08-09T08:41:53.6469732Z</LastWriteTime>
+      <LastWriteTime>2018-08-16T09:28:11.263314Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>STG_SODetail.dtsx</Name>
-      <LastWriteTime>2018-08-15T09:53:52.1152784Z</LastWriteTime>
+      <LastWriteTime>2018-08-16T09:29:47.1838003Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>STG_Stock.dtsx</Name>
-      <LastWriteTime>2018-08-16T01:00:20.1878456Z</LastWriteTime>
+      <LastWriteTime>2018-08-16T09:29:07.6765406Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -38,7 +38,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>SOHeader.dtsx</Name>
-      <LastWriteTime>2018-08-09T09:39:37.393825Z</LastWriteTime>
+      <LastWriteTime>2018-08-16T09:26:22.9911212Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
