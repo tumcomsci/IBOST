@@ -236,7 +236,7 @@
                                                     <div class="col-md-2 col-sm-6">
                                                         <div class="form-group">
                                                             <label>TTSlip</label>
-                                                            <input id="DateTTSlip" readonly="readonly" />
+                                                            <input type="date" class="form-control" /><%--id="DateTTSlip"--%>
                                                             <input id="txtTTSlip" runat="server" class="form-control" name="" visible="false" />
 
                                                         </div>
@@ -245,7 +245,7 @@
                                                     <div class="col-md-2 col-sm-6">
                                                         <div class="form-group">
                                                             <label>LCSlip</label>
-                                                            <input id="DateLCSlip" readonly="readonly" />
+                                                            <input type="date" class="form-control"/><%--id="DateLCSlip"--%>
                                                             <input id="txtLCSlip" runat="server" class="form-control" visible="false" />
 
                                                         </div>
@@ -254,7 +254,7 @@
                                                     <div class="col-md-2 col-sm-6">
                                                         <div class="form-group">
                                                             <label>LC</label>
-                                                            <input id="DateLC" readonly="readonly" />
+                                                            <input type="date" class="form-control" /><%--id="DateLC"--%>
                                                             <input id="txtLC" runat="server" class="form-control" visible="false" />
                                                         </div>
                                                     </div>
@@ -262,7 +262,7 @@
                                                     <div class="col-md-2 col-sm-6">
                                                         <div class="form-group">
                                                             <label>TT</label>
-                                                            <input id="DateTT" readonly="readonly" />
+                                                            <input type="date" class="form-control"/><%--id="DateTT" --%>
                                                             <input id="txtTT" runat="server" class="form-control" visible="false" />
                                                         </div>
                                                     </div>
@@ -270,7 +270,7 @@
                                                     <div class="col-md-2 col-sm-6">
                                                         <div class="form-group">
                                                             <label>ETD</label>
-                                                            <input id="DateETD" readonly="readonly" />
+                                                            <input type="date" class="form-control"/><%-- id="DateETD"--%>
                                                             <input id="txtETD" runat="server" class="form-control" visible="false" />
                                                         </div>
                                                     </div>
@@ -278,7 +278,7 @@
                                                     <div class="col-md-2 col-sm-6">
                                                         <div class="form-group">
                                                             <label>ETA</label>
-                                                            <input id="DateETA" readonly="readonly" />
+                                                            <input type="date" class="form-control" /><%--id="DateETA"--%>
                                                             <input id="txtETA" runat="server" class="form-control" visible="false" />
                                                         </div>
                                                     </div>
@@ -288,8 +288,8 @@
                                                     <div class="col-md-2 col-sm-6">
                                                         <div class="form-group">
                                                             <label>DocDate</label>
-                                                            <input type="text" class="form-control" id="DateDocDate" pattern="" />
-                                                            <input id="txtDocDate" runat="server" class="form-control" visible="false" />
+                                                            <input type="date" class="form-control" /><%--id="DateDocDate"--%>
+                                                            <input id="txtDocDate" runat="server" class="form-control" visible="false"/>
                                                         </div>
                                                     </div>
 
@@ -849,7 +849,7 @@
                     $('#DateDocDate').datepicker({
                         format: 'dd/mm/yyyy',
                         uiLibrary: 'bootstrap',
-                        text: 'number'
+                        type: 'number'
                     });
                 </script>
                 <!--calendar-->
