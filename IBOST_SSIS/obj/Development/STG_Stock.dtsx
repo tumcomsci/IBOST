@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="STG_Stock"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{E602C707-A109-4C65-B0EF-C4DC73391DCE}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{1D47FE73-7A62-4F9F-9067-FBC2ABBE6F45}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD6fpPJs06raYr6jnCtZQDp0232ohKiQscYQaOS3bbkZwAAAAAOgAAAAAIAACAAAAATA4xTDaLCxZMJJ7g9HFV9v3UcQre10pp7iuyZEgHTjiAAAABm9qBUi7mArdm5ZJJF4HfVRVnmNxNoExyuyG69AiPgjkAAAADXMmaq9sHdZQivF3vlfYE9IwkdxpUut9CLZBN7aKZkM+AXDKEX2sPo1z77QpsfpCm1MJ8aBx/Ehy5DvGYcBX8R</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAe1IQRZcq6orUbECE6iO3TmYScfzPlhnkgjDpErSfGlgAAAAAOgAAAAAIAACAAAADc6awR3l7Dg1WPsgWMyDd46EEIzOafMNI1+hEnC6q+XiAAAAAGT8PnkLhiaCuz51s5G+W+i8Htqsf4NIEDp/cmU3zQ50AAAACvMLgploLb1MdKu75kluhcXKqwgGnibWJFEdiGrmxb1ivLsgQGsPJgQfvVyxzR1W0Gd3GodlbN48JfetRCQqh9</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -370,10 +370,12 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[MATERIAL]"
-                      dataType="i4"
+                      codePage="874"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[MATERIAL]"
+                      length="50"
                       lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[MATERIAL]"
                       name="MATERIAL"
                       truncationRowDisposition="FailComponent">
@@ -607,7 +609,9 @@
                       name="PLANT" />
                     <externalMetadataColumn
                       refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[MATERIAL]"
-                      dataType="i4"
+                      codePage="874"
+                      dataType="str"
+                      length="50"
                       name="MATERIAL" />
                     <externalMetadataColumn
                       refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[UM]"
@@ -820,7 +824,9 @@
                       lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[PLANT]" />
                     <inputColumn
                       refId="Package\STG Stock\STG_Stock.Inputs[ADO NET Destination Input].Columns[MATERIAL]"
-                      cachedDataType="i4"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="MATERIAL"
                       externalMetadataColumnId="Package\STG Stock\STG_Stock.Inputs[ADO NET Destination Input].ExternalColumns[Material]"
                       lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[MATERIAL]" />
@@ -908,7 +914,8 @@
                       name="Plant" />
                     <externalMetadataColumn
                       refId="Package\STG Stock\STG_Stock.Inputs[ADO NET Destination Input].ExternalColumns[Material]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="50"
                       name="Material" />
                     <externalMetadataColumn
                       refId="Package\STG Stock\STG_Stock.Inputs[ADO NET Destination Input].ExternalColumns[UM]"

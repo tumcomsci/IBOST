@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="StockTable"
   DTS:PackageType="5"
-  DTS:VersionBuild="20"
-  DTS:VersionGUID="{D88DD8E1-FAA8-476C-B7E1-F9D2C834A77A}">
+  DTS:VersionBuild="22"
+  DTS:VersionGUID="{4CE318D0-37FC-4840-83AB-8DC3595449CD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB/5jbJr+sFNjjNOEbGyfe046EMvwNc894XO9v/p19lmQAAAAAOgAAAAAIAACAAAACIlb3V4saQHMMh+jdXZtsSerFWmqNZ5ZkqswomgRnhwCAAAACWEFlJsqyOuwFyoZoUMAh9F+Kyy9Ylkwk1C02Qf8ISNkAAAABLQ08FHvDAzSEGh4ALP+BNA5JrHDdP9eZMAe41mhoubTl534JTWxAONV61tMXd2Oa5hu2XDpnsFuwPbInda35H</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADACit4nB0/FIIiaV04lmT3yyE5QbOdDgt71C2dgK182wAAAAAOgAAAAAIAACAAAAA9Gp9fPh0Hbu7hi9pCYhw/Y18yswyt/+D8Xw2IAPds7iAAAACHod18pWENPvuC5idMLXIEDHogJh8+ktxu/AjXTCHiB0AAAADsHKz2rAnqWVTdNYle7JFK65Jtn/lZULlM5nBbocFqMVbiEsPzZmr/mA8yK5N7fSkW46GfCs1zRz1eO68FoYKN</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -107,7 +107,8 @@
                       lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Plant]" />
                     <inputColumn
                       refId="Package\Stock Table\Insert Records (Stock Table).Inputs[ADO NET Destination Input].Columns[Material]"
-                      cachedDataType="i4"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Material"
                       cachedSortKeyPosition="2"
                       externalMetadataColumnId="Package\Stock Table\Insert Records (Stock Table).Inputs[ADO NET Destination Input].ExternalColumns[Material]"
@@ -123,7 +124,7 @@
                     <inputColumn
                       refId="Package\Stock Table\Insert Records (Stock Table).Inputs[ADO NET Destination Input].Columns[Lot]"
                       cachedDataType="wstr"
-                      cachedLength="100"
+                      cachedLength="200"
                       cachedName="Lot"
                       cachedSortKeyPosition="4"
                       externalMetadataColumnId="Package\Stock Table\Insert Records (Stock Table).Inputs[ADO NET Destination Input].ExternalColumns[Lot]"
@@ -175,7 +176,8 @@
                       name="Plant" />
                     <externalMetadataColumn
                       refId="Package\Stock Table\Insert Records (Stock Table).Inputs[ADO NET Destination Input].ExternalColumns[Material]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="50"
                       name="Material" />
                     <externalMetadataColumn
                       refId="Package\Stock Table\Insert Records (Stock Table).Inputs[ADO NET Destination Input].ExternalColumns[UM]"
@@ -281,7 +283,8 @@
                       lineageId="Package\Stock Table\Sort STG.Outputs[Sort Output].Columns[Plant]" />
                     <inputColumn
                       refId="Package\Stock Table\Merge Join.Inputs[Merge Join Left Input].Columns[Material]"
-                      cachedDataType="i4"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Material"
                       cachedSortKeyPosition="2"
                       lineageId="Package\Stock Table\Sort STG.Outputs[Sort Output].Columns[Material]" />
@@ -308,7 +311,7 @@
                     <inputColumn
                       refId="Package\Stock Table\Merge Join.Inputs[Merge Join Left Input].Columns[Lot]"
                       cachedDataType="wstr"
-                      cachedLength="100"
+                      cachedLength="200"
                       cachedName="Lot"
                       cachedSortKeyPosition="4"
                       lineageId="Package\Stock Table\Sort STG.Outputs[Sort Output].Columns[Lot]" />
@@ -353,7 +356,8 @@
                       lineageId="Package\Stock Table\Sort Table.Outputs[Sort Output].Columns[Plant]" />
                     <inputColumn
                       refId="Package\Stock Table\Merge Join.Inputs[Merge Join Right Input].Columns[Material]"
-                      cachedDataType="i4"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Material"
                       cachedSortKeyPosition="2"
                       lineageId="Package\Stock Table\Sort Table.Outputs[Sort Output].Columns[Material]" />
@@ -435,7 +439,8 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Material]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Material]"
                       name="Material"
                       sortKeyPosition="2">
@@ -465,7 +470,7 @@
                     <outputColumn
                       refId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Lot]"
                       dataType="wstr"
-                      length="100"
+                      length="200"
                       lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Lot]"
                       name="Lot"
                       sortKeyPosition="4">
@@ -572,7 +577,8 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Material (1)]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Material (1)]"
                       name="Material (1)">
                       <properties>
@@ -737,7 +743,8 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Stock Table\Sort STG.Inputs[Sort Input].Columns[Material]"
-                      cachedDataType="i4"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Material"
                       lineageId="Package\Stock Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Material]">
                       <properties>
@@ -804,7 +811,7 @@
                     <inputColumn
                       refId="Package\Stock Table\Sort STG.Inputs[Sort Input].Columns[Lot]"
                       cachedDataType="wstr"
-                      cachedLength="100"
+                      cachedLength="200"
                       cachedName="Lot"
                       lineageId="Package\Stock Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Lot]">
                       <properties>
@@ -958,7 +965,8 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Stock Table\Sort STG.Outputs[Sort Output].Columns[Material]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\Stock Table\Sort STG.Outputs[Sort Output].Columns[Material]"
                       name="Material"
                       sortKeyPosition="2">
@@ -1017,7 +1025,7 @@
                     <outputColumn
                       refId="Package\Stock Table\Sort STG.Outputs[Sort Output].Columns[Lot]"
                       dataType="wstr"
-                      length="100"
+                      length="200"
                       lineageId="Package\Stock Table\Sort STG.Outputs[Sort Output].Columns[Lot]"
                       name="Lot"
                       sortKeyPosition="4">
@@ -1172,7 +1180,8 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Stock Table\Sort Table.Inputs[Sort Input].Columns[Material]"
-                      cachedDataType="i4"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Material"
                       lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[Material]">
                       <properties>
@@ -1344,7 +1353,8 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Stock Table\Sort Table.Outputs[Sort Output].Columns[Material]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\Stock Table\Sort Table.Outputs[Sort Output].Columns[Material]"
                       name="Material"
                       sortKeyPosition="2">
@@ -1498,7 +1508,8 @@
                       lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Plant]" />
                     <inputColumn
                       refId="Package\Stock Table\Split Records.Inputs[Conditional Split Input].Columns[Material]"
-                      cachedDataType="i4"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Material"
                       cachedSortKeyPosition="2"
                       lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Material]" />
@@ -1512,7 +1523,7 @@
                     <inputColumn
                       refId="Package\Stock Table\Split Records.Inputs[Conditional Split Input].Columns[Lot]"
                       cachedDataType="wstr"
-                      cachedLength="100"
+                      cachedLength="200"
                       cachedName="Lot"
                       cachedSortKeyPosition="4"
                       lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Lot]" />
@@ -1524,7 +1535,8 @@
                       lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Plant (1)]" />
                     <inputColumn
                       refId="Package\Stock Table\Split Records.Inputs[Conditional Split Input].Columns[Material (1)]"
-                      cachedDataType="i4"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Material (1)"
                       lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Material (1)]" />
                     <inputColumn
@@ -1539,68 +1551,6 @@
                       cachedLength="200"
                       cachedName="Lot (1)"
                       lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Lot (1)]" />
-                    <inputColumn
-                      refId="Package\Stock Table\Split Records.Inputs[Conditional Split Input].Columns[UM]"
-                      cachedDataType="i4"
-                      cachedName="UM"
-                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[UM]" />
-                    <inputColumn
-                      refId="Package\Stock Table\Split Records.Inputs[Conditional Split Input].Columns[StoreLocationDescription]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="StoreLocationDescription"
-                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription]" />
-                    <inputColumn
-                      refId="Package\Stock Table\Split Records.Inputs[Conditional Split Input].Columns[Unres]"
-                      cachedDataType="i4"
-                      cachedName="Unres"
-                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Unres]" />
-                    <inputColumn
-                      refId="Package\Stock Table\Split Records.Inputs[Conditional Split Input].Columns[UnresCTN]"
-                      cachedDataType="i4"
-                      cachedName="UnresCTN"
-                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[UnresCTN]" />
-                    <inputColumn
-                      refId="Package\Stock Table\Split Records.Inputs[Conditional Split Input].Columns[Qi]"
-                      cachedDataType="i4"
-                      cachedName="Qi"
-                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Qi]" />
-                    <inputColumn
-                      refId="Package\Stock Table\Split Records.Inputs[Conditional Split Input].Columns[QiCTN]"
-                      cachedDataType="i4"
-                      cachedName="QiCTN"
-                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[QiCTN]" />
-                    <inputColumn
-                      refId="Package\Stock Table\Split Records.Inputs[Conditional Split Input].Columns[UM (1)]"
-                      cachedDataType="i4"
-                      cachedName="UM (1)"
-                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[UM (1)]" />
-                    <inputColumn
-                      refId="Package\Stock Table\Split Records.Inputs[Conditional Split Input].Columns[StoreLocationDescription (1)]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="StoreLocationDescription (1)"
-                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription (1)]" />
-                    <inputColumn
-                      refId="Package\Stock Table\Split Records.Inputs[Conditional Split Input].Columns[Unres (1)]"
-                      cachedDataType="i4"
-                      cachedName="Unres (1)"
-                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Unres (1)]" />
-                    <inputColumn
-                      refId="Package\Stock Table\Split Records.Inputs[Conditional Split Input].Columns[UnresCTN (1)]"
-                      cachedDataType="i4"
-                      cachedName="UnresCTN (1)"
-                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[UnresCTN (1)]" />
-                    <inputColumn
-                      refId="Package\Stock Table\Split Records.Inputs[Conditional Split Input].Columns[Qi (1)]"
-                      cachedDataType="i4"
-                      cachedName="Qi (1)"
-                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Qi (1)]" />
-                    <inputColumn
-                      refId="Package\Stock Table\Split Records.Inputs[Conditional Split Input].Columns[QiCTN (1)]"
-                      cachedDataType="i4"
-                      cachedName="QiCTN (1)"
-                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[QiCTN (1)]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1648,13 +1598,13 @@
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">(#{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[UM]} != #{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[UM (1)]}) || (#{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription]} != #{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription (1)]}) || (#{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Unres]} != #{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Unres (1)]}) || (#{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[UnresCTN]} != #{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[UnresCTN (1)]}) || (#{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Qi]} != #{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Qi (1)]}) || (#{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[QiCTN]} != #{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[QiCTN (1)]})</property>
+                      name="Expression">![ISNULL](#{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Plant (1)]}) &amp;&amp; ![ISNULL](#{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Plant]}) &amp;&amp; ![ISNULL](#{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Material (1)]}) &amp;&amp; ![ISNULL](#{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Material]}) &amp;&amp; ![ISNULL](#{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocation (1)]}) &amp;&amp; ![ISNULL](#{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocation]}) &amp;&amp; ![ISNULL](#{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Lot (1)]}) &amp;&amp; ![ISNULL](#{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Lot]})</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">(UM != [UM (1)]) || (StoreLocationDescription != [StoreLocationDescription (1)]) || (Unres != [Unres (1)]) || (UnresCTN != [UnresCTN (1)]) || (Qi != [Qi (1)]) || (QiCTN != [QiCTN (1)])</property>
+                      name="FriendlyExpression">!ISNULL([Plant (1)]) &amp;&amp; !ISNULL(Plant) &amp;&amp; !ISNULL([Material (1)]) &amp;&amp; !ISNULL(Material) &amp;&amp; !ISNULL([StoreLocation (1)]) &amp;&amp; !ISNULL(StoreLocation) &amp;&amp; !ISNULL([Lot (1)]) &amp;&amp; !ISNULL(Lot)</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -1768,10 +1718,11 @@ WHERE SyncDate = (
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Stock Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Material]"
-                      dataType="i4"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Stock Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[Material]"
+                      length="50"
                       lineageId="Package\Stock Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Material]"
                       name="Material"
                       truncationRowDisposition="FailComponent" />
@@ -1810,7 +1761,7 @@ WHERE SyncDate = (
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Stock Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[Lot]"
-                      length="100"
+                      length="200"
                       lineageId="Package\Stock Table\STG_Stock.Outputs[ADO NET Source Output].Columns[Lot]"
                       name="Lot"
                       truncationRowDisposition="FailComponent" />
@@ -1888,7 +1839,8 @@ WHERE SyncDate = (
                       name="Plant" />
                     <externalMetadataColumn
                       refId="Package\Stock Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[Material]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="50"
                       name="Material" />
                     <externalMetadataColumn
                       refId="Package\Stock Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[UM]"
@@ -1907,7 +1859,7 @@ WHERE SyncDate = (
                     <externalMetadataColumn
                       refId="Package\Stock Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[Lot]"
                       dataType="wstr"
-                      length="100"
+                      length="200"
                       name="Lot" />
                     <externalMetadataColumn
                       refId="Package\Stock Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[PlanDate]"
@@ -1953,7 +1905,8 @@ WHERE SyncDate = (
                       name="Plant" />
                     <outputColumn
                       refId="Package\Stock Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[Material]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\Stock Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[Material]"
                       name="Material" />
                     <outputColumn
@@ -1976,7 +1929,7 @@ WHERE SyncDate = (
                     <outputColumn
                       refId="Package\Stock Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[Lot]"
                       dataType="wstr"
-                      length="100"
+                      length="200"
                       lineageId="Package\Stock Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[Lot]"
                       name="Lot" />
                     <outputColumn
@@ -2095,10 +2048,11 @@ WHERE SyncDate = (
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[Material]"
-                      dataType="i4"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].ExternalColumns[Material]"
+                      length="50"
                       lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].Columns[Material]"
                       name="Material"
                       truncationRowDisposition="FailComponent" />
@@ -2187,7 +2141,8 @@ WHERE SyncDate = (
                       name="Plant" />
                     <externalMetadataColumn
                       refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].ExternalColumns[Material]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="50"
                       name="Material" />
                     <externalMetadataColumn
                       refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Output].ExternalColumns[UM]"
@@ -2239,7 +2194,8 @@ WHERE SyncDate = (
                       name="Plant" />
                     <outputColumn
                       refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Error Output].Columns[Material]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Error Output].Columns[Material]"
                       name="Material" />
                     <outputColumn
@@ -2295,6 +2251,152 @@ WHERE SyncDate = (
                       refId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Stock Table\Stock Table.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Stock Table\Update"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Update"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Stock Table\Update.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Stock Table\Update.Inputs[Conditional Split Input].Columns[UM]"
+                      cachedDataType="i4"
+                      cachedName="UM"
+                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[UM]" />
+                    <inputColumn
+                      refId="Package\Stock Table\Update.Inputs[Conditional Split Input].Columns[StoreLocationDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="StoreLocationDescription"
+                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription]" />
+                    <inputColumn
+                      refId="Package\Stock Table\Update.Inputs[Conditional Split Input].Columns[Unres]"
+                      cachedDataType="i4"
+                      cachedName="Unres"
+                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Unres]" />
+                    <inputColumn
+                      refId="Package\Stock Table\Update.Inputs[Conditional Split Input].Columns[UnresCTN]"
+                      cachedDataType="i4"
+                      cachedName="UnresCTN"
+                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[UnresCTN]" />
+                    <inputColumn
+                      refId="Package\Stock Table\Update.Inputs[Conditional Split Input].Columns[Qi]"
+                      cachedDataType="i4"
+                      cachedName="Qi"
+                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Qi]" />
+                    <inputColumn
+                      refId="Package\Stock Table\Update.Inputs[Conditional Split Input].Columns[QiCTN]"
+                      cachedDataType="i4"
+                      cachedName="QiCTN"
+                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[QiCTN]" />
+                    <inputColumn
+                      refId="Package\Stock Table\Update.Inputs[Conditional Split Input].Columns[UM (1)]"
+                      cachedDataType="i4"
+                      cachedName="UM (1)"
+                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[UM (1)]" />
+                    <inputColumn
+                      refId="Package\Stock Table\Update.Inputs[Conditional Split Input].Columns[StoreLocationDescription (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="StoreLocationDescription (1)"
+                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription (1)]" />
+                    <inputColumn
+                      refId="Package\Stock Table\Update.Inputs[Conditional Split Input].Columns[Unres (1)]"
+                      cachedDataType="i4"
+                      cachedName="Unres (1)"
+                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Unres (1)]" />
+                    <inputColumn
+                      refId="Package\Stock Table\Update.Inputs[Conditional Split Input].Columns[UnresCTN (1)]"
+                      cachedDataType="i4"
+                      cachedName="UnresCTN (1)"
+                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[UnresCTN (1)]" />
+                    <inputColumn
+                      refId="Package\Stock Table\Update.Inputs[Conditional Split Input].Columns[Qi (1)]"
+                      cachedDataType="i4"
+                      cachedName="Qi (1)"
+                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Qi (1)]" />
+                    <inputColumn
+                      refId="Package\Stock Table\Update.Inputs[Conditional Split Input].Columns[QiCTN (1)]"
+                      cachedDataType="i4"
+                      cachedName="QiCTN (1)"
+                      lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[QiCTN (1)]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Stock Table\Update.Outputs[Update]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Update"
+                  synchronousInputId="Package\Stock Table\Update.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">(#{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[UM]} != #{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[UM (1)]}) || (#{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription]} != #{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription (1)]}) || (#{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Unres]} != #{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Unres (1)]}) || (#{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[UnresCTN]} != #{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[UnresCTN (1)]}) || (#{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Qi]} != #{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Qi (1)]}) || (#{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[QiCTN]} != #{Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[QiCTN (1)]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">(UM != [UM (1)]) || (StoreLocationDescription != [StoreLocationDescription (1)]) || (Unres != [Unres (1)]) || (UnresCTN != [UnresCTN (1)]) || (Qi != [Qi (1)]) || (QiCTN != [QiCTN (1)])</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Stock Table\Update.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Stock Table\Update.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Stock Table\Update.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Stock Table\Update.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Stock Table\Update.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Stock Table\Update.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Stock Table\Update.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Stock Table\Update.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2360,7 +2462,8 @@ WHERE SyncDate = (
                       lineageId="Package\Stock Table\Merge Join.Outputs[Merge Join Output].Columns[Plant]" />
                     <inputColumn
                       refId="Package\Stock Table\Update Records (Stock Table).Inputs[OLE DB Command Input].Columns[Material]"
-                      cachedDataType="i4"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Material"
                       cachedSortKeyPosition="2"
                       externalMetadataColumnId="Package\Stock Table\Update Records (Stock Table).Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
@@ -2376,7 +2479,7 @@ WHERE SyncDate = (
                     <inputColumn
                       refId="Package\Stock Table\Update Records (Stock Table).Inputs[OLE DB Command Input].Columns[Lot]"
                       cachedDataType="wstr"
-                      cachedLength="100"
+                      cachedLength="200"
                       cachedName="Lot"
                       cachedSortKeyPosition="4"
                       externalMetadataColumnId="Package\Stock Table\Update Records (Stock Table).Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
@@ -2603,8 +2706,13 @@ WHERE SyncDate = (
               name="Sort Output"
               startId="Package\Stock Table\Sort Table.Outputs[Sort Output]" />
             <path
-              refId="Package\Stock Table.Paths[Update (Match)]"
+              refId="Package\Stock Table.Paths[Update]"
               endId="Package\Stock Table\Update Records (Stock Table).Inputs[OLE DB Command Input]"
+              name="Update"
+              startId="Package\Stock Table\Update.Outputs[Update]" />
+            <path
+              refId="Package\Stock Table.Paths[Update (Match)]"
+              endId="Package\Stock Table\Update.Inputs[Conditional Split Input]"
               name="Update (Match)"
               startId="Package\Stock Table\Split Records.Outputs[Update (Match)]" />
           </paths>
@@ -2635,7 +2743,19 @@ WHERE SyncDate = (
     design-time-name="Package\Stock Table">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="123,42"
+          Id="Package\Stock Table\Sort STG"
+          TopLeft="147,103" />
+        <NodeLayout
+          Size="136,42"
+          Id="Package\Stock Table\Stock Table"
+          TopLeft="526,27" />
+        <NodeLayout
+          Size="221,42"
+          Id="Package\Stock Table\Update Records (Stock Table)"
+          TopLeft="488,357" />
         <NodeLayout
           Size="132,42"
           Id="Package\Stock Table\STG_Stock"
@@ -2643,133 +2763,39 @@ WHERE SyncDate = (
         <NodeLayout
           Size="142,42"
           Id="Package\Stock Table\Split Records"
-          TopLeft="373,255" />
-        <NodeLayout
-          Size="221,42"
-          Id="Package\Stock Table\Update Records (Stock Table)"
-          TopLeft="488,357" />
-        <NodeLayout
-          Size="136,42"
-          Id="Package\Stock Table\Stock Table"
-          TopLeft="526,27" />
-        <NodeLayout
-          Size="123,42"
-          Id="Package\Stock Table\Sort STG"
-          TopLeft="144,112" />
+          TopLeft="97,255" />
         <NodeLayout
           Size="216,42"
           Id="Package\Stock Table\Insert Records (Stock Table)"
           TopLeft="41,365" />
-        <EdgeLayout
-          Id="Package\Stock Table.Paths[ADO NET Source Output]"
-          TopLeft="117,74">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="88.5,38"
-              Start="0,0"
-              End="88.5,30.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,15"
-                    Point2="0,19"
-                    Point3="4,19" />
-                  <mssgle:LineSegment
-                    End="84.5,19" />
-                  <mssgle:CubicBezierSegment
-                    Point1="84.5,19"
-                    Point2="88.5,19"
-                    Point3="88.5,23" />
-                  <mssgle:LineSegment
-                    End="88.5,30.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Stock Table.Paths[Update (Match)]"
-          TopLeft="466.333333333333,297">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="132.166666666667,60"
-              Start="0,0"
-              End="132.166666666667,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.4011142061281" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.4011142061281"
-                    Point2="0,24.4011142061281"
-                    Point3="4,24.4011142061281" />
-                  <mssgle:LineSegment
-                    End="128.166666666667,24.4011142061281" />
-                  <mssgle:CubicBezierSegment
-                    Point1="128.166666666667,24.4011142061281"
-                    Point2="132.166666666667,24.4011142061281"
-                    Point3="132.166666666667,28.4011142061281" />
-                  <mssgle:LineSegment
-                    End="132.166666666667,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="31.2976497395835,29.4011142061281,69.5713671875,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Stock Table.Paths[Insert (Not Match)]"
-          TopLeft="444,297">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-295,68"
-              Start="0,0"
-              End="-295,60.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,30"
-                    Point2="0,34"
-                    Point3="-4,34" />
-                  <mssgle:LineSegment
-                    End="-291,34" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-291,34"
-                    Point2="-295,34"
-                    Point3="-295,38" />
-                  <mssgle:LineSegment
-                    End="-295,60.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-188.91833984375,39,82.8366796875,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
           Size="129,42"
           Id="Package\Stock Table\Sort Table"
           TopLeft="462,103" />
+        <EdgeLayout
+          Id="Package\Stock Table.Paths[Insert (Not Match)]"
+          TopLeft="147.333333333333,297">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,68"
+              Start="0,0"
+              End="0,60.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,60.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-41.41833984375,24.4453125,82.8366796875,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Stock Table.Paths[ADO NET Source Output1]"
           TopLeft="594,69">
@@ -2804,36 +2830,70 @@ WHERE SyncDate = (
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="132,42"
-          Id="Package\Stock Table\Merge Join"
-          TopLeft="291,182" />
         <EdgeLayout
-          Id="Package\Stock Table.Paths[Sort Output]"
-          TopLeft="205.5,154">
+          Id="Package\Stock Table.Paths[ADO NET Source Output]"
+          TopLeft="117,74">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="130.833333333333,28"
+              EndConnector="91.5,29"
               Start="0,0"
-              End="130.833333333333,20.5">
+              End="91.5,21.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,12.5988023952096" />
+                    End="0,10.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,12.5988023952096"
-                    Point2="0,16.5988023952096"
-                    Point3="4,16.5988023952096" />
+                    Point1="0,10.5"
+                    Point2="0,14.5"
+                    Point3="4,14.5" />
                   <mssgle:LineSegment
-                    End="126.833333333333,16.5988023952096" />
+                    End="87.5,14.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="126.833333333333,16.5988023952096"
-                    Point2="130.833333333333,16.5988023952096"
-                    Point3="130.833333333333,20.5988023952096" />
+                    Point1="87.5,14.5"
+                    Point2="91.5,14.5"
+                    Point3="91.5,18.5" />
                   <mssgle:LineSegment
-                    End="130.833333333333,20.5" />
+                    End="91.5,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="132,42"
+          Id="Package\Stock Table\Merge Join"
+          TopLeft="284,175" />
+        <EdgeLayout
+          Id="Package\Stock Table.Paths[Sort Output]"
+          TopLeft="208.5,145">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="120.833333333333,30"
+              Start="0,0"
+              End="120.833333333333,22.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.7844311377246" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.7844311377246"
+                    Point2="0,17.7844311377246"
+                    Point3="4,17.7844311377246" />
+                  <mssgle:LineSegment
+                    End="116.833333333333,17.7844311377246" />
+                  <mssgle:CubicBezierSegment
+                    Point1="116.833333333333,17.7844311377246"
+                    Point2="120.833333333333,17.7844311377246"
+                    Point3="120.833333333333,21.7844311377246" />
+                  <mssgle:LineSegment
+                    End="120.833333333333,22.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2848,26 +2908,26 @@ WHERE SyncDate = (
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-148.833333333333,37"
+              EndConnector="-155.833333333333,30"
               Start="0,0"
-              End="-148.833333333333,29.5">
+              End="-155.833333333333,22.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.9341317365269" />
+                    End="0,13.7844311377245" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17.9341317365269"
-                    Point2="0,21.9341317365269"
-                    Point3="-4,21.9341317365269" />
+                    Point1="0,13.7844311377245"
+                    Point2="0,17.7844311377245"
+                    Point3="-4,17.7844311377245" />
                   <mssgle:LineSegment
-                    End="-144.833333333333,21.9341317365269" />
+                    End="-151.833333333333,17.7844311377245" />
                   <mssgle:CubicBezierSegment
-                    Point1="-144.833333333333,21.9341317365269"
-                    Point2="-148.833333333333,21.9341317365269"
-                    Point3="-148.833333333333,25.9341317365269" />
+                    Point1="-151.833333333333,17.7844311377245"
+                    Point2="-155.833333333333,17.7844311377245"
+                    Point3="-155.833333333333,21.7844311377245" />
                   <mssgle:LineSegment
-                    End="-148.833333333333,29.5" />
+                    End="-155.833333333333,22.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2878,30 +2938,30 @@ WHERE SyncDate = (
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Stock Table.Paths[Merge Join Output]"
-          TopLeft="357,224">
+          TopLeft="350,217">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="87,31"
+              EndConnector="-182,38"
               Start="0,0"
-              End="87,23.5">
+              End="-182,30.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11.5" />
+                    End="0,15" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,11.5"
-                    Point2="0,15.5"
-                    Point3="4,15.5" />
+                    Point1="0,15"
+                    Point2="0,19"
+                    Point3="-4,19" />
                   <mssgle:LineSegment
-                    End="83,15.5" />
+                    End="-178,19" />
                   <mssgle:CubicBezierSegment
-                    Point1="83,15.5"
-                    Point2="87,15.5"
-                    Point3="87,19.5" />
+                    Point1="-178,19"
+                    Point2="-182,19"
+                    Point3="-182,23" />
                   <mssgle:LineSegment
-                    End="87,23.5" />
+                    End="-182,30.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2910,11 +2970,75 @@ WHERE SyncDate = (
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="115,42"
+          Id="Package\Stock Table\Update"
+          TopLeft="340,253" />
+        <EdgeLayout
+          Id="Package\Stock Table.Paths[Update (Match)]"
+          TopLeft="239,275">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="101,0"
+              Start="0,0"
+              End="93.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="93.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="11.96431640625,5,69.5713671875,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Stock Table.Paths[Update]"
+          TopLeft="397.5,295">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="201,62"
+              Start="0,0"
+              End="201,54.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27"
+                    Point2="0,31"
+                    Point3="4,31" />
+                  <mssgle:LineSegment
+                    End="197,31" />
+                  <mssgle:CubicBezierSegment
+                    Point1="197,31"
+                    Point2="201,31"
+                    Point3="201,35" />
+                  <mssgle:LineSegment
+                    End="201,54.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="84.21970703125,36,32.5605859375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Stock Table\STG_Stock">
+    design-time-name="Package\Stock Table\Stock Table">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2922,7 +3046,7 @@ WHERE SyncDate = (
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Stock Table\Stock Table">
+    design-time-name="Package\Stock Table\STG_Stock">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
