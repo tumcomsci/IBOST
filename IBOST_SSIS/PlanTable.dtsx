@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="PlanTable"
   DTS:PackageType="5"
-  DTS:VersionBuild="32"
-  DTS:VersionGUID="{6C9AF923-CD39-43D9-BBD1-90CC0EAE439C}">
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{A44822AC-5DF9-43E3-8049-99EA86F9CF75}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACXfV7uvrJad8YTkZUbdkIByT8wO3/ljIVCo48JLpruWwAAAAAOgAAAAAIAACAAAACWO3L2S+yM2gH90BApB6B2z5mM3IiNvE8CAoZPc8PJayAAAACq//KXIovmcWk7guucDesoC2n+lL33rFFJoRGS3Le8lUAAAACVlryxd4K9Wcq/KSO6K6sdnyBroZkSjJNUBjJCeNu55gHZK9JEOkp0OATS6keZTnQEXuK9ljBtx/1X6n3Tt6EZ</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABfQRi3PtwPG85lKFauf2Wmxxx/evcfXXp5BV09FrpRVgAAAAAOgAAAAAIAACAAAAD0JzbTtU48ldtVrDCnFixZjyCXqlMSjjiClDMILRXr9iAAAACVgFpT6ANxYUqipHX3x8SZlPOBK9KJV65h0rRYcagJyEAAAADW27VVNJlp3eNIPiR13tqAgKBQQJM3kbXCtP9HGHi0XL7YC8SIf47Bz6v6dybLVmxzzXizYWjrfYCd9rhXen3E</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -104,7 +104,7 @@
                       cachedName="Plant"
                       cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[Plant]"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Plant]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Plant]" />
                     <inputColumn
                       refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].Columns[Material]"
                       cachedDataType="wstr"
@@ -112,7 +112,7 @@
                       cachedName="Material"
                       cachedSortKeyPosition="2"
                       externalMetadataColumnId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[Material]"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Material]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Material]" />
                     <inputColumn
                       refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].Columns[StoreLocation]"
                       cachedDataType="wstr"
@@ -120,39 +120,41 @@
                       cachedName="StoreLocation"
                       cachedSortKeyPosition="3"
                       externalMetadataColumnId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[StoreLocation]"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocation]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[StoreLocation]" />
                     <inputColumn
                       refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].Columns[PlanDate]"
-                      cachedDataType="dbDate"
+                      cachedDataType="wstr"
+                      cachedLength="10"
                       cachedName="PlanDate"
                       cachedSortKeyPosition="4"
                       externalMetadataColumnId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[PlanDate]"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[PlanDate]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[PlanDate]" />
                     <inputColumn
                       refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].Columns[UM]"
-                      cachedDataType="i4"
+                      cachedDataType="wstr"
+                      cachedLength="10"
                       cachedName="UM"
                       externalMetadataColumnId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[UM]"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[UM]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[UM]" />
                     <inputColumn
                       refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].Columns[StoreLocationDescription]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="StoreLocationDescription"
                       externalMetadataColumnId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[StoreLocationDescription]"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[StoreLocationDescription]" />
                     <inputColumn
                       refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].Columns[Unres]"
                       cachedDataType="i4"
                       cachedName="Unres"
                       externalMetadataColumnId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[Unres]"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unres]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Unres]" />
                     <inputColumn
                       refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].Columns[UnresCTN]"
                       cachedDataType="i4"
                       cachedName="UnresCTN"
                       externalMetadataColumnId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[UnresCTN]"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[UnresCTN]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[UnresCTN]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -168,7 +170,8 @@
                       name="Material" />
                     <externalMetadataColumn
                       refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[UM]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="10"
                       name="UM" />
                     <externalMetadataColumn
                       refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[StoreLocation]"
@@ -182,7 +185,8 @@
                       name="StoreLocationDescription" />
                     <externalMetadataColumn
                       refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[PlanDate]"
-                      dataType="dbTimeStamp"
+                      dataType="wstr"
+                      length="10"
                       name="PlanDate" />
                     <externalMetadataColumn
                       refId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input].ExternalColumns[Unres]"
@@ -221,11 +225,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Plan Table\Merge Join"
+              refId="Package\Plan Table\Merge Join 1"
               componentClassID="Microsoft.MergeJoin"
               contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
-              name="Merge Join"
+              name="Merge Join 1"
               version="1">
               <properties>
                 <property
@@ -248,58 +252,60 @@
               </properties>
               <inputs>
                 <input
-                  refId="Package\Plan Table\Merge Join.Inputs[Merge Join Left Input]"
+                  refId="Package\Plan Table\Merge Join 1.Inputs[Merge Join Left Input]"
                   hasSideEffects="true"
                   name="Merge Join Left Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[Plant]"
+                      refId="Package\Plan Table\Merge Join 1.Inputs[Merge Join Left Input].Columns[Plant]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Plant"
                       cachedSortKeyPosition="1"
                       lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[Plant]" />
                     <inputColumn
-                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[Material]"
+                      refId="Package\Plan Table\Merge Join 1.Inputs[Merge Join Left Input].Columns[Material]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Material"
                       cachedSortKeyPosition="2"
                       lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[Material]" />
                     <inputColumn
-                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[UM]"
-                      cachedDataType="i4"
+                      refId="Package\Plan Table\Merge Join 1.Inputs[Merge Join Left Input].Columns[UM]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
                       cachedName="UM"
                       cachedSortKeyPosition="5"
                       lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[UM]" />
                     <inputColumn
-                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[StoreLocation]"
+                      refId="Package\Plan Table\Merge Join 1.Inputs[Merge Join Left Input].Columns[StoreLocation]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="StoreLocation"
                       cachedSortKeyPosition="3"
                       lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[StoreLocation]" />
                     <inputColumn
-                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[StoreLocationDescription]"
+                      refId="Package\Plan Table\Merge Join 1.Inputs[Merge Join Left Input].Columns[StoreLocationDescription]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="StoreLocationDescription"
                       cachedSortKeyPosition="6"
                       lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[StoreLocationDescription]" />
                     <inputColumn
-                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[PlanDate]"
-                      cachedDataType="dbDate"
+                      refId="Package\Plan Table\Merge Join 1.Inputs[Merge Join Left Input].Columns[PlanDate]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
                       cachedName="PlanDate"
                       cachedSortKeyPosition="4"
                       lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[PlanDate]" />
                     <inputColumn
-                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[Unres]"
+                      refId="Package\Plan Table\Merge Join 1.Inputs[Merge Join Left Input].Columns[Unres]"
                       cachedDataType="i4"
                       cachedName="Unres"
                       cachedSortKeyPosition="7"
                       lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[Unres]" />
                     <inputColumn
-                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[UnresCTN]"
+                      refId="Package\Plan Table\Merge Join 1.Inputs[Merge Join Left Input].Columns[UnresCTN]"
                       cachedDataType="i4"
                       cachedName="UnresCTN"
                       cachedSortKeyPosition="8"
@@ -308,58 +314,60 @@
                   <externalMetadataColumns />
                 </input>
                 <input
-                  refId="Package\Plan Table\Merge Join.Inputs[Merge Join Right Input]"
+                  refId="Package\Plan Table\Merge Join 1.Inputs[Merge Join Right Input]"
                   hasSideEffects="true"
                   name="Merge Join Right Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[Plant]"
+                      refId="Package\Plan Table\Merge Join 1.Inputs[Merge Join Right Input].Columns[Plant]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Plant"
                       cachedSortKeyPosition="1"
                       lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Plant]" />
                     <inputColumn
-                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[Material]"
+                      refId="Package\Plan Table\Merge Join 1.Inputs[Merge Join Right Input].Columns[Material]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Material"
                       cachedSortKeyPosition="2"
                       lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Material]" />
                     <inputColumn
-                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[UM]"
-                      cachedDataType="i4"
+                      refId="Package\Plan Table\Merge Join 1.Inputs[Merge Join Right Input].Columns[UM]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
                       cachedName="UM"
                       cachedSortKeyPosition="5"
                       lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[UM]" />
                     <inputColumn
-                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[StoreLocation]"
+                      refId="Package\Plan Table\Merge Join 1.Inputs[Merge Join Right Input].Columns[StoreLocation]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="StoreLocation"
                       cachedSortKeyPosition="3"
                       lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[StoreLocation]" />
                     <inputColumn
-                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[StoreLocationDescription]"
+                      refId="Package\Plan Table\Merge Join 1.Inputs[Merge Join Right Input].Columns[StoreLocationDescription]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="StoreLocationDescription"
                       cachedSortKeyPosition="6"
                       lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[StoreLocationDescription]" />
                     <inputColumn
-                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[PlanDate]"
-                      cachedDataType="dbDate"
+                      refId="Package\Plan Table\Merge Join 1.Inputs[Merge Join Right Input].Columns[PlanDate]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
                       cachedName="PlanDate"
                       cachedSortKeyPosition="4"
                       lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[PlanDate]" />
                     <inputColumn
-                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[Unres]"
+                      refId="Package\Plan Table\Merge Join 1.Inputs[Merge Join Right Input].Columns[Unres]"
                       cachedDataType="i4"
                       cachedName="Unres"
                       cachedSortKeyPosition="7"
                       lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[Unres]" />
                     <inputColumn
-                      refId="Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[UnresCTN]"
+                      refId="Package\Plan Table\Merge Join 1.Inputs[Merge Join Right Input].Columns[UnresCTN]"
                       cachedDataType="i4"
                       cachedName="UnresCTN"
                       cachedSortKeyPosition="8"
@@ -370,15 +378,15 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output]"
+                  refId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output]"
                   isSorted="true"
                   name="Merge Join Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Plant]"
+                      refId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Plant]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Plant]"
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Plant]"
                       name="Plant"
                       sortKeyPosition="1">
                       <properties>
@@ -386,14 +394,14 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[Plant]}</property>
+                          name="InputColumnID">#{Package\Plan Table\Merge Join 1.Inputs[Merge Join Left Input].Columns[Plant]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Material]"
+                      refId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Material]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Material]"
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Material]"
                       name="Material"
                       sortKeyPosition="2">
                       <properties>
@@ -401,14 +409,14 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[Material]}</property>
+                          name="InputColumnID">#{Package\Plan Table\Merge Join 1.Inputs[Merge Join Left Input].Columns[Material]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocation]"
+                      refId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[StoreLocation]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocation]"
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[StoreLocation]"
                       name="StoreLocation"
                       sortKeyPosition="3">
                       <properties>
@@ -416,13 +424,14 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[StoreLocation]}</property>
+                          name="InputColumnID">#{Package\Plan Table\Merge Join 1.Inputs[Merge Join Left Input].Columns[StoreLocation]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[PlanDate]"
-                      dataType="dbDate"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[PlanDate]"
+                      refId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[PlanDate]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[PlanDate]"
                       name="PlanDate"
                       sortKeyPosition="4">
                       <properties>
@@ -430,168 +439,171 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[PlanDate]}</property>
+                          name="InputColumnID">#{Package\Plan Table\Merge Join 1.Inputs[Merge Join Left Input].Columns[PlanDate]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[UM]"
-                      dataType="i4"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[UM]"
+                      refId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[UM]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[UM]"
                       name="UM">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[UM]}</property>
+                          name="InputColumnID">#{Package\Plan Table\Merge Join 1.Inputs[Merge Join Left Input].Columns[UM]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription]"
+                      refId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[StoreLocationDescription]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription]"
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[StoreLocationDescription]"
                       name="StoreLocationDescription">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[StoreLocationDescription]}</property>
+                          name="InputColumnID">#{Package\Plan Table\Merge Join 1.Inputs[Merge Join Left Input].Columns[StoreLocationDescription]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unres]"
+                      refId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Unres]"
                       dataType="i4"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unres]"
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Unres]"
                       name="Unres">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[Unres]}</property>
+                          name="InputColumnID">#{Package\Plan Table\Merge Join 1.Inputs[Merge Join Left Input].Columns[Unres]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[UnresCTN]"
+                      refId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[UnresCTN]"
                       dataType="i4"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[UnresCTN]"
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[UnresCTN]"
                       name="UnresCTN">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Left Input].Columns[UnresCTN]}</property>
+                          name="InputColumnID">#{Package\Plan Table\Merge Join 1.Inputs[Merge Join Left Input].Columns[UnresCTN]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Plant (1)]"
+                      refId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Plant (1)]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Plant (1)]"
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Plant (1)]"
                       name="Plant (1)">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[Plant]}</property>
+                          name="InputColumnID">#{Package\Plan Table\Merge Join 1.Inputs[Merge Join Right Input].Columns[Plant]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Material (1)]"
+                      refId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Material (1)]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Material (1)]"
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Material (1)]"
                       name="Material (1)">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[Material]}</property>
+                          name="InputColumnID">#{Package\Plan Table\Merge Join 1.Inputs[Merge Join Right Input].Columns[Material]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocation (1)]"
+                      refId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[StoreLocation (1)]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocation (1)]"
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[StoreLocation (1)]"
                       name="StoreLocation (1)">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[StoreLocation]}</property>
+                          name="InputColumnID">#{Package\Plan Table\Merge Join 1.Inputs[Merge Join Right Input].Columns[StoreLocation]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[PlanDate (1)]"
-                      dataType="dbDate"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[PlanDate (1)]"
+                      refId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[PlanDate (1)]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[PlanDate (1)]"
                       name="PlanDate (1)">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[PlanDate]}</property>
+                          name="InputColumnID">#{Package\Plan Table\Merge Join 1.Inputs[Merge Join Right Input].Columns[PlanDate]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[UM (1)]"
-                      dataType="i4"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[UM (1)]"
+                      refId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[UM (1)]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[UM (1)]"
                       name="UM (1)">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[UM]}</property>
+                          name="InputColumnID">#{Package\Plan Table\Merge Join 1.Inputs[Merge Join Right Input].Columns[UM]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription (1)]"
+                      refId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[StoreLocationDescription (1)]"
                       dataType="wstr"
                       length="50"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription (1)]"
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[StoreLocationDescription (1)]"
                       name="StoreLocationDescription (1)">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[StoreLocationDescription]}</property>
+                          name="InputColumnID">#{Package\Plan Table\Merge Join 1.Inputs[Merge Join Right Input].Columns[StoreLocationDescription]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unres (1)]"
+                      refId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Unres (1)]"
                       dataType="i4"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unres (1)]"
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Unres (1)]"
                       name="Unres (1)">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[Unres]}</property>
+                          name="InputColumnID">#{Package\Plan Table\Merge Join 1.Inputs[Merge Join Right Input].Columns[Unres]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[UnresCTN (1)]"
+                      refId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[UnresCTN (1)]"
                       dataType="i4"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[UnresCTN (1)]"
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[UnresCTN (1)]"
                       name="UnresCTN (1)">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Plan Table\Merge Join.Inputs[Merge Join Right Input].Columns[UnresCTN]}</property>
+                          name="InputColumnID">#{Package\Plan Table\Merge Join 1.Inputs[Merge Join Right Input].Columns[UnresCTN]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -672,10 +684,11 @@
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[UM]"
-                      dataType="i4"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].ExternalColumns[UM]"
+                      length="10"
                       lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[UM]"
                       name="UM"
                       truncationRowDisposition="FailComponent" />
@@ -701,10 +714,11 @@
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[PlanDate]"
-                      dataType="dbDate"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].ExternalColumns[PlanDate]"
+                      length="10"
                       lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[PlanDate]"
                       name="PlanDate"
                       truncationRowDisposition="FailComponent" />
@@ -741,7 +755,8 @@
                       name="Material" />
                     <externalMetadataColumn
                       refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].ExternalColumns[UM]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="10"
                       name="UM" />
                     <externalMetadataColumn
                       refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].ExternalColumns[StoreLocation]"
@@ -755,7 +770,8 @@
                       name="StoreLocationDescription" />
                     <externalMetadataColumn
                       refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].ExternalColumns[PlanDate]"
-                      dataType="dbDate"
+                      dataType="wstr"
+                      length="10"
                       name="PlanDate" />
                     <externalMetadataColumn
                       refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].ExternalColumns[Unres]"
@@ -786,7 +802,8 @@
                       name="Material" />
                     <outputColumn
                       refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Error Output].Columns[UM]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="10"
                       lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Error Output].Columns[UM]"
                       name="UM" />
                     <outputColumn
@@ -803,7 +820,8 @@
                       name="StoreLocationDescription" />
                     <outputColumn
                       refId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Error Output].Columns[PlanDate]"
-                      dataType="dbDate"
+                      dataType="wstr"
+                      length="10"
                       lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Error Output].Columns[PlanDate]"
                       name="PlanDate" />
                     <outputColumn
@@ -892,7 +910,8 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Plan Table\Sort STG.Inputs[Sort Input].Columns[UM]"
-                      cachedDataType="i4"
+                      cachedDataType="wstr"
+                      cachedLength="10"
                       cachedName="UM"
                       lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[UM]">
                       <properties>
@@ -958,8 +977,26 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
+                      refId="Package\Plan Table\Sort STG.Inputs[Sort Input].Columns[MFGDate]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="MFGDate"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[MFGDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
                       refId="Package\Plan Table\Sort STG.Inputs[Sort Input].Columns[PlanDate]"
-                      cachedDataType="dbDate"
+                      cachedDataType="wstr"
+                      cachedLength="10"
                       cachedName="PlanDate"
                       lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[PlanDate]">
                       <properties>
@@ -1112,7 +1149,8 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[UM]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="10"
                       lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[UM]"
                       name="UM"
                       sortKeyPosition="5">
@@ -1169,8 +1207,23 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
+                      refId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[MFGDate]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[MFGDate]"
+                      name="MFGDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[MFGDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
                       refId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[PlanDate]"
-                      dataType="dbDate"
+                      dataType="wstr"
+                      length="10"
                       lineageId="Package\Plan Table\Sort STG.Outputs[Sort Output].Columns[PlanDate]"
                       name="PlanDate"
                       sortKeyPosition="4">
@@ -1327,7 +1380,8 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Plan Table\Sort Table.Inputs[Sort Input].Columns[UM]"
-                      cachedDataType="i4"
+                      cachedDataType="wstr"
+                      cachedLength="10"
                       cachedName="UM"
                       lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[UM]">
                       <properties>
@@ -1377,7 +1431,8 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Plan Table\Sort Table.Inputs[Sort Input].Columns[PlanDate]"
-                      cachedDataType="dbDate"
+                      cachedDataType="wstr"
+                      cachedLength="10"
                       cachedName="PlanDate"
                       lineageId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output].Columns[PlanDate]">
                       <properties>
@@ -1465,7 +1520,8 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[UM]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="10"
                       lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[UM]"
                       name="UM"
                       sortKeyPosition="5">
@@ -1509,7 +1565,8 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[PlanDate]"
-                      dataType="dbDate"
+                      dataType="wstr"
+                      length="10"
                       lineageId="Package\Plan Table\Sort Table.Outputs[Sort Output].Columns[PlanDate]"
                       name="PlanDate"
                       sortKeyPosition="4">
@@ -1573,62 +1630,64 @@
                       cachedLength="50"
                       cachedName="Plant"
                       cachedSortKeyPosition="1"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Plant]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Plant]" />
                     <inputColumn
                       refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[Material]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Material"
                       cachedSortKeyPosition="2"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Material]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Material]" />
                     <inputColumn
                       refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[StoreLocation]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="StoreLocation"
                       cachedSortKeyPosition="3"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocation]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[StoreLocation]" />
                     <inputColumn
                       refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[PlanDate]"
-                      cachedDataType="dbDate"
+                      cachedDataType="wstr"
+                      cachedLength="10"
                       cachedName="PlanDate"
                       cachedSortKeyPosition="4"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[PlanDate]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[PlanDate]" />
                     <inputColumn
                       refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[Plant (1)]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Plant (1)"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Plant (1)]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Plant (1)]" />
                     <inputColumn
                       refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[Material (1)]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Material (1)"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Material (1)]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Material (1)]" />
                     <inputColumn
                       refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[StoreLocation (1)]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="StoreLocation (1)"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocation (1)]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[StoreLocation (1)]" />
                     <inputColumn
                       refId="Package\Plan Table\Split Records.Inputs[Conditional Split Input].Columns[PlanDate (1)]"
-                      cachedDataType="dbDate"
+                      cachedDataType="wstr"
+                      cachedLength="10"
                       cachedName="PlanDate (1)"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[PlanDate (1)]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[PlanDate (1)]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Plan Table\Split Records.Outputs[Insert (Not Match)]"
+                  refId="Package\Plan Table\Split Records.Outputs[Insert (NOT Match)]"
                   description="Output 1 of the Conditional Split Transformation"
                   errorOrTruncationOperation="Computation"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
-                  name="Insert (Not Match)"
+                  name="Insert (NOT Match)"
                   synchronousInputId="Package\Plan Table\Split Records.Inputs[Conditional Split Input]"
                   truncationRowDisposition="FailComponent">
                   <properties>
@@ -1636,7 +1695,7 @@
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[ISNULL](#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Plant (1)]}) &amp;&amp; ![ISNULL](#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Plant]}) &amp;&amp; [ISNULL](#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Material (1)]}) &amp;&amp; ![ISNULL](#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Material]}) &amp;&amp; [ISNULL](#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocation (1)]}) &amp;&amp; ![ISNULL](#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocation]}) &amp;&amp; [ISNULL](#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[PlanDate (1)]}) &amp;&amp; ![ISNULL](#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[PlanDate]})</property>
+                      name="Expression">[ISNULL](#{Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Plant (1)]}) &amp;&amp; ![ISNULL](#{Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Plant]}) &amp;&amp; [ISNULL](#{Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Material (1)]}) &amp;&amp; ![ISNULL](#{Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Material]}) &amp;&amp; [ISNULL](#{Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[StoreLocation (1)]}) &amp;&amp; ![ISNULL](#{Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[StoreLocation]}) &amp;&amp; [ISNULL](#{Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[PlanDate (1)]}) &amp;&amp; ![ISNULL](#{Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[PlanDate]})</property>
                     <property
                       containsID="true"
                       dataType="System.String"
@@ -1664,7 +1723,7 @@
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">![ISNULL](#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Plant (1)]}) &amp;&amp; ![ISNULL](#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Plant]}) &amp;&amp; ![ISNULL](#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Material (1)]}) &amp;&amp; ![ISNULL](#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Material]}) &amp;&amp; ![ISNULL](#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocation (1)]}) &amp;&amp; ![ISNULL](#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocation]}) &amp;&amp; ![ISNULL](#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[PlanDate (1)]}) &amp;&amp; ![ISNULL](#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[PlanDate]})</property>
+                      name="Expression">![ISNULL](#{Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Plant (1)]}) &amp;&amp; ![ISNULL](#{Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Plant]}) &amp;&amp; ![ISNULL](#{Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Material (1)]}) &amp;&amp; ![ISNULL](#{Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Material]}) &amp;&amp; ![ISNULL](#{Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[StoreLocation (1)]}) &amp;&amp; ![ISNULL](#{Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[StoreLocation]}) &amp;&amp; ![ISNULL](#{Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[PlanDate (1)]}) &amp;&amp; ![ISNULL](#{Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[PlanDate]})</property>
                     <property
                       containsID="true"
                       dataType="System.String"
@@ -1794,10 +1853,11 @@ WHERE SyncDate = (
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[UM]"
-                      dataType="i4"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[UM]"
+                      length="10"
                       lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[UM]"
                       name="UM"
                       truncationRowDisposition="FailComponent" />
@@ -1832,11 +1892,22 @@ WHERE SyncDate = (
                       name="Lot"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[MFGDate]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[MFGDate]"
+                      length="10"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[MFGDate]"
+                      name="MFGDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
                       refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[PlanDate]"
-                      dataType="dbDate"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[PlanDate]"
+                      length="10"
                       lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].Columns[PlanDate]"
                       name="PlanDate"
                       truncationRowDisposition="FailComponent" />
@@ -1910,7 +1981,8 @@ WHERE SyncDate = (
                       name="Material" />
                     <externalMetadataColumn
                       refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[UM]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="10"
                       name="UM" />
                     <externalMetadataColumn
                       refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[StoreLocation]"
@@ -1928,8 +2000,14 @@ WHERE SyncDate = (
                       length="200"
                       name="Lot" />
                     <externalMetadataColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[MFGDate]"
+                      dataType="wstr"
+                      length="10"
+                      name="MFGDate" />
+                    <externalMetadataColumn
                       refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[PlanDate]"
-                      dataType="dbDate"
+                      dataType="wstr"
+                      length="10"
                       name="PlanDate" />
                     <externalMetadataColumn
                       refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Output].ExternalColumns[Unres]"
@@ -1977,7 +2055,8 @@ WHERE SyncDate = (
                       name="Material" />
                     <outputColumn
                       refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[UM]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="10"
                       lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[UM]"
                       name="UM" />
                     <outputColumn
@@ -1999,8 +2078,15 @@ WHERE SyncDate = (
                       lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[Lot]"
                       name="Lot" />
                     <outputColumn
+                      refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[MFGDate]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[MFGDate]"
+                      name="MFGDate" />
+                    <outputColumn
                       refId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[PlanDate]"
-                      dataType="dbDate"
+                      dataType="wstr"
+                      length="10"
                       lineageId="Package\Plan Table\STG_Stock.Outputs[ADO NET Source Error Output].Columns[PlanDate]"
                       name="PlanDate" />
                     <outputColumn
@@ -2066,58 +2152,60 @@ WHERE SyncDate = (
                   <inputColumns>
                     <inputColumn
                       refId="Package\Plan Table\Update.Inputs[Conditional Split Input].Columns[UM]"
-                      cachedDataType="i4"
+                      cachedDataType="wstr"
+                      cachedLength="10"
                       cachedName="UM"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[UM]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[UM]" />
                     <inputColumn
                       refId="Package\Plan Table\Update.Inputs[Conditional Split Input].Columns[StoreLocationDescription]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="StoreLocationDescription"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[StoreLocationDescription]" />
                     <inputColumn
                       refId="Package\Plan Table\Update.Inputs[Conditional Split Input].Columns[Unres]"
                       cachedDataType="i4"
                       cachedName="Unres"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unres]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Unres]" />
                     <inputColumn
                       refId="Package\Plan Table\Update.Inputs[Conditional Split Input].Columns[UnresCTN]"
                       cachedDataType="i4"
                       cachedName="UnresCTN"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[UnresCTN]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[UnresCTN]" />
                     <inputColumn
                       refId="Package\Plan Table\Update.Inputs[Conditional Split Input].Columns[UM (1)]"
-                      cachedDataType="i4"
+                      cachedDataType="wstr"
+                      cachedLength="10"
                       cachedName="UM (1)"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[UM (1)]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[UM (1)]" />
                     <inputColumn
                       refId="Package\Plan Table\Update.Inputs[Conditional Split Input].Columns[StoreLocationDescription (1)]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="StoreLocationDescription (1)"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription (1)]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[StoreLocationDescription (1)]" />
                     <inputColumn
                       refId="Package\Plan Table\Update.Inputs[Conditional Split Input].Columns[Unres (1)]"
                       cachedDataType="i4"
                       cachedName="Unres (1)"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unres (1)]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Unres (1)]" />
                     <inputColumn
                       refId="Package\Plan Table\Update.Inputs[Conditional Split Input].Columns[UnresCTN (1)]"
                       cachedDataType="i4"
                       cachedName="UnresCTN (1)"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[UnresCTN (1)]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[UnresCTN (1)]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Plan Table\Update.Outputs[Update]"
+                  refId="Package\Plan Table\Update.Outputs[Update records]"
                   description="Output 1 of the Conditional Split Transformation"
                   errorOrTruncationOperation="Computation"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
-                  name="Update"
+                  name="Update records"
                   synchronousInputId="Package\Plan Table\Update.Inputs[Conditional Split Input]"
                   truncationRowDisposition="FailComponent">
                   <properties>
@@ -2125,7 +2213,7 @@ WHERE SyncDate = (
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">(#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[UM]} != #{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[UM (1)]}) || (#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription]} != #{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription (1)]}) || (#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unres]} != #{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unres (1)]}) || (#{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[UnresCTN]} != #{Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[UnresCTN (1)]})</property>
+                      name="Expression">(#{Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[UM]} != #{Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[UM (1)]}) || (#{Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[StoreLocationDescription]} != #{Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[StoreLocationDescription (1)]}) || (#{Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Unres]} != #{Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Unres (1)]}) || (#{Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[UnresCTN]} != #{Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[UnresCTN (1)]})</property>
                     <property
                       containsID="true"
                       dataType="System.String"
@@ -2230,7 +2318,7 @@ WHERE SyncDate = (
                       cachedName="Plant"
                       cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Plant]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Plant]" />
                     <inputColumn
                       refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].Columns[Material]"
                       cachedDataType="wstr"
@@ -2238,7 +2326,7 @@ WHERE SyncDate = (
                       cachedName="Material"
                       cachedSortKeyPosition="2"
                       externalMetadataColumnId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Material]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Material]" />
                     <inputColumn
                       refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].Columns[StoreLocation]"
                       cachedDataType="wstr"
@@ -2246,51 +2334,54 @@ WHERE SyncDate = (
                       cachedName="StoreLocation"
                       cachedSortKeyPosition="3"
                       externalMetadataColumnId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocation]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[StoreLocation]" />
                     <inputColumn
                       refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].Columns[PlanDate]"
-                      cachedDataType="dbDate"
+                      cachedDataType="wstr"
+                      cachedLength="10"
                       cachedName="PlanDate"
                       cachedSortKeyPosition="4"
                       externalMetadataColumnId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[PlanDate]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[PlanDate]" />
                     <inputColumn
                       refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].Columns[UM]"
-                      cachedDataType="i4"
+                      cachedDataType="wstr"
+                      cachedLength="10"
                       cachedName="UM"
                       externalMetadataColumnId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[UM]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[UM]" />
                     <inputColumn
                       refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].Columns[StoreLocationDescription]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="StoreLocationDescription"
                       externalMetadataColumnId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[StoreLocationDescription]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[StoreLocationDescription]" />
                     <inputColumn
                       refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].Columns[Unres]"
                       cachedDataType="i4"
                       cachedName="Unres"
                       externalMetadataColumnId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[Unres]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[Unres]" />
                     <inputColumn
                       refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].Columns[UnresCTN]"
                       cachedDataType="i4"
                       cachedName="UnresCTN"
                       externalMetadataColumnId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
-                      lineageId="Package\Plan Table\Merge Join.Outputs[Merge Join Output].Columns[UnresCTN]" />
+                      lineageId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output].Columns[UnresCTN]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="10"
                       name="Param_0">
                       <properties>
                         <property
                           dataType="System.Int32"
                           description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
+                          name="DBParamInfoFlags">65</property>
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
@@ -2348,7 +2439,7 @@ WHERE SyncDate = (
                         <property
                           dataType="System.Int32"
                           description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
+                          name="DBParamInfoFlags">65</property>
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
@@ -2365,7 +2456,8 @@ WHERE SyncDate = (
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
-                      dataType="dbDate"
+                      dataType="wstr"
+                      length="10"
                       name="Param_7">
                       <properties>
                         <property
@@ -2422,35 +2514,35 @@ WHERE SyncDate = (
               name="ADO NET Source Output"
               startId="Package\Plan Table\Plan Table.Outputs[ADO NET Source Output]" />
             <path
-              refId="Package\Plan Table.Paths[Insert (Not Match)]"
+              refId="Package\Plan Table.Paths[Insert (NOT Match)]"
               endId="Package\Plan Table\Insert Records (Plan Table).Inputs[ADO NET Destination Input]"
-              name="Insert (Not Match)"
-              startId="Package\Plan Table\Split Records.Outputs[Insert (Not Match)]" />
+              name="Insert (NOT Match)"
+              startId="Package\Plan Table\Split Records.Outputs[Insert (NOT Match)]" />
             <path
               refId="Package\Plan Table.Paths[Merge Join Output]"
               endId="Package\Plan Table\Split Records.Inputs[Conditional Split Input]"
               name="Merge Join Output"
-              startId="Package\Plan Table\Merge Join.Outputs[Merge Join Output]" />
+              startId="Package\Plan Table\Merge Join 1.Outputs[Merge Join Output]" />
             <path
               refId="Package\Plan Table.Paths[Sort Output]"
-              endId="Package\Plan Table\Merge Join.Inputs[Merge Join Left Input]"
+              endId="Package\Plan Table\Merge Join 1.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\Plan Table\Sort STG.Outputs[Sort Output]" />
             <path
               refId="Package\Plan Table.Paths[Sort Output1]"
-              endId="Package\Plan Table\Merge Join.Inputs[Merge Join Right Input]"
+              endId="Package\Plan Table\Merge Join 1.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Plan Table\Sort Table.Outputs[Sort Output]" />
-            <path
-              refId="Package\Plan Table.Paths[Update]"
-              endId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input]"
-              name="Update"
-              startId="Package\Plan Table\Update.Outputs[Update]" />
             <path
               refId="Package\Plan Table.Paths[Update (Match)]"
               endId="Package\Plan Table\Update.Inputs[Conditional Split Input]"
               name="Update (Match)"
               startId="Package\Plan Table\Split Records.Outputs[Update (Match)]" />
+            <path
+              refId="Package\Plan Table.Paths[Update records]"
+              endId="Package\Plan Table\Update Records (Plan Table).Inputs[OLE DB Command Input]"
+              name="Update records"
+              startId="Package\Plan Table\Update.Outputs[Update records]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -2483,81 +2575,65 @@ WHERE SyncDate = (
         <NodeLayout
           Size="210,42"
           Id="Package\Plan Table\Insert Records (Plan Table)"
-          TopLeft="54.2857142857143,335.714285714286" />
-        <NodeLayout
-          Size="216,42"
-          Id="Package\Plan Table\Update Records (Plan Table)"
-          TopLeft="588.571428571429,337.142857142857" />
-        <NodeLayout
-          Size="130,42"
-          Id="Package\Plan Table\Plan Table"
-          TopLeft="693.714285714286,19.5714285714286" />
-        <NodeLayout
-          Size="142,42"
-          Id="Package\Plan Table\Split Records"
-          TopLeft="103.285714285714,245.428571428571" />
+          TopLeft="88.3333333333333,418.666666666667" />
         <NodeLayout
           Size="132,42"
           Id="Package\Plan Table\STG_Stock"
-          TopLeft="22.8571428571428,20" />
-        <EdgeLayout
-          Id="Package\Plan Table.Paths[Insert (Not Match)]"
-          TopLeft="155.619047619047,287.428571428571">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,48.285714285715"
-              Start="0,0"
-              End="0,40.785714285715">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,40.785714285715" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-41.41833984375,14.5881696428575,82.8366796875,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="28,28" />
         <NodeLayout
-          Size="129,42"
-          Id="Package\Plan Table\Sort Table"
-          TopLeft="500,89" />
+          Size="130,42"
+          Id="Package\Plan Table\Plan Table"
+          TopLeft="986,32" />
         <NodeLayout
           Size="123,42"
           Id="Package\Plan Table\Sort STG"
-          TopLeft="159,88" />
+          TopLeft="216,103.666666666667" />
+        <NodeLayout
+          Size="129,42"
+          Id="Package\Plan Table\Sort Table"
+          TopLeft="788.333333333333,104.666666666667" />
+        <NodeLayout
+          Size="216,42"
+          Id="Package\Plan Table\Update Records (Plan Table)"
+          TopLeft="946,409.333333333333" />
+        <NodeLayout
+          Size="141,42"
+          Id="Package\Plan Table\Merge Join 1"
+          TopLeft="519.666666666667,180" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Plan Table\Split Records"
+          TopLeft="118.666666666667,274.333333333333" />
+        <NodeLayout
+          Size="115,42"
+          Id="Package\Plan Table\Update"
+          TopLeft="734.333333333333,282.333333333333" />
         <EdgeLayout
           Id="Package\Plan Table.Paths[ADO NET Source Output]"
-          TopLeft="88.8571428571428,62">
+          TopLeft="94,70">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="131.642857142857,26"
+              EndConnector="183.5,33.6666666666666"
               Start="0,0"
-              End="131.642857142857,18.5">
+              End="183.5,26.1666666666666">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,9" />
+                    End="0,12.8333333333333" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,9"
-                    Point2="0,13"
-                    Point3="4,13" />
+                    Point1="0,12.8333333333333"
+                    Point2="0,16.8333333333333"
+                    Point3="4,16.8333333333333" />
                   <mssgle:LineSegment
-                    End="127.642857142857,13" />
+                    End="179.5,16.8333333333333" />
                   <mssgle:CubicBezierSegment
-                    Point1="127.642857142857,13"
-                    Point2="131.642857142857,13"
-                    Point3="131.642857142857,17" />
+                    Point1="179.5,16.8333333333333"
+                    Point2="183.5,16.8333333333333"
+                    Point3="183.5,20.8333333333333" />
                   <mssgle:LineSegment
-                    End="131.642857142857,18.5" />
+                    End="183.5,26.1666666666666" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2568,30 +2644,30 @@ WHERE SyncDate = (
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Plan Table.Paths[ADO NET Source Output1]"
-          TopLeft="758.714285714286,61.5714285714286">
+          TopLeft="1051,74">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-194.214285714286,27.4285714285714"
+              EndConnector="-198.166666666667,30.6666666666667"
               Start="0,0"
-              End="-194.214285714286,19.9285714285714">
+              End="-198.166666666667,23.1666666666667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,9.7142857142857" />
+                    End="0,11.3333333333333" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,9.7142857142857"
-                    Point2="0,13.7142857142857"
-                    Point3="-4,13.7142857142857" />
+                    Point1="0,11.3333333333333"
+                    Point2="0,15.3333333333333"
+                    Point3="-4,15.3333333333333" />
                   <mssgle:LineSegment
-                    End="-190.214285714286,13.7142857142857" />
+                    End="-194.166666666667,15.3333333333333" />
                   <mssgle:CubicBezierSegment
-                    Point1="-190.214285714286,13.7142857142857"
-                    Point2="-194.214285714286,13.7142857142857"
-                    Point3="-194.214285714286,17.7142857142857" />
+                    Point1="-194.166666666667,15.3333333333333"
+                    Point2="-198.166666666667,15.3333333333333"
+                    Point3="-198.166666666667,19.3333333333333" />
                   <mssgle:LineSegment
-                    End="-194.214285714286,19.9285714285714" />
+                    End="-198.166666666667,23.1666666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2600,36 +2676,32 @@ WHERE SyncDate = (
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="132,42"
-          Id="Package\Plan Table\Merge Join"
-          TopLeft="285,156" />
         <EdgeLayout
           Id="Package\Plan Table.Paths[Sort Output]"
-          TopLeft="220.5,130">
+          TopLeft="277.5,145.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="109.833333333333,26"
+              EndConnector="290.5,34.3333333333334"
               Start="0,0"
-              End="109.833333333333,18.5">
+              End="290.5,26.8333333333334">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11.4131736526946" />
+                    End="0,16.3688639551192" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,11.4131736526946"
-                    Point2="0,15.4131736526946"
-                    Point3="4,15.4131736526946" />
+                    Point1="0,16.3688639551192"
+                    Point2="0,20.3688639551192"
+                    Point3="4,20.3688639551192" />
                   <mssgle:LineSegment
-                    End="105.833333333333,15.4131736526946" />
+                    End="286.5,20.3688639551192" />
                   <mssgle:CubicBezierSegment
-                    Point1="105.833333333333,15.4131736526946"
-                    Point2="109.833333333333,15.4131736526946"
-                    Point3="109.833333333333,19.4131736526946" />
+                    Point1="286.5,20.3688639551192"
+                    Point2="290.5,20.3688639551192"
+                    Point3="290.5,24.3688639551192" />
                   <mssgle:LineSegment
-                    End="109.833333333333,18.5" />
+                    End="290.5,26.8333333333334" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2640,30 +2712,30 @@ WHERE SyncDate = (
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Plan Table.Paths[Sort Output1]"
-          TopLeft="564.5,131">
+          TopLeft="852.833333333333,146.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-192.833333333333,25"
+              EndConnector="-240.5,33.3333333333333"
               Start="0,0"
-              End="-192.833333333333,17.5">
+              End="-240.5,25.8333333333333">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,10.8203592814371" />
+                    End="0,15.7755960729313" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,10.8203592814371"
-                    Point2="0,14.8203592814371"
-                    Point3="-4,14.8203592814371" />
+                    Point1="0,15.7755960729313"
+                    Point2="0,19.7755960729313"
+                    Point3="-4,19.7755960729313" />
                   <mssgle:LineSegment
-                    End="-188.833333333333,14.8203592814371" />
+                    End="-236.5,19.7755960729313" />
                   <mssgle:CubicBezierSegment
-                    Point1="-188.833333333333,14.8203592814371"
-                    Point2="-192.833333333333,14.8203592814371"
-                    Point3="-192.833333333333,18.8203592814371" />
+                    Point1="-236.5,19.7755960729313"
+                    Point2="-240.5,19.7755960729313"
+                    Point3="-240.5,23.7755960729313" />
                   <mssgle:LineSegment
-                    End="-192.833333333333,17.5" />
+                    End="-240.5,25.8333333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2674,30 +2746,30 @@ WHERE SyncDate = (
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Plan Table.Paths[Merge Join Output]"
-          TopLeft="351,198">
+          TopLeft="590.166666666667,222">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-176.714285714286,47.428571428571"
+              EndConnector="-400.5,52.3333333333334"
               Start="0,0"
-              End="-176.714285714286,39.928571428571">
+              End="-400.5,44.8333333333334">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.7142857142855" />
+                    End="0,22.1666666666667" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19.7142857142855"
-                    Point2="0,23.7142857142855"
-                    Point3="-4,23.7142857142855" />
+                    Point1="0,22.1666666666667"
+                    Point2="0,26.1666666666667"
+                    Point3="-4,26.1666666666667" />
                   <mssgle:LineSegment
-                    End="-172.714285714286,23.7142857142855" />
+                    End="-396.5,26.1666666666667" />
                   <mssgle:CubicBezierSegment
-                    Point1="-172.714285714286,23.7142857142855"
-                    Point2="-176.714285714286,23.7142857142855"
-                    Point3="-176.714285714286,27.7142857142855" />
+                    Point1="-396.5,26.1666666666667"
+                    Point2="-400.5,26.1666666666667"
+                    Point3="-400.5,30.1666666666667" />
                   <mssgle:LineSegment
-                    End="-176.714285714286,39.928571428571" />
+                    End="-400.5,44.8333333333334" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2706,67 +2778,87 @@ WHERE SyncDate = (
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="115,42"
-          Id="Package\Plan Table\Update"
-          TopLeft="406,239" />
         <EdgeLayout
-          Id="Package\Plan Table.Paths[Update (Match)]"
-          TopLeft="245.285714285714,263.214285714286">
+          Id="Package\Plan Table.Paths[Insert (NOT Match)]"
+          TopLeft="191.5,316.333333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="160.714285714286,0"
+              EndConnector="0,102.333333333333"
               Start="0,0"
-              End="153.214285714286,0">
+              End="0,94.8333333333333">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="153.214285714286,0" />
+                    End="0,94.8333333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="41.821459263393,5,69.5713671875,11.609375"
+              BoundingBox="-43.49333984375,41.6119791666666,86.9866796875,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Plan Table.Paths[Update]"
-          TopLeft="463.5,281">
+          Id="Package\Plan Table.Paths[Update (Match)]"
+          TopLeft="260.666666666667,299.333333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="233.071428571429,56.142857142857"
+              EndConnector="473.666666666667,0"
               Start="0,0"
-              End="233.071428571429,48.642857142857">
+              End="466.166666666667,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.0714285714285" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24.0714285714285"
-                    Point2="0,28.0714285714285"
-                    Point3="4,28.0714285714285" />
-                  <mssgle:LineSegment
-                    End="229.071428571429,28.0714285714285" />
-                  <mssgle:CubicBezierSegment
-                    Point1="229.071428571429,28.0714285714285"
-                    Point2="233.071428571429,28.0714285714285"
-                    Point3="233.071428571429,32.0714285714285" />
-                  <mssgle:LineSegment
-                    End="233.071428571429,48.642857142857" />
+                    End="466.166666666667,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="100.255421316965,33.0714285714285,32.5605859375,11.609375"
+              BoundingBox="198.297649739583,5,69.5713671875,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Plan Table.Paths[Update records]"
+          TopLeft="791.833333333333,324.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="262.166666666667,85.0000000000001"
+              Start="0,0"
+              End="262.166666666667,77.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,38.5"
+                    Point2="0,42.5"
+                    Point3="4,42.5" />
+                  <mssgle:LineSegment
+                    End="258.166666666667,42.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="258.166666666667,42.5"
+                    Point2="262.166666666667,42.5"
+                    Point3="262.166666666667,46.5" />
+                  <mssgle:LineSegment
+                    End="262.166666666667,77.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="96.9568098958334,47.5,68.253046875,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2782,7 +2874,7 @@ WHERE SyncDate = (
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Plan Table\Plan Table">
+    design-time-name="Package\Plan Table\STG_Stock">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2790,7 +2882,7 @@ WHERE SyncDate = (
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Plan Table\STG_Stock">
+    design-time-name="Package\Plan Table\Plan Table">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

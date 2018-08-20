@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>IBOST_SSIS</Name>
-    <LastWriteTime>2018-08-16T08:46:47.3952448Z</LastWriteTime>
+    <LastWriteTime>2018-08-20T02:49:10.3587106Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>STG_Customer.dtsx</Name>
-      <LastWriteTime>2018-08-16T09:30:25.7630069Z</LastWriteTime>
+      <LastWriteTime>2018-08-16T09:30:36.0575957Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -18,12 +18,12 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>STG_SODetail.dtsx</Name>
-      <LastWriteTime>2018-08-16T09:29:47.1838003Z</LastWriteTime>
+      <LastWriteTime>2018-08-20T02:25:38.494201Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>STG_Stock.dtsx</Name>
-      <LastWriteTime>2018-08-16T09:29:07.6765406Z</LastWriteTime>
+      <LastWriteTime>2018-08-20T02:51:03.4542723Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -33,7 +33,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>SODetail.dtsx</Name>
-      <LastWriteTime>2018-08-15T10:13:23.0121959Z</LastWriteTime>
+      <LastWriteTime>2018-08-20T02:37:31.9143081Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -43,12 +43,12 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>StockTable.dtsx</Name>
-      <LastWriteTime>2018-08-16T01:04:54.6798958Z</LastWriteTime>
+      <LastWriteTime>2018-08-20T03:00:41.6346446Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>PlanTable.dtsx</Name>
-      <LastWriteTime>2018-08-16T01:12:15.1694963Z</LastWriteTime>
+      <LastWriteTime>2018-08-20T03:08:46.4641895Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>

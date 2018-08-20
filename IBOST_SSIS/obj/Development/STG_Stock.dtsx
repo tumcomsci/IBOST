@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="STG_Stock"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{9BD8391E-EC6D-42E8-8BC0-4EC6DD46CDCB}">
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{54EF7209-52FF-4633-A1BA-65F14C7D717A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADxXZr6HE9IkQl7cWkhW3ZGSHKB9vTHRZZBWHo1Lmw64wAAAAAOgAAAAAIAACAAAAAbTw6cXQWXCbNxRzKCcJ88/VM8Ld7cp9xZ46kFcQq6vSAAAACgS18qs2ZvWpEa5ediADl444UsCZbw3PaYcYThpapTlkAAAAAad096Evd+tzXHdivGhU/kbOQnX+GhBSBp6vwPksSVsO/xwwuXuYqpIPXjW896blqBTm1kTkEF2GRvCIdyGh+7</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABRo/Sk9LcLRiH/XxaQ3sPafLAQo6chlxkMtCC/YMzRxgAAAAAOgAAAAAIAACAAAAAlHq7+W5Idmmm0ewkD6somhLII5+PqGc2vSYQztmIOsiAAAACMEvO0qqW6jdveQ3GpYX96z2lxLe9MJn43rpauVcs4fUAAAAA23lfW+gD7fmGovO+LX0aIW2Idblx+99TFDwlPeoS9CDJE+9k6xaJzL+rORnJmWHrJsmJVAqEE96iEwAr0ddwx</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -298,6 +298,138 @@
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[STOCK_BY_LOT_01]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{E3641F6E-0250-4440-8DF3-27300CF47BA1}"
+      DTS:ObjectName="STOCK_BY_LOT_01">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1054"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\Trainee\Desktop\Sample Data\STOCK_BY_LOT.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PLANT"
+              DTS:DTSID="{D1AFC35D-3240-46BD-8AE2-217D6F26C212}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MATERIAL"
+              DTS:DTSID="{421AFAAD-A1EC-4C8B-ACA9-94BF4950A23B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UM"
+              DTS:DTSID="{7A2F06FA-45D5-4DE6-AA24-40232E54DF07}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="STORE LOCATION"
+              DTS:DTSID="{76E0FA3D-5E45-4527-92A2-77D98A669BEC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="STORE LOCATION DESCRIPTION"
+              DTS:DTSID="{2CCD027A-828D-44EE-9884-69E155AD9C6E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LOT"
+              DTS:DTSID="{9A3CA4E5-204E-4601-B19B-7900B04CFD7E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MFG DATE"
+              DTS:DTSID="{9C614FFB-D25A-4225-9104-E21DE27F0C6C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PLAN DATE"
+              DTS:DTSID="{7F106C30-6513-46B9-875F-BBEDE87D56D4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UNRES"
+              DTS:DTSID="{74D2B69C-8A1F-4836-976E-985834BA95C1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UNRES CTN"
+              DTS:DTSID="{1E517698-9DB7-47DF-B790-E6E1BA871681}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="QI"
+              DTS:DTSID="{3E4611BF-E1E9-4ED1-AA63-5D69FA2BFB20}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="QI CTN"
+              DTS:DTSID="{43412A5F-A1F7-4026-8051-A13A72C12D7A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TRANSACTION TYPE"
+              DTS:DTSID="{4E65EC15-151A-439F-9146-A501321E2A14}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
@@ -354,8 +486,8 @@
               <connections>
                 <connection
                   refId="Package\STG Stock\CSV Stock.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[STOCK_BY_LOT]"
-                  connectionManagerRefId="Package.ConnectionManagers[STOCK_BY_LOT]"
+                  connectionManagerID="Package.ConnectionManagers[STOCK_BY_LOT_01]"
+                  connectionManagerRefId="Package.ConnectionManagers[STOCK_BY_LOT_01]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -387,7 +519,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[MATERIAL]"
-                      codePage="874"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -409,10 +541,12 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[UM]"
-                      dataType="i4"
+                      codePage="874"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[UM]"
+                      length="10"
                       lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[UM]"
                       name="UM"
                       truncationRowDisposition="FailComponent">
@@ -494,11 +628,35 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[MFG DATE]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[MFG DATE]"
+                      length="10"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[MFG DATE]"
+                      name="MFG DATE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
                       refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[PLAN DATE]"
-                      dataType="date"
+                      codePage="65001"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[PLAN DATE]"
+                      length="10"
                       lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[PLAN DATE]"
                       name="PLAN DATE"
                       truncationRowDisposition="FailComponent">
@@ -626,13 +784,15 @@
                       name="PLANT" />
                     <externalMetadataColumn
                       refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[MATERIAL]"
-                      codePage="874"
+                      codePage="65001"
                       dataType="str"
                       length="50"
                       name="MATERIAL" />
                     <externalMetadataColumn
                       refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[UM]"
-                      dataType="i4"
+                      codePage="874"
+                      dataType="str"
+                      length="10"
                       name="UM" />
                     <externalMetadataColumn
                       refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[STORE LOCATION]"
@@ -653,8 +813,16 @@
                       length="200"
                       name="LOT" />
                     <externalMetadataColumn
+                      refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[MFG DATE]"
+                      codePage="65001"
+                      dataType="str"
+                      length="10"
+                      name="MFG DATE" />
+                    <externalMetadataColumn
                       refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[PLAN DATE]"
-                      dataType="date"
+                      codePage="65001"
+                      dataType="str"
+                      length="10"
                       name="PLAN DATE" />
                     <externalMetadataColumn
                       refId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].ExternalColumns[UNRES]"
@@ -841,7 +1009,7 @@
                       lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[PLANT]" />
                     <inputColumn
                       refId="Package\STG Stock\STG_Stock.Inputs[ADO NET Destination Input].Columns[MATERIAL]"
-                      cachedCodepage="874"
+                      cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="MATERIAL"
@@ -849,7 +1017,9 @@
                       lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[MATERIAL]" />
                     <inputColumn
                       refId="Package\STG Stock\STG_Stock.Inputs[ADO NET Destination Input].Columns[UM]"
-                      cachedDataType="i4"
+                      cachedCodepage="874"
+                      cachedDataType="str"
+                      cachedLength="10"
                       cachedName="UM"
                       externalMetadataColumnId="Package\STG Stock\STG_Stock.Inputs[ADO NET Destination Input].ExternalColumns[UM]"
                       lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[UM]" />
@@ -896,8 +1066,18 @@
                       externalMetadataColumnId="Package\STG Stock\STG_Stock.Inputs[ADO NET Destination Input].ExternalColumns[StoreLocationDescription]"
                       lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[STORE LOCATION DESCRIPTION]" />
                     <inputColumn
+                      refId="Package\STG Stock\STG_Stock.Inputs[ADO NET Destination Input].Columns[MFG DATE]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="MFG DATE"
+                      externalMetadataColumnId="Package\STG Stock\STG_Stock.Inputs[ADO NET Destination Input].ExternalColumns[MFGDate]"
+                      lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[MFG DATE]" />
+                    <inputColumn
                       refId="Package\STG Stock\STG_Stock.Inputs[ADO NET Destination Input].Columns[PLAN DATE]"
-                      cachedDataType="date"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="10"
                       cachedName="PLAN DATE"
                       externalMetadataColumnId="Package\STG Stock\STG_Stock.Inputs[ADO NET Destination Input].ExternalColumns[PlanDate]"
                       lineageId="Package\STG Stock\CSV Stock.Outputs[Flat File Source Output].Columns[PLAN DATE]" />
@@ -936,7 +1116,8 @@
                       name="Material" />
                     <externalMetadataColumn
                       refId="Package\STG Stock\STG_Stock.Inputs[ADO NET Destination Input].ExternalColumns[UM]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="10"
                       name="UM" />
                     <externalMetadataColumn
                       refId="Package\STG Stock\STG_Stock.Inputs[ADO NET Destination Input].ExternalColumns[StoreLocation]"
@@ -954,8 +1135,14 @@
                       length="200"
                       name="Lot" />
                     <externalMetadataColumn
+                      refId="Package\STG Stock\STG_Stock.Inputs[ADO NET Destination Input].ExternalColumns[MFGDate]"
+                      dataType="wstr"
+                      length="10"
+                      name="MFGDate" />
+                    <externalMetadataColumn
                       refId="Package\STG Stock\STG_Stock.Inputs[ADO NET Destination Input].ExternalColumns[PlanDate]"
-                      dataType="dbTimeStamp"
+                      dataType="wstr"
+                      length="10"
                       name="PlanDate" />
                     <externalMetadataColumn
                       refId="Package\STG Stock\STG_Stock.Inputs[ADO NET Destination Input].ExternalColumns[Unres]"
@@ -1050,13 +1237,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="129,42"
-          Id="Package\STG Stock"
-          TopLeft="73,38" />
-        <NodeLayout
           Size="225,42"
           Id="Package\Delete Older STG Than 7 Days"
           TopLeft="204,155" />
+        <NodeLayout
+          Size="129,42"
+          Id="Package\STG Stock"
+          TopLeft="73,38" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="137.5,80">
@@ -1098,53 +1285,51 @@
     design-time-name="Package\STG Stock">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="132,42"
-          Id="Package\STG Stock\STG_Stock"
-          TopLeft="613,269" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="156,42"
           Id="Package\STG Stock\Derived Column"
           TopLeft="413,174" />
         <NodeLayout
+          Size="132,42"
+          Id="Package\STG Stock\STG_Stock"
+          TopLeft="648,266" />
+        <NodeLayout
           Size="129,42"
           Id="Package\STG Stock\CSV Stock"
-          TopLeft="236,46" />
+          TopLeft="211,42" />
         <EdgeLayout
           Id="Package\STG Stock.Paths[Flat File Source Output]"
-          TopLeft="300.5,88">
+          TopLeft="275.5,84">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="190.5,86"
+              EndConnector="215.5,90"
               Start="0,0"
-              End="190.5,78.5">
+              End="215.5,82.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,39" />
+                    End="0,41" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,39"
-                    Point2="0,43"
-                    Point3="4,43" />
+                    Point1="0,41"
+                    Point2="0,45"
+                    Point3="4,45" />
                   <mssgle:LineSegment
-                    End="186.5,43" />
+                    End="211.5,45" />
                   <mssgle:CubicBezierSegment
-                    Point1="186.5,43"
-                    Point2="190.5,43"
-                    Point3="190.5,47" />
+                    Point1="211.5,45"
+                    Point2="215.5,45"
+                    Point3="215.5,49" />
                   <mssgle:LineSegment
-                    End="190.5,78.5" />
+                    End="215.5,82.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -1153,34 +1338,32 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="188,53"
+              EndConnector="223,50"
               Start="0,0"
-              End="188,45.5">
+              End="223,42.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.5" />
+                    End="0,21" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,22.5"
-                    Point2="0,26.5"
-                    Point3="4,26.5" />
+                    Point1="0,21"
+                    Point2="0,25"
+                    Point3="4,25" />
                   <mssgle:LineSegment
-                    End="184,26.5" />
+                    End="219,25" />
                   <mssgle:CubicBezierSegment
-                    Point1="184,26.5"
-                    Point2="188,26.5"
-                    Point3="188,30.5" />
+                    Point1="219,25"
+                    Point2="223,25"
+                    Point3="223,29" />
                   <mssgle:LineSegment
-                    End="188,45.5" />
+                    End="223,42.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

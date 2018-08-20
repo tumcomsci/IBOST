@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="STG_Customer"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{84A1E5E1-ECA3-4D6C-81CA-C83EF69EB93A}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{A6E59797-DF7E-4210-BC54-9BB712FF856F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADhDR2CMH5NUIvWE5P+VK2f7kLLqDdGG/pLIm67KzGyjAAAAAAOgAAAAAIAACAAAACoPVPTGBltS6va1t9UkdwJVQjhq4kprlJCMA5f0G8TDyAAAABa51/Us+QXBFQNHzxRTMLDlRuVVSPB3qGeGSPgmtbITEAAAADG/FleT5J2XYa8t5hciWJn/LGoxDK5HsG3rGBVqhrcTHNR8FDuVjUb8Nl+sgtOOKfQtn4T0TmVDdXpFlwh7pCW</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABgzCyeLuXacP3kCxavjXy9iw5MGeouJwpVH3YJxzKWqAAAAAAOgAAAAAIAACAAAADrEk6KiXs0i08gj38u60ivGHqGceyVCal9BYHu5ckRJSAAAAAA3Liosx7iN6XKRL6Zld2n+BVNHWG7IZahm3/n+rgbBkAAAAA1OqQKrih8KNaAAoDOuyd3x0/7ygYsmzM4wUch302zb7pjOaRACCyphvZadch6vgPQMP/hlONmoNFuzE6BfWES</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC0YC1iPRjHRrVeKz0iDX0T7ZMslVoYLHKfSc79amw1SwAAAAAOgAAAAAIAACAAAADHrhYLfBHzs2BktGizL9jL5tVydHnqQwLH28S1k/btjyAAAABKIpmZTcaCDHJhIu1XcDINkPTcMou2eEq0cqbHICnbmkAAAAD79fFItogBmizk5LKLOPTGIDuqhdB4x5rBlrYrP6AxEPQ1SNZlSGfQq4d8zhk6o0K0BHUrGEiiz9qzfuplEvuO</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACZI70VFG/QB/KOJL98ZiS0St3pcdY0D7ogKn1TeVlHNgAAAAAOgAAAAAIAACAAAADGngGe6vRd8apK5Ho/16fKDLXAsZ1p/5kIVlIk9b+yZSAAAABCoOCBzd2PsampQiria1XsPJzoUPuVnORgIzX77LmbmUAAAAAZtjAOhiE9d77VJCEu0tYa90/4caaVA38KAx1LxdSJjCnX2RHPBR5PLW/IOenoYMCPyBhMeHguIpq9pskAjOHB</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -57,7 +57,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAJM8O4RbleG+h3D+kfD7MtH4JgoQBg2Eta72bySpchYwAAAAAOgAAAAAIAACAAAACgHtG5zXusSDRSifSj1ToVk4iMAj5CEexdGWNALoBYNiAAAABQ9QYHfPfIqEDPJg9xfN/iWDrCr+av5RK5jVoT5imB2EAAAAAPfP9NoXJFSUxrPOHhfF4LgG6cydh/7iG0ZN6360tZ3/jsBv/65yT17e0oR9K2+QmeVmiB3QJTOLpyRwAjIcRL</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABga0tz7RctCm+N1OFh45/gsCzIRywyip1qc+h4FwQZTQAAAAAOgAAAAAIAACAAAABz76G19ppZuUvktkwVjnOIRbLrtXJpsWPrBcG5FmcHqyAAAAD0zSxavuNfXpaAaLidIU2BlzQoAygqAlpdteA7ZLANVEAAAADWmY7xaLlMiwGxYFRJVjYQRs14Rtuqsvs9tZEOMWQRrGroEVzFoCN6Jwux3n4YjbZUIh0cF6SQCnvwPwjGdIWl</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
