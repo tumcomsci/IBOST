@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="SODetail"
   DTS:PackageType="5"
-  DTS:VersionBuild="22"
-  DTS:VersionGUID="{643F7A1D-EF78-4DF8-B6C8-274BF865F816}">
+  DTS:VersionBuild="38"
+  DTS:VersionGUID="{5C27AA8B-8E07-4467-9BCA-705B4D0F32BB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABJMx1/xgR5spT4uofQCz/y9v45RTeGGcAGUnJMcsUiGgAAAAAOgAAAAAIAACAAAAAJmTw6J//oMB3pzrlwg9+M57nD1xFgstmze7eIBZfRDyAAAAAAwlEvYjc4f+DB2qezFlmEr35hC4Ae0c0/hNHiG1J3kkAAAAAShNn0RqCt6xOgc2AKtSE+twDClXx7VfYKjIbLhXcr7Gktj/STDKrCHtSdYw+kRMAXXonKZ3CP1v6zw5FAoUmO</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD2IulV1s1ZwRHIHYeZE03hHiB8ka1ecbgQ8W16mHRSvQAAAAAOgAAAAAIAACAAAAAGzIudAvUSLd8nMbWrOoSKjN3jUUMf+jIgIED5N7DrjCAAAADsQcLoJGS6rYi4Iy4otiqCh2y3J9egQw+d8whLDtxvtkAAAABz4hQSXLBEvGN0FUGmdNuUpAorbVadIYkTqItrK19RIOuJasn6zneIMg+uDwaLr4DZQ7tmS+X3TEMwdnyWawNC</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -3268,7 +3268,2742 @@ WHERE SyncDate = (
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update DO (NO DO)"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{CF9DC1C2-5196-46EE-9E2B-6ECC91DB850B}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update DO (NO DO)"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Update DO (NO DO)\Delete"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Delete"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Update DO (NO DO)\Delete.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Delete.Inputs[Conditional Split Input].Columns[DO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DO"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[DO]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Delete.Inputs[Conditional Split Input].Columns[DO (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DO (1)"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[DO (1)]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update DO (NO DO)\Delete.Outputs[Delete (NO DO)]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Delete (NO DO)"
+                  synchronousInputId="Package\Update DO (NO DO)\Delete.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[DO (1)]} != #{Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[DO]}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">[DO (1)] != DO</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Update DO (NO DO)\Delete.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Update DO (NO DO)\Delete.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Update DO (NO DO)\Delete.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Update DO (NO DO)\Delete.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Delete.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Update DO (NO DO)\Delete.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Delete.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Update DO (NO DO)\Delete.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update DO (NO DO)\Delete Reccords NO DO (Where NEW DO NO)"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="Delete Reccords NO DO (Where NEW DO NO)"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">DELETE
+ FROM  [IBOrderTracking].[dbo].[SODetail]
+ WHERE [SO]=? AND [Item]=?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">874</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Update DO (NO DO)\Delete Reccords NO DO (Where NEW DO NO).Connections[OleDbConnection]"
+                  connectionManagerID="{C30C18BD-A555-4DAE-8894-93BE324590CF}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[OLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Update DO (NO DO)\Delete Reccords NO DO (Where NEW DO NO).Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Delete Reccords NO DO (Where NEW DO NO).Inputs[OLE DB Command Input].Columns[SO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SO"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\Delete Reccords NO DO (Where NEW DO NO).Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[SO]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Delete Reccords NO DO (Where NEW DO NO).Inputs[OLE DB Command Input].Columns[Item]"
+                      cachedDataType="i4"
+                      cachedName="Item"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\Delete Reccords NO DO (Where NEW DO NO).Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Item]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\Delete Reccords NO DO (Where NEW DO NO).Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\Delete Reccords NO DO (Where NEW DO NO).Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="i4"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update DO (NO DO)\Delete Reccords NO DO (Where NEW DO NO).Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Update DO (NO DO)\Delete Reccords NO DO (Where NEW DO NO).Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Update DO (NO DO)\Delete Reccords NO DO (Where NEW DO NO).Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Update DO (NO DO)\Delete Reccords NO DO (Where NEW DO NO).Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Delete Reccords NO DO (Where NEW DO NO).Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Update DO (NO DO)\Delete Reccords NO DO (Where NEW DO NO).Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Delete Reccords NO DO (Where NEW DO NO).Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Update DO (NO DO)\Delete Reccords NO DO (Where NEW DO NO).Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update DO (NO DO)\Merge Join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">2</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Left Input].Columns[SO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SO"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[SO]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Left Input].Columns[Item]"
+                      cachedDataType="i4"
+                      cachedName="Item"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[Item]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Left Input].Columns[DO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DO"
+                      cachedSortKeyPosition="3"
+                      lineageId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[DO]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Left Input].Columns[Brand]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Brand"
+                      cachedSortKeyPosition="4"
+                      lineageId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[Brand]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Left Input].Columns[Material]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Material"
+                      cachedSortKeyPosition="5"
+                      lineageId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[Material]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Left Input].Columns[Description]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Description"
+                      cachedSortKeyPosition="6"
+                      lineageId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[Description]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Left Input].Columns[QTY]"
+                      cachedDataType="i4"
+                      cachedName="QTY"
+                      cachedSortKeyPosition="7"
+                      lineageId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[QTY]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Left Input].Columns[Unit]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Unit"
+                      cachedSortKeyPosition="8"
+                      lineageId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[Unit]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Left Input].Columns[PriceUnit]"
+                      cachedDataType="r8"
+                      cachedName="PriceUnit"
+                      cachedSortKeyPosition="9"
+                      lineageId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[PriceUnit]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Left Input].Columns[NetSales]"
+                      cachedDataType="r8"
+                      cachedName="NetSales"
+                      cachedSortKeyPosition="10"
+                      lineageId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[NetSales]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Left Input].Columns[NetInvoice]"
+                      cachedDataType="r8"
+                      cachedName="NetInvoice"
+                      cachedSortKeyPosition="11"
+                      lineageId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[NetInvoice]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Left Input].Columns[Lot]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="Lot"
+                      cachedSortKeyPosition="12"
+                      lineageId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[Lot]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Right Input].Columns[SO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SO"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[SO]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Right Input].Columns[Item]"
+                      cachedDataType="i4"
+                      cachedName="Item"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[Item]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Right Input].Columns[DO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DO"
+                      cachedSortKeyPosition="3"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[DO]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Right Input].Columns[Brand]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Brand"
+                      cachedSortKeyPosition="4"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[Brand]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Right Input].Columns[Material]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Material"
+                      cachedSortKeyPosition="5"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[Material]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Right Input].Columns[Description]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Description"
+                      cachedSortKeyPosition="6"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[Description]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Right Input].Columns[QTY]"
+                      cachedDataType="i4"
+                      cachedName="QTY"
+                      cachedSortKeyPosition="7"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[QTY]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Right Input].Columns[Unit]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Unit"
+                      cachedSortKeyPosition="8"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[Unit]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Right Input].Columns[PriceUnit]"
+                      cachedDataType="r8"
+                      cachedName="PriceUnit"
+                      cachedSortKeyPosition="9"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[PriceUnit]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Right Input].Columns[NetSales]"
+                      cachedDataType="r8"
+                      cachedName="NetSales"
+                      cachedSortKeyPosition="10"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[NetSales]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Right Input].Columns[NetInvoice]"
+                      cachedDataType="r8"
+                      cachedName="NetInvoice"
+                      cachedSortKeyPosition="11"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[NetInvoice]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Right Input].Columns[Lot]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="Lot"
+                      cachedSortKeyPosition="12"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[Lot]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output]"
+                  isSorted="true"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[SO]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[SO]"
+                      name="SO"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Left Input].Columns[SO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Item]"
+                      dataType="i4"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Item]"
+                      name="Item"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Left Input].Columns[Item]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[DO]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[DO]"
+                      name="DO">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Left Input].Columns[DO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Brand]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Brand]"
+                      name="Brand">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Left Input].Columns[Brand]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Material]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Material]"
+                      name="Material">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Left Input].Columns[Material]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Description]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Description]"
+                      name="Description">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Left Input].Columns[Description]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[QTY]"
+                      dataType="i4"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[QTY]"
+                      name="QTY">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Left Input].Columns[QTY]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Unit]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Unit]"
+                      name="Unit">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Left Input].Columns[Unit]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[PriceUnit]"
+                      dataType="r8"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[PriceUnit]"
+                      name="PriceUnit">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Left Input].Columns[PriceUnit]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[NetSales]"
+                      dataType="r8"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[NetSales]"
+                      name="NetSales">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Left Input].Columns[NetSales]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[NetInvoice]"
+                      dataType="r8"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[NetInvoice]"
+                      name="NetInvoice">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Left Input].Columns[NetInvoice]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Lot]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Lot]"
+                      name="Lot">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Left Input].Columns[Lot]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[SO (1)]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[SO (1)]"
+                      name="SO (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Right Input].Columns[SO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Item (1)]"
+                      dataType="i4"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Item (1)]"
+                      name="Item (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Right Input].Columns[Item]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[DO (1)]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[DO (1)]"
+                      name="DO (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Right Input].Columns[DO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Brand (1)]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Brand (1)]"
+                      name="Brand (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Right Input].Columns[Brand]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Material (1)]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Material (1)]"
+                      name="Material (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Right Input].Columns[Material]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Description (1)]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Description (1)]"
+                      name="Description (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Right Input].Columns[Description]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[QTY (1)]"
+                      dataType="i4"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[QTY (1)]"
+                      name="QTY (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Right Input].Columns[QTY]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Unit (1)]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Unit (1)]"
+                      name="Unit (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Right Input].Columns[Unit]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[PriceUnit (1)]"
+                      dataType="r8"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[PriceUnit (1)]"
+                      name="PriceUnit (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Right Input].Columns[PriceUnit]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[NetSales (1)]"
+                      dataType="r8"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[NetSales (1)]"
+                      name="NetSales (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Right Input].Columns[NetSales]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[NetInvoice (1)]"
+                      dataType="r8"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[NetInvoice (1)]"
+                      name="NetInvoice (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Right Input].Columns[NetInvoice]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Lot (1)]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Lot (1)]"
+                      name="Lot (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Right Input].Columns[Lot]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update DO (NO DO)\SODetail Table"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+              name="SODetail Table"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement used by the component to extract data."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT *
+  FROM SODetail
+WHERE DO = 'NO DO';</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="The Source database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."SODetail"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the mode to retrieve external column information"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Update DO (NO DO)\SODetail Table.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output]"
+                  name="ADO NET Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[SO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[SO]"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[SO]"
+                      name="SO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[Item]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[Item]"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[Item]"
+                      name="Item"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[DO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[DO]"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[DO]"
+                      name="DO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[FCLS]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[FCLS]"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[FCLS]"
+                      name="FCLS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[Brand]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[Brand]"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[Brand]"
+                      name="Brand"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[Material]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[Material]"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[Material]"
+                      name="Material"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[Description]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[Description]"
+                      length="500"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[Description]"
+                      name="Description"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[QTY]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[QTY]"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[QTY]"
+                      name="QTY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[Unit]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[Unit]"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[Unit]"
+                      name="Unit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[PriceUnit]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[PriceUnit]"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[PriceUnit]"
+                      name="PriceUnit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[NetSales]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[NetSales]"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[NetSales]"
+                      name="NetSales"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[NetInvoice]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[NetInvoice]"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[NetInvoice]"
+                      name="NetInvoice"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[Lot]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[Lot]"
+                      length="200"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[Lot]"
+                      name="Lot"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[LotSuggest]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[LotSuggest]"
+                      length="200"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[LotSuggest]"
+                      name="LotSuggest"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[LotRemark]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[LotRemark]"
+                      length="200"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[LotRemark]"
+                      name="LotRemark"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[LotRemarkBySaleCo]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[LotRemarkBySaleCo]"
+                      length="200"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[LotRemarkBySaleCo]"
+                      name="LotRemarkBySaleCo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[ConfirmLotStatus]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[ConfirmLotStatus]"
+                      length="20"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[ConfirmLotStatus]"
+                      name="ConfirmLotStatus"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[StickerDeliveryDate]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[StickerDeliveryDate]"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[StickerDeliveryDate]"
+                      name="StickerDeliveryDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[CartonDeliveryDate]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[CartonDeliveryDate]"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[CartonDeliveryDate]"
+                      name="CartonDeliveryDate"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[SO]"
+                      dataType="wstr"
+                      length="50"
+                      name="SO" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[Item]"
+                      dataType="i4"
+                      name="Item" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[DO]"
+                      dataType="wstr"
+                      length="50"
+                      name="DO" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[FCLS]"
+                      dataType="r8"
+                      name="FCLS" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[Brand]"
+                      dataType="wstr"
+                      length="50"
+                      name="Brand" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[Material]"
+                      dataType="wstr"
+                      length="50"
+                      name="Material" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[Description]"
+                      dataType="wstr"
+                      length="500"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[QTY]"
+                      dataType="i4"
+                      name="QTY" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[Unit]"
+                      dataType="wstr"
+                      length="50"
+                      name="Unit" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[PriceUnit]"
+                      dataType="r8"
+                      name="PriceUnit" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[NetSales]"
+                      dataType="r8"
+                      name="NetSales" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[NetInvoice]"
+                      dataType="r8"
+                      name="NetInvoice" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[Lot]"
+                      dataType="wstr"
+                      length="200"
+                      name="Lot" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[LotSuggest]"
+                      dataType="wstr"
+                      length="200"
+                      name="LotSuggest" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[LotRemark]"
+                      dataType="wstr"
+                      length="200"
+                      name="LotRemark" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[LotRemarkBySaleCo]"
+                      dataType="wstr"
+                      length="200"
+                      name="LotRemarkBySaleCo" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[ConfirmLotStatus]"
+                      dataType="wstr"
+                      length="20"
+                      name="ConfirmLotStatus" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[StickerDeliveryDate]"
+                      dataType="dbDate"
+                      name="StickerDeliveryDate" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].ExternalColumns[CartonDeliveryDate]"
+                      dataType="dbDate"
+                      name="CartonDeliveryDate" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output]"
+                  isErrorOut="true"
+                  name="ADO NET Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[SO]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[SO]"
+                      name="SO" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[Item]"
+                      dataType="i4"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[Item]"
+                      name="Item" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[DO]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[DO]"
+                      name="DO" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[FCLS]"
+                      dataType="r8"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[FCLS]"
+                      name="FCLS" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[Brand]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[Brand]"
+                      name="Brand" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[Material]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[Material]"
+                      name="Material" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[Description]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[Description]"
+                      name="Description" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[QTY]"
+                      dataType="i4"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[QTY]"
+                      name="QTY" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[Unit]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[Unit]"
+                      name="Unit" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[PriceUnit]"
+                      dataType="r8"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[PriceUnit]"
+                      name="PriceUnit" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[NetSales]"
+                      dataType="r8"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[NetSales]"
+                      name="NetSales" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[NetInvoice]"
+                      dataType="r8"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[NetInvoice]"
+                      name="NetInvoice" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[Lot]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[Lot]"
+                      name="Lot" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[LotSuggest]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[LotSuggest]"
+                      name="LotSuggest" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[LotRemark]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[LotRemark]"
+                      name="LotRemark" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[LotRemarkBySaleCo]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[LotRemarkBySaleCo]"
+                      name="LotRemarkBySaleCo" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[ConfirmLotStatus]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[ConfirmLotStatus]"
+                      name="ConfirmLotStatus" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[StickerDeliveryDate]"
+                      dataType="dbDate"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[StickerDeliveryDate]"
+                      name="StickerDeliveryDate" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[CartonDeliveryDate]"
+                      dataType="dbDate"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[CartonDeliveryDate]"
+                      name="CartonDeliveryDate" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update DO (NO DO)\Sort STG"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort STG"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Update DO (NO DO)\Sort STG.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort STG.Inputs[Sort Input].Columns[SO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SO"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[SO]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort STG.Inputs[Sort Input].Columns[Item]"
+                      cachedDataType="i4"
+                      cachedName="Item"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[Item]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort STG.Inputs[Sort Input].Columns[DO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DO"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[DO]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">3</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort STG.Inputs[Sort Input].Columns[Brand]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Brand"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[Brand]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">4</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort STG.Inputs[Sort Input].Columns[Material]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Material"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[Material]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">5</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort STG.Inputs[Sort Input].Columns[Description]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Description"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[Description]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">6</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort STG.Inputs[Sort Input].Columns[QTY]"
+                      cachedDataType="i4"
+                      cachedName="QTY"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[QTY]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">7</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort STG.Inputs[Sort Input].Columns[Unit]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Unit"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[Unit]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">8</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort STG.Inputs[Sort Input].Columns[PriceUnit]"
+                      cachedDataType="r8"
+                      cachedName="PriceUnit"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[PriceUnit]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">9</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort STG.Inputs[Sort Input].Columns[NetSales]"
+                      cachedDataType="r8"
+                      cachedName="NetSales"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[NetSales]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">10</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort STG.Inputs[Sort Input].Columns[NetInvoice]"
+                      cachedDataType="r8"
+                      cachedName="NetInvoice"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[NetInvoice]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">11</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort STG.Inputs[Sort Input].Columns[Lot]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="Lot"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[Lot]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">12</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort STG.Inputs[Sort Input].Columns[SyncDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="SyncDate"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[SyncDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[SO]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[SO]"
+                      name="SO"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[SO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[Item]"
+                      dataType="i4"
+                      lineageId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[Item]"
+                      name="Item"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[Item]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[DO]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[DO]"
+                      name="DO"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[DO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[Brand]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[Brand]"
+                      name="Brand"
+                      sortKeyPosition="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[Brand]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[Material]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[Material]"
+                      name="Material"
+                      sortKeyPosition="5">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[Material]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[Description]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[Description]"
+                      name="Description"
+                      sortKeyPosition="6">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[Description]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[QTY]"
+                      dataType="i4"
+                      lineageId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[QTY]"
+                      name="QTY"
+                      sortKeyPosition="7">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[QTY]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[Unit]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[Unit]"
+                      name="Unit"
+                      sortKeyPosition="8">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[Unit]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[PriceUnit]"
+                      dataType="r8"
+                      lineageId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[PriceUnit]"
+                      name="PriceUnit"
+                      sortKeyPosition="9">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[PriceUnit]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[NetSales]"
+                      dataType="r8"
+                      lineageId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[NetSales]"
+                      name="NetSales"
+                      sortKeyPosition="10">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[NetSales]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[NetInvoice]"
+                      dataType="r8"
+                      lineageId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[NetInvoice]"
+                      name="NetInvoice"
+                      sortKeyPosition="11">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[NetInvoice]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[Lot]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[Lot]"
+                      name="Lot"
+                      sortKeyPosition="12">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[Lot]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[SyncDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output].Columns[SyncDate]"
+                      name="SyncDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[SyncDate]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update DO (NO DO)\Sort Table"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort Table"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Update DO (NO DO)\Sort Table.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Inputs[Sort Input].Columns[SO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SO"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[SO]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Inputs[Sort Input].Columns[Item]"
+                      cachedDataType="i4"
+                      cachedName="Item"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[Item]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Inputs[Sort Input].Columns[DO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DO"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[DO]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">3</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Inputs[Sort Input].Columns[FCLS]"
+                      cachedDataType="r8"
+                      cachedName="FCLS"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[FCLS]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Inputs[Sort Input].Columns[Brand]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Brand"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[Brand]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">4</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Inputs[Sort Input].Columns[Material]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Material"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[Material]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">5</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Inputs[Sort Input].Columns[Description]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Description"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[Description]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">6</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Inputs[Sort Input].Columns[QTY]"
+                      cachedDataType="i4"
+                      cachedName="QTY"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[QTY]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">7</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Inputs[Sort Input].Columns[Unit]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Unit"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[Unit]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">8</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Inputs[Sort Input].Columns[PriceUnit]"
+                      cachedDataType="r8"
+                      cachedName="PriceUnit"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[PriceUnit]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">9</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Inputs[Sort Input].Columns[NetSales]"
+                      cachedDataType="r8"
+                      cachedName="NetSales"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[NetSales]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">10</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Inputs[Sort Input].Columns[NetInvoice]"
+                      cachedDataType="r8"
+                      cachedName="NetInvoice"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[NetInvoice]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">11</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Inputs[Sort Input].Columns[Lot]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="Lot"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[Lot]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">12</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Inputs[Sort Input].Columns[LotSuggest]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="LotSuggest"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[LotSuggest]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Inputs[Sort Input].Columns[LotRemark]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="LotRemark"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[LotRemark]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Inputs[Sort Input].Columns[StickerDeliveryDate]"
+                      cachedDataType="dbDate"
+                      cachedName="StickerDeliveryDate"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[StickerDeliveryDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Inputs[Sort Input].Columns[CartonDeliveryDate]"
+                      cachedDataType="dbDate"
+                      cachedName="CartonDeliveryDate"
+                      lineageId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[CartonDeliveryDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[SO]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[SO]"
+                      name="SO"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[SO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[Item]"
+                      dataType="i4"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[Item]"
+                      name="Item"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[Item]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[DO]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[DO]"
+                      name="DO"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[DO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[FCLS]"
+                      dataType="r8"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[FCLS]"
+                      name="FCLS">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[FCLS]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[Brand]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[Brand]"
+                      name="Brand"
+                      sortKeyPosition="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[Brand]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[Material]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[Material]"
+                      name="Material"
+                      sortKeyPosition="5">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[Material]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[Description]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[Description]"
+                      name="Description"
+                      sortKeyPosition="6">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[Description]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[QTY]"
+                      dataType="i4"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[QTY]"
+                      name="QTY"
+                      sortKeyPosition="7">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[QTY]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[Unit]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[Unit]"
+                      name="Unit"
+                      sortKeyPosition="8">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[Unit]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[PriceUnit]"
+                      dataType="r8"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[PriceUnit]"
+                      name="PriceUnit"
+                      sortKeyPosition="9">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[PriceUnit]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[NetSales]"
+                      dataType="r8"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[NetSales]"
+                      name="NetSales"
+                      sortKeyPosition="10">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[NetSales]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[NetInvoice]"
+                      dataType="r8"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[NetInvoice]"
+                      name="NetInvoice"
+                      sortKeyPosition="11">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[NetInvoice]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[Lot]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[Lot]"
+                      name="Lot"
+                      sortKeyPosition="12">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[Lot]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[LotSuggest]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[LotSuggest]"
+                      name="LotSuggest">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[LotSuggest]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[LotRemark]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[LotRemark]"
+                      name="LotRemark">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[LotRemark]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[StickerDeliveryDate]"
+                      dataType="dbDate"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[StickerDeliveryDate]"
+                      name="StickerDeliveryDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[StickerDeliveryDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[CartonDeliveryDate]"
+                      dataType="dbDate"
+                      lineageId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output].Columns[CartonDeliveryDate]"
+                      name="CartonDeliveryDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output].Columns[CartonDeliveryDate]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update DO (NO DO)\Split Records"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Split Records"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Update DO (NO DO)\Split Records.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Split Records.Inputs[Conditional Split Input].Columns[SO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SO"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[SO]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Split Records.Inputs[Conditional Split Input].Columns[Item]"
+                      cachedDataType="i4"
+                      cachedName="Item"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Item]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Split Records.Inputs[Conditional Split Input].Columns[DO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DO"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[DO]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Split Records.Inputs[Conditional Split Input].Columns[SO (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SO (1)"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[SO (1)]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Split Records.Inputs[Conditional Split Input].Columns[Item (1)]"
+                      cachedDataType="i4"
+                      cachedName="Item (1)"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Item (1)]" />
+                    <inputColumn
+                      refId="Package\Update DO (NO DO)\Split Records.Inputs[Conditional Split Input].Columns[DO (1)]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DO (1)"
+                      lineageId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[DO (1)]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update DO (NO DO)\Split Records.Outputs[NO DO]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="NO DO"
+                  synchronousInputId="Package\Update DO (NO DO)\Split Records.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">![ISNULL](#{Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[SO (1)]}) &amp;&amp; ![ISNULL](#{Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[SO]}) &amp;&amp; ![ISNULL](#{Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Item (1)]}) &amp;&amp; ![ISNULL](#{Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[Item]}) &amp;&amp; (#{Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[DO (1)]} != (#{Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output].Columns[DO]}))</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">!ISNULL([SO (1)]) &amp;&amp; !ISNULL(SO) &amp;&amp; !ISNULL([Item (1)]) &amp;&amp; !ISNULL(Item) &amp;&amp; ([DO (1)] != (DO))</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Update DO (NO DO)\Split Records.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Update DO (NO DO)\Split Records.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Update DO (NO DO)\Split Records.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Update DO (NO DO)\Split Records.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Split Records.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Update DO (NO DO)\Split Records.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\Split Records.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Update DO (NO DO)\Split Records.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update DO (NO DO)\STG_SODetail"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+              name="STG_SODetail"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement used by the component to extract data."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT *
+  FROM STG_SODetail
+WHERE SyncDate = ( 
+    SELECT MAX(SyncDate) 
+    FROM STG_SODetail
+);</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="The Source database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the mode to retrieve external column information"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Update DO (NO DO)\STG_SODetail.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
+                  connectionManagerRefId="Package.ConnectionManagers[10.0.0.77.IBOrderTracking.IBOT1]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output]"
+                  name="ADO NET Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[SO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[SO]"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[SO]"
+                      name="SO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[Item]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[Item]"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[Item]"
+                      name="Item"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[DO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[DO]"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[DO]"
+                      name="DO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[Brand]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[Brand]"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[Brand]"
+                      name="Brand"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[Material]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[Material]"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[Material]"
+                      name="Material"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[Description]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[Description]"
+                      length="500"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[Description]"
+                      name="Description"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[QTY]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[QTY]"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[QTY]"
+                      name="QTY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[Unit]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[Unit]"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[Unit]"
+                      name="Unit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[PriceUnit]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[PriceUnit]"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[PriceUnit]"
+                      name="PriceUnit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[NetSales]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[NetSales]"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[NetSales]"
+                      name="NetSales"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[NetInvoice]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[NetInvoice]"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[NetInvoice]"
+                      name="NetInvoice"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[Lot]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[Lot]"
+                      length="200"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[Lot]"
+                      name="Lot"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[SyncDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[SyncDate]"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].Columns[SyncDate]"
+                      name="SyncDate"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[SO]"
+                      dataType="wstr"
+                      length="50"
+                      name="SO" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[Item]"
+                      dataType="i4"
+                      name="Item" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[DO]"
+                      dataType="wstr"
+                      length="50"
+                      name="DO" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[Brand]"
+                      dataType="wstr"
+                      length="50"
+                      name="Brand" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[Material]"
+                      dataType="wstr"
+                      length="50"
+                      name="Material" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[Description]"
+                      dataType="wstr"
+                      length="500"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[QTY]"
+                      dataType="i4"
+                      name="QTY" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[Unit]"
+                      dataType="wstr"
+                      length="50"
+                      name="Unit" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[PriceUnit]"
+                      dataType="r8"
+                      name="PriceUnit" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[NetSales]"
+                      dataType="r8"
+                      name="NetSales" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[NetInvoice]"
+                      dataType="r8"
+                      name="NetInvoice" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[Lot]"
+                      dataType="wstr"
+                      length="200"
+                      name="Lot" />
+                    <externalMetadataColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output].ExternalColumns[SyncDate]"
+                      dataType="dbTimeStamp"
+                      name="SyncDate" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output]"
+                  isErrorOut="true"
+                  name="ADO NET Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[SO]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[SO]"
+                      name="SO" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[Item]"
+                      dataType="i4"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[Item]"
+                      name="Item" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[DO]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[DO]"
+                      name="DO" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[Brand]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[Brand]"
+                      name="Brand" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[Material]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[Material]"
+                      name="Material" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[Description]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[Description]"
+                      name="Description" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[QTY]"
+                      dataType="i4"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[QTY]"
+                      name="QTY" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[Unit]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[Unit]"
+                      name="Unit" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[PriceUnit]"
+                      dataType="r8"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[PriceUnit]"
+                      name="PriceUnit" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[NetSales]"
+                      dataType="r8"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[NetSales]"
+                      name="NetSales" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[NetInvoice]"
+                      dataType="r8"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[NetInvoice]"
+                      name="NetInvoice" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[Lot]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[Lot]"
+                      name="Lot" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[SyncDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[SyncDate]"
+                      name="SyncDate" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Update DO (NO DO).Paths[ADO NET Source Output]"
+              endId="Package\Update DO (NO DO)\Sort STG.Inputs[Sort Input]"
+              name="ADO NET Source Output"
+              startId="Package\Update DO (NO DO)\STG_SODetail.Outputs[ADO NET Source Output]" />
+            <path
+              refId="Package\Update DO (NO DO).Paths[ADO NET Source Output1]"
+              endId="Package\Update DO (NO DO)\Sort Table.Inputs[Sort Input]"
+              name="ADO NET Source Output"
+              startId="Package\Update DO (NO DO)\SODetail Table.Outputs[ADO NET Source Output]" />
+            <path
+              refId="Package\Update DO (NO DO).Paths[Delete (NO DO)]"
+              endId="Package\Update DO (NO DO)\Delete Reccords NO DO (Where NEW DO NO).Inputs[OLE DB Command Input]"
+              name="Delete (NO DO)"
+              startId="Package\Update DO (NO DO)\Delete.Outputs[Delete (NO DO)]" />
+            <path
+              refId="Package\Update DO (NO DO).Paths[Merge Join Output]"
+              endId="Package\Update DO (NO DO)\Split Records.Inputs[Conditional Split Input]"
+              name="Merge Join Output"
+              startId="Package\Update DO (NO DO)\Merge Join.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Update DO (NO DO).Paths[NO DO]"
+              endId="Package\Update DO (NO DO)\Delete.Inputs[Conditional Split Input]"
+              name="NO DO"
+              startId="Package\Update DO (NO DO)\Split Records.Outputs[NO DO]" />
+            <path
+              refId="Package\Update DO (NO DO).Paths[Sort Output]"
+              endId="Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Update DO (NO DO)\Sort STG.Outputs[Sort Output]" />
+            <path
+              refId="Package\Update DO (NO DO).Paths[Sort Output1]"
+              endId="Package\Update DO (NO DO)\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Update DO (NO DO)\Sort Table.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{7D82EF6D-AB73-4AB8-B196-F93758302ED8}"
+      DTS:From="Package\Update DO (NO DO)"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\SODetail Table" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -3280,11 +6015,49 @@ WHERE SyncDate = (
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="150,42"
           Id="Package\SODetail Table"
           TopLeft="408,132" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Update DO (NO DO)"
+          TopLeft="60.5,30.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="149,72.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="334,59.5"
+              Start="0,0"
+              End="334,52">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.75"
+                    Point2="0,29.75"
+                    Point3="4,29.75" />
+                  <mssgle:LineSegment
+                    End="330,29.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="330,29.75"
+                    Point2="334,29.75"
+                    Point3="334,33.75" />
+                  <mssgle:LineSegment
+                    End="334,52" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -3294,25 +6067,41 @@ WHERE SyncDate = (
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="123,42"
+          Id="Package\SODetail Table\Sort STG"
+          TopLeft="191.25,108.75" />
+        <NodeLayout
+          Size="236,42"
+          Id="Package\SODetail Table\Update Records (SODetail Table)"
+          TopLeft="740,452.5" />
+        <NodeLayout
           Size="146,42"
           Id="Package\SODetail Table\STG_SODetail"
           TopLeft="28.75,38.75" />
-        <NodeLayout
-          Size="150,42"
-          Id="Package\SODetail Table\SODetail Table"
-          TopLeft="785,37.5" />
         <NodeLayout
           Size="132,42"
           Id="Package\SODetail Table\Merge Join"
           TopLeft="342.5,190" />
         <NodeLayout
+          Size="142,42"
+          Id="Package\SODetail Table\Split Records"
+          TopLeft="51.25,287.5" />
+        <NodeLayout
+          Size="115,42"
+          Id="Package\SODetail Table\Update"
+          TopLeft="487.5,285" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\SODetail Table\SODetail Table"
+          TopLeft="785,37.5" />
+        <NodeLayout
+          Size="254,42"
+          Id="Package\SODetail Table\Insert New Records (SODetail Table)"
+          TopLeft="25,445" />
+        <NodeLayout
           Size="129,42"
           Id="Package\SODetail Table\Sort Table"
           TopLeft="556.25,105" />
-        <NodeLayout
-          Size="123,42"
-          Id="Package\SODetail Table\Sort STG"
-          TopLeft="191.25,108.75" />
         <EdgeLayout
           Id="Package\SODetail Table.Paths[ADO NET Source Output]"
           TopLeft="101.75,80.75">
@@ -3348,31 +6137,91 @@ WHERE SyncDate = (
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\SODetail Table.Paths[ADO NET Source Output1]"
-          TopLeft="860,79.5">
+          Id="Package\SODetail Table.Paths[Update records]"
+          TopLeft="545,327">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-239.25,25.5"
+              EndConnector="313,125.5"
               Start="0,0"
-              End="-239.25,18">
+              End="313,118">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,8.75" />
+                    End="0,58.75" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,8.75"
-                    Point2="0,12.75"
-                    Point3="-4,12.75" />
+                    Point1="0,58.75"
+                    Point2="0,62.75"
+                    Point3="4,62.75" />
                   <mssgle:LineSegment
-                    End="-235.25,12.75" />
+                    End="309,62.75" />
                   <mssgle:CubicBezierSegment
-                    Point1="-235.25,12.75"
-                    Point2="-239.25,12.75"
-                    Point3="-239.25,16.75" />
+                    Point1="309,62.75"
+                    Point2="313,62.75"
+                    Point3="313,66.75" />
                   <mssgle:LineSegment
-                    End="-239.25,18" />
+                    End="313,118" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="122.3734765625,67.75,68.253046875,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SODetail Table.Paths[Update (SO Item DO Match)]"
+          TopLeft="193.25,307.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="294.25,0"
+              Start="0,0"
+              End="286.75,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="286.75,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="80.27431640625,5,126.2013671875,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SODetail Table.Paths[Sort Output1]"
+          TopLeft="620.75,147">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-191.583333333333,43"
+              Start="0,0"
+              End="-191.583333333333,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.4910179640718" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.4910179640718"
+                    Point2="0,25.4910179640718"
+                    Point3="-4,25.4910179640718" />
+                  <mssgle:LineSegment
+                    End="-187.583333333333,25.4910179640718" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-187.583333333333,25.4910179640718"
+                    Point2="-191.583333333333,25.4910179640718"
+                    Point3="-191.583333333333,29.4910179640718" />
+                  <mssgle:LineSegment
+                    End="-191.583333333333,35.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3416,48 +6265,6 @@ WHERE SyncDate = (
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\SODetail Table.Paths[Sort Output1]"
-          TopLeft="620.75,147">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-191.583333333333,43"
-              Start="0,0"
-              End="-191.583333333333,35.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.4910179640718" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.4910179640718"
-                    Point2="0,25.4910179640718"
-                    Point3="-4,25.4910179640718" />
-                  <mssgle:LineSegment
-                    End="-187.583333333333,25.4910179640718" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-187.583333333333,25.4910179640718"
-                    Point2="-191.583333333333,25.4910179640718"
-                    Point3="-191.583333333333,29.4910179640718" />
-                  <mssgle:LineSegment
-                    End="-191.583333333333,35.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="115,42"
-          Id="Package\SODetail Table\Update"
-          TopLeft="487.5,285" />
-        <NodeLayout
-          Size="142,42"
-          Id="Package\SODetail Table\Split Records"
-          TopLeft="51.25,287.5" />
-        <EdgeLayout
           Id="Package\SODetail Table.Paths[Merge Join Output]"
           TopLeft="408.5,232">
           <EdgeLayout.Curve>
@@ -3491,34 +6298,6 @@ WHERE SyncDate = (
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SODetail Table.Paths[Update (SO Item DO Match)]"
-          TopLeft="193.25,307.25">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="294.25,0"
-              Start="0,0"
-              End="286.75,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="286.75,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="80.27431640625,5,126.2013671875,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="254,42"
-          Id="Package\SODetail Table\Insert New Records (SODetail Table)"
-          TopLeft="25,445" />
         <EdgeLayout
           Id="Package\SODetail Table.Paths[Insert (SO Item DO Not Match)]"
           TopLeft="122.25,329.5">
@@ -3555,44 +6334,38 @@ WHERE SyncDate = (
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="236,42"
-          Id="Package\SODetail Table\Update Records (SODetail Table)"
-          TopLeft="740,452.5" />
         <EdgeLayout
-          Id="Package\SODetail Table.Paths[Update records]"
-          TopLeft="545,327">
+          Id="Package\SODetail Table.Paths[ADO NET Source Output1]"
+          TopLeft="860,79.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="313,125.5"
+              EndConnector="-239.25,25.5"
               Start="0,0"
-              End="313,118">
+              End="-239.25,18">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,58.75" />
+                    End="0,8.75" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,58.75"
-                    Point2="0,62.75"
-                    Point3="4,62.75" />
+                    Point1="0,8.75"
+                    Point2="0,12.75"
+                    Point3="-4,12.75" />
                   <mssgle:LineSegment
-                    End="309,62.75" />
+                    End="-235.25,12.75" />
                   <mssgle:CubicBezierSegment
-                    Point1="309,62.75"
-                    Point2="313,62.75"
-                    Point3="313,66.75" />
+                    Point1="-235.25,12.75"
+                    Point2="-239.25,12.75"
+                    Point3="-239.25,16.75" />
                   <mssgle:LineSegment
-                    End="313,118" />
+                    End="-239.25,18" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="122.3734765625,67.75,68.253046875,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3616,6 +6389,272 @@ WHERE SyncDate = (
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\SODetail Table\Insert New Records (SODetail Table)">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Update DO (NO DO)">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="146,42"
+          Id="Package\Update DO (NO DO)\STG_SODetail"
+          TopLeft="21,20" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Update DO (NO DO)\SODetail Table"
+          TopLeft="827,21" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\Update DO (NO DO)\Sort STG"
+          TopLeft="217,92" />
+        <NodeLayout
+          Size="129,42"
+          Id="Package\Update DO (NO DO)\Sort Table"
+          TopLeft="605,89" />
+        <EdgeLayout
+          Id="Package\Update DO (NO DO).Paths[ADO NET Source Output]"
+          TopLeft="94,62">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="184.5,30"
+              Start="0,0"
+              End="184.5,22.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11"
+                    Point2="0,15"
+                    Point3="4,15" />
+                  <mssgle:LineSegment
+                    End="180.5,15" />
+                  <mssgle:CubicBezierSegment
+                    Point1="180.5,15"
+                    Point2="184.5,15"
+                    Point3="184.5,19" />
+                  <mssgle:LineSegment
+                    End="184.5,22.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update DO (NO DO).Paths[ADO NET Source Output1]"
+          TopLeft="902,63">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-232.5,26"
+              Start="0,0"
+              End="-232.5,18.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9"
+                    Point2="0,13"
+                    Point3="-4,13" />
+                  <mssgle:LineSegment
+                    End="-228.5,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-228.5,13"
+                    Point2="-232.5,13"
+                    Point3="-232.5,17" />
+                  <mssgle:LineSegment
+                    End="-232.5,18.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Update DO (NO DO)\Split Records"
+          TopLeft="85,274" />
+        <NodeLayout
+          Size="111,42"
+          Id="Package\Update DO (NO DO)\Delete"
+          TopLeft="382,271" />
+        <NodeLayout
+          Size="132,42"
+          Id="Package\Update DO (NO DO)\Merge Join"
+          TopLeft="397,164" />
+        <EdgeLayout
+          Id="Package\Update DO (NO DO).Paths[Sort Output]"
+          TopLeft="278.5,134">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="163.833333333333,30"
+              Start="0,0"
+              End="163.833333333333,22.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.7844311377246" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.7844311377246"
+                    Point2="0,17.7844311377246"
+                    Point3="4,17.7844311377246" />
+                  <mssgle:LineSegment
+                    End="159.833333333333,17.7844311377246" />
+                  <mssgle:CubicBezierSegment
+                    Point1="159.833333333333,17.7844311377246"
+                    Point2="163.833333333333,17.7844311377246"
+                    Point3="163.833333333333,21.7844311377246" />
+                  <mssgle:LineSegment
+                    End="163.833333333333,22.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update DO (NO DO).Paths[Sort Output1]"
+          TopLeft="669.5,131">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-185.833333333333,33"
+              Start="0,0"
+              End="-185.833333333333,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.562874251497" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.562874251497"
+                    Point2="0,19.562874251497"
+                    Point3="-4,19.562874251497" />
+                  <mssgle:LineSegment
+                    End="-181.833333333333,19.562874251497" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-181.833333333333,19.562874251497"
+                    Point2="-185.833333333333,19.562874251497"
+                    Point3="-185.833333333333,23.562874251497" />
+                  <mssgle:LineSegment
+                    End="-185.833333333333,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update DO (NO DO).Paths[Merge Join Output]"
+          TopLeft="463,206">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-307,68"
+              Start="0,0"
+              End="-307,60.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30"
+                    Point2="0,34"
+                    Point3="-4,34" />
+                  <mssgle:LineSegment
+                    End="-303,34" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-303,34"
+                    Point2="-307,34"
+                    Point3="-307,38" />
+                  <mssgle:LineSegment
+                    End="-307,60.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update DO (NO DO).Paths[NO DO]"
+          TopLeft="227,293.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="155,0"
+              Start="0,0"
+              End="147.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="147.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="57.9121875,5,31.675625,9.5732421875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="297,42"
+          Id="Package\Update DO (NO DO)\Delete Reccords NO DO (Where NEW DO NO)"
+          TopLeft="685.5,272" />
+        <EdgeLayout
+          Id="Package\Update DO (NO DO).Paths[Delete (NO DO)]"
+          TopLeft="493,292.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="192.5,0"
+              Start="0,0"
+              End="185,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="185,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="57.27326171875,5,70.4534765625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Update DO (NO DO)\SODetail Table">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
