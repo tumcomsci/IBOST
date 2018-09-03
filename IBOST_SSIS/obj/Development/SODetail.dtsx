@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="SODetail"
   DTS:PackageType="5"
-  DTS:VersionBuild="38"
-  DTS:VersionGUID="{5C27AA8B-8E07-4467-9BCA-705B4D0F32BB}">
+  DTS:VersionBuild="39"
+  DTS:VersionGUID="{40D69B47-5F5A-4D5A-AB22-9C9CBFAA9CB1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD2IulV1s1ZwRHIHYeZE03hHiB8ka1ecbgQ8W16mHRSvQAAAAAOgAAAAAIAACAAAAAGzIudAvUSLd8nMbWrOoSKjN3jUUMf+jIgIED5N7DrjCAAAADsQcLoJGS6rYi4Iy4otiqCh2y3J9egQw+d8whLDtxvtkAAAABz4hQSXLBEvGN0FUGmdNuUpAorbVadIYkTqItrK19RIOuJasn6zneIMg+uDwaLr4DZQ7tmS+X3TEMwdnyWawNC</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADIDG14hFk8IbzsHwyq1715OocLx8TVQFiaJhrKKRHsOgAAAAAOgAAAAAIAACAAAABC8A8Va+ZLDWcT5yqNVx3vMgkAe5bYUQqcbJa6H2tr+yAAAAC3PPHhwMZRibIJCxR1lrjYR+OplKAk0sDSHfkEQHxr90AAAAA7R06p0uMHCyWtDhgVkZmABGzDbq90nRFcUpvF9lZQJ10wSoeJ3rnMxnrU3LPH3esS9BsNsGF6qc71HRAM0WEn</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -48,6 +48,102 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\SODetail Table\Created"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Created"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\SODetail Table\Created.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SODetail Table\Created.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\SODetail Table\Created.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SODetail Table\Created.Outputs[Derived Column Output].Columns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\SODetail Table\Created.Outputs[Derived Column Output].Columns[CreatedDate]"
+                      name="CreatedDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SODetail Table\Created.Outputs[Derived Column Output].Columns[CreatedBy]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="6"
+                      lineageId="Package\SODetail Table\Created.Outputs[Derived Column Output].Columns[CreatedBy]"
+                      name="CreatedBy"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"SYSTEM"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"SYSTEM"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SODetail Table\Created.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\SODetail Table\Created.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SODetail Table\Created.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SODetail Table\Created.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SODetail Table\Created.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SODetail Table\Created.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\SODetail Table\Insert New Records (SODetail Table)"
               componentClassID="Microsoft.ManagedComponentHost"
@@ -179,6 +275,19 @@
                       cachedName="Lot"
                       externalMetadataColumnId="Package\SODetail Table\Insert New Records (SODetail Table).Inputs[ADO NET Destination Input].ExternalColumns[Lot]"
                       lineageId="Package\SODetail Table\Merge Join.Outputs[Merge Join Output].Columns[Lot]" />
+                    <inputColumn
+                      refId="Package\SODetail Table\Insert New Records (SODetail Table).Inputs[ADO NET Destination Input].Columns[CreatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatedDate"
+                      externalMetadataColumnId="Package\SODetail Table\Insert New Records (SODetail Table).Inputs[ADO NET Destination Input].ExternalColumns[CreatedDate]"
+                      lineageId="Package\SODetail Table\Created.Outputs[Derived Column Output].Columns[CreatedDate]" />
+                    <inputColumn
+                      refId="Package\SODetail Table\Insert New Records (SODetail Table).Inputs[ADO NET Destination Input].Columns[CreatedBy]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="CreatedBy"
+                      externalMetadataColumnId="Package\SODetail Table\Insert New Records (SODetail Table).Inputs[ADO NET Destination Input].ExternalColumns[CreatedBy]"
+                      lineageId="Package\SODetail Table\Created.Outputs[Derived Column Output].Columns[CreatedBy]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -252,6 +361,16 @@
                       length="200"
                       name="LotRemark" />
                     <externalMetadataColumn
+                      refId="Package\SODetail Table\Insert New Records (SODetail Table).Inputs[ADO NET Destination Input].ExternalColumns[LotRemarkBySaleCo]"
+                      dataType="wstr"
+                      length="200"
+                      name="LotRemarkBySaleCo" />
+                    <externalMetadataColumn
+                      refId="Package\SODetail Table\Insert New Records (SODetail Table).Inputs[ADO NET Destination Input].ExternalColumns[ConfirmLotStatus]"
+                      dataType="wstr"
+                      length="20"
+                      name="ConfirmLotStatus" />
+                    <externalMetadataColumn
                       refId="Package\SODetail Table\Insert New Records (SODetail Table).Inputs[ADO NET Destination Input].ExternalColumns[StickerDeliveryDate]"
                       dataType="dbTimeStamp"
                       name="StickerDeliveryDate" />
@@ -259,6 +378,24 @@
                       refId="Package\SODetail Table\Insert New Records (SODetail Table).Inputs[ADO NET Destination Input].ExternalColumns[CartonDeliveryDate]"
                       dataType="dbTimeStamp"
                       name="CartonDeliveryDate" />
+                    <externalMetadataColumn
+                      refId="Package\SODetail Table\Insert New Records (SODetail Table).Inputs[ADO NET Destination Input].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\SODetail Table\Insert New Records (SODetail Table).Inputs[ADO NET Destination Input].ExternalColumns[CreatedBy]"
+                      dataType="wstr"
+                      length="50"
+                      name="CreatedBy" />
+                    <externalMetadataColumn
+                      refId="Package\SODetail Table\Insert New Records (SODetail Table).Inputs[ADO NET Destination Input].ExternalColumns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="ModifiedDate" />
+                    <externalMetadataColumn
+                      refId="Package\SODetail Table\Insert New Records (SODetail Table).Inputs[ADO NET Destination Input].ExternalColumns[ModifiedBy]"
+                      dataType="wstr"
+                      length="50"
+                      name="ModifiedBy" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -824,6 +961,102 @@
                           name="InputColumnID">#{Package\SODetail Table\Merge Join.Inputs[Merge Join Right Input].Columns[Lot]}</property>
                       </properties>
                     </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SODetail Table\Modified"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Modified"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\SODetail Table\Modified.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SODetail Table\Modified.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\SODetail Table\Modified.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SODetail Table\Modified.Outputs[Derived Column Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\SODetail Table\Modified.Outputs[Derived Column Output].Columns[ModifiedDate]"
+                      name="ModifiedDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SODetail Table\Modified.Outputs[Derived Column Output].Columns[ModifiedBy]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="6"
+                      lineageId="Package\SODetail Table\Modified.Outputs[Derived Column Output].Columns[ModifiedBy]"
+                      name="ModifiedBy"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"SYSTEM"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"SYSTEM"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SODetail Table\Modified.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\SODetail Table\Modified.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SODetail Table\Modified.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SODetail Table\Modified.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SODetail Table\Modified.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SODetail Table\Modified.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -2941,6 +3174,8 @@ WHERE SyncDate = (
  ,[NetSales] = ?
  ,[NetInvoice] = ?
  ,[Lot] = ?
+ ,[ModifiedDate] = ?
+ ,[ModifiedBy] = ?
  WHERE [SO]=? AND [Item]=? AND [DO]=?</property>
                 <property
                   dataType="System.Int32"
@@ -2963,29 +3198,6 @@ WHERE SyncDate = (
                   hasSideEffects="true"
                   name="OLE DB Command Input">
                   <inputColumns>
-                    <inputColumn
-                      refId="Package\SODetail Table\Update Records (SODetail Table).Inputs[OLE DB Command Input].Columns[SO]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="SO"
-                      cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\SODetail Table\Update Records (SODetail Table).Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
-                      lineageId="Package\SODetail Table\Merge Join.Outputs[Merge Join Output].Columns[SO]" />
-                    <inputColumn
-                      refId="Package\SODetail Table\Update Records (SODetail Table).Inputs[OLE DB Command Input].Columns[Item]"
-                      cachedDataType="i4"
-                      cachedName="Item"
-                      cachedSortKeyPosition="2"
-                      externalMetadataColumnId="Package\SODetail Table\Update Records (SODetail Table).Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
-                      lineageId="Package\SODetail Table\Merge Join.Outputs[Merge Join Output].Columns[Item]" />
-                    <inputColumn
-                      refId="Package\SODetail Table\Update Records (SODetail Table).Inputs[OLE DB Command Input].Columns[DO]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="DO"
-                      cachedSortKeyPosition="3"
-                      externalMetadataColumnId="Package\SODetail Table\Update Records (SODetail Table).Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
-                      lineageId="Package\SODetail Table\Merge Join.Outputs[Merge Join Output].Columns[DO]" />
                     <inputColumn
                       refId="Package\SODetail Table\Update Records (SODetail Table).Inputs[OLE DB Command Input].Columns[Brand]"
                       cachedDataType="wstr"
@@ -3045,6 +3257,42 @@ WHERE SyncDate = (
                       cachedName="Lot"
                       externalMetadataColumnId="Package\SODetail Table\Update Records (SODetail Table).Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
                       lineageId="Package\SODetail Table\Merge Join.Outputs[Merge Join Output].Columns[Lot]" />
+                    <inputColumn
+                      refId="Package\SODetail Table\Update Records (SODetail Table).Inputs[OLE DB Command Input].Columns[SO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SO"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\SODetail Table\Update Records (SODetail Table).Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
+                      lineageId="Package\SODetail Table\Merge Join.Outputs[Merge Join Output].Columns[SO]" />
+                    <inputColumn
+                      refId="Package\SODetail Table\Update Records (SODetail Table).Inputs[OLE DB Command Input].Columns[Item]"
+                      cachedDataType="i4"
+                      cachedName="Item"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\SODetail Table\Update Records (SODetail Table).Inputs[OLE DB Command Input].ExternalColumns[Param_12]"
+                      lineageId="Package\SODetail Table\Merge Join.Outputs[Merge Join Output].Columns[Item]" />
+                    <inputColumn
+                      refId="Package\SODetail Table\Update Records (SODetail Table).Inputs[OLE DB Command Input].Columns[DO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DO"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\SODetail Table\Update Records (SODetail Table).Inputs[OLE DB Command Input].ExternalColumns[Param_13]"
+                      lineageId="Package\SODetail Table\Merge Join.Outputs[Merge Join Output].Columns[DO]" />
+                    <inputColumn
+                      refId="Package\SODetail Table\Update Records (SODetail Table).Inputs[OLE DB Command Input].Columns[ModifiedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ModifiedDate"
+                      externalMetadataColumnId="Package\SODetail Table\Update Records (SODetail Table).Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
+                      lineageId="Package\SODetail Table\Modified.Outputs[Derived Column Output].Columns[ModifiedDate]" />
+                    <inputColumn
+                      refId="Package\SODetail Table\Update Records (SODetail Table).Inputs[OLE DB Command Input].Columns[ModifiedBy]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="ModifiedBy"
+                      externalMetadataColumnId="Package\SODetail Table\Update Records (SODetail Table).Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
+                      lineageId="Package\SODetail Table\Modified.Outputs[Derived Column Output].Columns[ModifiedBy]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3154,8 +3402,7 @@ WHERE SyncDate = (
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\SODetail Table\Update Records (SODetail Table).Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
-                      dataType="wstr"
-                      length="50"
+                      dataType="dbTimeStamp"
                       name="Param_9">
                       <properties>
                         <property
@@ -3166,7 +3413,8 @@ WHERE SyncDate = (
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\SODetail Table\Update Records (SODetail Table).Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="50"
                       name="Param_10">
                       <properties>
                         <property
@@ -3180,6 +3428,29 @@ WHERE SyncDate = (
                       dataType="wstr"
                       length="50"
                       name="Param_11">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\SODetail Table\Update Records (SODetail Table).Inputs[OLE DB Command Input].ExternalColumns[Param_12]"
+                      dataType="i4"
+                      name="Param_12">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\SODetail Table\Update Records (SODetail Table).Inputs[OLE DB Command Input].ExternalColumns[Param_13]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_13">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -3235,8 +3506,18 @@ WHERE SyncDate = (
               name="ADO NET Source Output"
               startId="Package\SODetail Table\SODetail Table.Outputs[ADO NET Source Output]" />
             <path
-              refId="Package\SODetail Table.Paths[Insert (SO Item DO Not Match)]"
+              refId="Package\SODetail Table.Paths[Derived Column Output]"
+              endId="Package\SODetail Table\Update Records (SODetail Table).Inputs[OLE DB Command Input]"
+              name="Derived Column Output"
+              startId="Package\SODetail Table\Modified.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\SODetail Table.Paths[Derived Column Output1]"
               endId="Package\SODetail Table\Insert New Records (SODetail Table).Inputs[ADO NET Destination Input]"
+              name="Derived Column Output"
+              startId="Package\SODetail Table\Created.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\SODetail Table.Paths[Insert (SO Item DO Not Match)]"
+              endId="Package\SODetail Table\Created.Inputs[Derived Column Input]"
               name="Insert (SO Item DO Not Match)"
               startId="Package\SODetail Table\Split Records.Outputs[Insert (SO Item DO Not Match)]" />
             <path
@@ -3261,7 +3542,7 @@ WHERE SyncDate = (
               startId="Package\SODetail Table\Split Records.Outputs[Update (SO Item DO Match)]" />
             <path
               refId="Package\SODetail Table.Paths[Update records]"
-              endId="Package\SODetail Table\Update Records (SODetail Table).Inputs[OLE DB Command Input]"
+              endId="Package\SODetail Table\Modified.Inputs[Derived Column Input]"
               name="Update records"
               startId="Package\SODetail Table\Update.Outputs[Update records]" />
           </paths>
@@ -6095,10 +6376,6 @@ WHERE SyncDate = (
           Id="Package\SODetail Table\SODetail Table"
           TopLeft="785,37.5" />
         <NodeLayout
-          Size="254,42"
-          Id="Package\SODetail Table\Insert New Records (SODetail Table)"
-          TopLeft="25,445" />
-        <NodeLayout
           Size="129,42"
           Id="Package\SODetail Table\Sort Table"
           TopLeft="556.25,105" />
@@ -6134,42 +6411,6 @@ WHERE SyncDate = (
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\SODetail Table.Paths[Update records]"
-          TopLeft="545,327">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="313,125.5"
-              Start="0,0"
-              End="313,118">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,58.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,58.75"
-                    Point2="0,62.75"
-                    Point3="4,62.75" />
-                  <mssgle:LineSegment
-                    End="309,62.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="309,62.75"
-                    Point2="313,62.75"
-                    Point3="313,66.75" />
-                  <mssgle:LineSegment
-                    End="313,118" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="122.3734765625,67.75,68.253046875,11.609375"
-              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6299,42 +6540,6 @@ WHERE SyncDate = (
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\SODetail Table.Paths[Insert (SO Item DO Not Match)]"
-          TopLeft="122.25,329.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="29.75,115.5"
-              Start="0,0"
-              End="29.75,108">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,53.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,53.75"
-                    Point2="0,57.75"
-                    Point3="4,57.75" />
-                  <mssgle:LineSegment
-                    End="25.75,57.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="25.75,57.75"
-                    Point2="29.75,57.75"
-                    Point3="29.75,61.75" />
-                  <mssgle:LineSegment
-                    End="29.75,108" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-54.85833984375,62.75,139.4666796875,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\SODetail Table.Paths[ADO NET Source Output1]"
           TopLeft="860,79.5">
           <EdgeLayout.Curve>
@@ -6368,6 +6573,146 @@ WHERE SyncDate = (
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="121,42"
+          Id="Package\SODetail Table\Modified"
+          TopLeft="760.083333333333,287.25" />
+        <NodeLayout
+          Size="118,42"
+          Id="Package\SODetail Table\Created"
+          TopLeft="248.75,380.75" />
+        <EdgeLayout
+          Id="Package\SODetail Table.Paths[Insert (SO Item DO Not Match)]"
+          TopLeft="122.25,329.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="185.5,51.25"
+              Start="0,0"
+              End="185.5,43.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.625" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.625"
+                    Point2="0,25.625"
+                    Point3="4,25.625" />
+                  <mssgle:LineSegment
+                    End="181.5,25.625" />
+                  <mssgle:CubicBezierSegment
+                    Point1="181.5,25.625"
+                    Point2="185.5,25.625"
+                    Point3="185.5,29.625" />
+                  <mssgle:LineSegment
+                    End="185.5,43.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="23.01666015625,30.625,139.4666796875,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SODetail Table.Paths[Update records]"
+          TopLeft="602.5,307.125">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="157.583333333333,0"
+              Start="0,0"
+              End="150.083333333333,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="150.083333333333,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="40.9151432291665,5,68.253046875,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SODetail Table.Paths[Derived Column Output]"
+          TopLeft="820.583333333333,329.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="37.416666666667,123.25"
+              Start="0,0"
+              End="37.416666666667,115.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57.625" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,57.625"
+                    Point2="0,61.625"
+                    Point3="4,61.625" />
+                  <mssgle:LineSegment
+                    End="33.416666666667,61.625" />
+                  <mssgle:CubicBezierSegment
+                    Point1="33.416666666667,61.625"
+                    Point2="37.416666666667,61.625"
+                    Point3="37.416666666667,65.625" />
+                  <mssgle:LineSegment
+                    End="37.416666666667,115.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="254,42"
+          Id="Package\SODetail Table\Insert New Records (SODetail Table)"
+          TopLeft="41.25,472.5" />
+        <EdgeLayout
+          Id="Package\SODetail Table.Paths[Derived Column Output1]"
+          TopLeft="307.75,422.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-139.5,49.75"
+              Start="0,0"
+              End="-139.5,42.25">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.875" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.875"
+                    Point2="0,24.875"
+                    Point3="-4,24.875" />
+                  <mssgle:LineSegment
+                    End="-135.5,24.875" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-135.5,24.875"
+                    Point2="-139.5,24.875"
+                    Point3="-139.5,28.875" />
+                  <mssgle:LineSegment
+                    End="-139.5,42.25" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -6387,115 +6732,77 @@ WHERE SyncDate = (
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\SODetail Table\Insert New Records (SODetail Table)">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Update DO (NO DO)">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="146,42"
-          Id="Package\Update DO (NO DO)\STG_SODetail"
-          TopLeft="21,20" />
+          Size="297,42"
+          Id="Package\Update DO (NO DO)\Delete Reccords NO DO (Where NEW DO NO)"
+          TopLeft="685.5,272" />
         <NodeLayout
-          Size="150,42"
-          Id="Package\Update DO (NO DO)\SODetail Table"
-          TopLeft="827,21" />
+          Size="132,42"
+          Id="Package\Update DO (NO DO)\Merge Join"
+          TopLeft="397,164" />
+        <NodeLayout
+          Size="129,42"
+          Id="Package\Update DO (NO DO)\Sort Table"
+          TopLeft="605,89" />
         <NodeLayout
           Size="123,42"
           Id="Package\Update DO (NO DO)\Sort STG"
           TopLeft="217,92" />
         <NodeLayout
-          Size="129,42"
-          Id="Package\Update DO (NO DO)\Sort Table"
-          TopLeft="605,89" />
-        <EdgeLayout
-          Id="Package\Update DO (NO DO).Paths[ADO NET Source Output]"
-          TopLeft="94,62">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="184.5,30"
-              Start="0,0"
-              End="184.5,22.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,11" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11"
-                    Point2="0,15"
-                    Point3="4,15" />
-                  <mssgle:LineSegment
-                    End="180.5,15" />
-                  <mssgle:CubicBezierSegment
-                    Point1="180.5,15"
-                    Point2="184.5,15"
-                    Point3="184.5,19" />
-                  <mssgle:LineSegment
-                    End="184.5,22.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Update DO (NO DO).Paths[ADO NET Source Output1]"
-          TopLeft="902,63">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-232.5,26"
-              Start="0,0"
-              End="-232.5,18.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,9" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,9"
-                    Point2="0,13"
-                    Point3="-4,13" />
-                  <mssgle:LineSegment
-                    End="-228.5,13" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-228.5,13"
-                    Point2="-232.5,13"
-                    Point3="-232.5,17" />
-                  <mssgle:LineSegment
-                    End="-232.5,18.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="150,42"
+          Id="Package\Update DO (NO DO)\SODetail Table"
+          TopLeft="827,21" />
         <NodeLayout
-          Size="142,42"
-          Id="Package\Update DO (NO DO)\Split Records"
-          TopLeft="85,274" />
+          Size="146,42"
+          Id="Package\Update DO (NO DO)\STG_SODetail"
+          TopLeft="21,20" />
         <NodeLayout
           Size="111,42"
           Id="Package\Update DO (NO DO)\Delete"
           TopLeft="382,271" />
         <NodeLayout
-          Size="132,42"
-          Id="Package\Update DO (NO DO)\Merge Join"
-          TopLeft="397,164" />
+          Size="142,42"
+          Id="Package\Update DO (NO DO)\Split Records"
+          TopLeft="85,274" />
+        <EdgeLayout
+          Id="Package\Update DO (NO DO).Paths[Sort Output1]"
+          TopLeft="669.5,131">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-185.833333333333,33"
+              Start="0,0"
+              End="-185.833333333333,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.562874251497" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.562874251497"
+                    Point2="0,19.562874251497"
+                    Point3="-4,19.562874251497" />
+                  <mssgle:LineSegment
+                    End="-181.833333333333,19.562874251497" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-181.833333333333,19.562874251497"
+                    Point2="-185.833333333333,19.562874251497"
+                    Point3="-185.833333333333,23.562874251497" />
+                  <mssgle:LineSegment
+                    End="-185.833333333333,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Update DO (NO DO).Paths[Sort Output]"
           TopLeft="278.5,134">
@@ -6531,37 +6838,27 @@ WHERE SyncDate = (
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Update DO (NO DO).Paths[Sort Output1]"
-          TopLeft="669.5,131">
+          Id="Package\Update DO (NO DO).Paths[NO DO]"
+          TopLeft="227,293.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-185.833333333333,33"
+              EndConnector="155,0"
               Start="0,0"
-              End="-185.833333333333,25.5">
+              End="147.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15.562874251497" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,15.562874251497"
-                    Point2="0,19.562874251497"
-                    Point3="-4,19.562874251497" />
-                  <mssgle:LineSegment
-                    End="-181.833333333333,19.562874251497" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-181.833333333333,19.562874251497"
-                    Point2="-185.833333333333,19.562874251497"
-                    Point3="-185.833333333333,23.562874251497" />
-                  <mssgle:LineSegment
-                    End="-185.833333333333,25.5" />
+                    End="147.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="57.9121875,5,31.675625,9.5732421875"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6599,34 +6896,6 @@ WHERE SyncDate = (
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Update DO (NO DO).Paths[NO DO]"
-          TopLeft="227,293.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="155,0"
-              Start="0,0"
-              End="147.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="147.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="57.9121875,5,31.675625,9.5732421875"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="297,42"
-          Id="Package\Update DO (NO DO)\Delete Reccords NO DO (Where NEW DO NO)"
-          TopLeft="685.5,272" />
-        <EdgeLayout
           Id="Package\Update DO (NO DO).Paths[Delete (NO DO)]"
           TopLeft="493,292.5">
           <EdgeLayout.Curve>
@@ -6650,11 +6919,87 @@ WHERE SyncDate = (
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update DO (NO DO).Paths[ADO NET Source Output1]"
+          TopLeft="902,63">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-232.5,26"
+              Start="0,0"
+              End="-232.5,18.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9"
+                    Point2="0,13"
+                    Point3="-4,13" />
+                  <mssgle:LineSegment
+                    End="-228.5,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-228.5,13"
+                    Point2="-232.5,13"
+                    Point3="-232.5,17" />
+                  <mssgle:LineSegment
+                    End="-232.5,18.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update DO (NO DO).Paths[ADO NET Source Output]"
+          TopLeft="94,62">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="184.5,30"
+              Start="0,0"
+              End="184.5,22.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11"
+                    Point2="0,15"
+                    Point3="4,15" />
+                  <mssgle:LineSegment
+                    End="180.5,15" />
+                  <mssgle:CubicBezierSegment
+                    Point1="180.5,15"
+                    Point2="184.5,15"
+                    Point3="184.5,19" />
+                  <mssgle:LineSegment
+                    End="184.5,22.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Update DO (NO DO)\SODetail Table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\SODetail Table\Insert New Records (SODetail Table)">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

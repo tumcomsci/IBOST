@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="Shipment"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{F87842B9-45F8-4FED-A13D-1874E22669C2}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{0A536AD4-A0E7-45C3-9950-B6C897ED5ECF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADb2LUOutb856FnByrv0EHgi8Qsj7gqlxxyc4Xw/UxC8wAAAAAOgAAAAAIAACAAAACzZrEuNQBvCtuWBvsvL1yWezpYDKqUBZzyrtLnD+wqayAAAADBnXCExbeow/bh65/FRppmDHuXPiYhJFjMbQvGJzwyGkAAAACRuDbetasc7A68dclHfbyVi20bUAEPJ1B7M+mn/YIeKHSU/6iLpqWvxlOlwBRp8EY7tqUjuR9LvJGS2ITVCfm7</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAriRe8RHmk0AdOLuzOdOrIZvc3Ub+UueYXZl8bCgO6OQAAAAAOgAAAAAIAACAAAAB7jOVQBuafz/OXdwhiKvW1UenCQp/oiQ6/xQZKUYrsBCAAAAAJ8L4TOTRAoo4RL7sBQLsofZbkhJDF/KnExfjxhN4f/UAAAAClGSwev1gv9ngCHZUepbi8yRl9rBOT8+Xv8KGeDjztYzNcojmWg4ydpapVs30hJaJliy5XxxzBAsbHhwQ9zIkH</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -48,6 +48,102 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\Shipment Table\Created"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Created"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Shipment Table\Created.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Shipment Table\Created.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Shipment Table\Created.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Shipment Table\Created.Outputs[Derived Column Output].Columns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Shipment Table\Created.Outputs[Derived Column Output].Columns[CreatedDate]"
+                      name="CreatedDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Shipment Table\Created.Outputs[Derived Column Output].Columns[CreatedBy]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="6"
+                      lineageId="Package\Shipment Table\Created.Outputs[Derived Column Output].Columns[CreatedBy]"
+                      name="CreatedBy"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"SYSTEM"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"SYSTEM"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Shipment Table\Created.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Shipment Table\Created.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Shipment Table\Created.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Shipment Table\Created.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Shipment Table\Created.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Shipment Table\Created.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\Shipment Table\Insert New Records (Shipment Table)"
               componentClassID="Microsoft.ManagedComponentHost"
@@ -227,6 +323,19 @@
                       cachedName="GrossWeight"
                       externalMetadataColumnId="Package\Shipment Table\Insert New Records (Shipment Table).Inputs[ADO NET Destination Input].ExternalColumns[GrossWeight]"
                       lineageId="Package\Shipment Table\Merge Join.Outputs[Merge Join Output].Columns[GrossWeight]" />
+                    <inputColumn
+                      refId="Package\Shipment Table\Insert New Records (Shipment Table).Inputs[ADO NET Destination Input].Columns[CreatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatedDate"
+                      externalMetadataColumnId="Package\Shipment Table\Insert New Records (Shipment Table).Inputs[ADO NET Destination Input].ExternalColumns[CreatedDate]"
+                      lineageId="Package\Shipment Table\Created.Outputs[Derived Column Output].Columns[CreatedDate]" />
+                    <inputColumn
+                      refId="Package\Shipment Table\Insert New Records (Shipment Table).Inputs[ADO NET Destination Input].Columns[CreatedBy]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="CreatedBy"
+                      externalMetadataColumnId="Package\Shipment Table\Insert New Records (Shipment Table).Inputs[ADO NET Destination Input].ExternalColumns[CreatedBy]"
+                      lineageId="Package\Shipment Table\Created.Outputs[Derived Column Output].Columns[CreatedBy]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -424,6 +533,24 @@
                       dataType="wstr"
                       length="50"
                       name="OnTimeClosingStatus" />
+                    <externalMetadataColumn
+                      refId="Package\Shipment Table\Insert New Records (Shipment Table).Inputs[ADO NET Destination Input].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Shipment Table\Insert New Records (Shipment Table).Inputs[ADO NET Destination Input].ExternalColumns[CreatedBy]"
+                      dataType="wstr"
+                      length="50"
+                      name="CreatedBy" />
+                    <externalMetadataColumn
+                      refId="Package\Shipment Table\Insert New Records (Shipment Table).Inputs[ADO NET Destination Input].ExternalColumns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="ModifiedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Shipment Table\Insert New Records (Shipment Table).Inputs[ADO NET Destination Input].ExternalColumns[ModifiedBy]"
+                      dataType="wstr"
+                      length="50"
+                      name="ModifiedBy" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1282,6 +1409,102 @@
                           name="InputColumnID">#{Package\Shipment Table\Merge Join.Inputs[Merge Join Right Input].Columns[GrossWeight]}</property>
                       </properties>
                     </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Shipment Table\Modified"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Modified"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Shipment Table\Modified.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Shipment Table\Modified.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Shipment Table\Modified.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Shipment Table\Modified.Outputs[Derived Column Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Shipment Table\Modified.Outputs[Derived Column Output].Columns[ModifiedDate]"
+                      name="ModifiedDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Shipment Table\Modified.Outputs[Derived Column Output].Columns[ModifiedBy]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="6"
+                      lineageId="Package\Shipment Table\Modified.Outputs[Derived Column Output].Columns[ModifiedBy]"
+                      name="ModifiedBy"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"SYSTEM"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"SYSTEM"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Shipment Table\Modified.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Shipment Table\Modified.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Shipment Table\Modified.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Shipment Table\Modified.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Shipment Table\Modified.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Shipment Table\Modified.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -5128,6 +5351,8 @@ WHERE SyncDate = (
  ,[ETD] = ?
  ,[ETA] = ?
  ,[GrossWeight] = ?
+ ,[ModifiedDate] = ?
+ ,[ModifiedBy] = ?
  WHERE [SO]=? AND [DO]=?</property>
                 <property
                   dataType="System.Int32"
@@ -5150,22 +5375,6 @@ WHERE SyncDate = (
                   hasSideEffects="true"
                   name="OLE DB Command Input">
                   <inputColumns>
-                    <inputColumn
-                      refId="Package\Shipment Table\Update Records (Shipment Table).Inputs[OLE DB Command Input].Columns[SO]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="SO"
-                      cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Shipment Table\Update Records (Shipment Table).Inputs[OLE DB Command Input].ExternalColumns[Param_17]"
-                      lineageId="Package\Shipment Table\Merge Join.Outputs[Merge Join Output].Columns[SO]" />
-                    <inputColumn
-                      refId="Package\Shipment Table\Update Records (Shipment Table).Inputs[OLE DB Command Input].Columns[DO]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="DO"
-                      cachedSortKeyPosition="2"
-                      externalMetadataColumnId="Package\Shipment Table\Update Records (Shipment Table).Inputs[OLE DB Command Input].ExternalColumns[Param_18]"
-                      lineageId="Package\Shipment Table\Merge Join.Outputs[Merge Join Output].Columns[DO]" />
                     <inputColumn
                       refId="Package\Shipment Table\Update Records (Shipment Table).Inputs[OLE DB Command Input].Columns[LoadingDate]"
                       cachedDataType="dbDate"
@@ -5280,6 +5489,35 @@ WHERE SyncDate = (
                       cachedName="GrossWeight"
                       externalMetadataColumnId="Package\Shipment Table\Update Records (Shipment Table).Inputs[OLE DB Command Input].ExternalColumns[Param_16]"
                       lineageId="Package\Shipment Table\Merge Join.Outputs[Merge Join Output].Columns[GrossWeight]" />
+                    <inputColumn
+                      refId="Package\Shipment Table\Update Records (Shipment Table).Inputs[OLE DB Command Input].Columns[SO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SO"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Shipment Table\Update Records (Shipment Table).Inputs[OLE DB Command Input].ExternalColumns[Param_19]"
+                      lineageId="Package\Shipment Table\Merge Join.Outputs[Merge Join Output].Columns[SO]" />
+                    <inputColumn
+                      refId="Package\Shipment Table\Update Records (Shipment Table).Inputs[OLE DB Command Input].Columns[DO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="DO"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\Shipment Table\Update Records (Shipment Table).Inputs[OLE DB Command Input].ExternalColumns[Param_20]"
+                      lineageId="Package\Shipment Table\Merge Join.Outputs[Merge Join Output].Columns[DO]" />
+                    <inputColumn
+                      refId="Package\Shipment Table\Update Records (Shipment Table).Inputs[OLE DB Command Input].Columns[ModifiedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ModifiedDate"
+                      externalMetadataColumnId="Package\Shipment Table\Update Records (Shipment Table).Inputs[OLE DB Command Input].ExternalColumns[Param_17]"
+                      lineageId="Package\Shipment Table\Modified.Outputs[Derived Column Output].Columns[ModifiedDate]" />
+                    <inputColumn
+                      refId="Package\Shipment Table\Update Records (Shipment Table).Inputs[OLE DB Command Input].Columns[ModifiedBy]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="ModifiedBy"
+                      externalMetadataColumnId="Package\Shipment Table\Update Records (Shipment Table).Inputs[OLE DB Command Input].ExternalColumns[Param_18]"
+                      lineageId="Package\Shipment Table\Modified.Outputs[Derived Column Output].Columns[ModifiedBy]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -5484,8 +5722,7 @@ WHERE SyncDate = (
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Shipment Table\Update Records (Shipment Table).Inputs[OLE DB Command Input].ExternalColumns[Param_17]"
-                      dataType="wstr"
-                      length="50"
+                      dataType="dbTimeStamp"
                       name="Param_17">
                       <properties>
                         <property
@@ -5499,6 +5736,30 @@ WHERE SyncDate = (
                       dataType="wstr"
                       length="50"
                       name="Param_18">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Shipment Table\Update Records (Shipment Table).Inputs[OLE DB Command Input].ExternalColumns[Param_19]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_19">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Shipment Table\Update Records (Shipment Table).Inputs[OLE DB Command Input].ExternalColumns[Param_20]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_20">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -5554,8 +5815,18 @@ WHERE SyncDate = (
               name="ADO NET Source Output"
               startId="Package\Shipment Table\Shipment Table.Outputs[ADO NET Source Output]" />
             <path
-              refId="Package\Shipment Table.Paths[Insert (SO DO Not Match)]"
+              refId="Package\Shipment Table.Paths[Derived Column Output]"
+              endId="Package\Shipment Table\Update Records (Shipment Table).Inputs[OLE DB Command Input]"
+              name="Derived Column Output"
+              startId="Package\Shipment Table\Modified.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Shipment Table.Paths[Derived Column Output1]"
               endId="Package\Shipment Table\Insert New Records (Shipment Table).Inputs[ADO NET Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Shipment Table\Created.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Shipment Table.Paths[Insert (SO DO Not Match)]"
+              endId="Package\Shipment Table\Created.Inputs[Derived Column Input]"
               name="Insert (SO DO Not Match)"
               startId="Package\Shipment Table\Split Records.Outputs[Insert (SO DO Not Match)]" />
             <path
@@ -5580,7 +5851,7 @@ WHERE SyncDate = (
               startId="Package\Shipment Table\Split Records.Outputs[Update (SO DO Match)]" />
             <path
               refId="Package\Shipment Table.Paths[Update Records (SO DO Match)]"
-              endId="Package\Shipment Table\Update Records (Shipment Table).Inputs[OLE DB Command Input]"
+              endId="Package\Shipment Table\Modified.Inputs[Derived Column Input]"
               name="Update Records (SO DO Match)"
               startId="Package\Shipment Table\Update.Outputs[Update Records (SO DO Match)]" />
           </paths>
@@ -5613,34 +5884,6 @@ WHERE SyncDate = (
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="258,42"
-          Id="Package\Shipment Table\Insert New Records (Shipment Table)"
-          TopLeft="50,327" />
-        <NodeLayout
-          Size="154,42"
-          Id="Package\Shipment Table\Shipment Table"
-          TopLeft="790,16" />
-        <NodeLayout
-          Size="148,42"
-          Id="Package\Shipment Table\STG Shipment"
-          TopLeft="18,15" />
-        <NodeLayout
-          Size="240,42"
-          Id="Package\Shipment Table\Update Records (Shipment Table)"
-          TopLeft="745,326" />
-        <NodeLayout
-          Size="132,42"
-          Id="Package\Shipment Table\Merge Join"
-          TopLeft="360,154" />
-        <NodeLayout
-          Size="142,42"
-          Id="Package\Shipment Table\Split Records"
-          TopLeft="109,219" />
-        <NodeLayout
-          Size="115,42"
-          Id="Package\Shipment Table\Update"
-          TopLeft="499,219" />
-        <NodeLayout
           Size="129,42"
           Id="Package\Shipment Table\Sort Table"
           TopLeft="612,82" />
@@ -5648,66 +5891,80 @@ WHERE SyncDate = (
           Size="123,42"
           Id="Package\Shipment Table\Sort STG"
           TopLeft="204,83" />
+        <NodeLayout
+          Size="148,42"
+          Id="Package\Shipment Table\STG Shipment"
+          TopLeft="18,15" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Shipment Table\Shipment Table"
+          TopLeft="790,16" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Shipment Table\Split Records"
+          TopLeft="109,219" />
+        <NodeLayout
+          Size="132,42"
+          Id="Package\Shipment Table\Merge Join"
+          TopLeft="360,154" />
+        <NodeLayout
+          Size="115,42"
+          Id="Package\Shipment Table\Update"
+          TopLeft="499,219" />
+        <NodeLayout
+          Size="240,42"
+          Id="Package\Shipment Table\Update Records (Shipment Table)"
+          TopLeft="757,337" />
         <EdgeLayout
-          Id="Package\Shipment Table.Paths[ADO NET Source Output]"
-          TopLeft="92,57">
+          Id="Package\Shipment Table.Paths[Update (SO DO Match)]"
+          TopLeft="251,240">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="173.5,26"
+              EndConnector="248,0"
               Start="0,0"
-              End="173.5,18.5">
+              End="240.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,9" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,9"
-                    Point2="0,13"
-                    Point3="4,13" />
-                  <mssgle:LineSegment
-                    End="169.5,13" />
-                  <mssgle:CubicBezierSegment
-                    Point1="169.5,13"
-                    Point2="173.5,13"
-                    Point3="173.5,17" />
-                  <mssgle:LineSegment
-                    End="173.5,18.5" />
+                    End="240.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="69.07931640625,5,102.3413671875,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Shipment Table.Paths[ADO NET Source Output1]"
-          TopLeft="867,58">
+          Id="Package\Shipment Table.Paths[Sort Output1]"
+          TopLeft="676.5,124">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-190.5,24"
+              EndConnector="-229.833333333333,30"
               Start="0,0"
-              End="-190.5,16.5">
+              End="-229.833333333333,22.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,8" />
+                    End="0,13.7844311377245" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,8"
-                    Point2="0,12"
-                    Point3="-4,12" />
+                    Point1="0,13.7844311377245"
+                    Point2="0,17.7844311377245"
+                    Point3="-4,17.7844311377245" />
                   <mssgle:LineSegment
-                    End="-186.5,12" />
+                    End="-225.833333333333,17.7844311377245" />
                   <mssgle:CubicBezierSegment
-                    Point1="-186.5,12"
-                    Point2="-190.5,12"
-                    Point3="-190.5,16" />
+                    Point1="-225.833333333333,17.7844311377245"
+                    Point2="-229.833333333333,17.7844311377245"
+                    Point3="-229.833333333333,21.7844311377245" />
                   <mssgle:LineSegment
-                    End="-190.5,16.5" />
+                    End="-229.833333333333,22.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5751,40 +6008,6 @@ WHERE SyncDate = (
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Shipment Table.Paths[Sort Output1]"
-          TopLeft="676.5,124">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-229.833333333333,30"
-              Start="0,0"
-              End="-229.833333333333,22.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.7844311377245" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.7844311377245"
-                    Point2="0,17.7844311377245"
-                    Point3="-4,17.7844311377245" />
-                  <mssgle:LineSegment
-                    End="-225.833333333333,17.7844311377245" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-225.833333333333,17.7844311377245"
-                    Point2="-229.833333333333,17.7844311377245"
-                    Point3="-229.833333333333,21.7844311377245" />
-                  <mssgle:LineSegment
-                    End="-229.833333333333,22.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Shipment Table.Paths[Merge Join Output]"
           TopLeft="426,196">
           <EdgeLayout.Curve>
@@ -5819,94 +6042,194 @@ WHERE SyncDate = (
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Shipment Table.Paths[Insert (SO DO Not Match)]"
-          TopLeft="179.5,261">
+          Id="Package\Shipment Table.Paths[ADO NET Source Output1]"
+          TopLeft="867,58">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,66"
+              EndConnector="-190.5,24"
               Start="0,0"
-              End="0,58.5">
+              End="-190.5,16.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,58.5" />
+                    End="0,8" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8"
+                    Point2="0,12"
+                    Point3="-4,12" />
+                  <mssgle:LineSegment
+                    End="-186.5,12" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-186.5,12"
+                    Point2="-190.5,12"
+                    Point3="-190.5,16" />
+                  <mssgle:LineSegment
+                    End="-190.5,16.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-57.80333984375,23.4453125,115.6066796875,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Shipment Table.Paths[Update (SO DO Match)]"
-          TopLeft="251,240">
+          Id="Package\Shipment Table.Paths[ADO NET Source Output]"
+          TopLeft="92,57">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="248,0"
+              EndConnector="173.5,26"
               Start="0,0"
-              End="240.5,0">
+              End="173.5,18.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="240.5,0" />
+                    End="0,9" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9"
+                    Point2="0,13"
+                    Point3="4,13" />
+                  <mssgle:LineSegment
+                    End="169.5,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="169.5,13"
+                    Point2="173.5,13"
+                    Point3="173.5,17" />
+                  <mssgle:LineSegment
+                    End="173.5,18.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="69.07931640625,5,102.3413671875,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="118,43"
+          Id="Package\Shipment Table\Created"
+          TopLeft="52,332.5" />
+        <NodeLayout
+          Size="121,42"
+          Id="Package\Shipment Table\Modified"
+          TopLeft="811.333333333333,214" />
         <EdgeLayout
           Id="Package\Shipment Table.Paths[Update Records (SO DO Match)]"
-          TopLeft="556.5,261">
+          TopLeft="614,237.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="308.5,65"
+              EndConnector="197.333333333333,0"
               Start="0,0"
-              End="308.5,57.5">
+              End="189.833333333333,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,28.5"
-                    Point2="0,32.5"
-                    Point3="4,32.5" />
-                  <mssgle:LineSegment
-                    End="304.5,32.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="304.5,32.5"
-                    Point2="308.5,32.5"
-                    Point3="308.5,36.5" />
-                  <mssgle:LineSegment
-                    End="308.5,57.5" />
+                    End="189.833333333333,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="83.96431640625,37.5,140.5713671875,11.609375"
+              BoundingBox="24.6309830729165,5,140.5713671875,11.609375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Shipment Table.Paths[Insert (SO DO Not Match)]"
+          TopLeft="180,261">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-69,71.5"
+              Start="0,0"
+              End="-69,64">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.75"
+                    Point2="0,35.75"
+                    Point3="-4,35.75" />
+                  <mssgle:LineSegment
+                    End="-65,35.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-65,35.75"
+                    Point2="-69,35.75"
+                    Point3="-69,39.75" />
+                  <mssgle:LineSegment
+                    End="-69,64" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-92.30333984375,40.75,115.6066796875,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Shipment Table.Paths[Derived Column Output]"
+          TopLeft="874.416666666667,256">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,81"
+              Start="0,0"
+              End="0,73.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,73.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="258,42"
+          Id="Package\Shipment Table\Insert New Records (Shipment Table)"
+          TopLeft="296,334" />
+        <EdgeLayout
+          Id="Package\Shipment Table.Paths[Derived Column Output1]"
+          TopLeft="170,354.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="126,0"
+              Start="0,0"
+              End="118.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="118.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Shipment Table\Insert New Records (Shipment Table)">
+    design-time-name="Package\Shipment Table\STG Shipment">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5922,7 +6245,7 @@ WHERE SyncDate = (
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Shipment Table\STG Shipment">
+    design-time-name="Package\Shipment Table\Insert New Records (Shipment Table)">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
