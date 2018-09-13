@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="SOHeader"
   DTS:PackageType="5"
-  DTS:VersionBuild="95"
-  DTS:VersionGUID="{123BF3D1-4247-468F-AD10-AE1416BAABB0}">
+  DTS:VersionBuild="97"
+  DTS:VersionGUID="{2DB11498-BC22-4376-A578-B5CC532F3A1E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB/uyo7yXs4ZvU9kagmIoODVTIaHvlQFijGFRebxE70rgAAAAAOgAAAAAIAACAAAADa0mQ9SScSBMe8myaEwoOqO/RtMDFB3mQpM82Qb52eTiAAAAB/oCEr01dz6q3rDCZwZKGCi905GkVXbZ+ThD6IXT49bUAAAAALT0NWthFpEERW/iN6fvWJHfrrx0II6PK+Vl8tGhN1k4bTMhMzM+iZ0DDIEjZtgT9On95byAj/EdTmvX5WOmHt</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACpxsQet8vHGj68SFboYSLHjfLOZ6EESEWsCe6Zy39tVAAAAAAOgAAAAAIAACAAAAAWI5PH4Lg9FHWUXL4l5JyOoBgQhNudxZm9W7o1AbG9/CAAAAD5/GLsDt2M1GEwp/u8zZNYxClumiGlZuBpXLe6/07e8kAAAAAHq/jBkzpGomaF2o5jQQDRzIJRH42WJ1sZ/hsvzRINAtb/8YdtamVnsDtFEEGDvGWZdoznXoQRMJTGegbMDwQ7</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1493,6 +1493,15 @@
                       name="SO"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[SOCreatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[SOCreatedDate]"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[SOCreatedDate]"
+                      name="SOCreatedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
                       refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[TotalFCLS]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
@@ -1618,22 +1627,49 @@
                       name="TotalNetInvoice"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[TTSlip]"
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[TT1SlipReceiveDate]"
                       dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[TTSlip]"
-                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[TTSlip]"
-                      name="TTSlip"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[TT1SlipReceiveDate]"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[TT1SlipReceiveDate]"
+                      name="TT1SlipReceiveDate"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[LCSlip]"
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[TT2SlipReceiveDate]"
                       dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[LCSlip]"
-                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[LCSlip]"
-                      name="LCSlip"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[TT2SlipReceiveDate]"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[TT2SlipReceiveDate]"
+                      name="TT2SlipReceiveDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[LCSlipReceiveDate]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[LCSlipReceiveDate]"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[LCSlipReceiveDate]"
+                      name="LCSlipReceiveDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[ConfirmPayment]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[ConfirmPayment]"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[ConfirmPayment]"
+                      name="ConfirmPayment"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[IsRequest]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[IsRequest]"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[IsRequest]"
+                      name="IsRequest"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[SpecialApprove]"
@@ -1709,6 +1745,53 @@
                       lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[DocAWB]"
                       name="DocAWB"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[CreatedDate]"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[CreatedDate]"
+                      name="CreatedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[CreatedBy]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[CreatedBy]"
+                      length="50"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[CreatedBy]"
+                      name="CreatedBy"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[ModifiedDate]"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[ModifiedDate]"
+                      name="ModifiedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[ModifiedBy]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[ModifiedBy]"
+                      length="50"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[ModifiedBy]"
+                      name="ModifiedBy"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[SystemDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[SystemDate]"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[SystemDate]"
+                      name="SystemDate"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1750,6 +1833,10 @@
                       dataType="wstr"
                       length="50"
                       name="SO" />
+                    <externalMetadataColumn
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[SOCreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="SOCreatedDate" />
                     <externalMetadataColumn
                       refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[TotalFCLS]"
                       dataType="r8"
@@ -1811,13 +1898,25 @@
                       dataType="r8"
                       name="TotalNetInvoice" />
                     <externalMetadataColumn
-                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[TTSlip]"
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[TT1SlipReceiveDate]"
                       dataType="dbDate"
-                      name="TTSlip" />
+                      name="TT1SlipReceiveDate" />
                     <externalMetadataColumn
-                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[LCSlip]"
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[TT2SlipReceiveDate]"
                       dataType="dbDate"
-                      name="LCSlip" />
+                      name="TT2SlipReceiveDate" />
+                    <externalMetadataColumn
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[LCSlipReceiveDate]"
+                      dataType="dbDate"
+                      name="LCSlipReceiveDate" />
+                    <externalMetadataColumn
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[ConfirmPayment]"
+                      dataType="bool"
+                      name="ConfirmPayment" />
+                    <externalMetadataColumn
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[IsRequest]"
+                      dataType="bool"
+                      name="IsRequest" />
                     <externalMetadataColumn
                       refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[SpecialApprove]"
                       dataType="dbDate"
@@ -1852,6 +1951,28 @@
                       dataType="wstr"
                       length="50"
                       name="DocAWB" />
+                    <externalMetadataColumn
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[CreatedBy]"
+                      dataType="wstr"
+                      length="50"
+                      name="CreatedBy" />
+                    <externalMetadataColumn
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="ModifiedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[ModifiedBy]"
+                      dataType="wstr"
+                      length="50"
+                      name="ModifiedBy" />
+                    <externalMetadataColumn
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[SystemDate]"
+                      dataType="dbTimeStamp"
+                      name="SystemDate" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1905,6 +2026,11 @@
                       length="50"
                       lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[SO]"
                       name="SO" />
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[SOCreatedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[SOCreatedDate]"
+                      name="SOCreatedDate" />
                     <outputColumn
                       refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[TotalFCLS]"
                       dataType="r8"
@@ -1979,15 +2105,30 @@
                       lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[TotalNetInvoice]"
                       name="TotalNetInvoice" />
                     <outputColumn
-                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[TTSlip]"
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[TT1SlipReceiveDate]"
                       dataType="dbDate"
-                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[TTSlip]"
-                      name="TTSlip" />
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[TT1SlipReceiveDate]"
+                      name="TT1SlipReceiveDate" />
                     <outputColumn
-                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[LCSlip]"
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[TT2SlipReceiveDate]"
                       dataType="dbDate"
-                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[LCSlip]"
-                      name="LCSlip" />
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[TT2SlipReceiveDate]"
+                      name="TT2SlipReceiveDate" />
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[LCSlipReceiveDate]"
+                      dataType="dbDate"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[LCSlipReceiveDate]"
+                      name="LCSlipReceiveDate" />
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[ConfirmPayment]"
+                      dataType="bool"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[ConfirmPayment]"
+                      name="ConfirmPayment" />
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[IsRequest]"
+                      dataType="bool"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[IsRequest]"
+                      name="IsRequest" />
                     <outputColumn
                       refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[SpecialApprove]"
                       dataType="dbDate"
@@ -2030,6 +2171,33 @@
                       length="50"
                       lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[DocAWB]"
                       name="DocAWB" />
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[CreatedDate]"
+                      name="CreatedDate" />
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[CreatedBy]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[CreatedBy]"
+                      name="CreatedBy" />
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[ModifiedDate]"
+                      name="ModifiedDate" />
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[ModifiedBy]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[ModifiedBy]"
+                      name="ModifiedBy" />
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[SystemDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[SystemDate]"
+                      name="SystemDate" />
                     <outputColumn
                       refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -2870,6 +3038,22 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
+                      refId="Package\Update &amp; Insert New Records\Sort Table.Inputs[Sort Input].Columns[SOCreatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="SOCreatedDate"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[SOCreatedDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
                       refId="Package\Update &amp; Insert New Records\Sort Table.Inputs[Sort Input].Columns[TotalFCLS]"
                       cachedDataType="r8"
                       cachedName="TotalFCLS"
@@ -3086,10 +3270,10 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Update &amp; Insert New Records\Sort Table.Inputs[Sort Input].Columns[TTSlip]"
+                      refId="Package\Update &amp; Insert New Records\Sort Table.Inputs[Sort Input].Columns[TT1SlipReceiveDate]"
                       cachedDataType="dbDate"
-                      cachedName="TTSlip"
-                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[TTSlip]">
+                      cachedName="TT1SlipReceiveDate"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[TT1SlipReceiveDate]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -3102,10 +3286,58 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Update &amp; Insert New Records\Sort Table.Inputs[Sort Input].Columns[LCSlip]"
+                      refId="Package\Update &amp; Insert New Records\Sort Table.Inputs[Sort Input].Columns[TT2SlipReceiveDate]"
                       cachedDataType="dbDate"
-                      cachedName="LCSlip"
-                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[LCSlip]">
+                      cachedName="TT2SlipReceiveDate"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[TT2SlipReceiveDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update &amp; Insert New Records\Sort Table.Inputs[Sort Input].Columns[LCSlipReceiveDate]"
+                      cachedDataType="dbDate"
+                      cachedName="LCSlipReceiveDate"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[LCSlipReceiveDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update &amp; Insert New Records\Sort Table.Inputs[Sort Input].Columns[ConfirmPayment]"
+                      cachedDataType="bool"
+                      cachedName="ConfirmPayment"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[ConfirmPayment]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update &amp; Insert New Records\Sort Table.Inputs[Sort Input].Columns[IsRequest]"
+                      cachedDataType="bool"
+                      cachedName="IsRequest"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[IsRequest]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -3247,6 +3479,88 @@
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\Update &amp; Insert New Records\Sort Table.Inputs[Sort Input].Columns[CreatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatedDate"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[CreatedDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update &amp; Insert New Records\Sort Table.Inputs[Sort Input].Columns[CreatedBy]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CreatedBy"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[CreatedBy]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update &amp; Insert New Records\Sort Table.Inputs[Sort Input].Columns[ModifiedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ModifiedDate"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[ModifiedDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update &amp; Insert New Records\Sort Table.Inputs[Sort Input].Columns[ModifiedBy]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ModifiedBy"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[ModifiedBy]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update &amp; Insert New Records\Sort Table.Inputs[Sort Input].Columns[SystemDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="SystemDate"
+                      lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[SystemDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -3373,6 +3687,19 @@
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[SO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[SOCreatedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[SOCreatedDate]"
+                      name="SOCreatedDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[SOCreatedDate]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -3564,29 +3891,68 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[TTSlip]"
+                      refId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[TT1SlipReceiveDate]"
                       dataType="dbDate"
-                      lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[TTSlip]"
-                      name="TTSlip">
+                      lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[TT1SlipReceiveDate]"
+                      name="TT1SlipReceiveDate">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[TTSlip]}</property>
+                          name="SortColumnId">#{Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[TT1SlipReceiveDate]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[LCSlip]"
+                      refId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[TT2SlipReceiveDate]"
                       dataType="dbDate"
-                      lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[LCSlip]"
-                      name="LCSlip">
+                      lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[TT2SlipReceiveDate]"
+                      name="TT2SlipReceiveDate">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[LCSlip]}</property>
+                          name="SortColumnId">#{Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[TT2SlipReceiveDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[LCSlipReceiveDate]"
+                      dataType="dbDate"
+                      lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[LCSlipReceiveDate]"
+                      name="LCSlipReceiveDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[LCSlipReceiveDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[ConfirmPayment]"
+                      dataType="bool"
+                      lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[ConfirmPayment]"
+                      name="ConfirmPayment">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[ConfirmPayment]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[IsRequest]"
+                      dataType="bool"
+                      lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[IsRequest]"
+                      name="IsRequest">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[IsRequest]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -3693,6 +4059,73 @@
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[DocAWB]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[CreatedDate]"
+                      name="CreatedDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[CreatedDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[CreatedBy]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[CreatedBy]"
+                      name="CreatedBy">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[CreatedBy]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[ModifiedDate]"
+                      name="ModifiedDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[ModifiedDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[ModifiedBy]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[ModifiedBy]"
+                      name="ModifiedBy">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[ModifiedBy]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[SystemDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[SystemDate]"
+                      name="SystemDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[SystemDate]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -5242,7 +5675,7 @@ WHERE SyncDate = (
                   dataType="System.Int32"
                   description="Specifies the type of join to perform."
                   name="JoinType"
-                  typeConverter="JoinType">1</property>
+                  typeConverter="JoinType">0</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the number of columns in the ordering key."
@@ -6291,6 +6724,15 @@ WHERE SyncDate = (
                       name="SO"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[SOCreatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[SOCreatedDate]"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[SOCreatedDate]"
+                      name="SOCreatedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[TotalFCLS]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
@@ -6416,22 +6858,49 @@ WHERE SyncDate = (
                       name="TotalNetInvoice"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[TTSlip]"
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[TT1SlipReceiveDate]"
                       dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[TTSlip]"
-                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[TTSlip]"
-                      name="TTSlip"
+                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[TT1SlipReceiveDate]"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[TT1SlipReceiveDate]"
+                      name="TT1SlipReceiveDate"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[LCSlip]"
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[TT2SlipReceiveDate]"
                       dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[LCSlip]"
-                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[LCSlip]"
-                      name="LCSlip"
+                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[TT2SlipReceiveDate]"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[TT2SlipReceiveDate]"
+                      name="TT2SlipReceiveDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[LCSlipReceiveDate]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[LCSlipReceiveDate]"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[LCSlipReceiveDate]"
+                      name="LCSlipReceiveDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[ConfirmPayment]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[ConfirmPayment]"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[ConfirmPayment]"
+                      name="ConfirmPayment"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[IsRequest]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[IsRequest]"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[IsRequest]"
+                      name="IsRequest"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[SpecialApprove]"
@@ -6507,6 +6976,53 @@ WHERE SyncDate = (
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[DocAWB]"
                       name="DocAWB"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[CreatedDate]"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[CreatedDate]"
+                      name="CreatedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[CreatedBy]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[CreatedBy]"
+                      length="50"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[CreatedBy]"
+                      name="CreatedBy"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[ModifiedDate]"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[ModifiedDate]"
+                      name="ModifiedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[ModifiedBy]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[ModifiedBy]"
+                      length="50"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[ModifiedBy]"
+                      name="ModifiedBy"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[SystemDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[SystemDate]"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[SystemDate]"
+                      name="SystemDate"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -6548,6 +7064,10 @@ WHERE SyncDate = (
                       dataType="wstr"
                       length="50"
                       name="SO" />
+                    <externalMetadataColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[SOCreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="SOCreatedDate" />
                     <externalMetadataColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[TotalFCLS]"
                       dataType="r8"
@@ -6609,13 +7129,25 @@ WHERE SyncDate = (
                       dataType="r8"
                       name="TotalNetInvoice" />
                     <externalMetadataColumn
-                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[TTSlip]"
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[TT1SlipReceiveDate]"
                       dataType="dbDate"
-                      name="TTSlip" />
+                      name="TT1SlipReceiveDate" />
                     <externalMetadataColumn
-                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[LCSlip]"
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[TT2SlipReceiveDate]"
                       dataType="dbDate"
-                      name="LCSlip" />
+                      name="TT2SlipReceiveDate" />
+                    <externalMetadataColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[LCSlipReceiveDate]"
+                      dataType="dbDate"
+                      name="LCSlipReceiveDate" />
+                    <externalMetadataColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[ConfirmPayment]"
+                      dataType="bool"
+                      name="ConfirmPayment" />
+                    <externalMetadataColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[IsRequest]"
+                      dataType="bool"
+                      name="IsRequest" />
                     <externalMetadataColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[SpecialApprove]"
                       dataType="dbDate"
@@ -6650,6 +7182,28 @@ WHERE SyncDate = (
                       dataType="wstr"
                       length="50"
                       name="DocAWB" />
+                    <externalMetadataColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[CreatedBy]"
+                      dataType="wstr"
+                      length="50"
+                      name="CreatedBy" />
+                    <externalMetadataColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="ModifiedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[ModifiedBy]"
+                      dataType="wstr"
+                      length="50"
+                      name="ModifiedBy" />
+                    <externalMetadataColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[SystemDate]"
+                      dataType="dbTimeStamp"
+                      name="SystemDate" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -6703,6 +7257,11 @@ WHERE SyncDate = (
                       length="50"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[SO]"
                       name="SO" />
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[SOCreatedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[SOCreatedDate]"
+                      name="SOCreatedDate" />
                     <outputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[TotalFCLS]"
                       dataType="r8"
@@ -6777,15 +7336,30 @@ WHERE SyncDate = (
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[TotalNetInvoice]"
                       name="TotalNetInvoice" />
                     <outputColumn
-                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[TTSlip]"
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[TT1SlipReceiveDate]"
                       dataType="dbDate"
-                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[TTSlip]"
-                      name="TTSlip" />
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[TT1SlipReceiveDate]"
+                      name="TT1SlipReceiveDate" />
                     <outputColumn
-                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[LCSlip]"
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[TT2SlipReceiveDate]"
                       dataType="dbDate"
-                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[LCSlip]"
-                      name="LCSlip" />
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[TT2SlipReceiveDate]"
+                      name="TT2SlipReceiveDate" />
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[LCSlipReceiveDate]"
+                      dataType="dbDate"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[LCSlipReceiveDate]"
+                      name="LCSlipReceiveDate" />
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[ConfirmPayment]"
+                      dataType="bool"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[ConfirmPayment]"
+                      name="ConfirmPayment" />
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[IsRequest]"
+                      dataType="bool"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[IsRequest]"
+                      name="IsRequest" />
                     <outputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[SpecialApprove]"
                       dataType="dbDate"
@@ -6828,6 +7402,33 @@ WHERE SyncDate = (
                       length="50"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[DocAWB]"
                       name="DocAWB" />
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[CreatedDate]"
+                      name="CreatedDate" />
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[CreatedBy]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[CreatedBy]"
+                      name="CreatedBy" />
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[ModifiedDate]"
+                      name="ModifiedDate" />
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[ModifiedBy]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[ModifiedBy]"
+                      name="ModifiedBy" />
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[SystemDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[SystemDate]"
+                      name="SystemDate" />
                     <outputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -7668,6 +8269,22 @@ WHERE SyncDate = (
                       </properties>
                     </inputColumn>
                     <inputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Inputs[Sort Input].Columns[SOCreatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="SOCreatedDate"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[SOCreatedDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Inputs[Sort Input].Columns[TotalFCLS]"
                       cachedDataType="r8"
                       cachedName="TotalFCLS"
@@ -7884,10 +8501,10 @@ WHERE SyncDate = (
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Inputs[Sort Input].Columns[TTSlip]"
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Inputs[Sort Input].Columns[TT1SlipReceiveDate]"
                       cachedDataType="dbDate"
-                      cachedName="TTSlip"
-                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[TTSlip]">
+                      cachedName="TT1SlipReceiveDate"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[TT1SlipReceiveDate]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -7900,10 +8517,58 @@ WHERE SyncDate = (
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Inputs[Sort Input].Columns[LCSlip]"
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Inputs[Sort Input].Columns[TT2SlipReceiveDate]"
                       cachedDataType="dbDate"
-                      cachedName="LCSlip"
-                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[LCSlip]">
+                      cachedName="TT2SlipReceiveDate"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[TT2SlipReceiveDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Inputs[Sort Input].Columns[LCSlipReceiveDate]"
+                      cachedDataType="dbDate"
+                      cachedName="LCSlipReceiveDate"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[LCSlipReceiveDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Inputs[Sort Input].Columns[ConfirmPayment]"
+                      cachedDataType="bool"
+                      cachedName="ConfirmPayment"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[ConfirmPayment]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Inputs[Sort Input].Columns[IsRequest]"
+                      cachedDataType="bool"
+                      cachedName="IsRequest"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[IsRequest]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -8045,6 +8710,88 @@ WHERE SyncDate = (
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Inputs[Sort Input].Columns[CreatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatedDate"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[CreatedDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Inputs[Sort Input].Columns[CreatedBy]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CreatedBy"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[CreatedBy]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Inputs[Sort Input].Columns[ModifiedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ModifiedDate"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[ModifiedDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Inputs[Sort Input].Columns[ModifiedBy]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ModifiedBy"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[ModifiedBy]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Inputs[Sort Input].Columns[SystemDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="SystemDate"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[SystemDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -8171,6 +8918,19 @@ WHERE SyncDate = (
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[SO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[SOCreatedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[SOCreatedDate]"
+                      name="SOCreatedDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[SOCreatedDate]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -8362,29 +9122,68 @@ WHERE SyncDate = (
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[TTSlip]"
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[TT1SlipReceiveDate]"
                       dataType="dbDate"
-                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[TTSlip]"
-                      name="TTSlip">
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[TT1SlipReceiveDate]"
+                      name="TT1SlipReceiveDate">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[TTSlip]}</property>
+                          name="SortColumnId">#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[TT1SlipReceiveDate]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[LCSlip]"
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[TT2SlipReceiveDate]"
                       dataType="dbDate"
-                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[LCSlip]"
-                      name="LCSlip">
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[TT2SlipReceiveDate]"
+                      name="TT2SlipReceiveDate">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[LCSlip]}</property>
+                          name="SortColumnId">#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[TT2SlipReceiveDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[LCSlipReceiveDate]"
+                      dataType="dbDate"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[LCSlipReceiveDate]"
+                      name="LCSlipReceiveDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[LCSlipReceiveDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[ConfirmPayment]"
+                      dataType="bool"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[ConfirmPayment]"
+                      name="ConfirmPayment">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[ConfirmPayment]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[IsRequest]"
+                      dataType="bool"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[IsRequest]"
+                      name="IsRequest">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[IsRequest]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -8491,6 +9290,73 @@ WHERE SyncDate = (
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[DocAWB]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[CreatedDate]"
+                      name="CreatedDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[CreatedDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[CreatedBy]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[CreatedBy]"
+                      name="CreatedBy">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[CreatedBy]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[ModifiedDate]"
+                      name="ModifiedDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[ModifiedDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[ModifiedBy]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[ModifiedBy]"
+                      name="ModifiedBy">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[ModifiedBy]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[SystemDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[SystemDate]"
+                      name="SystemDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[SystemDate]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -9990,45 +10856,83 @@ WHERE SyncDate = (
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="155,42"
+          Id="Package\Update &amp; Insert New Records\Update Records"
+          TopLeft="779.666666666667,450.777777777778" />
+        <NodeLayout
           Size="153,42"
           Id="Package\Update &amp; Insert New Records\STG_SOHeader"
           TopLeft="23.3333333333334,33.3333333333333" />
-        <NodeLayout
-          Size="123,42"
-          Id="Package\Update &amp; Insert New Records\Sort STG"
-          TopLeft="209,117" />
-        <NodeLayout
-          Size="187,42"
-          Id="Package\Update &amp; Insert New Records\Update Records By SO"
-          TopLeft="463.333333333334,277.777777777778" />
-        <NodeLayout
-          Size="157,42"
-          Id="Package\Update &amp; Insert New Records\SOHeader Table"
-          TopLeft="840,30" />
         <NodeLayout
           Size="142,42"
           Id="Package\Update &amp; Insert New Records\Split Records"
           TopLeft="53.3333333333333,277.777777777778" />
         <NodeLayout
-          Size="155,42"
-          Id="Package\Update &amp; Insert New Records\Update Records"
-          TopLeft="779.666666666667,450.777777777778" />
-        <NodeLayout
-          Size="132,42"
-          Id="Package\Update &amp; Insert New Records\Merge Join"
-          TopLeft="431.5,193.25" />
+          Size="187,42"
+          Id="Package\Update &amp; Insert New Records\Update Records By SO"
+          TopLeft="463.333333333334,277.777777777778" />
         <NodeLayout
           Size="115,42"
           Id="Package\Update &amp; Insert New Records\System"
           TopLeft="59,368" />
         <NodeLayout
-          Size="129,42"
-          Id="Package\Update &amp; Insert New Records\Sort Table"
-          TopLeft="670.75,111.5" />
-        <NodeLayout
           Size="121,42"
           Id="Package\Update &amp; Insert New Records\Modified"
           TopLeft="590.333333333333,376" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\Update &amp; Insert New Records\Sort STG"
+          TopLeft="210,108" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Update &amp; Insert New Records\Insert New Records"
+          TopLeft="29,435" />
+        <EdgeLayout
+          Id="Package\Update &amp; Insert New Records.Paths[Insert (SO Not Match)]"
+          TopLeft="120.416666666667,319.777777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48.222222222222"
+              Start="0,0"
+              End="0,40.722222222222">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.722222222222" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-49.30833984375,14.556423611111,98.6166796875,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update &amp; Insert New Records.Paths[Derived Column Output1]"
+          TopLeft="116,410">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,25"
+              Start="0,0"
+              End="0,17.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Update &amp; Insert New Records.Paths[Derived Column Output]"
           TopLeft="650.833333333333,418">
@@ -10064,65 +10968,31 @@ WHERE SyncDate = (
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Update &amp; Insert New Records.Paths[ADO NET Source Output1]"
-          TopLeft="918.5,72">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-183.25,39.5"
-              Start="0,0"
-              End="-183.25,32">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,15.75"
-                    Point2="0,19.75"
-                    Point3="-4,19.75" />
-                  <mssgle:LineSegment
-                    End="-179.25,19.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-179.25,19.75"
-                    Point2="-183.25,19.75"
-                    Point3="-183.25,23.75" />
-                  <mssgle:LineSegment
-                    End="-183.25,32" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Update &amp; Insert New Records.Paths[ADO NET Source Output]"
           TopLeft="99.8333333333334,75.3333333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="170.666666666667,41.6666666666667"
+              EndConnector="171.666666666667,32.6666666666667"
               Start="0,0"
-              End="170.666666666667,34.1666666666667">
+              End="171.666666666667,25.1666666666667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.8333333333334" />
+                    End="0,12.3333333333333" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,16.8333333333334"
-                    Point2="0,20.8333333333334"
-                    Point3="4,20.8333333333334" />
+                    Point1="0,12.3333333333333"
+                    Point2="0,16.3333333333334"
+                    Point3="4,16.3333333333334" />
                   <mssgle:LineSegment
-                    End="166.666666666667,20.8333333333334" />
+                    End="167.666666666667,16.3333333333334" />
                   <mssgle:CubicBezierSegment
-                    Point1="166.666666666667,20.8333333333334"
-                    Point2="170.666666666667,20.8333333333334"
-                    Point3="170.666666666667,24.8333333333334" />
+                    Point1="167.666666666667,16.3333333333334"
+                    Point2="171.666666666667,16.3333333333334"
+                    Point3="171.666666666667,20.3333333333334" />
                   <mssgle:LineSegment
-                    End="170.666666666667,34.1666666666667" />
+                    End="171.666666666667,25.1666666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10168,74 +11038,6 @@ WHERE SyncDate = (
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Update &amp; Insert New Records.Paths[Sort Output1]"
-          TopLeft="735.25,153.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-217.083333333333,39.75"
-              Start="0,0"
-              End="-217.083333333333,32.25">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.564371257485" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.564371257485"
-                    Point2="0,23.564371257485"
-                    Point3="-4,23.564371257485" />
-                  <mssgle:LineSegment
-                    End="-213.083333333333,23.564371257485" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-213.083333333333,23.564371257485"
-                    Point2="-217.083333333333,23.564371257485"
-                    Point3="-217.083333333333,27.564371257485" />
-                  <mssgle:LineSegment
-                    End="-217.083333333333,32.25" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Update &amp; Insert New Records.Paths[Sort Output]"
-          TopLeft="270.5,159">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="206.333333333333,34.25"
-              Start="0,0"
-              End="206.333333333333,26.75">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.3038922155689" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.3038922155689"
-                    Point2="0,20.3038922155689"
-                    Point3="4,20.3038922155689" />
-                  <mssgle:LineSegment
-                    End="202.333333333333,20.3038922155689" />
-                  <mssgle:CubicBezierSegment
-                    Point1="202.333333333333,20.3038922155689"
-                    Point2="206.333333333333,20.3038922155689"
-                    Point3="206.333333333333,24.3038922155689" />
-                  <mssgle:LineSegment
-                    End="206.333333333333,26.75" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Update &amp; Insert New Records.Paths[SO Match]"
           TopLeft="195.333333333333,298.777777777778">
           <EdgeLayout.Curve>
@@ -10259,32 +11061,44 @@ WHERE SyncDate = (
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="132,42"
+          Id="Package\Update &amp; Insert New Records\Merge Join"
+          TopLeft="354,181" />
+        <NodeLayout
+          Size="129,42"
+          Id="Package\Update &amp; Insert New Records\Sort Table"
+          TopLeft="557,102" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Update &amp; Insert New Records\SOHeader Table"
+          TopLeft="759,36" />
         <EdgeLayout
-          Id="Package\Update &amp; Insert New Records.Paths[Merge Join Output]"
-          TopLeft="497.5,235.25">
+          Id="Package\Update &amp; Insert New Records.Paths[Sort Output]"
+          TopLeft="271.5,150">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-373.166666666667,42.5277777777778"
+              EndConnector="127.833333333333,31"
               Start="0,0"
-              End="-373.166666666667,35.0277777777778">
+              End="127.833333333333,23.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.2638888888889" />
+                    End="0,14.377245508982" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17.2638888888889"
-                    Point2="0,21.2638888888889"
-                    Point3="-4,21.2638888888889" />
+                    Point1="0,14.377245508982"
+                    Point2="0,18.377245508982"
+                    Point3="4,18.377245508982" />
                   <mssgle:LineSegment
-                    End="-369.166666666667,21.2638888888889" />
+                    End="123.833333333333,18.377245508982" />
                   <mssgle:CubicBezierSegment
-                    Point1="-369.166666666667,21.2638888888889"
-                    Point2="-373.166666666667,21.2638888888889"
-                    Point3="-373.166666666667,25.2638888888889" />
+                    Point1="123.833333333333,18.377245508982"
+                    Point2="127.833333333333,18.377245508982"
+                    Point3="127.833333333333,22.377245508982" />
                   <mssgle:LineSegment
-                    End="-373.166666666667,35.0277777777778" />
+                    End="127.833333333333,23.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10294,47 +11108,99 @@ WHERE SyncDate = (
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Update &amp; Insert New Records.Paths[Insert (SO Not Match)]"
-          TopLeft="120.416666666667,319.777777777778">
+          Id="Package\Update &amp; Insert New Records.Paths[ADO NET Source Output1]"
+          TopLeft="837.5,78">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,48.222222222222"
+              EndConnector="-216,24"
               Start="0,0"
-              End="0,40.722222222222">
+              End="-216,16.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,40.722222222222" />
+                    End="0,8" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8"
+                    Point2="0,12"
+                    Point3="-4,12" />
+                  <mssgle:LineSegment
+                    End="-212,12" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-212,12"
+                    Point2="-216,12"
+                    Point3="-216,16" />
+                  <mssgle:LineSegment
+                    End="-216,16.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-49.30833984375,14.556423611111,98.6166796875,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="173,42"
-          Id="Package\Update &amp; Insert New Records\Insert New Records"
-          TopLeft="29,435" />
         <EdgeLayout
-          Id="Package\Update &amp; Insert New Records.Paths[Derived Column Output1]"
-          TopLeft="116,410">
+          Id="Package\Update &amp; Insert New Records.Paths[Sort Output1]"
+          TopLeft="621.5,144">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,25"
+              EndConnector="-180.833333333333,37"
               Start="0,0"
-              End="0,17.5">
+              End="-180.833333333333,29.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.5" />
+                    End="0,17.9341317365269" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.9341317365269"
+                    Point2="0,21.9341317365269"
+                    Point3="-4,21.9341317365269" />
+                  <mssgle:LineSegment
+                    End="-176.833333333333,21.9341317365269" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-176.833333333333,21.9341317365269"
+                    Point2="-180.833333333333,21.9341317365269"
+                    Point3="-180.833333333333,25.9341317365269" />
+                  <mssgle:LineSegment
+                    End="-180.833333333333,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update &amp; Insert New Records.Paths[Merge Join Output]"
+          TopLeft="420,223">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-295.666666666667,54.777777777778"
+              Start="0,0"
+              End="-295.666666666667,47.277777777778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.388888888889" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.388888888889"
+                    Point2="0,27.388888888889"
+                    Point3="-4,27.388888888889" />
+                  <mssgle:LineSegment
+                    End="-291.666666666667,27.388888888889" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-291.666666666667,27.388888888889"
+                    Point2="-295.666666666667,27.388888888889"
+                    Point3="-295.666666666667,31.388888888889" />
+                  <mssgle:LineSegment
+                    End="-295.666666666667,47.277777777778" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10355,7 +11221,7 @@ WHERE SyncDate = (
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Update &amp; Insert New Records\SOHeader Table">
+    design-time-name="Package\Update &amp; Insert New Records\Insert New Records">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10380,10 +11246,6 @@ WHERE SyncDate = (
           Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo"
           TopLeft="893,290" />
         <NodeLayout
-          Size="129,42"
-          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table"
-          TopLeft="636,82" />
-        <NodeLayout
           Size="121,42"
           Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Modified"
           TopLeft="601,292" />
@@ -10395,14 +11257,6 @@ WHERE SyncDate = (
           Size="123,42"
           Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG"
           TopLeft="239,85" />
-        <NodeLayout
-          Size="132,42"
-          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join"
-          TopLeft="436,180" />
-        <NodeLayout
-          Size="157,42"
-          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table"
-          TopLeft="900.909090909091,7.63636363636364" />
         <EdgeLayout
           Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL)).Paths[ADO NET Source Output]"
           TopLeft="97.1363636363636,51.7272727272727">
@@ -10429,74 +11283,6 @@ WHERE SyncDate = (
                     Point3="203.363636363636,20.6363636363636" />
                   <mssgle:LineSegment
                     End="203.363636363636,25.7727272727273" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL)).Paths[Sort Output1]"
-          TopLeft="700.5,124">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-177.833333333333,56"
-              Start="0,0"
-              End="-177.833333333333,48.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.1976047904191" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,29.1976047904191"
-                    Point2="0,33.1976047904191"
-                    Point3="-4,33.1976047904191" />
-                  <mssgle:LineSegment
-                    End="-173.833333333333,33.1976047904191" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-173.833333333333,33.1976047904191"
-                    Point2="-177.833333333333,33.1976047904191"
-                    Point3="-177.833333333333,37.1976047904191" />
-                  <mssgle:LineSegment
-                    End="-177.833333333333,48.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL)).Paths[Sort Output]"
-          TopLeft="300.5,127">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="180.833333333333,53"
-              Start="0,0"
-              End="180.833333333333,45.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.4191616766467" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,27.4191616766467"
-                    Point2="0,31.4191616766467"
-                    Point3="4,31.4191616766467" />
-                  <mssgle:LineSegment
-                    End="176.833333333333,31.4191616766467" />
-                  <mssgle:CubicBezierSegment
-                    Point1="176.833333333333,31.4191616766467"
-                    Point2="180.833333333333,31.4191616766467"
-                    Point3="180.833333333333,35.4191616766467" />
-                  <mssgle:LineSegment
-                    End="180.833333333333,45.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10554,40 +11340,6 @@ WHERE SyncDate = (
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL)).Paths[Merge Join Output]"
-          TopLeft="502,222">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-403,67"
-              Start="0,0"
-              End="-403,59.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,29.5"
-                    Point2="0,33.5"
-                    Point3="-4,33.5" />
-                  <mssgle:LineSegment
-                    End="-399,33.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-399,33.5"
-                    Point2="-403,33.5"
-                    Point3="-403,37.5" />
-                  <mssgle:LineSegment
-                    End="-403,59.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL)).Paths[Derived Column Output]"
           TopLeft="722,312">
           <EdgeLayout.Curve>
@@ -10609,32 +11361,146 @@ WHERE SyncDate = (
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table"
+          TopLeft="756,14" />
+        <NodeLayout
+          Size="129,42"
+          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table"
+          TopLeft="613,83" />
         <EdgeLayout
           Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL)).Paths[ADO NET Source Output1]"
-          TopLeft="979.409090909091,49.6363636363636">
+          TopLeft="834.5,56">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-278.909090909091,32.3636363636364"
+              EndConnector="-157,27"
               Start="0,0"
-              End="-278.909090909091,24.8636363636364">
+              End="-157,19.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,12.1818181818182" />
+                    End="0,9.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,12.1818181818182"
-                    Point2="0,16.1818181818182"
-                    Point3="-4,16.1818181818182" />
+                    Point1="0,9.5"
+                    Point2="0,13.5"
+                    Point3="-4,13.5" />
                   <mssgle:LineSegment
-                    End="-274.909090909091,16.1818181818182" />
+                    End="-153,13.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-274.909090909091,16.1818181818182"
-                    Point2="-278.909090909091,16.1818181818182"
-                    Point3="-278.909090909091,20.1818181818182" />
+                    Point1="-153,13.5"
+                    Point2="-157,13.5"
+                    Point3="-157,17.5" />
                   <mssgle:LineSegment
-                    End="-278.909090909091,24.8636363636364" />
+                    End="-157,19.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="132,42"
+          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join"
+          TopLeft="429,163" />
+        <EdgeLayout
+          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL)).Paths[Sort Output]"
+          TopLeft="300.5,127">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="173.833333333333,36"
+              Start="0,0"
+              End="173.833333333333,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.3413173652695" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.3413173652695"
+                    Point2="0,21.3413173652695"
+                    Point3="4,21.3413173652695" />
+                  <mssgle:LineSegment
+                    End="169.833333333333,21.3413173652695" />
+                  <mssgle:CubicBezierSegment
+                    Point1="169.833333333333,21.3413173652695"
+                    Point2="173.833333333333,21.3413173652695"
+                    Point3="173.833333333333,25.3413173652695" />
+                  <mssgle:LineSegment
+                    End="173.833333333333,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL)).Paths[Sort Output1]"
+          TopLeft="677.5,125">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-161.833333333333,38"
+              Start="0,0"
+              End="-161.833333333333,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5269461077844" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.5269461077844"
+                    Point2="0,22.5269461077844"
+                    Point3="-4,22.5269461077844" />
+                  <mssgle:LineSegment
+                    End="-157.833333333333,22.5269461077844" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-157.833333333333,22.5269461077844"
+                    Point2="-161.833333333333,22.5269461077844"
+                    Point3="-161.833333333333,26.5269461077844" />
+                  <mssgle:LineSegment
+                    End="-161.833333333333,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL)).Paths[Merge Join Output]"
+          TopLeft="495,205">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-396,84"
+              Start="0,0"
+              End="-396,76.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,38"
+                    Point2="0,42"
+                    Point3="-4,42" />
+                  <mssgle:LineSegment
+                    End="-392,42" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-392,42"
+                    Point2="-396,42"
+                    Point3="-396,46" />
+                  <mssgle:LineSegment
+                    End="-396,76.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10663,7 +11529,7 @@ WHERE SyncDate = (
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Update &amp; Insert New Records\Insert New Records">
+    design-time-name="Package\Update &amp; Insert New Records\SOHeader Table">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
