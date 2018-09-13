@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="SOHeader"
   DTS:PackageType="5"
-  DTS:VersionBuild="94"
-  DTS:VersionGUID="{F6A7B831-D6C5-4BC8-A1A7-0ACADB085459}">
+  DTS:VersionBuild="95"
+  DTS:VersionGUID="{123BF3D1-4247-468F-AD10-AE1416BAABB0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABOHkElsU6sHTEZ49qH4rVOL4pOgTWqtfn+Hqm0zXXD3QAAAAAOgAAAAAIAACAAAADkFnbn6AmUSKfsf7MA6IvKcYvMEjTiFb/PvCCDpMOqHCAAAAC0jEUcGrf1CvJvChwBYA1f4d4m12gm3BTHmJLqPXerjkAAAAA/i6x++Fsmu9XHSHhvw0UpvOx3LUHAIn+vKC3GgywLdMAcel1FV3P0MSBDtal6LwmmyXYo6dOqgoHuUI/+Tf9v</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB/uyo7yXs4ZvU9kagmIoODVTIaHvlQFijGFRebxE70rgAAAAAOgAAAAAIAACAAAADa0mQ9SScSBMe8myaEwoOqO/RtMDFB3mQpM82Qb52eTiAAAAB/oCEr01dz6q3rDCZwZKGCi905GkVXbZ+ThD6IXT49bUAAAAALT0NWthFpEERW/iN6fvWJHfrrx0II6PK+Vl8tGhN1k4bTMhMzM+iZ0DDIEjZtgT9On95byAj/EdTmvX5WOmHt</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -48,102 +48,6 @@
         <pipeline
           version="1">
           <components>
-            <component
-              refId="Package\Update &amp; Insert New Records\Created"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Created"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Update &amp; Insert New Records\Created.Inputs[Derived Column Input]"
-                  description="Input to the Derived Column Transformation"
-                  name="Derived Column Input">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Update &amp; Insert New Records\Created.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\Update &amp; Insert New Records\Created.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Update &amp; Insert New Records\Created.Outputs[Derived Column Output].Columns[CreatedDate]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Update &amp; Insert New Records\Created.Outputs[Derived Column Output].Columns[CreatedDate]"
-                      name="CreatedDate"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[GETDATE]()</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">GETDATE()</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Update &amp; Insert New Records\Created.Outputs[Derived Column Output].Columns[CreatedBy]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      length="6"
-                      lineageId="Package\Update &amp; Insert New Records\Created.Outputs[Derived Column Output].Columns[CreatedBy]"
-                      name="CreatedBy"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">"SYSTEM"</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">"SYSTEM"</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Update &amp; Insert New Records\Created.Outputs[Derived Column Error Output]"
-                  description="Error Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Derived Column Error Output"
-                  synchronousInputId="Package\Update &amp; Insert New Records\Created.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Update &amp; Insert New Records\Created.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Update &amp; Insert New Records\Created.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Update &amp; Insert New Records\Created.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Update &amp; Insert New Records\Created.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
             <component
               refId="Package\Update &amp; Insert New Records\Insert New Records"
               componentClassID="Microsoft.ManagedComponentHost"
@@ -323,18 +227,11 @@
                       externalMetadataColumnId="Package\Update &amp; Insert New Records\Insert New Records.Inputs[ADO NET Destination Input].ExternalColumns[TotalNetInvoice]"
                       lineageId="Package\Update &amp; Insert New Records\Merge Join.Outputs[Merge Join Output].Columns[TotalNetInvoice]" />
                     <inputColumn
-                      refId="Package\Update &amp; Insert New Records\Insert New Records.Inputs[ADO NET Destination Input].Columns[CreatedDate]"
+                      refId="Package\Update &amp; Insert New Records\Insert New Records.Inputs[ADO NET Destination Input].Columns[SystemDate]"
                       cachedDataType="dbTimeStamp"
-                      cachedName="CreatedDate"
-                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Insert New Records.Inputs[ADO NET Destination Input].ExternalColumns[CreatedDate]"
-                      lineageId="Package\Update &amp; Insert New Records\Created.Outputs[Derived Column Output].Columns[CreatedDate]" />
-                    <inputColumn
-                      refId="Package\Update &amp; Insert New Records\Insert New Records.Inputs[ADO NET Destination Input].Columns[CreatedBy]"
-                      cachedDataType="wstr"
-                      cachedLength="6"
-                      cachedName="CreatedBy"
-                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Insert New Records.Inputs[ADO NET Destination Input].ExternalColumns[CreatedBy]"
-                      lineageId="Package\Update &amp; Insert New Records\Created.Outputs[Derived Column Output].Columns[CreatedBy]" />
+                      cachedName="SystemDate"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Insert New Records.Inputs[ADO NET Destination Input].ExternalColumns[SystemDate]"
+                      lineageId="Package\Update &amp; Insert New Records\System.Outputs[Derived Column Output].Columns[SystemDate]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -376,6 +273,10 @@
                       dataType="wstr"
                       length="50"
                       name="SO" />
+                    <externalMetadataColumn
+                      refId="Package\Update &amp; Insert New Records\Insert New Records.Inputs[ADO NET Destination Input].ExternalColumns[SOCreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="SOCreatedDate" />
                     <externalMetadataColumn
                       refId="Package\Update &amp; Insert New Records\Insert New Records.Inputs[ADO NET Destination Input].ExternalColumns[TotalFCLS]"
                       dataType="r8"
@@ -500,6 +401,10 @@
                       dataType="wstr"
                       length="50"
                       name="ModifiedBy" />
+                    <externalMetadataColumn
+                      refId="Package\Update &amp; Insert New Records\Insert New Records.Inputs[ADO NET Destination Input].ExternalColumns[SystemDate]"
+                      dataType="dbTimeStamp"
+                      name="SystemDate" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -4406,6 +4311,79 @@ WHERE SyncDate = (
               </outputs>
             </component>
             <component
+              refId="Package\Update &amp; Insert New Records\System"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="System"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Update &amp; Insert New Records\System.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update &amp; Insert New Records\System.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Update &amp; Insert New Records\System.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\System.Outputs[Derived Column Output].Columns[SystemDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Update &amp; Insert New Records\System.Outputs[Derived Column Output].Columns[SystemDate]"
+                      name="SystemDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Update &amp; Insert New Records\System.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Update &amp; Insert New Records\System.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\System.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Update &amp; Insert New Records\System.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\System.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Update &amp; Insert New Records\System.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Update &amp; Insert New Records\Update Records"
               componentClassID="Microsoft.OLEDBCommand"
               contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
@@ -5196,17 +5174,17 @@ WHERE SyncDate = (
               startId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output]" />
             <path
               refId="Package\Update &amp; Insert New Records.Paths[Derived Column Output]"
-              endId="Package\Update &amp; Insert New Records\Insert New Records.Inputs[ADO NET Destination Input]"
-              name="Derived Column Output"
-              startId="Package\Update &amp; Insert New Records\Created.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Update &amp; Insert New Records.Paths[Derived Column Output1]"
               endId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input]"
               name="Derived Column Output"
               startId="Package\Update &amp; Insert New Records\Modified.Outputs[Derived Column Output]" />
             <path
+              refId="Package\Update &amp; Insert New Records.Paths[Derived Column Output1]"
+              endId="Package\Update &amp; Insert New Records\Insert New Records.Inputs[ADO NET Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Update &amp; Insert New Records\System.Outputs[Derived Column Output]" />
+            <path
               refId="Package\Update &amp; Insert New Records.Paths[Insert (SO Not Match)]"
-              endId="Package\Update &amp; Insert New Records\Created.Inputs[Derived Column Input]"
+              endId="Package\Update &amp; Insert New Records\System.Inputs[Derived Column Input]"
               name="Insert (SO Not Match)"
               startId="Package\Update &amp; Insert New Records\Split Records.Outputs[Insert (SO Not Match)]" />
             <path
@@ -10012,37 +9990,183 @@ WHERE SyncDate = (
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="157,42"
-          Id="Package\Update &amp; Insert New Records\SOHeader Table"
-          TopLeft="840,30" />
+          Size="153,42"
+          Id="Package\Update &amp; Insert New Records\STG_SOHeader"
+          TopLeft="23.3333333333334,33.3333333333333" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\Update &amp; Insert New Records\Sort STG"
+          TopLeft="209,117" />
         <NodeLayout
           Size="187,42"
           Id="Package\Update &amp; Insert New Records\Update Records By SO"
           TopLeft="463.333333333334,277.777777777778" />
         <NodeLayout
-          Size="132,42"
-          Id="Package\Update &amp; Insert New Records\Merge Join"
-          TopLeft="431.5,193.25" />
+          Size="157,42"
+          Id="Package\Update &amp; Insert New Records\SOHeader Table"
+          TopLeft="840,30" />
         <NodeLayout
           Size="142,42"
           Id="Package\Update &amp; Insert New Records\Split Records"
           TopLeft="53.3333333333333,277.777777777778" />
         <NodeLayout
-          Size="153,42"
-          Id="Package\Update &amp; Insert New Records\STG_SOHeader"
-          TopLeft="23.3333333333334,33.3333333333333" />
+          Size="155,42"
+          Id="Package\Update &amp; Insert New Records\Update Records"
+          TopLeft="779.666666666667,450.777777777778" />
+        <NodeLayout
+          Size="132,42"
+          Id="Package\Update &amp; Insert New Records\Merge Join"
+          TopLeft="431.5,193.25" />
+        <NodeLayout
+          Size="115,42"
+          Id="Package\Update &amp; Insert New Records\System"
+          TopLeft="59,368" />
         <NodeLayout
           Size="129,42"
           Id="Package\Update &amp; Insert New Records\Sort Table"
           TopLeft="670.75,111.5" />
         <NodeLayout
-          Size="155,42"
-          Id="Package\Update &amp; Insert New Records\Update Records"
-          TopLeft="779.666666666667,450.777777777778" />
-        <NodeLayout
-          Size="123,42"
-          Id="Package\Update &amp; Insert New Records\Sort STG"
-          TopLeft="209,117" />
+          Size="121,42"
+          Id="Package\Update &amp; Insert New Records\Modified"
+          TopLeft="590.333333333333,376" />
+        <EdgeLayout
+          Id="Package\Update &amp; Insert New Records.Paths[Derived Column Output]"
+          TopLeft="650.833333333333,418">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="206.333333333334,32.777777777778"
+              Start="0,0"
+              End="206.333333333334,25.277777777778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.388888888889" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.388888888889"
+                    Point2="0,16.388888888889"
+                    Point3="4,16.388888888889" />
+                  <mssgle:LineSegment
+                    End="202.333333333334,16.388888888889" />
+                  <mssgle:CubicBezierSegment
+                    Point1="202.333333333334,16.388888888889"
+                    Point2="206.333333333334,16.388888888889"
+                    Point3="206.333333333334,20.388888888889" />
+                  <mssgle:LineSegment
+                    End="206.333333333334,25.277777777778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update &amp; Insert New Records.Paths[ADO NET Source Output1]"
+          TopLeft="918.5,72">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-183.25,39.5"
+              Start="0,0"
+              End="-183.25,32">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.75"
+                    Point2="0,19.75"
+                    Point3="-4,19.75" />
+                  <mssgle:LineSegment
+                    End="-179.25,19.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-179.25,19.75"
+                    Point2="-183.25,19.75"
+                    Point3="-183.25,23.75" />
+                  <mssgle:LineSegment
+                    End="-183.25,32" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update &amp; Insert New Records.Paths[ADO NET Source Output]"
+          TopLeft="99.8333333333334,75.3333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="170.666666666667,41.6666666666667"
+              Start="0,0"
+              End="170.666666666667,34.1666666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.8333333333334" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.8333333333334"
+                    Point2="0,20.8333333333334"
+                    Point3="4,20.8333333333334" />
+                  <mssgle:LineSegment
+                    End="166.666666666667,20.8333333333334" />
+                  <mssgle:CubicBezierSegment
+                    Point1="166.666666666667,20.8333333333334"
+                    Point2="170.666666666667,20.8333333333334"
+                    Point3="170.666666666667,24.8333333333334" />
+                  <mssgle:LineSegment
+                    End="170.666666666667,34.1666666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update &amp; Insert New Records.Paths[Update By SO]"
+          TopLeft="556.833333333334,319.777777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="93.9999999999994,56.222222222222"
+              Start="0,0"
+              End="93.9999999999994,48.722222222222">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.111111111111" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.111111111111"
+                    Point2="0,28.111111111111"
+                    Point3="4,28.111111111111" />
+                  <mssgle:LineSegment
+                    End="89.9999999999994,28.111111111111" />
+                  <mssgle:CubicBezierSegment
+                    Point1="89.9999999999994,28.111111111111"
+                    Point2="93.9999999999994,28.111111111111"
+                    Point3="93.9999999999994,32.111111111111" />
+                  <mssgle:LineSegment
+                    End="93.9999999999994,48.722222222222" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="15.8632421874997,33.111111111111,62.273515625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Update &amp; Insert New Records.Paths[Sort Output1]"
           TopLeft="735.25,153.5">
@@ -10170,217 +10294,47 @@ WHERE SyncDate = (
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Update &amp; Insert New Records.Paths[ADO NET Source Output1]"
-          TopLeft="918.5,72">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-183.25,39.5"
-              Start="0,0"
-              End="-183.25,32">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,15.75"
-                    Point2="0,19.75"
-                    Point3="-4,19.75" />
-                  <mssgle:LineSegment
-                    End="-179.25,19.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-179.25,19.75"
-                    Point2="-183.25,19.75"
-                    Point3="-183.25,23.75" />
-                  <mssgle:LineSegment
-                    End="-183.25,32" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Update &amp; Insert New Records.Paths[ADO NET Source Output]"
-          TopLeft="99.8333333333334,75.3333333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="170.666666666667,41.6666666666667"
-              Start="0,0"
-              End="170.666666666667,34.1666666666667">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.8333333333334" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.8333333333334"
-                    Point2="0,20.8333333333334"
-                    Point3="4,20.8333333333334" />
-                  <mssgle:LineSegment
-                    End="166.666666666667,20.8333333333334" />
-                  <mssgle:CubicBezierSegment
-                    Point1="166.666666666667,20.8333333333334"
-                    Point2="170.666666666667,20.8333333333334"
-                    Point3="170.666666666667,24.8333333333334" />
-                  <mssgle:LineSegment
-                    End="170.666666666667,34.1666666666667" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="118,42"
-          Id="Package\Update &amp; Insert New Records\Created"
-          TopLeft="46,368" />
-        <NodeLayout
-          Size="121,42"
-          Id="Package\Update &amp; Insert New Records\Modified"
-          TopLeft="590.333333333333,376" />
-        <EdgeLayout
           Id="Package\Update &amp; Insert New Records.Paths[Insert (SO Not Match)]"
-          TopLeft="124.333333333333,319.777777777778">
+          TopLeft="120.416666666667,319.777777777778">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-19.3333333333333,48.222222222222"
+              EndConnector="0,48.222222222222"
               Start="0,0"
-              End="-19.3333333333333,40.722222222222">
+              End="0,40.722222222222">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.111111111111" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.111111111111"
-                    Point2="0,24.111111111111"
-                    Point3="-4,24.111111111111" />
-                  <mssgle:LineSegment
-                    End="-15.3333333333333,24.111111111111" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-15.3333333333333,24.111111111111"
-                    Point2="-19.3333333333333,24.111111111111"
-                    Point3="-19.3333333333333,28.111111111111" />
-                  <mssgle:LineSegment
-                    End="-19.3333333333333,40.722222222222" />
+                    End="0,40.722222222222" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-58.9750065104166,29.111111111111,98.6166796875,11.609375"
+              BoundingBox="-49.30833984375,14.556423611111,98.6166796875,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
           Size="173,42"
           Id="Package\Update &amp; Insert New Records\Insert New Records"
-          TopLeft="36,455" />
-        <EdgeLayout
-          Id="Package\Update &amp; Insert New Records.Paths[Derived Column Output]"
-          TopLeft="105,410">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="17.5,45"
-              Start="0,0"
-              End="17.5,37.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.5"
-                    Point2="0,22.5"
-                    Point3="4,22.5" />
-                  <mssgle:LineSegment
-                    End="13.5,22.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="13.5,22.5"
-                    Point2="17.5,22.5"
-                    Point3="17.5,26.5" />
-                  <mssgle:LineSegment
-                    End="17.5,37.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Update &amp; Insert New Records.Paths[Update By SO]"
-          TopLeft="556.833333333334,319.777777777778">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="93.9999999999994,56.222222222222"
-              Start="0,0"
-              End="93.9999999999994,48.722222222222">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.111111111111" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24.111111111111"
-                    Point2="0,28.111111111111"
-                    Point3="4,28.111111111111" />
-                  <mssgle:LineSegment
-                    End="89.9999999999994,28.111111111111" />
-                  <mssgle:CubicBezierSegment
-                    Point1="89.9999999999994,28.111111111111"
-                    Point2="93.9999999999994,28.111111111111"
-                    Point3="93.9999999999994,32.111111111111" />
-                  <mssgle:LineSegment
-                    End="93.9999999999994,48.722222222222" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="15.8632421874997,33.111111111111,62.273515625,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="29,435" />
         <EdgeLayout
           Id="Package\Update &amp; Insert New Records.Paths[Derived Column Output1]"
-          TopLeft="650.833333333333,418">
+          TopLeft="116,410">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="206.333333333334,32.777777777778"
+              EndConnector="0,25"
               Start="0,0"
-              End="206.333333333334,25.277777777778">
+              End="0,17.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,12.388888888889" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.388888888889"
-                    Point2="0,16.388888888889"
-                    Point3="4,16.388888888889" />
-                  <mssgle:LineSegment
-                    End="202.333333333334,16.388888888889" />
-                  <mssgle:CubicBezierSegment
-                    Point1="202.333333333334,16.388888888889"
-                    Point2="206.333333333334,16.388888888889"
-                    Point3="206.333333333334,20.388888888889" />
-                  <mssgle:LineSegment
-                    End="206.333333333334,25.277777777778" />
+                    End="0,17.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10393,7 +10347,7 @@ WHERE SyncDate = (
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Update &amp; Insert New Records\SOHeader Table">
+    design-time-name="Package\Update &amp; Insert New Records\STG_SOHeader">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10401,7 +10355,7 @@ WHERE SyncDate = (
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Update &amp; Insert New Records\STG_SOHeader">
+    design-time-name="Package\Update &amp; Insert New Records\SOHeader Table">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10414,71 +10368,41 @@ WHERE SyncDate = (
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="115,42"
+          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update"
+          TopLeft="347,289" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Split Records"
+          TopLeft="28,289" />
+        <NodeLayout
           Size="243,42"
           Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo"
           TopLeft="893,290" />
-        <NodeLayout
-          Size="153,42"
-          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\STG_SOHeader"
-          TopLeft="20.6363636363636,9.72727272727273" />
         <NodeLayout
           Size="129,42"
           Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table"
           TopLeft="636,82" />
         <NodeLayout
-          Size="115,42"
-          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update"
-          TopLeft="347,289" />
+          Size="121,42"
+          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Modified"
+          TopLeft="601,292" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\STG_SOHeader"
+          TopLeft="20.6363636363636,9.72727272727273" />
         <NodeLayout
           Size="123,42"
           Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG"
           TopLeft="239,85" />
         <NodeLayout
-          Size="157,42"
-          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table"
-          TopLeft="900.909090909091,7.63636363636364" />
-        <NodeLayout
           Size="132,42"
           Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join"
           TopLeft="436,180" />
         <NodeLayout
-          Size="142,42"
-          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Split Records"
-          TopLeft="28,289" />
-        <EdgeLayout
-          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL)).Paths[ADO NET Source Output1]"
-          TopLeft="979.409090909091,49.6363636363636">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-278.909090909091,32.3636363636364"
-              Start="0,0"
-              End="-278.909090909091,24.8636363636364">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,12.1818181818182" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.1818181818182"
-                    Point2="0,16.1818181818182"
-                    Point3="-4,16.1818181818182" />
-                  <mssgle:LineSegment
-                    End="-274.909090909091,16.1818181818182" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-274.909090909091,16.1818181818182"
-                    Point2="-278.909090909091,16.1818181818182"
-                    Point3="-278.909090909091,20.1818181818182" />
-                  <mssgle:LineSegment
-                    End="-278.909090909091,24.8636363636364" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="157,42"
+          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table"
+          TopLeft="900.909090909091,7.63636363636364" />
         <EdgeLayout
           Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL)).Paths[ADO NET Source Output]"
           TopLeft="97.1363636363636,51.7272727272727">
@@ -10606,6 +10530,30 @@ WHERE SyncDate = (
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL)).Paths[PO and SoldTo (Match)]"
+          TopLeft="462,311.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="139,0"
+              Start="0,0"
+              End="131.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="131.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="14.09326171875,5,103.3134765625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL)).Paths[Merge Join Output]"
           TopLeft="502,222">
           <EdgeLayout.Curve>
@@ -10639,34 +10587,6 @@ WHERE SyncDate = (
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="121,42"
-          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Modified"
-          TopLeft="601,292" />
-        <EdgeLayout
-          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL)).Paths[PO and SoldTo (Match)]"
-          TopLeft="462,311.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="139,0"
-              Start="0,0"
-              End="131.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="131.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="14.09326171875,5,103.3134765625,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL)).Paths[Derived Column Output]"
           TopLeft="722,312">
@@ -10681,6 +10601,40 @@ WHERE SyncDate = (
                   Capacity="5">
                   <mssgle:LineSegment
                     End="163.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL)).Paths[ADO NET Source Output1]"
+          TopLeft="979.409090909091,49.6363636363636">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-278.909090909091,32.3636363636364"
+              Start="0,0"
+              End="-278.909090909091,24.8636363636364">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.1818181818182" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.1818181818182"
+                    Point2="0,16.1818181818182"
+                    Point3="-4,16.1818181818182" />
+                  <mssgle:LineSegment
+                    End="-274.909090909091,16.1818181818182" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-274.909090909091,16.1818181818182"
+                    Point2="-278.909090909091,16.1818181818182"
+                    Point3="-278.909090909091,20.1818181818182" />
+                  <mssgle:LineSegment
+                    End="-278.909090909091,24.8636363636364" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
