@@ -11,8 +11,8 @@
   DTS:LocaleID="1054"
   DTS:ObjectName="SOHeader"
   DTS:PackageType="5"
-  DTS:VersionBuild="97"
-  DTS:VersionGUID="{2DB11498-BC22-4376-A578-B5CC532F3A1E}">
+  DTS:VersionBuild="108"
+  DTS:VersionGUID="{2FFEBDFC-59EB-4CD6-8677-D843C9848273}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA10Q+mOwr3PBMRtWWS4dPwSgvxzb/wZ2HMijzutdyLiQAAAAAOgAAAAAIAACAAAAB2TWs1KLFP87aTwHkGrxp286NL7AGQC4f8l8Q1qo3BoSAAAACyQ7YTSpgMY5uE+xDem4/x1u3fehOmr4ht0twy4PRH6UAAAAApXOAUYpamIdPzV962xs6W6Ec3PSMSwUSYz1whv8/V0Ga/oeSd2YMmKrCqDd9W0uPbUQjn8Gz5O77kQN9d4zRr</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACuJpLQ7RwEaLiOwcM1jaGwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADIlJGprfZcADEJkc7lNCNPjQNe1onYGr98ozSzHsT/uQAAAAAOgAAAAAIAACAAAABhc/z+oMsiQifzbz6EeRe/06roaly9cg9jfiwI4LsJQCAAAABMRGQp3BAPyYOQMzsIgMe3FAhI7967MAVnDmnYQfQOQkAAAAD7Dso6VKWCr23Ikg9rIUqBXeJxI2RwzM8hyzeVdtpp21KgPEKlE8gIoERTnnJaMvLzK3Vi7ztTGLRA8R+Uciyo</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -152,6 +152,12 @@
                       cachedName="INV"
                       externalMetadataColumnId="Package\Update &amp; Insert New Records\Insert New Records.Inputs[ADO NET Destination Input].ExternalColumns[INV]"
                       lineageId="Package\Update &amp; Insert New Records\Merge Join.Outputs[Merge Join Output].Columns[INV]" />
+                    <inputColumn
+                      refId="Package\Update &amp; Insert New Records\Insert New Records.Inputs[ADO NET Destination Input].Columns[SOCreatedDate]"
+                      cachedDataType="dbDate"
+                      cachedName="SOCreatedDate"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Insert New Records.Inputs[ADO NET Destination Input].ExternalColumns[SOCreatedDate]"
+                      lineageId="Package\Update &amp; Insert New Records\Merge Join.Outputs[Merge Join Output].Columns[SOCreatedDate]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Insert New Records.Inputs[ADO NET Destination Input].Columns[SoldTo]"
                       cachedDataType="wstr"
@@ -338,13 +344,21 @@
                       dataType="r8"
                       name="TotalNetInvoice" />
                     <externalMetadataColumn
-                      refId="Package\Update &amp; Insert New Records\Insert New Records.Inputs[ADO NET Destination Input].ExternalColumns[TTSlip]"
+                      refId="Package\Update &amp; Insert New Records\Insert New Records.Inputs[ADO NET Destination Input].ExternalColumns[TT1SlipReceiveDate]"
                       dataType="dbTimeStamp"
-                      name="TTSlip" />
+                      name="TT1SlipReceiveDate" />
                     <externalMetadataColumn
-                      refId="Package\Update &amp; Insert New Records\Insert New Records.Inputs[ADO NET Destination Input].ExternalColumns[LCSlip]"
+                      refId="Package\Update &amp; Insert New Records\Insert New Records.Inputs[ADO NET Destination Input].ExternalColumns[TT2SlipReceiveDate]"
                       dataType="dbTimeStamp"
-                      name="LCSlip" />
+                      name="TT2SlipReceiveDate" />
+                    <externalMetadataColumn
+                      refId="Package\Update &amp; Insert New Records\Insert New Records.Inputs[ADO NET Destination Input].ExternalColumns[LCSlipReceiveDate]"
+                      dataType="dbTimeStamp"
+                      name="LCSlipReceiveDate" />
+                    <externalMetadataColumn
+                      refId="Package\Update &amp; Insert New Records\Insert New Records.Inputs[ADO NET Destination Input].ExternalColumns[ConfirmPayment]"
+                      dataType="bool"
+                      name="ConfirmPayment" />
                     <externalMetadataColumn
                       refId="Package\Update &amp; Insert New Records\Insert New Records.Inputs[ADO NET Destination Input].ExternalColumns[IsRequest]"
                       dataType="bool"
@@ -520,78 +534,84 @@
                       cachedSortKeyPosition="1"
                       lineageId="Package\Update &amp; Insert New Records\Sort STG.Outputs[Sort Output].Columns[SO]" />
                     <inputColumn
+                      refId="Package\Update &amp; Insert New Records\Merge Join.Inputs[Merge Join Left Input].Columns[SOCreatedDate]"
+                      cachedDataType="dbDate"
+                      cachedName="SOCreatedDate"
+                      cachedSortKeyPosition="9"
+                      lineageId="Package\Update &amp; Insert New Records\Sort STG.Outputs[Sort Output].Columns[SOCreatedDate]" />
+                    <inputColumn
                       refId="Package\Update &amp; Insert New Records\Merge Join.Inputs[Merge Join Left Input].Columns[SoldTo]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="SoldTo"
-                      cachedSortKeyPosition="9"
+                      cachedSortKeyPosition="10"
                       lineageId="Package\Update &amp; Insert New Records\Sort STG.Outputs[Sort Output].Columns[SoldTo]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Merge Join.Inputs[Merge Join Left Input].Columns[SoldToName]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="SoldToName"
-                      cachedSortKeyPosition="10"
+                      cachedSortKeyPosition="11"
                       lineageId="Package\Update &amp; Insert New Records\Sort STG.Outputs[Sort Output].Columns[SoldToName]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Merge Join.Inputs[Merge Join Left Input].Columns[ShipTo]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="ShipTo"
-                      cachedSortKeyPosition="11"
+                      cachedSortKeyPosition="12"
                       lineageId="Package\Update &amp; Insert New Records\Sort STG.Outputs[Sort Output].Columns[ShipTo]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Merge Join.Inputs[Merge Join Left Input].Columns[ShipToName]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="ShipToName"
-                      cachedSortKeyPosition="12"
+                      cachedSortKeyPosition="13"
                       lineageId="Package\Update &amp; Insert New Records\Sort STG.Outputs[Sort Output].Columns[ShipToName]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Merge Join.Inputs[Merge Join Left Input].Columns[DestinationPort]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="DestinationPort"
-                      cachedSortKeyPosition="13"
+                      cachedSortKeyPosition="14"
                       lineageId="Package\Update &amp; Insert New Records\Sort STG.Outputs[Sort Output].Columns[DestinationPort]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Merge Join.Inputs[Merge Join Left Input].Columns[PaymentTerm]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="PaymentTerm"
-                      cachedSortKeyPosition="14"
+                      cachedSortKeyPosition="15"
                       lineageId="Package\Update &amp; Insert New Records\Sort STG.Outputs[Sort Output].Columns[PaymentTerm]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Merge Join.Inputs[Merge Join Left Input].Columns[Incoterm]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Incoterm"
-                      cachedSortKeyPosition="15"
+                      cachedSortKeyPosition="16"
                       lineageId="Package\Update &amp; Insert New Records\Sort STG.Outputs[Sort Output].Columns[Incoterm]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Merge Join.Inputs[Merge Join Left Input].Columns[Currency]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Currency"
-                      cachedSortKeyPosition="16"
+                      cachedSortKeyPosition="17"
                       lineageId="Package\Update &amp; Insert New Records\Sort STG.Outputs[Sort Output].Columns[Currency]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Merge Join.Inputs[Merge Join Left Input].Columns[EXRate]"
                       cachedDataType="r8"
                       cachedName="EXRate"
-                      cachedSortKeyPosition="17"
+                      cachedSortKeyPosition="18"
                       lineageId="Package\Update &amp; Insert New Records\Sort STG.Outputs[Sort Output].Columns[EXRate]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Merge Join.Inputs[Merge Join Left Input].Columns[TotalNetSales]"
                       cachedDataType="r8"
                       cachedName="TotalNetSales"
-                      cachedSortKeyPosition="18"
+                      cachedSortKeyPosition="19"
                       lineageId="Package\Update &amp; Insert New Records\Sort STG.Outputs[Sort Output].Columns[TotalNetSales]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Merge Join.Inputs[Merge Join Left Input].Columns[TotalNetInvoice]"
                       cachedDataType="r8"
                       cachedName="TotalNetInvoice"
-                      cachedSortKeyPosition="19"
+                      cachedSortKeyPosition="20"
                       lineageId="Package\Update &amp; Insert New Records\Sort STG.Outputs[Sort Output].Columns[TotalNetInvoice]" />
                   </inputColumns>
                   <externalMetadataColumns />
@@ -656,78 +676,84 @@
                       cachedSortKeyPosition="1"
                       lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[SO]" />
                     <inputColumn
+                      refId="Package\Update &amp; Insert New Records\Merge Join.Inputs[Merge Join Right Input].Columns[SOCreatedDate]"
+                      cachedDataType="dbDate"
+                      cachedName="SOCreatedDate"
+                      cachedSortKeyPosition="9"
+                      lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[SOCreatedDate]" />
+                    <inputColumn
                       refId="Package\Update &amp; Insert New Records\Merge Join.Inputs[Merge Join Right Input].Columns[SoldTo]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="SoldTo"
-                      cachedSortKeyPosition="9"
+                      cachedSortKeyPosition="10"
                       lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[SoldTo]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Merge Join.Inputs[Merge Join Right Input].Columns[SoldToName]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="SoldToName"
-                      cachedSortKeyPosition="10"
+                      cachedSortKeyPosition="11"
                       lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[SoldToName]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Merge Join.Inputs[Merge Join Right Input].Columns[ShipTo]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="ShipTo"
-                      cachedSortKeyPosition="11"
+                      cachedSortKeyPosition="12"
                       lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[ShipTo]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Merge Join.Inputs[Merge Join Right Input].Columns[ShipToName]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="ShipToName"
-                      cachedSortKeyPosition="12"
+                      cachedSortKeyPosition="13"
                       lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[ShipToName]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Merge Join.Inputs[Merge Join Right Input].Columns[DestinationPort]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="DestinationPort"
-                      cachedSortKeyPosition="13"
+                      cachedSortKeyPosition="14"
                       lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[DestinationPort]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Merge Join.Inputs[Merge Join Right Input].Columns[PaymentTerm]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="PaymentTerm"
-                      cachedSortKeyPosition="14"
+                      cachedSortKeyPosition="15"
                       lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[PaymentTerm]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Merge Join.Inputs[Merge Join Right Input].Columns[Incoterm]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Incoterm"
-                      cachedSortKeyPosition="15"
+                      cachedSortKeyPosition="16"
                       lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[Incoterm]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Merge Join.Inputs[Merge Join Right Input].Columns[Currency]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Currency"
-                      cachedSortKeyPosition="16"
+                      cachedSortKeyPosition="17"
                       lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[Currency]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Merge Join.Inputs[Merge Join Right Input].Columns[EXRate]"
                       cachedDataType="r8"
                       cachedName="EXRate"
-                      cachedSortKeyPosition="17"
+                      cachedSortKeyPosition="18"
                       lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[EXRate]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Merge Join.Inputs[Merge Join Right Input].Columns[TotalNetSales]"
                       cachedDataType="r8"
                       cachedName="TotalNetSales"
-                      cachedSortKeyPosition="18"
+                      cachedSortKeyPosition="19"
                       lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[TotalNetSales]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Merge Join.Inputs[Merge Join Right Input].Columns[TotalNetInvoice]"
                       cachedDataType="r8"
                       cachedName="TotalNetInvoice"
-                      cachedSortKeyPosition="19"
+                      cachedSortKeyPosition="20"
                       lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[TotalNetInvoice]" />
                   </inputColumns>
                   <externalMetadataColumns />
@@ -848,6 +874,19 @@
                           dataType="System.Int32"
                           description="The input column associated with this output column"
                           name="InputColumnID">#{Package\Update &amp; Insert New Records\Merge Join.Inputs[Merge Join Left Input].Columns[INV]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\Merge Join.Outputs[Merge Join Output].Columns[SOCreatedDate]"
+                      dataType="dbDate"
+                      lineageId="Package\Update &amp; Insert New Records\Merge Join.Outputs[Merge Join Output].Columns[SOCreatedDate]"
+                      name="SOCreatedDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update &amp; Insert New Records\Merge Join.Inputs[Merge Join Left Input].Columns[SOCreatedDate]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1109,6 +1148,19 @@
                           dataType="System.Int32"
                           description="The input column associated with this output column"
                           name="InputColumnID">#{Package\Update &amp; Insert New Records\Merge Join.Inputs[Merge Join Right Input].Columns[INV]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\Merge Join.Outputs[Merge Join Output].Columns[SOCreatedDate (1)]"
+                      dataType="dbDate"
+                      lineageId="Package\Update &amp; Insert New Records\Merge Join.Outputs[Merge Join Output].Columns[SOCreatedDate (1)]"
+                      name="SOCreatedDate (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update &amp; Insert New Records\Merge Join.Inputs[Merge Join Right Input].Columns[SOCreatedDate]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1494,7 +1546,7 @@
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[SOCreatedDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[SOCreatedDate]"
@@ -1835,7 +1887,7 @@
                       name="SO" />
                     <externalMetadataColumn
                       refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[SOCreatedDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       name="SOCreatedDate" />
                     <externalMetadataColumn
                       refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[TotalFCLS]"
@@ -2028,7 +2080,7 @@
                       name="SO" />
                     <outputColumn
                       refId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[SOCreatedDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[SOCreatedDate]"
                       name="SOCreatedDate" />
                     <outputColumn
@@ -2373,6 +2425,22 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
+                      refId="Package\Update &amp; Insert New Records\Sort STG.Inputs[Sort Input].Columns[SOCreatedDate]"
+                      cachedDataType="dbDate"
+                      cachedName="SOCreatedDate"
+                      lineageId="Package\Update &amp; Insert New Records\STG_SOHeader.Outputs[ADO NET Source Output].Columns[SOCreatedDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">9</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
                       refId="Package\Update &amp; Insert New Records\Sort STG.Inputs[Sort Input].Columns[SoldTo]"
                       cachedDataType="wstr"
                       cachedLength="50"
@@ -2386,7 +2454,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">9</property>
+                          name="NewSortKeyPosition">10</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2403,7 +2471,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">10</property>
+                          name="NewSortKeyPosition">11</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2420,7 +2488,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">11</property>
+                          name="NewSortKeyPosition">12</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2437,7 +2505,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">12</property>
+                          name="NewSortKeyPosition">13</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2454,7 +2522,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">13</property>
+                          name="NewSortKeyPosition">14</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2471,7 +2539,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">14</property>
+                          name="NewSortKeyPosition">15</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2488,7 +2556,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">15</property>
+                          name="NewSortKeyPosition">16</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2505,7 +2573,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">16</property>
+                          name="NewSortKeyPosition">17</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2521,7 +2589,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">17</property>
+                          name="NewSortKeyPosition">18</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2537,7 +2605,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">18</property>
+                          name="NewSortKeyPosition">19</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2553,7 +2621,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">19</property>
+                          name="NewSortKeyPosition">20</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2701,12 +2769,26 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
+                      refId="Package\Update &amp; Insert New Records\Sort STG.Outputs[Sort Output].Columns[SOCreatedDate]"
+                      dataType="dbDate"
+                      lineageId="Package\Update &amp; Insert New Records\Sort STG.Outputs[Sort Output].Columns[SOCreatedDate]"
+                      name="SOCreatedDate"
+                      sortKeyPosition="9">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update &amp; Insert New Records\STG_SOHeader.Outputs[ADO NET Source Output].Columns[SOCreatedDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
                       refId="Package\Update &amp; Insert New Records\Sort STG.Outputs[Sort Output].Columns[SoldTo]"
                       dataType="wstr"
                       length="50"
                       lineageId="Package\Update &amp; Insert New Records\Sort STG.Outputs[Sort Output].Columns[SoldTo]"
                       name="SoldTo"
-                      sortKeyPosition="9">
+                      sortKeyPosition="10">
                       <properties>
                         <property
                           containsID="true"
@@ -2721,7 +2803,7 @@
                       length="50"
                       lineageId="Package\Update &amp; Insert New Records\Sort STG.Outputs[Sort Output].Columns[SoldToName]"
                       name="SoldToName"
-                      sortKeyPosition="10">
+                      sortKeyPosition="11">
                       <properties>
                         <property
                           containsID="true"
@@ -2736,7 +2818,7 @@
                       length="50"
                       lineageId="Package\Update &amp; Insert New Records\Sort STG.Outputs[Sort Output].Columns[ShipTo]"
                       name="ShipTo"
-                      sortKeyPosition="11">
+                      sortKeyPosition="12">
                       <properties>
                         <property
                           containsID="true"
@@ -2751,7 +2833,7 @@
                       length="50"
                       lineageId="Package\Update &amp; Insert New Records\Sort STG.Outputs[Sort Output].Columns[ShipToName]"
                       name="ShipToName"
-                      sortKeyPosition="12">
+                      sortKeyPosition="13">
                       <properties>
                         <property
                           containsID="true"
@@ -2766,7 +2848,7 @@
                       length="50"
                       lineageId="Package\Update &amp; Insert New Records\Sort STG.Outputs[Sort Output].Columns[DestinationPort]"
                       name="DestinationPort"
-                      sortKeyPosition="13">
+                      sortKeyPosition="14">
                       <properties>
                         <property
                           containsID="true"
@@ -2781,7 +2863,7 @@
                       length="50"
                       lineageId="Package\Update &amp; Insert New Records\Sort STG.Outputs[Sort Output].Columns[PaymentTerm]"
                       name="PaymentTerm"
-                      sortKeyPosition="14">
+                      sortKeyPosition="15">
                       <properties>
                         <property
                           containsID="true"
@@ -2796,7 +2878,7 @@
                       length="50"
                       lineageId="Package\Update &amp; Insert New Records\Sort STG.Outputs[Sort Output].Columns[Incoterm]"
                       name="Incoterm"
-                      sortKeyPosition="15">
+                      sortKeyPosition="16">
                       <properties>
                         <property
                           containsID="true"
@@ -2811,7 +2893,7 @@
                       length="50"
                       lineageId="Package\Update &amp; Insert New Records\Sort STG.Outputs[Sort Output].Columns[Currency]"
                       name="Currency"
-                      sortKeyPosition="16">
+                      sortKeyPosition="17">
                       <properties>
                         <property
                           containsID="true"
@@ -2825,7 +2907,7 @@
                       dataType="r8"
                       lineageId="Package\Update &amp; Insert New Records\Sort STG.Outputs[Sort Output].Columns[EXRate]"
                       name="EXRate"
-                      sortKeyPosition="17">
+                      sortKeyPosition="18">
                       <properties>
                         <property
                           containsID="true"
@@ -2839,7 +2921,7 @@
                       dataType="r8"
                       lineageId="Package\Update &amp; Insert New Records\Sort STG.Outputs[Sort Output].Columns[TotalNetSales]"
                       name="TotalNetSales"
-                      sortKeyPosition="18">
+                      sortKeyPosition="19">
                       <properties>
                         <property
                           containsID="true"
@@ -2853,7 +2935,7 @@
                       dataType="r8"
                       lineageId="Package\Update &amp; Insert New Records\Sort STG.Outputs[Sort Output].Columns[TotalNetInvoice]"
                       name="TotalNetInvoice"
-                      sortKeyPosition="19">
+                      sortKeyPosition="20">
                       <properties>
                         <property
                           containsID="true"
@@ -3039,7 +3121,7 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Sort Table.Inputs[Sort Input].Columns[SOCreatedDate]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="SOCreatedDate"
                       lineageId="Package\Update &amp; Insert New Records\SOHeader Table.Outputs[ADO NET Source Output].Columns[SOCreatedDate]">
                       <properties>
@@ -3050,7 +3132,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          name="NewSortKeyPosition">9</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -3083,7 +3165,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">9</property>
+                          name="NewSortKeyPosition">10</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -3100,7 +3182,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">10</property>
+                          name="NewSortKeyPosition">11</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -3117,7 +3199,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">11</property>
+                          name="NewSortKeyPosition">12</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -3134,7 +3216,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">12</property>
+                          name="NewSortKeyPosition">13</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -3151,7 +3233,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">13</property>
+                          name="NewSortKeyPosition">14</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -3184,7 +3266,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">14</property>
+                          name="NewSortKeyPosition">15</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -3201,7 +3283,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">15</property>
+                          name="NewSortKeyPosition">16</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -3218,7 +3300,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">16</property>
+                          name="NewSortKeyPosition">17</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -3234,7 +3316,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">17</property>
+                          name="NewSortKeyPosition">18</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -3250,7 +3332,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">18</property>
+                          name="NewSortKeyPosition">19</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -3266,7 +3348,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">19</property>
+                          name="NewSortKeyPosition">20</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -3691,9 +3773,10 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[SOCreatedDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[SOCreatedDate]"
-                      name="SOCreatedDate">
+                      name="SOCreatedDate"
+                      sortKeyPosition="9">
                       <properties>
                         <property
                           containsID="true"
@@ -3721,7 +3804,7 @@
                       length="50"
                       lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[SoldTo]"
                       name="SoldTo"
-                      sortKeyPosition="9">
+                      sortKeyPosition="10">
                       <properties>
                         <property
                           containsID="true"
@@ -3736,7 +3819,7 @@
                       length="50"
                       lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[SoldToName]"
                       name="SoldToName"
-                      sortKeyPosition="10">
+                      sortKeyPosition="11">
                       <properties>
                         <property
                           containsID="true"
@@ -3751,7 +3834,7 @@
                       length="50"
                       lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[ShipTo]"
                       name="ShipTo"
-                      sortKeyPosition="11">
+                      sortKeyPosition="12">
                       <properties>
                         <property
                           containsID="true"
@@ -3766,7 +3849,7 @@
                       length="50"
                       lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[ShipToName]"
                       name="ShipToName"
-                      sortKeyPosition="12">
+                      sortKeyPosition="13">
                       <properties>
                         <property
                           containsID="true"
@@ -3781,7 +3864,7 @@
                       length="50"
                       lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[DestinationPort]"
                       name="DestinationPort"
-                      sortKeyPosition="13">
+                      sortKeyPosition="14">
                       <properties>
                         <property
                           containsID="true"
@@ -3809,7 +3892,7 @@
                       length="50"
                       lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[PaymentTerm]"
                       name="PaymentTerm"
-                      sortKeyPosition="14">
+                      sortKeyPosition="15">
                       <properties>
                         <property
                           containsID="true"
@@ -3824,7 +3907,7 @@
                       length="50"
                       lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[Incoterm]"
                       name="Incoterm"
-                      sortKeyPosition="15">
+                      sortKeyPosition="16">
                       <properties>
                         <property
                           containsID="true"
@@ -3839,7 +3922,7 @@
                       length="50"
                       lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[Currency]"
                       name="Currency"
-                      sortKeyPosition="16">
+                      sortKeyPosition="17">
                       <properties>
                         <property
                           containsID="true"
@@ -3853,7 +3936,7 @@
                       dataType="r8"
                       lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[EXRate]"
                       name="EXRate"
-                      sortKeyPosition="17">
+                      sortKeyPosition="18">
                       <properties>
                         <property
                           containsID="true"
@@ -3867,7 +3950,7 @@
                       dataType="r8"
                       lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[TotalNetSales]"
                       name="TotalNetSales"
-                      sortKeyPosition="18">
+                      sortKeyPosition="19">
                       <properties>
                         <property
                           containsID="true"
@@ -3881,7 +3964,7 @@
                       dataType="r8"
                       lineageId="Package\Update &amp; Insert New Records\Sort Table.Outputs[Sort Output].Columns[TotalNetInvoice]"
                       name="TotalNetInvoice"
-                      sortKeyPosition="19">
+                      sortKeyPosition="20">
                       <properties>
                         <property
                           containsID="true"
@@ -4393,6 +4476,15 @@ WHERE SyncDate = (
                       name="SO"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
+                      refId="Package\Update &amp; Insert New Records\STG_SOHeader.Outputs[ADO NET Source Output].Columns[SOCreatedDate]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[SOCreatedDate]"
+                      lineageId="Package\Update &amp; Insert New Records\STG_SOHeader.Outputs[ADO NET Source Output].Columns[SOCreatedDate]"
+                      name="SOCreatedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
                       refId="Package\Update &amp; Insert New Records\STG_SOHeader.Outputs[ADO NET Source Output].Columns[SoldTo]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
@@ -4550,6 +4642,10 @@ WHERE SyncDate = (
                       length="50"
                       name="SO" />
                     <externalMetadataColumn
+                      refId="Package\Update &amp; Insert New Records\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[SOCreatedDate]"
+                      dataType="dbDate"
+                      name="SOCreatedDate" />
+                    <externalMetadataColumn
                       refId="Package\Update &amp; Insert New Records\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[SoldTo]"
                       dataType="wstr"
                       length="50"
@@ -4658,6 +4754,11 @@ WHERE SyncDate = (
                       length="50"
                       lineageId="Package\Update &amp; Insert New Records\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[SO]"
                       name="SO" />
+                    <outputColumn
+                      refId="Package\Update &amp; Insert New Records\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[SOCreatedDate]"
+                      dataType="dbDate"
+                      lineageId="Package\Update &amp; Insert New Records\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[SOCreatedDate]"
+                      name="SOCreatedDate" />
                     <outputColumn
                       refId="Package\Update &amp; Insert New Records\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[SoldTo]"
                       dataType="wstr"
@@ -4842,6 +4943,7 @@ WHERE SyncDate = (
  ,[PO] = ?
  ,[PODate] = ?
  ,[INV] = ?
+ ,[SOCreatedDate] = ?
  ,[SoldTo] = ?
  ,[SoldToName] = ?
  ,[ShipTo] = ?
@@ -4925,100 +5027,106 @@ WHERE SyncDate = (
                       externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
                       lineageId="Package\Update &amp; Insert New Records\Merge Join.Outputs[Merge Join Output].Columns[INV]" />
                     <inputColumn
+                      refId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].Columns[SOCreatedDate]"
+                      cachedDataType="dbDate"
+                      cachedName="SOCreatedDate"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      lineageId="Package\Update &amp; Insert New Records\Merge Join.Outputs[Merge Join Output].Columns[SOCreatedDate]" />
+                    <inputColumn
                       refId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].Columns[SoldTo]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="SoldTo"
-                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
                       lineageId="Package\Update &amp; Insert New Records\Merge Join.Outputs[Merge Join Output].Columns[SoldTo]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].Columns[SoldToName]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="SoldToName"
-                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
                       lineageId="Package\Update &amp; Insert New Records\Merge Join.Outputs[Merge Join Output].Columns[SoldToName]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].Columns[ShipTo]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="ShipTo"
-                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
                       lineageId="Package\Update &amp; Insert New Records\Merge Join.Outputs[Merge Join Output].Columns[ShipTo]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].Columns[ShipToName]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="ShipToName"
-                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
                       lineageId="Package\Update &amp; Insert New Records\Merge Join.Outputs[Merge Join Output].Columns[ShipToName]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].Columns[DestinationPort]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="DestinationPort"
-                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_12]"
                       lineageId="Package\Update &amp; Insert New Records\Merge Join.Outputs[Merge Join Output].Columns[DestinationPort]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].Columns[PaymentTerm]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="PaymentTerm"
-                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_12]"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_13]"
                       lineageId="Package\Update &amp; Insert New Records\Merge Join.Outputs[Merge Join Output].Columns[PaymentTerm]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].Columns[Incoterm]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Incoterm"
-                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_13]"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_14]"
                       lineageId="Package\Update &amp; Insert New Records\Merge Join.Outputs[Merge Join Output].Columns[Incoterm]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].Columns[Currency]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Currency"
-                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_14]"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_15]"
                       lineageId="Package\Update &amp; Insert New Records\Merge Join.Outputs[Merge Join Output].Columns[Currency]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].Columns[EXRate]"
                       cachedDataType="r8"
                       cachedName="EXRate"
-                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_15]"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_16]"
                       lineageId="Package\Update &amp; Insert New Records\Merge Join.Outputs[Merge Join Output].Columns[EXRate]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].Columns[TotalNetSales]"
                       cachedDataType="r8"
                       cachedName="TotalNetSales"
-                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_16]"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_17]"
                       lineageId="Package\Update &amp; Insert New Records\Merge Join.Outputs[Merge Join Output].Columns[TotalNetSales]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].Columns[TotalNetInvoice]"
                       cachedDataType="r8"
                       cachedName="TotalNetInvoice"
-                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_17]"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_18]"
                       lineageId="Package\Update &amp; Insert New Records\Merge Join.Outputs[Merge Join Output].Columns[TotalNetInvoice]" />
-                    <inputColumn
-                      refId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].Columns[SO]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="SO"
-                      cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_20]"
-                      lineageId="Package\Update &amp; Insert New Records\Merge Join.Outputs[Merge Join Output].Columns[SO]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].Columns[ModifiedDate]"
                       cachedDataType="dbTimeStamp"
                       cachedName="ModifiedDate"
-                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_18]"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_19]"
                       lineageId="Package\Update &amp; Insert New Records\Modified.Outputs[Derived Column Output].Columns[ModifiedDate]" />
                     <inputColumn
                       refId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].Columns[ModifiedBy]"
                       cachedDataType="wstr"
                       cachedLength="6"
                       cachedName="ModifiedBy"
-                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_19]"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_20]"
                       lineageId="Package\Update &amp; Insert New Records\Modified.Outputs[Derived Column Output].Columns[ModifiedBy]" />
+                    <inputColumn
+                      refId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].Columns[SO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SO"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_21]"
+                      lineageId="Package\Update &amp; Insert New Records\Merge Join.Outputs[Merge Join Output].Columns[SO]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -5106,8 +5214,7 @@ WHERE SyncDate = (
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
-                      dataType="wstr"
-                      length="50"
+                      dataType="date"
                       name="Param_7">
                       <properties>
                         <property
@@ -5202,7 +5309,8 @@ WHERE SyncDate = (
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_15]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="50"
                       name="Param_15">
                       <properties>
                         <property
@@ -5235,7 +5343,7 @@ WHERE SyncDate = (
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_18]"
-                      dataType="dbTimeStamp"
+                      dataType="r8"
                       name="Param_18">
                       <properties>
                         <property
@@ -5246,8 +5354,7 @@ WHERE SyncDate = (
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_19]"
-                      dataType="wstr"
-                      length="50"
+                      dataType="dbTimeStamp"
                       name="Param_19">
                       <properties>
                         <property
@@ -5261,6 +5368,18 @@ WHERE SyncDate = (
                       dataType="wstr"
                       length="50"
                       name="Param_20">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Update &amp; Insert New Records\Update Records.Inputs[OLE DB Command Input].ExternalColumns[Param_21]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_21">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -5750,6 +5869,12 @@ WHERE SyncDate = (
                       cachedSortKeyPosition="9"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Outputs[Sort Output].Columns[SO]" />
                     <inputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Left Input].Columns[SOCreatedDate]"
+                      cachedDataType="dbDate"
+                      cachedName="SOCreatedDate"
+                      cachedSortKeyPosition="10"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Outputs[Sort Output].Columns[SOCreatedDate]" />
+                    <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Left Input].Columns[SoldTo]"
                       cachedDataType="wstr"
                       cachedLength="50"
@@ -5761,67 +5886,67 @@ WHERE SyncDate = (
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="SoldToName"
-                      cachedSortKeyPosition="10"
+                      cachedSortKeyPosition="11"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Outputs[Sort Output].Columns[SoldToName]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Left Input].Columns[ShipTo]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="ShipTo"
-                      cachedSortKeyPosition="11"
+                      cachedSortKeyPosition="12"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Outputs[Sort Output].Columns[ShipTo]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Left Input].Columns[ShipToName]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="ShipToName"
-                      cachedSortKeyPosition="12"
+                      cachedSortKeyPosition="13"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Outputs[Sort Output].Columns[ShipToName]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Left Input].Columns[DestinationPort]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="DestinationPort"
-                      cachedSortKeyPosition="13"
+                      cachedSortKeyPosition="14"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Outputs[Sort Output].Columns[DestinationPort]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Left Input].Columns[PaymentTerm]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="PaymentTerm"
-                      cachedSortKeyPosition="14"
+                      cachedSortKeyPosition="15"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Outputs[Sort Output].Columns[PaymentTerm]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Left Input].Columns[Incoterm]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Incoterm"
-                      cachedSortKeyPosition="15"
+                      cachedSortKeyPosition="16"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Outputs[Sort Output].Columns[Incoterm]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Left Input].Columns[Currency]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Currency"
-                      cachedSortKeyPosition="16"
+                      cachedSortKeyPosition="17"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Outputs[Sort Output].Columns[Currency]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Left Input].Columns[EXRate]"
                       cachedDataType="r8"
                       cachedName="EXRate"
-                      cachedSortKeyPosition="17"
+                      cachedSortKeyPosition="18"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Outputs[Sort Output].Columns[EXRate]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Left Input].Columns[TotalNetSales]"
                       cachedDataType="r8"
                       cachedName="TotalNetSales"
-                      cachedSortKeyPosition="18"
+                      cachedSortKeyPosition="19"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Outputs[Sort Output].Columns[TotalNetSales]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Left Input].Columns[TotalNetInvoice]"
                       cachedDataType="r8"
                       cachedName="TotalNetInvoice"
-                      cachedSortKeyPosition="19"
+                      cachedSortKeyPosition="20"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Outputs[Sort Output].Columns[TotalNetInvoice]" />
                   </inputColumns>
                   <externalMetadataColumns />
@@ -5886,6 +6011,12 @@ WHERE SyncDate = (
                       cachedSortKeyPosition="9"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[SO]" />
                     <inputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Right Input].Columns[SOCreatedDate]"
+                      cachedDataType="dbDate"
+                      cachedName="SOCreatedDate"
+                      cachedSortKeyPosition="10"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[SOCreatedDate]" />
+                    <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Right Input].Columns[SoldTo]"
                       cachedDataType="wstr"
                       cachedLength="50"
@@ -5897,67 +6028,67 @@ WHERE SyncDate = (
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="SoldToName"
-                      cachedSortKeyPosition="10"
+                      cachedSortKeyPosition="11"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[SoldToName]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Right Input].Columns[ShipTo]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="ShipTo"
-                      cachedSortKeyPosition="11"
+                      cachedSortKeyPosition="12"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[ShipTo]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Right Input].Columns[ShipToName]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="ShipToName"
-                      cachedSortKeyPosition="12"
+                      cachedSortKeyPosition="13"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[ShipToName]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Right Input].Columns[DestinationPort]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="DestinationPort"
-                      cachedSortKeyPosition="13"
+                      cachedSortKeyPosition="14"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[DestinationPort]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Right Input].Columns[PaymentTerm]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="PaymentTerm"
-                      cachedSortKeyPosition="14"
+                      cachedSortKeyPosition="15"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[PaymentTerm]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Right Input].Columns[Incoterm]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Incoterm"
-                      cachedSortKeyPosition="15"
+                      cachedSortKeyPosition="16"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[Incoterm]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Right Input].Columns[Currency]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Currency"
-                      cachedSortKeyPosition="16"
+                      cachedSortKeyPosition="17"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[Currency]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Right Input].Columns[EXRate]"
                       cachedDataType="r8"
                       cachedName="EXRate"
-                      cachedSortKeyPosition="17"
+                      cachedSortKeyPosition="18"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[EXRate]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Right Input].Columns[TotalNetSales]"
                       cachedDataType="r8"
                       cachedName="TotalNetSales"
-                      cachedSortKeyPosition="18"
+                      cachedSortKeyPosition="19"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[TotalNetSales]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Right Input].Columns[TotalNetInvoice]"
                       cachedDataType="r8"
                       cachedName="TotalNetInvoice"
-                      cachedSortKeyPosition="19"
+                      cachedSortKeyPosition="20"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[TotalNetInvoice]" />
                   </inputColumns>
                   <externalMetadataColumns />
@@ -6093,6 +6224,19 @@ WHERE SyncDate = (
                           dataType="System.Int32"
                           description="The input column associated with this output column"
                           name="InputColumnID">#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Left Input].Columns[SO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[SOCreatedDate]"
+                      dataType="dbDate"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[SOCreatedDate]"
+                      name="SOCreatedDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Left Input].Columns[SOCreatedDate]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -6354,6 +6498,19 @@ WHERE SyncDate = (
                           dataType="System.Int32"
                           description="The input column associated with this output column"
                           name="InputColumnID">#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Right Input].Columns[SO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[SOCreatedDate (1)]"
+                      dataType="dbDate"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[SOCreatedDate (1)]"
+                      name="SOCreatedDate (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Right Input].Columns[SOCreatedDate]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -6725,7 +6882,7 @@ WHERE SyncDate = (
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[SOCreatedDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[SOCreatedDate]"
@@ -7066,7 +7223,7 @@ WHERE SyncDate = (
                       name="SO" />
                     <externalMetadataColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[SOCreatedDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       name="SOCreatedDate" />
                     <externalMetadataColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].ExternalColumns[TotalFCLS]"
@@ -7259,7 +7416,7 @@ WHERE SyncDate = (
                       name="SO" />
                     <outputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[SOCreatedDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Error Output].Columns[SOCreatedDate]"
                       name="SOCreatedDate" />
                     <outputColumn
@@ -7604,6 +7761,22 @@ WHERE SyncDate = (
                       </properties>
                     </inputColumn>
                     <inputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Inputs[Sort Input].Columns[SOCreatedDate]"
+                      cachedDataType="dbDate"
+                      cachedName="SOCreatedDate"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\STG_SOHeader.Outputs[ADO NET Source Output].Columns[SOCreatedDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">10</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Inputs[Sort Input].Columns[SoldTo]"
                       cachedDataType="wstr"
                       cachedLength="50"
@@ -7634,7 +7807,7 @@ WHERE SyncDate = (
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">10</property>
+                          name="NewSortKeyPosition">11</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -7651,7 +7824,7 @@ WHERE SyncDate = (
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">11</property>
+                          name="NewSortKeyPosition">12</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -7668,7 +7841,7 @@ WHERE SyncDate = (
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">12</property>
+                          name="NewSortKeyPosition">13</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -7685,7 +7858,7 @@ WHERE SyncDate = (
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">13</property>
+                          name="NewSortKeyPosition">14</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -7702,7 +7875,7 @@ WHERE SyncDate = (
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">14</property>
+                          name="NewSortKeyPosition">15</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -7719,7 +7892,7 @@ WHERE SyncDate = (
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">15</property>
+                          name="NewSortKeyPosition">16</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -7736,7 +7909,7 @@ WHERE SyncDate = (
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">16</property>
+                          name="NewSortKeyPosition">17</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -7752,7 +7925,7 @@ WHERE SyncDate = (
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">17</property>
+                          name="NewSortKeyPosition">18</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -7768,7 +7941,7 @@ WHERE SyncDate = (
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">18</property>
+                          name="NewSortKeyPosition">19</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -7784,7 +7957,7 @@ WHERE SyncDate = (
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">19</property>
+                          name="NewSortKeyPosition">20</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -7932,6 +8105,20 @@ WHERE SyncDate = (
                       </properties>
                     </outputColumn>
                     <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Outputs[Sort Output].Columns[SOCreatedDate]"
+                      dataType="dbDate"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Outputs[Sort Output].Columns[SOCreatedDate]"
+                      name="SOCreatedDate"
+                      sortKeyPosition="10">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\STG_SOHeader.Outputs[ADO NET Source Output].Columns[SOCreatedDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Outputs[Sort Output].Columns[SoldTo]"
                       dataType="wstr"
                       length="50"
@@ -7952,7 +8139,7 @@ WHERE SyncDate = (
                       length="50"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Outputs[Sort Output].Columns[SoldToName]"
                       name="SoldToName"
-                      sortKeyPosition="10">
+                      sortKeyPosition="11">
                       <properties>
                         <property
                           containsID="true"
@@ -7967,7 +8154,7 @@ WHERE SyncDate = (
                       length="50"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Outputs[Sort Output].Columns[ShipTo]"
                       name="ShipTo"
-                      sortKeyPosition="11">
+                      sortKeyPosition="12">
                       <properties>
                         <property
                           containsID="true"
@@ -7982,7 +8169,7 @@ WHERE SyncDate = (
                       length="50"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Outputs[Sort Output].Columns[ShipToName]"
                       name="ShipToName"
-                      sortKeyPosition="12">
+                      sortKeyPosition="13">
                       <properties>
                         <property
                           containsID="true"
@@ -7997,7 +8184,7 @@ WHERE SyncDate = (
                       length="50"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Outputs[Sort Output].Columns[DestinationPort]"
                       name="DestinationPort"
-                      sortKeyPosition="13">
+                      sortKeyPosition="14">
                       <properties>
                         <property
                           containsID="true"
@@ -8012,7 +8199,7 @@ WHERE SyncDate = (
                       length="50"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Outputs[Sort Output].Columns[PaymentTerm]"
                       name="PaymentTerm"
-                      sortKeyPosition="14">
+                      sortKeyPosition="15">
                       <properties>
                         <property
                           containsID="true"
@@ -8027,7 +8214,7 @@ WHERE SyncDate = (
                       length="50"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Outputs[Sort Output].Columns[Incoterm]"
                       name="Incoterm"
-                      sortKeyPosition="15">
+                      sortKeyPosition="16">
                       <properties>
                         <property
                           containsID="true"
@@ -8042,7 +8229,7 @@ WHERE SyncDate = (
                       length="50"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Outputs[Sort Output].Columns[Currency]"
                       name="Currency"
-                      sortKeyPosition="16">
+                      sortKeyPosition="17">
                       <properties>
                         <property
                           containsID="true"
@@ -8056,7 +8243,7 @@ WHERE SyncDate = (
                       dataType="r8"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Outputs[Sort Output].Columns[EXRate]"
                       name="EXRate"
-                      sortKeyPosition="17">
+                      sortKeyPosition="18">
                       <properties>
                         <property
                           containsID="true"
@@ -8070,7 +8257,7 @@ WHERE SyncDate = (
                       dataType="r8"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Outputs[Sort Output].Columns[TotalNetSales]"
                       name="TotalNetSales"
-                      sortKeyPosition="18">
+                      sortKeyPosition="19">
                       <properties>
                         <property
                           containsID="true"
@@ -8084,7 +8271,7 @@ WHERE SyncDate = (
                       dataType="r8"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Outputs[Sort Output].Columns[TotalNetInvoice]"
                       name="TotalNetInvoice"
-                      sortKeyPosition="19">
+                      sortKeyPosition="20">
                       <properties>
                         <property
                           containsID="true"
@@ -8270,7 +8457,7 @@ WHERE SyncDate = (
                     </inputColumn>
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Inputs[Sort Input].Columns[SOCreatedDate]"
-                      cachedDataType="dbTimeStamp"
+                      cachedDataType="dbDate"
                       cachedName="SOCreatedDate"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table.Outputs[ADO NET Source Output].Columns[SOCreatedDate]">
                       <properties>
@@ -8281,7 +8468,7 @@ WHERE SyncDate = (
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          name="NewSortKeyPosition">10</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -8331,7 +8518,7 @@ WHERE SyncDate = (
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">10</property>
+                          name="NewSortKeyPosition">11</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -8348,7 +8535,7 @@ WHERE SyncDate = (
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">11</property>
+                          name="NewSortKeyPosition">12</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -8365,7 +8552,7 @@ WHERE SyncDate = (
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">12</property>
+                          name="NewSortKeyPosition">13</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -8382,7 +8569,7 @@ WHERE SyncDate = (
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">13</property>
+                          name="NewSortKeyPosition">14</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -8415,7 +8602,7 @@ WHERE SyncDate = (
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">14</property>
+                          name="NewSortKeyPosition">15</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -8432,7 +8619,7 @@ WHERE SyncDate = (
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">15</property>
+                          name="NewSortKeyPosition">16</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -8449,7 +8636,7 @@ WHERE SyncDate = (
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">16</property>
+                          name="NewSortKeyPosition">17</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -8465,7 +8652,7 @@ WHERE SyncDate = (
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">17</property>
+                          name="NewSortKeyPosition">18</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -8481,7 +8668,7 @@ WHERE SyncDate = (
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">18</property>
+                          name="NewSortKeyPosition">19</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -8497,7 +8684,7 @@ WHERE SyncDate = (
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">19</property>
+                          name="NewSortKeyPosition">20</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -8922,9 +9109,10 @@ WHERE SyncDate = (
                     </outputColumn>
                     <outputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[SOCreatedDate]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[SOCreatedDate]"
-                      name="SOCreatedDate">
+                      name="SOCreatedDate"
+                      sortKeyPosition="10">
                       <properties>
                         <property
                           containsID="true"
@@ -8967,7 +9155,7 @@ WHERE SyncDate = (
                       length="50"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[SoldToName]"
                       name="SoldToName"
-                      sortKeyPosition="10">
+                      sortKeyPosition="11">
                       <properties>
                         <property
                           containsID="true"
@@ -8982,7 +9170,7 @@ WHERE SyncDate = (
                       length="50"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[ShipTo]"
                       name="ShipTo"
-                      sortKeyPosition="11">
+                      sortKeyPosition="12">
                       <properties>
                         <property
                           containsID="true"
@@ -8997,7 +9185,7 @@ WHERE SyncDate = (
                       length="50"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[ShipToName]"
                       name="ShipToName"
-                      sortKeyPosition="12">
+                      sortKeyPosition="13">
                       <properties>
                         <property
                           containsID="true"
@@ -9012,7 +9200,7 @@ WHERE SyncDate = (
                       length="50"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[DestinationPort]"
                       name="DestinationPort"
-                      sortKeyPosition="13">
+                      sortKeyPosition="14">
                       <properties>
                         <property
                           containsID="true"
@@ -9040,7 +9228,7 @@ WHERE SyncDate = (
                       length="50"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[PaymentTerm]"
                       name="PaymentTerm"
-                      sortKeyPosition="14">
+                      sortKeyPosition="15">
                       <properties>
                         <property
                           containsID="true"
@@ -9055,7 +9243,7 @@ WHERE SyncDate = (
                       length="50"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[Incoterm]"
                       name="Incoterm"
-                      sortKeyPosition="15">
+                      sortKeyPosition="16">
                       <properties>
                         <property
                           containsID="true"
@@ -9070,7 +9258,7 @@ WHERE SyncDate = (
                       length="50"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[Currency]"
                       name="Currency"
-                      sortKeyPosition="16">
+                      sortKeyPosition="17">
                       <properties>
                         <property
                           containsID="true"
@@ -9084,7 +9272,7 @@ WHERE SyncDate = (
                       dataType="r8"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[EXRate]"
                       name="EXRate"
-                      sortKeyPosition="17">
+                      sortKeyPosition="18">
                       <properties>
                         <property
                           containsID="true"
@@ -9098,7 +9286,7 @@ WHERE SyncDate = (
                       dataType="r8"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[TotalNetSales]"
                       name="TotalNetSales"
-                      sortKeyPosition="18">
+                      sortKeyPosition="19">
                       <properties>
                         <property
                           containsID="true"
@@ -9112,7 +9300,7 @@ WHERE SyncDate = (
                       dataType="r8"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output].Columns[TotalNetInvoice]"
                       name="TotalNetInvoice"
-                      sortKeyPosition="19">
+                      sortKeyPosition="20">
                       <properties>
                         <property
                           containsID="true"
@@ -9621,6 +9809,15 @@ WHERE SyncDate = (
                       name="SO"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\STG_SOHeader.Outputs[ADO NET Source Output].Columns[SOCreatedDate]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[SOCreatedDate]"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\STG_SOHeader.Outputs[ADO NET Source Output].Columns[SOCreatedDate]"
+                      name="SOCreatedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\STG_SOHeader.Outputs[ADO NET Source Output].Columns[SoldTo]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
@@ -9778,6 +9975,10 @@ WHERE SyncDate = (
                       length="50"
                       name="SO" />
                     <externalMetadataColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[SOCreatedDate]"
+                      dataType="dbDate"
+                      name="SOCreatedDate" />
+                    <externalMetadataColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\STG_SOHeader.Outputs[ADO NET Source Output].ExternalColumns[SoldTo]"
                       dataType="wstr"
                       length="50"
@@ -9886,6 +10087,11 @@ WHERE SyncDate = (
                       length="50"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[SO]"
                       name="SO" />
+                    <outputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[SOCreatedDate]"
+                      dataType="dbDate"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[SOCreatedDate]"
+                      name="SOCreatedDate" />
                     <outputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\STG_SOHeader.Outputs[ADO NET Source Error Output].Columns[SoldTo]"
                       dataType="wstr"
@@ -10178,6 +10384,16 @@ WHERE SyncDate = (
                       cachedDataType="r8"
                       cachedName="TotalNetInvoice (1)"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[TotalNetInvoice (1)]" />
+                    <inputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update.Inputs[Conditional Split Input].Columns[SOCreatedDate]"
+                      cachedDataType="dbDate"
+                      cachedName="SOCreatedDate"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[SOCreatedDate]" />
+                    <inputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update.Inputs[Conditional Split Input].Columns[SOCreatedDate (1)]"
+                      cachedDataType="dbDate"
+                      cachedName="SOCreatedDate (1)"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[SOCreatedDate (1)]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -10197,13 +10413,13 @@ WHERE SyncDate = (
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">(#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[SalesORG]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[SalesORG (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[LoadingDate]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[LoadingDate (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[OrderType]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[OrderType (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[OrderDate]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[OrderDate (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[PODate]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[PODate (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[INV]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[INV (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[SO]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[SO (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[SoldToName]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[SoldToName (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[ShipTo]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[ShipTo (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[ShipToName]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[ShipToName (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[DestinationPort]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[DestinationPort (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[PaymentTerm]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[PaymentTerm (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[Incoterm]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[Incoterm (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[Currency]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[Currency (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[EXRate]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[EXRate (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[TotalNetSales]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[TotalNetSales (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[TotalNetInvoice]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[TotalNetInvoice (1)]})</property>
+                      name="Expression">(#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[SalesORG]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[SalesORG (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[LoadingDate]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[LoadingDate (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[OrderType]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[OrderType (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[OrderDate]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[OrderDate (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[PODate]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[PODate (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[INV]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[INV (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[SO]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[SO (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[SOCreatedDate]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[SOCreatedDate (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[SoldToName]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[SoldToName (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[ShipTo]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[ShipTo (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[ShipToName]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[ShipToName (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[DestinationPort]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[DestinationPort (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[PaymentTerm]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[PaymentTerm (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[Incoterm]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[Incoterm (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[Currency]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[Currency (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[EXRate]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[EXRate (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[TotalNetSales]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[TotalNetSales (1)]}) || (#{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[TotalNetInvoice]} != #{Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[TotalNetInvoice (1)]})</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">(SalesORG != [SalesORG (1)]) || (LoadingDate != [LoadingDate (1)]) || (OrderType != [OrderType (1)]) || (OrderDate != [OrderDate (1)]) || (PODate != [PODate (1)]) || (INV != [INV (1)]) || (SO != [SO (1)]) || (SoldToName != [SoldToName (1)]) || (ShipTo != [ShipTo (1)]) || (ShipToName != [ShipToName (1)]) || (DestinationPort != [DestinationPort (1)]) || (PaymentTerm != [PaymentTerm (1)]) || (Incoterm != [Incoterm (1)]) || (Currency != [Currency (1)]) || (EXRate != [EXRate (1)]) || (TotalNetSales != [TotalNetSales (1)]) || (TotalNetInvoice != [TotalNetInvoice (1)])</property>
+                      name="FriendlyExpression">(SalesORG != [SalesORG (1)]) || (LoadingDate != [LoadingDate (1)]) || (OrderType != [OrderType (1)]) || (OrderDate != [OrderDate (1)]) || (PODate != [PODate (1)]) || (INV != [INV (1)]) || (SO != [SO (1)]) || (SOCreatedDate != [SOCreatedDate (1)]) || (SoldToName != [SoldToName (1)]) || (ShipTo != [ShipTo (1)]) || (ShipToName != [ShipToName (1)]) || (DestinationPort != [DestinationPort (1)]) || (PaymentTerm != [PaymentTerm (1)]) || (Incoterm != [Incoterm (1)]) || (Currency != [Currency (1)]) || (EXRate != [EXRate (1)]) || (TotalNetSales != [TotalNetSales (1)]) || (TotalNetInvoice != [TotalNetInvoice (1)])</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -10275,6 +10491,7 @@ WHERE SyncDate = (
  ,[PODate] = ?
  ,[INV] = ?
  ,[SO] = ?
+ ,[SOCreatedDate] = ?
  ,[SoldToName] = ?
  ,[ShipTo] = ?
  ,[ShipToName] = ?
@@ -10309,6 +10526,22 @@ WHERE SyncDate = (
                   hasSideEffects="true"
                   name="OLE DB Command Input">
                   <inputColumns>
+                    <inputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].Columns[PO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="PO"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_20]"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[PO]" />
+                    <inputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].Columns[SoldTo]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SoldTo"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_21]"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[SoldTo]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].Columns[SalesORG]"
                       cachedDataType="wstr"
@@ -10357,100 +10590,90 @@ WHERE SyncDate = (
                       externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[SO]" />
                     <inputColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].Columns[SOCreatedDate]"
+                      cachedDataType="dbDate"
+                      cachedName="SOCreatedDate"
+                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[SOCreatedDate]" />
+                    <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].Columns[SoldToName]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="SoldToName"
-                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[SoldToName]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].Columns[ShipTo]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="ShipTo"
-                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[ShipTo]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].Columns[ShipToName]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="ShipToName"
-                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
+                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[ShipToName]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].Columns[DestinationPort]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="DestinationPort"
-                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
+                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[DestinationPort]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].Columns[PaymentTerm]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="PaymentTerm"
-                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
+                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_12]"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[PaymentTerm]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].Columns[Incoterm]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Incoterm"
-                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_12]"
+                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_13]"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[Incoterm]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].Columns[Currency]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Currency"
-                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_13]"
+                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_14]"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[Currency]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].Columns[EXRate]"
                       cachedDataType="r8"
                       cachedName="EXRate"
-                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_14]"
+                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_15]"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[EXRate]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].Columns[TotalNetSales]"
                       cachedDataType="r8"
                       cachedName="TotalNetSales"
-                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_15]"
+                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_16]"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[TotalNetSales]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].Columns[TotalNetInvoice]"
                       cachedDataType="r8"
                       cachedName="TotalNetInvoice"
-                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_16]"
+                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_17]"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[TotalNetInvoice]" />
-                    <inputColumn
-                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].Columns[PO]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="PO"
-                      cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_19]"
-                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[PO]" />
-                    <inputColumn
-                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].Columns[SoldTo]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="SoldTo"
-                      cachedSortKeyPosition="2"
-                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_20]"
-                      lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Outputs[Merge Join Output].Columns[SoldTo]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].Columns[ModifiedDate]"
                       cachedDataType="dbTimeStamp"
                       cachedName="ModifiedDate"
-                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_17]"
+                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_18]"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Modified.Outputs[Derived Column Output].Columns[ModifiedDate]" />
                     <inputColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].Columns[ModifiedBy]"
                       cachedDataType="wstr"
                       cachedLength="6"
                       cachedName="ModifiedBy"
-                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_18]"
+                      externalMetadataColumnId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_19]"
                       lineageId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Modified.Outputs[Derived Column Output].Columns[ModifiedBy]" />
                   </inputColumns>
                   <externalMetadataColumns
@@ -10539,8 +10762,7 @@ WHERE SyncDate = (
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
-                      dataType="wstr"
-                      length="50"
+                      dataType="date"
                       name="Param_7">
                       <properties>
                         <property
@@ -10623,7 +10845,8 @@ WHERE SyncDate = (
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_14]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="50"
                       name="Param_14">
                       <properties>
                         <property
@@ -10656,7 +10879,7 @@ WHERE SyncDate = (
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_17]"
-                      dataType="dbTimeStamp"
+                      dataType="r8"
                       name="Param_17">
                       <properties>
                         <property
@@ -10667,8 +10890,7 @@ WHERE SyncDate = (
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_18]"
-                      dataType="wstr"
-                      length="50"
+                      dataType="dbTimeStamp"
                       name="Param_18">
                       <properties>
                         <property
@@ -10694,6 +10916,18 @@ WHERE SyncDate = (
                       dataType="wstr"
                       length="50"
                       name="Param_20">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo.Inputs[OLE DB Command Input].ExternalColumns[Param_21]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_21">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -10770,14 +11004,14 @@ WHERE SyncDate = (
               startId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Split Records.Outputs[PO&amp;SoldTo Match (SO Not Match)]" />
             <path
               refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL)).Paths[Sort Output]"
-              endId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Outputs[Sort Output]" />
-            <path
-              refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL)).Paths[Sort Output1]"
               endId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table.Outputs[Sort Output]" />
+            <path
+              refId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL)).Paths[Sort Output1]"
+              endId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -10860,9 +11094,13 @@ WHERE SyncDate = (
           Id="Package\Update &amp; Insert New Records\Update Records"
           TopLeft="779.666666666667,450.777777777778" />
         <NodeLayout
-          Size="153,42"
-          Id="Package\Update &amp; Insert New Records\STG_SOHeader"
-          TopLeft="23.3333333333334,33.3333333333333" />
+          Size="121,42"
+          Id="Package\Update &amp; Insert New Records\Modified"
+          TopLeft="590.333333333333,376" />
+        <NodeLayout
+          Size="115,42"
+          Id="Package\Update &amp; Insert New Records\System"
+          TopLeft="59,368" />
         <NodeLayout
           Size="142,42"
           Id="Package\Update &amp; Insert New Records\Split Records"
@@ -10871,136 +11109,6 @@ WHERE SyncDate = (
           Size="187,42"
           Id="Package\Update &amp; Insert New Records\Update Records By SO"
           TopLeft="463.333333333334,277.777777777778" />
-        <NodeLayout
-          Size="115,42"
-          Id="Package\Update &amp; Insert New Records\System"
-          TopLeft="59,368" />
-        <NodeLayout
-          Size="121,42"
-          Id="Package\Update &amp; Insert New Records\Modified"
-          TopLeft="590.333333333333,376" />
-        <NodeLayout
-          Size="123,42"
-          Id="Package\Update &amp; Insert New Records\Sort STG"
-          TopLeft="210,108" />
-        <NodeLayout
-          Size="173,42"
-          Id="Package\Update &amp; Insert New Records\Insert New Records"
-          TopLeft="29,435" />
-        <EdgeLayout
-          Id="Package\Update &amp; Insert New Records.Paths[Insert (SO Not Match)]"
-          TopLeft="120.416666666667,319.777777777778">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,48.222222222222"
-              Start="0,0"
-              End="0,40.722222222222">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,40.722222222222" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-49.30833984375,14.556423611111,98.6166796875,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Update &amp; Insert New Records.Paths[Derived Column Output1]"
-          TopLeft="116,410">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,25"
-              Start="0,0"
-              End="0,17.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Update &amp; Insert New Records.Paths[Derived Column Output]"
-          TopLeft="650.833333333333,418">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="206.333333333334,32.777777777778"
-              Start="0,0"
-              End="206.333333333334,25.277777777778">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,12.388888888889" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.388888888889"
-                    Point2="0,16.388888888889"
-                    Point3="4,16.388888888889" />
-                  <mssgle:LineSegment
-                    End="202.333333333334,16.388888888889" />
-                  <mssgle:CubicBezierSegment
-                    Point1="202.333333333334,16.388888888889"
-                    Point2="206.333333333334,16.388888888889"
-                    Point3="206.333333333334,20.388888888889" />
-                  <mssgle:LineSegment
-                    End="206.333333333334,25.277777777778" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Update &amp; Insert New Records.Paths[ADO NET Source Output]"
-          TopLeft="99.8333333333334,75.3333333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="171.666666666667,32.6666666666667"
-              Start="0,0"
-              End="171.666666666667,25.1666666666667">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,12.3333333333333" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.3333333333333"
-                    Point2="0,16.3333333333334"
-                    Point3="4,16.3333333333334" />
-                  <mssgle:LineSegment
-                    End="167.666666666667,16.3333333333334" />
-                  <mssgle:CubicBezierSegment
-                    Point1="167.666666666667,16.3333333333334"
-                    Point2="171.666666666667,16.3333333333334"
-                    Point3="171.666666666667,20.3333333333334" />
-                  <mssgle:LineSegment
-                    End="171.666666666667,25.1666666666667" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Update &amp; Insert New Records.Paths[Update By SO]"
           TopLeft="556.833333333334,319.777777777778">
@@ -11061,44 +11169,144 @@ WHERE SyncDate = (
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="132,42"
-          Id="Package\Update &amp; Insert New Records\Merge Join"
-          TopLeft="354,181" />
-        <NodeLayout
-          Size="129,42"
-          Id="Package\Update &amp; Insert New Records\Sort Table"
-          TopLeft="557,102" />
-        <NodeLayout
-          Size="157,42"
-          Id="Package\Update &amp; Insert New Records\SOHeader Table"
-          TopLeft="759,36" />
         <EdgeLayout
-          Id="Package\Update &amp; Insert New Records.Paths[Sort Output]"
-          TopLeft="271.5,150">
+          Id="Package\Update &amp; Insert New Records.Paths[Insert (SO Not Match)]"
+          TopLeft="120.416666666667,319.777777777778">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="127.833333333333,31"
+              EndConnector="0,48.222222222222"
               Start="0,0"
-              End="127.833333333333,23.5">
+              End="0,40.722222222222">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,14.377245508982" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.377245508982"
-                    Point2="0,18.377245508982"
-                    Point3="4,18.377245508982" />
+                    End="0,40.722222222222" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-49.30833984375,14.556423611111,98.6166796875,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update &amp; Insert New Records.Paths[Derived Column Output]"
+          TopLeft="650.833333333333,418">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="206.333333333334,32.777777777778"
+              Start="0,0"
+              End="206.333333333334,25.277777777778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="123.833333333333,18.377245508982" />
+                    End="0,12.388888888889" />
                   <mssgle:CubicBezierSegment
-                    Point1="123.833333333333,18.377245508982"
-                    Point2="127.833333333333,18.377245508982"
-                    Point3="127.833333333333,22.377245508982" />
+                    Point1="0,12.388888888889"
+                    Point2="0,16.388888888889"
+                    Point3="4,16.388888888889" />
                   <mssgle:LineSegment
-                    End="127.833333333333,23.5" />
+                    End="202.333333333334,16.388888888889" />
+                  <mssgle:CubicBezierSegment
+                    Point1="202.333333333334,16.388888888889"
+                    Point2="206.333333333334,16.388888888889"
+                    Point3="206.333333333334,20.388888888889" />
+                  <mssgle:LineSegment
+                    End="206.333333333334,25.277777777778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Update &amp; Insert New Records\STG_SOHeader"
+          TopLeft="33,20" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Update &amp; Insert New Records\SOHeader Table"
+          TopLeft="535,18" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\Update &amp; Insert New Records\Sort STG"
+          TopLeft="152,96" />
+        <NodeLayout
+          Size="129,42"
+          Id="Package\Update &amp; Insert New Records\Sort Table"
+          TopLeft="459,93" />
+        <NodeLayout
+          Size="132,42"
+          Id="Package\Update &amp; Insert New Records\Merge Join"
+          TopLeft="296,166" />
+        <EdgeLayout
+          Id="Package\Update &amp; Insert New Records.Paths[ADO NET Source Output]"
+          TopLeft="109.5,62">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="104,34"
+              Start="0,0"
+              End="104,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13"
+                    Point2="0,17"
+                    Point3="4,17" />
+                  <mssgle:LineSegment
+                    End="100,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="100,17"
+                    Point2="104,17"
+                    Point3="104,21" />
+                  <mssgle:LineSegment
+                    End="104,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update &amp; Insert New Records.Paths[Sort Output]"
+          TopLeft="213.5,138">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="148.5,28"
+              Start="0,0"
+              End="148.5,20.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10"
+                    Point2="0,14"
+                    Point3="4,14" />
+                  <mssgle:LineSegment
+                    End="144.5,14" />
+                  <mssgle:CubicBezierSegment
+                    Point1="144.5,14"
+                    Point2="148.5,14"
+                    Point3="148.5,18" />
+                  <mssgle:LineSegment
+                    End="148.5,20.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11109,30 +11317,30 @@ WHERE SyncDate = (
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Update &amp; Insert New Records.Paths[ADO NET Source Output1]"
-          TopLeft="837.5,78">
+          TopLeft="613.5,60">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-216,24"
+              EndConnector="-90,33"
               Start="0,0"
-              End="-216,16.5">
+              End="-90,25.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,8" />
+                    End="0,12.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,8"
-                    Point2="0,12"
-                    Point3="-4,12" />
+                    Point1="0,12.5"
+                    Point2="0,16.5"
+                    Point3="-4,16.5" />
                   <mssgle:LineSegment
-                    End="-212,12" />
+                    End="-86,16.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-212,12"
-                    Point2="-216,12"
-                    Point3="-216,16" />
+                    Point1="-86,16.5"
+                    Point2="-90,16.5"
+                    Point3="-90,20.5" />
                   <mssgle:LineSegment
-                    End="-216,16.5" />
+                    End="-90,25.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11143,30 +11351,30 @@ WHERE SyncDate = (
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Update &amp; Insert New Records.Paths[Sort Output1]"
-          TopLeft="621.5,144">
+          TopLeft="523.5,135">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-180.833333333333,37"
+              EndConnector="-140.833333333333,31"
               Start="0,0"
-              End="-180.833333333333,29.5">
+              End="-140.833333333333,23.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.9341317365269" />
+                    End="0,14.377245508982" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17.9341317365269"
-                    Point2="0,21.9341317365269"
-                    Point3="-4,21.9341317365269" />
+                    Point1="0,14.377245508982"
+                    Point2="0,18.377245508982"
+                    Point3="-4,18.377245508982" />
                   <mssgle:LineSegment
-                    End="-176.833333333333,21.9341317365269" />
+                    End="-136.833333333333,18.377245508982" />
                   <mssgle:CubicBezierSegment
-                    Point1="-176.833333333333,21.9341317365269"
-                    Point2="-180.833333333333,21.9341317365269"
-                    Point3="-180.833333333333,25.9341317365269" />
+                    Point1="-136.833333333333,18.377245508982"
+                    Point2="-140.833333333333,18.377245508982"
+                    Point3="-140.833333333333,22.377245508982" />
                   <mssgle:LineSegment
-                    End="-180.833333333333,29.5" />
+                    End="-140.833333333333,23.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11177,30 +11385,68 @@ WHERE SyncDate = (
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Update &amp; Insert New Records.Paths[Merge Join Output]"
-          TopLeft="420,223">
+          TopLeft="362,208">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-295.666666666667,54.777777777778"
+              EndConnector="-237.666666666667,69.777777777778"
               Start="0,0"
-              End="-295.666666666667,47.277777777778">
+              End="-237.666666666667,62.277777777778">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.388888888889" />
+                    End="0,30.888888888889" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,23.388888888889"
-                    Point2="0,27.388888888889"
-                    Point3="-4,27.388888888889" />
+                    Point1="0,30.888888888889"
+                    Point2="0,34.888888888889"
+                    Point3="-4,34.888888888889" />
                   <mssgle:LineSegment
-                    End="-291.666666666667,27.388888888889" />
+                    End="-233.666666666667,34.888888888889" />
                   <mssgle:CubicBezierSegment
-                    Point1="-291.666666666667,27.388888888889"
-                    Point2="-295.666666666667,27.388888888889"
-                    Point3="-295.666666666667,31.388888888889" />
+                    Point1="-233.666666666667,34.888888888889"
+                    Point2="-237.666666666667,34.888888888889"
+                    Point3="-237.666666666667,38.888888888889" />
                   <mssgle:LineSegment
-                    End="-295.666666666667,47.277777777778" />
+                    End="-237.666666666667,62.277777777778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Update &amp; Insert New Records\Insert New Records"
+          TopLeft="49,457" />
+        <EdgeLayout
+          Id="Package\Update &amp; Insert New Records.Paths[Derived Column Output1]"
+          TopLeft="116.5,410">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19,47"
+              Start="0,0"
+              End="19,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.5"
+                    Point2="0,23.5"
+                    Point3="4,23.5" />
+                  <mssgle:LineSegment
+                    End="15,23.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15,23.5"
+                    Point2="19,23.5"
+                    Point3="19,27.5" />
+                  <mssgle:LineSegment
+                    End="19,39.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11212,31 +11458,11 @@ WHERE SyncDate = (
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Update &amp; Insert New Records\STG_SOHeader">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Update &amp; Insert New Records\Insert New Records">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))">
     <LayoutInfo>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="115,42"
-          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update"
-          TopLeft="347,289" />
         <NodeLayout
           Size="142,42"
           Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Split Records"
@@ -11246,51 +11472,17 @@ WHERE SyncDate = (
           Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update Records By PO and SoldTo"
           TopLeft="893,290" />
         <NodeLayout
+          Size="115,42"
+          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Update"
+          TopLeft="347,289" />
+        <NodeLayout
           Size="121,42"
           Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Modified"
           TopLeft="601,292" />
         <NodeLayout
-          Size="153,42"
-          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\STG_SOHeader"
-          TopLeft="20.6363636363636,9.72727272727273" />
-        <NodeLayout
-          Size="123,42"
-          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG"
-          TopLeft="239,85" />
-        <EdgeLayout
-          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL)).Paths[ADO NET Source Output]"
-          TopLeft="97.1363636363636,51.7272727272727">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="203.363636363636,33.2727272727273"
-              Start="0,0"
-              End="203.363636363636,25.7727272727273">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,12.6363636363636" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.6363636363636"
-                    Point2="0,16.6363636363636"
-                    Point3="4,16.6363636363636" />
-                  <mssgle:LineSegment
-                    End="199.363636363636,16.6363636363636" />
-                  <mssgle:CubicBezierSegment
-                    Point1="199.363636363636,16.6363636363636"
-                    Point2="203.363636363636,16.6363636363636"
-                    Point3="203.363636363636,20.6363636363636" />
-                  <mssgle:LineSegment
-                    End="203.363636363636,25.7727272727273" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="157,42"
+          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table"
+          TopLeft="756,14" />
         <EdgeLayout
           Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL)).Paths[PO&amp;SoldTo Match (SO Not Match)]"
           TopLeft="170,310">
@@ -11362,39 +11554,47 @@ WHERE SyncDate = (
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="157,42"
-          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table"
-          TopLeft="756,14" />
+          Size="132,42"
+          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join"
+          TopLeft="418,178" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort STG"
+          TopLeft="230,96" />
         <NodeLayout
           Size="129,42"
           Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Sort Table"
-          TopLeft="613,83" />
+          TopLeft="593,100" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\STG_SOHeader"
+          TopLeft="33,18" />
         <EdgeLayout
-          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL)).Paths[ADO NET Source Output1]"
-          TopLeft="834.5,56">
+          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL)).Paths[ADO NET Source Output]"
+          TopLeft="109.5,60">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-157,27"
+              EndConnector="182,36"
               Start="0,0"
-              End="-157,19.5">
+              End="182,28.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,9.5" />
+                    End="0,14" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,9.5"
-                    Point2="0,13.5"
-                    Point3="-4,13.5" />
+                    Point1="0,14"
+                    Point2="0,18"
+                    Point3="4,18" />
                   <mssgle:LineSegment
-                    End="-153,13.5" />
+                    End="178,18" />
                   <mssgle:CubicBezierSegment
-                    Point1="-153,13.5"
-                    Point2="-157,13.5"
-                    Point3="-157,17.5" />
+                    Point1="178,18"
+                    Point2="182,18"
+                    Point3="182,22" />
                   <mssgle:LineSegment
-                    End="-157,19.5" />
+                    End="182,28.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11403,19 +11603,49 @@ WHERE SyncDate = (
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="132,42"
-          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\Merge Join"
-          TopLeft="429,163" />
         <EdgeLayout
-          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL)).Paths[Sort Output]"
-          TopLeft="300.5,127">
+          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL)).Paths[ADO NET Source Output1]"
+          TopLeft="834.5,56">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="173.833333333333,36"
+              EndConnector="-177,44"
               Start="0,0"
-              End="173.833333333333,28.5">
+              End="-177,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18"
+                    Point2="0,22"
+                    Point3="-4,22" />
+                  <mssgle:LineSegment
+                    End="-173,22" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-173,22"
+                    Point2="-177,22"
+                    Point3="-177,26" />
+                  <mssgle:LineSegment
+                    End="-177,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL)).Paths[Sort Output]"
+          TopLeft="657.5,142">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-152.833333333333,36"
+              Start="0,0"
+              End="-152.833333333333,28.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -11424,15 +11654,15 @@ WHERE SyncDate = (
                   <mssgle:CubicBezierSegment
                     Point1="0,17.3413173652695"
                     Point2="0,21.3413173652695"
-                    Point3="4,21.3413173652695" />
+                    Point3="-4,21.3413173652695" />
                   <mssgle:LineSegment
-                    End="169.833333333333,21.3413173652695" />
+                    End="-148.833333333333,21.3413173652695" />
                   <mssgle:CubicBezierSegment
-                    Point1="169.833333333333,21.3413173652695"
-                    Point2="173.833333333333,21.3413173652695"
-                    Point3="173.833333333333,25.3413173652695" />
+                    Point1="-148.833333333333,21.3413173652695"
+                    Point2="-152.833333333333,21.3413173652695"
+                    Point3="-152.833333333333,25.3413173652695" />
                   <mssgle:LineSegment
-                    End="173.833333333333,28.5" />
+                    End="-152.833333333333,28.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11443,30 +11673,30 @@ WHERE SyncDate = (
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL)).Paths[Sort Output1]"
-          TopLeft="677.5,125">
+          TopLeft="291.5,138">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-161.833333333333,38"
+              EndConnector="171.833333333333,40"
               Start="0,0"
-              End="-161.833333333333,30.5">
+              End="171.833333333333,32.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.5269461077844" />
+                    End="0,19.7125748502994" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,18.5269461077844"
-                    Point2="0,22.5269461077844"
-                    Point3="-4,22.5269461077844" />
+                    Point1="0,19.7125748502994"
+                    Point2="0,23.7125748502994"
+                    Point3="4,23.7125748502994" />
                   <mssgle:LineSegment
-                    End="-157.833333333333,22.5269461077844" />
+                    End="167.833333333333,23.7125748502994" />
                   <mssgle:CubicBezierSegment
-                    Point1="-157.833333333333,22.5269461077844"
-                    Point2="-161.833333333333,22.5269461077844"
-                    Point3="-161.833333333333,26.5269461077844" />
+                    Point1="167.833333333333,23.7125748502994"
+                    Point2="171.833333333333,23.7125748502994"
+                    Point3="171.833333333333,27.7125748502994" />
                   <mssgle:LineSegment
-                    End="-161.833333333333,30.5" />
+                    End="171.833333333333,32.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11477,30 +11707,30 @@ WHERE SyncDate = (
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL)).Paths[Merge Join Output]"
-          TopLeft="495,205">
+          TopLeft="484,220">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-396,84"
+              EndConnector="-385,69"
               Start="0,0"
-              End="-396,76.5">
+              End="-385,61.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38" />
+                    End="0,30.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,38"
-                    Point2="0,42"
-                    Point3="-4,42" />
+                    Point1="0,30.5"
+                    Point2="0,34.5"
+                    Point3="-4,34.5" />
                   <mssgle:LineSegment
-                    End="-392,42" />
+                    End="-381,34.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-392,42"
-                    Point2="-396,42"
-                    Point3="-396,46" />
+                    Point1="-381,34.5"
+                    Point2="-385,34.5"
+                    Point3="-385,38.5" />
                   <mssgle:LineSegment
-                    End="-396,76.5" />
+                    End="-385,61.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11513,14 +11743,6 @@ WHERE SyncDate = (
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\STG_SOHeader">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\SOHeader Table">
     <Properties>
       <Property>
@@ -11529,7 +11751,31 @@ WHERE SyncDate = (
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Update Records By PO and SoldTo (Open new PO and SO(ISNULL))\STG_SOHeader">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Update &amp; Insert New Records\STG_SOHeader">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Update &amp; Insert New Records\SOHeader Table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Update &amp; Insert New Records\Insert New Records">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

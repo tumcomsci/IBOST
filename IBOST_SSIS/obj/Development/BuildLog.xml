@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>IBOST_SSIS</Name>
-    <LastWriteTime>2018-08-29T08:09:53.0145236Z</LastWriteTime>
+    <LastWriteTime>2018-09-14T03:57:52.4274082Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -13,7 +13,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>STG_SOHeader.dtsx</Name>
-      <LastWriteTime>2018-08-16T09:28:11.263314Z</LastWriteTime>
+      <LastWriteTime>2018-09-14T02:51:28.6784439Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -38,7 +38,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>SOHeader.dtsx</Name>
-      <LastWriteTime>2018-09-13T07:11:33.3236154Z</LastWriteTime>
+      <LastWriteTime>2018-09-14T03:05:57.5619922Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -64,6 +64,11 @@
     <ProjectBuildItemInfo>
       <Name>STG_Shipment.dtsx</Name>
       <LastWriteTime>2018-08-29T07:52:22.3138126Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>IBOST_MASTER.dtsx</Name>
+      <LastWriteTime>2018-09-14T03:57:52.2926074Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

@@ -4,6 +4,8 @@
     <Configuration>
       <Name>Development</Name>
       <Options>
+        <ServerName>dc-rsfsrv</ServerName>
+        <PathOnServer>/SSISDB/IBOST/IBOST_SSIS</PathOnServer>
         <UserIDs />
         <UserPasswords />
         <OfflineMode>false</OfflineMode>
